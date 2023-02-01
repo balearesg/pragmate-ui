@@ -1,0 +1,59 @@
+.beyond-tabs-container {
+
+  &.beyond-tabs-vertical {
+
+    .beyond-tabs-items {
+      width: 50px;
+      height: 100%;
+      position: relative;
+
+      .tabs-container {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 8px;
+      }
+
+    }
+  }
+
+  &.beyond-tabs-horizontal {
+    .beyond-tabs-items {
+
+      display: flex;
+      background: lightgray;
+      height: 100%;
+
+      .tabs-container {
+        width: 100%;
+        display: flex;
+      }
+
+    }
+
+  }
+
+  .beyond-tabs-items {
+    z-index: 0;
+
+    .beyond-tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 15px;
+      flex-grow: 1;
+
+      &.tab-active {
+        svg {
+          fill: white;
+        }
+      }
+
+      svg {
+        margin: auto;
+        cursor: pointer;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "version": "0.0.29",
+    "scope": "bgroup",
+    "name": "ui",
+    "layout": "main-layout",
+    "template": "template/template.json",
+    "languages": {
+        "default": "en",
+        "supported": ["en", "es"]
+    },
+    "modules": {
+        "path": "modules"
+    },
+    "deployment": {
+        "distributions": [
+            {
+                "name": "web",
+                "environment": "development",
+                "ssr": "",
+                "platform": "web",
+                "ports": {
+                    "bundles": "1001"
+                }
+            }
+        ]
+    },
+    "static": {
+        "includes": ["assets"]
+    }
+}

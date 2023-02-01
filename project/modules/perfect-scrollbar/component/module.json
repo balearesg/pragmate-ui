@@ -1,0 +1,22 @@
+{
+  "name": "perfect-scrollbar",
+  "platforms": [
+    "web"
+  ],
+  "code": {
+    "hmr": true,
+    "name": "perfect-scrollbar",
+    "sass":{
+      "path": "/code/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

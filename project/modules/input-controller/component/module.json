@@ -1,0 +1,12 @@
+{
+	"name": "input-controller",
+	"platforms": [
+		"web"
+	  ],
+	"code": {
+		"ts": {
+			"path": "/code/ts",
+			"files": ["*"]
+		}
+	}
+}

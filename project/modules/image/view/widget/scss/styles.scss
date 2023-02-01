@@ -1,0 +1,20 @@
+.beyond-image-view {
+	.component-result {
+		display: grid;
+
+		figure {
+			display: flex;
+			justify-content: center;
+			max-width: 600px;
+			margin: 0 auto;
+			min-height: 17rem;
+			width: 100%;
+			img {
+				width: 100%;
+			}
+			&.beyond-element-image-preload {
+				background-color: var(--gray-light);
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"name": "icon",
+	"platforms": ["web"],
+	"code": {
+		"hmr": true,
+		"name": "icon",
+		"ts": {
+			"path": "/code/ts",
+			"files": ["*"]
+		},
+		"sass": {
+			"path": "/code/scss",
+			"files": ["*"]
+		}
+	}
+}

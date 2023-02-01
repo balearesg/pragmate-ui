@@ -1,0 +1,46 @@
+@import '~template/sass/variables';
+.beyond-element-empty {
+  text-align: center;
+  color: var(--gray);
+  padding: 30px;
+  display: flex;
+  flex-flow: row;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+
+  .content {
+    justify-items: center;
+    display: flex;
+    margin: auto;
+    flex-flow: column;
+  }
+
+  h3 {
+    margin: 15px 0 0;
+    font-size: 18px;
+    text-transform: lowercase;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  a {
+    color: var(--gray-light);
+    font-size: 18px;
+
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  svg {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    margin: auto;
+    fill: var(--gray);
+  }
+}

@@ -1,0 +1,31 @@
+.component-result {
+	form {
+		width: 100%;
+
+		.beyond-element-input {
+			width: 100%;
+
+			input {
+				width: 100%;
+				color: var(--text-on-primary);
+			}
+			label, input {
+				color: var(--text-on-primary);
+			}
+			&:focus-within label,
+			input:not(:placeholder-shown) ~ label {
+				 background-color: var(--surface);
+				 color: var(--text-on-primary);
+			}
+			&.has-icon, .eye.beyond-icon-button  {
+				svg.beyond-icon {
+				  color: var(--text-on-primary);
+				  fill: var(--text-on-primary);
+				}
+			  }
+			  &:hover:not(&.disabled) input {
+				color: var(--text-on-primary);
+			  }
+		}
+	}
+}

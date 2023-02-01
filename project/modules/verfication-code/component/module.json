@@ -1,0 +1,22 @@
+{
+  "name": "code-verification",
+  "platforms": [
+    "web"
+  ],
+  "code": {
+    "hmr": true,
+    "name": "code-verification",
+    "sass":{
+      "path": "/code/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

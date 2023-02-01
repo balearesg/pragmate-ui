@@ -1,0 +1,29 @@
+@import '~template/sass/variables';
+.beyond-alert-dialog {
+
+  &.beyond-alert-dialog-centered {
+
+    .alert-dialog-content, .actions {
+      display: grid;
+      justify-content: center;
+    }
+
+  }
+
+  // .alert-dialog-content {
+  //   padding-top: 20px;
+  // }
+
+  .actions {
+    border-top: 1px solid var(--gray-light);
+    margin-top: 15px;
+    display: grid;
+    justify-content: end;
+    padding: 15px 0 0;
+
+    .beyond-button {
+      margin: 0;
+    }
+  }
+ 
+}

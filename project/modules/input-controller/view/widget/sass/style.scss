@@ -1,0 +1,14 @@
+.input-controller-view {
+	.component-result {
+		display: grid;
+
+		label {
+			display: grid;
+			gap: 0.5rem;
+
+			input {
+				padding: 0.5rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.beyondalert {
+
+  padding: 15px;
+  color: var(--text-on-primary);
+  margin: 10px 0;
+  margin-bottom: 20px;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  border-radius: 2px;
+  box-shadow: 0 10px 13px -7px #000, 0 2px 11px 3px transparent;
+
+  &.alert-icon, &.alert-icon-left {
+    grid-template-columns: auto 1fr;
+  }
+
+  &.alert-icon-right {
+    grid-template-columns: 1fr auto;
+  }
+
+}

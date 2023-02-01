@@ -1,0 +1,21 @@
+{
+	"name": "beyond-icon",
+	"platforms": ["web"],
+	"widget": {
+		"route": "/components/beyond-icons",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"sass":{
+			"path": "/widget/scss",
+			"files": [
+			  "*"
+			]
+		  },
+		"element": {
+			"name": "beyond-icon"
+		}
+	}
+}

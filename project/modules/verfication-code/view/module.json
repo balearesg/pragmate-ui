@@ -1,0 +1,19 @@
+{
+	"name": "beyond-code-verification",
+	"platforms": ["web"],
+	"widget": {
+		"route": "/components/beyond-code-verification",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"sass": {
+			"path": "/widget/scss",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "beyond-code-verification"
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+  "name": "dropdown-page",
+  "platforms": ["web"],
+  "widget": {
+    "route": "/components/dropdown",
+    "is": "page",
+    "ts": {
+      "path": "/widget/ts",
+      "files": ["*"]
+    },
+    "element": {
+      "name": "dropdown-page"
+    }
+  }
+}

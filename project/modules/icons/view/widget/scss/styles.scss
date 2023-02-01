@@ -1,0 +1,98 @@
+.view {
+	.component-implementation .component-result {
+		align-items: flex-start;
+	}
+	.list-container {
+		display: flex;
+		flex-direction: column;
+		gap: 0px;
+		padding: 16px 24px 0;
+		h4 {
+			color: var(--text-on-primary);
+			font-size: 18px;
+		}
+	}
+	.container-icons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+		 justify-content: center;
+		padding: 16px 0;
+
+		.content-icon {
+			display: flex;
+			flex-direction: column;
+			background-color: var(--box-bg);
+			align-items: center;
+			padding: 16px;
+			border-radius: 14px;
+			gap: 8px;
+			min-width: 11rem;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+			border-bottom: 4px solid var(--primary);
+
+			svg.beyond-icon {
+				height: 25px;
+				width: 25px;
+				transition: all 0.3s ease-in-out;
+				fill: var(--secondary);
+			}
+			span {
+				font-size: 16px;
+			}
+			&:hover {
+				transform: scale(1.05);
+				border-bottom: 4px solid var(--primary-accent);
+			}
+
+			&:active {
+				transform: scale(1);
+				border-bottom: 0;
+			}
+		}
+	}
+
+	.component-result {
+		padding: 24px 24px 0;
+		color: var(--text-on-primary);
+		row-gap: 8px;
+
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		h3 {
+			height: fit-content;
+		}
+		.content-result {
+			display: flex;
+			column-gap: 16px;
+		}
+		.beyond-tabs-content {
+			margin: auto;
+			width: 100%;
+			svg.beyond-icon {
+				margin: auto;
+				display: block;
+			}
+		}
+		svg.beyond-icon {
+			fill: var(--text-on-primary);
+		}
+
+		button.beyond-icon-button:not(.tooltip):not(.copy-button) {
+			background: var(--box-bg);
+			border-bottom: 4px solid var(--primary);
+			border-radius: 10px;
+
+			svg.beyond-icon {
+				fill: var(--gray-darker);
+			}
+
+			&:active {
+				border-bottom: 0;
+			}
+		}
+	}
+}

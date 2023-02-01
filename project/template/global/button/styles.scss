@@ -1,0 +1,14 @@
+button {
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	outline: transparent;
+	cursor: pointer;
+}
+
+.action-button {
+	background: var(--primary-accent);
+	color: var(--text-on-primary);
+	border-radius: 10px;
+	padding: 1rem 2rem;
+}

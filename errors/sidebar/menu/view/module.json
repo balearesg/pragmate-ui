@@ -1,0 +1,22 @@
+{
+	"name": "dropdown-sidebar-page",
+	"platforms": [
+		"web"
+	  ],
+	"widget": {
+		"route": "/components/dropdown-sidebar",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"sass": {
+			"path": "/widget/sass",
+			"files": ["*"]
+		},
+
+		"element": {
+			"name": "dropdown-sidebar-page"
+		}
+	}
+}

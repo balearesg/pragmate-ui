@@ -1,0 +1,43 @@
+.code-inputs {
+  display: flex;
+  justify-content: center;
+  background-color: #ccc;
+  border-radius: 0.5rem;
+
+  input {
+    width: 100%;
+    padding: 0;
+    margin: 0 5px 1rem;
+    background-color: inherit;
+
+    font-weight: 900;
+    font-size: 40px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    caret-color: rgb(0, 0, 7);
+    text-align: center;
+
+    -moz-user-select: text;
+    -ms-user-select: text;
+    -webkit-user-select: text;
+    user-select: text;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:focus {
+      -webkit-transition: background-color 600000s 0s, color 600000s 0s;
+      transition: background-color 600000s 0s, color 600000s 0s;
+    }
+
+    &:focus {
+      border-color: rgb(61, 61, 61);
+    }
+    @media screen and (max-width: 320px) {
+      font-size: 35px;
+    }
+  }
+  input[data-autocompleted] {
+    background-color: transparent !important;
+  }
+}

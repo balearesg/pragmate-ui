@@ -1,0 +1,19 @@
+{
+  "name": "beyond-drag-and-drop",
+  "platforms": [
+		"web"
+	  ],
+  "widget": {
+    "route": "/components/beyond-drag-and-drop",
+    "is": "page",
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "element": {
+      "name": "beyond-drag-and-drop"
+    }
+  }
+}

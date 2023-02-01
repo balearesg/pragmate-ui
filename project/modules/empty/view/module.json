@@ -1,0 +1,19 @@
+{
+	"name": "beyond-empty",
+	"platforms": ["web"],
+	"widget": {
+		"route": "/components/beyond-empty",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"sass": {
+			"path": "/widget/scss",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "beyond-empty"
+		}
+	}
+}

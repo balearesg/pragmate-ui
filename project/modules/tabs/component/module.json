@@ -1,0 +1,22 @@
+{
+  "name": "tabs",
+  "platforms": [
+    "web"
+  ],
+  "code": {
+    "hmr": true,
+    "name": "tabs",
+    "sass": {
+      "path": "/code/sass",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

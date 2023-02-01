@@ -1,0 +1,15 @@
+{
+	"name": "beyond-switch",
+	"platforms": ["web"],
+	"widget": {
+		"route": "/components/beyond-switch",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "beyond-switch"
+		}
+	}
+}

@@ -1,0 +1,60 @@
+.swiper-implementation {
+  --swiper-theme-color: var(--primary);
+  .swiper-container {
+    position: relative;
+  }
+  .swiper-slide {
+    width: auto;
+    max-width: 300px;
+    max-width: 300px;
+    .beyond-element-image {
+      max-width: 300px;
+      min-height: 300px;
+      //  aspect-ratio: 1 / 1;
+      user-select: none;
+      img {
+        width: 100%;
+        max-width: 300px;
+        height: 100%;
+        min-height: 300px;
+        max-height: 300px;
+        //       aspect-ratio: 1 / 1;
+      }
+      .beyond-element-image-preload {
+        background-color: var(--gray-light);
+      }
+    }
+  }
+
+  .swiper-pagination {
+    width: calc(100%);
+    height: 7px;
+    right: 0;
+    top: auto;
+    left: auto;
+    //   bottom: -10px;
+    border-radius: 1rem;
+    z-index: 100;
+    .swiper-pagination-bullet {
+      background-color: #fff;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: var(--primary);
+    }
+    .swiper-pagination-progressbar-fill {
+      border-radius: 1rem;
+    }
+  }
+  .swiper-button-prev, .swiper-button-next {
+    background-color: var(--primary);
+    border-radius: 50%;
+    padding: 8px;
+    svg.beyond-icon {
+      fill: #fff;
+    }
+  }
+}
+.view .component-implementation {
+  flex-direction: column;
+}

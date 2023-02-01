@@ -1,0 +1,22 @@
+{
+  "name": "image",
+  "platforms": [
+    "web"
+  ],
+  "code": {
+    "hmr": true,
+    "name": "image",
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "sass":{
+      "path": "/code/scss",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+	"name": "empty",
+	"platforms": ["web"],
+	"code": {
+		"hmr": true,
+		"name": "empty",
+		"sass": {
+			"path": "/code/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/code/ts",
+			"files": ["*"]
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"name": "implementation-result",
+	"platforms": ["web"],
+	"code": {
+		"sass": {
+			"path": "/code/sass",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/code/ts",
+			"files": ["*"]
+		}
+	}
+}

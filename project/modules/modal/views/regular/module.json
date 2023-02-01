@@ -1,0 +1,15 @@
+{
+	"name": "beyond-regular-modal",
+	"platforms": ["web"],
+	"widget": {
+		"route": "/components/beyond-regular-modal",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "beyond-regular-modal"
+		}
+	}
+}

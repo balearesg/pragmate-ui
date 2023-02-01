@@ -1,0 +1,19 @@
+{
+	"name": "beyond-spinner",
+	"platforms": ["web"],
+	"widget": {
+		"route": "/components/beyond-spinner",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"sass": {
+			"path": "/widget/scss",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "beyond-spinner"
+		}
+	}
+}

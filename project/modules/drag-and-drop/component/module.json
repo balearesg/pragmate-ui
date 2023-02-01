@@ -1,0 +1,22 @@
+{
+  "name": "drag-and-drop",
+  "platforms": [
+    "web"
+  ],
+  "code": {
+    "name": "drag-and-drop",
+    "hmr": true,
+    "sass": {
+      "path": "/code/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "reactive-model",
+  "platforms": [
+    "backend",
+    "web",
+    "ios",
+    "android"
+  ],
+  "ts": {
+    "path": "./ts",
+    "files": ["*"]
+  }
+}

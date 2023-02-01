@@ -1,0 +1,27 @@
+@mixin properties() {
+	--surface: #101625;
+	--primary: #ff8056;
+	--primary-dark: #e36152;
+	--primary-light: #ffa789;
+	--primary-accent: #e36152;
+	--text-on-primary: #fff;
+
+	--accent-color: #ffa385;
+	//secondary colors
+	--secondary: #121f36;
+	--secondary-dark: #030405;
+	--secondary-black-dark: #0a121f;
+	--secondary-darker: #0c1525;
+	--secondary-light: #617096;
+	--secondary-accent: #8e99bb;
+
+	--text-on-secondary: #ffffff;
+	--text-color: rgba(255, 255, 255, 0.6);
+	--text-title-color: var(--text-on-primary);
+	--text-second-color: var(--gray-dark);
+
+	--text-hover-color: var(--primary);
+	--bg-element: var(--secondary-light);
+	--element-border-color: var(--gray-light);
+	--separator-color: var(--gray-lighter);
+}

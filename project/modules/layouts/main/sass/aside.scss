@@ -1,0 +1,55 @@
+.aside {
+	width: 17.5em;
+	height: 100vh;
+	background: var(--secondary);
+	position: fixed !important;
+}
+
+// MAIN NAV
+.main-nav {
+	ul {
+		border-top: solid 1px var(--secondary-accent);
+	}
+
+	.sub-list {
+		transition: all 0.2s ease-in-out;
+		border-top: 0;
+		li {
+			border-bottom: 0;
+			a {
+				padding-left: 2rem;
+				&::before {
+					width: 98%;
+				}
+			}
+		}
+	}
+
+	li {
+		border-bottom: solid 1px var(--secondary-accent);
+	}
+
+	a {
+		padding: 1.1em;
+		color: var(--text-on-secondary);
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+
+		&:hover {
+			color: var(--text-on-primary);
+		}
+
+		svg.beyond-icon {
+			fill: var(--text-on-primary);
+			transition: all 0.2s ease-in-out;
+
+			&.right {
+				transform: rotate(-90deg);
+			}
+		}
+	}
+}

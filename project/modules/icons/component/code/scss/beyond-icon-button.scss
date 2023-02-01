@@ -1,0 +1,76 @@
+@import '~template/sass/variables';
+.beyond-icon-button {
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  border: none;
+  display: inline-grid;
+  position: relative;
+  outline: none !important;
+  align-items: center;
+  justify-content: center;
+  &:not(&:disabled) {
+    cursor: pointer;
+  }
+  &:disabled {
+    opacity: .6;
+  }
+  svg.beyond-icon {
+    height: 15px;
+    width: 15px;
+  }
+
+  &.circle {
+    border-radius: 50%;
+
+    > .beyond-ripple {
+      border-radius: 50%;
+      align-self: center;
+    }
+  }
+
+  &.primary {
+    background: var(--primary);
+    color: var(--text-on-primary);
+
+    &.dark {
+      background: var(--primary-dark);
+    }
+
+    &.light {
+      background: var(--primary-light);
+    }
+
+    svg {
+      fill: var(--text-on-primary);
+    }
+  }
+
+  &.gray {
+    background: var(--gray-light);
+  }
+
+  &.secondary {
+    background: var(--secondary);
+    fill: var(--text-on-secondary);
+    color: var(--text-on-secondary);
+
+    &.dark {
+      background: var(--secondary-dark);
+    }
+
+    &.light {
+      background: var(--secondary-light);
+    }
+  }
+
+  &.small-icon {
+    height: 24px;
+    width: 24px;
+
+    .beyond-icon {
+      height: 12px;
+      width: 12px;
+    }
+  }
+}

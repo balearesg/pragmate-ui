@@ -1,0 +1,15 @@
+{
+	"name": "beyond-alert-modal",
+	"platforms": ["web"],
+	"widget": {
+		"route": "/components/beyond-alert-modal",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "beyond-alert-modal"
+		}
+	}
+}

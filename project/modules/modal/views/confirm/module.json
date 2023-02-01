@@ -1,0 +1,15 @@
+{
+	"name": "beyond-confirm-modal",
+	"platforms": ["web"],
+	"widget": {
+		"route": "/components/beyond-confirm-modal",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "beyond-confirm-modal"
+		}
+	}
+}

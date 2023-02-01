@@ -1,0 +1,11 @@
+  .code-inputs.code-result {
+    padding: 2rem 2rem 0;
+    background-color: var(--text-on-primary);
+      input {
+        caret-color: var(--primary);
+        color: var(--secondary-dark);
+        &:focus {
+          border-color: var(--primary);
+        }
+      }
+    }

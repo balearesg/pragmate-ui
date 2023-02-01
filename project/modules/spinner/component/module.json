@@ -1,0 +1,22 @@
+{
+  "name": "spinner",
+  "platforms": [
+    "web"
+  ],
+  "code": {
+    "hmr": true,
+    "name": "spinner",
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "sass":{
+      "path": "/code/scss",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

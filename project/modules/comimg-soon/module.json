@@ -1,0 +1,23 @@
+{
+  "name": "coming-soon",
+  "platforms": ["web"],
+  "widget": {
+    "is": "page",
+    "route": "/components/coming-soon",
+    "element": {
+      "name": "coming-soon"
+    },
+    "sass": {
+      "path": "sass",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

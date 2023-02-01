@@ -1,0 +1,19 @@
+{
+	"name": "beyond-swiper",
+	"platforms": ["web"],
+	"widget": {
+		"route": "/components/beyond-swiper",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"sass": {
+			"path": "/widget/scss",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "beyond-swiper"
+		}
+	}
+}

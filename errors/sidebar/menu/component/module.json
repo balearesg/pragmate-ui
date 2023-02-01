@@ -1,0 +1,16 @@
+{
+	"name": "menu",
+	"platforms": [
+		"web"
+	  ],
+	"code": {
+		"sass": {
+			"path": "/code/sass",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/code/ts",
+			"files": ["*"]
+		}
+	}
+}

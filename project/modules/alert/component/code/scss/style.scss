@@ -1,0 +1,41 @@
+@import '~template/sass/variables';
+.alert {
+  padding: 1rem 6px;
+  display: grid;
+  color: #323232;
+  text-align: center;
+  border-radius: var(--border-secondary);
+  font-size: 13px;
+  margin: 0.5rem 0;
+  position: relative;
+  width: 100%;
+  &.error {
+    background-color: lighten(#f04141, 25%);
+    // background-color: lighten($error, 15%);
+    border: 1px solid var(--error);
+  }
+  &.warning {
+    background-color: lighten(#f7c700, 15%);
+    // background-color: lighten($error, 15%);
+    border: 1px solid var(--warning);
+  }
+  &.success {
+    background-color: lighten(#22bb33, 40%);
+    // background-color: lighten($error, 15%);
+    border: 1px solid var(--success);
+  }
+  &.info {
+    background-color: #caf0f8;
+    // background-color: lighten($error, 15%);
+    border: 1px solid #e2e2e2;
+  }
+  .beyond-icon-button {
+    position: absolute;
+    right: .5rem;
+    width: 20px;
+    height: 20px;
+    top: -30px;
+    bottom: 0;
+    margin: auto 0;
+  }
+}

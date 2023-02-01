@@ -1,0 +1,62 @@
+main {
+    height: 100%;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+	.main-content {
+	    width: calc(100% - 17.5em);
+    /* flex: 1 1; */
+     margin-left: 17.5em;
+    /* width: 100%; */
+	}
+}
+
+.logo {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--secondary);
+	a {
+		display: block;
+		padding: 1em 0;
+		color: var(--text-on-secondary);
+		text-decoration: none;
+		transition: 0.15s linear color;
+
+		&:hover {
+			color: #fff;
+			span {
+				color: var(--primary);
+			}
+		}
+	}
+
+	span {
+		font-weight: 700;
+		transition: 0.15s linear color;
+	}
+}
+
+// HOVER SLIDE EFFECT
+.list-hover-slide {
+	li {
+		position: relative;
+		overflow: hidden;
+	}
+
+	a {
+		-webkit-user-select: none;
+		user-select: none;
+		&:hover {
+			background: rgba(255, 255, 255, 0.29);
+
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(6.9px);
+			-webkit-backdrop-filter: blur(6.9px);
+		}
+	}
+}
