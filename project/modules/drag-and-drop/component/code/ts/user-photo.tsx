@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from "react";
 import { useDragAndDropContext } from "./context";
-import { BeyondIcon } from "@bgroup/ui/icon";
+import { BeyondIcon } from "@bgroup/ui/icons";
 import { BeyondImage } from '@bgroup/ui/image';
 export function UserPhoto(): JSX.Element {
   const { drop, textUserPhoto, state, dispatch } = useDragAndDropContext();

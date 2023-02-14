@@ -1,9 +1,35 @@
 {
-    "name": "@bgroup/ui",
-    "version": "0.0.29",
+    "name": "ui",
+    "version": "0.0.30",
     "description": "Beyond UI is a collection of reusable components",
     "author": "",
     "license": "MIT",
+    "scope": "bgroup",
+    "layout": "main-layout",
+    "template": "template/template.json",
+    "languages": {
+        "default": "en",
+        "supported": ["en", "es"]
+    },
+    "modules": {
+        "path": "modules"
+    },
+    "deployment": {
+        "distributions": [
+            {
+                "name": "web",
+                "environment": "development",
+                "ssr": "",
+                "platform": "web",
+                "ports": {
+                    "bundles": "1001"
+                }
+            }
+        ]
+    },
+    "static": {
+        "includes": ["assets"]
+    },
     "dependencies": {
         "@beyond-js/react-widgets": "^18.20.4",
         "@beyond-js/widgets": "^0.1.2",

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { BeyondSwitch } from "@bgroup/ui/form";
-import { BeyondIcon } from '@bgroup/ui/icon';
+import { BeyondIcon } from '@bgroup/ui/icons';
 interface Props {
 	componentName: string;
 };

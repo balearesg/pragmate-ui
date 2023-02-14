@@ -1,5 +1,5 @@
 {
-	"name": "icon",
+	"name": "icons",
 	"platforms": ["web"],
 	"code": {
 		"hmr": true,

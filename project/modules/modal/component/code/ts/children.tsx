@@ -8,7 +8,7 @@ import {
   ReactNode,
   SyntheticEvent,
 } from "react";
-import { BeyondIconButton } from "@bgroup/ui/icon";
+import { BeyondIconButton } from "@bgroup/ui/icons";
 export const BeyondModalContext: Context<any> = createContext({});
 export const useBeyondModalContext = () => useContext(BeyondModalContext);
 

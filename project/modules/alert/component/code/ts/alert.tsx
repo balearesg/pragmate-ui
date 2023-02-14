@@ -1,5 +1,5 @@
 import React from "react";
-import { BeyondIconButton } from '@bgroup/ui/icon';
+import { BeyondIconButton } from '@bgroup/ui/icons';
 
 type props = {
     show?: boolean;

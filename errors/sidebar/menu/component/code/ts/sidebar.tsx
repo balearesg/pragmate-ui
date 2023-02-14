@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, MutableRefObject } from "react";
-import { BeyondIconButton } from "@bgroup/ui/icon";
+import { BeyondIconButton } from "@bgroup/ui/icons";
 import { BeyondScrollContainer } from "@bgroup/ui/perfect-scrollbar";
 interface Props extends Partial<HTMLElement> {
   logo?: JSX.Element;

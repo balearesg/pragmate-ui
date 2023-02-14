@@ -8,7 +8,7 @@ import {
   SyntheticEvent,
   MutableRefObject
 } from "react";
-import { BeyondIcon, BeyondIconButton } from "@bgroup/ui/icon";
+import { BeyondIcon, BeyondIconButton } from "@bgroup/ui/icons";
 import { BeyondSpinner } from '@bgroup/ui/spinner';
 interface props extends InputHTMLAttributes<HTMLInputElement>  {
   ref?: any;

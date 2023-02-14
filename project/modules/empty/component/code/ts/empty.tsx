@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BeyondIcon } from '@bgroup/ui/icon';
+import { BeyondIcon } from '@bgroup/ui/icons';
 type props = {
 	text?: string;
 	icon?: string;

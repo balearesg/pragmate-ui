@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from "react";
 import { TabsContent, BeyondTabs, Tabs } from "@bgroup/ui/tabs";
-import { BeyondIconButton } from "@bgroup/ui/icon";
+import { BeyondIconButton } from "@bgroup/ui/icons";
 import { CopyableImplementation } from "./code";
 export /*bundle*/ function ImplementationResult({
   code,

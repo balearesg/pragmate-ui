@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { toast } from '@bgroup/ui/toast';
-import { BeyondIconButton } from '@bgroup/ui/icon';
+import { BeyondIconButton } from '@bgroup/ui/icons';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 
 export /*bundle*/ function CopyableImplementation({ children }) {

@@ -1,4 +1,4 @@
-import { BeyondIcon } from "@bgroup/ui/icon";
+import { BeyondIcon } from "@bgroup/ui/icons";
 import React, { PropsWithChildren, useState } from "react";
 
 interface Props {

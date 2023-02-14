@@ -1,6 +1,6 @@
 {
   "name": "hooks",
-  "platforms": ["*"],
+  "platforms": ["web"],
   "code": {
     "ts": {
       "path": "/ts",

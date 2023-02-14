@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Slide } from "./slide";
 import { Controller } from "./controller";
-import { BeyondIcon } from '@bgroup/ui/icon';
+import { BeyondIcon } from '@bgroup/ui/icons';
 interface props {
   children: Array<JSX.Element>;
   footer?: boolean;

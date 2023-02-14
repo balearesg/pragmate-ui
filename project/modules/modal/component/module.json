@@ -6,12 +6,6 @@
   "code": {
     "hmr": true,
     "name": "modal",
-    "sass":{
-      "path": "/code/scss",
-      "files": [
-        "*"
-      ]
-    },
     "ts": {
       "path": "/code/ts",
       "files": [

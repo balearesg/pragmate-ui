@@ -1,6 +1,6 @@
 import  React, { MouseEvent, ReactNode, ButtonHTMLAttributes } from 'react';
 import { routing } from '@beyond-js/kernel/routing';
-import { BeyondIcon } from '@bgroup/ui/icon';
+import { BeyondIcon } from '@bgroup/ui/icons';
 import { BeyondSpinner } from '@bgroup/ui/spinner';
 
 interface props extends ButtonHTMLAttributes<HTMLButtonElement> {

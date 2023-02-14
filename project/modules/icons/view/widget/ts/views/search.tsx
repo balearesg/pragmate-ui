@@ -1,5 +1,5 @@
 import React from 'react';
-import { BeyondIcon } from '@bgroup/ui/icon';
+import { BeyondIcon } from '@bgroup/ui/icons';
 export function Search({ onSearch }) : JSX.Element {
     const [ value, setValue ] = React.useState<string>("");
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) : void => {

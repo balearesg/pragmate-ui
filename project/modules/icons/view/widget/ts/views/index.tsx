@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Header } from "@bgroup/ui/header";
-import { BEYOND_ICONS, BeyondIcon, BeyondIconButton } from "@bgroup/ui/icon";
+import { BEYOND_ICONS, BeyondIcon, BeyondIconButton } from "@bgroup/ui/icons";
 import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import { ImplementationResult } from "@bgroup/ui/implementation-result";
 import { Item } from "./item";
@@ -25,8 +25,8 @@ function View(): JSX.Element {
         <Header componentName="Icons" />
         <div className="component-info">
           <h3>Import:</h3>
-          <CopyableImplementation>{`import { BeyondIcon } from '@bgroup/ui/icon';`}</CopyableImplementation>
-          <CopyableImplementation>{`import { BeyondIconButton } from '@bgroup/ui/icon';`}</CopyableImplementation>
+          <CopyableImplementation>{`import { BeyondIcon } from '@bgroup/ui/icons';`}</CopyableImplementation>
+          <CopyableImplementation>{`import { BeyondIconButton } from '@bgroup/ui/icons';`}</CopyableImplementation>
         </div>
         <div className="component-implementation">
           <div className="component-info">

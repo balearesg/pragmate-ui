@@ -1,6 +1,6 @@
 import React from 'react';
 import { IToast, ToastTypes, toast } from './model';
-import { BeyondIcon } from '@bgroup/ui/icon';
+import { BeyondIcon } from '@bgroup/ui/icons';
 interface Props {
 	key: string;
 	type: ToastTypes;

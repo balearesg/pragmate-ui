@@ -1,7 +1,6 @@
 {
   "name": "reactive-model",
   "platforms": [
-    "backend",
     "web",
     "ios",
     "android"

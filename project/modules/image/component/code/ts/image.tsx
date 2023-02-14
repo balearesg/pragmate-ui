@@ -5,7 +5,7 @@ import React, {
   useState,
   useEffect,
 } from "react";
-import { BeyondIconButton } from "@bgroup/ui/icon";
+import { BeyondIconButton } from "@bgroup/ui/icons";
 
 interface props extends ImgHTMLAttributes<HTMLImageElement>  {
   graphSrc?: string;

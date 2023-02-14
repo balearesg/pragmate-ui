@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { SidebarItem } from './sidebar-item';
-import { BeyondIcon } from '@bgroup/ui/icon';
+import { BeyondIcon } from '@bgroup/ui/icons';
 
 export function SidebarDropdown({ component }) {
 	const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BeyondIcon } from '@bgroup/ui/icon';
+import { BeyondIcon } from '@bgroup/ui/icons';
 import { toast } from '@bgroup/ui/toast';
 
 export function Item(props): JSX.Element {
