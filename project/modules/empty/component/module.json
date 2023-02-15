@@ -1,6 +1,10 @@
 {
 	"name": "empty",
-	"platforms": ["web"],
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
 	"code": {
 		"hmr": true,
 		"name": "empty",

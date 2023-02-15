@@ -1,7 +1,9 @@
 {
   "name": "modal",
   "platforms": [
-    "web"
+    "web",
+    "ios",
+    "android"
   ],
   "code": {
     "hmr": true,

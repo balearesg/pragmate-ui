@@ -1,6 +1,10 @@
 {
 	"name": "beyond-scroll-container",
-	"platforms": ["web"],
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
 	"widget": {
 		"route": "/components/beyond-scroll-container",
 		"is": "page",

@@ -1,6 +1,10 @@
 {
   "name": "coming-soon",
-  "platforms": ["web"],
+   "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
   "widget": {
     "is": "page",
     "route": "/components/coming-soon",

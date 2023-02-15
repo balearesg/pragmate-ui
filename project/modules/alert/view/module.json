@@ -1,16 +1,24 @@
 {
 	"name": "beyond-alert",
-	"platforms": ["web"],
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	],
 	"widget": {
 		"route": "/components/beyond-alert",
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"sass": {
 			"path": "/widget/scss",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"element": {
 			"name": "beyond-alert"

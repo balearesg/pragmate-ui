@@ -1,6 +1,10 @@
 {
 	"name": "beyond-input-controller",
-	"platforms": ["web"],
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
 	"widget": {
 		"route": "/components/beyond-input-controller",
 		"is": "page",

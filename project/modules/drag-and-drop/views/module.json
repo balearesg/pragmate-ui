@@ -1,8 +1,10 @@
 {
   "name": "beyond-drag-and-drop",
-  "platforms": [
-		"web"
-	  ],
+ "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
   "widget": {
     "route": "/components/beyond-drag-and-drop",
     "is": "page",

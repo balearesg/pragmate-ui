@@ -1,6 +1,10 @@
 {
 	"name": "beyond-button",
-	"platforms": ["web"],
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
 	"widget": {
 		"route": "/components/beyond-button",
 		"is": "page",

@@ -1,6 +1,10 @@
 {
   "name": "layout/main",
-  "platforms": ["web"],
+   "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
   "widget": {
     "is": "layout",
     "element": {

@@ -1,8 +1,10 @@
 {
 	"name": "form",
-	"platforms": [
-		"web"
-	  ],
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
 	"code": {
 		"hmr": true,
 		"name": "form",

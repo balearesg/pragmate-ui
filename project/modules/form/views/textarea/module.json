@@ -1,6 +1,10 @@
 {
 	"name": "beyond-textarea",
-	"platforms": ["web"],
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
 	"widget": {
 		"route": "/components/beyond-textarea",
 		"is": "page",

@@ -1,6 +1,10 @@
 {
 	"name": "beyond-confirm-modal",
-	"platforms": ["web"],
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
 	"widget": {
 		"route": "/components/beyond-confirm-modal",
 		"is": "page",

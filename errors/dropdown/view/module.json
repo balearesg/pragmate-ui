@@ -1,6 +1,10 @@
 {
   "name": "dropdown-page",
-  "platforms": ["web"],
+   "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
   "widget": {
     "route": "/components/dropdown",
     "is": "page",

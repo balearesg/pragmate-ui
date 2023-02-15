@@ -1,6 +1,10 @@
 {
   "name": "header",
-  "platforms": ["web"],
+   "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
   "code": {
     "sass": {
       "path": "/code/sass",

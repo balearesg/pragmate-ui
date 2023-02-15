@@ -1,6 +1,6 @@
 {
-  "name": "hooks",
-   "platforms": [
+  "name": "link",
+  "platforms": [
     "web",
     "ios",
     "android"

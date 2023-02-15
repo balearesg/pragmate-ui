@@ -1,6 +1,10 @@
 {
 	"name": "beyond-toast",
-	"platforms": ["web"],
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
 	"widget": {
 		"route": "/components/beyond-toast",
 		"is": "page",

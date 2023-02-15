@@ -1,8 +1,10 @@
 {
 	"name": "dropdown-sidebar-page",
-	"platforms": [
-		"web"
-	  ],
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
 	"widget": {
 		"route": "/components/dropdown-sidebar",
 		"is": "page",

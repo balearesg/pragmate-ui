@@ -1,6 +1,10 @@
 {
 	"name": "beyond-code-verification",
-	"platforms": ["web"],
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
 	"widget": {
 		"route": "/components/beyond-code-verification",
 		"is": "page",

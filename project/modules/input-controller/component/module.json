@@ -1,8 +1,10 @@
 {
 	"name": "input-controller",
-	"platforms": [
-		"web"
-	  ],
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
 	"code": {
 		"ts": {
 			"path": "/code/ts",

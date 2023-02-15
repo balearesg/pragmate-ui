@@ -1,6 +1,10 @@
 {
 	"name": "beyond-alert-modal",
-	"platforms": ["web"],
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
 	"widget": {
 		"route": "/components/beyond-alert-modal",
 		"is": "page",

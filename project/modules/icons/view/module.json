@@ -1,6 +1,10 @@
 {
 	"name": "beyond-icon",
-	"platforms": ["web"],
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
 	"widget": {
 		"route": "/components/beyond-icons",
 		"is": "page",

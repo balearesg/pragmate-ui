@@ -1,6 +1,10 @@
 {
 	"name": "beyond-spinner",
-	"platforms": ["web"],
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
 	"widget": {
 		"route": "/components/beyond-spinner",
 		"is": "page",

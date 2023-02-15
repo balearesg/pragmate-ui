@@ -1,7 +1,9 @@
 {
   "name": "code-verification",
   "platforms": [
-    "web"
+    "web",
+    "ios",
+    "android"
   ],
   "code": {
     "hmr": true,

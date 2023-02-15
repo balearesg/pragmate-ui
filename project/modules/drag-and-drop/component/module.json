@@ -1,7 +1,9 @@
 {
   "name": "drag-and-drop",
   "platforms": [
-    "web"
+    "web",
+    "ios",
+    "android"
   ],
   "code": {
     "name": "drag-and-drop",

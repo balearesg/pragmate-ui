@@ -1,6 +1,10 @@
 {
   "name": "home",
-  "platforms": ["web"],
+   "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
   "widget": {
     "is": "page",
     "route": "/",
