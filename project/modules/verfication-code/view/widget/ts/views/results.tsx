@@ -1,7 +1,8 @@
 import * as React from "react";
 import { InputCode } from "@bgroup/ui/code-verification";
 
-export function Result() {
+export function Result({reset}) {
+ 
   const [code, setCode] = React.useState<string>("");
   const onCodeFull = (code: string): void => setCode(code);
   return (
@@ -10,6 +11,7 @@ export function Result() {
       length={6}
       onCodeFull={onCodeFull}
       onlyNumber={false}
+      reset={reset}
     />
   );
 }

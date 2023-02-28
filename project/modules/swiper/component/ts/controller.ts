@@ -1,6 +1,6 @@
 import * as  Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper';
-import { ReactiveModel } from "./reactive-model";
+import { ReactiveModel } from "@bgroup/ui/reactive-model";
 
 const SwiperCasted: typeof Swiper.Swiper = (Swiper.Swiper as unknown as typeof Swiper.default);
 
@@ -72,7 +72,16 @@ export class Controller extends ReactiveModel {
         });
     };
 
-    next: () => void = (): void => {
+    nextSlide = () => {
+        if (!this.#swiper?.isEnd) {
+            this.#swiper?.slideNext(500, false);
+            return;
+        }
+        if (!this.#onEnd) return;
+        if (this.#props.functionNext) this.#props.functionNext();
+        else this.#swiper?.slideNext(500, false);
+    }
+    next = (): void => {
         if (!this.#swiper?.isEnd) {
             this.#swiper?.slideNext(500, false);
             return;

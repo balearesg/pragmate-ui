@@ -46,10 +46,11 @@ class ReactiveModel extends Events {
      * @param property
      * @param value
      */
-    _set(property, value): void {
-        let props = {};
+    _set(property: any, value: any): void {
+        let props : any = {};
         if (property && value !== 'undefined') props[property] = value; else props = property;
         let updated: boolean = false;
+/* A comment. */
 
         for (const prop in props) {
             const key: string = `_${prop}`;

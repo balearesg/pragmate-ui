@@ -11,7 +11,8 @@ type props = {
   length?: number;
   onCodeFull?: (e: string) => void;
   className?: string;
-  onlyNumber?: boolean
+  onlyNumber?: boolean;
+  reset: any
 };
 const defaultOnCodeFull: (code) => void = () => null;
 
@@ -27,14 +28,14 @@ export /*bundle*/ function InputCode({
   length,
   onCodeFull,
   className,
-  onlyNumber
+  onlyNumber,
+  reset
 }: props): JSX.Element {
   type code = Array<string>;
   const [code, setCode] = useState<code>([]);
   const refs: MutableRefObject<HTMLInputElement[]> = useRef<HTMLInputElement[]>(
     Array(length)
-  );  
-  
+  );
   const onClean = (event: KeyboardEvent<HTMLInputElement>): void => {
     window.setTimeout(() => {
       if (event.which === 8 || event.key?.toLowerCase() === "backspace") {
@@ -64,10 +65,14 @@ export /*bundle*/ function InputCode({
 
   const setFocus = (): void => refs.current[code.length]?.focus();
   const cls: string = className ? `${className} code-inputs` : "code-inputs";
-  useEffect((): void => {
+  useEffect(() => {
     if (refs.current[code.length]) refs.current[code.length].focus();
     onCodeFull(code.join(""));
   }, [code, length]);
+
+  useEffect(() => {
+    setCode([])
+  }, [reset])
   const output: Array<JSX.Element> = [...Array(length)].map(
     (_, i: number): JSX.Element => (
       <Input

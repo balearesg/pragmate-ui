@@ -24,7 +24,7 @@ function BeyondSwiperSlider(props: props): JSX.Element {
     prev: React.useRef(),
   };
   const { slideTo } = props;
-  const { next, container, prev } = refs;
+  const { container, prev } = refs;
   const slides: Array<JSX.Element> = props.children.map(
     (slide: JSX.Element, index: number) => <Slide key={index}>{slide}</Slide>
   );
@@ -55,6 +55,7 @@ function BeyondSwiperSlider(props: props): JSX.Element {
   const cls: string = props.className
     ? `${props.className} beyond-element-swiper-slider`
     : "beyond-element-swiper-slider";
+  const next = () => controller?.next()
   return (
     <div className={cls}>
       <div ref={container} className="swiper-container">
@@ -84,7 +85,7 @@ function BeyondSwiperSlider(props: props): JSX.Element {
             <div ref={prev} className="swiper-button-prev">
               <BeyondIcon icon="left" />
             </div>
-            <div ref={next} className="swiper-button-next">
+            <div onClick={controller?.nextSlide} className="swiper-button-next">
               <BeyondIcon icon="right" />
             </div>
           </>

@@ -25,7 +25,7 @@ function BeyondAlertModal(props) {
 	if (btn && typeof btn === 'object') {
 		btnLabel = btn.label ? btn.label : btn;
 		clsCancel = btn.className ? btn.className : clsCancel;
-	}
+	};
 
 	const disabled: { disabled?: boolean } = {};
 	if (state.fetching) disabled.disabled = true;

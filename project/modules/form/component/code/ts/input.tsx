@@ -89,7 +89,7 @@ export /*bundle*/
   let cls: string = props.className
     ? `${props.className} beyond-element-input`
     : "beyond-element-input";
-  cls += props.icon || props.loading || props.password ? " has-icon" : "";
+  cls += props.icon || props.loading || props.password || props.required ? " has-icon" : "";
   cls += props.disabled ? " disabled" : "";
   cls += props.hasError ? " error" : "";
   delete properties.className;
