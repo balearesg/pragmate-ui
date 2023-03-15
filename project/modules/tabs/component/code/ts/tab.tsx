@@ -7,7 +7,7 @@ type props = {
     selected?: string;
     className?: string;
     onTab?: any;
-    nolink?: any;
+    nolink?: any
 };
 export /*bundle*/ const BeyondTab = (props: PropsWithChildren<props>) => {
     const { index, isActive, selected, className, children } = props;

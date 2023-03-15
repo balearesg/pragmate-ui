@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useState, PropsWithChildren } from "react";
 import { useTabsContext } from './context';
 import { BeyondTab } from './tab';
+import { routing } from '@beyond-js/kernel/routing';
 
 type props = {
     onClick?: any;
@@ -18,7 +19,8 @@ type properties = {
     "data-index"?: number,
     onClick?: any,
     nolink?: any,
-    className?: string
+    className?: string;
+    "data-path": string
 }
 
 export /*bundle*/ function Tabs(props: PropsWithChildren<props>): JSX.Element {
@@ -30,11 +32,11 @@ export /*bundle*/ function Tabs(props: PropsWithChildren<props>): JSX.Element {
 
     const { tabNavigate: tabNavigateGo, selected } = useTabsContext()
 
-    const tabNavigate = (event, callback) => {
+    const tabNavigate = (event : React.MouseEvent<HTMLDivElement>, callback) => {
 
         const target = event.currentTarget;
-        const index = target.dataset.index;
-
+        const index = parseInt(target.dataset.index);
+        const path = target.dataset.path
         setState({
             'valueSelected': index,
             'active': (index !== state.valueSelected) ? true : !state.active
@@ -42,8 +44,10 @@ export /*bundle*/ function Tabs(props: PropsWithChildren<props>): JSX.Element {
 
         if (callback) callback(event);
 
-        tabNavigateGo(parseInt(index));
+        tabNavigateGo(index);
 
+        if(path) routing.replaceState({}, 'nada', path)
+        
     }
 
 
@@ -57,7 +61,8 @@ export /*bundle*/ function Tabs(props: PropsWithChildren<props>): JSX.Element {
             'selected': selected,
             'isActive': active,
             'index': index,
-            'data-index': index
+            'data-index': index,
+            'data-path': tab.props['data-path']
         };
 
         if (!nolink) properties.onClick = tabNavigate;

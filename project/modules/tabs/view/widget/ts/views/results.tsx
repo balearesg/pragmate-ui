@@ -8,10 +8,10 @@ export function Results() {
 	return (
 		<BeyondTabs selected={tab}>
 			<Tabs selected={tab}>
-				<button onClick={() => setTab(0)}>TAB 0</button>
-				<button onClick={() => setTab(1)}>TAB 1</button>
-				<button onClick={() => setTab(2)}>TAB 2</button>
-				<button onClick={() => setTab(3)}>TAB 3</button>
+				<button data-path="/components/beyond-tabs?tab=0" onClick={() => setTab(0)}>TAB 0</button>
+				<button data-path="/components/beyond-tabs?tab=1" onClick={() => setTab(1)}>TAB 1</button>
+				<button data-path="/components/beyond-tabs?tab=2" onClick={() => setTab(2)}>TAB 2</button>
+				<button data-path="/components/beyond-tabs?tab=3" onClick={() => setTab(3)}>TAB 3</button>
 			</Tabs>
 			<TabsContent>
 				<div><p>Tab Content 0</p></div>

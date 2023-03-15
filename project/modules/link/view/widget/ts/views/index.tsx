@@ -7,7 +7,7 @@ export /*bundle*/
 	function View() {
 	return (
 		<div className="view">
-			<Header componentName="Icons" />
+			<Header componentName="Link" />
 			<div className="component-info">
 				<h3>Import:</h3>
 				<CopyableImplementation>{`import { Link } from '@bgroup/ui/link';`}</CopyableImplementation>
