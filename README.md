@@ -3,8 +3,9 @@
 
 @bgroup/ui is a collection of reusable components here you can see what they are and how to import and implement them.   
 
+## To install 
 
-
+```npm i @bgroup/ui```
 
 ## Components
 

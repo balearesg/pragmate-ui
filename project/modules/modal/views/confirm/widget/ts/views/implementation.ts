@@ -13,11 +13,16 @@ export function Results() {
 			<button className="action-button" onClick={handleModal}>
 				Display Modal!
 			</button>
-			{show && <BeyondConfirmModal show className="beauty-modal" onClose={handleModal}>
-				<div>
-					<p>This is the confirm modal ❤</p>
-				</div>
-			</BeyondConfirmModal>}
+			{show &&  
+				<BeyondConfirmModal
+					show
+					className="beauty-modal"
+					title="Title confirm modal"
+					text="text confirm modal for a description"
+					onClose={handleModal}
+					onCancel={handleModal}
+					onConfirm={handleModal}
+			  />}
 		</>
 	);
 }

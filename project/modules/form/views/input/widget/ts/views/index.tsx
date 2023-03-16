@@ -25,7 +25,7 @@ function View() {
         <Header componentName="Input" />
         <div className="component-info">
           <h3>Import:</h3>
-          <CopyableImplementation>{`import { BeyondInput } from '@bgroup/ui/icons';`}</CopyableImplementation>
+          <CopyableImplementation>{`import { BeyondInput } from '@bgroup/ui/form';`}</CopyableImplementation>
         </div>
         <div className="component-implementation">
           <div className="component-info">

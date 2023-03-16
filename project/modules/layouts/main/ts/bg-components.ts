@@ -115,4 +115,9 @@ export const components = [
 		path: 'beyond-drag-and-drop',
 		subComponents: [],
 	},
+	{
+		name: 'Link',
+		path: 'beyond-link',
+		subComponents: [],
+	},
 ];

@@ -8,12 +8,6 @@
 	margin: 1rem 0;
 	transition: all 0.4s ease-in-out;
 	padding: 0 8px;
-	// .beyond-input__required-label {
-	// 	position: absolute;
-	// 	right: 1rem;
-	// 	bottom: 0.7rem;
-	// 	color: var(--error);
-	// }
 	input,
 	textarea {
 		padding: 0.5rem;
@@ -28,8 +22,8 @@
 		background-clip: content-box;
 		&:-webkit-autofill,
 		&:-webkit-autofill:focus {
-			-webkit-transition: background-color infinite 0s, color infinite 0s;
-			transition: background-color infinite 0s, color infinite 0s;
+			-webkit-transition: background-color 9000000000s 0s, color 9000000000s 0s;
+			transition: background-color 9000000000s 0s, color 9000000000s 0s;
 		}
 		&:focus {
 			color: var(--gray-dark);

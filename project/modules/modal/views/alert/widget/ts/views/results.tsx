@@ -1,23 +1,28 @@
-import * as React from 'react';
-import { BeyondAlertModal } from '@bgroup/ui/modal';
+import * as React from "react";
+import { BeyondAlertModal } from "@bgroup/ui/modal";
 
 export function Results() {
-	const [show, setShow] = React.useState(false);
+  const [show, setShow] = React.useState(false);
 
-	function handleModal() {
-		setShow(!show);
-	}
+  function handleModal() {
+    setShow(!show);
+  }
 
-	return (
-		<>
-			<button className="action-button" onClick={handleModal}>
-				Display Modal!
-			</button>
-			{show && <BeyondAlertModal onConfirm={handleModal} className="beauty-modal" onClose={handleModal}>
-				<div>
-					<p>This is a normal modal ❤</p>
-				</div>
-			</BeyondAlertModal>}
-		</>
-	);
+  return (
+    <>
+      <button className="action-button" onClick={handleModal}>
+        Display Modal!
+      </button>
+      {show && (
+        <BeyondAlertModal
+          onConfirm={handleModal}
+          className="beauty-modal"
+          title="Title alert modal"
+		  text="text alert modal for a description"
+	
+          onClose={handleModal}
+        />
+      )}
+    </>
+  );
 }

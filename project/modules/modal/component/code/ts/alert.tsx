@@ -3,6 +3,7 @@ import { BeyondModal } from './modal';
 import { BeyondButton } from '@bgroup/ui/form';
 export /*bundle*/
 function BeyondAlertModal(props) {
+	
 	const [state, setState] = React.useState({ fetching: false });
 
 	const close = (event) => {
@@ -17,14 +18,11 @@ function BeyondAlertModal(props) {
 	let cls: string = `beyond-alert-dialog${centered ? ' beyond-alert-dialog-centered' : ''}`;
 	if (props.className) cls += ` ${props.className}`;
 	let clsCancel: string = 'btn btn-default btn-cancel';
-	delete props.btn;
-	delete props.text;
-	delete props.title;
-	delete props.centering;
+
 	
 	if (btn && typeof btn === 'object') {
-		btnLabel = btn.label ? btn.label : btn;
-		clsCancel = btn.className ? btn.className : clsCancel;
+		btnLabel = btn.label ?? btn;
+		clsCancel = btn.className ?? clsCancel;
 	};
 
 	const disabled: { disabled?: boolean } = {};

@@ -1,4 +1,4 @@
-@import '~template/sass/variables';
+@import "~template/sass/variables";
 .btn {
   cursor: pointer;
   width: auto;
@@ -23,16 +23,23 @@
   }
   &.btn-primary {
     background-color: var(--primary);
-    color: var(--text);
+    color: var(--text-on-primary);
     &:hover:not(:disabled) {
-    background-color: var(--primary-dark);
+      background-color: var(--primary-dark);
     }
   }
   &.btn-primary-dark {
     background-color: var(--primary-dark);
-    color: var(--text);
+    color: var(--text-on-primary);
     &:hover:not(:disabled) {
-    background-color: var(--primary);
+      background-color: var(--primary);
+    }
+  }
+  &.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--text-on-secondary);
+    &:hover:not(:disabled) {
+      background-color: var(--secondary-dark);
     }
   }
   &.btn-border {
@@ -47,13 +54,13 @@
     background-color: var(--gray-variant);
     color: var(--text-on-secondary);
     &:hover:not(:disabled) {
-    background-color: var(--gray);
+      background-color: var(--gray);
     }
   }
   &:first-letter {
     text-transform: uppercase;
   }
-  @media screen and (max-width: 360px){
+  @media screen and (max-width: 360px) {
     font-size: 12px;
   }
-  }
+}

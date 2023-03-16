@@ -9,7 +9,7 @@ export function Item(props): JSX.Element {
 		toast.success('Name copied');
 	};
 	return (
-		<button onClick={copy} className="content-icon">
+		<button onClick={copy} className={`content-icon ${icon}`}>
 			<BeyondIcon icon={icon} />
 			<span>{icon}</span>
 		</button>
