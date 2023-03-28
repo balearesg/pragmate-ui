@@ -1,0 +1,65 @@
+.jadmin-input {
+    display: flex;
+    flex-direction: column;
+    row-gap: 11.06px;
+    .beyond-element-input,
+    .beyond-element-textarea {
+        margin: 0;
+        border-radius: var(--border-primary);
+        border: 1px solid var(--input-bg);
+        background-color: var(--input-bg);
+        input {
+            font-size: 16px;
+            letter-spacing: 0px;
+            color: var(--text-on-primary);
+            &:focus {
+                color: var(--text-on-primary);
+            }
+        }
+        &:hover:not(&.disabled),
+        &:focus-within:not(&.disabled) {
+            border-color: var(--input-bg);
+        }
+        &:hover:not(&.disabled) input,
+        &:hover:not(&.disabled) textarea {
+            color: var(--text-on-primary);
+        }
+        button.beyond-icon-button svg.beyond-icon {
+            fill: var(--icon-color);
+        }
+        input[type="password"]::-ms-reveal,
+        input[type="password"]::-ms-clear,
+        input[type="password"]::-webkit-contacts-auto-fill-button,
+        input[type="password"]::-webkit-credentials-auto-fill-button {
+            display: none !important;
+        }
+    }
+    .beyond-element-input,
+    .beyond-element-textarea {
+        .beyond-element-input-error {
+            bottom: -1.25rem;
+            color: var(--border-error);
+            font-size: 12px;
+        }
+        &.error {
+            border-color: var(--border-error);
+        }
+    }
+    .beyond-element-textarea {
+        min-height: 135px;
+        textarea {
+            min-height: inherit;
+        }
+    }
+    .label-jadmin {
+        font-size: 16px;
+        letter-spacing: 0px;
+        color: var(--text-on-primary);
+        font-weight: 300;
+        line-height: 1;
+        text-transform: lowercase;
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+}

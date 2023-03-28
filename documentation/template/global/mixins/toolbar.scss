@@ -1,0 +1,8 @@
+@mixin app-toolbar($background: var(--beyond-color-primary), $color: var(--beyond-color-primary-contrast)) {
+
+  .beyond-element-toolbar {
+    color: $color;
+    background: $background;
+  }
+
+}

@@ -1,0 +1,33 @@
+@import '~template/sass/variables';
+.beyond-element-modal {
+
+  .close-icon {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    border: none;
+    background: none;
+    display: inline-block;
+    fill: var(--gray);
+    color: var(--gray);
+    transition: all 100ms ease-in;
+    outline: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+
+    &:hover, &:focus {
+      fill: var(--gray-dark);
+      color: var(--gray);
+      transition: all 100ms ease-in;
+    }
+
+    svg {
+      height: 12px;
+      width: 13px;
+      fill: #000;
+    }
+
+  }
+
+}

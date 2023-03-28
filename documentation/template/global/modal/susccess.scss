@@ -1,0 +1,61 @@
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.conf-modal {
+}
+
+.conf-modal h1 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 10px;
+  display: inline-block;
+}
+
+.title-text {
+  display: inline-block;
+  height: 35px;
+  line-height: 52px;
+  padding: 0 15px;
+}
+
+.success h1 {
+  color: var(--primary);
+}
+
+.conf-modal p {
+  color: var(--text-on-primary);
+  padding: 15px;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.modal-footer {
+  text-align: end;
+  .conf-but {
+    display: inline-block;
+    float: right;
+    margin-right: 15px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--secondary);
+    background: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+  }
+}
+.modal-footer .conf-but:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.modal-footer .conf-but.green {
+  color: var(--success);
+}

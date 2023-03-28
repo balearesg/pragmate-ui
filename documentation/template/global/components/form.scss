@@ -1,0 +1,88 @@
+.content-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    .title-form {
+        color: var(--primary);
+        letter-spacing: 0px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .form-group {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        .form-sub-info {
+            display: flex;
+            flex-direction: column;
+            row-gap: 18px;
+            span {
+                font-size: 12px;
+                color: var(--text-on-primary);
+                letter-spacing: 0px;
+                line-height: 1.5;
+                display: inline-block;            
+            }
+        }
+        &.form-group-first-large .form-colum-large {
+            display: flex;
+            gap: 30px;
+            :first-child {
+                flex: 1 1 80%;
+            }
+        }
+        &.form-group-big {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    .form-group-large {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 30px;
+    }
+    .form-group-switch, .form-group-select {
+        display: flex;
+        flex-direction: column;
+        row-gap: 11.06px;
+        justify-content: space-between;
+        label {
+            font-size: 16px;
+            letter-spacing: 0px;
+            color: var(--text-on-primary);
+            font-weight: 300;
+            line-height: 1;
+        }
+        .status-text {
+            color: var(--text-on-primary);
+            line-height: 1;
+            min-width: 64px;
+        }
+    }
+    .form-group.one-colum {
+        justify-content: end;
+        width: max-content;
+        align-self: end;
+        .form-group-switch {
+            flex-direction: column;
+            align-items: end;
+            &.row-switch {
+                max-width: 200px;
+                justify-self: end;
+                flex-direction: row;
+                column-gap: 16px;
+            }
+        }
+    }
+    button.beyond-button {
+        min-width: 140px;
+        align-self: end;
+        font-weight: 300;
+    }
+    @media screen and (max-width: 768px) {
+        .form-group.form-group-first-large .form-colum-large {
+            flex-direction: column;
+        }
+    }
+}

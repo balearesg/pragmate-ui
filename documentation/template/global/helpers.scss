@@ -1,0 +1,65 @@
+.justify-end {
+  justify-content: flex-end;
+}
+.hide {
+  visibility: hidden;
+}
+.icon-header.beyond-icon-button {
+  svg.beyond-icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+.total-items {
+  font-size: 16px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  &.padding {
+    padding-left: 16px;
+  }
+}
+.end-column {
+  display: block;
+  text-align: right;
+}
+.hide {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+.gap-16 {
+  gap: 16px;
+}
+.ga-8 {
+  gap: 16px;
+}
+.w-100 {
+  width: 100%;
+}
+.font-bold {
+  font-weight: bold;
+}
+.font-normal {
+  font-weight: normal;
+  
+}
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: end;
+}
+.align-start {
+  align-items: start;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-colum {
+  flex-direction: column;
+}

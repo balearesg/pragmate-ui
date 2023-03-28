@@ -1,0 +1,44 @@
+@import "~template/sass/variables";
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+body,
+html {
+	margin: 0;
+	font-family: var(--font-family);
+	width: auto;
+	background-color: var(--background);
+}
+main:not(.layout-login).main-content {
+	margin-top: 87px;
+	//background-color: #F1F8FF;
+	min-height: calc(100vh - 87px);
+	padding: 30px 30px 30px 0;
+	margin-left: 315px;
+	width: calc(100% - 315px);
+	transition: all 0.3s ease;
+	&__hide {
+		margin-left: 130px;
+		width: calc(100% - 130px);
+	}
+	@media screen and (max-width: 1280px) {
+		margin-left: 270px;
+		width: calc(100% - 270px);
+		margin-top: 60px;
+		min-height: calc(100vh - 60px);
+		&__hide {
+			margin-left: 130px;
+			width: calc(100% - 130px);
+		}
+	}
+}
+.card-page {
+	background-color: var(--surface);
+	border-radius: var(--border-primary);
+	padding: 26px;
+	border: 1px solid var(--border);
+	margin: 1rem 0;
+	width: 100%;
+}
