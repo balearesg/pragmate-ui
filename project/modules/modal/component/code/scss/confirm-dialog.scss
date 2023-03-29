@@ -1,4 +1,3 @@
-@import "~template/sass/variables";
 .beyond-confirm-dialog {
   &.beyond-confirm-dialog-centered {
     justify-content: center;
@@ -9,8 +8,16 @@
       display: grid;
       justify-content: center;
     }
+    p, div {
+      color: var(--text);
+    }
   }
-
+  .confirm-dialog-content p,
+  .confirm-dialog-content div,
+  .confirm-dialog-content h3,
+  .confirm-dialog-content h4 {
+    color: var(--text);
+  }
   .actions {
     border-top: 1px solid var(--gray-light);
     padding: 15px 0 0;
@@ -54,6 +61,10 @@
       height: -webkit-fit-content;
       height: -moz-fit-content;
       height: fit-content;
+
+      width: -webkit-max-content;
+
+      width: -moz-max-content;
 
       width: max-content;
       position: absolute;

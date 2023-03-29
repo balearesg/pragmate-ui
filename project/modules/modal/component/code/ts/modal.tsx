@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { useState, useRef, MutableRefObject, SyntheticEvent, useEffect, ReactNode, ReactPortal } from 'react';
-import { createPortal } from 'react-dom';
+import { useState, useRef, MutableRefObject, SyntheticEvent, ReactNode } from 'react';
 import { Children } from './children';
 
 type props = {
@@ -10,14 +9,14 @@ type props = {
 	show?: boolean;
 };
 export /*bundle*/
-function BeyondModal(props: props): ReactPortal {
+function BeyondModal(props: props) {
 	type state = {
 		container?: HTMLDivElement;
 		show: boolean;
 		closeClicked: boolean;
 	};
 	const [state, setState] = useState<state>({
-		show: props?.show,
+		show: props?.show ?? false,
 		closeClicked: false,
 		container: null,
 	});
@@ -29,7 +28,6 @@ function BeyondModal(props: props): ReactPortal {
 		const body: HTMLBodyElement = document.querySelector('body');
 		modal.current.classList.add('modal-hidden');
 		window.setTimeout(async (): Promise<void> => {
-			//  if (typeof onClose === "function") return;
 			setState({ ...state, show: false, closeClicked: true });
 			body.setAttribute('style', '');
 			body.classList.remove('body-custom-modal-opened');
@@ -41,20 +39,7 @@ function BeyondModal(props: props): ReactPortal {
 		event.stopPropagation();
 		close(event);
 	};
-	useEffect((): (() => void) => {
-		const container: HTMLDivElement = document.createElement('div');
-		setState({ ...state, container });
-		const body: HTMLBodyElement = document.querySelector('body');
-		body.appendChild(container);
 
-		return (): void => {
-			body.removeChild(container);
-		};
-	}, []);
-
-	const { container } = state;
-
-	if (!container) return null;
 	const show: boolean = state.show;
 
 	let cls: string = 'beyond-element-modal ';
@@ -77,10 +62,9 @@ function BeyondModal(props: props): ReactPortal {
 		);
 	}
 
-	return createPortal(
+	return (
 		<div ref={modal} onClick={onClickBackdrop} className={cls}>
 			{output}
-		</div>,
-		container
+		</div>
 	);
 }

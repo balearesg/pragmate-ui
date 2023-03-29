@@ -1,18 +1,25 @@
-@import '~template/sass/variables';
 .beyond-alert-dialog {
-
   &.beyond-alert-dialog-centered {
-
-    .alert-dialog-content, .actions {
+    .alert-dialog-content,
+    .actions {
       display: grid;
       justify-content: center;
     }
-
   }
 
-  // .alert-dialog-content {
-  //   padding-top: 20px;
-  // }
+  .alert-dialog-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    h3,
+    div {
+      color: var(--text);
+    }
+    h3 {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
 
   .actions {
     border-top: 1px solid var(--gray-light);
@@ -25,5 +32,4 @@
       margin: 0;
     }
   }
- 
 }
