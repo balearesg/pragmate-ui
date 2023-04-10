@@ -3,7 +3,7 @@ import { BeyondImage } from "@bgroup/ui/image";
 import { useDragAndDropContext } from "./context";
 
 export function Area(): JSX.Element {
-  const { files, count, formats, showMessage, state, dispatch } =
+  const { files, count, formats, showMessage, state, dispatch, onUpload } =
     useDragAndDropContext();
   const accept: string[] =
     formats && Array.isArray(formats) && formats.map((item) => `.${item}`);
@@ -29,6 +29,7 @@ export function Area(): JSX.Element {
         "success",
         2000
       );
+      onUpload(newFile)
     }
   };
   return (
