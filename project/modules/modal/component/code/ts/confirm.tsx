@@ -46,7 +46,7 @@ export /*bundle*/ const BeyondConfirmModal = (properties): JSX.Element => {
 	}
 
 	if (btnCancel && typeof btnCancel === 'object') {
-		confirmLabel = btnCancel.label ? btnCancel.label : btn;
+		cancelLabel = btnCancel.label ? btnCancel.label : btn;
 		clsCancel = btnCancel.className ? btnCancel.className : clsCancel;
 	}
 

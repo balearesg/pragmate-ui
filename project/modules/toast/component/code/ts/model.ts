@@ -1,4 +1,4 @@
-import { ReactiveModel } from '@bgroup/ui/reactive-model';
+import { ReactiveModel } from "@beyond-js/reactive/model";
 
 export /*bundle*/ type ToastTypes = 'success' | 'error' | 'info' | 'loading' | 'warning';
 export /*bundle*/ interface IToast {
@@ -8,7 +8,7 @@ export /*bundle*/ interface IToast {
 	duration?: number;
 }
 
-class Toast extends ReactiveModel {
+class Toast extends ReactiveModel<any> {
 	#current: Array<IToast | undefined>;
 
 	get current() {

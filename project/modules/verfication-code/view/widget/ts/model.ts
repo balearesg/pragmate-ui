@@ -1,6 +1,6 @@
-import { ReactiveModel } from "@bgroup/ui/reactive-model";
+import { ReactiveModel } from "@beyond-js/reactive/model";
 
-export class Model extends ReactiveModel {
+export class Model extends ReactiveModel<any> {
     #count: number = 0;
     get count() {
         return this.#count

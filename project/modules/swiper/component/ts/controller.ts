@@ -1,10 +1,9 @@
 import * as  Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper';
-import { ReactiveModel } from "@bgroup/ui/reactive-model";
+import { ReactiveModel } from "@beyond-js/reactive/model";
 
 const SwiperCasted: typeof Swiper.Swiper = (Swiper.Swiper as unknown as typeof Swiper.default);
-
-export class Controller extends ReactiveModel {
+export class Controller extends ReactiveModel<any> {
     #swiper;
     get swiper(): any {
         return this.#swiper;
