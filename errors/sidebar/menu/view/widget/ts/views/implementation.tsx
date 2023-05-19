@@ -7,7 +7,7 @@ function Implementation() {
     const logoTest : string = 'The root of your logo';
 	return (
 		<div className="results">
-			<DropdownSidebar logo={<BeyondImage src={logoTest} alt="Logo" />}>
+			<DropdownSidebar logo={<Image src={logoTest} alt="Logo" />}>
 				{output}
 			</DropdownSidebar>
 		</div>

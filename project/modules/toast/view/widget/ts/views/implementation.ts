@@ -13,12 +13,12 @@ export function View() {
                     right: '2rem',
                 }}
             />
-            <BeyondButton
+            <Button
                 className="btn btn-primary"
                 onClick={toggleToast}
             >
                 Show error Toast
-            </BeyondButton>
+            </Button>
         </>
 	);
 }

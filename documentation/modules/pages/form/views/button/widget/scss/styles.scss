@@ -1,0 +1,32 @@
+.beyond-button.btn {
+    min-width: 7rem;
+    align-self: center;
+    margin: 0 auto;
+    display: block;
+    &.spinner, &.btn-secondary, &.btn-border, &.btn-cancel {
+        display: block;
+    }
+}
+
+.view {
+    width: 100%;
+
+    .component-implementation {
+        margin-top: 3em;
+        display: grid;
+        grid-template-columns: 280px minmax(5rem, 1fr);
+        grid-template-rows: 2rem;
+        grid-gap: 30px;
+
+        .column {
+                text-align: center;
+            }
+        
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+        }
+    }
+}

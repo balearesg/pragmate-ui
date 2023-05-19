@@ -3,7 +3,7 @@ import { components } from "../bg-components";
 import { SidebarDropdown } from "./sidebar-dropdown";
 import { SidebarItem } from "./sidebar-item";
 import { routing } from "@beyond-js/kernel/routing";
-import { BeyondScrollContainer } from "@bgroup/ui/perfect-scrollbar";
+import { ScrollContainer } from "@bgroup/ui/perfect-scrollbar";
 interface IComponent {
   name: string;
   path: string;
@@ -25,7 +25,7 @@ export function Sidebar() {
   }
 
   return (
-    <BeyondScrollContainer
+    <ScrollContainer
       className="aside"
       data-perfect-scrollbar=""
       data-suppress-scroll-x="true"
@@ -49,6 +49,6 @@ export function Sidebar() {
       <div className="ps__rail-y">
         <div className=" ps__thumb-y" tabIndex={0} />
       </div>
-    </BeyondScrollContainer>
+    </ScrollContainer>
   );
 }

@@ -1,6 +1,6 @@
 export const implementation = `
 import * as React from 'react';
-import { BeyondConfirmModal } from '@bgroup/ui/modal';
+import { ConfirmModal } from '@bgroup/ui/modal';
 
 export function Results() {
 	const [show, setShow] = React.useState(false);
@@ -14,7 +14,7 @@ export function Results() {
 				Display Modal!
 			</button>
 			{show &&  
-				<BeyondConfirmModal
+				<ConfirmModal
 					show
 					className="beauty-modal"
 					title="Title confirm modal"

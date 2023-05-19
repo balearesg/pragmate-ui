@@ -8,7 +8,7 @@ import {
   ReactNode,
   SyntheticEvent,
 } from "react";
-import { BeyondIconButton } from "@bgroup/ui/icons";
+import { IconButton } from "@bgroup/ui/icons";
 export const BeyondModalContext: Context<any> = createContext({});
 export const useBeyondModalContext = () => useContext(BeyondModalContext);
 
@@ -21,7 +21,7 @@ export const Children = ({ children, close, dismiss }: props): JSX.Element => {
   const output = [];
   if (dismiss !== false) {
     output.push(
-      <BeyondIconButton
+      <IconButton
         className="close-icon"
         onClick={close}
         data-dismiss="modal"

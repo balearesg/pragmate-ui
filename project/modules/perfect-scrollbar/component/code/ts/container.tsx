@@ -1,12 +1,18 @@
-import React, { useRef, useEffect, MutableRefObject, HTMLAttributes, ReactNode } from "react";
-import PerfectScrollbar from 'perfect-scrollbar';
+import React, {
+  useRef,
+  useEffect,
+  MutableRefObject,
+  HTMLAttributes,
+  ReactNode,
+} from "react";
+import PerfectScrollbar from "perfect-scrollbar";
 
 type props = {
-  onScrollY?: any,
-  onScrollX?: any,
-  className?: HTMLAttributes<HTMLDivElement>['className'];
-  children: ReactNode
-}
+  onScrollY?: any;
+  onScrollX?: any;
+  className?: HTMLAttributes<HTMLDivElement>["className"];
+  children: ReactNode;
+};
 
 /**
  * It's a React component that uses the PerfectScrollbar library to create a scrollbar that can be
@@ -15,7 +21,7 @@ type props = {
  * @returns A function that returns a JSX.Element
  */
 export /*bundle*/
-  function BeyondScrollContainer(props: props): JSX.Element {
+function ScrollContainer(props: props): JSX.Element {
   const ref: MutableRefObject<HTMLDivElement> = useRef(null);
 
   useEffect((): (() => void) => {
@@ -53,4 +59,4 @@ export /*bundle*/
       {props.children}
     </div>
   );
-};
+}

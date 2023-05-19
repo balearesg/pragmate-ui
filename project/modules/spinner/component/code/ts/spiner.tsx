@@ -12,9 +12,8 @@ type properties = {
   size?: string;
 };
 export /*bundle*/
-  const BeyondSpinner: ForwardRefExoticComponent<
-    properties & RefAttributes<unknown>
-  > = forwardRef(
+const Spinner: ForwardRefExoticComponent<properties & RefAttributes<unknown>> =
+  forwardRef(
     (props: properties, ref: LegacyRef<HTMLDivElement>): JSX.Element => {
       const { color, className, primary, secondary, size } = props;
       let stroke: string;
@@ -29,8 +28,8 @@ export /*bundle*/
       const style: any = { style: {} };
       if (size) {
         style.style.height = size;
-        style.style.width = size
-      };
+        style.style.width = size;
+      }
       return (
         <div className={cls} ref={ref} {...style}>
           <svg viewBox="0 0 100 100">

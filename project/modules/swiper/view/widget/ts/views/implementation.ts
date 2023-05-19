@@ -1,10 +1,10 @@
 export const implementation = `
 export function SwiperImplementation(): JSX.Element {
 	const items = Array.from(Array(10)).map((_, index) => (
-	  <BeyondImage src="https://source.unsplash.com/random" alt=" " />
+	  <Image src="https://source.unsplash.com/random" alt=" " />
 	));
 	return (
-	  <BeyondSwiperSlider
+	  <SwiperSlider
 		loop={true}
 		slidesPerView="auto"
 		spaceBetween={0}
@@ -13,7 +13,7 @@ export function SwiperImplementation(): JSX.Element {
 		grabCursor={true}
 	  >
 		{items}
-	  </BeyondSwiperSlider>
+	  </SwiperSlider>
 	);
   }
-`  
+`;

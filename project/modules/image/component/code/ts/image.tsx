@@ -5,32 +5,32 @@ import React, {
   useState,
   useEffect,
 } from "react";
-import { BeyondIconButton } from "@bgroup/ui/icons";
+import { IconButton } from "@bgroup/ui/icons";
 
-interface props extends ImgHTMLAttributes<HTMLImageElement>  {
+interface props extends ImgHTMLAttributes<HTMLImageElement> {
   graphSrc?: string;
   size?: string;
   children?: ReactNode;
   error?: string;
   onError?: (e: SyntheticEvent<Element, Event>) => void;
-};
+}
 /**
  * A React component that loads an image from a URL.
  * @param {props} props - props
  */
+interface initialState {
+  size: string;
+  error?: boolean;
+  loaded: boolean;
+  url?: string;
+  onload?: undefined;
+  src?: string;
+  htmlLoaded?: boolean;
+  loading?: string;
+  onerror?: undefined;
+}
 export /*bundle*/
-function BeyondImage(props: props): JSX.Element {
-  interface initialState {
-    size: string;
-    error?: boolean;
-    loaded: boolean;
-    url?: string;
-    onload?: undefined;
-    src?: string;
-    htmlLoaded?: boolean;
-    loading?: string;
-    onerror?: undefined;
-  }
+function Image(props: props): JSX.Element {
   const initialState: initialState = { size: "200x200", loaded: false };
   const { className, onClick, children, src, alt, onError } = props;
   const [image, setImage] = useState<HTMLImageElement | initialState>();
@@ -40,15 +40,16 @@ function BeyondImage(props: props): JSX.Element {
   const loadImage = (url: string, size: string): void => {
     let finalSrc: string = url;
 
-    const newImage: HTMLImageElement = new Image();
+    const newImage: HTMLImageElement = new globalThis.Image();
     newImage.onload = (): void =>
       setState({ ...state, loaded: true, error: false });
     newImage.onerror = (): void =>
       setState({ ...state, error: true, loaded: false });
     newImage.src = finalSrc;
     setImage(newImage);
-    setState({ ...state, url: url, size: size, src: finalSrc, loaded: true });
+    setState({ ...state, url, size, src: finalSrc, loaded: true });
   };
+
   useEffect(() => {
     const currentSrc: string = src;
     if (state.url !== currentSrc) {
@@ -69,11 +70,12 @@ function BeyondImage(props: props): JSX.Element {
   };
 
   let cls: string = `beyond-element-image ${className ? ` ${className}` : ""}`;
-  if (!loaded && !htmlLoaded) cls += " beyond-element-image-preload";
+  if (1 === 1 || (!loaded && !htmlLoaded))
+    cls += " beyond-element-image-preload";
   if (error) cls += " beyond-element-image-error";
   const Error: JSX.Element = (
     <div key="error" data-src={src} className="content-error">
-      {onError && <BeyondIconButton onClick={onClickError} icon="refresh" />}
+      {onError && <IconButton onClick={onClickError} icon="refresh" />}
     </div>
   );
   const Loaded: JSX.Element = (
@@ -84,17 +86,12 @@ function BeyondImage(props: props): JSX.Element {
       alt={alt}
     />
   );
-  if (error) output = Error;
-  if (loaded) output = Loaded;
+  output = error ? Error : Loaded;
 
   const properties: props = { ...props, className: cls, onClick };
-  delete properties.src;
-  delete properties.alt;
-  delete properties.onError;
-  delete properties.children;
-  delete properties.size;
-  delete properties.loading;
-  delete properties.error;
+  ["src", "alt", "onError", "children", "size", "loading", "error"].forEach(
+    (prop) => delete properties[prop]
+  );
 
   return (
     <figure data-src={src} {...properties}>

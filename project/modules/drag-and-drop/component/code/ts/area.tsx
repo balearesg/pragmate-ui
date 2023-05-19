@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from "react";
-import { BeyondImage } from "@bgroup/ui/image";
+import { Image } from "@bgroup/ui/image";
 import { useDragAndDropContext } from "./context";
 
 export function Area(): JSX.Element {
@@ -15,11 +15,15 @@ export function Area(): JSX.Element {
   if (formats) attrs.accept = accept.join(", ");
   if (count && count > 1) attrs.multiple = true;
   const onFileDrop = (event: ChangeEvent<HTMLInputElement>): void => {
-    const newFile : File[] = [...event.target.files];
+    const newFile: File[] = [...event.target.files];
     if (count && count < newFile.length) {
-      showMessage(`Solo puese cargar ${count} archivo${count !== 1 ? 's' : ''} a la ves`, 'error', 2000);
+      showMessage(
+        `Solo puese cargar ${count} archivo${count !== 1 ? "s" : ""} a la ves`,
+        "error",
+        2000
+      );
       return;
-  };
+    }
     if (newFile) {
       dispatch({ case: "files", files: state.files.concat(newFile) });
       showMessage(
@@ -29,12 +33,12 @@ export function Area(): JSX.Element {
         "success",
         2000
       );
-      onUpload(newFile)
+      onUpload(newFile);
     }
   };
   return (
     <div className={cls}>
-      <BeyondImage
+      <Image
         src={`${globalThis.baseDir}assets/cloud-upload-regular-240.png`}
         alt=""
       />

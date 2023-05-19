@@ -1,8 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { BeyondSpinner } from '@bgroup/ui/spinner';
-export function SpinnerPrimary() : JSX.Element {
-  return (
-    <BeyondSpinner secondary className="spinner" />
-  )
+import { Spinner } from "@bgroup/ui/spinner";
+export function SpinnerPrimary(): JSX.Element {
+  return <Spinner secondary className="spinner" />;
 }

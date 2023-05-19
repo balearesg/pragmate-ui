@@ -6,7 +6,7 @@ export function ImplementationPerfectScroll() {
 		output.push(text)
 	  }
 	return (
-		<BeyondScrollContainer
+		<ScrollContainer
 			className="aside"
 			data-perfect-scrollbar=""
 			data-suppress-scroll-x="true"
@@ -20,6 +20,6 @@ export function ImplementationPerfectScroll() {
 			<div className="ps__rail-y">
 				<div className=" ps__thumb-y" tabIndex={0} />
 			</div>
-		</BeyondScrollContainer>
+		</ScrollContainer>
   }
 `;

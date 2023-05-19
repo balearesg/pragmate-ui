@@ -1,7 +1,7 @@
 export const implementation = `
 import { useToastContext } from "@bgroup/ui/toast";
 export function ImplementationAlert() {
-<BeyondAlert  
+<Alert  
     message="this is a success message"
     title="title success"
     mode="success"
@@ -12,7 +12,7 @@ export function ImplementationAlert() {
 `;
 
 export const implementationError = `
-<BeyondAlert   
+<Alert   
     message="this is a error message"
     title="title error"
     mode="error"
@@ -22,7 +22,7 @@ export const implementationError = `
 `;
 
 export const implementationWaring = `
-<BeyondAlert   
+<Alert   
     message="this is a success warning"
     title="title warning"
     mode="warning"
@@ -32,7 +32,7 @@ export const implementationWaring = `
 `;
 
 export const implementationInfo = `
-<BeyondAlert   
+<Alert   
     message="this is a info message"
     title="title info"
     mode="info"

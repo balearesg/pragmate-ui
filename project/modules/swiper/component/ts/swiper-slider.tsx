@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Slide } from "./slide";
 import { Controller } from "./controller";
-import { BeyondIcon } from '@bgroup/ui/icons';
+import { Icon } from "@bgroup/ui/icons";
 interface props {
   children: Array<JSX.Element>;
   footer?: boolean;
@@ -11,12 +11,12 @@ interface props {
   functionNext?: (e: React.SyntheticEvent) => void;
   className?: string;
   slideTo?: any;
-  slidesPerView? : string | number;
-  spaceBetween?: number
+  slidesPerView?: string | number;
+  spaceBetween?: number;
 }
 
 export /*bundle*/
-function BeyondSwiperSlider(props: props): JSX.Element {
+function SwiperSlider(props: props): JSX.Element {
   const refs = {
     next: React.useRef(),
     container: React.useRef(),
@@ -43,7 +43,8 @@ function BeyondSwiperSlider(props: props): JSX.Element {
         lastIndex: controller.lastIndex,
       });
     controller.bind("change", onChange);
-    if (!controller.destroyed) controller.setSwiper(container.current, props, refs);
+    if (!controller.destroyed)
+      controller.setSwiper(container.current, props, refs);
     onChange();
     return () => controller.unbind("change", onChange);
   }, []);
@@ -55,7 +56,7 @@ function BeyondSwiperSlider(props: props): JSX.Element {
   const cls: string = props.className
     ? `${props.className} beyond-element-swiper-slider`
     : "beyond-element-swiper-slider";
-  const next = () => controller?.next()
+  const next = () => controller?.next();
   return (
     <div className={cls}>
       <div ref={container} className="swiper-container">
@@ -79,14 +80,14 @@ function BeyondSwiperSlider(props: props): JSX.Element {
             </button>
           </>
         )}
-      
-         {props.navigation && (
+
+        {props.navigation && (
           <>
             <div ref={prev} className="swiper-button-prev">
-              <BeyondIcon icon="left" />
+              <Icon icon="left" />
             </div>
             <div onClick={controller?.nextSlide} className="swiper-button-next">
-              <BeyondIcon icon="right" />
+              <Icon icon="right" />
             </div>
           </>
         )}

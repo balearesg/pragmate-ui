@@ -1,54 +1,59 @@
-import React from 'react';
-import { IToast, ToastTypes, toast } from './model';
-import { BeyondIcon } from '@bgroup/ui/icons';
+import React from "react";
+import { IToast, ToastTypes, toast } from "./model";
+import { Icon } from "@bgroup/ui/icons";
 interface Props {
-	key: string;
-	type: ToastTypes;
-	message: string;
-	duration?: number;
-	id: string;
+  key: string;
+  type: ToastTypes;
+  message: string;
+  duration?: number;
+  id: string;
 }
 
 const DEFAULT_DURATION = 3000;
 const ANIMATION_MARGIN = 300;
 
-export /*bundle*/ function Toast({ type, message, duration, id }: Props) : JSX.Element {
-	const toastRef = React.useRef<HTMLDivElement>(null);
-	
-	React.useEffect(() => {
-		if (toastRef.current) {
-			toastRef.current.classList.add('enter');
-		}
-		return () => {
-			if (toastRef.current) toastRef.current.classList.remove('enter');
-		};
-	}, [toastRef.current]);
+export /*bundle*/ function Toast({
+  type,
+  message,
+  duration,
+  id,
+}: Props): JSX.Element {
+  const toastRef = React.useRef<HTMLDivElement>(null);
 
-	React.useEffect(() => {
-		duration = duration ?? DEFAULT_DURATION;
+  React.useEffect(() => {
+    if (toastRef.current) {
+      toastRef.current.classList.add("enter");
+    }
+    return () => {
+      if (toastRef.current) toastRef.current.classList.remove("enter");
+    };
+  }, [toastRef.current]);
 
-		setTimeout(() => {
-			toastRef.current.classList.remove('enter');
-			toastRef.current.classList.add('exit');
-		}, duration);
+  React.useEffect(() => {
+    duration = duration ?? DEFAULT_DURATION;
 
-		const timeout = setTimeout(() => {
-			toast.current = toast.current.filter((item: IToast) => item.id !== id);
-		}, duration + ANIMATION_MARGIN);
+    setTimeout(() => {
+      toastRef.current.classList.remove("enter");
+      toastRef.current.classList.add("exit");
+    }, duration);
 
-		return () => clearTimeout(timeout);
-	}, [duration, id]);
-	const icons = {
-		error: "closeCircle",
-		success: "tickCircle",
-		info: "infoCircle",
-		loading: "refreshCircle",
-		warning: "infoCircle"
-	};
-	return (
-		<article ref={toastRef} className={`toast ${type}`}>
-			<BeyondIcon icon={icons[type]} className="icon" />
-			<p className="message">{message}</p>
-		</article>
-	);
+    const timeout = setTimeout(() => {
+      toast.current = toast.current.filter((item: IToast) => item.id !== id);
+    }, duration + ANIMATION_MARGIN);
+
+    return () => clearTimeout(timeout);
+  }, [duration, id]);
+  const icons = {
+    error: "closeCircle",
+    success: "tickCircle",
+    info: "infoCircle",
+    loading: "refreshCircle",
+    warning: "infoCircle",
+  };
+  return (
+    <article ref={toastRef} className={`toast ${type}`}>
+      <Icon icon={icons[type]} className="icon" />
+      <p className="message">{message}</p>
+    </article>
+  );
 }

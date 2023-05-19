@@ -2,9 +2,9 @@ import * as React from "react";
 import { routing } from "@beyond-js/kernel/routing";
 
 export /*bundle*/
-  function Link(
-    props: React.AnchorHTMLAttributes<HTMLAnchorElement>
-  ): JSX.Element {
+function Link(
+  props: React.AnchorHTMLAttributes<HTMLAnchorElement>
+): JSX.Element {
   const onClick = (event: React.MouseEvent<HTMLAnchorElement>): void => {
     event.preventDefault();
     event.stopPropagation();
@@ -14,8 +14,8 @@ export /*bundle*/
     routing.pushState(props.href);
   };
   const properties = { ...props };
-  delete properties.href;
-  delete properties.onClick;
+  ["href", "onClick"].forEach((prop) => delete properties[prop]);
+
   return (
     <a onClick={onClick} {...properties}>
       {props.children}

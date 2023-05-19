@@ -1,4 +1,18 @@
-.component-result .beyond-element-spinner{
-    width: 100px;
-    height: 100px;
+.component-container {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: 280px minmax(5rem, 1fr);
+    grid-template-rows: 2rem;
+    grid-gap: 30px;
+
+    .beyond-element-spinner{
+        width: 100px;
+        height: 100px;
+    }
+
+    .column {
+        text-align: center;
+    }
 }
+
+

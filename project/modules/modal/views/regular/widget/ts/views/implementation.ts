@@ -11,11 +11,11 @@ export function Results() {
 			<button className="action-button" onClick={handleModal}>
 				Display Modal!
 			</button>
-			{show && <BeyondModal show className="beauty-modal" onClose={handleModal}>
+			{show && <Modal show className="beauty-modal" onClose={handleModal}>
 				<div>
 					<p>This is a normal modal ❤</p>
 				</div>
-			</BeyondModal>}
+			</Modal>}
 		</>
 	);
 }`;
