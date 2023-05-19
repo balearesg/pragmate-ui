@@ -1,0 +1,170 @@
+@import "~template/sass/variables";
+.beyond-element-input,
+.beyond-element-textarea {
+	width: 100%;
+	position: relative;
+	border: 1.5px solid var(--border-variant);
+	border-radius: var(--border-secondary);
+	margin: 1rem 0;
+	transition: all 0.4s ease-in-out;
+	padding: 0 8px;
+	input,
+	textarea {
+		padding: 0.5rem;
+		border: none;
+		background-color: transparent;
+		width: 100%;
+		outline: none;
+		color: var(--gray-darker);
+		font-size: 16px;
+		line-height: 1.5rem;
+		transition: all 0.4s ease-in-out;
+		background-clip: content-box;
+		&:-webkit-autofill,
+		&:-webkit-autofill:focus {
+			-webkit-transition: background-color 9000000000s 0s, color 9000000000s 0s;
+			transition: background-color 9000000000s 0s, color 9000000000s 0s;
+		}
+		&:focus {
+			color: var(--gray-dark);
+		}
+	}
+	input[type="password"]::-ms-reveal,
+	input[type="password"]::-ms-clear,
+	input[type="password"]::-webkit-contacts-auto-fill-button,
+	input[type="password"]::-webkit-credentials-auto-fill-button {
+		display: none !important;
+	}
+	input[data-autocompleted] {
+		background-color: transparent !important;
+	}
+	&:hover:not(&.disabled),
+	&:focus-within:not(&.disabled) {
+		border-color: var(--primary);
+	}
+	&:hover:not(&.disabled) input,
+	&:hover:not(&.disabled) textarea {
+		color: var(--gray-dark);
+	}
+	label {
+		position: absolute;
+		background-color: transparent;
+		padding: 8px 24px;
+		line-height: 24px;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		color: var(--gray-dark);
+		cursor: text;
+		transition: all 0.4s ease-in-out;
+		display: inline-block;
+		text-transform: lowercase;
+		&:first-letter {
+			text-transform: uppercase;
+		}
+	}
+	&:focus-within label,
+	input:not(:placeholder-shown) ~ label,
+	textarea:not(:placeholder-shown) ~ label {
+		padding: 0px 8px;
+		background-color: var(--element-bg);
+		top: -12px;
+		left: 16px;
+		bottom: auto;
+		transition: all 0.3s ease-in-out;
+		color: var(--gray);
+	}
+	.beyond-element-input-error {
+		position: absolute;
+		bottom: -1.2rem;
+		left: 0;
+		color: var(--error);
+		font-size: 12px;
+	}
+
+	&.disabled,
+	&:disabled {
+		opacity: 0.5;
+		cursor: no-drop;
+		&:focus-within label,
+		input:not(:placeholder-shown) ~ label,
+		textarea:not(:placeholder-shown) ~ label,
+		label {
+			color: var(--gray);
+			cursor: no-drop;
+		}
+		input,
+		textarea {
+			cursor: no-drop;
+		}
+	}
+	&.has-icon {
+		display: flex;
+		// flex-direction: row-reverse;
+		align-items: center;
+
+		label {
+			padding: 8px 35px;
+		}
+		input,
+		textarea {
+			padding: 0.5rem;
+		}
+		&:focus-within label,
+		input:not(:placeholder-shown) ~ label,
+		textarea:not(:placeholder-shown) ~ label {
+			padding: 0px 19px;
+		}
+		.beyond-icon {
+			z-index: 10;
+			//position: absolute;
+		}
+		@media screen and (max-width: 450px) {
+			.beyond-icon-button {
+				height: 30px;
+			}
+		}
+	}
+	.eye.beyond-icon-button {
+		// position: absolute;
+		// right: 0.5rem;
+		svg.beyond-icon {
+			width: 20px;
+			height: 20px;
+			color: var(--gray);
+			fill: var(--gray);
+		}
+	}
+	&.error {
+		border-color: var(--error);
+	}
+	@media screen and (min-width: 768px) {
+		.beyond-element-input-error {
+			font-size: 13px;
+			bottom: -1.5rem;
+		}
+	}
+	@media screen and (min-width: 1024px) and (max-height: 1200px) {
+		.beyond-element-input-error {
+			font-size: 12px;
+		}
+	}
+	@media screen and (max-width: 360px) {
+		font-size: 11px;
+		.beyond-input__required-label {
+			font-size: 16px;
+		}
+		input {
+			padding: 0.4rem 1rem;
+			line-height: 1.1rem;
+			font-size: 13px;
+		}
+		label {
+			line-height: 17px;
+		}
+	}
+	.beyond-element-spinner {
+		width: 40px;
+		height: 40px;
+	}
+}

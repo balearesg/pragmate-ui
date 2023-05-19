@@ -9,10 +9,10 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
-      <Header componentName="Checkbox" />
+      <Header componentName="Radio" />
       <div className="component-info">
         <h3>Import: </h3>
-        <CopyableImplementation>{`import { Checkboxsdfsdfsdfs } from '@bgroup/ui/form';`}</CopyableImplementation>
+        <CopyableImplementation>{`import { Radio } from '@bgroup/ui/form';`}</CopyableImplementation>
       </div>
       <div className="component-implementation">
         <div className="component-info">

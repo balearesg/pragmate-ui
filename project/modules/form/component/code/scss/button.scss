@@ -1,0 +1,125 @@
+@import '~template/sass/variables';
+.beyond-button {
+	outline: 0;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+
+	&:active,
+	&:hover,
+	&:focus {
+		outline: 0;
+	}
+	//padding: 8px 30px;}
+	span {
+		position: absolute;
+		background-color: #979797b5;
+		transform: translate(-50%, -50%);
+		pointer-events: none;
+		border-radius: 50%;
+		-webkit-animation: rippleEffect 1s linear infinite;
+		animation: rippleEffect 1s linear infinite;
+	}
+
+	@-webkit-keyframes rippleEffect {
+		0% {
+			width: 0;
+			height: 0;
+			opacity: 0.5;
+		}
+
+		100% {
+			width: 500px;
+			height: 500px;
+			opacity: 0;
+		}
+	}
+
+	@keyframes rippleEffect {
+		0% {
+			width: 0;
+			height: 0;
+			opacity: 0.5;
+		}
+
+		100% {
+			width: 500px;
+			height: 500px;
+			opacity: 0;
+		}
+	}
+	&.btn {
+		cursor: pointer;
+		width: auto;
+		min-height: 35px;
+		max-height: 35px;
+		transition: all 300ms ease-in;
+		border-radius: 8px;
+		font-weight: 500;
+		padding: 0 15px;
+		display: inline-block;
+		text-transform: lowercase;
+		border: none;
+		&:not(:disabled) {
+			box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+		}
+		&:active:not(:disabled) {
+		  transform: translateY(3px);
+		}
+		&:disabled {
+		  opacity: 0.7;
+		  cursor: not-allowed;
+		}
+		&.btn-primary {
+		  background-color: var(--primary);
+		  color: var(--text-on-primary);
+		  &:hover:not(:disabled) {
+			background-color: var(--primary-dark);
+		  }
+		}
+		&.btn-primary-dark {
+		  background-color: var(--primary-dark);
+		  color: var(--text-on-primary);
+		  &:hover:not(:disabled) {
+			background-color: var(--primary);
+		  }
+		}
+		&.btn-secondary {
+			background-color: var(--secondary);
+			color: var(--text-on-secondary);
+			&:hover:not(:disabled) {
+			  background-color: var(--secondary-dark);
+			}
+		  }
+		  &.btn-border {
+			border: 1px solid var(--primary);
+			color: var(--text);
+			&:hover:not(:disabled) {
+			  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			}
+		  }
+		&.btn-cancel {
+		  // border: 1px solid var(--primary);
+		  background-color: var(--gray-variant);
+		  color: var(--text-on-secondary);
+		  &:hover:not(:disabled) {
+			background-color: var(--gray);
+		  }
+		}
+		&:first-letter {
+		  text-transform: uppercase;
+		}
+		@media screen and (max-width: 360px){
+		  font-size: 12px;
+		}
+	  }
+	  &.has-icon {
+		display: flex !important;
+		align-items: center;
+		column-gap: 8px;
+		svg.beyond-icon {
+			fill: var(--secondary)
+		}
+	  }
+}

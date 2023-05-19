@@ -1,0 +1,18 @@
+.beyond-tabs-horizontal.beyond-tabs-container.beyond-tabs {
+    .beyond-tabs-items {
+        background: transparent;
+        justify-content: flex-end;
+        .tabs-container {
+            width: inherit;
+            .beyond-tab {
+                padding: 0;
+                button.beyond-icon-button svg.beyond-icon {
+                    fill:  var(--text-on-primary);
+                }
+                &.tab-active button.beyond-icon-button svg.beyond-icon {
+                    fill: var(--primary);
+                }
+            }
+        }
+    }
+}

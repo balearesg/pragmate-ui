@@ -1,0 +1,20 @@
+{
+	"name": "form",
+	 "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
+	"code": {
+		"hmr": true,
+		"name": "form",
+		"ts": {
+			"path": "/code/ts",
+			"files": ["*"]
+		},
+		"sass": {
+			"path": "/code/scss",
+			"files": ["*"]
+		}
+	}
+}

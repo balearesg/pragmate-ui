@@ -1,23 +1,19 @@
 {
-  "name": "layout/main",
+  "name": "header",
    "platforms": [
     "web",
     "ios",
     "android"
   ],
-  "widget": {
-    "is": "layout",
-    "element": {
-      "name": "app-layout"
-    },
+  "code": {
     "sass": {
-      "path": "sass",
+      "path": "/code/sass",
       "files": [
         "*"
       ]
     },
     "ts": {
-      "path": "ts",
+      "path": "/code/ts",
       "files": [
         "*"
       ]

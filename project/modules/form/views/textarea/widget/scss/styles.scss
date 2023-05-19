@@ -1,0 +1,16 @@
+.component-result {
+    form {
+        width: 100%;
+
+        .beyond-element-textarea {
+            height: 6rem;
+            width: 300px;
+            textarea {
+                height: 100%;
+                width: 100%;
+                color: var(--text-on-primary);
+                resize: none;
+            }
+        }
+    }
+}
