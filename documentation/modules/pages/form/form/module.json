@@ -1,0 +1,27 @@
+{
+	"name": "form",
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	],
+	"widget": {
+		"route": "/components/form",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": [
+				"*"
+			]
+		},
+		"sass": {
+			"path": "/widget/scss",
+			"files": [
+				"*"
+			]
+		},
+		"element": {
+			"name": "beyond-form"
+		}
+	}
+}

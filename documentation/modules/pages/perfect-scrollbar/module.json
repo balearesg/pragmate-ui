@@ -1,0 +1,27 @@
+{
+	"name": "scroll-container",
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	],
+	"widget": {
+		"route": "/components/scroll-container",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": [
+				"*"
+			]
+		},
+		"sass": {
+			"path": "/widget/scss",
+			"files": [
+				"*"
+			]
+		},
+		"element": {
+			"name": "beyond-scroll-container"
+		}
+	}
+}

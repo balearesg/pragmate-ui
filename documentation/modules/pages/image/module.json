@@ -1,0 +1,27 @@
+{
+	"name": "image",
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	],
+	"widget": {
+		"route": "/components/image",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": [
+				"*"
+			]
+		},
+		"sass": {
+			"path": "/widget/scss",
+			"files": [
+				"*"
+			]
+		},
+		"element": {
+			"name": "beyond-image"
+		}
+	}
+}
