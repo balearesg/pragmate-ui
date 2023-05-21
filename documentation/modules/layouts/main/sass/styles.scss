@@ -16,10 +16,11 @@ main {
 	text-align: center;
 	padding: 0;
 	margin: 0;
+	height: 57px;
     position: sticky;
     top: 0;
     z-index: 100;
-    background: var(--secondary);
+    background: var(--primary-dark);
 	a {
 		display: block;
 		padding: 1em 0;

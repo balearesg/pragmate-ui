@@ -1,14 +1,14 @@
 .aside {
 	width: 17.5em;
 	height: 100vh;
-	background: var(--secondary);
+	background: var(--primary-dark);
 	position: fixed !important;
 }
 
 // MAIN NAV
 .main-nav {
 	ul {
-		border-top: solid 1px var(--secondary-accent);
+		border-top: solid 1px var(--primary);
 	}
 
 	.sub-list {
@@ -26,7 +26,7 @@
 	}
 
 	li {
-		border-bottom: solid 1px var(--secondary-accent);
+		border-bottom: solid 1px var(--primary);
 	}
 
 	a {
