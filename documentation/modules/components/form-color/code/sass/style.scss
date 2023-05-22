@@ -25,6 +25,10 @@
         width: 90%;
     }
 
+    .messageErrorInput {
+        color: var(--error);
+    }
+
     .beyond-button.btn.btn-secondary {
         background-color: var(--primary);
     }
