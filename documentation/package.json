@@ -1,5 +1,5 @@
 {
-    "name": "documentation-ui",
+    "name": "doc-ui",
     "version": "0.0.36",
     "description": "Beyond UI is a collection of reusable components",
     "author": "",
@@ -32,6 +32,11 @@
                     "bundles": "1002"
                 }
             }
+        ]
+    },
+    "static": {
+        "includes": [
+            "assets"
         ]
     },
     "dependencies": {

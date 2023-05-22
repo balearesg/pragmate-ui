@@ -1,3 +1,31 @@
 .container-form-color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 900px;
+    height: 700px;
+    min-width: 400px;
     background-color: var(--background);
+    border-radius: 20px;
+
+    .form-color__img-icon {
+        height: 80px;
+    }
+
+        .beyond-element-input:focus-within label,
+        .beyond-element-input input:not(:placeholder-shown)~label,
+        .beyond-element-input textarea:not(:placeholder-shown)~label,
+        .beyond-element-textarea:focus-within label,
+        .beyond-element-textarea input:not(:placeholder-shown)~label,
+        .beyond-element-textarea textarea:not(:placeholder-shown)~label {
+        background-color: var(--background);
+    }
+    .form-color__input {
+        height: 60px;
+        width: 90%;
+    }
+
+    .beyond-button.btn.btn-secondary {
+        background-color: var(--primary);
+    }
 }

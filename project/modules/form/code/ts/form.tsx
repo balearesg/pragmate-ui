@@ -1,13 +1,7 @@
-import React, {
-  FormHTMLAttributes,
-  FormEvent,
-  PropsWithChildren,
-} from "react";
+import React, { FormHTMLAttributes, FormEvent, PropsWithChildren } from "react";
 
-type props = FormHTMLAttributes<HTMLFormElement>
-export /*bundle*/ function BeyondForm(
-  props: PropsWithChildren<props>
-): JSX.Element {
+type props = FormHTMLAttributes<HTMLFormElement>;
+export /*bundle*/ function Form(props: PropsWithChildren<props>): JSX.Element {
   const onSubmit = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
     event.stopPropagation();
@@ -20,4 +14,4 @@ export /*bundle*/ function BeyondForm(
       {props.children}
     </form>
   );
-};
+}
