@@ -1,7 +1,13 @@
 import React from "react";
 import { Nav } from "@bgroup/documentation-ui/nav";
 import { CopyableImplementation } from "@bgroup/documentation-ui/copyable-implementation";
+import { FormColorPicker } from "documentation-ui/form-color";
+
 export function Page() {
+  const [show, setShow] = React.useState(false);
+  function handleModalColor() {
+    setShow(!show);
+  }
   return (
     <>
       <div className="doc__bg"></div>
@@ -13,6 +19,9 @@ export function Page() {
             <li className="js-btn">Configuration</li>
             <li className="js-btn">Keybindings</li>
             <li className="js-btn">Issues</li>
+            <li onClick={handleModalColor} className="js-btn">
+              Form Color
+            </li>
           </ul>
         </aside>
         <article className="doc__content">
@@ -30,6 +39,10 @@ export function Page() {
                 </CopyableImplementation>
               </pre>
             </div>
+          </section>
+
+          <section className="section__modal-color">
+            <FormColorPicker show={show} handleModalColor={handleModalColor} />
           </section>
 
           <section className="js-section">

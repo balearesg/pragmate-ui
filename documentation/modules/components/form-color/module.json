@@ -1,0 +1,17 @@
+{
+  "name": "form-color",
+  "code": {
+    "sass": {
+      "path": "/code/sass",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}
