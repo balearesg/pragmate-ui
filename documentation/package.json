@@ -5,7 +5,6 @@
     "author": "",
     "license": "MIT",
     "scope": "bgroup",
-    "layout": "main-layout",
     "template": "template/template.json",
     "languages": {
         "default": "en",

@@ -1,6 +1,6 @@
 {
   "name": "doc",
-   "platforms": [
+  "platforms": [
     "web",
     "ios",
     "android"
@@ -8,6 +8,7 @@
   "widget": {
     "is": "page",
     "route": "/doc",
+    "layout": "main-layout",
     "element": {
       "name": "doc-page"
     },

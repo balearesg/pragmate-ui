@@ -1,20 +1,25 @@
 {
 	"name": "beyond-radio",
-	 "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	],
 	"widget": {
 		"route": "/components/beyond-radio",
+		"layout": "main-layout",
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"sass": {
 			"path": "/widget/scss",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"element": {
 			"name": "beyond-radio"
