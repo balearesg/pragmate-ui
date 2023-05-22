@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav } from "@bgroup/documentation-ui/nav";
 import { CopyableImplementation } from "@bgroup/documentation-ui/copyable-implementation";
-import { FormColorPicker } from "documentation-ui/form-color";
+import { FormColorPicker } from "@bgroup/documentation-ui/form-color";
 
 export function Page() {
   const [show, setShow] = React.useState(false);
