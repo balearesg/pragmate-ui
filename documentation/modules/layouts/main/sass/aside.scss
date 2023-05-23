@@ -9,6 +9,7 @@
 .main-nav {
 	ul {
 		border-top: solid 1px var(--primary	);
+		padding-left: 0;
 	}
 
 	.sub-list {
@@ -27,6 +28,7 @@
 
 	li {
 		border-bottom: solid 1px var(--primary);
+		height: 57px;
 	}
 
 	a {
