@@ -8,7 +8,7 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
-      <Header componentName="Spinner" />
+      {/* <Header componentName="Spinner" /> */}
       <div className="component-info">
         <h3>Import:</h3>
         <CopyableImplementation>{`import { Spinner } from '@bgroup/ui/spinner';`}</CopyableImplementation>

@@ -44,5 +44,19 @@ main:not(.layout-login).main-content {
 }
 
 .component-info {
-	margin: 34px;
+	margin: 0em 20em 1em 0em;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.aside {
+	grid-area: aside;
+	margin-left: 12em;
+}
+
+.view {
+	grid-area: main;
+	height: 100%;
 }

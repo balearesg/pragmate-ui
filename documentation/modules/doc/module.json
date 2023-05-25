@@ -8,7 +8,6 @@
   "widget": {
     "is": "page",
     "route": "/doc",
-    "layout": "main-layout",
     "element": {
       "name": "doc-page"
     },

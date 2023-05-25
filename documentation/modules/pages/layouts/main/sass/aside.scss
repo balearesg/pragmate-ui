@@ -1,8 +1,9 @@
 .aside {
+	grid-area: aside;
 	width: 17.5em;
 	height: 100vh;
-	background: var(--primary-dark);
-	position: fixed !important;
+	background: var(--background);
+	/* position: fixed !important; */
 }
 
 // MAIN NAV

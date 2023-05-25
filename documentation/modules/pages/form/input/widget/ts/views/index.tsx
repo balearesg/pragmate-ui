@@ -21,7 +21,6 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
-      <Header componentName="Input" />
       <div className="component-info">
         <h3>Import:</h3>
         <CopyableImplementation>{`import { Input } from '@bgroup/ui/form';`}</CopyableImplementation>

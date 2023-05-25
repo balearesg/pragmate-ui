@@ -4,6 +4,7 @@ import { SidebarDropdown } from "./sidebar-dropdown";
 import { SidebarItem } from "./sidebar-item";
 import { routing } from "@beyond-js/kernel/routing";
 import { ScrollContainer } from "@bgroup/ui/perfect-scrollbar";
+import { SliderBarNav } from "../views/slide-bar";
 interface IComponent {
   name: string;
   path: string;
@@ -31,15 +32,11 @@ export function Sidebar() {
       data-suppress-scroll-x="true"
     >
       <aside>
-        <h1 className="logo">
-          <a onClick={goHome} href="/">
-            Beyond <span>UI</span>
-          </a>
-        </h1>
         <div className="nav-wrap">
-          <nav className="main-nav" role="navigation">
+          {/* <nav className="main-nav" role="navigation">
             <ul className="unstyled list-hover-slide">{componentsElements}</ul>
-          </nav>
+          </nav> */}
+          <SliderBarNav />
         </div>
       </aside>
 

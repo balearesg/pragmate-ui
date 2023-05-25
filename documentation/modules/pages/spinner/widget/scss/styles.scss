@@ -5,6 +5,16 @@
     grid-template-rows: 2rem;
     grid-gap: 30px;
 
+    .box {
+        h3{
+            margin: 0;
+        }
+    }
+
+    .code {
+        position: relative;
+        top: 30px;
+    }
     .beyond-element-spinner{
         width: 100px;
         height: 100px;

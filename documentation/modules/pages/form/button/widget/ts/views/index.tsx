@@ -21,7 +21,7 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
-      <Header componentName="Checkbox" />
+      {/* <Header componentName="Button" /> */}
       <div className="component-info import">
         <h3>Import: </h3>
         <CopyableImplementation>{`import { Button } from "@bgroup/ui/form";`}</CopyableImplementation>

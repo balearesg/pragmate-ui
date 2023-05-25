@@ -8,13 +8,10 @@ export /*bundle*/
 function View() {
   return (
     <div className="view beyond-image-view">
-      <Header componentName="Image" />
       <div className="component-info">
         <h3>Import: </h3>
         <CopyableImplementation>{`import { Image } from '@bgroup/ui/image';`}</CopyableImplementation>
-      </div>
-      <div className="component-implementation">
-        <div className="component-info">
+        <main className="component-container">
           <h3>Implementation: </h3>
           <CopyableImplementation>{implementation}</CopyableImplementation>
           <div className="component-detail">
@@ -24,12 +21,13 @@ function View() {
                 This component detects when the image is loading or when the
                 image could not be loaded in both cases a different html class
                 is set, for the loading case{" "}
-                <code>beyond-element-image-preload</code>&nbsp; and for the
-                error case<code>beyond-element-image-error</code>
+                <code>beyond-element-image-preload</code>
+                &nbsp; and for the error case
+                <code>beyond-element-image-error</code>
               </p>
             </div>
           </div>
-        </div>
+        </main>
         <div className="component-result">
           <h3>Result:</h3>
           <Results />

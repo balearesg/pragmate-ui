@@ -4,11 +4,33 @@ main {
     height: 100vh;
     min-height: 100vh;
     display: flex;
+	flex-direction: column;
 	.main-content {
-	    width: calc(100% - 17.5em);
+	    /* width: calc(100% - 17.5em); */
+		display: grid;
+		grid-template: 
+		"aside main" 1fr
+		"aside main" 700px /
+		1fr		2fr
+		;
+		/* grid-template-columns: repeat(auto-fit, minmax(1500px, 1fr)); */
+		/* grid-template-columns: max-content fit-content(1600px); */
     /* flex: 1 1; */
-     margin-left: 17.5em;
+     /* margin-left: 17.5em; */
     /* width: 100%; */
+	}
+
+	.header-main {
+		background-color: var(--background);
+		/* position: relative;
+		right: 17.6em;
+		width: 119em; */
+	}
+
+	.logo-main {
+		background-color: var(--background);
+		border-bottom: none;
+		text-align: center;
 	}
 }
 
@@ -19,9 +41,11 @@ main {
 	height: 57px;
     position: sticky;
     top: 0;
+	height: 75px;
     z-index: 100;
-    background: var(--primary-dark);
-	a {
+    background: var(--background);
+/* 	border-bottom: solid 2px var(--primary);
+ */	a {
 		display: block;
 		padding: 1em 0;
 		color: var(--text-on-secondary);

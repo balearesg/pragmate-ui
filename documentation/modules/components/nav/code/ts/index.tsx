@@ -2,9 +2,9 @@ import React from "react";
 
 export /*bundle*/ function Nav() {
   return (
-    <nav className="header">
+    <nav className="header header-main">
       <div className="nav-doc">
-        <h1 className="logo">
+        <h1 className="logo logo-main">
           bgroup/ui <span className="logo__thin">Doc</span>
         </h1>
         <ul className="menu">
