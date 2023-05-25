@@ -271,12 +271,12 @@ p {
   
   /* layout */
   .wrapper {
-    margin: 0 auto;
     width: 70%;
   }
   
   .footer {
     text-align: center;
+    grid-area: footer;
     background-color: var(--primary);
     padding: 2rem;
     color: white;
@@ -291,3 +291,5 @@ p {
       transform: translate3d(0,0,0);
     }
   }
+
+  

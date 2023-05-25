@@ -11,7 +11,6 @@ export function Page() {
   return (
     <>
       <div className="doc__bg"></div>
-      <Nav />
       <div className="wrapper">
         <article className="doc__content">
           <section className="js-section">
@@ -84,7 +83,7 @@ export function Page() {
         </article>
       </div>
 
-      <footer className="footer">bgroup/ui ©Copyright </footer>
+      {/* <footer className="footer">bgroup/ui ©Copyright </footer> */}
     </>
   );
 }
