@@ -1,0 +1,12 @@
+{
+    "en": {
+        "/docs/packages/create": "Create a project",
+        "/docs/packages/json": "package.json",
+        "/docs/packages/import": "Import a project",
+        "/docs/packages/dependencies": "Dependencies",
+        "/docs/packages/types": "Package types",
+        "/docs/packages/distributions": "Distributions",
+        "/docs/packages/publish": "Publish on NPM",
+        "/docs/packages/beyondjs": "From BeyondJS"
+    }
+}

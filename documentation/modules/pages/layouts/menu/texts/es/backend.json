@@ -1,0 +1,11 @@
+{
+    "es": {
+        "/docs/backend": "Crear paquetes Backend",
+        "/docs/backend/intro": "Introducción",
+        "/docs/backend/bridges": "Bridges",
+        "/docs/backend/ssr": "Servidor SSR",
+        "/docs/backend/bee": "BEE",
+        "/docs/backend/debug": "Depuración de código",
+        "/docs/backend/hmr": "hmr"
+    }
+}

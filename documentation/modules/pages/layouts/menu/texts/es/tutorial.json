@@ -1,0 +1,10 @@
+{
+	"es": {
+		"tutorial": "Tutorial",
+		"/docs/tutorial/start": "Introducción",
+		"/docs/tutorial/first-module": "Primer módulo",
+		"/docs/tutorial/backend": "Backend",
+		"/docs/tutorial/bridge": "Bridge",
+		"/docs/tutorial/routing": "Enrutamiento"
+	}
+}

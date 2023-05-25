@@ -1,0 +1,21 @@
+{
+    "es": {
+        "/": "HOME",
+        "getting-start": "Empezando",
+        "fundamentals": "Fundamentos",
+        "packages": "Paquetes",
+        "configuration": "Configuración",
+        "projects": "Proyectos",
+        "modules": "Módulos",
+        "bundles": "Bundles",
+        "widgets": "Widgets",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "/docs/intro": "Introducción",
+        "/docs/quick-start": "Inicio rápido",
+        "/docs/cli": "CLI",
+        "/docs/workspace": "Workspace",
+        "concepts": "Conceptos básicos",
+        "/docs/deployment": "Despliegue"
+    }
+}

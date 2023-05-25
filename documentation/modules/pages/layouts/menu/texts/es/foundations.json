@@ -1,0 +1,15 @@
+{
+	"es": {
+		"/docs/dev-server": "Servidor de desarrollo",
+		"/docs/ssr": "SSR",
+		"/docs/multilanguage": "Multilenguaje",
+		"/docs/glossary": "Glosario",
+		"/docs/api/uri": "URI",
+		"/docs/fundamentals/hmr": "HMR",
+		"/docs/bare-specifiers": "Bare Specifiers",
+		"/docs/modular": "Diseño Modular",
+		"/docs/universal": "JavaScript Universal",
+		"/docs/api/BeyondWidget": "Objecto widget",
+		"/docs/api/IWidgetStore": "IWidgetStore"
+	}
+}

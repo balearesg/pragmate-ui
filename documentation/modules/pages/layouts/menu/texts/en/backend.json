@@ -1,0 +1,11 @@
+{
+    "en": {
+        "/docs/backend": "Backend packages",
+        "/docs/backend/intro": "Introduction",
+        "/docs/backend/bridges": "Bridges",
+        "/docs/backend/ssr": "SSR Server",
+        "/docs/backend/bee": "BEE",
+        "/docs/backend/debug": "Code debugging",
+        "/docs/backend/hmr": "hmr"
+    }
+}

@@ -1,0 +1,82 @@
+.docs__menu__list {
+	a {
+		text-decoration: none;
+		color: var(--text-color);
+		line-height: 23px;
+		font-size: 0.85rem;
+		letter-spacing: 0.28px;
+		-ms-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
+
+		&:hover {
+			color: var(--text-color);
+		}
+	}
+
+	> .menu__item--parent {
+		> section a {
+			color: var(--primary);
+			font-size: 14px;
+			font-weight: lighter;
+			margin: 5px 0;
+		}
+	}
+}
+
+.docs__menu__list {
+	* {
+		-ms-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	> .menu__item--parent > .docs__menu__sublist {
+		> li.item--opened > section a {
+			font-weight: bolder;
+		}
+	}
+
+	.active-item {
+		font-weight: bolder;
+
+		a {
+			font-weight: bolder;
+			color: var(--app-aside-link-selected);
+		}
+	}
+
+	li {
+		cursor: pointer;
+		align-items: center;
+		//border: 1px solid gray;
+		list-style: none;
+
+		> section {
+			display: flex;
+			align-items: center;
+			accent-color: var(--text-second-color);
+			transition: 300ms all ease-in;
+			justify-content: space-between;
+
+			.beyond-icon {
+				fill: var(--text-color);
+			}
+		}
+
+		&.item--opened {
+			.beyond-icon {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	> li {
+		&.menu__item--parent {
+			> section > svg {
+				display: none;
+			}
+		}
+	}
+}

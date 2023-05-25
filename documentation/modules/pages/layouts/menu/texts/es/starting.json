@@ -1,0 +1,11 @@
+{
+    "en": {
+        "/": "HOME",
+        "/docs/intro": "Introduction",
+        "/docs/quick-start": "Quick start",
+        "/docs/cli": "CLI",
+        "/docs/workspace": "Workspace",
+        "concepts": "Basic concepts",
+        "/docs/deployment": "Deployment"
+    }
+}

@@ -1,0 +1,43 @@
+//header is showed on mobile sizes. check mobile.scss
+.aside__header {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-content: center;
+
+	.menu-docs__mobile-header {
+		display: none;
+	}
+
+	h4 {
+		display: block;
+		margin: 15px;
+		font-size: 13px;
+		text-transform: uppercase;
+		padding: 0;
+		font-weight: lighter;
+	}
+
+	.mobile-only {
+		display: none;
+		@include set-media('mobile', false, max) {
+			display: flex;
+		}
+	}
+
+	.docs__menu__list__btn-close {
+		position: absolute;
+		right: 15px;
+		height: 30px;
+		width: 30px;
+		background: transparent;
+
+		svg {
+			fill: var(--primary-accent);
+		}
+
+		@media (min-width: 764px) {
+			display: none;
+		}
+	}
+}

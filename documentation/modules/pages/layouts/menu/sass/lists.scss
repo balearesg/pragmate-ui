@@ -1,0 +1,22 @@
+@import "~template/sass/mixins/global";
+
+.docs__menu__list li .docs__menu__sublist li {
+
+  > ul {
+    display: none;
+    border-left: 1px solid var(--color-gray-10);
+
+    li {
+      padding-left: 1rem;
+    }
+
+    .active-item {
+      border-left: 1px solid var(--app-primary-color);
+      margin-left: -1px;
+    }
+  }
+
+  &.item--opened ul {
+    display: grid;
+  }
+}

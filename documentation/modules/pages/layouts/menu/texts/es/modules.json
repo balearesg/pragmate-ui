@@ -1,0 +1,9 @@
+{
+    "en": {
+        "/docs/modules/introduction": "Introduction",
+        "/docs/modules/creation": "Create a module",
+        "/docs/modules/config": "Configuration",
+        "/docs/modules/bundles": "Bundles",
+        "/docs/modules/processors": "Processors"
+    }
+}

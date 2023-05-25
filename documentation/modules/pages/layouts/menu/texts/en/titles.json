@@ -1,0 +1,16 @@
+{
+	"en": {
+		"/": "HOME",
+		"getting-start": "Getting started",
+		"fundamentals": "Fundamentals",
+		"packages": "Packages",
+		"configuration": "Configuration",
+		"projects": "Projects",
+		"modules": "Modules",
+		"bundles": "Bundles",
+		"frontend": "Frontend",
+		"backend": "Backend",
+		"widgets": "Widgets",
+		"concepts": "Basic concepts"
+	}
+}
