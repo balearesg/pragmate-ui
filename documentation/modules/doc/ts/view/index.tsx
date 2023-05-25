@@ -13,55 +13,6 @@ export function Page() {
       <div className="doc__bg"></div>
       <Nav />
       <div className="wrapper">
-        {/* <aside className="doc__nav">
-          <ul>
-            <li className="js-btn selected">Get Started</li>
-            <li className="js-btn">Configuration</li>
-            <li className="js-btn">Keybindings</li>
-            <li className="js-btn">Issues</li>
-            <li className="js-btn">Form</li>
-            <li className="js-btn">
-              {" "}
-              <a href="/components/modal">Modal</a>
-            </li>
-            <li className="js-btn">
-              {" "}
-              <a href="components/icons">Icon</a>
-            </li>
-            <li className="js-btn">
-              {" "}
-              <a href="">Spinner</a>
-            </li>
-            <li className="js-btn">
-              {" "}
-              <a href="">Input</a> Controller
-            </li>
-            <li className="js-btn">
-              {" "}
-              <a href="">Image</a>
-            </li>
-            <li className="js-btn">
-              {" "}
-              <a href="">Tabs</a>
-            </li>
-            <li className="js-btn">
-              {" "}
-              <a href="">Toast</a>
-            </li>
-            <li className="js-btn">
-              {" "}
-              <a href="">Swiper</a>
-            </li>
-            <li className="js-btn">
-              {" "}
-              <a href="">Verificacion</a> Code
-            </li>
-
-            <li onClick={handleModalColor} className="js-btn">
-              Form Color
-            </li>
-          </ul>
-        </aside> */}
         <article className="doc__content">
           <section className="js-section">
             <h3 className="section__title">Get Started</h3>

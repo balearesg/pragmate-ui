@@ -7,7 +7,6 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
-      <Header componentName="Swiper" />
       <div className="component-info">
         <h3>Import:</h3>
         <CopyableImplementation>{`import { SwiperSlider } from "@bgroup/ui/swiper-component"`}</CopyableImplementation>

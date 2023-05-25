@@ -7,10 +7,6 @@ export function SliderBarNav() {
   return (
     <aside className="doc__nav">
       <ul>
-        {/* <li className="js-btn selected">Get Started</li>
-        <li className="js-btn">Configuration</li>
-        <li className="js-btn">Keybindings</li>
-        <li className="js-btn">Issues</li> */}
         <li className="js-btn">Form</li>
         <li className="js-btn">
           {" "}
@@ -18,7 +14,7 @@ export function SliderBarNav() {
         </li>
         <li className="js-btn">
           {" "}
-          <a href="components/icons">Icon</a>
+          <a href="/components/icons">Icon</a>
         </li>
         <li className="js-btn">
           {" "}
@@ -34,6 +30,10 @@ export function SliderBarNav() {
         </li>
         <li className="js-btn">
           {" "}
+          <a href="scroll-container">Scroll</a>
+        </li>
+        <li className="js-btn">
+          {" "}
           <a href="/components/tabs">Tabs</a>
         </li>
         <li className="js-btn">
@@ -46,12 +46,12 @@ export function SliderBarNav() {
         </li>
         <li className="js-btn">
           {" "}
-          <a href="">Verificacion Code</a>
+          <a href="/components/code-verification">Verificacion Code</a>
         </li>
 
-        <li onClick={handleModalColor} className="js-btn">
+        {/* <li onClick={handleModalColor} className="js-btn">
           Form Color
-        </li>
+        </li> */}
       </ul>
     </aside>
   );

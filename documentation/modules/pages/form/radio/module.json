@@ -1,12 +1,12 @@
 {
-	"name": "beyond-radio",
+	"name": "radio",
 	"platforms": [
 		"web",
 		"ios",
 		"android"
 	],
 	"widget": {
-		"route": "/components/beyond-radio",
+		"route": "/components/radio",
 		"layout": "main-layout",
 		"is": "page",
 		"ts": {
@@ -22,7 +22,7 @@
 			]
 		},
 		"element": {
-			"name": "beyond-radio"
+			"name": "radio"
 		}
 	}
 }

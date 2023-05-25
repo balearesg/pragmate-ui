@@ -2,6 +2,12 @@
 	.component-implementation .component-result {
 		align-items: flex-start;
 	}
+
+	.component-implementation {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
 	.list-container {
 		display: flex;
 		flex-direction: column;
@@ -31,6 +37,11 @@
 			cursor: pointer;
 			transition: all 0.3s ease-in-out;
 			border-bottom: 4px solid var(--primary);
+
+			button.content-icon.code {
+				border-top: 2px solid;
+				width: 200px;
+			}
 
 			svg.beyond-icon {
 				height: 25px;
