@@ -10,14 +10,10 @@ main {
 		display: grid;
 		grid-template: 
 		"aside main" 1fr
-		"aside main" 700px /
+		"aside main" 700px
+		"footer footer" 100px /
 		1fr		2fr
 		;
-		/* grid-template-columns: repeat(auto-fit, minmax(1500px, 1fr)); */
-		/* grid-template-columns: max-content fit-content(1600px); */
-    /* flex: 1 1; */
-     /* margin-left: 17.5em; */
-    /* width: 100%; */
 	}
 
 	.header-main {

@@ -1,8 +1,11 @@
 .aside {
 	grid-area: aside;
 	width: 17.5em;
-	height: 100vh;
+	height: 80vh;
 	background: var(--background);
+	position: sticky;
+	top: 0;
+	margin-left: 12em;
 	/* position: fixed !important; */
 }
 

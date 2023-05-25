@@ -5,7 +5,9 @@ export /*bundle*/ function Nav() {
     <nav className="header header-main">
       <div className="nav-doc">
         <h1 className="logo logo-main">
-          bgroup/ui <span className="logo__thin">Doc</span>
+          <a href="/">
+            bgroup/ui <span className="logo__thin">Doc</span>
+          </a>
         </h1>
         <ul className="menu">
           <div className="menu__item toggle">
@@ -16,7 +18,9 @@ export /*bundle*/ function Nav() {
               href="https://github.com/balearesg/bgroup-ui/tree/main"
               className="link link--dark"
             >
-              <i className="fa fa-github"></i> Github
+              <i className="fa fa-github">
+                <a href="https://github.com/balearesg/bgroup-ui">Github</a>
+              </i>
             </a>
           </li>
           <li className="menu__item">

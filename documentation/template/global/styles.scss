@@ -51,11 +51,6 @@ main:not(.layout-login).main-content {
 	gap: 30px;
 }
 
-.aside {
-	grid-area: aside;
-	margin-left: 12em;
-}
-
 .view {
 	grid-area: main;
 	height: 100%;
