@@ -1,13 +1,13 @@
-export const components = [
+export const menuItems = [
   {
     name: "Empty",
     path: "empty",
-    subComponents: [],
+    children: [],
   },
   {
     name: "Form",
     path: "form",
-    subComponents: [
+    children: [
       {
         name: "Checkbox",
         path: "checkbox",
@@ -42,7 +42,7 @@ export const components = [
   {
     name: "Modals",
     path: "modals",
-    subComponents: [
+    children: [
       {
         name: "Alert",
         path: "alert-modal",
@@ -61,63 +61,63 @@ export const components = [
   {
     name: "Icon",
     path: "icons",
-    subComponents: [],
+    children: [],
   },
   {
     name: "Spinner",
     path: "spinner",
-    subComponents: [],
+    children: [],
   },
   {
     name: "Input Controller",
     path: "input-controller",
-    subComponents: [],
+    children: [],
   },
   {
     name: "Image",
     path: "image",
-    subComponents: [],
+    children: [],
   },
 
   {
     name: "Scroll",
     path: "scroll-container",
-    subComponents: [],
+    children: [],
   },
 
   {
     name: "Tabs",
     path: "tabs",
-    subComponents: [],
+    children: [],
   },
   {
     name: "Toast",
     path: "toast",
-    subComponents: [],
+    children: [],
   },
   {
     name: "Swiper",
     path: "swiper",
-    subComponents: [],
+    children: [],
   },
   {
     name: "Verification Code",
     path: "code-verification",
-    subComponents: [],
+    children: [],
   },
   {
     name: "Alert",
     path: "alert",
-    subComponents: [],
+    children: [],
   },
   {
     name: "Drag And Drop",
     path: "drag-and-drop",
-    subComponents: [],
+    children: [],
   },
   {
     name: "Link",
     path: "link",
-    subComponents: [],
+    children: [],
   },
 ];

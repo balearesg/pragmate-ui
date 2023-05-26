@@ -1,5 +1,5 @@
 import * as React from "react";
-import { components } from "../bg-components";
+import { menuItems } from "../bg-components";
 import { SidebarDropdown } from "./sidebar-dropdown";
 import { SidebarItem } from "./sidebar-item";
 import { routing } from "@beyond-js/kernel/routing";
@@ -8,15 +8,14 @@ import { SliderBarNav } from "../views/slide-bar";
 interface IComponent {
   name: string;
   path: string;
-  subComponents?: Array<{ name: string; path: string }>;
+  children?: Array<{ name: string; path: string }>;
 }
 
 export function Sidebar() {
-  const componentsElements = components.map((component: IComponent) => {
-    if (component?.subComponents.length > 0) {
+  const componentsElements = menuItems.map((component: IComponent) => {
+    if (component?.children.length > 0) {
       return <SidebarDropdown key={component.path} component={component} />;
     }
-
     return <SidebarItem key={component.path} component={component} />;
   });
 
@@ -31,12 +30,11 @@ export function Sidebar() {
       data-perfect-scrollbar=""
       data-suppress-scroll-x="true"
     >
-      <aside>
-        <div className="nav-wrap">
-          {/* <nav className="main-nav" role="navigation">
-            <ul className="unstyled list-hover-slide">{componentsElements}</ul>
-          </nav> */}
-          <SliderBarNav />
+      <aside className="doc__nav">
+        <div className="">
+          <nav className="" role="navigation">
+            <ul className="">{componentsElements}</ul>
+          </nav>
         </div>
       </aside>
 
