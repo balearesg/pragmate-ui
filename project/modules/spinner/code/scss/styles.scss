@@ -1,3 +1,4 @@
+@import './keyframes';
 .beyond-element-spinner {
 	width: 30px;
 	height: 30px;
@@ -18,4 +19,9 @@
 		stroke-width: 3;
 		//stroke: #000;
 	}
+	opacity: 0;
+	&.is-active {
+		opacity: 1;
+	}
+	
 }

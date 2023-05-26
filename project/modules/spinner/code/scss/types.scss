@@ -1,11 +1,19 @@
 $colors: primary, secondary, on-primary, on-secondary, tertiary, on-tertiary;
 
+@function getStrokeColor($color) {
+	@if (str-index($color, 'on-') == 1) {
+		@return 'var(--text-' + $color + ')';
+	} @else {
+		@return 'var(--' + $color + ')';
+	}
+}
+
 .beyond-element-spinner {
 	@each $color in $colors {
 		&.#{$color} {
 			svg {
 				circle {
-					stroke: var(--#{$color});
+					stroke: #{getStrokeColor($color)};
 				}
 			}
 		}
