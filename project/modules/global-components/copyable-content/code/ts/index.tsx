@@ -4,11 +4,10 @@ import { IconButton } from '@bgroup/ui/icons';
 import Highlight, { defaultProps, Language } from 'prism-react-renderer';
 
 type props = {
-	children: any,
-	language: Language
-}
-export /*bundle*/ function CopyableImplementation({ children, language = "jsx" } : props) {
-	
+	children: any;
+	language: Language;
+};
+export /*bundle*/ function CopyableImplementation({ children, language = 'jsx' }: props) {
 	function copy() {
 		navigator.clipboard.writeText(children);
 		//toast.success('Copied implementation');
@@ -31,7 +30,7 @@ export /*bundle*/ function CopyableImplementation({ children, language = "jsx" }
 					)}
 				</Highlight>
 			</div>
-			<IconButton icon="copy" onClick={copy} className="copy-button"/>
+			<IconButton icon="copy" onClick={copy} className="copy-button" />
 		</div>
 	);
 }

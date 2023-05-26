@@ -11,49 +11,11 @@
 	circle {
 		stroke-dasharray: 1, 200;
 		stroke-dashoffset: 0;
-		-webkit-animation: dash 1.5s ease-in-out infinite 0s,  6s ease-in-out infinite -0.75s;
+		-webkit-animation: dash 1.5s ease-in-out infinite 0s, 6s ease-in-out infinite -0.75s;
 		animation: dash 1.5s ease-in-out infinite 0s, 6s ease-in-out infinite -0.75s;
 		stroke-linecap: round;
 		fill: none;
 		stroke-width: 3;
 		//stroke: #000;
-	}
-	@-webkit-keyframes rotate {
-		100% {
-			transform: rotate(360deg);
-		}
-	}
-	@keyframes rotate {
-		100% {
-			transform: rotate(360deg);
-		}
-	}
-	@-webkit-keyframes dash {
-		0% {
-			stroke-dasharray: 1, 200;
-			stroke-dashoffset: 0;
-		}
-		50% {
-			stroke-dasharray: 89, 200;
-			stroke-dashoffset: -35;
-		}
-		100% {
-			stroke-dasharray: 89, 200;
-			stroke-dashoffset: -124;
-		}
-	}
-	@keyframes dash {
-		0% {
-			stroke-dasharray: 1, 200;
-			stroke-dashoffset: 0;
-		}
-		50% {
-			stroke-dasharray: 89, 200;
-			stroke-dashoffset: -35;
-		}
-		100% {
-			stroke-dasharray: 89, 200;
-			stroke-dashoffset: -124;
-		}
 	}
 }

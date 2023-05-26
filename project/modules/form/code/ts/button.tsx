@@ -11,19 +11,19 @@ interface props extends ButtonHTMLAttributes<HTMLButtonElement> {
 	navigate?: string;
 	icon?: string;
 	loading?: boolean;
-	colorSpinner?: string;
+	variant: string;
+	bordered: boolean;
 }
 
 export /*bundle*/
 function Button(props: props): JSX.Element {
-	const { className, onClick, data, label, children, icon, loading, colorSpinner } = props;
+	const { className, onClick, data, label, children, icon, loading, variant = 'primary', bordered = false } = props;
 	const ref = React.useRef<HTMLButtonElement>(null);
 	const onClickButton = (event: MouseEvent<HTMLButtonElement>): void => {
 		if (onClick && typeof onClick === 'function') {
 			onClick(event);
 			return;
 		}
-		if (props.navigate) routing.pushState(`${props.navigate}`);
 	};
 
 	React.useEffect(() => {
@@ -42,7 +42,9 @@ function Button(props: props): JSX.Element {
 		let properties: string[] = Object.keys(data);
 		properties.map((entry: string) => (props[`data-${entry}`] = data[entry]));
 	}
-	let cls: string = className ? `${className} beyond-button` : 'beyond-button';
+
+	let cls: string = `${className ? `${className} ` : ''}beyond-button btn-${variant}`;
+	cls += bordered ? ' outline' : '';
 	cls += icon ? ' has-icon' : '';
 
 	['label', 'icon', 'children', 'className', 'loading', 'colorSpinner'].forEach(property => {
@@ -52,7 +54,7 @@ function Button(props: props): JSX.Element {
 		<button ref={ref} className={cls} {...properties} onClick={onClickButton}>
 			{icon && <Icon icon={icon} />}
 			{label}
-			{loading ? <Spinner color={colorSpinner ?? 'var(--primary)'} /> : children}
+			{loading ? <Spinner color={`on-${variant}`} /> : children}
 		</button>
 	);
 }

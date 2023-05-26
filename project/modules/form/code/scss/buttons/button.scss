@@ -1,0 +1,41 @@
+@import '~template/sass/variables';
+.beyond-button {
+	outline: 0;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+
+	&:active,
+	&:hover,
+	&:focus {
+		outline: 0;
+	}
+
+	cursor: pointer;
+	width: auto;
+	background: transparent;
+	min-height: 35px;
+	max-height: 35px;
+	transition: all 300ms ease-in;
+	border-radius: 8px;
+	font-weight: 500;
+	padding: 0 15px;
+	display: inline-block;
+	text-transform: lowercase;
+	border: none;
+	&:not(:disabled) {
+		box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+	}
+	&:active:not(:disabled) {
+		transform: translateY(3px);
+	}
+	&:disabled {
+		opacity: 0.7;
+		cursor: not-allowed;
+	}
+
+	@media screen and (max-width: 360px) {
+		font-size: 12px;
+	}
+}

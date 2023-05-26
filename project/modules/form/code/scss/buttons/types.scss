@@ -1,0 +1,48 @@
+@import './button-styles';
+
+.beyond-button {
+	$button-variants: (
+		'primary': (
+			var(--primary),
+			var(--text-on-primary),
+			var(--primary),
+		),
+		'secondary': (
+			var(--secondary),
+			var(--text-on-secondary),
+			var(--secondary),
+		),
+		'tertiary': (
+			var(--tertiary),
+			var(--text-on-tertiary),
+			var(--tertiary),
+		),
+		'default': (
+			var(--default),
+			var(--text-on-default),
+			var(--default),
+		),
+		'success': (
+			var(--success-container),
+			var(--on-success),
+			var(--success-container),
+		),
+		'warning': (
+			var(--warning-container),
+			var(--on-warning),
+			var(--warning-container),
+		),
+		'danger': (
+			var(--danger-container),
+			var(--on-danger),
+			var(--danger-container),
+		),
+		'info': (
+			var(--info-container),
+			var(--on-info),
+			var(--info-container),
+		),
+	);
+
+	@include button-styles($button-variants);
+}

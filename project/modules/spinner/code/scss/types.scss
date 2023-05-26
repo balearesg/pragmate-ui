@@ -1,0 +1,13 @@
+$colors: primary, secondary, on-primary, on-secondary, tertiary, on-tertiary;
+
+.beyond-element-spinner {
+	@each $color in $colors {
+		&.#{$color} {
+			svg {
+				circle {
+					stroke: var(--#{$color});
+				}
+			}
+		}
+	}
+}
