@@ -4,7 +4,7 @@ import { Icon } from "@bgroup/ui/icons";
 
 export function SidebarDropdown({ component }) {
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
-  const subComponentsElements = component.subComponents.map(
+  const subComponentsElements = component.children.map(
     (subComponent: { path: string; name: string }) => (
       <SidebarItem key={subComponent.path} component={subComponent} />
     )
