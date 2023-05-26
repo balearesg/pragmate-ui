@@ -1,11 +1,8 @@
 import * as React from "react";
 import { Switch } from "@bgroup/ui/form";
 import { Icon } from "@bgroup/ui/icons";
-interface Props {
-  componentName: string;
-}
 
-export /*bundle*/ function Header({ componentName }: Props): JSX.Element {
+export /*bundle*/ function ThemeSwitch(): JSX.Element {
   const theme = globalThis?.matchMedia("(prefers-color-scheme: dark)").matches;
   const themeStorage = localStorage.getItem("theme");
   const defaultTheme: string = theme ? "dark" : "light";
@@ -30,12 +27,11 @@ export /*bundle*/ function Header({ componentName }: Props): JSX.Element {
 
   const icon: string = isDark ? "moon" : "sun";
   return (
-    <header className="header">
-      <h2 className="title">{componentName}</h2>
-      <div className="content-theme">
+    <div className="theme">
+      <div className="container-theme">
         <Icon icon={icon} />
         <Switch className="checkbox" checked={isDark} onChange={handleChange} />
       </div>
-    </header>
+    </div>
   );
 }

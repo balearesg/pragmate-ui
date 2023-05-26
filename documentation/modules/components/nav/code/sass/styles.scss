@@ -1,5 +1,4 @@
 .header {
-    border-bottom: 1px solid var(--surface);
     padding: 0 16px; 
     position: relative;
   }
@@ -30,9 +29,15 @@
     font-weight: 300;
   }
   
+  .container-theme {
+    display: flex;
+  }
+
   /* menu */
   .menu {
-    grid-template-columns: 1fr 180px 60% 1fr;
+    display: flex;
+    align-items: center;
+    /* grid-template-columns: 1fr 180px 60% 1fr; */
   }
   
   .menu__item {

@@ -26,7 +26,7 @@ export const menuItems = [
       },
       {
         name: "Button",
-        path: "button",
+        path: "buttons",
       },
       {
         name: "Radio",
@@ -61,6 +61,11 @@ export const menuItems = [
   {
     name: "Icon",
     path: "icons",
+    children: [],
+  },
+  {
+    name: "Theme-switch",
+    path: "theme-switch",
     children: [],
   },
   {

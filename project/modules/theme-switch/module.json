@@ -1,6 +1,6 @@
 {
-  "name": "header",
-   "platforms": [
+  "name": "theme-switch",
+  "platforms": [
     "web",
     "ios",
     "android"

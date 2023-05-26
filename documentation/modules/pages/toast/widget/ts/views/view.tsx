@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Header } from "@bgroup/ui/header";
 import { toast } from "@bgroup/ui/toast";
 import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import {
@@ -25,7 +24,6 @@ function View() {
   return (
     <div>
       <div className="view">
-        <Header componentName="Toast" />
         <div className="component-info">
           <h3>Import:</h3>
           <CopyableImplementation>{`import { Toasts, toast } from '@bgroup/ui/toast';`}</CopyableImplementation>

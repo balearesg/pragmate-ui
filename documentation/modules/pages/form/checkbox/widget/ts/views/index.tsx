@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Header } from "@bgroup/ui/header";
 import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 
 import { Results } from "./results";
@@ -9,7 +8,6 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
-      <Header componentName="Checkbox" />
       <div className="component-info">
         <h3>Import: </h3>
         <CopyableImplementation>{`import { Checkboxsdfsdfsdfs } from '@bgroup/ui/form';`}</CopyableImplementation>

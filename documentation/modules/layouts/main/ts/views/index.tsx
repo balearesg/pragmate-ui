@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Sidebar } from "../components/sidebar";
 import { Toasts } from "@bgroup/ui/toast";
-import { SliderBarNav } from "./slide-bar";
 import { Nav } from "@bgroup/doc-ui/nav";
 
 declare global {

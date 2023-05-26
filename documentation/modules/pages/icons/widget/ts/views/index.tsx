@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Header } from "@bgroup/ui/header";
 import { BEYOND_ICONS, Icon, IconButton } from "@bgroup/ui/icons";
 import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import { ImplementationResult } from "@bgroup/ui/implementation-result";

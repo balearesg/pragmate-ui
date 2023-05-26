@@ -1,4 +1,5 @@
 import React from "react";
+import { ThemeSwitch } from "@bgroup/ui/theme-switch";
 
 export /*bundle*/ function Nav() {
   return (
@@ -33,6 +34,10 @@ export /*bundle*/ function Nav() {
               <i className="fa fa-home"></i> Home
             </a>
           </li>
+          <li className="menu__item"></li>
+          <i>
+            <ThemeSwitch />
+          </i>
         </ul>
       </div>
     </nav>

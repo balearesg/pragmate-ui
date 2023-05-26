@@ -1,6 +1,6 @@
 {
-  "name": "header",
-   "platforms": [
+  "name": "Header",
+  "platforms": [
     "web",
     "ios",
     "android"

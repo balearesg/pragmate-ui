@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Header } from "@bgroup/ui/header";
 import { Spinner } from "@bgroup/ui/spinner";
 import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import { ImplementationResult } from "@bgroup/ui/implementation-result";
@@ -8,7 +7,6 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
-      {/* <Header componentName="Spinner" /> */}
       <div className="component-info">
         <h3>Import:</h3>
         <CopyableImplementation>{`import { Spinner } from '@bgroup/ui/spinner';`}</CopyableImplementation>

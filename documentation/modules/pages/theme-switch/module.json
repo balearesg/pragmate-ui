@@ -1,0 +1,20 @@
+{
+  "name": "theme-switch",
+  "widget": {
+    "sass": {
+      "path": "/widget/sass",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "element": {
+      "name": "theme-switch"
+    }
+  }
+}
