@@ -45,4 +45,14 @@
 	);
 
 	@include button-styles($button-variants);
+
+	&.btn-danger {
+		background: var(--btn-danger-background);
+		color: #fff;
+		border: 1px solid var(--btn-danger-border-color);
+		transition: 300ms ease-in all;
+		&:hover {
+			background: var(--btn-danger-background-hover);
+		}
+	}
 }
