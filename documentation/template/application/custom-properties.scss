@@ -4,43 +4,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 :root {
+	--font-family: 'Poppins', sans-serif;
+	--secondary-font-family: 'Poppins', sans-serif;
+	--title-font: 'Poppins', serif;
 
-  --font-family: 'Poppins', sans-serif;
-  --secondary-font-family: 'Poppins', sans-serif;
-  --title-font: 'Poppins', serif;
+	--gray-base: #000000;
+	--gray-darker: #333333;
+	--gray-dark: #707070;
+	--gray: #d3d3d3;
+	--gray-variant: #ededed;
+	--gray-light: #dfe0e2;
+	--gray-lighter: #f7f7f7;
 
-  --gray-base: #000000;
-  --gray-darker: #333333;
-  --gray-dark: #707070;
-  --gray: #D3D3D3;
-  --gray-variant: #EDEDED;
-  --gray-light: #DFE0E2;
-  --gray-lighter: #F7F7F7;
-
-  --success: #22bb33;
-	--warning: #F7C700;
-	--error: #FB8787;
-	--border-error: #FF0C0C;
+	--success: #22bb33;
+	--warning: #f7c700;
+	--error: #fb8787;
+	--border-error: #ff0c0c;
 	--info: hsla(211, 88%, 53%, 1);
 
-	
-  
-  --border-primary: 20px;
-  --border-secondary: 8px;
+	--border-primary: 20px;
+	--border-secondary: 8px;
 
-
-  @include dark.properties();
-  @media(prefers-color-scheme: dark) {
-    @include dark.properties();
-    
-  }
+	@include light.properties();
+	@media (prefers-color-scheme: dark) {
+		@include dark.properties();
+	}
 }
 
-html[data-beyond-mode="light"] {
-  @include light.properties();
+html[data-beyond-mode='light'] {
+	@include light.properties();
 }
 
-html[data-beyond-mode="dark"] {
-  @include dark.properties();
-  
+html[data-beyond-mode='dark'] {
+	@include dark.properties();
 }

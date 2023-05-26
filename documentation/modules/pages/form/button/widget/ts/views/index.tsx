@@ -1,91 +1,65 @@
 import * as React from "react";
+import { Header } from "@bgroup/ui/header";
 import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
+import { Button } from "@bgroup/ui/form";
 
-import { Results } from "./results";
-import {
-  implementation,
-  implementationBorder,
-  implementationCancel,
-  implementationIcon,
-  implementationSecondary,
-  implementationSpinner,
-} from "./implementation";
-import { ImplementationResult } from "@bgroup/ui/implementation-result";
-import { ResultsSpinner } from "./result-sipnner";
-import { ResultIcon } from "./result-icon";
-import { ResultsSecondary } from "./button-secondary";
-import { ResultsBorder } from "./button-border";
-import { ResultsCancel } from "./button-cancel";
+import { Item } from "./item";
+import { Code } from "@bgroup/ui/code";
+import { getTpl } from "./get-tpl";
 export /*bundle*/
 function View() {
+  // color, outline
+  const buttons = [
+    "primary",
+    "secondary",
+    "tertiary",
+    "success",
+    "warning",
+    "danger",
+    "info",
+    "link",
+  ];
+
+  const output = buttons.map((button, index) => (
+    <Item variant={button} key={index} />
+  ));
   return (
     <div className="view">
-      <div className="component-info import">
-        <h3>Import: </h3>
-        <CopyableImplementation>{`import { Button } from "@bgroup/ui/form";`}</CopyableImplementation>
-        <CopyableImplementation>{implementation}</CopyableImplementation>
-        <main className="component-implementation">
-          <div className="column">
-            <h3>result:</h3>
-          </div>
-          <div className="column">
-            <h3>Implementation:</h3>
-          </div>
-
-          <div className="box">
-            <h3>Case button secondary:</h3>
-            <span>
-              <ResultsSecondary />
-            </span>
-          </div>
-
-          <div className="box-implementation">
-            <CopyableImplementation>
-              {implementationSecondary}
-            </CopyableImplementation>
-          </div>
-
-          <div className="box">
-            <h3>Case button border:</h3>
-            <span>
-              <ResultsBorder />
-            </span>
-          </div>
-
-          <CopyableImplementation>
-            {implementationBorder}
-          </CopyableImplementation>
-
-          <div className="box">
-            <h3>Case button cancel:</h3>
-            <span>
-              <ResultsCancel />
-            </span>
-          </div>
-
-          <CopyableImplementation>
-            {implementationCancel}
-          </CopyableImplementation>
-
-          <div className="box">
-            <h3>Case button loading:</h3>
-            <span>
-              <ResultsSpinner />
-            </span>
-          </div>
-
-          <CopyableImplementation>
-            {implementationSpinner}
-          </CopyableImplementation>
-
-          <div className="box">
-            <h3>Case button with icon:</h3>
-            <span>
-              <ResultIcon />
-            </span>
-          </div>
-          <CopyableImplementation>{implementationIcon}</CopyableImplementation>
-        </main>
+      <h1>Buttons</h1>
+      <p>
+        El componente de botón se utiliza para crear elementos interactivos que
+        permiten a los usuarios realizar acciones específicas, como enviar
+        formularios, confirmar selecciones o desencadenar eventos en la
+        interfaz.
+      </p>
+      <p>Variantes</p>
+      Las variantes del botón se pueden definir, por medio del atributo{" "}
+      <code>variant</code>
+      <h3>Variantes</h3>
+      <div className="inline__list__container">
+        {buttons.map((item) => (
+          <Button key={item} variant={item}>
+            variant="{item}"
+          </Button>
+        ))}
+      </div>
+      <div>
+        <Code>{getTpl({ variant: "primary" })}</Code>
+      </div>
+      <h3>Variantes outline</h3>
+      <p>
+        Se puede utilizar cada variante con borders pasando el atributo
+        booleando `bordered={`{true}`}`{" "}
+      </p>
+      <div className="inline__list__container">
+        {buttons.map((item) => (
+          <Button key={item} variant={item} bordered={true}>
+            variant="{item}"
+          </Button>
+        ))}
+      </div>
+      <div>
+        <Code>{getTpl({ variant: "primary", bordered: true })}</Code>
       </div>
     </div>
   );
