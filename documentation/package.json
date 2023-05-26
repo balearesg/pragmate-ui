@@ -1,68 +1,67 @@
 {
-    "name": "doc-ui",
-    "version": "0.0.36",
-    "description": "Beyond UI is a collection of reusable components",
-    "author": "",
-    "license": "MIT",
-    "scope": "bgroup",
-    "template": "template/template.json",
-    "languages": {
-        "default": "en",
-        "supported": [
-            "en",
-            "es"
-        ]
-    },
-    "libraries": {
-        "imports": [
-            "@bgroup/ui"
-        ]
-    },
-    "modules": {
-        "path": "modules"
-    },
-    "deployment": {
-        "distributions": [
-            {
-                "name": "web",
-                "environment": "development",
-                "ssr": "",
-                "platform": "web",
-                "ports": {
-                    "bundles": "1002"
-                }
-            },
-            {
-                "name": "web-tsc",
-                "environment": "development",
-                "platform": "web",
-                "ts": {
-                    "compiler": "tsc"
-                },
-                "ports": {
-                    "bundles": 3551
-                }
-            }
-        ]
-    },
-    "static": {
-        "includes": [
-            "assets"
-        ]
-    },
-    "dependencies": {
-        "@beyond-js/react-widgets": "^18.21.1",
-        "@beyond-js/reactive": "^0.0.3",
-        "@beyond-js/widgets": "^0.1.3",
-        "@material/ripple": "^14.0.0",
-        "perfect-scrollbar": "^1.5.5",
-        "prism-react-renderer": "^1.3.5",
-        "socket.io-client": "^4.5.3",
-        "swiper": "^8.4.5"
-    },
-    "devDependencies": {
-        "@beyond-js/backend": "^0.1.1",
-        "@types/react": "^18.0.26",
-        "@types/react-dom": "^18.0.9"
-    }
+	"name": "doc-ui",
+	"version": "0.0.36",
+	"description": "Beyond UI is a collection of reusable components",
+	"author": "",
+	"license": "MIT",
+	"scope": "bgroup",
+	"template": "template/template.json",
+	"languages": {
+		"default": "en",
+		"supported": [
+			"en",
+			"es"
+		]
+	},
+	"libraries": {
+		"imports": [
+			"@bgroup/ui"
+		]
+	},
+	"modules": {
+		"path": "modules"
+	},
+	"deployment": {
+		"distributions": [
+			{
+				"name": "web",
+				"environment": "development",
+				"ssr": "",
+				"platform": "web",
+				"ports": {
+					"bundles": "1002"
+				}
+			},
+			{
+				"name": "web-tsc",
+				"environment": "development",
+				"platform": "web",
+				"ts": {
+					"compiler": "tsc"
+				},
+				"ports": {
+					"bundles": 3551
+				}
+			}
+		]
+	},
+	"static": {
+		"includes": [
+			"assets"
+		]
+	},
+	"dependencies": {
+		"@beyond-js/react-widgets": "^18.21.1",
+		"@beyond-js/reactive": "^0.0.3",
+		"@beyond-js/widgets": "^0.1.3",
+		"perfect-scrollbar": "^1.5.5",
+		"prism-react-renderer": "^1.3.5",
+		"socket.io-client": "^4.5.3",
+		"swiper": "^8.4.5"
+	},
+	"devDependencies": {
+		"@beyond-js/backend": "^0.1.1",
+		"@types/react": "^18.0.26",
+		"@types/react-dom": "^18.0.9"
+	}
 }
