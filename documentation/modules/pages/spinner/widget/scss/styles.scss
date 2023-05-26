@@ -1,28 +1,26 @@
 .component-container {
-    margin-top: 3em;
-    display: grid;
-    grid-template-columns: 280px minmax(5rem, 1fr);
-    grid-template-rows: 2rem;
-    grid-gap: 30px;
+	.box {
+		h3 {
+			margin: 0;
+		}
+	}
 
-    .box {
-        h3{
-            margin: 0;
-        }
-    }
-
-    .code {
-        position: relative;
-        top: 30px;
-    }
-    .beyond-element-spinner{
-        width: 100px;
-        height: 100px;
-    }
-
-    .column {
-        text-align: center;
-    }
+	.column {
+		display: grid;
+	}
+	.on-backgrounds {
+		.on-primary {
+			background: var(--primary);
+		}
+		.on-secondary {
+			background: var(--secondary);
+		}
+		.on-tertiary {
+			background: var(-tertiary);
+		}
+	}
+	.inline__container {
+		display: flex;
+		gap: 0.5rem;
+	}
 }
-
-

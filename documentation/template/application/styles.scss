@@ -1,17 +1,20 @@
-html, body {
-  min-height: 100%;
-  padding: 0;
-  height: 100%;
-  margin: 0;
-  font-size: 1rem;
-  color: var(--secondary-dark);
-  font-family: var(--font-family);
+html,
+body {
+	min-height: 100%;
+	padding: 0;
+	height: 100%;
+	margin: 0;
+	font-size: 1rem;
+	color: var(--text-color);
+	font-family: var(--font-family);
 }
 
 html {
-  background: var(--background);
+	background: var(--background);
 }
-*,*:after, *:before {
-  font-family: var(--font-family);
-  box-sizing: border-box;
+*,
+*:after,
+*:before {
+	font-family: var(--font-family);
+	box-sizing: border-box;
 }

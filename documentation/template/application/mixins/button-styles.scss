@@ -1,0 +1,7 @@
+@mixin button-style($name, $color) {
+	$borderColor: darken($color, 10%);
+	$backgroundColorHover: darken($color, 10%);
+	--btn-#{$name}-background: #{$color};
+	--btn-#{$name}-border-color: #{$borderColor};
+	--btn-#{$name}-background-hover: #{$backgroundColorHover};
+}
