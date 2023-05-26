@@ -32,10 +32,10 @@
 			var(--on-warning),
 			var(--warning-container),
 		),
-		'danger': (
-			var(--danger-container),
-			var(--on-danger),
-			var(--danger-container),
+		'error': (
+			var(--error-container),
+			var(--on-error),
+			var(--error-container),
 		),
 		'info': (
 			var(--info-container),
