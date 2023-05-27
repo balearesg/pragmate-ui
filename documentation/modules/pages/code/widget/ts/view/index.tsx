@@ -7,15 +7,17 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
-      <h1 className="view__h1">Emty</h1>
-      <p className="view__p">
-        El componente <span className="view__span">Emty</span> representar un
-        mensaje o elemento visual que indica a los usuarios que no se
-        encontraron resultados relevantes o útiles.
+      <h1>Code</h1>
+      <p>
+        El componente Code se utiliza para mostrar porciones de codigo de
+        muestra que el usuario puede copiar, util si en nuestra web o aplicacion
+        quisieramos hacer muestra de ejemplos de codigo o dispensar
+        explicaciones o ayudas. Un claro ejemplo son las muestras de codigo que
+        puedes ver en toda esta docs.
       </p>
       <div className="component-info">
         <h3>Import: </h3>
-        <Code>{`import { Empty } from '@bgroup/ui/empty';`}</Code>
+        <Code>{`import { Code } from '@bgroup/ui/code';`}</Code>
       </div>
       <div className="component-implementation">
         <div className="component-info">
@@ -25,7 +27,7 @@ function View() {
 
         <div className="component-result">
           <h3>Result:</h3>
-          <Empty icon="info" text="No records to display" />
+          <Code>{'console.log("hello code :)");'}</Code>
         </div>
       </div>
     </div>

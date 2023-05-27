@@ -1,6 +1,5 @@
 import * as React from "react";
 import { toast } from "@bgroup/ui/toast";
-import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import {
   implementation,
   implementation2,
@@ -25,6 +24,20 @@ function View() {
   return (
     <div>
       <div className="view">
+        <h1 className="view__h1">Toats</h1>
+        <p className="view__p">
+          El componente <span className="view__span">Toats</span> es un elemento
+          de la interfaz de usuario que permite mostrar mensajes temporales y
+          relevantes a los usuarios en una aplicación. Los mensajes Toast pueden
+          ser utilizados para proporcionar información adicional, alertas,
+          confirmación de acciones realizadas o errores ocurridos en la
+          aplicación. Muestra mensajes temporales y relevantes en la pantalla.
+          Integración fácil con diferentes marcos de JavaScript, como Angular,
+          Vue.js y React. Personalización de estilos y configuraciones. Soporte
+          para mostrar mensajes en diferentes momentos y situaciones de la
+          aplicación. Capacidad de respuesta y adaptabilidad a diferentes
+          dispositivos y resoluciones de pantalla.
+        </p>
         <div className="component-info">
           <h3>Import:</h3>
           <Code>{`import { Toasts, toast } from '@bgroup/ui/toast';`}</Code>

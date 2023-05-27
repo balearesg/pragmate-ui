@@ -18,6 +18,14 @@ function View() {
   return (
     <div>
       <div className="view">
+        <h1>Alert</h1>
+        <p>
+          El componente Alert muestra un mensaje de alerta en tu aplicacion. Muy
+          util ya que los alerts se utilizan para mantener a los usuarios
+          informados sobre cambios importantes o situaciones críticas en una
+          aplicación web. Justo tenemos tres tipos de alert: Succes, Erorr y
+          Warning
+        </p>
         <div className="component-info">
           <h3>Import:</h3>
           <Code>{`import { Alert } from '@bgroup/ui/alert';`}</Code>

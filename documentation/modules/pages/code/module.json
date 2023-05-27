@@ -1,12 +1,12 @@
 {
-  "name": "theme-switch",
+  "name": "code",
   "platforms": [
     "web",
     "ios",
     "android"
   ],
   "widget": {
-    "route": "/components/theme-switch",
+    "route": "/components/code",
     "layout": "main-layout",
     "is": "page",
     "ts": {
@@ -15,8 +15,14 @@
         "*"
       ]
     },
+    "sass": {
+      "path": "/widget/scss",
+      "files": [
+        "*"
+      ]
+    },
     "element": {
-      "name": "theme-switch"
+      "name": "code-component"
     }
   }
 }

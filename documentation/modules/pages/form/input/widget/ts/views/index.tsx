@@ -22,6 +22,14 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
+      <h1 className="view__h1">Input</h1>
+      <p className="view__p">
+        El componente <span className="view__span">Input</span> Nos permite
+        agregar elementos input a nuestra aplicacion con la especialidad de
+        poder agregar si deseamos o necesitamos como atributos un label
+        definido,icono, un disable, contraseña con icono de ocultar y un
+        spinner.
+      </p>
       <div className="component-info">
         <h3>Import:</h3>
         <Code>{`import { Input } from '@bgroup/ui/form';`}</Code>

@@ -1,5 +1,4 @@
 import * as React from "react";
-import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import { Result } from "./results";
 import { implementation } from "./implementation";
 import { useBinder } from "@bgroup/ui/hooks";
@@ -18,6 +17,16 @@ function View({ store }) {
 
   return (
     <div className="view beyond-image-view">
+      <h1 className="view__h1">Verification Code</h1>
+      <p className="view__p">
+        El componente <span className="view__span">Verification Code</span> es
+        un elemento de la interfaz de usuario que permite a los usuarios
+        ingresar códigos de verificación para confirmar su identidad o
+        autenticar sus acciones en una aplicación. Los códigos de verificación
+        pueden ser númericos, alfanuméricos o incluso imágenes en algunos casos.
+        Funcionalidades Muestra un campo de entrada para que los usuarios
+        ingresen el código de verificación.
+      </p>
       <div className="component-info">
         <h3>Import: </h3>
         <Code>{`import { InputCode } from "@bgroup/ui/code-verification";`}</Code>

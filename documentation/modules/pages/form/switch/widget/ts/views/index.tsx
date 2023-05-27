@@ -8,6 +8,12 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
+      <h1 className="view__h1">Switch</h1>
+      <p className="view__p">
+        El componente <span className="view__span">Switch</span> Permite
+        alternar entre dos estados, como encendido y apagado, activado y
+        desactivado, etc
+      </p>
       <div className="component-info">
         <h3>Import:</h3>
         <Code>{`import { Switch } from '@bgroup/ui/form';`}</Code>

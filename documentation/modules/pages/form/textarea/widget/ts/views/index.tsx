@@ -8,6 +8,11 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
+      <h1 className="view__h1">Textarea</h1>
+      <p className="view__p">
+        El componente <span className="view__span">Textarea</span> permite a los
+        usuarios ingresar texto en un formato de varias líneas.
+      </p>
       <div className="component-info">
         <h3>Import:</h3>
         <Code>{`import { Textarea } from '@bgroup/ui/form';`}</Code>

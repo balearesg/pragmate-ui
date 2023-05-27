@@ -27,6 +27,18 @@ function View(): JSX.Element {
   return (
     <div className="view">
       <div className="component-info">
+        <h1 className="view__h1">Icon</h1>
+        <p className="view__p">
+          El componente <span className="view__span">Icon</span> eselemento de
+          interfaz de usuario que representa una imagen icónica, como un ícono
+          de sistema operativo o un ícono personalizado. Contamos con iconos
+          normales y botones iconos. Excelente componente para facilitar la
+          comunicación visual en una interfaz de usuario, ayudando a los
+          usuarios a comprender rápidamente el propósito de un botón o enlace.
+          tambien mejora la apariencia y el atractivo, Los iconos pueden mejorar
+          la apariencia de una aplicación, haciendo que se vea más interesante y
+          atractivo.
+        </p>
         <h3>Import:</h3>
         <Code>{`import { Icon } from '@bgroup/ui/icons';`}</Code>
         <Code>{`import { IconButton } from '@bgroup/ui/icons';`}</Code>

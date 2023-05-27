@@ -9,6 +9,12 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
+      <h1 className="view__h1">Radio</h1>
+      <p className="view__p">
+        El componente <span className="view__span">Radio</span> es un elemento
+        de interfaz de usuario que permite seleccionar una opción de una lista
+        mediante el uso de botones de opción.
+      </p>
       <div className="component-info">
         <h3>Import: </h3>
         <Code>{`import { Radio } from '@bgroup/ui/form';`}</Code>

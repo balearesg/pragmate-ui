@@ -1,7 +1,5 @@
 import * as React from "react";
-import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import { Code } from "@bgroup/ui/code";
-
 import { Results } from "./results";
 import { implementation } from "./implementation";
 
@@ -9,6 +7,12 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
+      <h1 className="view__h1">Checkbox</h1>
+      <p className="view__p">
+        El componente <span className="view__span">Checkbox</span> permite a los
+        usuarios seleccionar una o varias opciones de una lista mediante la
+        marca de casillas.
+      </p>
       <div className="component-info">
         <h3>Import: </h3>
         <Code>{`import { Checkbox } from '@bgroup/ui/form';`}</Code>

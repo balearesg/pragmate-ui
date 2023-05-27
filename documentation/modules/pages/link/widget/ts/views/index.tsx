@@ -1,5 +1,4 @@
 import * as React from "react";
-import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import { Result } from "./result";
 import { Code } from "@bgroup/ui/code";
 
@@ -7,6 +6,14 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
+      <h1 className="view__h1">Link</h1>
+      <p className="view__p">
+        El componente <span className="view__span">Link</span> Garantiza el
+        redireccionamientos de url al dar click en el, permitiendo agregar al
+        atributo href la url deseada. Si desea ejecutar una función antes de la
+        redirección, puede pasar un onClick que se ejecutará antes de la
+        redirección.
+      </p>
       <div className="component-info">
         <h3>Import:</h3>
         <Code>{`import { Link } from '@bgroup/ui/link';`}</Code>
@@ -15,16 +22,6 @@ function View() {
         <div className="component-info">
           <h3>Implementation:</h3>
           <Code>{`<Link href='/' >This is a link to home</Link>`}</Code>
-          <div className="component-detail">
-            <h4>Additional Information:</h4>
-            <div>
-              <p>
-                If you want to execute a function before the redirection you can
-                pass an <code>onClick</code> which will be executed before the
-                redirection.
-              </p>
-            </div>
-          </div>
         </div>
         <div className="component-result">
           <h3>Result:</h3>

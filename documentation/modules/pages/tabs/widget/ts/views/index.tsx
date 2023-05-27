@@ -1,5 +1,4 @@
 import * as React from "react";
-import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import { implementation } from "./implementation";
 import { Results } from "./results";
 import { Code } from "@bgroup/ui/code";
@@ -8,6 +7,18 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
+      <h1 className="view__h1">Tabs</h1>
+      <p className="view__p">
+        El componente <span className="view__span">Tabs</span> Este componente
+        permite a los usuarios navegar entre diferentes secciones de contenido
+        utilizando pestañas. El componente Tabs es especialmente útil para
+        aplicaciones web y de escritorio que requieren presentar información en
+        secciones separadas y accesibles. Muestra una lista de pestañas para
+        navegar entre diferentes secciones de contenido. Personalización de
+        estilos y configuraciones. Soporte para navegación por pestañas,
+        arrastrando y gestos táctiles. Puede mostrar cualquier tipo de contenido
+        en una pestaña utilizando slots.
+      </p>
       <div className="component-info">
         <h3>Import:</h3>
         <Code>{`import { TabsContent, BeyondTabs, Tabs } from "@bgroup/ui/tabs";`}</Code>

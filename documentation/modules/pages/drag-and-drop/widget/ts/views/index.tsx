@@ -10,6 +10,14 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
+      <h1 className="view__h1">Drag and drop</h1>
+      <p className="view__p">
+        El componente <span className="view__span">Drag and drop</span>{" "}
+        implementa la logica para poder seleccionar elementos (arreglarlos) con
+        el mouse, arrastrar esos elementos a un elemento droppable y soltarlos
+        al soltar el botón del mouse. Util para poder guardar archivos, e
+        imagnes. Tenemos dos tipos de componentes con este mecanismo.
+      </p>
       <div className="component-info">
         <h3>Import: </h3>
         <Code>{`import { DragAndDrop } from '@bgroup/ui/drag-and-drop';`}</Code>
