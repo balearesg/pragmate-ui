@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Header } from "@bgroup/ui/header";
 import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import { Button } from "@bgroup/ui/form";
 
