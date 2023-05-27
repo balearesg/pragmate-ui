@@ -1,6 +1,7 @@
 import * as React from "react";
 import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import { Result } from "./result";
+import { Code } from "@bgroup/ui/code";
 
 export /*bundle*/
 function View() {
@@ -8,12 +9,12 @@ function View() {
     <div className="view">
       <div className="component-info">
         <h3>Import:</h3>
-        <CopyableImplementation>{`import { Link } from '@bgroup/ui/link';`}</CopyableImplementation>
+        <Code>{`import { Link } from '@bgroup/ui/link';`}</Code>
       </div>
       <div className="component-implementation">
         <div className="component-info">
           <h3>Implementation:</h3>
-          <CopyableImplementation>{`<Link href='/' >This is a link to home</Link>`}</CopyableImplementation>
+          <Code>{`<Link href='/' >This is a link to home</Link>`}</Code>
           <div className="component-detail">
             <h4>Additional Information:</h4>
             <div>

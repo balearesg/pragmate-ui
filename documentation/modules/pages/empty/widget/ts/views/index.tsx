@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Empty } from "@bgroup/ui/empty";
-
-import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
+import { Code } from "@bgroup/ui/code";
 import { implementation } from "./implementation";
 
 export /*bundle*/
@@ -10,12 +9,12 @@ function View() {
     <div className="view">
       <div className="component-info">
         <h3>Import: </h3>
-        <CopyableImplementation>{`import { Empty } from '@bgroup/ui/empty';`}</CopyableImplementation>
+        <Code>{`import { Empty } from '@bgroup/ui/empty';`}</Code>
       </div>
       <div className="component-implementation">
         <div className="component-info">
           <h3>Implementation: </h3>
-          <CopyableImplementation>{implementation}</CopyableImplementation>
+          <Code>{implementation}</Code>
         </div>
 
         <div className="component-result">

@@ -15,6 +15,8 @@ import { ResultInputWithIcon } from "./result-input-with-icon";
 import { ResultInputDisabled } from "./result-input-disabled";
 import { ResultInputPassword } from "./result-input-password";
 import { ResultInputLoading } from "./result-input-loading";
+import { Code } from "@bgroup/ui/code";
+
 import { ImplementationResult } from "@bgroup/ui/implementation-result";
 export /*bundle*/
 function View() {
@@ -22,8 +24,8 @@ function View() {
     <div className="view">
       <div className="component-info">
         <h3>Import:</h3>
-        <CopyableImplementation>{`import { Input } from '@bgroup/ui/form';`}</CopyableImplementation>
-        <CopyableImplementation>{implementation}</CopyableImplementation>
+        <Code>{`import { Input } from '@bgroup/ui/form';`}</Code>
+        <Code>{implementation}</Code>
         <main className="component-container">
           <div className="column">
             <h3>Result:</h3>
@@ -38,9 +40,7 @@ function View() {
           </div>
           <div className="box-implementation">
             <div className="box__result">
-              <CopyableImplementation>
-                {implementationError}
-              </CopyableImplementation>
+              <Code>{implementationError}</Code>
             </div>
           </div>
 
@@ -50,7 +50,7 @@ function View() {
               <ResultInputWithIcon />
             </span>
           </div>
-          <CopyableImplementation>{implementationIcon}</CopyableImplementation>
+          <Code>{implementationIcon}</Code>
 
           <div className="box">
             <h3>Case input disabled:</h3>
@@ -58,9 +58,7 @@ function View() {
               <ResultInputDisabled />
             </span>
           </div>
-          <CopyableImplementation>
-            {implementationDisabled}
-          </CopyableImplementation>
+          <Code>{implementationDisabled}</Code>
 
           <div className="box">
             <h3>Case input password:</h3>
@@ -68,9 +66,7 @@ function View() {
               <ResultInputPassword />
             </span>
           </div>
-          <CopyableImplementation>
-            {implementationPassword}
-          </CopyableImplementation>
+          <Code>{implementationPassword}</Code>
 
           <div className="box">
             <h3>Case input loading:</h3>
@@ -78,9 +74,7 @@ function View() {
               <ResultInputLoading />
             </span>
           </div>
-          <CopyableImplementation>
-            {implementationLoading}
-          </CopyableImplementation>
+          <Code>{implementationLoading}</Code>
         </main>
       </div>
     </div>

@@ -10,6 +10,7 @@ import React, {
 } from "react";
 import { routing } from "@beyond-js/kernel/routing";
 import { Icon } from "./icon";
+import { RippleEffect } from "@bgroup/ui/ripple";
 interface props extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: string;
   viewBox?: SVGAttributes<SVGSVGElement>["viewBox"];

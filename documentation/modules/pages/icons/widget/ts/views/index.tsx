@@ -4,6 +4,7 @@ import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import { ImplementationResult } from "@bgroup/ui/implementation-result";
 import { Item } from "./item";
 import { Search } from "./search";
+import { Code } from "@bgroup/ui/code";
 
 export /*bundle*/
 function View(): JSX.Element {
@@ -27,28 +28,28 @@ function View(): JSX.Element {
     <div className="view">
       <div className="component-info">
         <h3>Import:</h3>
-        <CopyableImplementation>{`import { Icon } from '@bgroup/ui/icons';`}</CopyableImplementation>
-        <CopyableImplementation>{`import { IconButton } from '@bgroup/ui/icons';`}</CopyableImplementation>
+        <Code>{`import { Icon } from '@bgroup/ui/icons';`}</Code>
+        <Code>{`import { IconButton } from '@bgroup/ui/icons';`}</Code>
         <h4>Icons list:</h4>
         <Search onSearch={onSearch} />
         <div className="container-icons">{output}</div>
         <div className="component-implementation">
           <h3>Implementation:</h3>
-          <CopyableImplementation>{`<Icon icon="delete" />`}</CopyableImplementation>
-          <CopyableImplementation>{`<IconButton icon="search" />`}</CopyableImplementation>
-          <CopyableImplementation>{`
+          <Code>{`<Icon icon="delete" />`}</Code>
+          <Code>{`<IconButton icon="search" />`}</Code>
+          <Code>{`
            const users = {
             viewBox: "",
             icon: '<path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"></path>',
             };
-            <Icon icon={users.icon} viewBox={users.viewBox} />`}</CopyableImplementation>
-          <CopyableImplementation>{`
+            <Icon icon={users.icon} viewBox={users.viewBox} />`}</Code>
+          <Code>{`
            const users = {
             viewBox: "",
             icon: '<path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"></path>',
             };
             <IconButton icon={users.icon} viewBox={users.viewBox} />
-            `}</CopyableImplementation>
+            `}</Code>
           <main className="component-container">
             <h3>Result:</h3>
             <div className="content-result">

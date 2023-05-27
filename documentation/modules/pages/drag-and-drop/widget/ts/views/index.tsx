@@ -1,25 +1,25 @@
 import * as React from "react";
 import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
-
 import { Results } from "./results";
 import { implementation, implementationPhoto } from "./implementation";
 import { ImplementationResult } from "@bgroup/ui/implementation-result";
 import { ResultsUserPhoto } from "./results-user-photo";
+import { Code } from "@bgroup/ui/code";
+
 export /*bundle*/
 function View() {
   return (
     <div className="view">
       <div className="component-info">
         <h3>Import: </h3>
-        <CopyableImplementation>{`import { DragAndDrop } from '@bgroup/ui/drag-and-drop';`}</CopyableImplementation>
+        <Code>{`import { DragAndDrop } from '@bgroup/ui/drag-and-drop';`}</Code>
       </div>
       <div className="component-implementation">
         <div className="component-result">
           <div>
             <h3>Case upload file:</h3>
-            <ImplementationResult code={implementation}>
-              <Results />
-            </ImplementationResult>
+            <Code>{implementation}</Code>
+            <Results />
           </div>
           <div className="component-detail">
             <h4>Component information:</h4>
@@ -39,9 +39,8 @@ function View() {
         <div className="component-result">
           <div className="w-100">
             <h3>Case upload file:</h3>
-            <ImplementationResult code={implementationPhoto}>
-              <ResultsUserPhoto />
-            </ImplementationResult>
+            <Code>{implementationPhoto}</Code>
+            <ResultsUserPhoto />
           </div>
           <div className="component-detail">
             <h4>Component information:</h4>

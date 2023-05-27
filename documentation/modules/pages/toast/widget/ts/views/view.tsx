@@ -11,6 +11,7 @@ import {
   implementationWaring,
 } from "./implementation";
 import { Button } from "@bgroup/ui/form";
+import { Code } from "@bgroup/ui/code";
 import { ImplementationResult } from "@bgroup/ui/implementation-result";
 export /*bundle*/
 function View() {
@@ -26,8 +27,8 @@ function View() {
       <div className="view">
         <div className="component-info">
           <h3>Import:</h3>
-          <CopyableImplementation>{`import { Toasts, toast } from '@bgroup/ui/toast';`}</CopyableImplementation>
-          <CopyableImplementation>{implementation}</CopyableImplementation>
+          <Code>{`import { Toasts, toast } from '@bgroup/ui/toast';`}</Code>
+          <Code>{implementation}</Code>
           <main className="component-container">
             <div className="column">
               <h3>Result:</h3>
@@ -47,9 +48,7 @@ function View() {
               </Button>
             </div>
             <div className="box__implementation">
-              <CopyableImplementation>
-                {implementationSuccess}
-              </CopyableImplementation>
+              <Code>{implementationSuccess}</Code>
             </div>
 
             <div className="box">
@@ -64,9 +63,7 @@ function View() {
               </Button>
             </div>
             <div className="box__implementation">
-              <CopyableImplementation>
-                {implementationError}
-              </CopyableImplementation>
+              <Code>{implementationError}</Code>
             </div>
 
             <div className="box">
@@ -81,9 +78,7 @@ function View() {
               </Button>
             </div>
             <div className="box__implementation">
-              <CopyableImplementation>
-                {implementationWaring}
-              </CopyableImplementation>
+              <Code>{implementationWaring}</Code>
             </div>
             <div className="box">
               <h3>Case info toast:</h3>
@@ -97,9 +92,7 @@ function View() {
               </Button>
             </div>
             <div className="box__implementation">
-              <CopyableImplementation>
-                {implementationInfo}
-              </CopyableImplementation>
+              <Code>{implementationInfo}</Code>
             </div>
             <div className="box">
               <h3>Case loading toast:</h3>
@@ -113,9 +106,7 @@ function View() {
               </Button>
             </div>
             <div className="box__implementation">
-              <CopyableImplementation>
-                {implementationLoading}
-              </CopyableImplementation>
+              <Code>{implementationLoading}</Code>
             </div>
           </main>
         </div>

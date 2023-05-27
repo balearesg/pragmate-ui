@@ -4,6 +4,7 @@ import { Spinner } from "@bgroup/ui/spinner";
 import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import { ImplementationResult } from "@bgroup/ui/implementation-result";
 import { InlineCode, Code } from "@bgroup/ui/code";
+
 export /*bundle*/
 function View() {
   const types = ["primary", "secondary", "tertiary"];
@@ -14,7 +15,7 @@ function View() {
       {/* <Header componentName="Spinner" /> */}
       <div>
         <h3>Import:</h3>
-        <CopyableImplementation>{`import { Spinner } from '@bgroup/ui/spinner';`}</CopyableImplementation>
+        <Code>{`import { Spinner } from '@bgroup/ui/spinner';`}</Code>
         <main className="component-container">
           <div className="column">
             <h3>Colors:</h3>

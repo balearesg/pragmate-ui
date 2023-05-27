@@ -1,7 +1,6 @@
 import * as React from "react";
 import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import { Button } from "@bgroup/ui/form";
-
 import { Item } from "./item";
 import { Code } from "@bgroup/ui/code";
 import { getTpl } from "./get-tpl";
