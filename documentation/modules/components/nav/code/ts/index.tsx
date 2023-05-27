@@ -15,13 +15,8 @@ export /*bundle*/ function Nav() {
             <span></span>
           </div>
           <li className="menu__item">
-            <a
-              href="https://github.com/balearesg/bgroup-ui/tree/main"
-              className="link link--dark"
-            >
-              <i className="fa fa-github">
-                <a href="https://github.com/balearesg/bgroup-ui">Github</a>
-              </i>
+            <a href="https://github.com/balearesg/bgroup-ui">
+              <i className="fa fa-github"></i>Github
             </a>
           </li>
           <li className="menu__item">

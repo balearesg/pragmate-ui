@@ -7,7 +7,7 @@ import { Code } from "@bgroup/ui/code";
 export /*bundle*/
 function View() {
   return (
-    <div className="view">
+    <div className="view view-textarea">
       <h1 className="view__h1">Textarea</h1>
       <p className="view__p">
         El componente <span className="view__span">Textarea</span> permite a los

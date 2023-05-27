@@ -1,7 +1,7 @@
 main {
 	height: 100%;
 	width: 100%;
-	max-width: 1140px;
+	/* max-width: 1140px; */
 	margin: auto;
 	height: 100vh;
 	min-height: 100vh;
@@ -9,6 +9,8 @@ main {
 	flex-direction: column;
 	.main-content {
 		/* width: calc(100% - 17.5em); */
+		max-width: 1140px;
+		margin: auto;
 		display: grid;
 		grid-template:
 			'aside main' 20%

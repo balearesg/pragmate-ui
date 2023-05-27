@@ -24,8 +24,8 @@ export function Layout() {
       <div className="main-content">
         <Sidebar />
         <beyond-layout-children />
-        <footer className="footer">bgroup/ui ©Copyright </footer>
       </div>
+      <footer className="footer">bgroup/ui ©Copyright </footer>
     </main>
   );
 }

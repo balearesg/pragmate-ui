@@ -1,7 +1,5 @@
 import * as React from "react";
-import { Header } from "@bgroup/ui/header";
 import { Spinner } from "@bgroup/ui/spinner";
-import { CopyableImplementation } from "@bgroup/ui/copyable-implementation";
 import { ImplementationResult } from "@bgroup/ui/implementation-result";
 import { InlineCode, Code } from "@bgroup/ui/code";
 

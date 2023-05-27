@@ -26,11 +26,23 @@
 		fill: var(--clipboard-color);
 	}
 }
-.code-container.has-clipboard {
+.code-container {
 	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	width: 700px;
+	button.beyond-icon-button {
+		margin-left: 20px;
+	}
+
+	pre {
+		text-align: left;
+		width: 90%;
+	}
 	.clipboard__container {
-		position: absolute;
+		/* position: absolute;
 		right: 1rem;
-		top: 0;
+		top: 0; */
 	}
 }
