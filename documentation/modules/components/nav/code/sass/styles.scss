@@ -1,12 +1,16 @@
 .header {
     padding: 0 16px; 
     position: relative;
+    display: flex;
+    justify-content: center;
   }
   .nav-doc {
     justify-content: space-between;
     display: flex;
-    max-width: 1350px;
-    margin: 0 auto;
+    width: 55%;
+		max-width: 1140px;
+    /* margin: 0 auto; */
+    align-items: center;
   }
   .wrapper {
   //  display: flex;
