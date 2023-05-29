@@ -48,6 +48,11 @@ const IconButton: ForwardRefExoticComponent<
         return;
       }
 
+      /* React.useEffect(() => {
+        const ripple = new RippleEffect();
+        ripple.add(ref.current);
+      }, []); */
+
       if (props.navigate) {
         routing.pushState(props.navigate);
       }

@@ -4,6 +4,7 @@ import { Icon } from "@bgroup/ui/icons";
 
 export function SidebarDropdown({ component }) {
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
+  const [iconToggle, setIconTogle] = React.useState(false);
   const subComponentsElements = component.children.map(
     (subComponent: { path: string; name: string }) => (
       <SidebarItem key={subComponent.path} component={subComponent} />
@@ -19,8 +20,8 @@ export function SidebarDropdown({ component }) {
   return (
     <li className="sidebar-item">
       <a onClick={toggleDropdown}>
-        <Icon icon="arrowDropDown" className={iconDirection} />
         {component.name}
+        <Icon icon="arrowDropDown" className={iconDirection} />
       </a>
       {isDropdownOpen && <ul className="sub-list">{subComponentsElements}</ul>}
     </li>

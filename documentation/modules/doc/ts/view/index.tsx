@@ -82,8 +82,6 @@ export function Page() {
           </section>
         </article>
       </div>
-
-      {/* <footer className="footer">bgroup/ui ©Copyright </footer> */}
     </>
   );
 }
