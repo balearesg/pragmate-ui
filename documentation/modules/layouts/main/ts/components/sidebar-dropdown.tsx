@@ -19,7 +19,7 @@ export function SidebarDropdown({ component }) {
 
   return (
     <li className="sidebar-item">
-      <a onClick={toggleDropdown}>
+      <a className="sidebar-item__icon" onClick={toggleDropdown}>
         {component.name}
         <Icon icon="arrowDropDown" className={iconDirection} />
       </a>

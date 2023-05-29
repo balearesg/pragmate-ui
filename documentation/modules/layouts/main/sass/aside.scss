@@ -64,6 +64,12 @@
 	a {
 		list-style: none;
 	}
+
+	.sidebar-item__icon {
+		.down,  .right {
+			margin-left: 30px;
+		}
+	}
 	.sub-list {
 		border-left: 2px solid var(--primary);
 		transition: all .4s;
@@ -71,9 +77,12 @@
 		margin: auto;
 		margin-bottom: 5px;
 
+		&:checked{
+			color: red;
+		}
+
 		.sidebar-item {
 		margin-left: 30px;
-			
 		}
 	}
 }
