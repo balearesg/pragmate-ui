@@ -16,7 +16,7 @@ function Page(): JSX.Element {
           <code className="shell-session demo">Lorem ipsum dolor ~ $ </code>
         </pre>
       </div>
-      <div className="wrapper">
+      <div className="wrapper-home">
         <div className="installation">
           <h3 className="section__title">Installation</h3>
           <div className="tab__container">
@@ -87,7 +87,7 @@ function Page(): JSX.Element {
         </div>
       </div>
       <div className="changelog">
-        <div className="wrapper">
+        <div className="changelog__wrapper">
           <h3 className="section__title">Changelog</h3>
           <div className="changelog__item">
             <div className="changelog__meta">

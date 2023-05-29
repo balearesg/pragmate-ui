@@ -13,6 +13,12 @@ nav {
   }
 }
 
+//wrapper-home section
+
+.wrapper-home {
+  margin: 0em 12em 0em 12em;
+}
+
 /* hero section */
 .hero {
   text-align: center;
@@ -78,10 +84,21 @@ nav {
   background-color: var(--surface);
   padding: 2rem 0;
 
-  .changelog__item {
+  .changelog__wrapper {
+    margin: 0em 12em 0em 12em;
+    text-align: center;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .changelog__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .changelog__meta {
+    display: flex;
+    justify-content: center;
     flex-basis: 25%;
     small {
       color: var(--primary-light);
@@ -90,9 +107,13 @@ nav {
     }
   }
   .changelog__detail ul li {
+    text-align: left;
     color: var(--text-on-primary);
   }
   .changelog__title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
     margin-bottom: 0;
     color: var(--text-on-primary);
   }
