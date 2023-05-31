@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@beyond-js/kernel": "^0.1.9"
+    "@beyond-js/kernel": "^0.1.9",
+    "beyond": "^1.1.0"
   }
 }

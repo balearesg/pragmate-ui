@@ -8,7 +8,8 @@
     column-gap: 8px;
     margin: 0 auto;
     height: 40px;
-    border: 2px solid var(--primary-dark);
+    border: 2px solid var(--primary);
+    transition: all .5s;
     svg.beyond-icon {
         transform: translateY(3px);
         fill: var(--secondary);
@@ -18,9 +19,10 @@
         border: none;
         outline: none;
         height: 35px;
-        color: #000;
+        color: #ffff;
         padding: 1px 0;
         margin: 1px 0;
+        transition: all .5s;
         background-color: var(--background);
         &::-webkit-search-cancel-button {
             -webkit-appearance: none;
@@ -34,7 +36,7 @@
         }
     }
    
-    &:focus-within {
-        border: 2px solid var(--primary-light);
+    &:hover {
+        border: 2px solid var(--tertiary);
     }
 }

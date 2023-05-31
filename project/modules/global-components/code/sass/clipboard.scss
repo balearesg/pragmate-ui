@@ -39,6 +39,10 @@
 	pre {
 		text-align: left;
 		width: 90%;
+		border-radius: 3px;
+		font-family: Space Mono, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+		background: var(--surface);
+		color: var(--primary-light);
 	}
 	.clipboard__container {
 		/* position: absolute;

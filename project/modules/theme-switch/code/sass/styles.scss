@@ -46,3 +46,10 @@
         }
     }
 }
+
+.theme {
+
+    .beyond-element-switch label.switch input:checked+.slider:before {
+            background-color: var(--primary);
+        }
+}

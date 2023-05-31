@@ -7,12 +7,15 @@
    */
 		code:not(.inline-code, .inline),
 		pre {
-			background: var(--app-code-bg);
 			/* padding: var(--app-code-padding); */
 			font-size: var(--app-code-font-size);
 			display: flex;
 			align-items: center;
 			width: 90%;
+			border-radius: 3px;
+			font-family: Space Mono, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+			background: var(--surface);
+			color: var(--primary-light);
 		}
 
 		code,

@@ -16,12 +16,12 @@ export function SidebarDropdown({ component }) {
     event.preventDefault();
     setIsDropdownOpen(!isDropdownOpen);
   }
-
+  const icon = isDropdownOpen ? "arrowDropDown" : "arrowDropUp";
   return (
     <li className="sidebar-item">
       <a className="sidebar-item__icon" onClick={toggleDropdown}>
         {component.name}
-        <Icon icon="arrowDropDown" className={iconDirection} />
+        <Icon icon={icon} className={iconDirection} />
       </a>
       {isDropdownOpen && <ul className="sub-list">{subComponentsElements}</ul>}
     </li>

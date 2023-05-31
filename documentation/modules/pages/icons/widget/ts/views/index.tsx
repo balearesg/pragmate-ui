@@ -70,23 +70,14 @@ function View(): JSX.Element {
               <IconButton icon={users.icon} viewBox={users.viewBox} />
             </div>
             <h3>Icon size xs</h3>
-            <ImplementationResult
-              code={`<Icon className="xs" icon="delete" />`}
-            >
-              <Icon className="xs" icon="delete" />
-            </ImplementationResult>
+            <Code>{`<Icon className="xs" icon="delete" />`}</Code>
+            <Icon className="xs" icon="delete" />
             <h3>Icon size md</h3>
-            <ImplementationResult
-              code={`<Icon className="md" icon="delete" />`}
-            >
-              <Icon className="md" icon="delete" />
-            </ImplementationResult>
+            <Code>{`<Icon className="md" icon="delete" />`}</Code>
+            <Icon className="md" icon="delete" />
             <h3>Icon size lg</h3>
-            <ImplementationResult
-              code={`<Icon className="lg" icon="delete" />`}
-            >
-              <Icon className="lg" icon="delete" />
-            </ImplementationResult>
+            <Code>{`<Icon className="lg" icon="delete" />`}</Code>
+            <Icon className="lg" icon="delete" />
           </main>
         </div>
       </div>
