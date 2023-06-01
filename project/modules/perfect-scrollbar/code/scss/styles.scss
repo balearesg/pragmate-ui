@@ -1,3 +1,6 @@
 .beyond-perfect-scrollbar {
-  position: relative;
+  position: sticky;
+  top: 130px;
+  overflow: auto;
+  align-self: flex-start;
 }

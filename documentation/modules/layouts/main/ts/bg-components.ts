@@ -59,9 +59,22 @@ export const menuItems = [
   },
 
   {
-    name: "Icon",
+    name: "Icons",
     path: "icons",
-    children: [],
+    children: [
+      {
+        name: "Icon",
+        path: "icons-icon",
+      },
+      {
+        name: "Icon Button",
+        path: "icon-button",
+      },
+      {
+        name: "Icon List",
+        path: "icon-list",
+      },
+    ],
   },
   {
     name: "Theme-switch",

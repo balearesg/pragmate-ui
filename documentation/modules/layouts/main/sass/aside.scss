@@ -4,6 +4,7 @@
 	height: 100vh;
 	background: var(--background);
 	position: sticky;
+	overflow: auto;	
 	top: 0;
 }
 
@@ -66,8 +67,11 @@
 	}
 
 	.sidebar-item__icon {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 		.down,  .right {
-			margin-left: 30px;
+			/* margin-left: 30px; */
 			color: var(--primary);
 		}
 	}
