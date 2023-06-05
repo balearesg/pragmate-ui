@@ -1,25 +1,17 @@
 {
 	"name": "input-controller",
-	"platforms": [
-		"web",
-		"ios",
-		"android"
-	],
+	"platforms": ["web", "ios", "android"],
 	"widget": {
 		"route": "/components/input-controller",
-		"layout": "main-layout",
+
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",
-			"files": [
-				"*"
-			]
+			"files": ["*"]
 		},
 		"sass": {
 			"path": "/widget/sass",
-			"files": [
-				"*"
-			]
+			"files": ["*"]
 		},
 		"element": {
 			"name": "beyond-input-controller"

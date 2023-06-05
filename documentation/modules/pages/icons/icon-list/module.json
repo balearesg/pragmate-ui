@@ -1,22 +1,16 @@
 {
-  "name": "icon-list",
-  "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
-  "widget": {
-    "route": "/components/icon-list",
-    "layout": "main-layout",
-    "is": "page",
-    "ts": {
-      "path": "/widget/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "element": {
-      "name": "icon-list"
-    }
-  }
+	"name": "icon-list",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/icon-list",
+
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "icon-list"
+		}
+	}
 }

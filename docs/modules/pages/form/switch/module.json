@@ -1,19 +1,13 @@
 {
 	"name": "switch",
-	"platforms": [
-		"web",
-		"ios",
-		"android"
-	],
+	"platforms": ["web", "ios", "android"],
 	"widget": {
 		"route": "/components/switch",
-		"layout": "main-layout",
+
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",
-			"files": [
-				"*"
-			]
+			"files": ["*"]
 		},
 		"element": {
 			"name": "beyond-switch"

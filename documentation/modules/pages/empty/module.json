@@ -1,25 +1,17 @@
 {
 	"name": "empty",
-	"platforms": [
-		"web",
-		"ios",
-		"android"
-	],
+	"platforms": ["web", "ios", "android"],
 	"widget": {
 		"route": "/components/empty",
-		"layout": "main-layout",
+
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",
-			"files": [
-				"*"
-			]
+			"files": ["*"]
 		},
 		"sass": {
 			"path": "/widget/scss",
-			"files": [
-				"*"
-			]
+			"files": ["*"]
 		},
 		"element": {
 			"name": "beyond-empty"

@@ -3,7 +3,6 @@
 	"platforms": ["web", "ios", "android"],
 	"widget": {
 		"route": "/components/buttons",
-		"layout": "main-layout",
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",

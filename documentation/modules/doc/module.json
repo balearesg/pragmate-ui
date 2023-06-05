@@ -1,28 +1,20 @@
 {
-  "name": "doc",
-  "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
-  "widget": {
-    "is": "page",
-    "layout": "main-layout",
-    "route": "/doc",
-    "element": {
-      "name": "doc-page"
-    },
-    "sass": {
-      "path": "sass",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "ts",
-      "files": [
-        "*"
-      ]
-    }
-  }
+	"name": "doc",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"is": "page",
+
+		"route": "/doc",
+		"element": {
+			"name": "doc-page"
+		},
+		"sass": {
+			"path": "sass",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "ts",
+			"files": ["*"]
+		}
+	}
 }

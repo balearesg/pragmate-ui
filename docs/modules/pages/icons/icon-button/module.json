@@ -1,22 +1,16 @@
 {
-  "name": "icon-Button",
-  "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
-  "widget": {
-    "route": "/components/icon-button",
-    "layout": "main-layout",
-    "is": "page",
-    "ts": {
-      "path": "/widget/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "element": {
-      "name": "icon-button"
-    }
-  }
+	"name": "icon-Button",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/icon-button",
+
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "icon-button"
+		}
+	}
 }

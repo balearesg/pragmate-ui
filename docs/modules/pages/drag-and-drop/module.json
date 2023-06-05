@@ -1,22 +1,16 @@
 {
-  "name": "drag-and-drop",
-  "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
-  "widget": {
-    "route": "/components/drag-and-drop",
-    "layout": "main-layout",
-    "is": "page",
-    "ts": {
-      "path": "/widget/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "element": {
-      "name": "beyond-drag-and-drop"
-    }
-  }
+	"name": "drag-and-drop",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/drag-and-drop",
+
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "beyond-drag-and-drop"
+		}
+	}
 }

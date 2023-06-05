@@ -1,19 +1,13 @@
 {
 	"name": "regular-modal",
-	"platforms": [
-		"web",
-		"ios",
-		"android"
-	],
+	"platforms": ["web", "ios", "android"],
 	"widget": {
 		"route": "/components/regular-modal",
-		"layout": "main-layout",
+
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",
-			"files": [
-				"*"
-			]
+			"files": ["*"]
 		},
 		"element": {
 			"name": "beyond-regular-modal"
