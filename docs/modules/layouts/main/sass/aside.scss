@@ -1,6 +1,5 @@
 .aside {
 	grid-area: aside;
-
 	height: 100vh;
 	background: var(--background);
 	position: sticky;
@@ -62,6 +61,11 @@
 
 .sidebar-item {
 	transition: all .4s;
+	cursor: pointer;
+
+	&:hover {
+		color: var(--tertiary);
+	}
 	a {
 		list-style: none;
 	}

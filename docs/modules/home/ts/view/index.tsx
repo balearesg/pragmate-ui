@@ -1,5 +1,5 @@
 import React from "react";
-import { Sidebar } from "./sidebar";
+import { Code } from "simply-ui/code";
 export function Page() {
   const [show, setShow] = React.useState(false);
   function handleModalColor() {
@@ -9,7 +9,6 @@ export function Page() {
     <>
       <div className="doc__bg"></div>
       <div className="wrapper">
-        <Sidebar />
         <article className="doc__content">
           <section className="js-section">
             <h3 className="section__title">Get Started</h3>
@@ -22,6 +21,7 @@ export function Page() {
             <div className="code__block code__block--notabs">
               <pre className="code code--block">
                 {/* <CopyableImplementation>{`npm i @bgroup/ui `}</CopyableImplementation> */}
+                <Code>{`npm i @bgroup/ui `}</Code>
               </pre>
             </div>
           </section>

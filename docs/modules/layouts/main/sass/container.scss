@@ -3,4 +3,24 @@
 	grid-template-columns: 25% 1fr;
 	max-width: 1200px;
 	margin: 0 auto;
+	gap: 30px;
+
+	.container__aside {
+		position: sticky;
+		top: 0;
+		overflow: auto;
+		
+
+		.aside__h3-title {
+			transition: all 0.5s;
+			cursor: pointer;
+
+			&:hover {
+				color: var(--primary);
+			}
+			&:hover .h3__strong-hover{
+				color: var(--tertiary);
+			}
+		}
+	}
 }
