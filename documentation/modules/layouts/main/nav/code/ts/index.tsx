@@ -1,21 +1,19 @@
 import React from 'react';
-import { ThemeSwitch } from 'simply-ui/theme-switch';
+import { ThemeSwitcher } from 'simply-ui/theme-switcher';
 
 export /*bundle*/ function Nav() {
 	return (
 		<nav className="header header-main">
 			<div className="nav-doc">
 				<h1 className="logo logo-main">
-					<a href="/">
-						bgroup/ui <span className="logo__thin">Doc</span>
-					</a>
+					<a href="/">Simply-ui</a>
 				</h1>
 				<ul className="menu">
 					<div className="menu__item toggle">
 						<span></span>
 					</div>
 					<li className="menu__item">
-						<a href="https://github.com/balearesg/bgroup-ui" className="link link--dark">
+						<a href="https://github.com/balearesg/simply-ui" className="link link--dark">
 							<i className="fa fa-home"></i>Github
 						</a>
 					</li>
@@ -31,7 +29,7 @@ export /*bundle*/ function Nav() {
 					</li>
 					<li className="menu__item"></li>
 					<i>
-						<ThemeSwitch />
+						<ThemeSwitcher />
 					</i>
 				</ul>
 			</div>

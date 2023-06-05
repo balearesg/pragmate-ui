@@ -1,0 +1,8 @@
+{
+	"name": "mixins",
+	"code": {
+		"scss": {
+			"files": "*"
+		}
+	}
+}

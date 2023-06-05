@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Switch } from 'simply-ui/form';
 import { Icon } from 'simply-ui/icons';
 
-export /*bundle*/ function ThemeSwitch(): JSX.Element {
+export /*bundle*/ function ThemeSwitcher(): JSX.Element {
 	const theme = globalThis?.matchMedia('(prefers-color-scheme: dark)').matches;
 	const themeStorage = localStorage.getItem('theme');
 	const defaultTheme: string = theme ? 'dark' : 'light';

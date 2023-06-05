@@ -1,22 +1,27 @@
 import * as React from 'react';
 import { Nav } from '@bgroup/simply-docs/nav';
 import { Button } from 'simply-ui/form';
+
 export /*bundle*/
 function Page(): JSX.Element {
 	return (
 		<>
 			<Nav />
 			<div className="hero">
-				<h1 className="hero__title">@bgroup/ui</h1>
-				<p className="hero__description">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Id mollitia{' '}
-				</p>
+				<div className="container">
+					<h1 className="hero__title">simply-ui</h1>
+					<p className="hero__description mt-30">
+						Welcome to simply-ui, the home of intuitive and reusable UI components. Our library has been
+						crafted with care to streamline your development process, providing a diverse range of
+						components that are easy to implement. Explore, import, and create with simply-ui.
+					</p>
+				</div>
 			</div>
-			<div className="hero__terminal">
+			{/* <div className="hero__terminal">
 				<pre>
 					<code className="shell-session demo">Lorem ipsum dolor ~ $ </code>
 				</pre>
-			</div>
+			</div> */}
 			<div className="wrapper-home">
 				<div className="installation">
 					<h3 className="section__title">Installation</h3>
