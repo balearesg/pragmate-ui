@@ -1,0 +1,10 @@
+.component-result .beyond-element-empty {
+    background-color: var(--background);
+    border-radius: 8px;
+    max-width: 500px;
+    svg.beyond-icon {
+        background-color: var(--border);
+        padding: 8px;
+        border-radius: 50%;
+    }
+}

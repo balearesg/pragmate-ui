@@ -1,0 +1,89 @@
+main {
+	height: 100%;
+	width: 100%;
+	/* max-width: 1140px; */
+	margin: auto;
+	height: 100vh;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	.main-content {
+		/* width: calc(100% - 17.5em); */
+		max-width: 1140px;
+		margin: auto;
+		display: grid;
+		grid-template:
+			'aside main' 20%
+			'aside main' 1fr
+			'footer footer' 100px /
+			1fr 3fr;
+	}
+
+	.header-main {
+		background-color: var(--background);
+		display: flex;
+		/* position: relative;
+		right: 17.6em;
+		width: 119em; */
+	}
+
+	.logo-main {
+		background-color: var(--background);
+		border-bottom: none;
+		text-align: center; 
+	}
+}
+
+.logo {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	height: 57px;
+	position: sticky;
+	top: 0;
+	height: 75px;
+	z-index: 100;
+	background: var(--background);
+	/* 	border-bottom: solid 2px var(--primary);
+ */
+	a {
+		display: block;
+		padding: 1em 0;
+		color: var(--text-color);
+		text-decoration: none;
+		transition: 0.15s linear color;
+
+		&:hover {
+			color: var(--secondary);
+			span {
+				color: var(--primary);
+			}
+		}
+	}
+
+	span {
+		font-weight: 700;
+		transition: 0.15s linear color;
+	}
+}
+
+// HOVER SLIDE EFFECT
+.list-hover-slide {
+	li {
+		position: relative;
+		overflow: hidden;
+	}
+
+	a {
+		-webkit-user-select: none;
+		user-select: none;
+		&:hover {
+			background: rgba(255, 255, 255, 0.29);
+
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(6.9px);
+			-webkit-backdrop-filter: blur(6.9px);
+		}
+	}
+}

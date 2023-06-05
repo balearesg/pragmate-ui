@@ -1,0 +1,22 @@
+{
+	"name": "confirm-modal",
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	],
+	"widget": {
+		"route": "/components/confirm-modal",
+		"layout": "main-layout",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": [
+				"*"
+			]
+		},
+		"element": {
+			"name": "beyond-confirm-modal"
+		}
+	}
+}

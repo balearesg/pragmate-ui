@@ -1,0 +1,28 @@
+{
+	"name": "toast",
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	],
+	"widget": {
+		"route": "/components/toast",
+		"layout": "main-layout",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": [
+				"*"
+			]
+		},
+		"sass": {
+			"path": "/widget/scss",
+			"files": [
+				"*"
+			]
+		},
+		"element": {
+			"name": "beyond-toast"
+		}
+	}
+}

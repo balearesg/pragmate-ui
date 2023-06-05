@@ -1,0 +1,28 @@
+{
+  "name": "code",
+  "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
+  "widget": {
+    "route": "/components/code",
+    "layout": "main-layout",
+    "is": "page",
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "sass": {
+      "path": "/widget/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "element": {
+      "name": "code-component"
+    }
+  }
+}

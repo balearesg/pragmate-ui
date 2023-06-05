@@ -1,0 +1,22 @@
+{
+	"name": "alert-modal",
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	],
+	"widget": {
+		"route": "/components/alert-modal",
+		"layout": "main-layout",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": [
+				"*"
+			]
+		},
+		"element": {
+			"name": "beyond-alert-modal"
+		}
+	}
+}
