@@ -1,5 +1,6 @@
 import * as React from "react";
 import { ConfirmModal } from "@bgroup/ui/modal";
+import { Button } from "@bgroup/ui/form";
 
 export function Results() {
   const [show, setShow] = React.useState(false);
@@ -9,9 +10,9 @@ export function Results() {
   }
   return (
     <>
-      <button className="action-button" onClick={handleModal}>
+      <Button className="action-button" onClick={handleModal}>
         Display Modal!
-      </button>
+      </Button>
       {show && (
         <ConfirmModal
           show

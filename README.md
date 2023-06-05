@@ -1,34 +1,35 @@
-
 # @bgroup/ui
 
-@bgroup/ui is a collection of reusable components here you can see what they are and how to import and implement them.   
+@bgroup/ui is a collection of reusable components here you can see what they are and how to import and implement them.
 
-## To install 
+## To install
 
-```npm i @bgroup/ui```
+`npm i @bgroup/ui`
 
 ## Components
 
-- Beyond Empty
-- Beyond Button
-- Beyond Textarea
-- Beyond Switch
-- Beyond Input
-- Beyond Checkbox
-- Beyond Radio
-- Beyond Toast
-- Beyond ScrollContainer
-- Beyond Modal
-- Beyond Alert Modal
-- Beyond Confirm Modal
-- Beyond Image
-- Beyond IconButton
-- Beyond Icon
-- Beyond Tabs
-- Byeond Input Controller
-- Beyond Swiper
-- Beyond Alert
-- Beyond Verification code
+- Empty
+- Button
+- Textarea
+- Switch
+- Input
+- Checkbox
+- Radio
+- Toast
+- ScrollContainer
+- Modal
+- Alert Modal
+- Confirm Modal
+- Image
+- IconButton
+- Icon
+- Tabs
+- Input Controller
+- Swiper
+- Alert
+- Verification code
 - DragAndDrop
 - Dropdown
 - DropdownSidebar
+- ThemeSwitch
+- Code

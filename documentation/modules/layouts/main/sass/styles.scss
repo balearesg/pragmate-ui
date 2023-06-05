@@ -17,7 +17,7 @@ main {
 			'aside main' 20%
 			'aside main' 1fr
 			'footer footer' 100px /
-			1fr 2fr;
+			1fr 3fr;
 	}
 
 	.header-main {
@@ -50,12 +50,12 @@ main {
 	a {
 		display: block;
 		padding: 1em 0;
-		color: var(--text-on-secondary);
+		color: var(--text-color);
 		text-decoration: none;
 		transition: 0.15s linear color;
 
 		&:hover {
-			color: #fff;
+			color: var(--secondary);
 			span {
 				color: var(--primary);
 			}

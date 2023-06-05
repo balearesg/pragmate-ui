@@ -148,3 +148,27 @@ nav {
     font-size: 0.8rem;
   }
 }
+
+.container-contributions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  color: var(--text-on-primary);
+  gap: 20px;
+
+  .beyond-button.btn-primary {
+    height: 100px;
+    width: 200px;
+    border: 2px solid;
+
+    &:hover {
+      border: 2px solid var(--tertiary);
+    }
+  }
+
+  img {
+    height: 30px;
+    /* width: 20px; */
+  }
+}

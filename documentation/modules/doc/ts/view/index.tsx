@@ -16,8 +16,9 @@ export function Page() {
           <section className="js-section">
             <h3 className="section__title">Get Started</h3>
             <p>
-              Learn how to configure settings for bgroup/ui, such as your syntax
-              highlighting preference and the default saving folder location.
+              Bienvenido, en nuestro menu izquierdo puede buscar los componentes
+              que necesite usar. Se le recuerda instalar la libreria por si
+              todavia no la ha instalado.
             </p>
             <h3 className="section__title">Installation</h3>
             <div className="code__block code__block--notabs">
@@ -28,57 +29,8 @@ export function Page() {
               </pre>
             </div>
           </section>
-
           <section className="section__modal-color">
             <FormColorPicker show={show} handleModalColor={handleModalColor} />
-          </section>
-
-          <section className="js-section">
-            <h3 className="section__title">Keybindings</h3>
-            <p>
-              Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel
-              inani aeterno ad. Facer oratio ex per. At eam movet verear, in sea
-              brute patrioque disputando, usu nonumes torquatos an. Ex his
-              quaerendum intellegebat, ut vel homero accusam. Eum at debet
-              tibique, in vocibus temporibus adversarium sed. Porro verear eu
-              vix, ne usu tation vituperata.
-            </p>
-            <p>
-              Malis percipitur an pro. Pro aperiam persequeris at, at sonet
-              sensibus mei, id mea postulant definiebas concludaturque. Id qui
-              malis abhorreant, mazim melius quo et. At eam altera dolorum, case
-              dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo
-              no verterem deseruisse, mea brute postea te, ne per tacimates
-              suavitate vituperatoribus.
-            </p>
-            <p>
-              Malis percipitur an pro. Pro aperiam persequeris at, at sonet
-              sensibus mei, id mea postulant definiebas concludaturque. Id qui
-              malis abhorreant, mazim melius quo et. At eam altera dolorum, case
-              dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo
-              no verterem deseruisse, mea brute postea te, ne per tacimates
-              suavitate vituperatoribus.
-            </p>
-            <hr />
-          </section>
-          <section className="js-section">
-            <h3 className="section__title">Issues</h3>
-            <p>
-              Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel
-              inani aeterno ad. Facer oratio ex per. At eam movet verear, in sea
-              brute patrioque disputando, usu nonumes torquatos an. Ex his
-              quaerendum intellegebat, ut vel homero accusam. Eum at debet
-              tibique, in vocibus temporibus adversarium sed. Porro verear eu
-              vix, ne usu tation vituperata.
-            </p>
-            <p>
-              Malis percipitur an pro. Pro aperiam persequeris at, at sonet
-              sensibus mei, id mea postulant definiebas concludaturque. Id qui
-              malis abhorreant, mazim melius quo et. At eam altera dolorum, case
-              dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo
-              no verterem deseruisse, mea brute postea te, ne per tacimates
-              suavitate vituperatoribus.
-            </p>
           </section>
         </article>
       </div>

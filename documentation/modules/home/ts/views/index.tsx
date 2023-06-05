@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Nav } from "@bgroup/doc-ui/nav";
+import { Button } from "@bgroup/ui/form";
 export /*bundle*/
 function Page(): JSX.Element {
   return (
@@ -36,45 +37,57 @@ function Page(): JSX.Element {
         </div>
         <div className="feature">
           <div className="feature__item">
-            <h3 className="section__title">Lorem ipsum</h3>
+            <h3 className="section__title">REUTILIZABLES😃</h3>
             <p>
-              Start writing your notes immediately in any terminal! No more time
-              wasted on navigating and opening your text editor.
+              BeyondUI proporciona componentes reutilizables que se pueden usar
+              para crear una variedad de interfaces de usuario diferentes. Esto
+              puede ahorrarle tiempo y esfuerzo, y también puede ayudar a
+              garantizar que sus interfaces de usuario sean coherentes y estén
+              bien diseñadas.
             </p>
           </div>
           <div className="feature__item">
-            <h3 className="section__title">Lorem ipsum</h3>
+            <h3 className="section__title">MODULARIDAD💪</h3>
             <p>
-              Save your file in Dropbox then you can access to it from anywhere.
+              Los componentes que tenemos integrados son modulares, lo que
+              significa que se pueden combinar fácilmente para crear interfaces
+              de usuario nuevas y complejas. Esto le brinda mucha flexibilidad
+              al diseñar sus interfaces de usuario y también puede ayudar a que
+              su código sea más fácil de mantener.
             </p>
           </div>
           <div className="feature__item">
-            <h3 className="section__title">Lorem ipsum</h3>
+            <h3 className="section__title">ELEGANTES🎩</h3>
             <p>
-              Encrypt your notes optionally. No one can get to your secrets!{" "}
+              Los componentes de su marco son elegantes y modernos, lo que puede
+              ayudar a que sus interfaces de usuario se vean geniales. Esto
+              puede mejorar la experiencia del usuario y hacer que su sitio web
+              o aplicación sea más atractivo para los usuarios.
             </p>
           </div>
           <div className="feature__item">
-            <h3 className="section__title">Lorem ipsum</h3>
+            <h3 className="section__title">FACILES DE USAR🏹</h3>
             <p>
-              Maintain all your settings in a single{" "}
-              <span className="code code--inline">config.json</span> file. Never
-              need to redo the setting every single time jotting down a note.
+              Los componentes de su marco son fáciles de usar, incluso para
+              principiantes. Esto facilita comenzar con su marco y crear
+              interfaces de usuario atractivas de forma rápida y sencilla.
             </p>
           </div>
           <div className="feature__item">
-            <h3 className="section__title">Lorem ipsum</h3>
+            <h3 className="section__title">Variedad🎨</h3>
             <p>
-              For better readability, bgroup/ui has a clean, beautiful color
-              scheme allow you to scan files fast.
+              Los componentes son variados, cuenta con gran cantidad de
+              componentes que puede escoger para su proyecto en particular, todo
+              para la especialidad de su necesidad.
             </p>
           </div>
           <div className="feature__item">
-            <h3 className="section__title">Lorem ipsum</h3>
+            <h3 className="section__title">ESENCIALES⭐</h3>
             <p>
-              You can expect common keybindings for bgroup/ui. Customize{" "}
-              <span className="code code--inline">bindings.json</span> for your
-              own liking!{" "}
+              Componentes vitales intregrados con los que puede tener la
+              seguridad que estan al dia en el estandar de funcionamiento y
+              perfomance en su aplicacion que enrriqueceran su aplicacion o
+              pagina web y que por tanto muy esenciales para usar.
             </p>
           </div>
         </div>
@@ -135,6 +148,22 @@ function Page(): JSX.Element {
           </div>
         </div>
       </div>
+      <section className="container-contributions">
+        <h3 className="contributions__h3">
+          Si deseas colaborar o aportar ideas interesantes puedes contribuir y
+          ayudarnos💓 &#128147;
+        </h3>
+        Directamente aqui
+        <Button variant="primary" className="contributions__button">
+          <a href="https://github.com/balearesg/bgroup-ui">
+            <img
+              className="contributions__img"
+              src="assets/github.png"
+              alt="icon githhub"
+            />
+          </a>
+        </Button>
+      </section>
       <footer className="footer">bgroup/ui ©Copyright </footer>
     </>
   );
