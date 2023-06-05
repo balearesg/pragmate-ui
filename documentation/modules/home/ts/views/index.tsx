@@ -163,6 +163,9 @@ function Page(): JSX.Element {
             />
           </a>
         </Button>
+        <div>
+          <span>Here Click 🎵</span>
+        </div>
       </section>
       <footer className="footer">bgroup/ui ©Copyright </footer>
     </>
