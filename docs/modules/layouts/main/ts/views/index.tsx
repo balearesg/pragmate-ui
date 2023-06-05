@@ -1,17 +1,20 @@
-import * as React from "react";
+import * as React from 'react';
 
 declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      "beyond-layout-children": any;
-    }
-  }
+	namespace JSX {
+		interface IntrinsicElements {
+			'beyond-layout-children': any;
+		}
+	}
 }
 
 export function Layout() {
-  return (
-    <main>
-      <beyond-layout-children />
-    </main>
-  );
+	return (
+		<div className="layout__container">
+			<aside>
+				<h3>Menu</h3>
+			</aside>
+			<beyond-layout-children />
+		</div>
+	);
 }
