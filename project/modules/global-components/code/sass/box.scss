@@ -6,7 +6,7 @@
 	overflow-x: auto;
 	grid-template-rows: auto 1fr;
 	background: var(--app-code-bg);
-	margin: 2rem 0;
+	margin: 1rem 0;
 	//box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
 	header {
@@ -51,14 +51,3 @@
 		}
 	}
 }
-
-// :host-context(html[data-beyond-mode='light']) .code__box {
-// 	header {
-// 		background: var(--color-gray-10);
-// 	}
-// 	.tab {
-// 		padding: 1rem;
-// 		background: var(--primary-light);
-// 		color: var(--text-on-primary);
-// 	}
-// }

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Button } from '@bgroup/ui/form';
-import { Code } from '@bgroup/ui/code';
+import { Button } from 'simply-ui/form';
+import { Code } from 'simply-ui/code';
 import { getTpl } from './get-tpl';
 
 export function Item({ variant }) {

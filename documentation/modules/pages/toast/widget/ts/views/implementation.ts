@@ -1,5 +1,5 @@
 export const implementation = `
-import { Toasts, toast } from '@bgroup/ui/toast';
+import { Toasts, toast } from 'simply-ui/toast';
 export function View() {
     
     function toggleToast(): void {
@@ -25,7 +25,7 @@ export function View() {
 `;
 
 export const implementation2 = `
-import { Toasts, toast } from '@bgroup/ui/toast';
+import { Toasts, toast } from 'simply-ui/toast';
 export function View() {
     
     function toggleToast(): void {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IconButton } from '@bgroup/ui/icons';
+import { IconButton } from 'simply-ui/icons';
 
 export function Clipboard({ text, message }) {
 	const ref = React.useRef(null);
@@ -44,11 +44,9 @@ export function Clipboard({ text, message }) {
 	};
 
 	return (
-		<div>
-			<div className="clipboard__container" data-text={text} ref={ref} onClick={onClick}>
-				<IconButton icon="copy" />
-				<span className="action-copied">Copied</span>
-			</div>
+		<div className="clipboard__container" data-text={text} ref={ref} onClick={onClick}>
+			<IconButton icon="copy" />
+			<span className="action-copied">Copied</span>
 		</div>
 	);
 }

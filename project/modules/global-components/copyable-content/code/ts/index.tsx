@@ -1,6 +1,6 @@
 import * as React from 'react';
-//import { toast } from '@bgroup/ui/toast';
-import { IconButton } from '@bgroup/ui/icons';
+//import { toast } from 'simply-ui/toast';
+import { IconButton } from 'simply-ui/icons';
 import Highlight, { defaultProps, Language } from 'prism-react-renderer';
 
 type props = {

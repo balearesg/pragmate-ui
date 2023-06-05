@@ -1,8 +1,8 @@
 import React, { MouseEvent, ReactNode, ButtonHTMLAttributes } from 'react';
 import { routing } from '@beyond-js/kernel/routing';
-import { Icon } from '@bgroup/ui/icons';
-import { Spinner } from '@bgroup/ui/spinner';
-import { RippleEffect } from '@bgroup/ui/ripple';
+import { Icon } from 'simply-ui/icons';
+import { Spinner } from 'simply-ui/spinner';
+import { RippleEffect } from 'simply-ui/ripple';
 
 interface props extends ButtonHTMLAttributes<HTMLButtonElement> {
 	data?: Array<any>;

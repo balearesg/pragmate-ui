@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Code } from './code';
-import { AppIconButton } from '@bgroup/ui/icons';
+import { AppIconButton } from 'simply-ui/icons';
 import { Clipboard } from './clipboard';
 export /*bundle*/ function CodeBox({ title, language, children }) {
 	return (

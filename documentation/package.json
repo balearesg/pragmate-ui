@@ -1,7 +1,7 @@
 {
-	"name": "doc-ui",
+	"name": "simply-docs",
 	"version": "0.0.36",
-	"description": "Beyond UI is a collection of reusable components",
+	"description": "An easy-to-use library for creating modular and reusable UI components",
 	"author": "",
 	"license": "MIT",
 	"scope": "bgroup",
@@ -15,7 +15,7 @@
 	},
 	"libraries": {
 		"imports": [
-			"@bgroup/ui"
+			"simply-ui"
 		]
 	},
 	"modules": {

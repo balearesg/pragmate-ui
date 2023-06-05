@@ -23,30 +23,17 @@
 
 .clipboard__container {
 	svg {
-		fill: var(--clipboard-color);
+		fill: var(--app-accent-color);
 	}
 }
-.code-container {
+.code-container.has-clipboard {
 	position: relative;
-	display: flex;
-	align-items: center;
-	flex-direction: row;
-	width: 700px;
-	button.beyond-icon-button {
-		margin-left: 20px;
-	}
-
-	pre {
-		text-align: left;
-		width: 90%;
-		border-radius: 3px;
-		font-family: Space Mono, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-		background: var(--surface);
-		color: var(--primary-light);
-	}
 	.clipboard__container {
-		/* position: absolute;
-		right: 1rem;
-		top: 0; */
+		position: absolute;
+		right: 0.5rem;
+		top: 1rem;
+		svg {
+			fill: var(--clipboard-color);
+		}
 	}
 }

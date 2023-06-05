@@ -1,10 +1,9 @@
 {
-	"name": "ui",
+	"name": "simply-ui",
 	"version": "0.0.36",
 	"description": "Beyond UI is a collection of reusable components",
 	"author": "",
 	"license": "MIT",
-	"scope": "bgroup",
 	"template": "template/template.json",
 	"languages": {
 		"default": "en",

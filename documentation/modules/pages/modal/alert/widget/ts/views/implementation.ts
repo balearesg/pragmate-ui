@@ -1,6 +1,6 @@
 export const implementation = `
 import * as React from 'react';
-import { AlertModal } from '@bgroup/ui/modal';
+import { AlertModal } from 'simply-ui/modal';
 
 export function Results() {
 	const [show, setShow] = React.useState(false);

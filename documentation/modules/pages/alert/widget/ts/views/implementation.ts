@@ -1,5 +1,5 @@
 export const implementation = `
-import { useToastContext } from "@bgroup/ui/toast";
+import { useToastContext } from "simply-ui/toast";
 export function ImplementationAlert() {
 <Alert  
     message="this is a success message"
