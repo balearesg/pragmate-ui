@@ -158,7 +158,7 @@ function Page(): JSX.Element {
 					<span>Here Click 🎵</span>
 				</div>
 			</section>
-			<footer className="footer">bgroup/ui ©Copyright </footer>
+			t<footer className="footer">simply-ui MIT license </footer>
 		</>
 	);
 }
