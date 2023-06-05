@@ -1,0 +1,44 @@
+@mixin properties() {
+	/* primary colors */
+	--primary: #39a9dc;
+	--primary-variant: #3c96af;
+	--text-on-primary: #fff;
+
+	/* secondary colors */
+	--secondary: #8c8c8c;
+	--secondary-variant: #bdbdbd;
+	--text-on-secondary: #fff;
+
+	// tertiary color
+	--tertiary: #98c964;
+
+	/* general colors */
+	--background: #002130;
+	--background-variant: #0c1e2c;
+	--text-color: #fff;
+	--secondary-text-color: #000;
+	--surface: #263238;
+
+	/* alerts colors*/
+	--text-on-success: #fff;
+	--success-container: #388e3c;
+	--text-on-error: #fff;
+	--error-container: #e57373;
+
+	--info-container: #80cbc4;
+	--warning-container: #ffd54f;
+	--warning-color: #ffd54f;
+	--text-on-warning: #000000;
+
+	/* custom app colors */
+	--user-menu-color: #fff;
+	--user-menu-bg: var(--surface);
+
+	--surface: #2d485a;
+	--icon-color: #fff;
+	--input-bg: #002130;
+	--border-color: var(--primary-dark);
+	--box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+	--app-code-bg: #1c1c1c;
+}

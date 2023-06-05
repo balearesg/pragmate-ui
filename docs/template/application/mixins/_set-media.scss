@@ -1,0 +1,42 @@
+$medias: (
+	'mobile': (
+		320px,
+		480px,
+	),
+	'tablet': (
+		481px,
+		768px,
+	),
+	'small-screen': (
+		769px,
+		1024px,
+	),
+	'md-screen': (
+		1025px,
+		1200px,
+	),
+	'large-screen': (
+		1025px,
+		1400px,
+	),
+);
+
+@mixin set-media($size: 'tablet', $between: false, $glue: 'min') {
+	$range: map-get($medias, $size);
+	$min: nth($range, 1);
+	$max: nth($range, 2);
+
+	@if $between {
+		@media (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else {
+		$to-set: $min;
+		@if $glue == 'max' {
+			$to-set: $max;
+		}
+		@media (#{$glue}-width: $to-set) {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,34 @@
+@mixin shadow-1() {
+  box-shadow: /* offset-x | offset-y | blur-radius | spread-radius | color */
+          0 8px 10px 1px hsla(0, 0%, 0%, 0.14),
+          0 3px 14px 2px hsla(0, 0%, 0%, 0.12),
+          0 5px 5px -3px hsla(0, 0%, 0%, 0.2);
+}
+
+@mixin d-grid($gap: 15px) {
+  display: grid;
+  grid-gap: $gap;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.gradient-one {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4096ee+0,2a2896+100 */
+  background: rgb(64, 150, 238); /* Old browsers */
+  background: -moz-linear-gradient(top, var(--secondary) 0%, var(--secondary-dark) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, var(--secondary) 0%, var(--secondary-dark) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, var(--secondary) 0%, var(--secondary-dark) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4096ee', endColorstr='#2a2896', GradientType=0); /* IE6-9 */
+
+}
+
+
