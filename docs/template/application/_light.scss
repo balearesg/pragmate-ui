@@ -1,52 +1,41 @@
 @import './mixins/button-styles';
 @mixin properties() {
-	/* primary colors */
-	--primary: #39A9DC;
-	--primary-variant: #2177b4;
-	--on-primary: #343434;
+	--text-color: #1a1a1a;
+	--font-family: 'Roboto', sans-serif;
 
-	/* secondary colors */
-	--secondary: #8c8c8c;
-	--secondary-variant: #484848;
-	--secondary-accent: #f7c700;
-	--on-secondary: #fff;
+	--primary: #bbbbbb;
+	--on-primary: #444444;
+	--primary-container: #dddddd;
+	--on-primary-container: #222222;
 
-	/* general colors */
-	--background: #fbfbfb;
-	--background-variant: #ffffff;
-	--text-color: #1d1d1d;
-	--secondary-text-color: #000;
-	--surface: #f7f7f7;
+	--secondary: #999999;
+	--on-secondary: #666666;
+	--secondary-container: #bbbbbb;
+	--on-secondary-container: #444444;
 
-	/* alerts colors*/
+	--tertiary: #777777;
+	--on-tertiary: #888888;
+	--tertiary-container: #999999;
+	--on-tertiary-container: #666666;
+
+	--error: #bbbbbb;
+	--on-error: #444444;
+	--error-container: #dddddd;
+	--on-error-container: #222222;
+
+	--background: #ffffff;
+	--on-background: #000000;
+
+	--surface: #dddddd;
+	--on-surface: #222222;
+	--outline: #777777;
+
+	--surface-variant: #bbbbbb;
+	--on-surface-variant: #444444;
+
 	--info-container: #2196f3;
-	--warning-container: #ffd54f;
-	--warning-color: #ffd54f;
-	--on-warning: #000000;
-	--on-error: #fff;
-	--error-container: #b00020;
-	--on-success: #fff;
-	--success-container: #2196f3;
-
-	// tertiary color
-	--tertiary: #87c544;
-
-	/* custom app colors */
-
-	--element-bg: #fff;
-	--border: #e7e7e7;
-	--border-variant: #e1e5ef;
-	--text: #ffffffde;
-
-	--preload-bg: var(--secondary);
-	--user-menu-color: #505050;
-	--user-menu-bg: var(--background);
-	--input-bg: #ffffff;
-	--border-color: var(--border);
-	--icon-color: var(--primary);
-	--box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-	@include button-style('danger', #b00020);
-
-	--app-code-bg: #1c1c1c;
-	--app-code-bg2: #2d2d2d;
+	--warning-container: #ffc107;
+	--success-container: #cf6679;
+	--background-color: #121212;
+	--success-container: #388e3c;
 }
