@@ -7,7 +7,6 @@
 	],
 	"widget": {
 		"route": "/components/link",
-		"layout": "main-layout",
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",
