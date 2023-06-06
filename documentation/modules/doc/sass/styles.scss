@@ -24,7 +24,7 @@ body {
       transition: color 0.3s ease-in-out;
     }
     .js-btn {
-      color: var(--text-on-primary);
+      color: var(--on-primary);
       &.selected {
         color: var(--accent);
         position: relative;

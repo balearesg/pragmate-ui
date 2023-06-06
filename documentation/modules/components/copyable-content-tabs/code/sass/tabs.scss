@@ -7,7 +7,7 @@
             .beyond-tab {
                 padding: 0;
                 button.beyond-icon-button svg.beyond-icon {
-                    fill:  var(--text-on-primary);
+                    fill:  var(--on-primary);
                 }
                 &.tab-active button.beyond-icon-button svg.beyond-icon {
                     fill: var(--primary);

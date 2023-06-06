@@ -3,7 +3,7 @@ select {
   display: block;
   font-size: 16px;
   font-weight: 400;
-  color: var(--text-on-primary);
+  color: var(--on-primary);
   line-height: 1.3;
   padding: 6px 23px 6px 23px;
   width: auto;
@@ -22,11 +22,11 @@ select {
   &:hover:not(&:disabled),
   &:focus:not(&:disabled) {
     border-color: var(--primary-light);
-    color: var(--text-on-primary);
+    color: var(--on-primary);
   }
   &:focus {
     border-color: var(--primary-dark);
-    color: var(--text-on-primary);
+    color: var(--on-primary);
     outline: none;
   }
   option {

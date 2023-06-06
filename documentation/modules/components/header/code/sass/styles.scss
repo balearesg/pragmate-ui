@@ -7,7 +7,7 @@
     .title {
         margin: 0;
         font-size: 20px;
-        color: var(--text-on-primary);
+        color: var(--on-primary);
         text-transform: lowercase;
         font-weight: 600;
         font-size: 1.5em;
@@ -21,7 +21,7 @@
         svg.beyond-icon {
             width: 25px;
             height: 25px;
-            fill: var(--text-on-primary);
+            fill: var(--on-primary);
         }
     }
     .title:first-letter,

@@ -11,7 +11,7 @@
 
 		h6 {
 			font-size: 16px;
-			color: var(--text-on-primary);
+			color: var(--on-primary);
 			line-height: 1;
 			letter-spacing: 0;
 			margin: 0;
@@ -21,7 +21,7 @@
 
 		.icon {
 			transition: all 0.3s ease-in-out;
-			fill: var(--text-on-primary);
+			fill: var(--on-primary);
 		}
 
 		&.open {

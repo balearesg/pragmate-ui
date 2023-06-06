@@ -19,7 +19,7 @@
             row-gap: 18px;
             span {
                 font-size: 12px;
-                color: var(--text-on-primary);
+                color: var(--on-primary);
                 letter-spacing: 0px;
                 line-height: 1.5;
                 display: inline-block;            
@@ -50,12 +50,12 @@
         label {
             font-size: 16px;
             letter-spacing: 0px;
-            color: var(--text-on-primary);
+            color: var(--on-primary);
             font-weight: 300;
             line-height: 1;
         }
         .status-text {
-            color: var(--text-on-primary);
+            color: var(--on-primary);
             line-height: 1;
             min-width: 64px;
         }

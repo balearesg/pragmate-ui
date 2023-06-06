@@ -16,14 +16,14 @@
         padding: 16px 24px 0;
 
         h4 {
-            color: var(--text-on-primary);
+            color: var(--on-primary);
             font-size: 18px;
         }
     }
 
     .component-result {
         padding: 24px 24px 0;
-        color: var(--text-on-primary);
+        color: var(--on-primary);
         row-gap: 8px;
 
         display: flex;
@@ -50,7 +50,7 @@
         }
 
         svg.beyond-icon {
-            fill: var(--text-on-primary);
+            fill: var(--on-primary);
         }
 
         button.beyond-icon-button:not(.tooltip):not(.copy-button) {

@@ -32,7 +32,7 @@
 
   &.primary {
     background: var(--primary);
-    color: var(--text-on-primary);
+    color: var(--on-primary);
 
     &.dark {
       background: var(--primary-dark);
@@ -43,7 +43,7 @@
     }
 
     svg {
-      fill: var(--text-on-primary);
+      fill: var(--on-primary);
     }
   }
 
@@ -53,8 +53,8 @@
 
   &.secondary {
     background: var(--secondary);
-    fill: var(--text-on-secondary);
-    color: var(--text-on-secondary);
+    fill: var(--on-secondary);
+    color: var(--on-secondary);
 
     &.dark {
       background: var(--secondary-dark);

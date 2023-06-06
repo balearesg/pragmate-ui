@@ -4,17 +4,17 @@
 	$button-variants: (
 		'primary': (
 			var(--primary),
-			var(--text-on-primary),
+			var(--on-primary),
 			var(--primary),
 		),
 		'secondary': (
 			var(--secondary),
-			var(--text-on-secondary),
+			var(--on-secondary),
 			var(--secondary),
 		),
 		'tertiary': (
 			var(--tertiary),
-			var(--text-on-tertiary),
+			var(--on-tertiary),
 			var(--tertiary),
 		),
 		'default': (

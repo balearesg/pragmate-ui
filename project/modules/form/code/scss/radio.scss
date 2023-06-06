@@ -5,7 +5,7 @@
   align-items: end;
   
   input[type="radio"] {
-    --text: var(--text-on-primary);
+    --text: var(--on-primary);
     --radio: var(--primary);
     --radio-checked: var(--primary);
     --radio-size: 20px;
@@ -94,7 +94,7 @@
 label {
   display: block;
   line-height: 1;
-  color: var(--text-on-primary);
+  color: var(--on-primary);
   font-size: 16px
 }
 

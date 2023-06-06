@@ -1,6 +1,6 @@
 p {
     font-weight: 300;
-    color: var(--text-on-primary);
+    color: var(--on-primary);
   }
   
   a, a:hover {
@@ -50,7 +50,7 @@ p {
     padding: 0.3rem 0.5rem;
     font-weight: 200;
     cursor: pointer;
-    color: var(--text-on-primary);
+    color: var(--on-primary);
   }
   
   .tab.active {

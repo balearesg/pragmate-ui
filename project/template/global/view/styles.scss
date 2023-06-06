@@ -2,7 +2,7 @@
 	padding-bottom: 2rem;
 	.component-result {
 		padding: 24px 24px 0;
-		color: var(--text-on-primary);
+		color: var(--on-primary);
 		row-gap: 8px;
 
 		display: flex;
@@ -17,11 +17,11 @@
 	.component-info {
 		padding: 24px 24px 0;
 		display: flex;
-		color: var(--text-on-primary);
+		color: var(--on-primary);
 		flex-direction: column;
 		row-gap: 8px;
 		svg.beyond-icon {
-			fill: var(--text-on-secondary);
+			fill: var(--on-secondary);
 		}
 	}
 	.component-implementation {

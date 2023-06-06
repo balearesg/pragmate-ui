@@ -4,7 +4,7 @@
 	--primary-dark: #e36152;
 	--primary-light: #ffa789;
 	--primary-accent: #e36152;
-	--text-on-primary: #fff;
+	--on-primary: #fff;
 
 	--accent-color: #ffa385;
 	//secondary colors
@@ -15,9 +15,9 @@
 	--secondary-light: #617096;
 	--secondary-accent: #8e99bb;
 
-	--text-on-secondary: #ffffff;
+	--on-secondary: #ffffff;
 	--text-color: rgba(255, 255, 255, 0.6);
-	--text-title-color: var(--text-on-primary);
+	--text-title-color: var(--on-primary);
 	--text-second-color: var(--gray-dark);
 	--background: #101625;
 	--text-hover-color: var(--primary);

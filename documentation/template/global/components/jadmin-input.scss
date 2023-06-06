@@ -11,9 +11,9 @@
         input {
             font-size: 16px;
             letter-spacing: 0px;
-            color: var(--text-on-primary);
+            color: var(--on-primary);
             &:focus {
-                color: var(--text-on-primary);
+                color: var(--on-primary);
             }
         }
         &:hover:not(&.disabled),
@@ -22,7 +22,7 @@
         }
         &:hover:not(&.disabled) input,
         &:hover:not(&.disabled) textarea {
-            color: var(--text-on-primary);
+            color: var(--on-primary);
         }
         button.beyond-icon-button svg.beyond-icon {
             fill: var(--icon-color);
@@ -54,7 +54,7 @@
     .label-jadmin {
         font-size: 16px;
         letter-spacing: 0px;
-        color: var(--text-on-primary);
+        color: var(--on-primary);
         font-weight: 300;
         line-height: 1;
         text-transform: lowercase;

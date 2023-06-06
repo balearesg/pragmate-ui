@@ -36,7 +36,7 @@
 
 	a {
 		padding: 1.1em;
-		color: var(--text-on-secondary);
+		color: var(--on-secondary);
 		cursor: pointer;
 		display: flex;
 		align-items: center;
@@ -45,11 +45,11 @@
 		justify-content: flex-end;
 
 		&:hover {
-			color: var(--text-on-primary);
+			color: var(--on-primary);
 		}
 
 		svg.beyond-icon {
-			fill: var(--text-on-primary);
+			fill: var(--on-primary);
 			transition: all 0.2s ease-in-out;
 
 			&.right {

@@ -15,24 +15,24 @@
 
 			input {
 				width: 100%;
-				color: var(--text-on-primary);
+				color: var(--on-primary);
 			}
 			label, input {
-				color: var(--text-on-primary);
+				color: var(--on-primary);
 			}
 			&:focus-within label,
 			input:not(:placeholder-shown) ~ label {
 					background-color: var(--surface);
-					color: var(--text-on-primary);
+					color: var(--on-primary);
 			}
 			&.has-icon, .eye.beyond-icon-button  {
 				svg.beyond-icon {
-					color: var(--text-on-primary);
-					fill: var(--text-on-primary);
+					color: var(--on-primary);
+					fill: var(--on-primary);
 				}
 				}
 				&:hover:not(&.disabled) input {
-				color: var(--text-on-primary);
+				color: var(--on-primary);
 				}
 		}
 	}

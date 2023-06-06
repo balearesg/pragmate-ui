@@ -23,21 +23,21 @@
   }
   &.btn-primary {
     background-color: var(--primary);
-    color: var(--text-on-primary);
+    color: var(--on-primary);
     &:hover:not(:disabled) {
       background-color: var(--primary-dark);
     }
   }
   &.btn-primary-dark {
     background-color: var(--primary-dark);
-    color: var(--text-on-primary);
+    color: var(--on-primary);
     &:hover:not(:disabled) {
       background-color: var(--primary);
     }
   }
   &.btn-secondary {
     background-color: var(--secondary);
-    color: var(--text-on-secondary);
+    color: var(--on-secondary);
     &:hover:not(:disabled) {
       background-color: var(--secondary-dark);
     }
@@ -52,7 +52,7 @@
   &.btn-cancel {
     // border: 1px solid var(--primary);
     background-color: var(--gray-variant);
-    color: var(--text-on-secondary);
+    color: var(--on-secondary);
     &:hover:not(:disabled) {
       background-color: var(--gray);
     }

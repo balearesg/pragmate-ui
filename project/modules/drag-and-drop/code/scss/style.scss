@@ -152,7 +152,7 @@
   opacity: 1;
   transition: opacity 0.3s ease;
   color: var(--text-second-color);
-  color: var(--text-on-primary);
+  color: var(--on-primary);
   width: 100%;
 }
 
@@ -178,7 +178,7 @@
   background-color: var(--success);
   // background-color: lighten($error, 15%);
   border: 1px solid var(--success);
-  color: var(--text-on-primary);
+  color: var(--on-primary);
   max-width: 90%;
   margin: 0 auto 15px;
 }
