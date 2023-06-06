@@ -4,32 +4,32 @@ pragmate-ui is a collection of reusable components here you can see what they ar
 
 ## To install
 
-`npm i @bgroup/ui`
+`npm i pragmate-ui`
 
 ## Components
 
-- Empty
-- Button
-- Textarea
-- Switch
-- Input
-- Checkbox
-- Radio
-- Toast
-- ScrollContainer
-- Modal
-- Alert Modal
-- Confirm Modal
-- Image
-- IconButton
-- Icon
-- Tabs
-- Input Controller
-- Swiper
-- Alert
-- Verification code
-- DragAndDrop
-- Dropdown
-- DropdownSidebar
-- ThemeSwitcher
-- Code
+-   Empty
+-   Button
+-   Textarea
+-   Switch
+-   Input
+-   Checkbox
+-   Radio
+-   Toast
+-   ScrollContainer
+-   Modal
+-   Alert Modal
+-   Confirm Modal
+-   Image
+-   IconButton
+-   Icon
+-   Tabs
+-   Input Controller
+-   Swiper
+-   Alert
+-   Verification code
+-   DragAndDrop
+-   Dropdown
+-   DropdownSidebar
+-   ThemeSwitcher
+-   Code
