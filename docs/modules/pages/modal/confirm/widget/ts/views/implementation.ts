@@ -1,6 +1,6 @@
 export const implementation = `
 import * as React from 'react';
-import { ConfirmModal } from 'simply-ui/modal';
+import { ConfirmModal } from 'pragmate-ui/modal';
 
 export function Results() {
 	const [show, setShow] = React.useState(false);

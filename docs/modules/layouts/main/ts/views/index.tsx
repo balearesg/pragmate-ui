@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Sidebar } from "../components/sidebar";
-import { Link } from "simply-ui/link";
+import { Link } from "pragmate-ui/link";
 import { Navbar } from "docs/navbar";
 
 declare global {
@@ -18,7 +18,7 @@ export function Layout() {
       <aside className="container__aside">
         <h3 className="aside__h3-title">
           <Link href="/">
-            Simpli <strong className="h3__strong-hover">Components:</strong>
+            Pragmate <strong className="h3__strong-hover">Components:</strong>
           </Link>
         </h3>
         <Sidebar />

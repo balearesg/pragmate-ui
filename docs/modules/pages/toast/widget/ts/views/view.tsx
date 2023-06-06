@@ -1,5 +1,5 @@
 import * as React from "react";
-import { toast } from "simply-ui/toast";
+import { toast } from "pragmate-ui/toast";
 import {
   implementation,
   implementation2,
@@ -9,8 +9,8 @@ import {
   implementationSuccess,
   implementationWaring,
 } from "./implementation";
-import { Button } from "simply-ui/form";
-import { Code } from "simply-ui/code";
+import { Button } from "pragmate-ui/form";
+import { Code } from "pragmate-ui/code";
 export /*bundle*/
 function View() {
   function toggleToast(
@@ -39,7 +39,7 @@ function View() {
         </p>
         <div className="component-info">
           <h3>Import:</h3>
-          <Code>{`import { Toasts, toast } from 'simply-ui/toast';`}</Code>
+          <Code>{`import { Toasts, toast } from 'pragmate-ui/toast';`}</Code>
           <Code>{implementation}</Code>
           <main className="component-container">
             <div className="column">

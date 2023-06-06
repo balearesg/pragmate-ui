@@ -1,4 +1,4 @@
-import { PageReactWidgetController } from@beyond-js/react-18-widgets/pageageageageageageage/page";
+import { PageReactWidgetController } from "@beyond-js/react-18-widgets/page";
 import { View } from "./views";
 
 export /*bundle*/

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { Spinner } from 'simply-ui/spinner';
+import { Spinner } from "pragmate-ui/spinner";
 export function SpinnerPrimary(): JSX.Element {
-	return <Spinner secondary className="spinner" />;
+  return <Spinner secondary className="spinner" />;
 }

@@ -3,7 +3,7 @@ import { menuItems } from "../bg-components";
 import { SidebarDropdown } from "./sidebar-dropdown";
 import { SidebarItem } from "./sidebar-item";
 import { routing } from "@beyond-js/kernel/routing";
-import { ScrollContainer } from "simply-ui/perfect-scrollbar";
+import { ScrollContainer } from "pragmate-ui/perfect-scrollbar";
 interface IComponent {
   name: string;
   path: string;

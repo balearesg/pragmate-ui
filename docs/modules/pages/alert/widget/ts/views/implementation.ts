@@ -1,5 +1,5 @@
 export const implementation = `
-import { useToastContext } from "simply-ui/toast";
+import { useToastContext } from "pragmate-ui/toast";
 export function ImplementationAlert() {
 <Alert  
     message="this is a success message"

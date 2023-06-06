@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Spinner } from "simply-ui/spinner";
-import { InlineCode, Code } from "simply-ui/code";
+import { Spinner } from "pragmate-ui/spinner";
+import { InlineCode, Code } from "pragmate-ui/code";
 
 export /*bundle*/
 function View() {
@@ -24,7 +24,7 @@ function View() {
       </p>
       <div>
         <h3>Import:</h3>
-        <Code>{`import { Spinner } from 'simply-ui/spinner';`}</Code>
+        <Code>{`import { Spinner } from 'pragmate-ui/spinner';`}</Code>
         <main className="component-container">
           <div className="column">
             <h3>Colors:</h3>

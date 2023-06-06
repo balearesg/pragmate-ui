@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Button } from "simply-ui/form";
+import { Button } from "pragmate-ui/form";
 import { Item } from "./item";
-import { Code } from "simply-ui/code";
+import { Code } from "pragmate-ui/code";
 import { getTpl } from "./get-tpl";
 export /*bundle*/
 function View() {

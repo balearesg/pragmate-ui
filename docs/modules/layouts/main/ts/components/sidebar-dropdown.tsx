@@ -1,6 +1,6 @@
 import * as React from "react";
 import { SidebarItem } from "./sidebar-item";
-import { Icon } from "simply-ui/icons";
+import { Icon } from "pragmate-ui/icons";
 
 export function SidebarDropdown({ component }) {
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);

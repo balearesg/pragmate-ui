@@ -1,5 +1,5 @@
 import React from "react";
-import { Code } from "simply-ui/code";
+import { Code } from "pragmate-ui/code";
 export function Page() {
   const [show, setShow] = React.useState(false);
   function handleModalColor() {
