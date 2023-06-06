@@ -14,9 +14,10 @@
         font-size: 1.5em;
         padding: 1em;
     }
-    .content-theme {
+    .container-theme {
         padding: 1em;
         display: flex;
+        flex-direction: row;
         align-items: center;
         column-gap: 16px;
         svg.beyond-icon {
@@ -48,6 +49,15 @@
 }
 
 .theme {
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    .container-theme {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        flex-direction: row;
+    }
 
     .beyond-element-switch label.switch input:checked+.slider:before {
             background-color: var(--primary);
