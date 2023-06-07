@@ -1,20 +1,19 @@
 .aside {
+	position: relative;
+	top: 0;
+}
+.container__aside {
+	position: sticky;
+	top: 0;
 	grid-area: aside;
 	height: 100vh;
 	background: var(--background);
-	position: sticky;
-	overflow: auto;
-	top: 0;
-}
-
-// MAIN NAV
-.container__aside {
 	ul {
 		padding: 0;
 		list-style: none;
 		li {
 			cursor: pointer;
-
+			font-size: 17px;
 			a {
 				display: flex;
 				width: 100%;

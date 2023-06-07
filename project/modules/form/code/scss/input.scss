@@ -3,7 +3,7 @@
 .beyond-element-textarea {
 	width: 100%;
 	position: relative;
-	border: 1.5px solid var(--border-variant);
+	border: 1.5px solid var(--primary);
 	border-radius: var(--border-secondary);
 	margin: 1rem 0;
 	transition: all 0.4s ease-in-out;
@@ -48,9 +48,10 @@
 	}
 	label {
 		position: absolute;
-		background-color: transparent;
+		background-color: var(--background);
 		padding: 8px 24px;
 		line-height: 24px;
+		border-radius: 70px;
 		top: 0;
 		left: 0;
 		bottom: 0;
@@ -67,7 +68,7 @@
 	input:not(:placeholder-shown) ~ label,
 	textarea:not(:placeholder-shown) ~ label {
 		padding: 0px 8px;
-		background-color: var(--element-bg);
+		background-color: var(--red);
 		top: -12px;
 		left: 16px;
 		bottom: auto;

@@ -44,3 +44,8 @@
     }
 
 }
+
+.container__navbar-scrolled {
+    transition: all 0.2s ease-in-out;
+    border-bottom: 1px solid var(--surface);
+}

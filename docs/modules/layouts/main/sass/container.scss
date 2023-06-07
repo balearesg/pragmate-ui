@@ -2,7 +2,7 @@
 	display: grid;
 	/* grid-template-columns: 25% 1fr; */
 	grid-template:
-		"navbar navbar" 100px
+		"navbar navbar" 70px
 		"aside main" 3fr
 		"aside main" 2fr/
 		25% 3fr;
@@ -12,6 +12,10 @@
 
 	.container__navbar {
 		grid-area: navbar;
+		position: sticky;
+		top: 0;
+		z-index: 20;
+		background-color: var(--background);
 	}
 
 	.view {
@@ -19,10 +23,7 @@
 	}
 
 	.container__aside {
-		grid-area: aside;
-		position: sticky;
-		top: 0;
-
+		
 		.aside__h3-title {
 			transition: all 0.5s;
 			cursor: pointer;
