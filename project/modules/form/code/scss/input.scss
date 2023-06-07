@@ -1,4 +1,4 @@
-@import "~template/sass/variables";
+@import '~template/sass/variables';
 .beyond-element-input,
 .beyond-element-textarea {
 	width: 100%;
@@ -29,10 +29,10 @@
 			color: var(--gray-dark);
 		}
 	}
-	input[type="password"]::-ms-reveal,
-	input[type="password"]::-ms-clear,
-	input[type="password"]::-webkit-contacts-auto-fill-button,
-	input[type="password"]::-webkit-credentials-auto-fill-button {
+	input[type='password']::-ms-reveal,
+	input[type='password']::-ms-clear,
+	input[type='password']::-webkit-contacts-auto-fill-button,
+	input[type='password']::-webkit-credentials-auto-fill-button {
 		display: none !important;
 	}
 	input[data-autocompleted] {
@@ -115,20 +115,20 @@
 		textarea:not(:placeholder-shown) ~ label {
 			padding: 0px 19px;
 		}
-		.beyond-icon {
+		.pragmate-icon {
 			z-index: 10;
 			//position: absolute;
 		}
 		@media screen and (max-width: 450px) {
-			.beyond-icon-button {
+			.pragmate-icon-button {
 				height: 30px;
 			}
 		}
 	}
-	.eye.beyond-icon-button {
+	.eye.pragmate-icon-button {
 		// position: absolute;
 		// right: 0.5rem;
-		svg.beyond-icon {
+		svg.pragmate-icon {
 			width: 20px;
 			height: 20px;
 			color: var(--gray);
