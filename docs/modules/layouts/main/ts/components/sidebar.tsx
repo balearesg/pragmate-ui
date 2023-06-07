@@ -11,7 +11,13 @@ interface IComponent {
 }
 
 export function Sidebar() {
-  const componentsElements = menuItems.map((component: IComponent) => {
+  const sortedMenuItems = menuItems.sort((a, b) => {
+    if (a.name < b.name) return -1;
+    if (a.name > b.name) return 1;
+    return 0;
+  });
+
+  const componentsElements = sortedMenuItems.map((component: IComponent) => {
     if (component?.children.length > 0) {
       return <SidebarDropdown key={component.path} component={component} />;
     }

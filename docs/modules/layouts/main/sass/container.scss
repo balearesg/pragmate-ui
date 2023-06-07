@@ -23,7 +23,11 @@
 	}
 
 	.container__aside {
-		
+		position: sticky;
+		top: 0;
+		grid-area: aside;
+		height: 100vh;
+		background: var(--background);
 		.aside__h3-title {
 			transition: all 0.5s;
 			cursor: pointer;

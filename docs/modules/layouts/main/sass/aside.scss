@@ -1,13 +1,13 @@
 .aside {
 	position: relative;
 	top: 0;
+
+	.sidebar-item__icon {
+		display: flex;
+		/* justify-content: space-between; */
+	}
 }
 .container__aside {
-	position: sticky;
-	top: 0;
-	grid-area: aside;
-	height: 100vh;
-	background: var(--background);
 	ul {
 		padding: 0;
 		list-style: none;
