@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BEYOND_ICONS, Icon, IconButton } from "pragmate-ui/icons";
+import { BEYOND_ICONS } from "pragmate-ui/icons";
 import { Item } from "./item";
 import { Search } from "./search";
 
@@ -31,7 +31,7 @@ function View(): JSX.Element {
         interés visual y claridad a su contenido. Son fáciles de usar y se
         pueden personalizar para satisfacer sus necesidades específicas.
       </p>
-      <div className="component-info__list">
+      <div className="view__list-icons">
         <h3>Icons list:</h3>
         <Search onSearch={onSearch} />
         <div className="container-icons">{output}</div>

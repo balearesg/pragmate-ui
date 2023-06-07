@@ -21,7 +21,8 @@
 		grid-area: aside;
 		position: sticky;
 		top: 0;
-		overflow: auto;
+		overflow: scroll;
+		direction: ltr;
 		
 
 		.aside__h3-title {
