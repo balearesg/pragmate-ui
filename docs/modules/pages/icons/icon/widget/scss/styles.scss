@@ -1,70 +1,70 @@
 .view {
-    .component-implementation .component-result {
-        align-items: flex-start;
-    }
+	.component-implementation .component-result {
+		align-items: flex-start;
+	}
 
-    .component-implementation {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
+	.component-implementation {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
 
-    .list-container {
-        display: flex;
-        flex-direction: column;
-        gap: 0px;
-        padding: 16px 24px 0;
+	.list-container {
+		display: flex;
+		flex-direction: column;
+		gap: 0px;
+		padding: 16px 24px 0;
 
-        h4 {
-            color: var(--on-primary);
-            font-size: 18px;
-        }
-    }
+		h4 {
+			color: var(--on-primary);
+			font-size: 18px;
+		}
+	}
 
-    .component-result {
-        padding: 24px 24px 0;
-        color: var(--on-primary);
-        row-gap: 8px;
+	.component-result {
+		padding: 24px 24px 0;
+		color: var(--on-primary);
+		row-gap: 8px;
 
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
 
-        h3 {
-            height: fit-content;
-        }
+		h3 {
+			height: fit-content;
+		}
 
-        .content-result {
-            display: flex;
-            column-gap: 16px;
-        }
+		.content-result {
+			display: flex;
+			column-gap: 16px;
+		}
 
-        .beyond-tabs-content {
-            margin: auto;
-            width: 100%;
+		.beyond-tabs-content {
+			margin: auto;
+			width: 100%;
 
-            svg.beyond-icon {
-                margin: auto;
-                display: block;
-            }
-        }
+			svg.pragmate-icon {
+				margin: auto;
+				display: block;
+			}
+		}
 
-        svg.beyond-icon {
-            fill: var(--on-primary);
-        }
+		svg.pragmate-icon {
+			fill: var(--on-primary);
+		}
 
-        button.beyond-icon-button:not(.tooltip):not(.copy-button) {
-            background: var(--box-bg);
-            border-bottom: 4px solid var(--primary);
-            border-radius: 10px;
+		button.pragmate-icon-button:not(.tooltip):not(.copy-button) {
+			background: var(--box-bg);
+			border-bottom: 4px solid var(--primary);
+			border-radius: 10px;
 
-            svg.beyond-icon {
-                fill: var(--gray-darker);
-            }
+			svg.pragmate-icon {
+				fill: var(--gray-darker);
+			}
 
-            &:active {
-                border-bottom: 0;
-            }
-        }
-    }
+			&:active {
+				border-bottom: 0;
+			}
+		}
+	}
 }

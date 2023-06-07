@@ -20,7 +20,7 @@
 		color: var(--on-primary);
 		flex-direction: column;
 		row-gap: 8px;
-		svg.beyond-icon {
+		svg.pragmate-icon {
 			fill: var(--on-secondary);
 		}
 	}
@@ -30,7 +30,8 @@
 		.component-info {
 			padding: 24px 0 24px 24px;
 		}
-		.component-info, .component-result {
+		.component-info,
+		.component-result {
 			flex: 1 1 50%;
 		}
 		.component-result {
@@ -55,7 +56,8 @@
 		}
 		@media screen and (max-width: 1024px) {
 			flex-direction: column;
-			.component-info, .component-result {
+			.component-info,
+			.component-result {
 				flex: 1 1 100%;
 				width: 100%;
 			}

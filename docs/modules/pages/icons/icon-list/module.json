@@ -1,27 +1,19 @@
 {
-  "name": "icon-list",
-  "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
-  "widget": {
-    "route": "/components/icon-list",
-    "is": "page",
-    "ts": {
-      "path": "/widget/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "sass": {
-      "path": "/widget/scss",
-      "files": [
-        "*"
-      ]
-    },
-    "element": {
-      "name": "icon-list"
-    }
-  }
+	"name": "icon-list",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/icon-list",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"sass": {
+			"path": "/widget/scss",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "icon-list"
+		}
+	}
 }
