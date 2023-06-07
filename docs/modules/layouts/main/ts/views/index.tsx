@@ -16,6 +16,7 @@ export function Layout() {
     <div className="layout__container">
       <Navbar />
       <aside className="container__aside">
+        <div className="block__content-none"></div>
         <h3 className="aside__h3-title">
           <Link href="/">
             Pragmate <strong className="h3__strong-hover">Components:</strong>
