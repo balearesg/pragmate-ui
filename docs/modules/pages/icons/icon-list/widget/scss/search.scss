@@ -1,0 +1,29 @@
+.container-search {
+    display: flex;
+    background-color: var(--box-bg);
+    padding: 0 16px;
+    max-width: 750px;
+    border-radius: 18px;
+    align-items: center;
+    column-gap: 8px;
+    margin: 0 auto;
+    height: 40px;
+    border: 2px solid var(--primary);
+    transition: all .5s;
+
+    &:hover {
+        border: 2px solid var(--tertiary);
+    }
+
+    input {
+        width: 100%;
+        border: none;
+        outline: none;
+        height: 35px;
+        color: var(--text-color);
+        padding: 1px 0;
+        margin: 1px 0;
+        transition: all .5s;
+        background-color: var(--background);
+    }
+}

@@ -1,11 +1,11 @@
 .layout__container {
 	display: grid;
 	/* grid-template-columns: 25% 1fr; */
-	grid-template: 
-	"navbar navbar" 100px
-	"aside main" 3fr
-	"aside main"2fr/
-	25%		3fr;
+	grid-template:
+		"navbar navbar" 100px
+		"aside main" 3fr
+		"aside main" 2fr/
+		25% 3fr;
 	max-width: 1200px;
 	margin: 0 auto;
 	gap: 30px;
@@ -17,13 +17,11 @@
 	.view {
 		grid-area: main;
 	}
+
 	.container__aside {
 		grid-area: aside;
 		position: sticky;
 		top: 0;
-		overflow: scroll;
-		direction: ltr;
-		
 
 		.aside__h3-title {
 			transition: all 0.5s;
@@ -32,7 +30,8 @@
 			&:hover {
 				color: var(--primary);
 			}
-			&:hover .h3__strong-hover{
+
+			&:hover .h3__strong-hover {
 				color: var(--tertiary);
 			}
 		}

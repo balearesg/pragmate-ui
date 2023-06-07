@@ -8,7 +8,7 @@
 			"path": "/widget/ts",
 			"files": ["*"]
 		},
-		"scss": {
+		"sass": {
 			"path": "/widget/scss",
 			"files": ["*"]
 		},

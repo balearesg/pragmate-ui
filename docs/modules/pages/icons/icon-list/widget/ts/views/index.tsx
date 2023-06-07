@@ -32,7 +32,7 @@ function View(): JSX.Element {
 			<div className="view__list-icons">
 				<h3>Icons list:</h3>
 				<Search onSearch={onSearch} />
-				<div className="icons-list__container">{output}</div>
+				<div className="view__list-output">{output}</div>
 			</div>
 		</div>
 	);
