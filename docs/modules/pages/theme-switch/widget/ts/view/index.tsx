@@ -1,5 +1,4 @@
 import * as React from "react";
-import { CopyableImplementation } from "pragmate-ui/copyable-implementation";
 import { implementation } from "./implementation";
 import { Results } from "./result";
 import { Code } from "pragmate-ui/code";
@@ -20,7 +19,7 @@ function View() {
       </p>
       <div className="component-info">
         <h3>Import:</h3>
-        <Code>{`import { ThemeSwicth } from "pragmate-ui/theme-switch";`}</Code>
+        <Code>{`import { ThemeSwicth } from "pragmate-ui/theme-switcher"`}</Code>
       </div>
       <div className="component-implementation">
         <div className="component-info">

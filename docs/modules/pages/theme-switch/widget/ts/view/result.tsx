@@ -1,10 +1,10 @@
 import React from "react";
-import { ThemeSwitch } from "pragmate-ui/theme-switch";
+import { ThemeSwitcher } from "pragmate-ui/theme-switcher";
 
 export function Results() {
   return (
     <nav className="nav__theme-switch">
-      <ThemeSwitch />
+      <ThemeSwitcher />
     </nav>
   );
 }
