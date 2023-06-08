@@ -1,12 +1,4 @@
-.aside {
-	position: relative;
-	top: 0;
 
-	.sidebar-item__icon {
-		display: flex;
-		/* justify-content: space-between; */
-	}
-}
 .container__aside {
 	.block__content-none {
 		height: 60px;
@@ -39,6 +31,15 @@
 					width: 98%;
 				}
 			}
+		}
+	}
+	
+	.aside-scrollbar {
+		position: relative;
+		top: 0;
+	
+		.sidebar-item__icon {
+			display: flex;
 		}
 	}
 }

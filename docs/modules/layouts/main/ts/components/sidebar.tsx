@@ -31,7 +31,7 @@ export function Sidebar() {
 
   return (
     <ScrollContainer
-      className="aside"
+      className="aside-scrollbar"
       data-perfect-scrollbar=""
       data-suppress-scroll-x="true"
     >

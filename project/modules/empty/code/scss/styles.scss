@@ -1,5 +1,5 @@
 @import '~template/sass/variables';
-.beyond-element-empty {
+.pragmate-element-empty {
   text-align: center;
   color: var(--gray);
   padding: 30px;
@@ -8,13 +8,6 @@
   justify-items: center;
   align-items: center;
   height: 100%;
-
-  .content {
-    justify-items: center;
-    display: flex;
-    margin: auto;
-    flex-flow: column;
-  }
 
   h3 {
     margin: 15px 0 0;

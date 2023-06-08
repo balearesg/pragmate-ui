@@ -1,0 +1,18 @@
+.pragmate-icon-button {
+
+    &.primary {
+        background: var(--primary);
+        color: var(--on-primary);
+    
+        svg {
+            fill: var(--on-primary);
+        }
+    }
+    
+    &.secondary {
+        background: var(--secondary);
+        fill: var(--on-secondary);
+        color: var(--on-secondary);
+    
+    }
+}

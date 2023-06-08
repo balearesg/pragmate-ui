@@ -1,6 +1,5 @@
 .layout__container {
 	display: grid;
-	/* grid-template-columns: 25% 1fr; */
 	grid-template:
 		"navbar navbar" 70px
 		"aside main" 3fr
