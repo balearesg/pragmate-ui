@@ -22,17 +22,16 @@
 	},
 	"deployment": {
 		"distributions": [
-			{
-				"name": "web",
-				"environment": "development",
-				"ssr": "",
-				"platform": "web",
-				"ports": {
-					"bundles": "1001"
-				}
-			}
+	{
+		"name": "web",
+		"environment": "development",
+		"platform": "web",
+		"ports": {
+			"bundles": "1001"
+		}
+	}
 		]
-	},
+	},	
 	"static": {
 		"includes": [
 			"assets"
