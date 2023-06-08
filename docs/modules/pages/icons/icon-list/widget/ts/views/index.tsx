@@ -1,11 +1,11 @@
 import * as React from "react";
-import { BEYOND_ICONS } from "pragmate-ui/icons";
+import { PRAGMATE_ICONS } from "pragmate-ui/icons";
 import { Item } from "./item";
 import { Search } from "./search";
 
 export /*bundle*/
 function View(): JSX.Element {
-  const keyIcons: string[] = Object.keys(BEYOND_ICONS);
+  const keyIcons: string[] = Object.keys(PRAGMATE_ICONS);
   const sortedKeyIcons = keyIcons.sort((a, b) => {
     if (a < b) return -1;
     if (a > b) return 1;

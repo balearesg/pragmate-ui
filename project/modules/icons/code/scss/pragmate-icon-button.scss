@@ -1,0 +1,33 @@
+@import '~template/sass/variables';
+.pragmate-icon-button {
+	height: 40px;
+	width: 40px;
+	background: transparent;
+	border: none;
+	display: inline-grid;
+	position: relative;
+	outline: none !important;
+	align-items: center;
+	justify-content: center;
+	margin-left: 25px;
+	&:not(&:disabled) {
+		cursor: pointer;
+	}
+	&:disabled {
+		opacity: 0.6;
+	}
+	
+	&.circle {
+		border-radius: 50%;
+
+		> .beyond-ripple {
+			border-radius: 50%;
+			align-self: center;
+		}
+	}
+
+	&.gray {
+		background: var(--gray-light);
+	}
+
+}

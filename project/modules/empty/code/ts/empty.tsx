@@ -10,7 +10,7 @@ type props = {
 export /*bundle*/
 function Empty(props: props): JSX.Element {
   const text: string = props.text ? props.text : "No hay registros";
-  const cls = `${props.className ?? ""} beyond-element-empty`;
+  const cls = `${props.className ?? ""} pragmate-element-empty`;
   return (
     <div className={cls}>
       <div className="content">
