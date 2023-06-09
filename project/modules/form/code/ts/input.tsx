@@ -74,7 +74,7 @@ function Input(props: props): JSX.Element {
         : state.lengthMessage + ` (max ${props.max})`;
     }
 
-    return <span className="beyond-element-input-error">{errorMessage}</span>;
+    return <span className="pragmate-element-input-error">{errorMessage}</span>;
   };
   const changeType = (
     event: SyntheticEvent<HTMLButtonElement, Event>
@@ -88,8 +88,8 @@ function Input(props: props): JSX.Element {
   const error: JSX.IntrinsicElements["span"] = getError(props.hasError);
   let properties: props = { ...props };
   let cls: string = props.className
-    ? `${props.className} beyond-element-input`
-    : "beyond-element-input";
+    ? `${props.className} pragmate-element-input`
+    : "pragmate-element-input";
   cls +=
     props.icon || props.loading || props.password || props.required
       ? " has-icon"
@@ -150,7 +150,7 @@ function Input(props: props): JSX.Element {
             />
           ))}
         {props.required && (
-          <span className="beyond-input__required-label">(*)</span>
+          <span className="pragmate-input__required-label">(*)</span>
         )}
       </>
     </div>

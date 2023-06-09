@@ -37,7 +37,7 @@ export /*bundle*/ const Switch: ForwardRefExoticComponent<
     const handleClick = (event) => {
       onClick && onClick(event);
     };
-    let cls: string = `beyond-element-switch ${className ? className : ""}`;
+    let cls: string = `pragmate-element-switch ${className ? className : ""}`;
     cls += disabled ? " disabled" : "";
     const properties = Object.assign({}, props);
 

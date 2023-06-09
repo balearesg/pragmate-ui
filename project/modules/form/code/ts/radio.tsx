@@ -22,7 +22,7 @@ export /*bundle*/ function Radio(props: props): JSX.Element {
   const properties: props = { ...props };
   delete properties.onChange;
 
-  const cls: string = `beyond-element-radio ${
+  const cls: string = `pragmate-element-radio ${
     properties.className ? properties.className : ""
   }`;
 

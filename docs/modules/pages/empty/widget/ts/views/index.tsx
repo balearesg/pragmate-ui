@@ -7,7 +7,7 @@ export /*bundle*/
 function View() {
   return (
     <div className="view">
-      <h1 className="view__h1">Emty</h1>
+      <h1 className="view__h1">Empty</h1>
       <p className="view__p">
         El componente <span className="view__span">Emty</span> representar un
         mensaje o elemento visual que indica a los usuarios que no se

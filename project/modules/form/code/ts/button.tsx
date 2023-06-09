@@ -1,5 +1,4 @@
 import React, { MouseEvent, ReactNode, ButtonHTMLAttributes } from "react";
-import { routing } from "@beyond-js/kernel/routing";
 import { Icon } from "pragmate-ui/icons";
 import { Spinner } from "pragmate-ui/spinner";
 import { RippleEffect } from "pragmate-ui/ripple";
@@ -55,7 +54,7 @@ function Button(props: props): JSX.Element {
 
   let cls: string = `${
     className ? `${className} ` : ""
-  }beyond-button btn-${variant}`;
+  }pragmate-button btn-${variant}`;
   cls += bordered ? " outline" : "";
   cls += icon ? " has-icon" : "";
 
