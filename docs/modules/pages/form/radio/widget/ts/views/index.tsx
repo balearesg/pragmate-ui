@@ -1,5 +1,4 @@
 import * as React from "react";
-import { CopyableImplementation } from "pragmate-ui/copyable-implementation";
 import { Code } from "pragmate-ui/code";
 
 import { Results } from "./results";

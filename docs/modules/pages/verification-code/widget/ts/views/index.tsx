@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Result } from "./results";
 import { implementation } from "./implementation";
-import { useBinder } from "pragmate-ui/hooks";
+import { useBinder } from "@beyond-js/react-18-widgets/hooks";
 import { Code } from "pragmate-ui/code";
 
 export /*bundle*/

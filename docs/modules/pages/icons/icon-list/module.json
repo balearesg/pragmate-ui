@@ -1,19 +1,27 @@
 {
 	"name": "icon-list",
-	"platforms": ["web", "ios", "android"],
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	],
 	"widget": {
 		"route": "/components/icon-list",
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"sass": {
 			"path": "/widget/scss",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"element": {
-			"name": "icon-list"
+			"name": "icon-list-page"
 		}
 	}
 }
