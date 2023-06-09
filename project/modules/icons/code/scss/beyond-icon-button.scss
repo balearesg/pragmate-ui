@@ -9,7 +9,6 @@
 	outline: none;
 	align-items: center;
 	justify-content: center;
-	margin-left: 25px;
 
 	&:not(&:disabled) {
 		cursor: pointer;
@@ -66,7 +65,7 @@
 		}
 	}
 
-&.small-icon {
+	&.small-icon {
 		height: 24px;
 		width: 24px;
 

@@ -9,14 +9,14 @@
 	outline: none !important;
 	align-items: center;
 	justify-content: center;
-	margin-left: 25px;
+
 	&:not(&:disabled) {
 		cursor: pointer;
 	}
 	&:disabled {
 		opacity: 0.6;
 	}
-	
+
 	&.circle {
 		border-radius: 50%;
 
@@ -29,5 +29,4 @@
 	&.gray {
 		background: var(--gray-light);
 	}
-
 }
