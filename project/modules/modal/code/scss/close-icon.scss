@@ -1,31 +1,30 @@
-.beyond-element-modal {
+.pragmate-modal {
+	.close-icon {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		border: none;
+		background: none;
+		display: inline-block;
+		fill: var(--gray);
+		color: var(--gray);
+		transition: all 100ms ease-in;
+		outline: none;
+		cursor: pointer;
+		width: 30px;
+		height: 30px;
 
-  .close-icon {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    border: none;
-    background: none;
-    display: inline-block;
-    fill: var(--gray);
-    color: var(--gray);
-    transition: all 100ms ease-in;
-    outline: none;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
+		&:hover,
+		&:focus {
+			fill: var(--gray-dark);
+			color: var(--gray);
+			transition: all 100ms ease-in;
+		}
 
-    &:hover, &:focus {
-      fill: var(--gray-dark);
-      color: var(--gray);
-      transition: all 100ms ease-in;
-    }
-
-    svg {
-      height: 12px;
-      width: 13px;
-      fill: var(--text);
-    }
-  }
-
+		svg {
+			height: 12px;
+			width: 13px;
+			fill: var(--text);
+		}
+	}
 }

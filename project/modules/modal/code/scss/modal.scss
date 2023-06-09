@@ -1,0 +1,49 @@
+body.body-beyond-modal-opened {
+	height: 100vh;
+	overflow-y: hidden;
+	padding-right: 15px; /* Avoid width reflow */
+}
+
+.pragmate-modal {
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: 1;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: var(--text);
+	&.show-modal {
+		display: block;
+		z-index: 1000;
+		height: 100vh;
+		width: 100vw;
+		//   padding: 20px;
+	}
+
+	.modal-wrapper {
+		width: 100%;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 80vh;
+		height: 100%;
+		@media screen and (max-height: 500px) {
+			height: auto;
+		}
+		//   @include zoomIn(1, 300ms);
+	}
+
+	&.modal-hidden {
+		.modal-wrapper {
+			//  @include zoomOut(1, 200ms);
+		}
+	}
+
+	.modal-content {
+		position: relative;
+		color: var(--text);
+		background: var(--background);
+		padding: 1.5rem;
+	}
+}
