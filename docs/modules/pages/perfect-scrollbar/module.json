@@ -21,7 +21,7 @@
 			]
 		},
 		"element": {
-			"name": "beyond-scroll-container"
+			"name": "scroll-container-page"
 		}
 	}
 }
