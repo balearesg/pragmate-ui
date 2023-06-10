@@ -20,7 +20,6 @@ export function Page() {
             <h3 className="section__title">Installation</h3>
             <div className="code__block code__block--notabs">
               <pre className="code code--block">
-                {/* <CopyableImplementation>{`npm i @bgroup/ui `}</CopyableImplementation> */}
                 <Code>{`npm i @bgroup/ui `}</Code>
               </pre>
             </div>
