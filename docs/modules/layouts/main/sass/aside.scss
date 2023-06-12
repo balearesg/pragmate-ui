@@ -1,11 +1,14 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 .container__aside {
+	overflow: auto;
 	ul {
+		transition: all 0.2s ease-in-out;
 		padding: 0;
 		list-style: none;
+		
 		li {
 			cursor: pointer;
-			font-size: 17px;
+			font-family: 'Poppins', sans-serif;
 			a {
 				display: flex;
 				width: 100%;
@@ -33,8 +36,8 @@
 	
 	.aside-scrollbar {
 		position: relative;
+		transition: all 0.2s ease-in-out;
 		top: 0;
-	
 		.sidebar-item__icon {
 			display: flex;
 			justify-content: space-between;

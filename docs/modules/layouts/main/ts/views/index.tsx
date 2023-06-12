@@ -18,7 +18,7 @@ export function Layout() {
       <aside className="container__aside">
         <h3 className="aside__h3-title">
           <Link href="/">
-            Pragmate <strong className="h3__strong-hover">Components:</strong>
+            Components<strong className="h3__strong-hover"> :</strong>
           </Link>
         </h3>
         <Sidebar />

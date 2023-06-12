@@ -29,7 +29,7 @@ function View() {
           <h3>Import:</h3>
           <Code>{`import { Alert } from 'pragmate-ui/alert';`}</Code>
           <Code>{implementation}</Code>
-          <main className="component-container">
+          <main className="component-container component-container__alert">
             <div className="column">
               <h3>Result:</h3>
             </div>
