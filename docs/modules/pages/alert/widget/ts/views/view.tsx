@@ -8,7 +8,6 @@ import {
   implementationInfo,
   implementationWaring,
 } from "./implementation";
-import { ImplementationResult } from "pragmate-ui/implementation-result";
 import { Alert } from "pragmate-ui/alert";
 import { cases } from "./cases";
 import { Code } from "pragmate-ui/code";

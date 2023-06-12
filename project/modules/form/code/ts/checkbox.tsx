@@ -24,7 +24,7 @@ export /*bundle*/ const Checkbox: ForwardRefExoticComponent<
       setState({ checked: !checked });
       onChange && onChange(event);
     };
-    let cls: string = `beyond-checkbox ${className ? className : ""}`;
+    let cls: string = `pragmate-checkbox ${className ? className : ""}`;
     cls += disabled ? " disabled" : "";
     const properties = Object.assign({}, props);
 

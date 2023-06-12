@@ -1,0 +1,65 @@
+@import '~template/sass/variables';
+.pragmate-element-input,
+.pragmate-element-textarea {
+	width: 100%;
+	position: relative;
+	border: 1.5px solid var(--primary);
+	border-radius: var(--border-secondary);
+	margin: 1rem 0;
+	transition: all 0.4s ease-in-out;
+	padding: 0 8px;
+	
+	.pragmate-element-input-error {
+		position: absolute;
+		bottom: -1.2rem;
+		left: 0;
+		color: var(--error);
+		font-size: 12px;
+	}
+
+	&.has-icon {
+		display: flex;
+		// flex-direction: row-reverse;
+		align-items: center;
+
+		label {
+			padding: 8px 35px;
+		}
+		input,
+		textarea {
+			padding: 0.5rem;
+		}
+		&:focus-within label,
+		input:not(:placeholder-shown) ~ label,
+		textarea:not(:placeholder-shown) ~ label {
+			padding: 0px 19px;
+		}
+		.pragmate-icon {
+			z-index: 10;
+			//position: absolute;
+		}
+		@media screen and (max-width: 450px) {
+			.pragmate-icon-button {
+				height: 30px;
+			}
+		}
+	}
+	.eye.pragmate-icon-button {
+		// position: absolute;
+		// right: 0.5rem;
+		svg.pragmate-icon {
+			width: 20px;
+			height: 20px;
+			color: var(--gray);
+			fill: var(--gray);
+		}
+	}
+	&.error {
+		border-color: var(--error);
+	}
+	
+	.pragmate-element-spinner {
+		width: 40px;
+		height: 40px;
+	}
+}
