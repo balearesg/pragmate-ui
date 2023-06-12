@@ -1,13 +1,11 @@
-.beyond-tabs-horizontal.beyond-tabs-container.beyond-tabs .beyond-tabs-content {
+/* .beyond-tabs-horizontal.beyond-tabs-container.beyond-tabs .beyond-tabs-content {
     margin: 0 auto;
     width: 100%;
-}
+} */
 
 .component-container {
     margin-top: 3em;
     display: grid;
-    /* grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto 1fr; */
     grid-template-columns: 400px minmax(5rem, 1fr);
     grid-template-rows: 2rem;
     grid-gap: 30px;

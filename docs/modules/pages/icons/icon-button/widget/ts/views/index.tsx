@@ -38,8 +38,12 @@ function View(): JSX.Element {
           <main className="component-container">
             <h3>Result:</h3>
             <div className="content-result">
-              <IconButton icon="delete" />
-              <IconButton icon={users.icon} viewBox={users.viewBox} />
+              <IconButton className="lg" icon="delete" />
+              <IconButton
+                className="lg"
+                icon={users.icon}
+                viewBox={users.viewBox}
+              />
             </div>
           </main>
         </div>

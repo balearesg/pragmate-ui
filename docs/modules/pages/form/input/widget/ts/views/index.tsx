@@ -34,7 +34,7 @@ function View() {
         <h3>Import:</h3>
         <Code>{`import { Input } from 'pragmate-ui/form';`}</Code>
         <Code>{implementation}</Code>
-        <main className="component-container">
+        <main className="component-container component-container__input">
           <div className="column">
             <h3>Result:</h3>
           </div>

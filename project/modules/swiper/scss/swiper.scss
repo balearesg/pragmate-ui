@@ -645,3 +645,8 @@ button.swiper-pagination-bullet {
           backface-visibility: hidden;
   overflow: hidden;
 }
+
+.beyond-element-image.beyond-element-image-error,
+.beyond-element-image.beyond-element-image-preload {
+  background-color: var(--tertiary);
+}

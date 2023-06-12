@@ -26,24 +26,25 @@ function View(): JSX.Element {
       <div className="component-info">
         <h3>Import:</h3>
         <Code>{`import { Icon } from 'pragmate-ui/icons';`}</Code>
-        <div className="component-implementation">
+        <div className="component-implementation component-implementation-icon">
           <h3>Implementation:</h3>
           <Code className="component-implementation__code">{`<Icon icon="delete" />`}</Code>
           <Code className="component-implementation__code">{`
-           const users = {
-            viewBox: "",
-            icon: '<path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0
-             1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"></path>',
-            };
+  const users = {
+    viewBox: "",
+    icon: '<path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0
+    1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"></path>',
+};
             <Icon icon={users.icon} viewBox={users.viewBox} />`}</Code>
           <Code className="component-implementation__code">{`
-           const users = {
-            viewBox: "",
-            icon: '<path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1
-            .34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"></path>',
-            };
+  const users = {
+    viewBox: "",
+    icon: '<path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 
+    0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1
+    .34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"></path>',
+  };
             `}</Code>
-          <main className="component-container">
+          <main className="component-container component-container__icon">
             <h3>Result:</h3>
             <div className="content-result">
               <Icon icon="delete" />
