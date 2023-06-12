@@ -15,7 +15,7 @@ export function SidebarDropdown({ component }) {
     event.preventDefault();
     setIsDropdownOpen(!isDropdownOpen);
   }
-  const icon = isDropdownOpen ? "arrowDropUp" : "arrowDropDown";
+  const icon = isDropdownOpen ? "expandMore" : "chevronRight";
   return (
     <li className="sidebar-item">
       <a className="sidebar-item__icon" onClick={toggleDropdown}>
