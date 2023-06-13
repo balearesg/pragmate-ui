@@ -24,8 +24,9 @@
 		transition: all 0.2s ease-in-out;
 		border-top: 0;
 		li {
-			border-bottom: 0;
 			a {
+				border-left: 1px solid;
+				transform: translateX(8px);
 				padding-left: 2rem;
 				&::before {
 					width: 98%;
