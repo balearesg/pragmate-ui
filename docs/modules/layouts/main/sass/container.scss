@@ -30,8 +30,6 @@
 		background: var(--background);
 		.aside__h3-title {
 			transition: all 0.5s;
-			cursor: pointer;
-
 			&:hover {
 				color: var(--primary);
 			}
