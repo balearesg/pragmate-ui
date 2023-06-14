@@ -17,8 +17,6 @@
     }
 
     .nav {
-        font-family: 'Titillium Web';
-        text-transform: uppercase;
         text-align: center;
         font-weight: 600;
     }
@@ -41,6 +39,15 @@
         padding: .5em .8em;
         position: relative;
         text-decoration: none;
+
+        &:hover {
+            color: var(--primary);
+        }
+    }
+
+    .tag-a {
+        color: var(--text-color);
+        transition: all .35s ease;
     }
 
 }

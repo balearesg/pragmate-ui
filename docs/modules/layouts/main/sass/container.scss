@@ -3,8 +3,9 @@
 	grid-template:
 		"navbar navbar" 70px
 		"aside main" 3fr
-		"aside main" 2fr/
-		25% 3fr;
+		"aside main" 2fr
+		"footer footer" 70px/
+		25% 	3fr;
 	max-width: 1200px;
 	margin: 0 auto;
 	gap: 30px;
@@ -29,5 +30,16 @@
 		grid-area: aside;
 		height: 100vh;
 		background: var(--background);
+	}
+
+	.container__footer {
+		display: grid;
+		place-items: center;
+		text-align: center;
+		z-index: 70;
+		border: none;
+		border-top: 1px solid var(--surface);
+		background-color: var(--background);
+		grid-area: footer;
 	}
 }

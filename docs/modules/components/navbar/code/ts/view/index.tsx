@@ -33,7 +33,13 @@ export /* bundle */ function Navbar() {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/">docs</Link>
+          <Link href="/">Docs</Link>
+        </li>
+        <li>
+          <a className="tag-a" href="https://github.com/balearesg/pragmate-ui">
+            Github
+          </a>
+          {/* <Link href="https://github.com/balearesg/pragmate-ui">Github</Link> */}
         </li>
         <li>
           <ThemeSwitcher />
