@@ -47,7 +47,7 @@ const IconButton: ForwardRefExoticComponent<PropsWithChildren<props> & RefAttrib
 		type = !!type ? type : 'button';
 		className = className ? `${className} pragmate-icon-button` : 'pragmate-icon-button';
 		className += variant ? ` btn-${variant}` : '';
-		console.log(0.1, icon, variant);
+
 		const iconAttributes: iconAttributes = { icon: icon };
 		if (viewBox) iconAttributes.viewBox = viewBox;
 
