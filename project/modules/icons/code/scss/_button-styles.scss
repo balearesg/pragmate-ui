@@ -6,9 +6,10 @@
 
 		&.btn-#{$type} {
 			background-color: $bg-color;
-			fill: $text-color;
-			stroke: $text-color;
 
+			svg {
+				fill: $text-color;
+			}
 			&:hover:not(:disabled) {
 				background-color: $bg-hover;
 			}
