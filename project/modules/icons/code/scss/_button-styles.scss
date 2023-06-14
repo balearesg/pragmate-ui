@@ -1,0 +1,22 @@
+@mixin button-styles($button-variants) {
+	@each $type, $colors in $button-variants {
+		$bg-color: nth($colors, 1);
+		$text-color: nth($colors, 2);
+		$bg-hover: nth($colors, 3);
+
+		&.btn-#{$type} {
+			background-color: $bg-color;
+			fill: $text-color;
+			stroke: $text-color;
+
+			&:hover:not(:disabled) {
+				background-color: $bg-hover;
+			}
+
+			&:disabled {
+				opacity: 0.5;
+				cursor: not-allowed;
+			}
+		}
+	}
+}

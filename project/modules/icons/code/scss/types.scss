@@ -1,18 +1,74 @@
-.pragmate-icon-button {
+@import './button-styles';
+$button-variants: (
+	'primary': (
+		var(--primary),
+		var(--on-primary),
+		var(--primary),
+	),
+	'secondary': (
+		var(--secondary),
+		var(--on-secondary),
+		var(--secondary),
+	),
+	'tertiary': (
+		var(--tertiary),
+		var(--on-tertiary),
+		var(--tertiary),
+	),
+	'default': (
+		var(--default),
+		var(--text-on-default),
+		var(--default),
+	),
+	'success': (
+		var(--success-container),
+		var(--on-success),
+		var(--success-container),
+	),
+	'warning': (
+		var(--warning-container),
+		var(--on-warning),
+		var(--warning-container),
+	),
+	'error': (
+		var(--error-container),
+		var(--on-error),
+		var(--error-container),
+	),
+	'info': (
+		var(--info-container),
+		var(--on-info),
+		var(--info-container),
+	),
+);
 
-    &.primary {
-        background: var(--primary);
-        color: var(--on-primary);
-    
-        svg {
-                fill: var(--on-background);
-        }
-    }
-    
-    &.secondary {
-        background: var(--secondary);
-        fill: var(--on-secondary);
-        color: var(--on-secondary);
-    
-    }
+.pragmate-icon-button {
+	&.primary {
+		background: var(--primary);
+		color: var(--on-primary);
+
+		svg {
+			fill: var(--on-background);
+		}
+	}
+
+	&.secondary {
+		background: var(--secondary);
+		fill: var(--on-secondary);
+		color: var(--on-secondary);
+	}
+}
+
+.pragmate-icon-button {
+	@include button-styles($button-variants);
+
+	&.btn-danger {
+		background: var(--btn-danger-background);
+		color: #fff;
+		border: 1px solid var(--btn-danger-border-color);
+		transition: 300ms ease-in all;
+		&:hover {
+			background: var(--btn-danger-background-hover);
+		}
+	}
 }
