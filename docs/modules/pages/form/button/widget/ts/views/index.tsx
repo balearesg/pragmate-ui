@@ -29,10 +29,12 @@ function View() {
         formularios, confirmar selecciones o desencadenar eventos en la
         interfaz.
       </p>
-      <p>Variantes</p>
-      Las variantes del botón se pueden definir, por medio del atributo{" "}
-      <code>variant</code>
+      <div className="component-info">
+        <h3>Import: </h3>
+        <Code>{`import { Button } from 'pragmate-ui/button';`}</Code>
+      </div>
       <h3>Variantes</h3>
+      Las variantes del botón se pueden definir, por medio del atributo{" "}
       <div className="inline__list__container">
         {buttons.map((item) => (
           <Button key={item} variant={item}>
@@ -40,6 +42,7 @@ function View() {
           </Button>
         ))}
       </div>
+      <h3>Implementation: </h3>
       <div>
         <Code>{getTpl({ variant: "primary" })}</Code>
       </div>

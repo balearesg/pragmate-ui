@@ -24,14 +24,23 @@
 
 	.container__aside {
 		position: sticky;
+		overflow: scroll;
 		top: 80px;
 		grid-area: aside;
 		height: 100vh;
 		background: var(--background);
+
+		&::-webkit-scrollbar {
+			width: 7px;
+			background-color: var(--surface);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--tertiary);
+			border-radius: 7px;
+		}
 		.aside__h3-title {
 			transition: all 0.5s;
-			cursor: pointer;
-
 			&:hover {
 				color: var(--primary);
 			}

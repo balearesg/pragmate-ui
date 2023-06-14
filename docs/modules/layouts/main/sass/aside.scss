@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 .container__aside {
-	overflow: auto;
 	ul {
 		transition: all 0.2s ease-in-out;
 		padding: 0;
@@ -24,8 +23,9 @@
 		transition: all 0.2s ease-in-out;
 		border-top: 0;
 		li {
-			border-bottom: 0;
 			a {
+				border-left: 1px solid;
+				transform: translateX(8px);
 				padding-left: 2rem;
 				&::before {
 					width: 98%;
