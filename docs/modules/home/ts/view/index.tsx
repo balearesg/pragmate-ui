@@ -1,10 +1,6 @@
 import React from "react";
 import { Code } from "pragmate-ui/code";
 export function Page() {
-  const [show, setShow] = React.useState(false);
-  function handleModalColor() {
-    setShow(!show);
-  }
   return (
     <>
       <div className="doc__bg"></div>
@@ -13,9 +9,9 @@ export function Page() {
           <section className="js-section">
             <h3 className="section__title">Get Started</h3>
             <p>
-              Bienvenido, en nuestro menu izquierdo puede buscar los componentes
-              que necesite usar. Se le recuerda instalar la libreria por si
-              todavia no la ha instalado.
+              Welcome, in our left menu you can search for the components you
+              need to use. You are reminded to install the library in case you
+              haven't installed it yet.
             </p>
             <h3 className="section__title">Installation</h3>
             <div className="code__block code__block--notabs">
