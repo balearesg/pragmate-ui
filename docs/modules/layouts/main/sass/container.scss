@@ -12,11 +12,6 @@
 
 	.container__navbar {
 		grid-area: navbar;
-		position: sticky;
-		top: 0;
-		z-index: 20;
-		transition: none;
-		background-color: var(--background);
 	}
 
 	.view {
@@ -33,13 +28,6 @@
 	}
 
 	.container__footer {
-		display: grid;
-		place-items: center;
-		text-align: center;
-		z-index: 70;
-		border: none;
-		border-top: 1px solid var(--surface);
-		background-color: var(--background);
 		grid-area: footer;
 	}
 }

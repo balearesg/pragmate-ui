@@ -4,7 +4,6 @@
 	"title": "pragmate docs",
 	"description": "",
 	"license": "ISC",
-	"layout": "main-layout",
 	"template": "template/template.json",
 	"languages": {
 		"default": "en",

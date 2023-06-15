@@ -1,55 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 .container__navbar {
     display: flex;
-    justify-content: space-between;
-
-    .navbar__h2 {
-        transition: all 0.5s;
-        cursor: pointer;
-        font-family: 'Inter', sans-serif;
-        &:hover {
-            color: var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    transition: none;
+    background-color: var(--background);
+    align-items: center;
+    justify-content: center;
+    
+     .width {
+        display: flex;
+        width: 90rem;
+        align-items: center;
+        justify-content: space-between;
+        
+        .navbar__h2 {
+            transition: all 0.5s;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+    
+            &:hover {
+                color: var(--primary);
+            }
+    
+            &:hover .navbar__strong-hover {
+                color: var(--tertiary);
+            }
         }
-
-        &:hover .navbar__strong-hover {
-            color: var(--tertiary);
+        
+        .nav {
+            text-align: center;
+            font-weight: 600;
+        }
+    
+        .nav * {
+            box-sizing: border-box;
+            transition: all .35s ease;
+        }
+    
+        .nav li {
+            display: inline-block;
+            list-style: outside none none;
+            margin: .5em 1em;
+            padding: 0;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    
+        .nav a {
+            padding: .5em .8em;
+            position: relative;
+            text-decoration: none;
+    
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    
+        .tag-a {
+            color: var(--text-color);
+            transition: all .35s ease;
         }
     }
-
-    .nav {
-        text-align: center;
-        font-weight: 600;
-    }
-
-    .nav * {
-        box-sizing: border-box;
-        transition: all .35s ease;
-    }
-
-    .nav li {
-        display: inline-block;
-        list-style: outside none none;
-        margin: .5em 1em;
-        padding: 0;
-        cursor: pointer;
-        font-size: 14px;
-    }
-
-    .nav a {
-        padding: .5em .8em;
-        position: relative;
-        text-decoration: none;
-
-        &:hover {
-            color: var(--primary);
-        }
-    }
-
-    .tag-a {
-        color: var(--text-color);
-        transition: all .35s ease;
-    }
-
 }
 
 .container__navbar-scrolled {
