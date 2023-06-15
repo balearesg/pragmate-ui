@@ -17,7 +17,7 @@ function View() {
     event: React.SyntheticEvent<HTMLButtonElement, Event>
   ): void {
     const { dataset } = event.currentTarget;
-    toast[dataset.type](dataset.message);
+    toast[dataset.type](dataset.message, 3600);
   }
 
   return (

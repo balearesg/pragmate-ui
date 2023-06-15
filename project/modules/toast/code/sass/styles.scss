@@ -1,6 +1,7 @@
 .essential__toasts {
 	max-height: 100vh;
-	position: absolute;
+	position: fixed;
+	z-index: 50;
 	display: grid;
 	gap: 1rem;
 
@@ -17,7 +18,7 @@
 		z-index: 100;
 		position: relative;
 		p.message {
-			color: var(--on-primary);
+			color: var(--text-color);
 			line-height: 1;
 			font-size: 16px;
 			font-weight: 400;
@@ -43,23 +44,23 @@
 		}
 
 		&.success {
-			background: var(--success);
+			background: var(--success-container);
 		}
 
 		&.error {
-			background: var(--error);
+			background: var(--error-container);
 		}
 
 		&.warning {
-			background: var(--warning);
+			background: var(--warning-container);
 		}
 
 		&.info {
-			background: var(--info);
+			background: var(--info-container);
 		}
 
 		&.loading {
-			background: var(--info);
+			background: var(--info-container);
 		}
 	}
 }
