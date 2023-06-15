@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 .container__aside {
+	&::-webkit-scrollbar {
+			width: 7px;
+			background-color: var(--surface);
+		}
+	
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--tertiary);
+			border-radius: 7px;
+		}
+	
+		.aside__h3-title {
+			transition: all 0.5s;
+	
+			&:hover {
+				color: var(--primary);
+			}
+	
+			&:hover .h3__strong-hover {
+				color: var(--tertiary);
+			}
+		}
+
 	ul {
 		transition: all 0.2s ease-in-out;
 		padding: 0;
@@ -10,7 +32,7 @@
 			font-family: 'Poppins', sans-serif;
 			a {
 				display: flex;
-				width: 100%;
+				width: 80%;
 				padding: 0.5rem;
 				&:hover {
 					background: var(--primary-container);

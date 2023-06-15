@@ -1,21 +1,24 @@
-import * as React from 'react';
-import { routing } from '@beyond-js/kernel/routing';
+import * as React from "react";
+import { routing } from "@beyond-js/kernel/routing";
 
 interface Props {
-	component: { path: string; name: string };
+  component: { path: string; name: string };
+  tabIndex: number;
 }
 
-export function SidebarItem({ component }: Props) {
-	const location = `/components/${component.path}`;
+export function SidebarItem({ component, tabIndex }: Props) {
+  const location = `/components/${component.path}`;
 
-	function redirect(event) {
-		event.preventDefault();
-		routing.pushState(location);
-	}
+  function redirect(event) {
+    event.preventDefault();
+    routing.pushState(location);
+  }
 
-	return (
-		<li className="sidebar-item">
-			<a onClick={redirect}>{component.name}</a>
-		</li>
-	);
+  return (
+    <li className="sidebar-item">
+      <a tabIndex={tabIndex} onClick={redirect}>
+        {component.name}
+      </a>
+    </li>
+  );
 }

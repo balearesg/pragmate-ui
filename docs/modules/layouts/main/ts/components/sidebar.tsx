@@ -17,11 +17,19 @@ export function Sidebar() {
     return 0;
   });
 
+  let tabIndex = 1;
+
   const componentsElements = sortedMenuItems.map((component: IComponent) => {
     if (component?.children.length > 0) {
       return <SidebarDropdown key={component.path} component={component} />;
     }
-    return <SidebarItem key={component.path} component={component} />;
+    return (
+      <SidebarItem
+        key={component.path}
+        tabIndex={tabIndex++}
+        component={component}
+      />
+    );
   });
 
   function goHome(event) {

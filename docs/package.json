@@ -33,6 +33,11 @@
 			}
 		]
 	},
+	"static": {
+		"includes": [
+			"assets"
+		]
+	},
 	"dependencies": {
 		"@beyond-js/kernel": "~0.1.8",
 		"@beyond-js/local": "~0.1.3",
