@@ -25,9 +25,7 @@ function View(): JSX.Element {
       <div className="component-info">
         <h3>Import:</h3>
         <Code>{`import { IconButton } from 'pragmate-ui/icons';`}</Code>
-        <div className="component-implementation icon-button">
-          <h3>Implementation:</h3>
-          <Code>{`<IconButton icon="search" />`}</Code>
+        <div className="component-implementation component-implementation__icon-button icon-button">
           <Code>{`const users = {
     viewBox: "",
     icon: '<path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3
@@ -35,16 +33,40 @@ function View(): JSX.Element {
   };
     <IconButton icon={users.icon} viewBox={users.viewBox} />
             `}</Code>
-          <main className="component-container">
-            <h3>Result:</h3>
-            <div className="content-result">
-              <IconButton className="lg" icon="delete" />
+          <main className="component-container component-container__icon-button">
+            <div className="column">
+              <h3>Result:</h3>
+            </div>
+            <div className="column">
+              <h3>Implementation:</h3>
+            </div>
+            <div className="box">
+              <h3>IconButton circle:</h3>
+              <IconButton className="circle" icon="delete" />
+            </div>
+            <Code>{`<IconButton icon="search" />`}</Code>
+
+            <div className="box">
+              <h3>IconButton size xs:</h3>
+              <IconButton className="xs" icon="box" />
+            </div>
+            <Code>{`<IconButton className="xs" icon="box" />`}</Code>
+
+            <div className="box">
+              <h3>IconButton size md:</h3>
+              <IconButton className="md" icon="box" />
+            </div>
+            <Code>{`<IconButton className="md" icon="box" />`}</Code>
+
+            <div className="box">
+              <h3>IconButton size lg:</h3>
               <IconButton
                 className="lg"
                 icon={users.icon}
                 viewBox={users.viewBox}
               />
             </div>
+            <Code>{`<IconButton className="lg" icon="box" />`}</Code>
           </main>
         </div>
       </div>
