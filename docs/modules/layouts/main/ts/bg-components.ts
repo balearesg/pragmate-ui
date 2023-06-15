@@ -129,6 +129,11 @@ export const menuItems = [
     children: [],
   },
   {
+    name: "Select",
+    path: "select",
+    children: [],
+  },
+  {
     name: "Alert",
     path: "alert",
     children: [],

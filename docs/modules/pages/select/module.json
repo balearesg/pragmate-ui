@@ -1,0 +1,23 @@
+{
+  "name": "select",
+  "widget": {
+    "route": "/components/select",
+    "layout": "main-layout",
+    "is": "page",
+    "sass": {
+      "path": "/widget/sass",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "element": {
+      "name": "component-select"
+    }
+  }
+}
