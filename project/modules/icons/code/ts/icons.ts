@@ -363,7 +363,13 @@ d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 
 	send: `<g id="send">
 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
 </g>`,
-
+	frontArrow: {
+		viewBox: '0 0 25 25',
+		icon: `<g id="front-arrow">  <rect id="Rectángulo_93" data-name="Rectángulo 93" width="25" height="25" fill="#fff" opacity="0"/>
+	<path id="Icon_awesome-arrow-right" data-name="Icon awesome-arrow-right" d="M7.912,3.862l.922-.922a.993.993,0,0,1,1.408,0l8.074,8.07a.993.993,0,0,1,0,1.408l-8.074,8.074a.993.993,0,0,1-1.408,0l-.922-.922a1,1,0,0,1,.017-1.425l5-4.768H1a.994.994,0,0,1-1-1V11.051a.994.994,0,0,1,1-1H12.933l-5-4.768A.991.991,0,0,1,7.912,3.862Z" transform="translate(3 0.353)"/>
+  </g>
+`,
+	},
 	backArrow: `<g id="back-arrow">
 	<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
 </g>`,
