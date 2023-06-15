@@ -14,4 +14,19 @@
             width: 12px;
         }
     }
+
+    &.xs {
+        height: 15px;
+        width: 15px;
+    }
+
+    &.md {
+        height: 25px;
+        width: 25px;
+    }
+
+    &.lg {
+        height: 35px;
+        width: 35px;
+    }
 }
