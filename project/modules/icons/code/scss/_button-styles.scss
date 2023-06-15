@@ -8,7 +8,7 @@
 			background-color: $bg-color;
 
 			svg {
-				fill: $text-color;
+				fill: var(--on-background);
 			}
 			&:hover:not(:disabled) {
 				background-color: $bg-hover;

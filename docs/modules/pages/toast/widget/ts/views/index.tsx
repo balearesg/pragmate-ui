@@ -12,7 +12,7 @@ function Page() {
           right: "2rem",
         }}
       />
-      <View />;
+      <View />
     </>
   );
 }
