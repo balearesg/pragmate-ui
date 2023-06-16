@@ -1,12 +1,10 @@
 import React from "react";
-import { CopyableImplementation } from "pragmate-ui/copyable-implementation";
-import { Code } from "pragmate-ui/code";
-
 import {
   implementation,
   implementationError,
   implementationInfo,
   implementationWaring,
+  implementationSuccess,
 } from "./implementation";
 import { Alert } from "pragmate-ui/alert";
 import { cases } from "./cases";
@@ -41,7 +39,7 @@ function View() {
               <h3>Case success alert</h3>
               <Alert {...cases.success} />
             </div>
-            <Code>{implementationInfo}</Code>
+            <Code>{implementationSuccess}</Code>
 
             <div className="box">
               <h3>Case error alert</h3>
@@ -53,7 +51,14 @@ function View() {
               <h3>Case warning alert</h3>
               <Alert {...cases.warning} />
             </div>
+
             <Code>{implementationWaring}</Code>
+
+            <div className="box">
+              <h3>Case info alert</h3>
+              <Alert {...cases.info} />
+            </div>
+            <Code>{implementationInfo}</Code>
           </main>
         </div>
       </div>

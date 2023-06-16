@@ -11,6 +11,16 @@ export function ImplementationAlert() {
   }
 `;
 
+export const implementationSuccess = `
+<Alert  
+    message="this is a success message"
+    title="title success"
+    mode="success"
+    show={true}   
+    isClose={true}
+/>
+`;
+
 export const implementationError = `
 <Alert   
     message="this is a error message"

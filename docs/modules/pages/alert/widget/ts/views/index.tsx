@@ -1,11 +1,7 @@
-import * as React from 'react';
+import * as React from "react";
 
-import { View } from './view';
+import { View } from "./view";
 export /*bundle*/
-	function Page() {
-	return (
-		
-			<View />
-	
-	);
+function Page() {
+  return <View />;
 }
