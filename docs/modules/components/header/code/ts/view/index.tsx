@@ -5,7 +5,7 @@ import { Code } from "pragmate-ui/code";
 
 export /* bundle */ function Header() {
   function goDocs() {
-    routing.pushState("/components/alert");
+    routing.pushState("/components/introduction");
   }
 
   return (

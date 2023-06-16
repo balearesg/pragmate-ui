@@ -34,7 +34,8 @@
 	},
 	"static": {
 		"includes": [
-			"assets"
+			"assets",
+			"img"
 		]
 	},
 	"dependencies": {

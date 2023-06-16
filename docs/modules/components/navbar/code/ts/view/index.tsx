@@ -34,7 +34,7 @@ export /* bundle */ function Navbar() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/components/alert">Docs</Link>
+            <Link href="/components/introduction">Docs</Link>
           </li>
           <li>
             <a
