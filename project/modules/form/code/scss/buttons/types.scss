@@ -42,6 +42,11 @@
 			var(--on-info),
 			var(--info-container),
 		),
+		'link': (
+			var(--color-gray-20),
+			var(--on-primary),
+			var(--color-gray-20),
+		),
 	);
 
 	@include button-styles($button-variants);
