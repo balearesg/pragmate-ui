@@ -1,9 +1,10 @@
 import * as React from "react";
 import { Button } from "pragmate-ui/form";
+import { Link } from "pragmate-ui/link";
 export /*bundle*/
 function View() {
   return (
-    <div className="view">
+    <div className="view view-introduction">
       <h1 className="view__h1">Introducction</h1>
       <p className="view__p">
         ¡Bienvenido a la documentación de{" "}
@@ -32,9 +33,10 @@ function View() {
 
       <h3 className="view__h3">Configuracion previa</h3>
       <p className="view__p">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
-        dolores, magnam cum maiores soluta rerum odio natus totam saepe qui,
-        sequi nisi culpa adipisci dolorum nulla. Doloribus incidunt eaque nam?
+        ¡No hay! trabajar con{" "}
+        <strong className="view__strong">Pragmate UI</strong> es sencillo y no
+        requiere de una implementacion previa en su proyecto. Solamente hacer
+        bien la instalacion de la libreria.
       </p>
       <h3 className="view__h3">Apoyanos</h3>
       <p className="view__p">
@@ -42,16 +44,10 @@ function View() {
         componentes o mejora de alguno de estos le dejamos nuestro{" "}
         <strong className="view__strong">Github</strong>.👇
       </p>
-      <Button variant="primary" icon="paperPlane" className="icon--right">
-        <a
-          target="_blank"
-          className="tag-a"
-          href="https://github.com/balearesg/pragmate-ui"
-        >
-          {" "}
-          Github
-        </a>
+      <Button variant="info" icon="paperPlane" className="icon--right">
+        <Link href="https://github.com/balearesg/pragmate-ui">Github</Link>
       </Button>
+      <img src="" alt="" />
     </div>
   );
 }
