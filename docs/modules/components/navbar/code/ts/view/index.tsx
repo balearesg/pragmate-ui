@@ -34,10 +34,11 @@ export /* bundle */ function Navbar() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/">Docs</Link>
+            <Link href="/components/alert">Docs</Link>
           </li>
           <li>
             <a
+              target="_blank"
               className="tag-a"
               href="https://github.com/balearesg/pragmate-ui"
             >
