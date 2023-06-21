@@ -1,7 +1,7 @@
 {
 	"name": "pragmate-ui",
 	"version": "0.0.36",
-	"description": "Beyond UI is a collection of reusable components",
+	"description": "Pragmate UI is a collection of reusable components",
 	"author": "",
 	"license": "MIT",
 	"template": "template/template.json",
@@ -22,16 +22,16 @@
 	},
 	"deployment": {
 		"distributions": [
-	{
-		"name": "web",
-		"environment": "development",
-		"platform": "web",
-		"ports": {
-			"bundles": "1001"
-		}
-	}
+			{
+				"name": "web",
+				"environment": "development",
+				"platform": "web",
+				"ports": {
+					"bundles": "1001"
+				}
+			}
 		]
-	},	
+	},
 	"static": {
 		"includes": [
 			"assets"

@@ -33,13 +33,17 @@ function View() {
             <h4>Component information:</h4>
             <div>
               <p>
-                - Receives <code>count</code> to define the maximum amount of
-                files that can be loaded if you want to define no limit pass to
-                count
-                <code>Infinity</code> <br />- Receives <code>formats</code>{" "}
-                which is an array of strings with the available formats that can
-                be loaded. <br />- Receives <code>onUpload</code> which is a
-                function that receives the uploaded files.
+                - Recibe <code>count</code> para definir la cantidad máxima de
+                archivos que se pueden cargar si desea definir pase sin límite a
+                count <code>Infinity</code>
+              </p>
+              <p>
+                - Recibe <code>formats</code> que es una matriz de cadenas con
+                los formatos disponibles que se pueden cargar.
+              </p>
+              <p>
+                - Recibe <code>onUpload</code> que es una función que recibe los
+                archivos cargados.
               </p>
             </div>
           </div>
@@ -54,10 +58,16 @@ function View() {
             <h4>Component information:</h4>
             <div>
               <p>
-                - Receives <code>textUserPhoto</code> in case you want to change
-                the text on the component <br />- Receives <code>onUpload</code>{" "}
-                which is a function that receives the uploaded files. <br />- By
-                default only one file and image format is supported.
+                - Recibe <code>textUserPhoto</code> en caso de que quieras
+                cambiar el texto en el componente.
+              </p>
+              <p>
+                - Recibe <code>onUpload</code> que es una función que recibe los
+                archivos cargados.
+              </p>
+              <p>
+                - De forma predeterminada, solo se admite un formato de archivo
+                e imagen.
               </p>
             </div>
           </div>

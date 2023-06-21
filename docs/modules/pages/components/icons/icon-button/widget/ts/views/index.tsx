@@ -33,18 +33,35 @@ function View(): JSX.Element {
   };
     <IconButton icon={users.icon} viewBox={users.viewBox} />
             `}</Code>
-          <main className="component-container component-container__icon-button">
+          <h3>
+            Manejo de <code>Size</code> :
+          </h3>
+          <p>
+            los componentes <code>IconButton</code> pueden manejar 3 tipos de
+            tamaños diferentes:
+          </p>
+          <ul>
+            <li>
+              <code>xs</code>
+            </li>
+            <li>
+              <code>md</code>
+            </li>
+            <li>
+              <code>lg</code>
+            </li>
+          </ul>
+          <p>
+            y se pueden incorporar agregando el atributo <code>className</code>{" "}
+            al componente <strong>Icon</strong> y el tamaño que queramos.
+          </p>
+          <main className="component-container grid component-container__icon-button">
             <div className="column">
               <h3>Result:</h3>
             </div>
             <div className="column">
               <h3>Implementation:</h3>
             </div>
-            <div className="box">
-              <h3>IconButton circle:</h3>
-              <IconButton className="circle" icon="delete" />
-            </div>
-            <Code>{`<IconButton icon="search" />`}</Code>
 
             <div className="box">
               <h3>IconButton size xs:</h3>
@@ -68,6 +85,15 @@ function View(): JSX.Element {
             </div>
             <Code>{`<IconButton className="lg" icon="box" />`}</Code>
           </main>
+          <h3>
+            Manejo de <code>Circle</code> :
+          </h3>
+          <p>
+            los componentes tambien pueden manejar una forma circular, se pueden
+            obtener agregando la clase circle cn el componente:
+          </p>
+          <Code>{`<IconButton className="circle" icon="box" />`}</Code>
+          <IconButton className="circle" icon="delete" />
         </div>
       </div>
     </div>

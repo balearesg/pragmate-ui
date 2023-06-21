@@ -23,6 +23,11 @@ function View() {
         <h3>Import:</h3>
         <Code>{`import { TabsContent, BeyondTabs, Tabs } from "pragmate-ui/tabs";`}</Code>
       </div>
+      <p>
+        Si pasa la propiedad <strong>thedata-path</strong> la pestaña hará un{" "}
+        <strong>routing.replaceState</strong> en el valor pasado a la{" "}
+        <strong>thedata-path</strong>.
+      </p>
       <div className="component-implementation">
         <div className="component-info">
           <h3>Implementation: </h3>

@@ -1,8 +1,8 @@
 {
 	"name": "docs",
 	"version": "0.0.1",
-	"title": "pragmate docs",
-	"description": "",
+	"title": "Pragmate UI",
+	"description": "Official pragmate ui documentation with description of the components and uses of these",
 	"license": "ISC",
 	"template": "template/template.json",
 	"languages": {

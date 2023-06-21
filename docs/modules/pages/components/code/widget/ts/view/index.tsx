@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Empty } from "pragmate-ui/empty";
 import { Code } from "pragmate-ui/code";
 import { implementation } from "./implementation";
 
@@ -22,12 +21,24 @@ function View() {
       <div className="component-implementation">
         <div className="component-info">
           <h3>Implementation: </h3>
+
+          <p>
+            Puede implementar su codigo ya sea agregando la expresion adentro de
+            llaves o si desea agregarla como cualquier texto que quiere tener
+            ahi mismo puede hacerlo agregando las comillas inversas adentro de
+            las llaves
+          </p>
+
+          <h5>agregando una expresion:</h5>
           <Code>{implementation}</Code>
+
+          <h5>agregando el texto:</h5>
+          <Code>{`var bar = 1;`}</Code>
         </div>
 
         <div className="component-result">
           <h3>Result:</h3>
-          <Code>{'console.log("hello code :)");'}</Code>
+          <Code>{`var bar = 1;`}</Code>
         </div>
       </div>
     </div>
