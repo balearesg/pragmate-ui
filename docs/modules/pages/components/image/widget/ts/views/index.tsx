@@ -19,6 +19,13 @@ function View() {
       <div className="component-info">
         <h3>Import: </h3>
         <Code>{`import { Image } from 'pragmate-ui/image';`}</Code>
+        <p>
+          Este componente detecta cuando la imagen se está cargando o cuando la
+          imagen no se pudo cargar, en ambos casos se establece una clase html
+          diferente, para el caso de carga más allá de la precarga de la imagen
+          del elemento y para el caso de error más allá del error de la imagen
+          del elemento.
+        </p>
         <main className="component-container">
           <h3>Implementation: </h3>
           <Code>{implementation}</Code>

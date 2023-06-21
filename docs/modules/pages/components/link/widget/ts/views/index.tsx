@@ -18,6 +18,10 @@ function View() {
         <h3>Import:</h3>
         <Code>{`import { Link } from 'pragmate-ui/link';`}</Code>
       </div>
+      <p>
+        Si desea ejecutar una función antes de la redirección, puede pasar un
+        <strong>onClick</strong> que se ejecutará antes de la redirección.
+      </p>
       <div className="component-implementation">
         <div className="component-info">
           <h3>Implementation:</h3>
