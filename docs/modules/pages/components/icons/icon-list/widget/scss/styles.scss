@@ -18,9 +18,15 @@
 			max-width: 11rem;
 			align-items: center;
 			justify-content: center;
-			border-radius: 14px;
+			/* border-radius: 14px; */
+			clip-path: circle(50%);
 			cursor: pointer;
 
+			&:hover {
+				background-color: var(--primary);
+				clip-path: circle(80%);
+				box-shadow: 2px 5px 7px 2px var(--tertiary);
+			}
 			
 		}
 
