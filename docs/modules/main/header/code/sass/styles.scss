@@ -6,24 +6,24 @@ $tablet-breakpoint: 1440px;
 
     display: grid;
     place-content: center;
-    gap: 2rem;
+    gap: 0rem;
 
     &-main-content {
         display: grid;
         align-items: center;
-
         h1 {
             text-align: center;
             font-size: 5rem;
             font-weight: bolder;
             font-family: var(--secondary-font-family);
+            margin: 0;
         }
 
         p {
-            color: var(--disabled-text);
+            color: var(--text-color);
             font-size: 1.5rem;
             text-align: center;
-            padding: 0 22rem;
+            /* padding: 0 22rem; */
             transition: all 0.7s;
         }
     }
