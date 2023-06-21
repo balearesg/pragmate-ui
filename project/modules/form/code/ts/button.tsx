@@ -1,72 +1,68 @@
-import React, { MouseEvent, ReactNode, ButtonHTMLAttributes } from 'react';
+import React, { ButtonHTMLAttributes, forwardRef, ReactNode, MouseEvent } from 'react';
+
 import { Icon } from 'pragmate-ui/icons';
 import { Spinner } from 'pragmate-ui/spinner';
 import { RippleEffect } from 'pragmate-ui/ripple';
-
 interface props extends ButtonHTMLAttributes<HTMLButtonElement> {
-	data?: Array<any>;
+	data?: Record<string, any>;
 	label?: ReactNode;
 	children?: ReactNode;
-	navigate?: string;
 	icon?: string;
 	loading?: boolean;
 	fetching?: boolean;
-	variant: string;
-	bordered: boolean;
+	variant?: string;
+	bordered?: boolean;
 }
 
-export /*bundle*/
-function Button(props: props): JSX.Element {
-	const {
-		className,
-		onClick,
-		data,
-		label,
-		children,
-		icon,
-		loading,
-		fetching = false,
-		variant = 'primary',
-		bordered = false,
-	} = props;
-	const ref = React.useRef<HTMLButtonElement>(null);
-	const onClickButton = (event: MouseEvent<HTMLButtonElement>): void => {
-		if (onClick && typeof onClick === 'function') {
-			onClick(event);
-			return;
+export const /*bundle */ Button = forwardRef<HTMLButtonElement, props>((props, ref) => {
+		const {
+			className,
+			onClick,
+			data,
+			label,
+			children,
+			icon,
+			loading,
+			fetching = false,
+			variant = 'primary',
+			bordered = false,
+			...otherProps
+		} = props;
+
+		if (!ref) ref = React.useRef<HTMLButtonElement>();
+		const onClickButton = (event: MouseEvent<HTMLButtonElement>): void => {
+			if (onClick && typeof onClick === 'function') {
+				onClick(event);
+				return;
+			}
+		};
+
+		React.useEffect(() => {
+			const ripple = new RippleEffect();
+			ripple.add(ref.current);
+		}, []);
+
+		const properties: props = {
+			...otherProps,
+			type: props.type ? props.type : 'button',
+		};
+
+		if (data) {
+			Object.keys(data).forEach((entry: string) => {
+				properties[`data-${entry}`] = data[entry];
+			});
 		}
-	};
 
-	React.useEffect(() => {
-		const ripple = new RippleEffect();
-		ripple.add(ref.current);
-	}, []);
+		let cls = `pragmate-button btn-${variant}`;
+		cls += className ? ` ${className}` : '';
+		cls += bordered ? ' outline' : '';
+		cls += icon ? ' has-icon' : '';
 
-	props.title ? (props['data-tippy-content'] = props.title) : null;
-
-	const properties: props = {
-		...props,
-		type: !!props.type ? props.type : 'button',
-	};
-
-	if (data) {
-		let properties: string[] = Object.keys(data);
-		properties.map((entry: string) => (props[`data-${entry}`] = data[entry]));
-	}
-
-	let cls: string = `${className ? `${className} ` : ''}pragmate-button btn-${variant}`;
-	cls += bordered ? ' outline' : '';
-	cls += icon ? ' has-icon' : '';
-
-	['label', 'icon', 'children', 'className', 'loading', 'fetching', 'colorSpinner'].forEach(property => {
-		delete properties[property];
+		return (
+			<button ref={ref} className={cls} {...properties} onClick={onClickButton}>
+				{icon && <Icon icon={icon} />}
+				{label}
+				{loading || fetching ? <Spinner type={`on-${variant}`} active={true} /> : children}
+			</button>
+		);
 	});
-
-	return (
-		<button ref={ref} className={cls} {...properties} onClick={onClickButton}>
-			{icon && <Icon icon={icon} />}
-			{label}
-			{loading || fetching ? <Spinner type={`on-${variant}`} active={true} /> : children}
-		</button>
-	);
-}
