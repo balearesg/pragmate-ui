@@ -30,35 +30,67 @@ function View(): JSX.Element {
           <h3>Implementation:</h3>
           <Code className="component-implementation__code">{`<Icon icon="delete" />`}</Code>
           <Code className="component-implementation__code">{`
-  const users = {
-    viewBox: "",
-    icon: '<path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0
-    1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"></path>',
+const users = {
+  viewBox: "",
+  icon: '<path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0
+  1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"></path>',
 };
-            <Icon icon={users.icon} viewBox={users.viewBox} />`}</Code>
-          <Code className="component-implementation__code">{`
-  const users = {
-    viewBox: "",
-    icon: '<path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 
-    0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1
-    .34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"></path>',
-  };
-            `}</Code>
+
+<Icon icon={users.icon} viewBox={users.viewBox} />`}</Code>
+
           <main className="component-container component-container__icon">
             <h3>Result:</h3>
             <div className="content-result">
               <Icon icon="delete" />
               <Icon icon={users.icon} viewBox={users.viewBox} />
             </div>
-            <h3>Icon size xs</h3>
-            <Code>{`<Icon className="xs" icon="delete" />`}</Code>
-            <Icon className="xs" icon="delete" />
-            <h3>Icon size md</h3>
-            <Code>{`<Icon className="md" icon="delete" />`}</Code>
-            <Icon className="md" icon="delete" />
-            <h3>Icon size lg</h3>
-            <Code>{`<Icon className="lg" icon="delete" />`}</Code>
-            <Icon className="lg" icon="delete" />
+            <h3>
+              Manejo de <code>Circle</code> :
+            </h3>
+            <p>
+              los componentes tambien pueden manejar una forma circular, se
+              pueden obtener agregando la clase circle en el componente:
+            </p>
+            <Code>{`<IconButton className="circle" icon="box" />`}</Code>
+            <IconButton className="circle" icon="delete" />
+            <h3>
+              Manejo de <code>Size</code> :
+            </h3>
+            <p>
+              los componentes <code>Icon</code> pueden manejar 3 tipos de
+              tamaños diferentes:
+            </p>
+            <ul>
+              <li>
+                <code>xs</code>
+              </li>
+              <li>
+                <code>md</code>
+              </li>
+              <li>
+                <code>lg</code>
+              </li>
+            </ul>
+            <p>
+              y se pueden incorporar agregando el atributo{" "}
+              <code>className</code> al componente <strong>Icon</strong> y el
+              tamaño que queramos.
+            </p>
+            <h3>
+              Icon size <code>xs</code>
+            </h3>
+            <Code>{`<Icon className="xs" icon="sun" />`}</Code>
+            <Icon className="xs" icon="sun" />
+            <h3>
+              Icon size <code>md</code>{" "}
+            </h3>
+            <Code>{`<Icon className="md" icon="sun" />`}</Code>
+            <Icon className="md" icon="sun" />
+            <h3>
+              Icon size <code>lg</code>{" "}
+            </h3>
+            <Code>{`<Icon className="lg" icon="sun" />`}</Code>
+            <Icon className="lg" icon="sun" />
           </main>
         </div>
       </div>

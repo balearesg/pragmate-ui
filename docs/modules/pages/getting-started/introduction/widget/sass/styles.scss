@@ -3,5 +3,18 @@
     a {
         text-decoration: none;
     }
-    
+    .view__p {
+        .strong-beyondjs {
+            cursor: pointer;
+            color: #ff8056;
+            transition: all 300ms;
+            &:hover {
+                color: #b95838;
+            }
+        }
+    }
+
+    .pragmate-button.has-icon svg.pragmate-icon {
+        fill: var(--surface);
+    }
 } 

@@ -12,9 +12,12 @@ function View() {
       </p>
       <p className="view__p">
         PragmateUI es una libreria que provee componentes reutilizables, rapidos
-        y dinamicos para su pagina o aplicacion web ! Creados principalmente con{" "}
-        <strong className="view__strong strong-react">React</strong> y{" "}
-        <strong className="view__strong strong-beyondjs">BeyondJS</strong>.
+        y dinamicos para su pagina o aplicacion web ! Creado principalmente con{" "}
+        <strong className="view__strong strong-beyondjs">
+          {" "}
+          <Link href="https://beyondjs.com">BeyondJS</Link>
+        </strong>
+        .
       </p>
 
       <h3 className="view__h3">
@@ -44,7 +47,7 @@ function View() {
         componentes o mejora de alguno de estos le dejamos nuestro{" "}
         <strong className="view__strong">Github</strong>.👇
       </p>
-      <Button variant="info" icon="paperPlane" className="icon--right">
+      <Button variant="primary" icon="paperPlane" className="icon--right">
         <Link href="https://github.com/balearesg/pragmate-ui">Github</Link>
       </Button>
       <img src="" alt="" />
