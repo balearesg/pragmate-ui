@@ -21,7 +21,7 @@ function View() {
       </p>
 
       <h3 className="view__h3">
-        ¿Porque <strong className="view__strong">Pragmate UI</strong>?
+        ¿Por que <strong className="view__strong">Pragmate UI</strong>?
       </h3>
       <p className="view__p">
         La idea principal es por su uso tan sencillo y adaptable de componentes

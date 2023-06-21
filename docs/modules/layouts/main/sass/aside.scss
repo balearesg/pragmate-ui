@@ -29,6 +29,16 @@
 		}
 	}
 
+	.aside__li {
+		
+
+		h3 {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+		}
+	}
+
 	ul {
 		transition: all 0.2s ease-in-out;
 		padding: 0;
