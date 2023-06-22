@@ -2,7 +2,20 @@ import * as React from 'react';
 import { Slide } from './slide';
 import { Controller } from './controller';
 import { Icon } from 'pragmate-ui/icons';
-import { IProps } from './interface';
+import { SwiperFooter } from './swiper-footer';
+import { SwiperNavigation } from './swiper-navigation';
+interface props {
+	children: Array<JSX.Element>;
+	footer?: boolean;
+	navigation?: boolean;
+	pagination?: boolean;
+	next?: boolean;
+	functionNext?: (e: React.SyntheticEvent) => void;
+	className?: string;
+	slideTo?: any;
+	slidesPerView?: string | number;
+	spaceBetween?: number;
+}
 
 export /*bundle*/
 function SwiperSlider(props: IProps): JSX.Element {
@@ -36,7 +49,6 @@ function SwiperSlider(props: IProps): JSX.Element {
 		onChange();
 		return () => controller.unbind('change', onChange);
 	}, []);
-
 	React.useEffect(() => {
 		if (!state.swiper || !slideTo) return;
 		state.swiper.slideTo(slideTo);
@@ -51,30 +63,9 @@ function SwiperSlider(props: IProps): JSX.Element {
 			<div ref={container} className="swiper-container">
 				<div className="swiper-wrapper">{slides}</div>
 				{props.pagination && <div ref={refs?.pagination} className="swiper-pagination" />}
-				{footer && (
-					<>
-						{!controller?.swiper.isEnd && (
-							<button className="swiper-button-prev" onClick={props.functionNext}>
-								SKIP
-							</button>
-						)}
-						<div ref={refs.pagination} className="swiper-pagination" />
-						<button className="swiper-button-next " onClick={controller?.next}>
-							Next
-						</button>
-					</>
-				)}
+				<SwiperFooter footer={footer} controller={controller} refs={refs} />
 
-				{props.navigation && (
-					<>
-						<div ref={prev} className="swiper-button-prev">
-							<Icon icon="left" />
-						</div>
-						<div onClick={controller?.nextSlide} className="swiper-button-next">
-							<Icon icon="right" />
-						</div>
-					</>
-				)}
+				<SwiperNavigation navigation={props.navigation} controller={controller} prev={prev} />
 			</div>
 		</div>
 	);
