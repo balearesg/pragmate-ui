@@ -33,7 +33,7 @@ function View() {
           <Code>{implementation}</Code>
 
           <h5>agregando el texto:</h5>
-          <Code>{`var bar = 1;`}</Code>
+          <Code>{`<Code>{'var bar = 1;'}</Code>`}</Code>
         </div>
 
         <div className="component-result">
