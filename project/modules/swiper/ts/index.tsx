@@ -2,6 +2,8 @@ import * as React from "react";
 import { Slide } from "./slide";
 import { Controller } from "./controller";
 import { Icon } from "pragmate-ui/icons";
+import { SwiperFooter } from "./swiper-footer";
+import { SwiperNavigation } from "./swiper-navigation";
 interface props {
   children: Array<JSX.Element>;
   footer?: boolean;
@@ -64,33 +66,13 @@ function SwiperSlider(props: props): JSX.Element {
         {props.pagination && (
           <div ref={refs?.pagination} className="swiper-pagination" />
         )}
-        {footer && (
-          <>
-            {!controller?.swiper.isEnd && (
-              <button
-                className="swiper-button-prev"
-                onClick={props.functionNext}
-              >
-                SKIP
-              </button>
-            )}
-            <div ref={refs.pagination} className="swiper-pagination" />
-            <button className="swiper-button-next " onClick={controller?.next}>
-              Next
-            </button>
-          </>
-        )}
+        <SwiperFooter footer={footer} controller={controller} refs={refs} />
 
-        {props.navigation && (
-          <>
-            <div ref={prev} className="swiper-button-prev">
-              <Icon icon="left" />
-            </div>
-            <div onClick={controller?.nextSlide} className="swiper-button-next">
-              <Icon icon="right" />
-            </div>
-          </>
-        )}
+        <SwiperNavigation
+          navigation={props.navigation}
+          controller={controller}
+          prev={prev}
+        />
       </div>
     </div>
   );
