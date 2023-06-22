@@ -2,9 +2,7 @@
 $button-variants: (
 	'primary': (
 		var(--primary),
-		// background
 		var(--on-primary),
-		// fill
 	),
 	'secondary': (
 		var(--secondary),
