@@ -2,60 +2,40 @@
 $button-variants: (
 	'primary': (
 		var(--primary),
+		// background
 		var(--on-primary),
-		var(--primary),
+		// fill
 	),
 	'secondary': (
 		var(--secondary),
 		var(--on-secondary),
-		var(--secondary),
 	),
 	'tertiary': (
 		var(--tertiary),
 		var(--on-tertiary),
-		var(--tertiary),
 	),
 	'default': (
 		var(--default),
-		var(--text-on-default),
-		var(--default),
+		var(--text-color),
 	),
 	'success': (
 		var(--success-container),
-		var(--on-success),
-		var(--success-container),
+		var(--success),
 	),
 	'warning': (
 		var(--warning-container),
-		var(--on-warning),
-		var(--warning-container),
+		var(--warning),
 	),
 	'error': (
 		var(--error-container),
-		var(--on-error),
-		var(--error-container),
+		var(--error),
 	),
 	'info': (
 		var(--info-container),
-		var(--on-info),
-		var(--info-container),
+		var(--info),
 	),
 );
 
 .pragmate-icon-button {
-	&.primary {
-		background: var(--primary);
-		color: var(--on-primary);
-
-		svg {
-			fill: var(--on-background);
-		}
-	}
-
-	&.secondary {
-		background: var(--secondary);
-		fill: var(--on-secondary);
-		color: var(--on-secondary);
-	}
+	@include button-styles($button-variants);
 }
-

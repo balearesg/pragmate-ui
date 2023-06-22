@@ -1,17 +1,12 @@
 @mixin button-styles($button-variants) {
 	@each $type, $colors in $button-variants {
-		$bg-color: nth($colors, 1);
+		$background: nth($colors, 1);
 		$fill-color: nth($colors, 2);
-		$bg-hover: nth($colors, 3);
 
 		&.btn-#{$type} {
-			background-color: $bg-color;
-
+			background: $background;
 			svg {
 				fill: $fill-color;
-			}
-			&:hover:not(:disabled) {
-				background-color: $bg-hover;
 			}
 
 			&:disabled {

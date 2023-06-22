@@ -19,9 +19,10 @@
 	&.lg {
 		height: 35px;
 		width: 35px;
-	}	
+	}
 }
 
+//default
 svg {
-	fill: var(--on-background);
+	fill: var(--text-color);
 }
