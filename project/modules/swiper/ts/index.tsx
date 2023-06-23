@@ -1,72 +1,76 @@
-import * as React from 'react';
-import { Slide } from './slide';
-import { Controller } from './controller';
-import { Icon } from 'pragmate-ui/icons';
-import { SwiperFooter } from './swiper-footer';
-import { SwiperNavigation } from './swiper-navigation';
-interface props {
-	children: Array<JSX.Element>;
-	footer?: boolean;
-	navigation?: boolean;
-	pagination?: boolean;
-	next?: boolean;
-	functionNext?: (e: React.SyntheticEvent) => void;
-	className?: string;
-	slideTo?: any;
-	slidesPerView?: string | number;
-	spaceBetween?: number;
+import * as React from "react";
+import { Slide } from "./slide/slide";
+import { Controller } from "./controller";
+import { SwiperFooter } from "./swiper-footer";
+import { SwiperNavigation } from "./swiper-navigation";
+import { SlideItems } from "./slide";
+interface IProps {
+  children: Array<JSX.Element>;
+  footer?: boolean;
+  navigation?: boolean;
+  pagination?: boolean;
+  next?: boolean;
+  functionNext?: (e: React.SyntheticEvent) => void;
+  className?: string;
+  slideTo?: any;
+  slidesPerView?: string | number;
+  spaceBetween?: number;
 }
 
 export /*bundle*/
 function SwiperSlider(props: IProps): JSX.Element {
-	const refs = {
-		next: React.useRef(),
-		container: React.useRef(),
-		pagination: React.useRef(),
-		prev: React.useRef(),
-	};
-	const { slideTo } = props;
-	const { container, prev } = refs;
-	const slides: Array<JSX.Element> = props.children.map((slide: JSX.Element, index: number) => (
-		<Slide key={index}>{slide}</Slide>
-	));
+  const refs = {
+    next: React.useRef(),
+    container: React.useRef(),
+    pagination: React.useRef(),
+    prev: React.useRef(),
+  };
+  const { slideTo } = props;
+  const { container, prev } = refs;
 
-	const footer: boolean = props.footer === true;
-	const [state, setState] = React.useState<any>({});
+  const footer: boolean = props.footer === true;
+  const [state, setState] = React.useState<any>({});
 
-	React.useEffect((): any => {
-		const controller: any = new Controller();
-		const onChange: () => void = (): void =>
-			setState({
-				...state,
-				ready: true,
-				swiper: controller.swiper,
-				controller,
-				lastIndex: controller.lastIndex,
-			});
-		controller.bind('change', onChange);
-		if (!controller.destroyed) controller.setSwiper(container.current, props, refs);
-		onChange();
-		return () => controller.unbind('change', onChange);
-	}, []);
-	React.useEffect(() => {
-		if (!state.swiper || !slideTo) return;
-		state.swiper.slideTo(slideTo);
-	}, [slideTo]);
-	const { controller } = state;
-	const cls: string = props.className
-		? `${props.className} beyond-element-swiper-slider`
-		: 'beyond-element-swiper-slider';
-	const next = () => controller?.next();
-	return (
-		<div className={cls}>
-			<div ref={container} className="swiper-container">
-				<div className="swiper-wrapper">{slides}</div>
-				{props.pagination && <div ref={refs?.pagination} className="swiper-pagination" />}
-				<SwiperFooter footer={footer} controller={controller} refs={refs} />
+  React.useEffect((): any => {
+    const controller: any = new Controller();
+    const onChange: () => void = (): void =>
+      setState({
+        ...state,
+        ready: true,
+        swiper: controller.swiper,
+        controller,
+        lastIndex: controller.lastIndex,
+      });
+    controller.bind("change", onChange);
+    if (!controller.destroyed)
+      controller.setSwiper(container.current, props, refs);
+    onChange();
+    return () => controller.unbind("change", onChange);
+  }, []);
+  React.useEffect(() => {
+    if (!state.swiper || !slideTo) return;
+    state.swiper.slideTo(slideTo);
+  }, [slideTo]);
+  const { controller } = state;
+  const cls: string = props.className
+    ? `${props.className} beyond-element-swiper-slider`
+    : "beyond-element-swiper-slider";
+  const next = () => controller?.next();
+  return (
+    <div className={cls}>
+      <div ref={container} className="swiper-container">
+        <div className="swiper-wrapper">{<SlideItems props={props} />}</div>
+        {props.pagination && (
+          <div ref={refs?.pagination} className="swiper-pagination" />
+        )}
+        <SwiperFooter footer={footer} controller={controller} refs={refs} />
 
-				<SwiperNavigation navigation={props.navigation} controller={controller} prev={prev} />
-			</div>
-		</div>
-	);
+        <SwiperNavigation
+          navigation={props.navigation}
+          controller={controller}
+          prev={prev}
+        />
+      </div>
+    </div>
+  );
 }
