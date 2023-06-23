@@ -4,6 +4,7 @@ import { Controller } from "./controller";
 import { SwiperFooter } from "./swiper-footer";
 import { SwiperNavigation } from "./swiper-navigation";
 import { SlideItems } from "./slide";
+import { useSwiperSlider } from "./use-swiper";
 interface IProps {
   children: Array<JSX.Element>;
   footer?: boolean;
@@ -19,42 +20,14 @@ interface IProps {
 
 export /*bundle*/
 function SwiperSlider(props: IProps): JSX.Element {
-  const refs = {
-    next: React.useRef(),
-    container: React.useRef(),
-    pagination: React.useRef(),
-    prev: React.useRef(),
-  };
-  const { slideTo } = props;
-  const { container, prev } = refs;
+  const { refs, state, prev, container } = useSwiperSlider(props);
 
   const footer: boolean = props.footer === true;
-  const [state, setState] = React.useState<any>({});
 
-  React.useEffect((): any => {
-    const controller: any = new Controller();
-    const onChange: () => void = (): void =>
-      setState({
-        ...state,
-        ready: true,
-        swiper: controller.swiper,
-        controller,
-        lastIndex: controller.lastIndex,
-      });
-    controller.bind("change", onChange);
-    if (!controller.destroyed)
-      controller.setSwiper(container.current, props, refs);
-    onChange();
-    return () => controller.unbind("change", onChange);
-  }, []);
-  React.useEffect(() => {
-    if (!state.swiper || !slideTo) return;
-    state.swiper.slideTo(slideTo);
-  }, [slideTo]);
   const { controller } = state;
   const cls: string = props.className
-    ? `${props.className} beyond-element-swiper-slider`
-    : "beyond-element-swiper-slider";
+    ? `${props.className} pragmate-element-swiper-slider`
+    : "pragmate-element-swiper-slider";
   const next = () => controller?.next();
   return (
     <div className={cls}>
