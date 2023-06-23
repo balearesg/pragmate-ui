@@ -3,6 +3,7 @@
 	height: 20px;
 	width: 20px;
 	position: relative;
+	fill: var(--on-primary);
 
 	&.circle {
 		border-radius: 50%;
