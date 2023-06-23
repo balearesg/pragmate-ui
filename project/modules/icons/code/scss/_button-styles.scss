@@ -3,11 +3,12 @@
 		$background: nth($colors, 1);
 		$fill-color: nth($colors, 2);
 
-		&.btn-#{$type} {
-			background: $background;
+		&.btn-#{$type},
+		.pragmate.icon {
 			svg {
 				fill: $fill-color;
 			}
+			background: $background;
 
 			&:disabled {
 				opacity: 0.5;
