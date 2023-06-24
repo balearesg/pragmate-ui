@@ -1,7 +1,10 @@
 import * as React from "react";
 import { Controller } from "./controller";
+import { useSwiperContext } from "./context";
 
 export const useSwiperSlider = (props) => {
+  /* const { props } = useSwiperContext(); */
+
   const refs = {
     next: React.useRef(),
     container: React.useRef(),
