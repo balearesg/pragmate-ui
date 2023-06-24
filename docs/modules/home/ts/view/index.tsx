@@ -6,8 +6,10 @@ export function Page() {
   return (
     <main className="page__home-container">
       <Navbar />
-      <Header />
-      <Footer />
+      <div className="content">
+        <Header />
+        <Footer />
+      </div>
     </main>
   );
 }

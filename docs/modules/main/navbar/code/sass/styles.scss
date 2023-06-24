@@ -21,7 +21,9 @@
             font-family: 'Inter', sans-serif;
     
             &:hover {
-                color: var(--primary);
+                a {
+                    color: var(--primary);
+                }
             }
     
             &:hover .navbar__strong-hover {
@@ -62,7 +64,7 @@
     
         .tag-a {
             color: var(--text-color);
-            /* transition: all .35s ease; */
+            transition: all .35s ease;
         }
     }
 }

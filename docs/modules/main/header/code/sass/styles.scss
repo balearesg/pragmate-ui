@@ -1,7 +1,7 @@
 $tablet-breakpoint: 1440px;
 
 .home__header {
-    min-height: 85vh;
+    height: 100%;
     padding: 3rem;
 
     display: grid;
@@ -9,8 +9,12 @@ $tablet-breakpoint: 1440px;
     gap: 0rem;
 
     &-main-content {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+
         h1 {
             text-align: center;
             font-size: 5rem;
@@ -20,11 +24,14 @@ $tablet-breakpoint: 1440px;
         }
 
         p {
-            color: var(--text-color);
+            width: 80%;
+            font-weight: 600;
+            color: var(--secondary-text-color);
             font-size: 1.5rem;
             text-align: center;
             /* padding: 0 22rem; */
             transition: all 0.7s;
+            margin: 0;
         }
     }
 
@@ -33,7 +40,9 @@ $tablet-breakpoint: 1440px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
+        gap: 1.2rem;
+
+
 
         .code-container {
             width: 280px;
@@ -46,17 +55,19 @@ $tablet-breakpoint: 1440px;
         .pragmate-button.btn-secondary.outline {
             display: flex;
             font-size: 1rem;
-            font-weight: 400;
+            font-weight: 600;
             padding: 0.5rem 5.5rem;
             color: var(--text-color);
-            background-image: linear-gradient(50deg, var(--surface) 50%, transparent 50%);
+            background-image: linear-gradient(50deg, var(--on-primary-container) 50%, transparent 50%);
             border-color: var(--tertiary);
             background-position: 100%;
             background-size: 250%;
             transition: all 0.4s ease-in-out;
+            
             &:hover {
                 background-position: 0;
                 box-shadow: 0 5px 10px 0 var(--tertiary);
+                color: var(--altern-text-color);
             }
         }
 
