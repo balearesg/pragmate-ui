@@ -1,0 +1,11 @@
+{
+  "name": "routing-handler",
+  "start": {
+    "ts": {
+      "path": "/start/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

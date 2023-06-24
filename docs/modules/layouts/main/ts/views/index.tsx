@@ -18,7 +18,7 @@ export function Layout() {
       <aside className="container__aside">
         <Sidebar />
       </aside>
-      <beyond-layout-children />
+      <beyond-layout-children class="main__container" />
       <Footer />
     </div>
   );
