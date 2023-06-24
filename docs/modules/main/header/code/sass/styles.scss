@@ -15,7 +15,7 @@ $tablet-breakpoint: 1440px;
             text-align: center;
             font-size: 5rem;
             font-weight: bolder;
-            font-family: var(--secondary-font-family);
+            font-family: var(--title-font);
             margin: 0;
         }
 
@@ -33,7 +33,7 @@ $tablet-breakpoint: 1440px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 3rem;
+        gap: 1rem;
 
         .code-container {
             width: 280px;

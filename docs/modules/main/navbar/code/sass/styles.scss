@@ -62,12 +62,12 @@
     
         .tag-a {
             color: var(--text-color);
-            transition: all .35s ease;
+            /* transition: all .35s ease; */
         }
     }
 }
 
 .container__navbar-scrolled {
-    transition: all 0.2s ease-in-out;
+    transition: none;
     border-bottom: 1px solid var(--surface);
 }
