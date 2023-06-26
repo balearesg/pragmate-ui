@@ -24,6 +24,15 @@
 	display: inline-block;
 	border: none;
 
+	.button-label {
+		&.loading {
+			opacity: 0;
+		}
+	}
+	.pragmate-element-spinner {
+		position: absolute;
+	}
+
 	&:disabled {
 		opacity: 0.7;
 		cursor: not-allowed;
