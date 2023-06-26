@@ -7,10 +7,7 @@ function Link({ href, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>)
 	const target = isExternal ? '_blank' : '';
 
 	const onClick = (event: React.MouseEvent<HTMLAnchorElement>): void => {
-		if (!isExternal) {
-			event.preventDefault();
-		}
-
+		if (!isExternal) event.preventDefault();
 		event.stopPropagation();
 
 		if (props.onClick && typeof props.onClick === 'function') {
@@ -20,12 +17,11 @@ function Link({ href, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>)
 		!isExternal && routing.pushState(href);
 	};
 
-	const cls = props.className || '';
 	const properties = { ...props };
 	['href', 'onClick'].forEach(prop => delete properties[prop]);
 
 	return (
-		<a {...properties} href={href} onClick={onClick} target={props.target || target} className={`tag-a ${cls}`}>
+		<a {...properties} href={href} onClick={onClick} target={props.target || target}>
 			{props.children}
 		</a>
 	);
