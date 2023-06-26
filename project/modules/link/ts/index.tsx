@@ -3,7 +3,7 @@ import { routing } from '@beyond-js/kernel/routing';
 
 export /*bundle*/
 function Link({ href, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>): JSX.Element {
-	const isExternal = href.startsWith('http');
+	const isExternal = href?.startsWith('http');
 	const target = isExternal ? '_blank' : '';
 
 	const onClick = (event: React.MouseEvent<HTMLAnchorElement>): void => {
