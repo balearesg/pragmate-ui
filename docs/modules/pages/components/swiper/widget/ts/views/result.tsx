@@ -14,6 +14,7 @@ export function Result(): JSX.Element {
       );
     }
   );
+
   return (
     <SwiperSlider
       //  loop={true}

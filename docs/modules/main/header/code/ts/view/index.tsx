@@ -11,7 +11,7 @@ export /* bundle */ function Header() {
   return (
     <header className="home__header">
       <div className="home__header-main-content">
-        <h1>Reusable, Modular, Components</h1>
+        <h1>Reusable, Flexible, Essential</h1>
         <p>
           Save time for you and your team by using pre-built, modular, and
           essential <strong>Pragmate UI</strong> components.
@@ -20,7 +20,7 @@ export /* bundle */ function Header() {
 
       <div className="started">
         <Code>{`npm i @pragmate/ui `}</Code>
-        <Button variant="secondary" bordered="true" onClick={goDocs}>
+        <Button variant="secondary" bordered onClick={goDocs}>
           Get Started
         </Button>
       </div>
