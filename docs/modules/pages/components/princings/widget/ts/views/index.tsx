@@ -47,9 +47,9 @@ function View() {
       <h3>Level:</h3>
       <p className="view__p p-pricing">
         El componente <code>Pricing</code> utiliza otros componentes de nivel de
-        precio (FreePlan, MediumPlan, PremiumPlan, y CustomPlan) para renderizar
-        la información correspondiente a cada plan de precio. El nivel de precio
-        se especifica mediante la prop level:
+        precio (FreePlan, MediumPlan y ProPlan) para renderizar la información
+        correspondiente a cada plan de precio. El nivel de precio se especifica
+        mediante la prop level:
       </p>
       <div className="content-result">
         <div className="result">
