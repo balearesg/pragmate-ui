@@ -4,6 +4,8 @@
 	width: 20px;
 	position: relative;
 
+	fill: var(--text-color);
+
 	&.circle {
 		border-radius: 50%;
 		padding: 5px;
@@ -20,9 +22,4 @@
 		height: 35px;
 		width: 35px;
 	}
-}
-
-//default
-svg {
-	fill: var(--text-color);
 }

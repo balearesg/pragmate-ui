@@ -650,23 +650,23 @@ transform="translate(-20.5 0.013)"/></g>`,
 	},
 	google: {
 		viewBox: '0 0 17.437 17.43',
-		icon: `<g>   <defs>
-		<clipPath id="clip-path">
-		  <path id="google_black_logo_icon_147125" d="M0,8.715A8.719,8.719,0,1,1,8.719,17.43,8.717,8.717,0,0,1,0,8.715ZM8.706,6.4a2.09,2.09,0,0,1,1.459.562L11.23,5.92a3.623,3.623,0,0,0-2.523-.982A3.77,3.77,0,0,0,5.336,7.02l1.22.948A2.281,2.281,0,0,1,8.706,6.4Zm3.622,2.4a3.238,3.238,0,0,0-.08-.772H8.706v1.4h2.079a1.846,1.846,0,0,1-.771,1.225l1.19.923A3.694,3.694,0,0,0,12.328,8.8ZM6.56,9.462a2.326,2.326,0,0,1-.126-.747,2.445,2.445,0,0,1,.122-.747L5.336,7.02a3.772,3.772,0,0,0,0,3.39Zm2.146,3.03a3.594,3.594,0,0,0,2.5-.915l-1.19-.923a2.231,2.231,0,0,1-1.308.378A2.271,2.271,0,0,1,6.56,9.462l-1.22.948A3.763,3.763,0,0,0,8.706,12.491Z" transform="translate(0 30.833)" clip-rule="evenodd"/>
-		</clipPath>
-		<filter id="Div" x="-15" y="-418.57" width="47.437" height="865" filterUnits="userSpaceOnUse">
-		  <feOffset dy="6" input="SourceAlpha"/>
-		  <feGaussianBlur stdDeviation="5" result="blur"/>
-		  <feFlood flood-opacity="0.141"/>
-		  <feComposite operator="in" in2="blur"/>
-		  <feComposite in="SourceGraphic"/>
-		</filter>
-	  </defs>
-	  <g id="Enmascarar_grupo_1" data-name="Enmascarar grupo 1" transform="translate(0 -30.833)" clip-path="url(#clip-path)">
-		<g transform="matrix(1, 0, 0, 1, 0, 30.83)" filter="url(#Div)">
-		  <path  d="M.279,0H17.158a101.372,101.372,0,0,1,.279,10.623V824.376A101.372,101.372,0,0,1,17.158,835H.279A101.37,101.37,0,0,1,0,824.376V10.623A101.37,101.37,0,0,1,.279,0Z" transform="translate(0 -409.57)" fill="#fbfcff"/>
-		</g>
-	  </g></g>`,
+		icon: ` <g>  <defs>
+    <clipPath id="clip-path">
+      <path id="google_black_logo_icon_147125" d="M0,8.715A8.719,8.719,0,1,1,8.719,17.43,8.717,8.717,0,0,1,0,8.715ZM8.706,6.4a2.09,2.09,0,0,1,1.459.562L11.23,5.92a3.623,3.623,0,0,0-2.523-.982A3.77,3.77,0,0,0,5.336,7.02l1.22.948A2.281,2.281,0,0,1,8.706,6.4Zm3.622,2.4a3.238,3.238,0,0,0-.08-.772H8.706v1.4h2.079a1.846,1.846,0,0,1-.771,1.225l1.19.923A3.694,3.694,0,0,0,12.328,8.8ZM6.56,9.462a2.326,2.326,0,0,1-.126-.747,2.445,2.445,0,0,1,.122-.747L5.336,7.02a3.772,3.772,0,0,0,0,3.39Zm2.146,3.03a3.594,3.594,0,0,0,2.5-.915l-1.19-.923a2.231,2.231,0,0,1-1.308.378A2.271,2.271,0,0,1,6.56,9.462l-1.22.948A3.763,3.763,0,0,0,8.706,12.491Z" transform="translate(0 30.833)" clip-rule="evenodd"/>
+    </clipPath>
+    <filter id="Div" x="-15" y="-418.57" width="47.437" height="865" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.141"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Enmascarar_grupo_1" data-name="Enmascarar grupo 1" transform="translate(0 -30.833)" clip-path="url(#clip-path)">
+    <g transform="matrix(1, 0, 0, 1, 0, 30.83)" filter="url(#Div)">
+      <path id="Div-2" data-name="Div" d="M.279,0H17.158a101.372,101.372,0,0,1,.279,10.623V824.376A101.372,101.372,0,0,1,17.158,835H.279A101.37,101.37,0,0,1,0,824.376V10.623A101.37,101.37,0,0,1,.279,0Z" transform="translate(0 -409.57)" fill="#fbfcff"/>
+    </g>
+  </g></g>`,
 	},
 	facebook: {
 		viewBox: '0 0 6.285 11.735',
@@ -679,4 +679,27 @@ transform="translate(-20.5 0.013)"/></g>`,
 	},
 	mic: `<g id="mic"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"></path></g>`,
 	stop: `<g id="stop"><path d="M6 6h12v12H6z"></path></g>`,
+	'add-chat': {
+		viewBox: '0 0 36 36',
+		icon: `<g>  <circle id="Elipse_1" data-name="Elipse 1" cx="18" cy="18" r="18"/>
+		<path id="Icon_material-chat" data-name="Icon material-chat" d="M16.5,3H4.5A1.535,1.535,0,0,0,3.007,4.572L3,18.717l3-3.143H16.5A1.542,1.542,0,0,0,18,14V4.572A1.542,1.542,0,0,0,16.5,3Z" transform="translate(7.501 7.142)" fill="#f1f1f1"/>
+		<path id="Icon_awesome-plus" data-name="Icon awesome-plus" d="M6.16,4.856H4.028V2.724a.474.474,0,0,0-.474-.474H3.08a.474.474,0,0,0-.474.474V4.856H.474A.474.474,0,0,0,0,5.33V5.8a.474.474,0,0,0,.474.474H2.606V8.41a.474.474,0,0,0,.474.474h.474a.474.474,0,0,0,.474-.474V6.278H6.16A.474.474,0,0,0,6.634,5.8V5.33A.474.474,0,0,0,6.16,4.856Z" transform="translate(15.042 11)"/>
+	  </g>`,
+	},
+	speaker: {
+		viewBox: '0 0 36 36',
+		icon: `<g>  <path id="Trazado_136" data-name="Trazado 136" d="M18,0A18,18,0,1,1,0,18,18,18,0,0,1,18,0Z" fill="#115efa"/>
+		<g id="volume_up_black_24dp" transform="translate(6 6)">
+		  <path id="Trazado_192" data-name="Trazado 192" d="M0,0H24V24H0Z" fill="none"/>
+		  <path id="Trazado_193" data-name="Trazado 193" d="M3,9v6H7l5,5V4L7,9Zm7-.17v6.34L7.83,13H5V11H7.83ZM16.5,12A4.5,4.5,0,0,0,14,7.97v8.05A4.474,4.474,0,0,0,16.5,12ZM14,3.23V5.29a7,7,0,0,1,0,13.42v2.06A8.994,8.994,0,0,0,14,3.23Z" fill="#fff"/>
+		</g></g>`,
+	},
+	'speaker-off': {
+		viewBox: '0 0 36 36',
+		icon: `<g>  <path id="Trazado_136" data-name="Trazado 136" d="M18,0A18,18,0,1,1,0,18,18,18,0,0,1,18,0Z" fill="#e2611d"/>
+		<g id="volume_off_black_24dp" transform="translate(6 7)">
+		  <path id="Trazado_194" data-name="Trazado 194" d="M0,0H24V24H0Z" fill="none"/>
+		  <path id="Trazado_195" data-name="Trazado 195" d="M4.34,2.93,2.93,4.34,7.29,8.7,7,9H3v6H7l5,5V13.41l4.18,4.18A6.711,6.711,0,0,1,14,18.7v2.06a8.94,8.94,0,0,0,3.61-1.75l2.05,2.05,1.41-1.41ZM10,15.17,7.83,13H5V11H7.83l.88-.88L10,11.41ZM19,12a6.975,6.975,0,0,1-.41,2.34l1.53,1.53A8.984,8.984,0,0,0,14,3.23V5.29A7.005,7.005,0,0,1,19,12ZM12,4,10.12,5.88,12,7.76Zm4.5,8A4.5,4.5,0,0,0,14,7.97V9.76l2.48,2.48A1.942,1.942,0,0,0,16.5,12Z" fill="#fff"/>
+		</g></g>`,
+	},
 };

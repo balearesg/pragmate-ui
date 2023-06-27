@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @mixin properties() {
-	--text-color: #fff;
+	--text-color: #f2ecff;
+	--altern-text-color: var(--background);
+	--secondary-text-color: var(--secondary);
 	--font-family: 'Poppins', sans-serif;
 
 	--primary: #444444;

@@ -1,6 +1,12 @@
 * {
 	font-family: var(--font-family);
+	scroll-behavior: smooth;
 }
+
+body {
+	min-height: 100vh;
+}
+
 code {
-	color: var(--info-container);
+	color: var(--on-tertiary);
 }

@@ -1,10 +1,10 @@
 @use 'dark';
 @use 'light';
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 :root {
 	--font-family: 'Roboto', sans-serif;
 	--secondary-font-family: 'Roboto', sans-serif;
-	--title-font: 'Roboto', serif;
+	--title-font: 'Inter', sans-serif;;
 
 	--gray-base: #000000;
 	--gray-darker: #333333;

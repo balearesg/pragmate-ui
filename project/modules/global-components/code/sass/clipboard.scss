@@ -3,9 +3,9 @@
 	top: 1rem;
 	right: 3rem;
 	padding: 0.5rem;
-	background: rgba(0, 0, 0, 0.7);
+	background: var(--on-background);
 	border-radius: var(--border-radius-base);
-	color: var(--on-primary);
+	color: var(--primary);
 	font-size: 0.6rem;
 	transition: all 300ms linear;
 	display: none;

@@ -3,6 +3,8 @@
 @import './mixins/button-styles';
 @mixin properties() {
 	--text-color: #1a1a1a;
+	--altern-text-color: var(--background);
+	--secondary-text-color: var(--secondary);
 	--font-family: 'Poppins',sans-serif;
 
 	--primary: #bbbbbb;
