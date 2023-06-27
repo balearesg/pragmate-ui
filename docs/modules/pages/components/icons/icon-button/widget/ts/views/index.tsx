@@ -77,11 +77,7 @@ function View(): JSX.Element {
 
             <div className="box">
               <h3>IconButton size lg:</h3>
-              <IconButton
-                className="lg"
-                icon={users.icon}
-                viewBox={users.viewBox}
-              />
+              <IconButton className="lg" icon="box" />
             </div>
             <Code>{`<IconButton className="lg" icon="box" />`}</Code>
           </main>
