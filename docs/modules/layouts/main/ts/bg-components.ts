@@ -87,6 +87,11 @@ export const menuItems = [
     children: [],
   },
   {
+    name: "Pricing",
+    path: "pricing",
+    children: [],
+  },
+  {
     name: "Spinner",
     path: "spinner",
     children: [],
