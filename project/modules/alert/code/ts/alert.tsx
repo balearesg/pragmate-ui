@@ -1,5 +1,5 @@
 import React from "react";
-import { IconButton } from "pragmate-ui/icons";
+import { Icon, IconButton } from "pragmate-ui/icons";
 
 type props = {
   show?: boolean;
@@ -8,6 +8,10 @@ type props = {
   message?: string;
   title?: string;
   isClose?: boolean;
+};
+
+type iconMap = {
+  [key: string]: string;
 };
 
 export /*bundle*/
@@ -25,10 +29,28 @@ function Alert(props: props) {
   const cls: string = className
     ? `${className} alert ${mode ?? "success"}`
     : `alert ${mode ?? "success"}`;
+
+  const icons: iconMap = {
+    error: "error",
+    warning: "circle-exclamation",
+    success: "circle-check",
+    info: "info",
+  };
+
+  const defaulIcon = icons[mode ?? "success"];
+
   return (
     <div className={cls} onClick={close}>
       {" "}
-      {title && <span dangerouslySetInnerHTML={{ __html: title }} />}
+      {title && (
+        <div className="alert__title">
+          <Icon icon={defaulIcon} />{" "}
+          <span
+            className="alert__title-span"
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
+        </div>
+      )}
       {message && <span dangerouslySetInnerHTML={{ __html: message }}></span>}
       {isClose && <IconButton icon="close" onClick={close} />}
     </div>
