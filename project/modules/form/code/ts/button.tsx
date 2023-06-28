@@ -12,6 +12,7 @@ interface props extends ButtonHTMLAttributes<HTMLButtonElement> {
 	fetching?: boolean;
 	variant?: string;
 	bordered?: boolean;
+	disabled?: boolean;
 }
 
 export const /*bundle */ Button = forwardRef<HTMLButtonElement, props>((props, ref) => {
@@ -26,6 +27,7 @@ export const /*bundle */ Button = forwardRef<HTMLButtonElement, props>((props, r
 			fetching = false,
 			variant = 'primary',
 			bordered = false,
+			disabled = false,
 			...otherProps
 		} = props;
 
@@ -59,7 +61,7 @@ export const /*bundle */ Button = forwardRef<HTMLButtonElement, props>((props, r
 		cls += icon ? ' has-icon' : '';
 
 		return (
-			<button ref={ref} className={cls} {...properties} onClick={onClickButton}>
+			<button ref={ref} className={cls} onClick={onClickButton} disabled={loading || disabled} {...properties}>
 				{icon && <Icon icon={icon} />}
 				<div className={`button-label ${loading ? 'loading' : ''}`}>{label || children}</div>
 				{(loading || fetching) && <Spinner type={`on-${variant}`} active={true} />}
