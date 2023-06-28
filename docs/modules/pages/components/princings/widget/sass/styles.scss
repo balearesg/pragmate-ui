@@ -1,0 +1,23 @@
+
+.view-pricing {
+
+    .component-result-precing {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        .view__p {
+            transform: translateY(25px);
+        }
+    }
+    
+    .content-result {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    
+        .result {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

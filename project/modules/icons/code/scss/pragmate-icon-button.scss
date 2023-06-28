@@ -19,7 +19,6 @@
 
 	&.circle {
 		border-radius: 50%;
-
 		> .beyond-ripple {
 			border-radius: 50%;
 			align-self: center;
@@ -30,3 +29,4 @@
 		background: var(--gray-light);
 	}
 }
+
