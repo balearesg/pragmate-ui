@@ -30,12 +30,10 @@ function View(): JSX.Element {
         Una colección de iconos que se pueden utilizar para representar una
         variedad de objetos, acciones y conceptos. Los íconos están diseñados
         para ser consistentes en estilo y tamaño, haciéndolos fáciles de usar y
-        comprender. Están prediseñados y optimizados para su uso en la web. Son
-        consistentes en estilo y tamaño, haciéndolos fáciles de usar y entender.
+        comprender. Están prediseñados y optimizados para su uso en la web.
         Están disponibles en una variedad de formatos, por lo que puede usarlos
         en su código o en sus diseños. Si está buscando una manera de agregar
-        interés visual y claridad a su contenido. Son fáciles de usar y se
-        pueden personalizar para satisfacer sus necesidades específicas.
+        interés visual y claridad a su contenido.
       </p>
       <div className="view__list-icons">
         <h3>Icons list:</h3>

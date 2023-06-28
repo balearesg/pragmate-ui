@@ -3,7 +3,6 @@ import { IPrincings } from "./types";
 import { FreePlan } from "./free-plan";
 import { MediumPlan } from "./medium-plan";
 import { ProPlan } from "./pro-plan";
-
 export /* bundle */ function Pricing({
   level,
   primary,
