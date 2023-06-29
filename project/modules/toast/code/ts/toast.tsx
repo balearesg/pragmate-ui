@@ -44,11 +44,11 @@ export /*bundle*/ function Toast({
     return () => clearTimeout(timeout);
   }, [duration, id]);
   const icons = {
-    error: "closeCircle",
+    error: "triangle-exclamation",
     success: "tickCircle",
     info: "infoCircle",
     loading: "refreshCircle",
-    warning: "infoCircle",
+    warning: "warning",
   };
   return (
     <article ref={toastRef} className={`toast ${type}`}>
