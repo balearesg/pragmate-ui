@@ -714,6 +714,25 @@ transform="translate(-20.5 0.013)"/></g>`,
 		  <path id="Trazado_195" data-name="Trazado 195" d="M4.34,2.93,2.93,4.34,7.29,8.7,7,9H3v6H7l5,5V13.41l4.18,4.18A6.711,6.711,0,0,1,14,18.7v2.06a8.94,8.94,0,0,0,3.61-1.75l2.05,2.05,1.41-1.41ZM10,15.17,7.83,13H5V11H7.83l.88-.88L10,11.41ZM19,12a6.975,6.975,0,0,1-.41,2.34l1.53,1.53A8.984,8.984,0,0,0,14,3.23V5.29A7.005,7.005,0,0,1,19,12ZM12,4,10.12,5.88,12,7.76Zm4.5,8A4.5,4.5,0,0,0,14,7.97V9.76l2.48,2.48A1.942,1.942,0,0,0,16.5,12Z" fill="#fff"/>
 		</g></g>`,
 	},
+	'file-circle': {
+		viewBox: '0 0 50.001 50.001',
+		icon: `<g><g id="Grupo_299" data-name="Grupo 299" transform="translate(-287 -50)">
+		<g id="Grupo_300" data-name="Grupo 300" transform="translate(287 50)">
+		  <path id="Trazado_136" data-name="Trazado 136" d="M25,0A25,25,0,1,1,0,25,25,25,0,0,1,25,0Z"/>
+		  <g id="Icon_Upload" data-name="Icon Upload" transform="translate(8 8)">
+			<g id="Grupo_239" data-name="Grupo 239">
+			  <rect id="Rectángulo_131" data-name="Rectángulo 131" width="33" height="33" fill="none"/>
+			</g>
+			<g id="Grupo_241" data-name="Grupo 241" transform="translate(5.556 2.778)">
+			  <g id="Grupo_240" data-name="Grupo 240">
+				<path id="Trazado_169" data-name="Trazado 169" d="M17.889,2H6.778A2.774,2.774,0,0,0,4.014,4.778L4,27a2.774,2.774,0,0,0,2.764,2.778H23.445A2.786,2.786,0,0,0,26.222,27V10.333Zm5.556,25H6.778V4.778H16.5v6.945h6.945ZM9.556,20.07l1.958,1.958,2.208-2.194v5.778H16.5V19.834l2.208,2.208,1.958-1.972L15.125,14.5Z" transform="translate(-4 -2)" fill="#fff"/>
+			  </g>
+			</g>
+		  </g>
+		</g>
+	  </g>
+	</svg></g>`,
+	},
 	sort: {
 		viewBox: '0 0 24 24',
 		icon: `<g> <path id="Trazado_214" data-name="Trazado 214" d="M0,0H24V24H0Z" fill="none"/>
