@@ -1,18 +1,18 @@
 import * as React from "react";
 import { Button } from "pragmate-ui/form";
 import { Icon } from "pragmate-ui/icons";
-export function MediumPlan(props) {
+export function PremiumPlan(props) {
   const { title, price, description, btnText, advantages, primary, secondary } =
     props;
   const HEADER = title.charAt(0).toUpperCase() + title.slice(1);
-
   const listAdvanges = advantages.map((advantage, index) => (
     <li key={index}>
-      <Icon icon="circle-checks" className="xs" /> {advantage}
+      <Icon icon="circle-checks" className="md" />
+      {advantage}
     </li>
   ));
   return (
-    <section className="container-component container__component-medium">
+    <section className="container-component container__component-prop">
       <h3 className="component__h3" style={{ color: secondary }}>
         {HEADER}
       </h3>

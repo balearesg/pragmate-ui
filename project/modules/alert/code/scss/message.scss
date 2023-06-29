@@ -2,24 +2,28 @@
     &.error {
         background-color: lighten(#f04141, 25%);
         // background-color: lighten($error, 15%);
-        border: 1px solid var(--error);
+        /* border: 1px solid var(--error); */
+        border-left: 10px solid var(--border-error);
     }
 
     &.warning {
         background-color: lighten(#f7c700, 15%);
         // background-color: lighten($error, 15%);
-        border: 1px solid var(--warning);
+        /* border: 1px solid var(--warning); */
+        border-left: 10px solid var(--warning);
     }
 
     &.success {
         background-color: lighten(#22bb33, 40%);
         // background-color: lighten($error, 15%);
-        border: 1px solid var(--success);
+        /* border: 1px solid var(--success); */
+        border-left: 10px solid var(--success);
     }
 
     &.info {
         background-color: #caf0f8;
         // background-color: lighten($error, 15%);
-        border: 1px solid #e2e2e2;
+        /* border: 1px solid #e2e2e2; */
+        border-left: 10px solid var(--info);
     }
 } 
