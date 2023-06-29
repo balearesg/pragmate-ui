@@ -2,8 +2,7 @@ import * as React from "react";
 import { Code } from "pragmate-ui/code";
 import { implementation } from "./implementation";
 import { Results } from "./result";
-import { ResultsPro } from "./result-pro";
-import { ResultsMedium } from "./result-medium";
+import { ResultsPremium } from "./result-premium";
 import { ResultsFree } from "./result-free";
 export /*bundle*/
 function View() {
@@ -47,9 +46,9 @@ function View() {
       <h3>Level:</h3>
       <p className="view__p p-pricing">
         El componente <code>Pricing</code> utiliza otros componentes de nivel de
-        precio (FreePlan, MediumPlan y ProPlan) para renderizar la información
+        precio (FreePlan y PremiumPlan) para renderizar la información
         correspondiente a cada plan de precio. El nivel de precio se especifica
-        mediante la prop level:
+        mediante la prop "level":
       </p>
       <div className="content-result">
         <div className="result">
@@ -57,12 +56,8 @@ function View() {
           <ResultsFree />
         </div>
         <div className="result">
-          <h4>Level Medium</h4>
-          <ResultsMedium />
-        </div>
-        <div className="result">
-          <h4>Level Pro</h4>
-          <ResultsPro />
+          <h4>Level Premiun</h4>
+          <ResultsPremium />
         </div>
       </div>
     </div>

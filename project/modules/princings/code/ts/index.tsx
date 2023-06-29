@@ -1,10 +1,9 @@
 import * as React from "react";
 import { IPrincings } from "./types";
 import { FreePlan } from "./free-plan";
-import { MediumPlan } from "./medium-plan";
-import { ProPlan } from "./pro-plan";
+import { PremiumPlan } from "./premium-plan";
 export /* bundle */ function Pricing({
-  level,
+  level = "free",
   primary,
   secondary,
   background,
@@ -12,8 +11,7 @@ export /* bundle */ function Pricing({
 }) {
   const planComponents = {
     free: FreePlan,
-    medium: MediumPlan,
-    pro: ProPlan,
+    premium: PremiumPlan,
   };
 
   const PlanComponent = planComponents[level];

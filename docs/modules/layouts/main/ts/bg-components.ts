@@ -97,6 +97,11 @@ export const menuItems = [
     children: [],
   },
   {
+    name: "Opinions",
+    path: "opinions",
+    children: [],
+  },
+  {
     name: "Input Controller",
     path: "input-controller",
     children: [],

@@ -16,6 +16,11 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.pragmate-element-swiper-slider {
+  overflow: hidden;
+  /* max-width: 900px; */
+}
 :root {
   --swiper-theme-color: #007aff;
 }
@@ -53,7 +58,6 @@
 }
 .swiper-slide {
   flex-shrink: 0;
-  width: 100%;
   height: 100%;
   position: relative;
   transition-property: transform;
