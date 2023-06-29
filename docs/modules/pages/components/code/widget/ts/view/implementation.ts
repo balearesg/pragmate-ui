@@ -1,1 +1,1 @@
-export const implementation = `<Code>{codeImplementation}</Code>`;
+export const implementation = `<Code>{ codeImplementation }</Code>`;

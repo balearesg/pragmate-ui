@@ -29,16 +29,16 @@ function View() {
             las llaves
           </p>
 
-          <h5>agregando una expresion:</h5>
+          <h5>agregando una constante:</h5>
           <Code>{implementation}</Code>
 
-          <h5>agregando el texto:</h5>
-          <Code>{`<Code>{'var bar = 1;'}</Code>`}</Code>
+          <h5>agregando una expresion:</h5>
+          <Code>{`<Code>{ ' var bar = 1 ; ' }</Code>`}</Code>
         </div>
 
         <div className="component-result">
           <h3>Result:</h3>
-          <Code>{`var bar = 1;`}</Code>
+          <Code>{` var bar = 1 ; `}</Code>
         </div>
       </div>
     </div>
