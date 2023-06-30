@@ -269,6 +269,13 @@ export /*bundle*/ const PRAGMATE_ICONS: any = {
 		icon: `<g> <path id="Trazado_175" data-name="Trazado 175" d="M0,0H24V24H0Z" fill="none"/>
 		<path id="Trazado_176" data-name="Trazado 176" d="M51.375,38.33a2.912,2.912,0,0,0-1.96.77l-7.13-4.15a2.767,2.767,0,0,0,0-1.4l7.05-4.11a2.993,2.993,0,1,0-.96-2.19,3.274,3.274,0,0,0,.09.7l-7.05,4.11a3,3,0,1,0,0,4.38l7.12,4.16a2.821,2.821,0,0,0-.08.65,2.92,2.92,0,1,0,2.92-2.92Zm0-12.08a1,1,0,1,1-1,1A1,1,0,0,1,51.375,26.25Zm-12,9a1,1,0,1,1,1-1A1,1,0,0,1,39.375,35.25Zm12,7.02a1,1,0,1,1,1-1A1,1,0,0,1,51.375,42.27Z" transform="translate(-33.375 -22.25)"/></g>`,
 	},
+	'shared-folder': {
+		viewBox: '0 0 24 24',
+		icon: `<g><path id="Trazado_159" data-name="Trazado 159" d="M0,0H24V24H0Z" fill="none"/>
+		<path id="Trazado_203" data-name="Trazado 203" d="M20,6H12L10,4H4A2,2,0,0,0,2.01,6L2,18a2.006,2.006,0,0,0,2,2H20a2.006,2.006,0,0,0,2-2V8A2.006,2.006,0,0,0,20,6Zm0,12H4V6H9.17l2,2H20Z"/>
+		<path id="Trazado_208" data-name="Trazado 208" d="M18,14V6H13v8l2.5-1.5Z" transform="translate(1 3)"/>
+	  </g>`,
+	},
 	'upload-file': {
 		viewBox: '0 0 24 24',
 		icon: `<g id="Grupo_239" data-name="Grupo 239">
