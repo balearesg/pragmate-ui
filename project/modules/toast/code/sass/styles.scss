@@ -12,11 +12,11 @@
 		display: grid;
 		grid-template-columns: 25px calc(100% - 25px);
 		gap: 0.5rem;
-		transform: translateY(50%);
-		opacity: 1;
+		transform: translateX(80%);
 		align-items: center;
 		z-index: 100;
 		position: relative;
+		transition: all 0.3s ease-in-out;
 		p.message {
 			color: var(--text-color);
 			line-height: 1;
@@ -67,7 +67,7 @@
 
 @keyframes toast-enter {
 	to {
-		transform: translateY(0);
+		transform: translate(0%, 0);
 		opacity: 1;
 	}
 }
