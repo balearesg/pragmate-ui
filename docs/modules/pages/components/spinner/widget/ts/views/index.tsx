@@ -6,7 +6,7 @@ export /*bundle*/
 function View() {
   const types = ["primary", "secondary", "tertiary"];
   const bgs = ["on-primary", "on-secondary"];
-
+  const sizes = ["xs", "md", "lg", "xl"];
   return (
     <div className="view">
       <h1 className="view__h1">Spinner</h1>
@@ -51,7 +51,21 @@ function View() {
               ))}
             </div>
             <div>
-              <Code>{`<Spinner type="primary" active/>`}</Code>
+              <Code>{`<Spinner type="on-primary" active/>`}</Code>
+            </div>
+          </div>
+          <div className="column">
+            <h3>Sizes:</h3>
+            <div className="inline__container size">
+              {sizes.map((size, index) => (
+                <div className={size} key={index}>
+                  <Spinner type="primary" active size={size} />
+                  <InlineCode>size={`"${size}"`}</InlineCode>
+                </div>
+              ))}
+            </div>
+            <div>
+              <Code>{`<Spinner type="primary" size="md" active/>`}</Code>
             </div>
           </div>
         </main>

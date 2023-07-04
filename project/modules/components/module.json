@@ -1,9 +1,6 @@
 {
-	"name": "empty",
-	"platforms": ["web", "ios", "android"],
+	"name": "components",
 	"code": {
-		"hmr": true,
-		"name": "empty",
 		"scss": {
 			"path": "/code/scss",
 			"files": ["*"]

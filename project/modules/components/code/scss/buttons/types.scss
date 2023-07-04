@@ -1,0 +1,54 @@
+@import './button-styles';
+
+.pragmate-button,
+.btn {
+	$button-variants: (
+		'primary': (
+			var(--primary),
+			var(--on-primary),
+			var(--primary),
+		),
+		'secondary': (
+			var(--secondary),
+			var(--on-secondary),
+			var(--secondary),
+		),
+		'tertiary': (
+			var(--tertiary),
+			var(--on-tertiary),
+			var(--tertiary),
+		),
+		'default': (
+			var(--default),
+			var(--text-on-default),
+			var(--default),
+		),
+		'success': (
+			var(--success-container),
+			var(--on-success),
+			var(--success-container),
+		),
+		'warning': (
+			var(--warning-container),
+			var(--on-warning),
+			var(--warning-container),
+		),
+		'error': (
+			var(--error-container),
+			var(--on-error),
+			var(--error-container),
+		),
+		'info': (
+			var(--info-container),
+			var(--on-info),
+			var(--info-container),
+		),
+		'link': (
+			var(--color-gray-20),
+			var(--on-primary),
+			var(--color-gray-20),
+		),
+	);
+
+	@include button-styles($button-variants);
+}
