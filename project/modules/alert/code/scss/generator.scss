@@ -1,0 +1,18 @@
+$alert-types: 'success', 'error', 'warning', 'info';
+
+@mixin generate-alerts {
+	@each $type in $alert-types {
+		.alert-#{$type} {
+			color: var(--alert-#{$type}-color);
+			border-color: var(--alert-#{$type}-border-color);
+
+			&:hover {
+				background-color: var(--alert-#{$type}-hover-bg);
+			}
+
+			.alert-icon {
+				fill: var(--alert-#{$type}-icon-color);
+			}
+		}
+	}
+}
