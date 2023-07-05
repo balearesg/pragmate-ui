@@ -22,9 +22,6 @@ export function ResultsFree() {
         description="For individuals and teams looking for more access, more AI Magic Tools and more export options."
         btnText="sign up"
         advantages={advantages}
-        primary="#ecf0f1"
-        secondary="#e74c3c"
-        background="#2c3e50"
       />
     </section>
   );

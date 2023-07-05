@@ -1,3 +1,5 @@
+$toast-content-color: /* var(--text-color) */ #fff;
+
 .essential__toasts {
 	max-height: 100vh;
 	position: fixed;
@@ -12,15 +14,13 @@
 		display: grid;
 		grid-template-columns: 25px calc(100% - 25px);
 		gap: 0.5rem;
-		transform: translateY(80%);
 		align-items: center;
 		z-index: 100;
 		position: relative;
 		transition: all 0.3s ease-in-out;
 
 		p.message {
-			/*same as icon for consistency*/
-			color: #fff;
+			color: $toast-content-color;
 			line-height: 1;
 			font-size: 16px;
 			font-weight: 400;
@@ -29,15 +29,16 @@
 		svg.pragmate-icon {
 			width: 25px;
 			height: 25px;
-			stroke: #fff;
+			stroke: $toast-content-color;
+			fill: $toast-content-color;
 		}
 
 		&.enter {
-			animation: toast-enter 300ms ease both;
+			animation: toast-enter 0.4s cubic-bezier(0.75, -0.5, 0, 1.75) both;
 		}
 
 		&.exit {
-			animation: toast-exit 300ms ease both;
+			animation: toast-exit 0.4s cubic-bezier(0.75, -0.5, 0, 1.75) both;
 		}
 
 		.icon {
@@ -69,22 +70,22 @@
 
 @keyframes toast-enter {
 	from {
-		transform: translateY(80%);
+		transform: translateY(100%);
 		opacity: 0;
 	}
 	to {
-		transform: translateY(0);
+		transform: translateY(-50%);
 		opacity: 1;
 	}
 }
 
 @keyframes toast-exit {
 	from {
-		transform: translateY(0);
+		transform: translateY(-50%);
 		opacity: 1;
 	}
 	to {
-		transform: translateY(80%);
+		transform: translateY(100%);
 		opacity: 0;
 	}
 }

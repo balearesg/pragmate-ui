@@ -32,7 +32,7 @@ function View() {
       </p>
       <div className="component-info">
         <h3>Import: </h3>
-        <Code>{`import { Button } from 'pragmate-ui/form';`}</Code>
+        <Code>{` import { Button } from 'pragmate-ui/components ' ;`}</Code>
       </div>
       <h2>Variantes</h2>
       Las variantes del botón se pueden definir, por medio del atributo{" "}
