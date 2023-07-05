@@ -24,7 +24,7 @@ function View() {
       </p>
       <div>
         <h3>Import:</h3>
-        <Code>{`import { Spinner } from 'pragmate-ui/spinner';`}</Code>
+        <Code>{` import { Spinner } from 'pragmate-ui/components ' ;`}</Code>
         <main className="component-container">
           <div className="column">
             <h3>Colors:</h3>
