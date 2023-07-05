@@ -22,9 +22,6 @@ export function ResultsPremium() {
         description="For large teams and companies looking to add all of Runway’s features into their workflows."
         btnText="suscribe now"
         advantages={advantages}
-        primary="#ffffff"
-        secondary="#7158e2"
-        background="#2c2c54"
       />
     </section>
   );

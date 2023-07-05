@@ -20,9 +20,6 @@ export function Results() {
         description="For individuals looking to explore Runway’s AI Magic Tools and content creation features."
         btnText="sign up"
         advantages={advantages}
-        primary=""
-        secondary=""
-        background=""
       />
     </section>
   );

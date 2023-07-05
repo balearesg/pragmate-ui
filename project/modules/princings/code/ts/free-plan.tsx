@@ -12,20 +12,12 @@ export function FreePlan(props) {
   ));
   return (
     <section className="container-component container__component-free">
-      <h3 className="component__h3" style={{ color: secondary }}>
-        {HEADER}
-      </h3>
-      <p className="component__p" style={{ color: primary }}>
-        {description}
-      </p>
+      <h3 className="component__h3">{HEADER}</h3>
+      <p className="component__p">{description}</p>
 
       <div className="view-price">
-        <h2 className="price__h2" style={{ color: primary }}>
-          Free Forever
-        </h2>
-        <Button variant="primary" style={{ color: secondary }}>
-          {btnText}
-        </Button>
+        <h2 className="price__h2">Free Forever</h2>
+        <Button variant="primary">{btnText}</Button>
       </div>
 
       <div className="container-advantages">
