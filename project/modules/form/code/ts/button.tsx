@@ -1,8 +1,8 @@
-import React, {ButtonHTMLAttributes, forwardRef, ReactNode, MouseEvent} from 'react';
+import React, { ButtonHTMLAttributes, forwardRef, ReactNode, MouseEvent } from 'react';
 
-import {Icon} from 'pragmate-ui/icons';
-import {Spinner} from 'pragmate-ui/spinner';
-import {RippleEffect} from 'pragmate-ui/ripple';
+import { Icon } from 'pragmate-ui/icons';
+import { Spinner } from 'pragmate-ui/spinner';
+import { RippleEffect } from 'pragmate-ui/ripple';
 interface props extends ButtonHTMLAttributes<HTMLButtonElement> {
 	data?: Record<string, any>;
 	label?: ReactNode;
@@ -63,7 +63,9 @@ export const /*bundle */ Button = forwardRef<HTMLButtonElement, props>((props, r
 		return (
 			<button ref={ref} className={cls} onClick={onClickButton} disabled={loading || disabled} {...properties}>
 				{icon && <Icon icon={icon} />}
-				<div className={`button-label ${loading ? 'loading' : ''}`}>{label || children}</div>
+				{(label || children) && (
+					<div className={`button-label ${loading ? 'loading' : ''}`}>{label || children}</div>
+				)}
 				{(loading || fetching) && <Spinner type={`on-${variant}`} active={true} />}
 			</button>
 		);
