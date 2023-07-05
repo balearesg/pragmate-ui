@@ -77,6 +77,20 @@ export const menuItems = [
     ],
   },
   {
+    name: "Menu",
+    path: "menu",
+    children: [
+      {
+        name: "Menu",
+        path: "menu",
+      },
+      {
+        name: "DropdownBottomMenu",
+        path: "dropdown-bottom-menu",
+      },
+    ],
+  },
+  {
     name: "Theme-switch",
     path: "theme-switch",
     children: [],

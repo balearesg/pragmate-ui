@@ -16,6 +16,10 @@
 
 	.view {
 		grid-area: main;
+		.view__span {
+			color: var(--primary);
+			font-weight: bold;
+		}
 	}
 
 	.container__aside {
