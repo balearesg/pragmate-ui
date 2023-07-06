@@ -16,11 +16,10 @@ export function ResultsFree() {
   return (
     <section>
       <Pricing
-        level="free"
+        variant="free"
         title="basic"
         price={0}
         description="For individuals and teams looking for more access, more AI Magic Tools and more export options."
-        btnText="sign up"
         advantages={advantages}
       />
     </section>

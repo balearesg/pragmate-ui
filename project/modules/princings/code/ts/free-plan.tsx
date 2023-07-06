@@ -2,7 +2,7 @@ import * as React from "react";
 import { Button } from "pragmate-ui/form";
 import { Icon } from "pragmate-ui/icons";
 export function FreePlan(props) {
-  const { title, description, btnText, advantages, primary, secondary } = props;
+  const { title, description, advantages } = props;
   const HEADER = title.charAt(0).toUpperCase() + title.slice(1);
 
   const listAdvanges = advantages.map((advantage, index) => (
@@ -17,7 +17,7 @@ export function FreePlan(props) {
 
       <div className="view-price">
         <h2 className="price__h2">Free Forever</h2>
-        <Button variant="primary">{btnText}</Button>
+        <Button variant="primary">Sign up</Button>
       </div>
 
       <div className="container-advantages">

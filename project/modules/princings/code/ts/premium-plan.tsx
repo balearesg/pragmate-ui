@@ -2,8 +2,7 @@ import * as React from "react";
 import { Button } from "pragmate-ui/form";
 import { Icon } from "pragmate-ui/icons";
 export function PremiumPlan(props) {
-  const { title, price, description, btnText, advantages, primary, secondary } =
-    props;
+  const { title, price, description, advantages } = props;
   const HEADER = title.charAt(0).toUpperCase() + title.slice(1);
   const listAdvanges = advantages.map((advantage, index) => (
     <li key={index}>
@@ -18,7 +17,7 @@ export function PremiumPlan(props) {
 
       <div className="view-price">
         <h2 className="price__h2">{price} €/month</h2>
-        <Button variant="primary">{btnText}</Button>
+        <Button variant="primary">Suscribe now</Button>
       </div>
 
       <div className="container-advantages">

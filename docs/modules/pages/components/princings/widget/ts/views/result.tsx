@@ -14,11 +14,10 @@ export function Results() {
   return (
     <section>
       <Pricing
-        level="free"
+        variant="free"
         title="basic"
         price={0}
         description="For individuals looking to explore Runway’s AI Magic Tools and content creation features."
-        btnText="sign up"
         advantages={advantages}
       />
     </section>
