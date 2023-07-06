@@ -56,16 +56,16 @@ function View() {
               </li>
             </ul>
             <p className="view__p">
-              los <code>pricing</code> proporciona valores predeterminados para
-              cada prop en caso de que no se proporcionen explícitamente. Esto
-              hace que sea más fácil para el usuario personalizar solo las props
-              que desea, sin tener que preocuparse por proporcionar todas las
-              props necesarias.
+              los <strong>pricing</strong> proporciona valores predeterminados
+              para cada prop en caso de que no se proporcionen explícitamente.
+              Esto hace que sea más fácil para el usuario personalizar solo las
+              props que desea, sin tener que preocuparse por proporcionar todas
+              las props necesarias.
             </p>
           </div>
         </div>
       </div>
-      <h3>Level:</h3>
+      <h3>Variant:</h3>
       <p className="view__p p-pricing">
         El componente <strong>Pricing</strong> utiliza otros componentes de
         variantes de precio (FreePlan y PremiumPlan) para renderizar la
@@ -74,11 +74,11 @@ function View() {
       </p>
       <div className="content-result">
         <div className="result">
-          <h4>Level Free</h4>
+          <h4>Variant Free</h4>
           <ResultsFree />
         </div>
         <div className="result">
-          <h4>Level Premiun</h4>
+          <h4>Variant Premiun</h4>
           <ResultsPremium />
         </div>
       </div>
