@@ -16,11 +16,10 @@ export function ResultsPremium() {
   return (
     <section>
       <Pricing
-        level="premium"
+        variant="premium"
         title="premium"
         price={78}
         description="For large teams and companies looking to add all of Runway’s features into their workflows."
-        btnText="suscribe now"
         advantages={advantages}
       />
     </section>

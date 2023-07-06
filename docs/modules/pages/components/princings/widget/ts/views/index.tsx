@@ -32,7 +32,29 @@ function View() {
             <h3>Result:</h3>
             <Results />
           </span>
-          <p className="view__p p-pricing">
+          <div className="container__p-pricing">
+            <h3 className="view__h3-props">Props :</h3>
+            <ul>
+              <li>
+                <strong>Variant :</strong> variante del pricing que desea
+                asignar, "free" o "premium".
+              </li>
+              <li>
+                <strong>Title :</strong> titulo del pricing.
+              </li>
+              <li>
+                <strong>Description :</strong> descripcion del pricing.
+              </li>
+              <li>
+                <strong>Price :</strong> precio que desee indicar al pricing
+                (esta propiedad solo es requerida en la variante "premium").
+              </li>
+              <li>
+                <strong>Advantages :</strong> lista de los beneficios de su
+                pricing, esta propiedad recibe un arreglo donde estara los
+                beneficios.
+              </li>
+            </ul>
             <p className="view__p">
               los <code>pricing</code> proporciona valores predeterminados para
               cada prop en caso de que no se proporcionen explícitamente. Esto
@@ -40,15 +62,15 @@ function View() {
               que desea, sin tener que preocuparse por proporcionar todas las
               props necesarias.
             </p>
-          </p>
+          </div>
         </div>
       </div>
       <h3>Level:</h3>
       <p className="view__p p-pricing">
-        El componente <code>Pricing</code> utiliza otros componentes de nivel de
-        precio (FreePlan y PremiumPlan) para renderizar la información
-        correspondiente a cada plan de precio. El nivel de precio se especifica
-        mediante la prop "level":
+        El componente <strong>Pricing</strong> utiliza otros componentes de
+        variantes de precio (FreePlan y PremiumPlan) para renderizar la
+        información correspondiente a cada plan de precio. El nivel de precio se
+        especifica mediante la prop <strong>"Variant"</strong>:
       </p>
       <div className="content-result">
         <div className="result">

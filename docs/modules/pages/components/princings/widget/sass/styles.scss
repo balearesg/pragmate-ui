@@ -5,8 +5,21 @@
         display: flex;
         flex-direction: row;
         gap: 25px;
+
+        .container__p-pricing {
+            ul {
+                transform: translateX(-40px);
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
         .view__p {
             transform: translateY(25px);
+        }
+        .view__h3-props {
+            margin: 20px 0px;
         }
     }
     

@@ -16,15 +16,11 @@ export function pricingPage() {
 	return (
         <section>
             <Princings
-                level="free"
+                variant="free"
                 title="basic"
                 price={78}
                 description="For individuals and teams looking for more access, more AI Magic Tools and more export options."
-                btnText="sign up"
                 advantages={advantages}
-                primary=""
-                secondary=""
-                background=""
             />
         </section>
 	);

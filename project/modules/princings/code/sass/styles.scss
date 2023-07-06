@@ -4,7 +4,7 @@
     max-width: 650px;
     width: 450px;
     border-radius: 13px;
-    overflow: hidden;
+    /* overflow: hidden; */
     
 
     .container-component {
@@ -13,6 +13,7 @@
         display: flex;
         flex-direction: column;
         padding: 20px;
+        position: relative;
 
         
     .component__h3 {
@@ -30,7 +31,6 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-
             .price__h2 {
                 font-size: 50px;
                 margin: 10px 0px;
@@ -43,12 +43,17 @@
         }
 
         .container-advantages {
+            transform: translateY(15px);
             ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
                 padding: 0;
                 margin: 20px 0px;
                 list-style: none;
 
                 li {
+                    border-bottom: 1px solid var(--primary);
                     display: flex;
                 }
             }

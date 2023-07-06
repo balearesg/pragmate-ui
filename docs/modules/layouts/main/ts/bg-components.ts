@@ -25,10 +25,6 @@ export const menuItems = [
         path: "textarea",
       },
       {
-        name: "Button",
-        path: "buttons",
-      },
-      {
         name: "Radio",
         path: "radio",
       },
@@ -93,6 +89,11 @@ export const menuItems = [
   {
     name: "Theme-switch",
     path: "theme-switch",
+    children: [],
+  },
+  {
+    name: "Button",
+    path: "buttons",
     children: [],
   },
   {
