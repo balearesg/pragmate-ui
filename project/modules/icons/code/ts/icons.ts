@@ -699,11 +699,13 @@ transform="translate(-20.5 0.013)"/></g>`,
 	mic: `<g id="mic"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"></path></g>`,
 	stop: `<g id="stop"><path d="M6 6h12v12H6z"></path></g>`,
 	'add-chat': {
-		viewBox: '0 0 36 36',
-		icon: `<g>  <circle id="Elipse_1" data-name="Elipse 1" cx="18" cy="18" r="18"/>
-		<path id="Icon_material-chat" data-name="Icon material-chat" d="M16.5,3H4.5A1.535,1.535,0,0,0,3.007,4.572L3,18.717l3-3.143H16.5A1.542,1.542,0,0,0,18,14V4.572A1.542,1.542,0,0,0,16.5,3Z" transform="translate(7.501 7.142)" fill="#f1f1f1"/>
-		<path id="Icon_awesome-plus" data-name="Icon awesome-plus" d="M6.16,4.856H4.028V2.724a.474.474,0,0,0-.474-.474H3.08a.474.474,0,0,0-.474.474V4.856H.474A.474.474,0,0,0,0,5.33V5.8a.474.474,0,0,0,.474.474H2.606V8.41a.474.474,0,0,0,.474.474h.474a.474.474,0,0,0,.474-.474V6.278H6.16A.474.474,0,0,0,6.634,5.8V5.33A.474.474,0,0,0,6.16,4.856Z" transform="translate(15.042 11)"/>
-	  </g>`,
+		viewBox: '0 0 24 24',
+		icon: `<g>  
+		<rect id="Rectángulo_162" data-name="Rectángulo 162" width="24" height="24" fill="none"/>
+		<path id="Trazado_131" data-name="Trazado 131" d="M20,2H4A2.006,2.006,0,0,0,2,4V22l4-4H20a2.006,2.006,0,0,0,2-2V4A2.006,2.006,0,0,0,20,2Zm0,14H6L4,18V4H20Z"/>
+		<path id="Icon_awesome-plus" data-name="Icon awesome-plus" d="M5.656,4.643H3.7V2.685a.435.435,0,0,0-.435-.435H2.828a.435.435,0,0,0-.435.435V4.643H.435A.435.435,0,0,0,0,5.078v.435a.435.435,0,0,0,.435.435H2.393V7.906a.435.435,0,0,0,.435.435h.435A.435.435,0,0,0,3.7,7.906V5.948H5.656a.435.435,0,0,0,.435-.435V5.078A.435.435,0,0,0,5.656,4.643Z" transform="translate(8.953 4.658)"/>
+	  
+			  </g>`,
 	},
 	speaker: {
 		viewBox: '0 0 36 36',
