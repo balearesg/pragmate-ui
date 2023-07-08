@@ -13,7 +13,7 @@
 		position: absolute;
 		bottom: -1.2rem;
 		left: 0;
-		color: var(--error);
+		color: var(--border-error);
 		font-size: 12px;
 	}
 
@@ -55,7 +55,7 @@
 		}
 	}
 	&.error {
-		border-color: var(--error);
+		border-color: var(--border-error);
 	}
 	
 	.pragmate-element-spinner {

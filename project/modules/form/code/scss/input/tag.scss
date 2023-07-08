@@ -50,11 +50,15 @@
     input:not(:placeholder-shown)~label,
     textarea:not(:placeholder-shown)~label {
         padding: 0px 8px;
-        background-color: var(--red);
+        background-color: var(--background);
         top: -12px;
         left: 16px;
         bottom: auto;
         transition: all 0.3s ease-in-out;
         color: var(--gray);
+    }
+
+    &-error {
+        color: red;
     }
 }
