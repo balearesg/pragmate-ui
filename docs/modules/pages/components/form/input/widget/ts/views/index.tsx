@@ -1,6 +1,5 @@
 import * as React from "react";
 
-import { CopyableImplementation } from "pragmate-ui/copyable-implementation";
 import {
   implementation,
   implementationDisabled,
@@ -16,8 +15,6 @@ import { ResultInputDisabled } from "./result-input-disabled";
 import { ResultInputPassword } from "./result-input-password";
 import { ResultInputLoading } from "./result-input-loading";
 import { Code } from "pragmate-ui/code";
-
-import { ImplementationResult } from "pragmate-ui/implementation-result";
 export /*bundle*/
 function View() {
   return (
@@ -33,13 +30,14 @@ function View() {
       <div className="component-info">
         <h3>Import:</h3>
         <Code>{`import { Input } from 'pragmate-ui/form';`}</Code>
+        <h3>Implementation</h3>
         <Code>{implementation}</Code>
         <main className="component-container component-container__input">
           <div className="column">
             <h3>Result:</h3>
           </div>
           <div className="column">
-            <h3>Implementation:</h3>
+            <h3>Component:</h3>
           </div>
 
           <div className="box">

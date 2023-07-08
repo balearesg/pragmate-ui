@@ -2,6 +2,7 @@ import * as React from "react";
 import { Code } from "pragmate-ui/code";
 import { implementation } from "./implementation";
 import { Result } from "./result";
+import { component } from "./component";
 export /*bundle*/
 function View() {
   return (
@@ -22,6 +23,10 @@ function View() {
         <Code>{`import { DropdownBottomMenu } from "pragmate-ui/menu"`}</Code>
       </div>
       <div className="component-implementation">
+        <div className="component">
+          <h3>component :</h3>
+          <Code>{component}</Code>
+        </div>
         <div className="component-info">
           <h3>Implementation: </h3>
           <Code>{implementation}</Code>

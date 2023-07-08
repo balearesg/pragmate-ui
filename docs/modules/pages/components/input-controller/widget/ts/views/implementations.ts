@@ -1,6 +1,4 @@
-export const component = `
-<Component template={template} />
-`;
+export const component = `<Component template={template} />`;
 
 export const template = `
 [

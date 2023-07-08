@@ -19,6 +19,10 @@ function View() {
         <Code>{`import { Switch } from 'pragmate-ui/form';`}</Code>
       </div>
       <div className="component-implementation">
+        <div className="component">
+          <h3>component :</h3>
+          <Code>{`<Switch className="checkbox" checked={isActive} onChange={handleChange} />`}</Code>
+        </div>
         <div className="component-info">
           <h3>Implementation: </h3>
           <Code>{implementation}</Code>

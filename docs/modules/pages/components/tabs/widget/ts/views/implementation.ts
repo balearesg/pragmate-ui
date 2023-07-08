@@ -3,7 +3,7 @@ export function ImplementationTabs() {
     const [tab, setTab] = React.useState<number>(0);
 
 	return (
-        <BeyondTabs selected={tab}>
+        <TabsContainer selected={tab}>
         <Tabs selected={tab}>
             <button data-path="/components/beyond-tabs?tab=0" onClick={() => setTab(0)}>TAB 0</button>
             <button data-path="/components/beyond-tabs?tab=1" onClick={() => setTab(1)}>TAB 1</button>
@@ -16,7 +16,7 @@ export function ImplementationTabs() {
             <div><p>Tab Content 2</p></div>
             <div><p>Tab Content 3</p></div>
         </TabsContent>
-    </BeyondTabs>
+    </TabsContainer>
 	);
   }
 `;

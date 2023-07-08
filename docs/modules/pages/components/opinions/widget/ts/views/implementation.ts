@@ -1,10 +1,1 @@
-export const implementation = `
-export function App() {
-    
-    return(
-       <>
-         <Opinions opinions={opinionsList} />
-       </>
-    );
-}
-`;
+export const implementation = `<Opinions opinions={opinionsList} />`;

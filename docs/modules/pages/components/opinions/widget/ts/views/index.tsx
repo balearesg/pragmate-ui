@@ -51,10 +51,10 @@ function View() {
       <div className="component-implementation">
         <div className="component-info">
           {" "}
-          <h4>Estructura del arreglo de objetos :</h4>
-          <Code>{implementationList}</Code>
-          <h4>Implementacion del componente :</h4>
+          <h4>Implementation :</h4>
           <Code>{implementation}</Code>
+          <h4>Object array structure :</h4>
+          <Code>{implementationList}</Code>
         </div>
         <div className="component-result">
           <h3>Result:</h3>

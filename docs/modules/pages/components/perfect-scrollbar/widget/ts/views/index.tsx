@@ -2,7 +2,7 @@ import * as React from "react";
 import { Results } from "./results";
 import { implementation } from "./implementation";
 import { Code } from "pragmate-ui/code";
-
+import { component } from "./component";
 export /*bundle*/
 function View() {
   return (
@@ -21,6 +21,10 @@ function View() {
         <h3>Import: </h3>
         <Code>{`import { ScrollContainer } from "pragmate-ui/perfect-scrollbar";`}</Code>
         <main className="component-container">
+          <div className="component">
+            <h3>component :</h3>
+            <Code>{component}</Code>
+          </div>
           <h3>Implementation: </h3>
           <Code>{implementation}</Code>
           <div className="component-result">

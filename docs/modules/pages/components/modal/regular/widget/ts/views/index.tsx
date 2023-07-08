@@ -1,8 +1,8 @@
 import * as React from "react";
-import { CopyableImplementation } from "pragmate-ui/copyable-implementation";
 import { Results } from "./results";
 import { implementation } from "./implementation";
 import { Code } from "pragmate-ui/code";
+import { component } from "./component";
 
 export /*bundle*/
 function View() {
@@ -25,6 +25,10 @@ function View() {
         <Code>{`import { Modal } from 'pragmate-ui/modal';`}</Code>
       </div>
       <div className="component-implementation">
+        <div className="component">
+          <h3>Component</h3>
+          <Code>{component}</Code>
+        </div>
         <div className="component-info">
           <h3>Implementation: </h3>
           <Code>{implementation}</Code>

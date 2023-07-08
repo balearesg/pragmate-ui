@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Code } from "pragmate-ui/code";
-
+import { component } from "./component";
 import { Results } from "./results";
 import { implementation } from "./implementation";
 
@@ -19,6 +19,10 @@ function View() {
         <Code>{`import { Radio } from 'pragmate-ui/form';`}</Code>
       </div>
       <div className="component-implementation">
+        <div className="component">
+          <h3>component :</h3>
+          <Code>{component}</Code>
+        </div>
         <div className="component-info">
           <h3>Implementation:</h3>
           <Code>{implementation}</Code>

@@ -18,6 +18,10 @@ function View() {
         <Code>{`import { Textarea } from 'pragmate-ui/form';`}</Code>
       </div>
       <div className="component-implementation">
+        <div className="component">
+          <h3>component :</h3>
+          <Code>{`<Textarea value={value} placeholder="Insert text..." onChange={handleChange} />`}</Code>
+        </div>
         <div className="component-info">
           <h3>Implementation: </h3>
           <Code>{implementation}</Code>

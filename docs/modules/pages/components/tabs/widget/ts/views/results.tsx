@@ -1,11 +1,11 @@
 import * as React from "react";
-import { TabsContent, BeyondTabs, Tabs } from "pragmate-ui/tabs";
+import { TabsContent, TabsContainer, Tabs } from "pragmate-ui/tabs";
 
 export function Results() {
   const [tab, setTab] = React.useState<number>(0);
 
   return (
-    <BeyondTabs selected={tab}>
+    <TabsContainer selected={tab}>
       <Tabs selected={tab}>
         <button
           data-path="/components/beyond-tabs?tab=0"
@@ -46,6 +46,6 @@ export function Results() {
           <p>Tab Content 3</p>
         </div>
       </TabsContent>
-    </BeyondTabs>
+    </TabsContainer>
   );
 }

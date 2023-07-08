@@ -2,7 +2,6 @@ import * as React from "react";
 import { Code } from "pragmate-ui/code";
 import { Results } from "./results";
 import { implementation } from "./implementation";
-
 export /*bundle*/
 function View() {
   return (
@@ -18,6 +17,10 @@ function View() {
         <Code>{`import { Checkbox } from 'pragmate-ui/form';`}</Code>
       </div>
       <div className="component-implementation">
+        <div className="component">
+          <h3>Component :</h3>
+          <Code>{`<Checkbox onChange={handleChange} checked={selectedValue} name="check" />`}</Code>
+        </div>
         <div className="component-info">
           <h3>Implementation:</h3>
           <Code>{implementation}</Code>

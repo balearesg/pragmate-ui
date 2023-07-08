@@ -2,14 +2,14 @@ import * as React from "react";
 import { implementation } from "./implementation";
 import { Results } from "./results";
 import { Code } from "pragmate-ui/code";
-
+import { component } from "./component";
 export /*bundle*/
 function View() {
   return (
     <div className="view">
       <h1 className="view__h1">Tabs</h1>
       <p className="view__p">
-        El componente <span className="view__span">Tabs</span> Este componente
+        El componente <span className="view__span">Tabs </span>
         permite a los usuarios navegar entre diferentes secciones de contenido
         utilizando pestañas. El componente Tabs es especialmente útil para
         aplicaciones web y de escritorio que requieren presentar información en
@@ -21,7 +21,7 @@ function View() {
       </p>
       <div className="component-info">
         <h3>Import:</h3>
-        <Code>{`import { TabsContent, BeyondTabs, Tabs } from "pragmate-ui/tabs";`}</Code>
+        <Code>{`import { TabsContent, TabsContainer, Tabs } from "pragmate-ui/tabs";`}</Code>
       </div>
       <p>
         Si pasa la propiedad <strong>thedata-path</strong> la pestaña hará un{" "}
@@ -29,6 +29,10 @@ function View() {
         <strong>thedata-path</strong>.
       </p>
       <div className="component-implementation">
+        <div className="component">
+          <h3>component :</h3>
+          <Code>{component}</Code>
+        </div>
         <div className="component-info">
           <h3>Implementation: </h3>
           <Code>{implementation}</Code>

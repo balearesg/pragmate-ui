@@ -3,7 +3,7 @@ import { Result } from "./results";
 import { implementation } from "./implementation";
 import { useBinder } from "@beyond-js/react-18-widgets/hooks";
 import { Code } from "pragmate-ui/code";
-
+import { component } from "./component";
 export /*bundle*/
 function View({ store }) {
   const [reset, setReset] = React.useState<number>(0);
@@ -31,6 +31,10 @@ function View({ store }) {
         <h3>Import: </h3>
         <Code>{`import { InputCode } from "pragmate-ui/code-verification";`}</Code>
         <main className="component-container">
+          <div className="component">
+            <h3>component :</h3>
+            <Code>{component}</Code>
+          </div>
           <h3>Implementation: </h3>
           <Code>{implementation}</Code>
           <div className="component-result">

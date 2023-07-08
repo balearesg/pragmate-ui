@@ -4,6 +4,7 @@ import { implementation } from "./implementation";
 import { Results } from "./result";
 import { ResultsPremium } from "./result-premium";
 import { ResultsFree } from "./result-free";
+import { component } from "./component";
 export /*bundle*/
 function View() {
   return (
@@ -23,6 +24,10 @@ function View() {
       </div>
 
       <div className="component-implementation">
+        <div className="component">
+          <h3>component :</h3>
+          <Code>{component}</Code>
+        </div>
         <div className="component-info">
           <h3>Implementation: </h3>
           <Code>{implementation}</Code>

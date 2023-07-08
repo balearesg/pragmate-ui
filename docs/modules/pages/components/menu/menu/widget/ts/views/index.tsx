@@ -22,6 +22,10 @@ function View() {
         <Code>{`import { Menu } from "pragmate-ui/menu"`}</Code>
       </div>
       <div className="component-implementation">
+        <div className="component">
+          <h3>component :</h3>
+          <Code>{`<Menu items={menuItems} title="Title" />`}</Code>
+        </div>
         <div className="component-info">
           <h3>Implementation: </h3>
           <Code>{implementation}</Code>

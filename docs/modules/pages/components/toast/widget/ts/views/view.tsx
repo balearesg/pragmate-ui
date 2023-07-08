@@ -40,13 +40,20 @@ function View() {
         <div className="component-info">
           <h3>Import:</h3>
           <Code>{`import { Toasts, toast } from 'pragmate-ui/toast';`}</Code>
+          <div className="component">
+            <h3>component :</h3>
+            <Code>{`<Toasts position={{ bottom: '2rem', right: '2rem',}} />`}</Code>
+          </div>
+          <div className="implementation">
+            <h3>Implementation:</h3>
+          </div>
           <Code>{implementation}</Code>
           <main className="component-container">
             <div className="column">
               <h3>Result:</h3>
             </div>
             <div className="column">
-              <h3>Implementation:</h3>
+              <h3>Functions implementation:</h3>
             </div>
             <div className="box">
               <h3>Case success toast:</h3>

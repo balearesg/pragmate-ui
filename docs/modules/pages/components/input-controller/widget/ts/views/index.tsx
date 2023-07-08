@@ -23,7 +23,7 @@ function Widget() {
         <Code>{`import {InputController} from 'pragmate-ui/input-controller';`}</Code>
       </div>
       <div className="component-info">
-        <h3>Implementation</h3>
+        <h3>component :</h3>
         <Code>{component}</Code>
       </div>
       <div className="component-implementation">
