@@ -45,8 +45,9 @@
 		}
 	}
 	.eye.pragmate-icon-button {
-		// position: absolute;
-		// right: 0.5rem;
+		position: relative;
+		top: -0.1rem;
+		right: 0.5rem;
 		svg.pragmate-icon {
 			width: 20px;
 			height: 20px;
