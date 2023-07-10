@@ -60,13 +60,14 @@ export const /*bundle */ Button = forwardRef<HTMLButtonElement, props>((props, r
 		cls += bordered ? ' outline' : '';
 		cls += icon ? ' has-icon' : '';
 
+		const isLoading = loading || fetching;
 		return (
-			<button ref={ref} className={cls} onClick={onClickButton} disabled={loading || disabled} {...properties}>
+			<button ref={ref} className={cls} onClick={onClickButton} disabled={isLoading || disabled} {...properties}>
 				{icon && <Icon icon={icon} />}
 				{(label || children) && (
-					<div className={`button-label ${loading ? 'loading' : ''}`}>{label || children}</div>
+					<div className={`button-label ${isLoading ? 'loading' : ''}`}>{label ?? children}</div>
 				)}
-				{(loading || fetching) && <Spinner type={`on-${variant}`} active={true} />}
+				{isLoading && <Spinner type={`on-${variant}`} active={true} />}
 			</button>
 		);
 	});

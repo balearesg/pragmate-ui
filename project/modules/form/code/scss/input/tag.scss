@@ -11,17 +11,17 @@
 		color: var(--text-color);
 		font-size: 16px;
 		line-height: 1.5rem;
-		transition: all 0.4s ease-in-out;
 		background-clip: content-box;
 
 		&:-webkit-autofill,
 		&:-webkit-autofill:focus {
-			-webkit-transition: background-color 0.2s 0s, color 0.2s 0s;
-			transition: background-color 0.2s 0s, color 0.2s 0s;
+			-webkit-transition: background-color 0.2s 0s;
+			transition: background-color 0.2s 0s;
 		}
 
 		&:focus {
 			color: var(--text-color);
+			transition: color 0.4s ease-in-out;
 		}
 	}
 
