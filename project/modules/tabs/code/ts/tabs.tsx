@@ -76,7 +76,7 @@ export /*bundle*/ function Tabs(props: PropsWithChildren<props>): JSX.Element {
   });
 
   return (
-    <div className="beyond-tabs-items">
+    <div className="pui-tabs-items">
       <div className="tabs-container">{output}</div>
     </div>
   );

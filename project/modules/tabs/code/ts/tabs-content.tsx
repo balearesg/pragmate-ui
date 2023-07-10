@@ -8,5 +8,5 @@ export /*bundle*/ function TabsContent(props: {
   const context = useTabsContext();
   const { children } = props;
   const content = children.find((content, index) => index === context.index);
-  return <div className="beyond-tabs-content">{content}</div>;
+  return <div className="pui-tabs-content">{content}</div>;
 }
