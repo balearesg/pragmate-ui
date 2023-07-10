@@ -32,17 +32,17 @@ function View() {
             <div className="info">
               <h4>Component information:</h4>
               <p>
-                - Recibe <code>count</code> para definir la cantidad máxima de
-                archivos que se pueden cargar si desea definir pase sin límite a
-                count <code>Infinity</code>
+                - Recibe <strong>count</strong> para definir la cantidad máxima
+                de archivos que se pueden cargar si desea definir pase sin
+                límite a count <strong>Infinity</strong>
               </p>
               <p>
-                - Recibe <code>formats</code> que es una matriz de cadenas con
-                los formatos disponibles que se pueden cargar.
+                - Recibe <strong>formats</strong> que es una matriz de cadenas
+                con los formatos disponibles que se pueden cargar.
               </p>
               <p>
-                - Recibe <code>onUpload</code> que es una función que recibe los
-                archivos cargados.
+                - Recibe <strong>onUpload</strong> que es una función que recibe
+                los archivos cargados.
               </p>
             </div>
           </div>
@@ -57,12 +57,12 @@ function View() {
             <h4>Component information:</h4>
             <div>
               <p>
-                - Recibe <code>textUserPhoto</code> en caso de que quieras
+                - Recibe <strong>textUserPhoto</strong> en caso de que quieras
                 cambiar el texto en el componente.
               </p>
               <p>
-                - Recibe <code>onUpload</code> que es una función que recibe los
-                archivos cargados.
+                - Recibe <strong>onUpload</strong> que es una función que recibe
+                los archivos cargados.
               </p>
               <p>
                 - De forma predeterminada, solo se admite un formato de archivo
