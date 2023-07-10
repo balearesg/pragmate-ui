@@ -30,6 +30,10 @@ function View() {
       <div className="component-info">
         <h3>Import:</h3>
         <Code>{`import { Input } from 'pragmate-ui/form';`}</Code>
+        <div className="component">
+          <h3>Component :</h3>
+          <Code>{`<Input type="text" name="name" label="Insert a text..." onChange={handleChange} value={value} />`}</Code>
+        </div>
         <h3>Implementation</h3>
         <Code>{implementation}</Code>
         <main className="component-container component-container__input">
