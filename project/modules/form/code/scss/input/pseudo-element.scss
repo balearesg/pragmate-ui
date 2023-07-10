@@ -1,33 +1,32 @@
 @import '~template/sass/variables';
 .pragmate-element-input,
 .pragmate-element-textarea {
+	&:hover:not(&.disabled),
+	&:focus-within:not(&.disabled) {
+		border-color: var(--primary);
+	}
 
-    &:hover:not(&.disabled),
-    &:focus-within:not(&.disabled) {
-        border-color: var(--primary);
-    }
+	&:hover:not(&.disabled) input,
+	&:hover:not(&.disabled) textarea {
+		color: var(--color-gray-20);
+	}
 
-    &:hover:not(&.disabled) input,
-    &:hover:not(&.disabled) textarea {
-        color: var(--gray-dark);
-    }
+	&.disabled,
+	&:disabled {
+		opacity: 0.5;
+		cursor: no-drop;
 
-    &.disabled,
-    &:disabled {
-        opacity: 0.5;
-        cursor: no-drop;
+		&:focus-within label,
+		input:not(:placeholder-shown) ~ label,
+		textarea:not(:placeholder-shown) ~ label,
+		label {
+			color: var(--gray);
+			cursor: no-drop;
+		}
 
-        &:focus-within label,
-        input:not(:placeholder-shown)~label,
-        textarea:not(:placeholder-shown)~label,
-        label {
-            color: var(--gray);
-            cursor: no-drop;
-        }
-
-        input,
-        textarea {
-            cursor: no-drop;
-        }
-    }
+		input,
+		textarea {
+			cursor: no-drop;
+		}
+	}
 }
