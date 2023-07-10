@@ -1,0 +1,29 @@
+/* MySelect.module.css */
+
+.select {
+	width: 200px;
+}
+
+.my-select__control {
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+}
+
+.my-select__control--is-focused {
+	background-color: #f0f0f0;
+}
+
+.my-select__option {
+	background-color: transparent;
+	color: inherit;
+}
+
+.my-select__option--is-selected {
+	background-color: #f0f0f0;
+	color: black;
+}
+
+.my-select__option:hover {
+	background-color: #f0f0f0;
+}
