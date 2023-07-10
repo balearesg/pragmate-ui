@@ -2,14 +2,13 @@ import * as React from "react";
 import { CopyableImplementation } from "pragmate-ui/copyable-implementation";
 import { Results } from "./results";
 import { implementation, implementationPhoto } from "./implementation";
-import { ImplementationResult } from "pragmate-ui/implementation-result";
 import { ResultsUserPhoto } from "./results-user-photo";
 import { Code } from "pragmate-ui/code";
 
 export /*bundle*/
 function View() {
   return (
-    <div className="view">
+    <div className="view view-drap-and-droll">
       <h1 className="view__h1">Drag and drop</h1>
       <p className="view__p">
         El componente <span className="view__span">Drag and drop</span>{" "}
@@ -27,11 +26,11 @@ function View() {
           <div>
             <h3>Case upload file:</h3>
             <Code>{implementation}</Code>
-            <Results />
           </div>
-          <div className="component-detail">
-            <h4>Component information:</h4>
-            <div>
+          <div className="flex-row">
+            <Results />
+            <div className="info">
+              <h4>Component information:</h4>
               <p>
                 - Recibe <code>count</code> para definir la cantidad máxima de
                 archivos que se pueden cargar si desea definir pase sin límite a

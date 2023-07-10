@@ -1,6 +1,5 @@
 .drag-and-drop-container {
   min-width: 400px;
-  margin: 0 auto;
   max-width: 400px;
   .FilesDragAndDrop {
     .FilesDragAndDrop__area {
@@ -12,10 +11,11 @@
       flex-flow: column nowrap;
       font-size: 24px;
       color: var(--gray-darker);
-      border: 2px var(--primary-dark) dashed;
+      border-style: dashed;
+      overflow: hidden;
       border-radius: 12px;
       margin: auto;
-      background-color: var(--gray-light);
+      background-color: #dddddd;
       position: relative;
 
       input {
@@ -64,7 +64,7 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    z-index: 9999;
+    z-index: 99;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +79,7 @@
     margin: 0 auto;
     &.FilesDragAndDrop__placeholder--error {
       background-color: var(--gray-light);
-      color: var(--error);
+      color: var(--border-error);
     }
 
     &.FilesDragAndDrop__placeholder--success {
@@ -164,7 +164,6 @@
   border-radius: 8px;
   font-size: 13px;
   background-color: var(--info);
-  // background-color: lighten($error, 15%);
   border: 1px solid var(--info);
   max-width: 100%;
   margin: 0 auto 15px;
@@ -176,7 +175,6 @@
   border-radius: 8px;
   font-size: 13px;
   background-color: var(--success);
-  // background-color: lighten($error, 15%);
   border: 1px solid var(--success);
   color: var(--on-primary);
   max-width: 90%;

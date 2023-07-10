@@ -13,7 +13,13 @@
       "path": "/widget/ts",
       "files": [
         "*"
-      ]
+      ],
+      "sass": {
+        "path": "/widget/scss",
+        "files": [
+          "*"
+        ]
+      }
     },
     "element": {
       "name": "drag-and-drop-page"
