@@ -371,10 +371,8 @@ d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 
 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
 </g>`,
 	'send-arrow': {
-		viewBox: '0 0 36 36',
-		icon: `<g >   <circle id="Elipse_4" data-name="Elipse 4" cx="18" cy="18" r="18" fill="none"/>
-	<path id="reply_FILL0_wght400_GRAD0_opsz48" d="M136.929-760v5.593a4.028,4.028,0,0,0,1.221,2.957,4.028,4.028,0,0,0,2.957,1.221h5.871l-4.95-4.95,1.35-1.35,7.264,7.264L143.378-742l-1.35-1.35,4.95-4.95h-5.871a5.9,5.9,0,0,1-4.307-1.784,5.861,5.861,0,0,1-1.8-4.323V-760Z" transform="translate(-124.822 769)" fill="#fff"/>
-  </g> `,
+		viewBox: '0 0 24 24',
+		icon: `<g><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M19 15l-6 6-1.42-1.42L15.17 16H4V4h2v10h9.17l-3.59-3.58L13 9l6 6z"/></g> `,
 	},
 	frontArrow: {
 		viewBox: '0 0 25 25',
@@ -686,21 +684,9 @@ transform="translate(-20.5 0.013)"/></g>`,
 		icon: '<g><path d="M12 11V15M14 13H10M5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H12.3284C11.798 7 11.2893 6.78929 10.9142 6.41421L10.0858 5.58579C9.71071 5.21071 9.20201 5 8.67157 5L5 5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>',
 	},
 	mic: {
-		viewBox: '0 0 36 36',
-		icon: `<g>  <path id="Trazado_136" data-name="Trazado 136" d="M18,0A18,18,0,1,1,0,18,18,18,0,0,1,18,0Z" fill="none"/>
-		<g id="mic_black_24dp" transform="translate(6.999 6.697)">
-		  <g id="Grupo_216" data-name="Grupo 216" transform="translate(0)">
-			<rect id="Rectángulo_117" data-name="Rectángulo 117" width="22" height="22" transform="translate(0 0.303)" fill="none"/>
-			<rect id="Rectángulo_118" data-name="Rectángulo 118" width="22" height="22" transform="translate(0 0.303)" fill="none"/>
-			<rect id="Rectángulo_119" data-name="Rectángulo 119" width="22" height="22" transform="translate(0 0.303)" fill="none"/>
-		  </g>
-		  <g id="Grupo_218" data-name="Grupo 218" transform="translate(4.576 1.84)">
-			<g id="Grupo_217" data-name="Grupo 217">
-			  <path id="Trazado_137" data-name="Trazado 137" d="M167.009,47.537a2.756,2.756,0,0,0,2.759-2.759V39.259a2.759,2.759,0,0,0-5.519,0v5.519A2.756,2.756,0,0,0,167.009,47.537Z" transform="translate(-160.571 -36.5)" fill="#fff"/>
-			  <path id="Trazado_138" data-name="Trazado 138" d="M102.287,200.75a4.6,4.6,0,1,1-9.2,0H91.25a6.434,6.434,0,0,0,5.519,6.365v2.833h1.84v-2.833a6.434,6.434,0,0,0,5.519-6.365Z" transform="translate(-91.25 -192.472)" fill="#fff"/>
-			</g>
-		  </g>
-		</g></g>`,
+		viewBox: '0 0 24 24',
+		icon: `<g><g><rect fill="none" height="24" width="24"/><rect fill="none" height="24" width="24"/><rect fill="none" height="24" width="24"/></g><g><g/><g><path d="M12,14c1.66,0,3-1.34,3-3V5c0-1.66-1.34-3-3-3S9,3.34,9,5v6C9,12.66,10.34,14,12,14z"/><path d="M17,11c0,2.76-2.24,5-5,5s-5-2.24-5-5H5c0,3.53,2.61,6.43,6,6.92V21h2v-3.08c3.39-0.49,6-3.39,6-6.92H17z"/></g></g></g>
+	  `,
 	},
 	stop: `<g id="stop"><path d="M6 6h12v12H6z"></path></g>`,
 	'add-chat': {
