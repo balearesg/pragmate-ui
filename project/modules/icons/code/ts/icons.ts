@@ -749,4 +749,11 @@ transform="translate(-20.5 0.013)"/></g>`,
 		<path id="Trazado_239" data-name="Trazado 239" d="M19,9l1.25-2.75L23,5,20.25,3.75,19,1,17.75,3.75,15,5l2.75,1.25Zm-7.5.5L9,4,6.5,9.5,1,12l5.5,2.5L9,20l2.5-5.5L17,12ZM19,15l-1.25,2.75L15,19l2.75,1.25L19,23l1.25-2.75L23,19l-2.75-1.25Z"/>
 	  </g>`,
 	},
+	exit: {
+		viewBox: '0 0 24 24',
+		icon: `<g><g id="Icon_Logout" data-name="Icon Logout">
+		<path id="Trazado_149" data-name="Trazado 149" d="M0,0H24V24H0Z" fill="none"/>
+		<path id="Trazado_150" data-name="Trazado 150" d="M17,7,15.59,8.41,18.17,11H8v2H18.17l-2.58,2.58L17,17l5-5ZM4,5h8V3H4A2.006,2.006,0,0,0,2,5V19a2.006,2.006,0,0,0,2,2h8V19H4Z"/>
+	  </g></g>`,
+	},
 };
