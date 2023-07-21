@@ -32,8 +32,8 @@ export /*bundle*/ const ConfirmModal = (properties): JSX.Element => {
     btnCancel,
   } = properties;
 
-  let cls: string = `beyond-confirm-dialog${
-    centered ? " beyond-confirm-dialog-centered" : ""
+  let cls: string = `pragmate-confirm-dialog${
+    centered ? " pragmate-confirm-dialog-centered" : ""
   }`;
   if (properties.className) cls += ` ${properties.className}`;
 
@@ -77,16 +77,19 @@ export /*bundle*/ const ConfirmModal = (properties): JSX.Element => {
 
       <div className="actions">
         <Button
-          className={clsCancel}
           label={cancelLabel}
           {...disabled}
           onClick={onCancel}
+          variant="warning"
+          bordered="true"
         />
         <Button
           className={clsConfirm}
           label={confirmLabel}
           {...disabled}
           onClick={process}
+          variant="success"
+          bordered="true"
         />
       </div>
     </Modal>

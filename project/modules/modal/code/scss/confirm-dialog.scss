@@ -1,5 +1,5 @@
-.beyond-confirm-dialog {
-  &.beyond-confirm-dialog-centered {
+.pragmate-confirm-dialog {
+  &.pragmate-confirm-dialog-centered {
     justify-content: center;
     text-align: center;
 
@@ -9,14 +9,14 @@
       justify-content: center;
     }
     p, div {
-      color: var(--text);
+      color: var(--text-color);
     }
   }
   .confirm-dialog-content p,
   .confirm-dialog-content div,
   .confirm-dialog-content h3,
   .confirm-dialog-content h4 {
-    color: var(--text);
+    color: var(--text-color);
   }
   .actions {
     border-top: 1px solid var(--gray-light);
@@ -27,7 +27,7 @@
     grid-gap: 8px;
     justify-content: end;
 
-    .beyond-button {
+    .pragmate-button {
       margin: 0;
       min-width: 6rem;
     }
@@ -41,7 +41,6 @@
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    border-radius: var(--border-secondary);
 
     display: flex;
     flex-direction: row-reverse;
