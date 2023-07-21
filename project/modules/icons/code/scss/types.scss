@@ -14,7 +14,7 @@ $button-variants: (
 	),
 	'default': (
 		var(--default),
-		var(--text-color),
+		var(--on-background),
 	),
 	'success': (
 		var(--success-container),
