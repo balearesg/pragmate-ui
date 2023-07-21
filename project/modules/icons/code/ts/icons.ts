@@ -264,7 +264,7 @@ export /*bundle*/ const PRAGMATE_ICONS: any = {
   </g>
   `,
 	},
-	'share-folder': {
+	'share-link': {
 		viewBox: '0 0 24 24',
 		icon: `<g> <path id="Trazado_175" data-name="Trazado 175" d="M0,0H24V24H0Z" fill="none"/>
 		<path id="Trazado_176" data-name="Trazado 176" d="M51.375,38.33a2.912,2.912,0,0,0-1.96.77l-7.13-4.15a2.767,2.767,0,0,0,0-1.4l7.05-4.11a2.993,2.993,0,1,0-.96-2.19,3.274,3.274,0,0,0,.09.7l-7.05,4.11a3,3,0,1,0,0,4.38l7.12,4.16a2.821,2.821,0,0,0-.08.65,2.92,2.92,0,1,0,2.92-2.92Zm0-12.08a1,1,0,1,1-1,1A1,1,0,0,1,51.375,26.25Zm-12,9a1,1,0,1,1,1-1A1,1,0,0,1,39.375,35.25Zm12,7.02a1,1,0,1,1,1-1A1,1,0,0,1,51.375,42.27Z" transform="translate(-33.375 -22.25)"/></g>`,
@@ -755,5 +755,11 @@ transform="translate(-20.5 0.013)"/></g>`,
 		<path id="Trazado_149" data-name="Trazado 149" d="M0,0H24V24H0Z" fill="none"/>
 		<path id="Trazado_150" data-name="Trazado 150" d="M17,7,15.59,8.41,18.17,11H8v2H18.17l-2.58,2.58L17,17l5-5ZM4,5h8V3H4A2.006,2.006,0,0,0,2,5V19a2.006,2.006,0,0,0,2,2h8V19H4Z"/>
 	  </g></g>`,
+	},
+	class: {
+		viewBox: '0 0 24 24',
+		icon: `<g><path id="Trazado_229" data-name="Trazado 229" d="M0,0H24V24H0Z" transform="translate(0)" fill="none"/>
+		<path id="Trazado_230" data-name="Trazado 230" d="M13,3,1,9.545l4.364,2.378v6.545L13,22.636l7.636-4.167V11.924l2.182-1.189v7.538H25V9.545Zm7.44,6.545L13,13.6,5.56,9.545,13,5.487Zm-1.985,7.625L13,20.149,7.545,17.171V13.113L13,16.091l5.455-2.978Z" transform="translate(-1 -0.818)" />
+	  </g>`,
 	},
 };
