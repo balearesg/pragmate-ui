@@ -9,7 +9,7 @@
 
 	&:hover:not(&.disabled) input,
 	&:hover:not(&.disabled) textarea {
-		color: var(--color-gray-20);
+		color: var(--color-gray-80);
 		transition: color 0.4s ease-in-out;
 	}
 
