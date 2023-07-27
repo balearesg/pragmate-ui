@@ -23,6 +23,7 @@
 			cursor: pointer;
 
 			&:hover {
+				transform: scale(1.2);
 				background-color: var(--primary);
 			}
 			
