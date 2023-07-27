@@ -1,0 +1,86 @@
+.tooltip-container {
+	position: relative;
+	display: inline-block;
+
+	.tooltip {
+		display: none;
+		position: absolute;
+		background-color: var(--surface);
+		color: var(--text-color);
+		padding: 0.6rem 1rem;
+		border: 1px solid var(--color-gray-40);
+		box-shadow: var(--shadow-5);
+		z-index: 10;
+		border-radius: var(--border-radius-sm);
+		transition: all 0.3s ease-in-out;
+		transform: translate(0, 0);
+
+		&.left {
+			top: 50%;
+			left: -100%;
+			transform: translate(0, -50%);
+			&::after {
+				content: '';
+				position: absolute;
+				border-color: transparent transparent transparent var(--surface-variant);
+				border-style: solid;
+				border-width: 0.5rem;
+				top: 50%;
+				right: -1rem;
+				transform: translate(0, -50%);
+			}
+		}
+
+		&.right {
+			top: 50%;
+			left: 100%;
+			transform: translate(0, -50%);
+			&::after {
+				content: '';
+				position: absolute;
+				border-color: transparent var(--surface-variant) transparent transparent;
+				border-style: solid;
+				border-width: 0.5rem;
+				top: 50%;
+				left: -1rem;
+				transform: translate(0, -50%);
+			}
+		}
+
+		&.top {
+			top: -100%;
+			left: 50%;
+			transform: translate(-50%, 0);
+			&::after {
+				content: '';
+				position: absolute;
+				border-color: var(--surface-variant) transparent transparent transparent;
+				border-style: solid;
+				border-width: 0.5rem;
+				bottom: -1rem;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+		}
+
+		&.bottom {
+			top: 100%;
+			left: 50%;
+			transform: translate(-50%, 0);
+			&::after {
+				content: '';
+				position: absolute;
+				border-color: transparent transparent var(--surface-variant) transparent;
+				border-style: solid;
+				border-width: 0.5rem;
+				top: -1rem;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+		}
+
+		&.visible {
+			display: block;
+		}
+	}
+}
