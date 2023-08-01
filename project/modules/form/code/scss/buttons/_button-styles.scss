@@ -38,7 +38,10 @@
 			}
 
 			&.outline {
-				border: 2px solid var(--primary);
+				background-color: transparent;
+				border: 1px solid var(--primary);
+				color: $bg-color;
+				/* border: 2px solid var(--primary); */
 				&:hover:not(:disabled) {
 					background-color: $bg-color;
 					color: $text-color;
