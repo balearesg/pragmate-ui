@@ -72,3 +72,8 @@
 		}
 	}
 }
+
+.sidebar__item--checked > a {
+	color: var(--text-color);
+	font-weight: bold;
+}

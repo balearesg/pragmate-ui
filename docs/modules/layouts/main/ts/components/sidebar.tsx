@@ -25,6 +25,7 @@ export function Sidebar() {
     if (component?.children.length > 0) {
       return <SidebarDropdown key={component.path} component={component} />;
     }
+
     return (
       <SidebarItem
         key={component.path}
@@ -33,7 +34,6 @@ export function Sidebar() {
       />
     );
   });
-
   const componentsElements = sortedMenuItems.map((component: IComponent) => {
     if (component?.children.length > 0) {
       return <SidebarDropdown key={component.path} component={component} />;
