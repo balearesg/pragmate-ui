@@ -10,3 +10,29 @@ body {
 code {
 	color: var(--on-tertiary);
 }
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+body {
+	min-height: 100vh;
+}
+
+html {
+	color-scheme: dark light;
+}
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}

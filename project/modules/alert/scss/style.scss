@@ -1,34 +1,8 @@
 @import '~template/sass/variables';
 @import './generator';
 
-/* 
-	.alert {
-	display: flex;
-	flex-direction: column;
-	max-height: 400px;
-	
-	font-size: 13px;
-	
-	position: relative;
-	padding: 10px;
-	gap: 10px;
-	width: 95%;
-	border-left: 9px;
-
-	.alert__title {
-		width: 100%;
-		display: flex;
-		
-		gap: 1rem;
-	}
-
-	.pragmate-icon-button {
-		position: absolute;
-		transform: translateX(355px);
-	}
-} */
 .alert {
-	padding: 1em;
+	padding: 0.5rem 1em;
 	border-width: 1px;
 	border-style: solid;
 	border-radius: var(--alert-container-border-radius);
@@ -36,7 +10,7 @@
 	font-size: var(--alert-font-size);
 	line-height: var(--alert-line-height);
 
-	.alert-icon {
+	.alert--icon {
 		width: var(--alert-icon-size);
 		height: var(--alert-icon-size);
 		margin-right: 0.5em;
