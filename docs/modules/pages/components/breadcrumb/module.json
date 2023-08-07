@@ -1,0 +1,23 @@
+{
+  "name": "breadcrumb",
+  "widget": {
+    "route": "/components/breadcrumb",
+    "layout": "main-layout",
+    "is": "page",
+    "sass": {
+      "path": "/widget/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "element": {
+      "name": "component-breadcrumb"
+    }
+  }
+}
