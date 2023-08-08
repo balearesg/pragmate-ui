@@ -23,7 +23,7 @@ function Alert(props: IProps) {
 	const { message, className, type, title, children, closable, onClose, icon } = props;
 	const [show, setShow] = React.useState(true);
 
-	if (!show) {
+	if (!show || (!message && !children)) {
 		return null;
 	}
 
