@@ -112,6 +112,11 @@ export const menuItems = [
     children: [],
   },
   {
+    name: "BreadCrumb",
+    path: "breadcrumb",
+    children: [],
+  },
+  {
     name: "Opinions",
     path: "opinions",
     children: [],
