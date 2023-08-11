@@ -1,5 +1,7 @@
 .pragmate-checkbox {
   .cbx {
+    display: flex;
+    gap: 5px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -10,7 +12,7 @@
       display: inline-block;
       vertical-align: middle;
       transform: translate3d(0, 0, 0);
-      color: var(--gray-darker);
+      color: var(--on-background);
       font-weight: 500;
       &:first-child {
         position: relative;
@@ -86,7 +88,7 @@
       }
     }
     &:last-child {
-      color: var(--gray-darker);
+      color: var(--tertiary);
       transition: all 0.3s ease;
     }
     &:after {
