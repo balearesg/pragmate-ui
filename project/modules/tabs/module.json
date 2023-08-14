@@ -1,24 +1,15 @@
 {
-  "name": "tabs",
-  "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
-  "code": {
-    "hmr": true,
-    "name": "tabs",
-    "sass": {
-      "path": "/code/sass",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "/code/ts",
-      "files": [
-        "*"
-      ]
-    }
-  }
-}
+	"name": "tabs",
+	"platforms": ["web", "ios", "android"],
+	"code": {
+		"name": "tabs",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		}
+	}
+}	
