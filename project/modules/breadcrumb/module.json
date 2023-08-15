@@ -1,17 +1,14 @@
 {
-  "name": "breadcrumb",
-  "code": {
-    "sass": {
-      "path": "/code/scss",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "/code/ts",
-      "files": [
-        "*"
-      ]
-    }
-  }
+	"name": "breadcrumb",
+	"platforms": ["web", "ios", "android"],
+	"code": {
+		"sass": {
+			"path": "/code/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/code/ts",
+			"files": ["*"]
+		}
+	}
 }
