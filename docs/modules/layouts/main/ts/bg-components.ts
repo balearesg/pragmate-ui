@@ -112,6 +112,11 @@ export const menuItems = [
     children: [],
   },
   {
+    name: "BreadCrumb",
+    path: "breadcrumb",
+    children: [],
+  },
+  {
     name: "Opinions",
     path: "opinions",
     children: [],
@@ -173,4 +178,8 @@ export const menuItems = [
     path: "link",
     children: [],
   },
-];
+].sort((a, b) => {
+  if (a.name < b.name) return -1;
+  if (a.name > b.name) return 1;
+  return 0;
+});

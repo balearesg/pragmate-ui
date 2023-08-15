@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+.container__aside {
+	&::-webkit-scrollbar {
+			width: 7px;
+			background-color: var(--surface);
+		}
+	
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--tertiary);
+			border-radius: 7px;
+		}
+	
+		.aside__h3-title {
+			transition: all 0.5s;
+			cursor: auto;
+		}
+
+	.aside__ul {
+
+		& .aside__li {
+			margin-top: 0;
+
+			h3 {
+				display: flex;
+				gap: 10px;
+				align-items: center;
+			}
+		}
+	}
+
+	ul {
+		transition: all 0.2s ease-in-out;
+		padding: 0;
+		list-style: none;
+		
+		li {
+			cursor: pointer;
+			font-family: 'Poppins', sans-serif;
+			a {
+				display: flex;
+				width: 80%;
+				padding: 0.5rem;
+				&:hover {
+					background: var(--primary-container);
+				}
+			}
+		}
+	}
+
+	.sub-list {
+		transition: all 0.2s ease-in-out;
+		border-top: 0;
+		li {
+			a {
+				border-left: 1px solid;
+				transform: translateX(8px);
+				padding-left: 2rem;
+				&::before {
+					width: 98%;
+				}
+			}
+		}
+	}
+	
+	.aside-scrollbar {
+		position: relative;
+		transition: all 0.2s ease-in-out;
+		top: 0;
+		.sidebar-item__icon {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}
+
+.sidebar__item--checked > a {
+	color: var(--text-color);
+	font-weight: bold;
+}

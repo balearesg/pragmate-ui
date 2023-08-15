@@ -1,0 +1,23 @@
+{
+  "name": "custom-properties",
+  "widget": {
+    "route": "/components/custom-properties",
+    "layout": "main-layout",
+    "is": "page",
+    "sass": {
+      "path": "/widget/sass",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "element": {
+      "name": "page-properties"
+    }
+  }
+}

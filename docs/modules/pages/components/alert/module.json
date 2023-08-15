@@ -1,5 +1,5 @@
 {
-	"name": "alert",
+	"name": "_alert",
 	"platforms": [
 		"web",
 		"ios",
@@ -10,13 +10,13 @@
 		"layout": "main-layout",
 		"is": "page",
 		"ts": {
-			"path": "/widget/ts",
+			"path": "/ts",
 			"files": [
 				"*"
 			]
 		},
 		"sass": {
-			"path": "/widget/scss",
+			"path": "/scss",
 			"files": [
 				"*"
 			]

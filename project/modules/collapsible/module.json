@@ -1,0 +1,13 @@
+{
+	"name": "collapsible",
+	"description": "Collapsible component for pragmate-ui",
+	"bundle": "code",
+	"scss": {
+		"path": "/scss",
+		"files": ["*"]
+	},
+	"ts": {
+		"path": "/ts",
+		"files": ["*"]
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"name": "pages/components/collapsible",
+	"txt": {
+		"path": "txt",
+		"files": "*"
+	},
+	"widget": {
+		"route": "/docs/collapsible",
+		"layout": "main-layout",
+		"is": "page",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "pragmate-collapsible-page"
+		}
+	}
+}

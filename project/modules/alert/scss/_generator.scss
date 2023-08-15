@@ -1,0 +1,15 @@
+$alert-types: 'success', 'error', 'warning', 'info';
+
+@mixin generate-alerts {
+	@each $type in $alert-types {
+		&.alert--#{$type} {
+			color: var(--pui-on-#{$type});
+			border-color: var(--pui-#{$type}-border-color);
+			background: var(--pui-#{$type}-container);
+
+			.alert-icon {
+				fill: var(--pui-#{$type}-icon-color);
+			}
+		}
+	}
+}
