@@ -5,7 +5,8 @@
 		"files": "*"
 	},
 	"widget": {
-		"route": "/collapsible",
+		"route": "/docs/collapsible",
+		"layout": "main-layout",
 		"is": "page",
 		"scss": {
 			"path": "/scss",
@@ -16,7 +17,8 @@
 			"files": ["*"]
 		},
 		"mdx": {
-			"files": "/ts"
+			"path": "/ts",
+			"files": ["*"]
 		},
 		"element": {
 			"name": "pragmate-collapsible-page"
