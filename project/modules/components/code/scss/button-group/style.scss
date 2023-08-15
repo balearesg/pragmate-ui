@@ -1,0 +1,32 @@
+$orientations : (column, row);
+$size : (small, medium, tall);
+.pragmate-button-group {
+
+     display: flex;
+     height: 100%;
+     width: max-content;
+     flex-grow: 1;
+     flex-shrink: 1;
+     flex-wrap: nowrap;
+     border: 1px solid var(--primary);
+
+    @if index($orientations, 'column') {
+        flex-direction: column;
+    } @else if index($orientations, 'row') {
+        flex-direction: row;
+    }
+    
+    &>.pragmate-button {
+        border-radius: 0;
+
+        @if index($size, 'small') {
+            font-size: 12px
+        } @else if index($size, 'medium') {
+            font-size: 16px
+        } @else if index($size, 'tall') {
+            font-size: 18px
+        }
+    }
+
+ }
+ 

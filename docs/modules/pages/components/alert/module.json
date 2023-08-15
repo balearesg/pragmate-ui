@@ -1,17 +1,25 @@
 {
-	"name": "alert",
-	"platforms": ["web", "ios", "android"],
+	"name": "_alert",
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	],
 	"widget": {
 		"route": "/components/alert",
 		"layout": "main-layout",
 		"is": "page",
 		"ts": {
 			"path": "/ts",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"sass": {
 			"path": "/scss",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"element": {
 			"name": "alert-page"

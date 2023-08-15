@@ -97,6 +97,11 @@ export const menuItems = [
     children: [],
   },
   {
+    name: "Button Group",
+    path: "button-group",
+    children: [],
+  },
+  {
     name: "Code",
     path: "code",
     children: [],

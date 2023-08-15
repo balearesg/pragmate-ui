@@ -1,0 +1,17 @@
+{
+  "name": "content",
+  "widget": {
+    "route": "/docs/${content}",
+    "layout": "main-layout",
+    "is": "page",
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "element": {
+      "name": "content-widget"
+    }
+  }
+}

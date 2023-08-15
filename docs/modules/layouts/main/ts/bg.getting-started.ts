@@ -9,4 +9,9 @@ export const gettingStartedItems = [
     path: "installation",
     children: [],
   },
+  {
+    name: "Custom properties",
+    path: "custom-properties",
+    children: [],
+  },
 ];
