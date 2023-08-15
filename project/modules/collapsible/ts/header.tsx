@@ -5,8 +5,13 @@ import { IconButton } from 'pragmate-ui/icons';
 interface ICollapsibleProps {
 	children: React.ReactNode;
 	className?: string;
+	toggleTitle?: boolean;
 }
-export /*bundle */ function CollapsibleHeader({ children, className }: ICollapsibleProps): JSX.Element {
+export /*bundle */ function CollapsibleHeader({
+	children,
+	className,
+	toggleTitle = true,
+}: ICollapsibleProps): JSX.Element {
 	const { setOpen, onToggle, open } = useCollapsibleContext();
 
 	const onClick = async () => {
@@ -16,8 +21,12 @@ export /*bundle */ function CollapsibleHeader({ children, className }: ICollapsi
 	};
 	const cls = `collapsible__header ${className ? ` ${className}` : ''} ${open ? 'open' : ''}`;
 	const clsButton = `collapsible__button ${open ? ' collapsible__button--opened' : ''}`;
+	const attrs: { className: string; onClick?: () => void } = { className: cls };
+	if (toggleTitle) {
+		attrs.onClick = onClick;
+	}
 	return (
-		<header className={cls}>
+		<header {...attrs}>
 			<div>{children}</div>
 			<IconButton onClick={onClick} className={clsButton} icon={'left'} />
 		</header>

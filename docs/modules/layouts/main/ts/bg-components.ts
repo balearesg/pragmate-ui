@@ -97,11 +97,6 @@ export const menuItems = [
     children: [],
   },
   {
-    name: "Button Group",
-    path: "button-group",
-    children: [],
-  },
-  {
     name: "Code",
     path: "code",
     children: [],
@@ -183,4 +178,8 @@ export const menuItems = [
     path: "link",
     children: [],
   },
-];
+].sort((a, b) => {
+  if (a.name < b.name) return -1;
+  if (a.name > b.name) return 1;
+  return 0;
+});

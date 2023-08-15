@@ -2,19 +2,22 @@ import * as React from 'react';
 import { CollapsibleHeader } from './header';
 import { CollapsibleContext } from './context';
 
-interface ICollapsibleHeaderProps {
+interface IContainerProps {
 	children: React.ReactNode;
 	className?: string;
+	open?: boolean;
 	onToggle?: (open: boolean) => void;
 }
 
 export /*bundle */ function CollapsibleContainer({
 	children,
 	onToggle,
+	open = false,
 	className,
-}: ICollapsibleHeaderProps): JSX.Element {
-	const [open, setOpen] = React.useState(false);
-	const value = { open, setOpen, onToggle };
+}: IContainerProps): JSX.Element {
+	open;
+	const [opened, setOpen] = React.useState(open);
+	const value = { open: opened, setOpen, onToggle };
 	const cls = `collapsible__container ${className ? ` ${className}` : ''} `;
 	return (
 		<CollapsibleContext.Provider value={value}>
