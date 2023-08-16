@@ -11,7 +11,8 @@ export function SidebarDropdown({ component }) {
     routing.uri.pathname
   );
 
-  const location = `/docs/${component.path}`;
+  const location = `/components/${component.path}`;
+  console.log(component.path, "sidebar-dropdowm");
 
   const isChecked =
     location === routing.uri.pathname

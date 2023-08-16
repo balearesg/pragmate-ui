@@ -1,16 +1,23 @@
 {
 	"name": "alert",
-	"platforms": ["web", "ios", "android"],
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	],
 	"code": {
-		"hmr": true,
 		"name": "alert",
 		"ts": {
 			"path": "/ts",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
-		"sass": {
+		"scss": {
 			"path": "/scss",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		}
 	}
 }

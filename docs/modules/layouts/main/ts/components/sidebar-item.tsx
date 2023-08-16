@@ -12,7 +12,7 @@ export function SidebarItem({ component, tabIndex }: Props) {
     routing.uri.pathname
   );
 
-  const location = `/docs/${component.path}`;
+  const location = `/components/${component.path}`;
 
   const isChecked =
     location === routing.uri.pathname

@@ -5,20 +5,26 @@
 		"files": "*"
 	},
 	"widget": {
-		"route": "/docs/collapsible",
+		"route": "/components/collapsible",
 		"layout": "main-layout",
 		"is": "page",
 		"scss": {
 			"path": "/scss",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"ts": {
 			"path": "/ts",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"mdx": {
 			"path": "/ts",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"element": {
 			"name": "pragmate-collapsible-page"
