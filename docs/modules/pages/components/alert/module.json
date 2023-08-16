@@ -1,5 +1,5 @@
 {
-	"name": "_alert",
+	"name": "alert",
 	"platforms": [
 		"web",
 		"ios",
@@ -17,6 +17,12 @@
 		},
 		"sass": {
 			"path": "/scss",
+			"files": [
+				"*"
+			]
+		},
+		"mdx": {
+			"path": "/ts",
 			"files": [
 				"*"
 			]

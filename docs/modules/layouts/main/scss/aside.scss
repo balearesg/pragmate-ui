@@ -13,6 +13,9 @@
 		.aside__h3-title {
 			transition: all 0.5s;
 			cursor: auto;
+			display: flex;
+			gap: 10px;
+			align-items: center;
 		}
 
 	.aside__ul {
