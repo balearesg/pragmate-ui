@@ -1,8 +1,8 @@
 :host {
 	/* Info Alert Colors */
-	--pui-on-info: var(--on-info, #0d47a1);
+	--pui-on-info: var(--on-info, #fff);
 	--pui-info-icon-color: var(--info-icon-color, --on-info);
-	--pui-info-container: var(--info-container, hsl(210, 48%, 28%)); /* Example hsl value for Blue 50 */
+	--pui-info-container: var(--info-container, hsl(210, 48%, 98%)); /* Example hsl value for Blue 50 */
 	--pui-info-border-color: var(--info-border-color, hsl(209, 99%, 32%)); /* 5% darker */
 
 	/* Warning Alert Colors */
@@ -16,7 +16,6 @@
 	--pui-success-icon-color: var(--success-icon-color, --on-success);
 	--pui-success-container: var(--success-container, hsl(122, 40%, 95%)); /* Example hsl value for Green 50 */
 	--pui-success-border-color: var(--success-border-color, hsl(123, 93%, 33%));
-
 
 	/* Error/Danger Alert Colors */
 	--pui-on-error: var(--on-error, #b71c1c);
