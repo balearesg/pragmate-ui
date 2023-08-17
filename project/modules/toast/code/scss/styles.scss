@@ -1,11 +1,13 @@
+@import 'keyframes';
 $toast-content-color: /* var(--text-color) */ #fff;
 
-.essential__toasts {
+.pui-toast__container {
 	max-height: 100vh;
 	position: fixed;
 	z-index: 50;
 	display: grid;
 	gap: 1rem;
+	z-index: 1001; //one more than modal component
 
 	.toast {
 		border-radius: 10px;
@@ -15,7 +17,7 @@ $toast-content-color: /* var(--text-color) */ #fff;
 		grid-template-columns: 25px calc(100% - 25px);
 		gap: 0.5rem;
 		align-items: center;
-		z-index: 100;
+		z-index: 1001;
 		position: relative;
 		transition: all 0.3s ease-in-out;
 
@@ -45,47 +47,5 @@ $toast-content-color: /* var(--text-color) */ #fff;
 			width: 25px;
 			height: 25px;
 		}
-
-		&.success {
-			background: var(--success-container);
-		}
-
-		&.error {
-			background: var(--error-container);
-		}
-
-		&.warning {
-			background: var(--warning-container);
-		}
-
-		&.info {
-			background: var(--info-container);
-		}
-
-		&.loading {
-			background: var(--info-container);
-		}
-	}
-}
-
-@keyframes toast-enter {
-	from {
-		transform: translateY(100%);
-		opacity: 0;
-	}
-	to {
-		transform: translateY(-50%);
-		opacity: 1;
-	}
-}
-
-@keyframes toast-exit {
-	from {
-		transform: translateY(-50%);
-		opacity: 1;
-	}
-	to {
-		transform: translateY(100%);
-		opacity: 0;
 	}
 }

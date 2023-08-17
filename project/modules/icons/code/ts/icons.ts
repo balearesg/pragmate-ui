@@ -765,4 +765,13 @@ transform="translate(-20.5 0.013)"/></g>`,
 		viewBox: '0 0 24 24',
 		icon: `<g><path d="M24 24H0V0h24v24z" fill="none" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></g>`,
 	},
+	down: {
+		viewBox: '0 0 10.867 6.273',
+		icon: `<g xmlns="http://www.w3.org/2000/svg"  >
+					<g id="Shape" transform="translate(1.061 1.061)">
+					<path id="Shape-2" data-name="Shape" d="M.089,0,4.462,4.284,0,8.746" transform="translate(8.746) rotate(90)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+					</g>
+				</g>
+				`,
+	}
 };

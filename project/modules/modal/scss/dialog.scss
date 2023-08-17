@@ -1,0 +1,35 @@
+.beyond-alert-dialog {
+	&.beyond-alert-dialog-centered {
+		.alert-dialog-content,
+		.actions {
+			display: grid;
+			justify-content: center;
+		}
+	}
+
+	.alert-dialog-content {
+		display: flex;
+		flex-direction: column;
+		row-gap: 8px;
+		h3,
+		div {
+			color: var(--text);
+		}
+		h3 {
+			font-weight: bold;
+			font-size: 18px;
+		}
+	}
+
+	.actions {
+		border-top: 1px solid var(--gray-light);
+		margin-top: 15px;
+		display: grid;
+		justify-content: end;
+		padding: 15px 0 0;
+
+		.beyond-button {
+			margin: 0;
+		}
+	}
+}

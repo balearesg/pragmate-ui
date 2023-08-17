@@ -1,24 +1,13 @@
 {
-  "name": "modal",
-  "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
-  "code": {
-    "hmr": true,
-    "name": "modal",
-    "ts": {
-      "path": "/code/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "sass":{
-      "path": "/code/scss",
-      "files": [
-        "*"
-      ]
-    }
-  }
+	"name": "modal",
+	"platforms": ["web", "ios", "android"],
+	"bundle": "code",
+	"ts": {
+		"path": "/ts",
+		"files": ["*"]
+	},
+	"scss": {
+		"path": "/scss",
+		"files": ["*"]
+	}
 }
