@@ -34,16 +34,11 @@ body.body-beyond-modal-opened {
 		//   @include zoomIn(1, 300ms);
 	}
 
-	&.modal-hidden {
-		.modal-wrapper {
-			//  @include zoomOut(1, 200ms);
-		}
-	}
-
 	.modal-content {
 		position: relative;
+
 		color: var(--text);
 		background: var(--background);
-		padding: 1.5rem;
+		padding: 2rem 1.5rem;
 	}
 }

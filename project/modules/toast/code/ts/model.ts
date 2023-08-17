@@ -1,4 +1,4 @@
-import { ReactiveModel } from "@beyond-js/reactive/model";
+import { ReactiveModel } from '@beyond-js/reactive/model';
 
 export /*bundle*/ type ToastTypes = 'success' | 'error' | 'info' | 'loading' | 'warning';
 export /*bundle*/ interface IToast {
@@ -17,7 +17,7 @@ class Toast extends ReactiveModel<any> {
 
 	set current(newValue: Array<IToast | undefined>) {
 		this.#current = newValue;
-		this.triggerEvent('current-toasts-changed');
+		this.triggerEvent('current.toast.changed');
 	}
 
 	constructor() {
@@ -25,8 +25,7 @@ class Toast extends ReactiveModel<any> {
 		this.#current = [];
 	}
 	#generateUniqueId() {
-		return crypto.getRandomValues(new Uint8Array(16))
-			.toString()
+		return crypto.getRandomValues(new Uint8Array(16)).toString();
 	}
 	#add(type: ToastTypes, message: string, duration: number) {
 		const newToast: IToast = {
@@ -37,13 +36,13 @@ class Toast extends ReactiveModel<any> {
 		};
 
 		this.#current = [...this.#current, newToast];
-		this.triggerEvent('current-toasts-changed');
+		this.triggerEvent('current.toast.changed');
 		return newToast.id;
 	}
 
 	remove(toastId: string) {
 		this.#current = this.#current.filter((toast: IToast) => toast.id !== toastId);
-		this.triggerEvent('current-toasts-changed');
+		this.triggerEvent('current.toast.changed');
 	}
 
 	success(message: string, duration?: number) {
