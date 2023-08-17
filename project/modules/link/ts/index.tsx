@@ -3,8 +3,7 @@ import { routing } from '@beyond-js/kernel/routing';
 
 export /*bundle*/
 function Link({ href, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>): JSX.Element {
-	const isExternal = href?.startsWith('http');
-	const target = isExternal ? '_blank' : '';
+	const isExternal = props.target === '_blank';
 
 	const onClick = (event: React.MouseEvent<HTMLAnchorElement>): void => {
 		if (!isExternal) event.preventDefault();
@@ -21,7 +20,7 @@ function Link({ href, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>)
 	['href', 'onClick'].forEach(prop => delete properties[prop]);
 
 	return (
-		<a {...properties} href={href} onClick={onClick} target={props.target || target}>
+		<a {...properties} href={href} onClick={onClick} target={props.target}>
 			{props.children}
 		</a>
 	);
