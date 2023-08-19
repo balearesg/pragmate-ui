@@ -43,9 +43,11 @@
 		"@beyond-js/widgets": "^0.1.3",
 		"perfect-scrollbar": "^1.5.5",
 		"prism-react-renderer": "^1.3.5",
-		"socket.io-client": "^4.5.3",
 		"prismjs": "^1.27.0",
-		"swiper": "^8.4.5"
+		"socket.io-client": "^4.5.3",
+		"swiper": "^8.4.5",
+		"tippy": "^0.0.0",
+		"tippy.js": "^6.3.7"
 	},
 	"devDependencies": {
 		"@beyond-js/backend": "^0.1.1",

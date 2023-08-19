@@ -1,3 +1,5 @@
+@import '~tippy.js/dist/tippy';
+
 $font-family: var(--font-family);
 $secondary-font-family: var(--secondary-font-family);
 $title-font: var(--title-font);
@@ -12,13 +14,13 @@ $gray-variant: var(--gray-variant);
 $primary: var(--primary);
 $primary-dark: var(--primary-dark);
 $primary-light: var(--primary-light);
-$primary-accent: #E36152;
+$primary-accent: #e36152;
 $on-primary: var(--on-primary);
 
 $secondary: var(--secondary);
 $secondary-dark: var(--secondary-dark);
 $secondary-light: var(--secondary-light);
-$secondary-accent: #F7C700;
+$secondary-accent: #f7c700;
 $on-secondary: var(--on-secondary);
 
 $background: var(--background);

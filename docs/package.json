@@ -48,7 +48,8 @@
 		"prismjs": "^1.27.0",
 		"react-select": "^5.7.3",
 		"socket.io-client": "^4.5.4",
-		"swiper": "^8.4.5"
+		"swiper": "^8.4.5",
+		"tippy.js": "^6.3.7"
 	},
 	"devDependencies": {
 		"@mdx-js/mdx": "^2.3.0",
