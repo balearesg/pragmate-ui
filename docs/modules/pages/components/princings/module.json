@@ -4,14 +4,20 @@
     "route": "/components/pricing",
     "layout": "main-layout",
     "is": "page",
-    "sass": {
-      "path": "/widget/sass",
+    "scss": {
+      "path": "/scss",
       "files": [
         "*"
       ]
     },
     "ts": {
-      "path": "/widget/ts",
+      "path": "/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "mdx": {
+      "path": "/ts",
       "files": [
         "*"
       ]

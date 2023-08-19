@@ -1,0 +1,41 @@
+import * as React from "react";
+import { Results } from "./results";
+import { implementation, implementationPhoto } from "./implementation";
+import { ResultsUserPhoto } from "./results-user-photo";
+import { Code } from "pragmate-ui/code";
+
+## Drag and drop
+
+El componente `Drag and drop`
+implementa la logica para poder seleccionar elementos (arreglarlos) con
+el mouse, arrastrar esos elementos a un elemento droppable y soltarlos
+al soltar el botón del mouse. Util para poder guardar archivos, e
+imagnes. Tenemos dos tipos de componentes con este mecanismo.
+
+### Import:
+
+<Code>{`import { DragAndDrop } from 'pragmate-ui/drag-and-drop';`}</Code>
+
+### Case upload file:
+
+<Code>{implementation}</Code>
+
+<Results />
+
+### Component information:
+
+- Recibe `count` para definir la cantidad máxima
+  de archivos que se pueden cargar si desea definir pase sin
+  límite a `count` Infinity
+
+- Recibe `formats` que es una matriz de cadenas
+  con los formatos disponibles que se pueden cargar.
+
+- Recibe `onUpload` que es una función que recibe
+  los archivos cargados.
+
+### Case upload file:
+
+<Code>{implementationPhoto}</Code>
+
+<ResultsUserPhoto />

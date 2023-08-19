@@ -1,4 +1,4 @@
-export const menuItems = [
+const itemsDisordered = [
   {
     name: "Empty",
     path: "empty",
@@ -112,6 +112,11 @@ export const menuItems = [
     children: [],
   },
   {
+    name: "ButtonGroup",
+    path: "button-group",
+    children: [],
+  },
+  {
     name: "BreadCrumb",
     path: "breadcrumb",
     children: [],
@@ -178,7 +183,9 @@ export const menuItems = [
     path: "link",
     children: [],
   },
-].sort((a, b) => {
+];
+
+export const menuItems = itemsDisordered.sort((a, b) => {
   if (a.name < b.name) return -1;
   if (a.name > b.name) return 1;
   return 0;

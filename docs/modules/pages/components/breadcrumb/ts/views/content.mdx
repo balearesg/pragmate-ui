@@ -1,0 +1,33 @@
+import { Code } from "pragmate-ui/code";
+import { implementation } from "./implementation";
+import { Results } from "./results";
+import { implementationlistItems } from "./implementationListItems";
+
+# Breadcrumb
+
+El componente Breadcrumb es un elemento de navegación
+que muestra la ruta actual del usuario en una jerarquía de páginas o
+secciones. Consiste en una serie de enlaces que indican la ubicación
+actual del usuario en el sitio web o la aplicación.
+
+### Import :
+
+<Code>{`import { BreadCrumb } from "pragmate-ui/breadcrumb"`}</Code>
+
+### Implementation :
+
+<Code>{implementation}</Code>
+
+### List Items:
+
+El breadcrumb recibe "items" que es un arreglo de
+arreglos, en los subarreglos pasamos dos strings, el primero sera la
+ruta de navegacion, esta la pasaremos con Backticks o comillas
+invertidas. El segundo string sera normal y sera el label que se
+mostrara para la navegacion
+
+<Code>{implementationlistItems}</Code>
+
+### Result :
+
+<Results />

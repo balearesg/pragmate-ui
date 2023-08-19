@@ -1,0 +1,34 @@
+import { implementation } from "./implementation";
+import { Code } from "pragmate-ui/code";
+import { Result } from "./result";
+
+## Menu
+
+El componente `Menu` es una interfaz de usuario que permite a los usuarios
+acceder a diferentes opciones y acciones. El menú se despliega desde la
+izquierda al hacer clic en un icono y se contrae al hacer clic en el mismo
+icono o en cualquier otra área fuera del menú. Este componente es útil para
+agregar una funcionalidad de navegación o configuración a una aplicación web o
+móvil. Puede ser utilizado en conjunto con otros componentes para mejorar la
+experiencia de usuario y la accesibilidad.
+
+### Import :
+
+<Code>{`import { Menu } from "pragmate-ui/menu"`}</Code>
+
+### Component :
+
+<Code>{`<Menu items={menuItems} title="Title" />`}</Code>
+### Implementation :
+
+<Code>{implementation}</Code>
+
+El componente recibe dos propiedades : `Items` y `Title`.
+
+- Items : es un arreglo de objetos donde a cada objeto le especificamos el titulo del enlace, el icono y su path.
+
+- Title : Header del menu.
+
+### Result :
+
+<Result />
