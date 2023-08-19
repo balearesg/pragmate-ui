@@ -66,4 +66,5 @@ export const menuItems = [
 	['Alert', 'alert', []],
 	['Drag And Drop', 'drag-and-drop', []],
 	['Link', 'link', []],
+	['Badges', 'badges'],
 ];

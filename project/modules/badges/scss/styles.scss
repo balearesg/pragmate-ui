@@ -1,0 +1,29 @@
+$types: ('default', 'primary', 'secondary', 'tertiary', 'success', 'info', 'warning', 'danger', 'light', 'dark');
+
+@mixin badge-styles($color) {
+	background: var(--#{$color});
+
+	color: var(--on-#{$color});
+}
+
+@each $type in $types {
+	.pui-badge {
+		padding: 0.2rem 0.5rem;
+		border-radius: 1rem;
+		font-size: 10px;
+		&.pui-badge--#{$type} {
+			@include badge-styles($type);
+		}
+	}
+}
+
+.pui-badges__container {
+	display: flex;
+	gap: 0.5rem;
+
+	.pui-badge {
+		&.is-clickable {
+			cursor: pointer;
+		}
+	}
+}
