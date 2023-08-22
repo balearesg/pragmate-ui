@@ -1,8 +1,11 @@
 import * as React from "react";
+import Content from "./content.mdx";
 
 export /*bundle*/
 function View() {
-    return (
-        <h2>Hello i'm a page</h2>
-    );
+  return (
+    <div className="view">
+      <Content />
+    </div>
+  );
 }
