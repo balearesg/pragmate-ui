@@ -1,11 +1,11 @@
-import * as React from 'react';
-import Content from './content.mdx';
+import * as React from "react";
+import Content from "./content.mdx";
+import { Code } from "pragmate-ui/code";
 export /*bundle*/
 function View() {
-	return (
-		<div>
-			<h2>Hello i'm a page collapsible</h2>
-			<Content />
-		</div>
-	);
+  return (
+    <div>
+      <Content />
+    </div>
+  );
 }

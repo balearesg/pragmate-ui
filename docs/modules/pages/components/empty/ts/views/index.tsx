@@ -3,6 +3,8 @@ import { Empty } from "pragmate-ui/empty";
 import { Code } from "pragmate-ui/code";
 import { implementation } from "./implementation";
 import Content from "./content.mdx";
+import { Code } from "pragmate-ui/code";
+
 export /*bundle*/
 function View() {
   return (

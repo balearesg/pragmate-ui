@@ -1,6 +1,8 @@
 import * as React from "react";
-import { View } from "./view";
 import Content from "./content.mdx";
+import { Code } from "pragmate-ui/code";
+
+import { Code } from "pragmate-ui/code";
 
 export /*bundle*/
 function Page() {
