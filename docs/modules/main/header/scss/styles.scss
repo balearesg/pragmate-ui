@@ -1,0 +1,53 @@
+$tablet-breakpoint: 1440px;
+
+.home__header {
+	height: 100%;
+	padding: 3rem;
+
+	display: grid;
+	place-content: center;
+	gap: 1rem;
+
+	&-main-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.2rem;
+
+		h1 {
+			text-align: center;
+			font-size: 5rem;
+			font-weight: bolder;
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+				'Helvetica Neue', sans-serif;
+			margin: 0;
+		}
+
+		p {
+			width: 80%;
+			font-weight: 600;
+			color: var(--secondary-text-color);
+			font-size: 1.4rem;
+			text-align: center;
+			transition: all 0.7s;
+			margin: 0;
+		}
+	}
+
+	.started {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.2rem;
+
+		.code-container {
+			width: 280px;
+
+			.clipboard__container {
+				top: 1.4rem;
+			}
+		}
+	}
+}
