@@ -1,17 +1,13 @@
 {
-  "name": "header",
-  "code": {
-    "sass": {
-      "path": "/code/sass",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "/code/ts",
-      "files": [
-        "*"
-      ]
-    }
-  }
+	"name": "header",
+	"code": {
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		}
+	}
 }

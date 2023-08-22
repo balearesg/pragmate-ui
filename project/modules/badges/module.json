@@ -1,0 +1,12 @@
+{
+	"name": "badges",
+	"bundle": "code",
+	"scss": {
+		"path": "/scss",
+		"files": ["*"]
+	},
+	"ts": {
+		"path": "/ts",
+		"files": ["*"]
+	}
+}
