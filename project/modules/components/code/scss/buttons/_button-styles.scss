@@ -1,3 +1,13 @@
+@mixin darkerColor($color) {
+	// Extract HSL values from color
+	// Convert custom property to HSL
+	$h: hue(rgb(#{$color}));
+	$s: saturation(rgb(#{$color}));
+	$l: lightness(rgb(#{$color}));
+
+	// Return new color with reduced lightness
+	background: hsl($h, $s, $l - 10%);
+}
 @mixin button-styles($button-variants) {
 	@each $type, $colors in $button-variants {
 		$bg-color: nth($colors, 1);
@@ -10,6 +20,7 @@
 
 			&:hover:not(:disabled) {
 				background-color: $bg-hover;
+				//	@include darkerColor($bg-hover);
 			}
 
 			/**
