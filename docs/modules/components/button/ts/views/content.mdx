@@ -1,0 +1,65 @@
+import { Button } from 'pragmate-ui/form';
+import { Item } from './item';
+import { Code } from 'pragmate-ui/code';
+import { Link } from 'pragmate-ui/components';
+import { getTpl } from './get-tpl';
+import { ContentVariants } from './content-variants';
+import { ResultsBorder } from './button-border';
+
+# Buttons
+
+El componente de botón se utiliza para crear elementos interactivos que permiten a los usuarios realizar acciones
+específicas, como enviar formularios, confirmar selecciones o desencadenar eventos en la interfaz.
+
+### Import :
+
+<Code>{` import { Button } from 'pragmate-ui/components' ;`}</Code>
+
+### Variantes :
+
+<ContentVariants />
+
+### Implementations :
+
+<Code>{getTpl({ variant: 'primary' })}</Code>
+
+### Variantes outline :
+
+<ResultsBorder />
+
+Se puede utilizar cada variante con borders pasando el atributo booleando `bordered={`{true}`}
+
+### Implementations :
+
+<Code>{getTpl({ variant: 'primary', bordered: true })}</Code>
+
+### Iconos :
+
+Para agregar iconos al botón, agrega el atributo icon y el icono que desees utilizar. Puedes ver la lista de iconos
+disponibles en :
+
+<Link href='/components/icons-list'>Icons</Link>
+
+### Implementation :
+
+<Code>{getTpl({ variant: 'primary', icon: 'add' })}</Code>
+
+### Result
+
+<Button icon='add' variant='primary'>
+	Primary button
+</Button>
+
+Utiliza la clase ".icon--right" si deseas agregar el icono a la derecha
+
+<Button icon='add' variant='primary' className='icon--right'>
+	Primary button
+</Button>
+
+<Code>
+	{getTpl({
+		variant: 'primary',
+		icon: 'add',
+		className: 'icon--right',
+	})}
+</Code>
