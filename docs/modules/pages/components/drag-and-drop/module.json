@@ -10,16 +10,22 @@
     "layout": "main-layout",
     "is": "page",
     "ts": {
-      "path": "/widget/ts",
+      "path": "/ts",
       "files": [
         "*"
       ],
-      "sass": {
-        "path": "/widget/scss",
+      "scss": {
+        "path": "/scss",
         "files": [
           "*"
         ]
       }
+    },
+    "mdx": {
+      "path": "/ts",
+      "files": [
+        "*"
+      ]
     },
     "element": {
       "name": "drag-and-drop-page"

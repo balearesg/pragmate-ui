@@ -1,0 +1,64 @@
+import { Code } from "pragmate-ui/code";
+import { implementation } from "./implementation";
+import { Results } from "./result";
+import { ResultsPremium } from "./result-premium";
+import { ResultsFree } from "./result-free";
+import { component } from "./component";
+
+## Pricing
+
+El componente `Pricing` es un
+componente de React que permite mostrar diferentes planes de precios en
+una página web o aplicación. Este componente acepta varias props que
+permiten personalizar el título, el precio, la descripción y las
+funciones adicionales de cada plan de precio.
+
+### Import :
+
+<Code>{`import { Pricing } from 'pragmate-ui/pricing';`}</Code>
+
+### Component :
+
+<Code>{component}</Code>
+
+### Implementation :
+
+<Code>{implementation}</Code>
+### Result :
+
+<Results />
+### Props :
+
+- `Variant`: variante del pricing que desea
+  asignar, "free" o "premium".
+
+- `Title` : titulo del pricing.
+
+- `Description` :descripcion del pricing.
+
+- `Price` :precio que desee indicar al pricing (esta propiedad solo es requerida en la variante "premium").
+
+- `Advantages` :lista de los beneficios de su
+  pricing, esta propiedad recibe un arreglo donde estara los
+  beneficios.
+
+los `pricing` proporciona valores predeterminados
+para cada prop en caso de que no se proporcionen explícitamente.
+Esto hace que sea más fácil para el usuario personalizar solo las
+props que desea, sin tener que preocuparse por proporcionar todas
+las props necesarias.
+
+### Variant :
+
+El componente Pricing utiliza otros componentes de
+variantes de precio (FreePlan y PremiumPlan) para renderizar la
+información correspondiente a cada plan de precio. El nivel de precio se
+especifica mediante la prop `"Variant"` :
+
+### Variant free
+
+<ResultsFree />
+
+### Variant Premiun
+
+<ResultsPremium />

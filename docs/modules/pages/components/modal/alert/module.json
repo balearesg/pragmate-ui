@@ -10,7 +10,13 @@
 		"layout": "main-layout",
 		"is": "page",
 		"ts": {
-			"path": "/widget/ts",
+			"path": "/ts",
+			"files": [
+				"*"
+			]
+		},
+		"mdx": {
+			"path": "/ts",
 			"files": [
 				"*"
 			]

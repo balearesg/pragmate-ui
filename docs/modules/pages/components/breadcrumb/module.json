@@ -4,13 +4,19 @@
     "route": "/components/breadcrumb",
     "layout": "main-layout",
     "is": "page",
-    "sass": {
+    "scss": {
       "path": "/scss",
       "files": [
         "*"
       ]
     },
     "ts": {
+      "path": "/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "mdx": {
       "path": "/ts",
       "files": [
         "*"

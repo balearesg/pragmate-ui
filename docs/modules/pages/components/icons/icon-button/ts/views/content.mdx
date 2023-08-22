@@ -1,0 +1,59 @@
+import { IconButton } from "pragmate-ui/icons";
+import { Code } from "pragmate-ui/code";
+import { iconButton } from "./icon-button";
+
+## IconButton
+
+El componente `Icon Button` son un tipo
+de botón que utiliza un icono para representar la acción que realiza. Se
+usan comúnmente en barras de herramientas, barras de aplicaciones y
+otras áreas donde el espacio es limitado. Los Icon Button se pueden usar
+para realizar una variedad de acciones, como abrir una nueva ventana,
+navegar a una página diferente o realizar una búsqueda. Para usar un
+botón de icono, primero debe importar el componente a su proyecto. Puede
+cambiar el icono de su componente con el atributo icon.
+
+### Import :
+
+<Code>{`import { IconButton } from 'pragmate-ui/icons';`}</Code>
+
+### Manejo de Size :
+
+los componentes IconButton pueden manejar 3 tipos de
+tamaños diferentes:
+
+- xs
+
+- md
+
+- lg
+
+y se pueden incorporar agregando el atributo <code>className</code>{" "}
+al componente <strong>Icon</strong> y el tamaño que queramos.
+
+### IconButton size xs :
+
+<Code>{`<IconButton className="xs" icon="box" />`}</Code>
+
+<IconButton className="xs" icon="box" />
+
+### IconButton size md :
+
+<Code>{`<IconButton className="md" icon="box" />`}</Code>
+
+<IconButton className="md" icon="box" />
+
+### IconButton size lg :
+
+<Code>{`<IconButton className="lg" icon="box" />`}</Code>
+
+<IconButton className="lg" icon="box" />
+
+### Manejo de Circle :
+
+los componentes tambien pueden manejar una forma circular, se pueden
+obtener agregando la clase circle cn el componente:
+
+<Code>{`<IconButton className="circle" icon="box" />`}</Code>
+
+<IconButton className="circle" icon="delete" />
