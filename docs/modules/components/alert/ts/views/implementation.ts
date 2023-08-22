@@ -1,14 +1,6 @@
-export const implementation = `
-import { useToastContext } from "pragmate-ui/toast";
-export function ImplementationAlert() {
-<Alert  
-    message="this is a success message"
-    title="title success"
-    mode="success"
-    show={true}   
-    isClose={true}
-/>
-  }
+export const implementation = `<Alert type={type}>
+    <h3 className="alert__title-span">{ children }</h3>
+</Alert>
 `;
 
 export const implementationSuccess = `

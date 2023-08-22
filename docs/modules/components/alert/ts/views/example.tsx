@@ -1,17 +1,37 @@
-import * as React from 'react';
-import { Alert } from 'pragmate-ui/alert';
+import * as React from "react";
+import { Alert } from "pragmate-ui/alert";
+import { Button } from "pragmate-ui/components";
 export function Example() {
-	// $alert-types: 'success', 'error', 'warning', 'info';
-	const types = ['success', 'error', 'warning', 'info'];
-	return (
-		<section className='example'>
-			{types.map((type, index) => {
-				return (
-					<Alert key={index} type={type}>
-						<h3 className='alert__title-span'>This is a {type} alert</h3>
-					</Alert>
-				);
-			})}
-		</section>
-	);
+  // $alert-types: 'success', 'error', 'warning', 'info';
+  const [showlerts, setShowAlerts] = React.useState(false);
+  const [typeAlert, setTypeAlerts] = React.useState("succes");
+  const types = ["success", "error", "warning", "info"];
+  const handleSetAlerts = (type) => {
+    setShowAlerts(true);
+    setTypeAlerts(type);
+  };
+  return (
+    <section className="example">
+      <div className="content">
+        {types.map((type, index) => {
+          return (
+            <Button
+              key={index}
+              onClick={() => handleSetAlerts(type)}
+              variant="secondary"
+            >
+              {type}
+            </Button>
+          );
+        })}
+      </div>
+      {showlerts === true ? (
+        <Alert icon={true} type={typeAlert}>
+          <h3 className="alert__title-span">This is a {typeAlert} alert</h3>
+        </Alert>
+      ) : (
+        <strong>Click on one of the buttons please</strong>
+      )}
+    </section>
+  );
 }
