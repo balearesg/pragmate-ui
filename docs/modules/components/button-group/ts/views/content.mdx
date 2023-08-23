@@ -1,0 +1,52 @@
+import { Code } from "pragmate-ui/code";
+import { ButtonGroup } from "pragmate-ui/components";
+import { Button } from "pragmate-ui/components";
+import { TableDescription } from "./table-description";
+import { implementation } from "./implementation";
+
+# ButtonGroup
+
+El componente **ButtonGroup** de Pragmate UI permite agrupar botones relacionados para facilitar al usuario la
+selección de opciones. Es ideal para representar un conjunto de acciones exclusivas,
+como opciones de radio buttons, o no-exclusivas como grupos de filtros.
+
+ButtonGroup puede utilizarse en flujos de trabajo, aplicaciones CRUD, paneles de configuración,
+para filtrado y búsqueda avanzada, selección de opciones, acciones de formularios, y prácticamente
+cualquier experiencia de usuario que requiera agrupar botones relacionados con un propósito en común.
+Como componente de la biblioteca Pragmate UI, se integra fácilmente en React y puede adaptarse visualmente a cualquier diseño.
+
+### Import :
+
+<Code>{'import { ButtonGroup } from "pragmate-ui/components"'}</Code>
+
+<Code>{implementation}</Code>
+
+### Result :
+
+<ButtonGroup orientation="row">
+  <Button variant="primart" bordered="true">
+    Botón 1
+  </Button>
+  <Button variant="primart" bordered="true">
+    Botón 2
+  </Button>
+  <Button variant="primart" bordered="true">
+    Botón 3
+  </Button>
+</ButtonGroup>
+
+### Props :
+
+<TableDescription />
+
+### styles :
+
+El componente ButtonGroup agrega las clases `pragmate-button-group`, `row` y `column` para controlar la orientación.
+
+El componente hereda el color del tema actual a través de CSS variables.
+
+Los estilos del borde se controlan con la propiedad `bordered`.
+
+## Accesibilidad
+
+El grupo de botones debe estar contenido en una etiqueta `<fieldset>` con `<legend>` para describir el grupo, mejorando la accesibilidad.

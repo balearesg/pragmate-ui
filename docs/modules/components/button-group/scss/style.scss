@@ -1,0 +1,18 @@
+.table-container {
+  border: 1px solid #eee;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #eee;
+  }
+
+  th {
+    background: var(--surface);
+  }
+
+  tr:hover {
+    background: var(--surface);
+  }
+}
