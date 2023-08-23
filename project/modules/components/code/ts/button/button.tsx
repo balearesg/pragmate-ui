@@ -4,7 +4,7 @@ import { Spinner } from 'pragmate-ui/spinner';
 import { RippleEffect } from 'pragmate-ui/ripple';
 import tippy from 'tippy.js';
 import { IProps } from './interface';
-console.log(10, tippy);
+
 const { forwardRef } = React;
 
 export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, ref) => {

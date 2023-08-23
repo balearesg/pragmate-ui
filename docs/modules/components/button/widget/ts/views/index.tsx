@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Button } from 'pragmate-ui/components';
 import { Item } from './item';
 import { Code } from 'pragmate-ui/code';
-import { Link } from 'pragmate-ui/link';
+import { Link } from 'pragmate-ui/components';
 import { getTpl } from './get-tpl';
 export /*bundle*/
 function View() {
@@ -80,4 +80,3 @@ function View() {
 		</div>
 	);
 }
-
