@@ -1,5 +1,4 @@
-export const component = `
-<ConfirmModal
+export const component = `<ConfirmModal
     show
     className="beauty-modal"
     title="Title confirm modal"
@@ -7,5 +6,4 @@ export const component = `
     onClose={handleModal}
     onCancel={handleModal}
     onConfirm={handleModal}
-/>
-`;
+/>`;

@@ -9,7 +9,7 @@ import {
   implementationSuccess,
   implementationWaring,
 } from "./implementation";
-import { Button } from "pragmate-ui/form";
+import { Button } from "pragmate-ui/components";
 import { Code } from "pragmate-ui/code";
 export /*bundle*/
 function View() {

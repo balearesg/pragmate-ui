@@ -1,5 +1,4 @@
-export const implementation = `
-import * as React from 'react';
+export const implementation = `import * as React from 'react';
 import { ConfirmModal } from 'pragmate-ui/modal';
 
 export function Results() {
@@ -25,5 +24,4 @@ export function Results() {
 			  />}
 		</>
 	);
-}
-`;
+}`;

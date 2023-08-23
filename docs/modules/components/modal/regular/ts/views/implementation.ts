@@ -1,5 +1,4 @@
-export const implementation = `
-export function Results() {
+export const implementation = `export function Results() {
 	const [show, setShow] = React.useState(false);
 
 	function handleModal() {

@@ -1,5 +1,4 @@
-export const implementation = `
-export function pricingPage() {
+export const implementation = `export function pricingPage() {
   const advantages = [
     "125 credits",
     "Can't buy more credits ",
@@ -24,5 +23,4 @@ export function pricingPage() {
             />
         </section>
 	);
-  }
-`;
+  }`;

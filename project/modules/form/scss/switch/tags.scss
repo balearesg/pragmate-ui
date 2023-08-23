@@ -10,8 +10,8 @@
 			}
 
 			&:checked + .slider {
-				background-color: var(--primary-light);
-				border-color: var(--primary-light);
+				background-color: var(--primary-container);
+				border-color: var(--outline);
 
 				&:before {
 					transform: translateX(26px);
@@ -19,7 +19,7 @@
 			}
 
 			&:focus + .slider {
-				box-shadow: 0 0 1px var(--primary-light);
+				box-shadow: 0 0 1px var(--secondary);
 			}
 		}
 	}

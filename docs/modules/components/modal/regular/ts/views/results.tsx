@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Modal } from "pragmate-ui/modal";
-import { Button } from "pragmate-ui/form";
+import { Button } from "pragmate-ui/components";
 
 export function Results() {
   const [show, setShow] = React.useState(false);
