@@ -1,9 +1,6 @@
 import * as React from 'react';
-import * as moduleComponent from 'pragmate-ui/newtabs';
+import { Tabs, Tab, TabsContainer, Panes } from 'pragmate-ui/newtabs';
 import { toast } from 'pragmate-ui/toast';
-
-console.log(0.2, moduleComponent, toast);
-const { Tabs, Tab, TabsContainer, Panes } = moduleComponent;
 
 export function Example() {
 	const onChange = (event, index) => {
