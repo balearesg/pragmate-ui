@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { Pricing } from "pragmate-ui/pricing";
 
 export function Results() {

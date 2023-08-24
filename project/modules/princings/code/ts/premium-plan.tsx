@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button } from "pragmate-ui/form";
+import { Button } from "pragmate-ui/components";
 import { Icon } from "pragmate-ui/icons";
 export function PremiumPlan(props) {
   const { title, price, description, advantages } = props;
