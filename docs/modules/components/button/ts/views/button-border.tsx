@@ -5,7 +5,7 @@ export function ResultsBorder(): JSX.Element {
 	const buttons = ['primary', 'secondary', 'tertiary', 'success', 'warning', 'danger', 'info', 'link'];
 
 	const output = buttons.map(item => (
-		<Button key={item} variant={item} bordered={true}>
+		<Button key={item} variant={item} bordered={true} title={item}>
 			variant="{item}"
 		</Button>
 	));

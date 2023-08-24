@@ -26,7 +26,7 @@ Thank you for your interest in contributing to [Project Name]! Your contribution
 ## Contribution Process
 
 1. Fork this repository into your own GitHub account.
-2. Clone your fork to your local machine: `git clone https://github.com/YourUsername/ProjectName.git`.
+2. Clone your fork to your local machine: `git clone https://github.com/balearesg/pragmate-ui.git`.
 3. Create a new branch for your contribution: `git checkout -b my-branch-name`.
 4. Make your changes and commits on the new branch.
 5. Ensure your changes adhere to the coding and style standards.
