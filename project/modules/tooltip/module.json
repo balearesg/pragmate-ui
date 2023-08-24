@@ -1,18 +1,7 @@
 {
-  "name": "tooltip",
-  "description": "Tooltip",
-  "code": {
-    "sass": {
-      "path": "/code/sass",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "/code/ts",
-      "files": [
-        "*"
-      ]
-    }
-  }
+	"name": "tooltip",
+	"ts": {
+		"path": "ts",
+		"files": ["*"]
+	}
 }
