@@ -2,7 +2,7 @@ Of course, here's an example of how you could structure a `contributing.md` file
 
 ---
 
-# Contributing to [Project Name]
+# Contributing to Pragmate UI
 
 Thank you for your interest in contributing to [Project Name]! Your contributions are valuable in improving our codebase and making it even more robust. Below are the guidelines for contributing effectively.
 
