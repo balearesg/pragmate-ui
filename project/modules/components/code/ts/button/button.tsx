@@ -42,8 +42,11 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 		const ripple = new RippleEffect();
 		ripple.add(refObject.current);
 
-		if (title) tippy(refObject.current);
-	}, []);
+		if (title) {
+			console.log(11, title);
+			tippy(refObject.current);
+		}
+	}, [title]);
 
 	const properties: IProps = {
 		...otherProps,
