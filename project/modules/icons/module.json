@@ -1,12 +1,7 @@
 {
 	"name": "icons",
-	 "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
+	"platforms": ["web", "ios", "android"],
 	"code": {
-		"hmr": true,
 		"name": "icon",
 		"ts": {
 			"path": "/code/ts",
