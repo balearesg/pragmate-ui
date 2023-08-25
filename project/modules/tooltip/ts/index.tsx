@@ -1,7 +1,6 @@
 import * as React from 'react';
 import tippy from 'tippy.js';
 import { ITippySettings } from './ITippySettings';
-
 interface IProps {
 	children: React.ReactNode;
 	content: ITippySettings['content'];
@@ -10,7 +9,6 @@ interface IProps {
 }
 export /*bundle*/ function Tooltip({ children, content, placement = 'top', settings = {} }: IProps) {
 	const ref = React.useRef(null);
-
 	const placements: string[] = [
 		'top',
 		'top-start',
@@ -32,7 +30,6 @@ export /*bundle*/ function Tooltip({ children, content, placement = 'top', setti
 	if (!placements.includes(placement)) placement = 'top';
 	const specs: ITippySettings = { placement, content };
 	React.useEffect(() => {
-		console.log(22, ref.current, specs);
 		tippy(ref.current, specs);
 	}, []);
 

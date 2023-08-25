@@ -2,11 +2,11 @@
 	"name": "components",
 	"code": {
 		"scss": {
-			"path": "/code/scss",
+			"path": "/scss",
 			"files": ["*"]
 		},
 		"ts": {
-			"path": "/code/ts",
+			"path": "/ts",
 			"files": ["*"]
 		}
 	},

@@ -1,0 +1,56 @@
+@mixin button-styles($button-variants) {
+	@each $type in $button-variants {
+		&.btn-#{$type} {
+			background-color: var(--#{$type});
+			color: var(--text-on-#{$type});
+
+			&:hover:not(:disabled) {
+				background-color: var(--#{$type}-30);
+			}
+
+			/**
+			 * Icon styles
+			 */
+			&.has-icon {
+				display: flex !important;
+				align-items: center;
+				justify-content: center;
+				column-gap: 8px;
+				svg.pragmate-icon {
+					fill: var(--text-on-#{$type});
+				}
+
+				&.icon--right {
+					flex-direction: row-reverse;
+				}
+			}
+			&:disabled {
+				opacity: 0.5;
+				cursor: not-allowed;
+			}
+
+			&.has-icon svg {
+				fill: var(--text-on-#{$type});
+			}
+
+			&.outline {
+				background-color: transparent;
+				border: 1px solid var(--#{$type});
+				color: var(--#{$type});
+				svg.pragmate-icon {
+					fill: var(--text-on-#{$type});
+				}
+				&:hover:not(:disabled) {
+					background-color: var(--#{$type});
+					color: var(--text-on-#{$type});
+					background-color: var(--#{$type}-30);
+				}
+
+				&:disabled {
+					opacity: 0.5;
+					cursor: not-allowed;
+				}
+			}
+		}
+	}
+}
