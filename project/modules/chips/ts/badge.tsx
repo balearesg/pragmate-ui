@@ -2,7 +2,7 @@ import * as React from 'react';
 import { RippleEffect } from 'pragmate-ui/ripple';
 import tippy from 'tippy.js';
 
-export /*bundle*/ function Badge(props) {
+export /*bundle*/ function Chip(props) {
 	const { item, type, children, className, title } = props;
 	const properties = { ...props };
 	const ref = React.useRef<HTMLSpanElement>(null);
@@ -19,7 +19,7 @@ export /*bundle*/ function Badge(props) {
 
 	if (title) properties['data-tippy-content'] = title;
 
-	let cls = `pui-badge${type ? ` pui-badge--${type}` : ''}${className ? ` ${className}` : ''}`;
+	let cls = `pui-chip${type ? ` pui-chip--${type}` : ''}${className ? ` ${className}` : ''}`;
 
 	if (properties.onClick) {
 		cls += ` is-clickable`;

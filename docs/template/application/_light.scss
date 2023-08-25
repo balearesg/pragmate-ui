@@ -1,13 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-@import './mixins/generate-tones';
-
-@mixin print-tones($prefix, $tones) {
-	@each $tone in $tones {
-		$index: index($tones, $tone);
-		$variable-name: '#{$prefix}-tone-#{$index}';
-		#{$variable-name}: #{$tone};
-	}
-}
 
 @mixin properties() {
 	--text-color: #1a1a1a;
@@ -39,6 +30,4 @@
 
 	--on-surface: #1f1f1f;
 	--surface-variant: #fbfbfb;
-
-	@include get-colors('primary', #ff8056, 300);
 }

@@ -9,18 +9,13 @@
 	background: hsl($h, $s, $l - 10%);
 }
 @mixin button-styles($button-variants) {
-	@each $type, $colors in $button-variants {
-		$bg-color: nth($colors, 1);
-		$text-color: nth($colors, 2);
-		$bg-hover: nth($colors, 3);
-
+	@each $type in $button-variants {
 		&.btn-#{$type} {
-			background-color: $bg-color;
-			color: $text-color;
+			background-color: var(--#{$type});
+			color: var(--text-on-#{$type});
 
 			&:hover:not(:disabled) {
-				background-color: $bg-hover;
-				//	@include darkerColor($bg-hover);
+				background-color: var(--#{$type}-30);
 			}
 
 			/**
@@ -32,7 +27,7 @@
 				justify-content: center;
 				column-gap: 8px;
 				svg.pragmate-icon {
-					fill: $text-color;
+					fill: var(--text-on-#{$type});
 				}
 
 				&.icon--right {
@@ -45,20 +40,20 @@
 			}
 
 			&.has-icon svg {
-				fill: $text-color;
+				fill: var(--text-on-#{$type});
 			}
 
 			&.outline {
 				background-color: transparent;
-				border: 1px solid $bg-color;
-				color: $bg-color;
+				border: 1px solid var(--#{$type});
+				color: var(--#{$type});
 				svg.pragmate-icon {
-					fill: $text-color;
+					fill: var(--text-on-#{$type});
 				}
 				&:hover:not(:disabled) {
-					background-color: $bg-color;
-					color: $text-color;
-					border-color: $bg-hover;
+					background-color: var(--#{$type});
+					color: var(--text-on-#{$type});
+					background-color: var(--#{$type}-30);
 				}
 
 				&:disabled {

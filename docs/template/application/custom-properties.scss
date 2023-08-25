@@ -1,6 +1,8 @@
 @use 'dark';
 @use 'light';
 @use 'alerts';
+@import './pragmate/generate-palette';
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 :root {
 	--font-family: 'Roboto', sans-serif;
@@ -9,6 +11,9 @@
 	--border-primary: 20px;
 	--border-secondary: 8px;
 
+	@include generate-palette('primary', #ff8056);
+	@include generate-palette('secondary', #2cb0fd);
+	@include generate-palette('tertiary', #006496);
 	@include alerts.properties();
 	@include light.properties();
 	@media (prefers-color-scheme: dark) {

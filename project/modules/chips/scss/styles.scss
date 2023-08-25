@@ -1,27 +1,27 @@
 $types: ('default', 'primary', 'secondary', 'tertiary', 'success', 'info', 'warning', 'danger', 'light', 'dark');
 
-@mixin badge-styles($color) {
+@mixin chips-styles($color) {
 	background: var(--#{$color});
 
 	color: var(--on-#{$color});
 }
 
 @each $type in $types {
-	.pui-badge {
+	.pui-chip {
 		padding: 0.2rem 0.5rem;
 		border-radius: 1rem;
 		font-size: 10px;
-		&.pui-badge--#{$type} {
-			@include badge-styles($type);
+		&.pui-chip--#{$type} {
+			@include chips-styles($type);
 		}
 	}
 }
 
-.pui-badges__container {
+.pui-chips__container {
 	display: flex;
 	gap: 0.5rem;
 
-	.pui-badge {
+	.pui-chip {
 		&.is-clickable {
 			cursor: pointer;
 		}
