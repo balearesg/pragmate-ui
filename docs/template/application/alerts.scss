@@ -1,42 +1,32 @@
 @mixin properties() {
-	--info-container: #2b6cb0;
-	--warning-container: #ffc107;
+	--info-container: var(--info-80);
+	--warning-container: var(--warning-80);
 	--success-container: #388e3c;
 
-	--info-container: #2196f3;
-	--info-color: #fff;
-	--info-border-color: #1c75cc; /* 15% darker */
-	--info-hover-bg: #4da6ff; /* 10% lighter */
-	--info-icon-color: --info-color;
+	--info-container: var(--info-80);
+	--info-color: var(--text-color);
+	--info-border-color: var(--info-50)
+	--info-hover-bg: var(--info-40);
+	--info-icon-color: var(--text-color);
 
-	--warning-container: #ffc107;
-	--warning-color: #212529;
-	--warning-border-color: #cc9e06; /* 15% darker */
-	--warning-hover-bg: #ffcc26; /* 10% lighter */
-	--warning-icon-color: --warning-color;
+	--warning-container: var(--warning-80);
+	--warning-color: var(--text-color);
+	--warning-border-color: var(--warning-50)
+	--warning-hover-bg: var(--warning-40);
+	--warning-icon-color: var(--text-color);
 
-	--error-container: #cf6679;
-	--error-color: #fff;
-	--error-border-color: #b1596d; /* 15% darker */
-	--error-hover-bg: #d4758b; /* 10% lighter */
-	--error-icon-color: --error-color;
+	
+	--success-container: var(--success-80);
+	--success-color: var(--text-color);
+	--success-border-color: var(--success-50)
+	--success-hover-bg: var(--success-40);
+	--success-icon-color: var(--text-color);
 
-	--background-color: #121212;
-
-	--success-container: #388e3c;
-	--success-color: #fff;
-	--success-border-color: #2f7630; /* 15% darker */
-	--success-hover-bg: #43a24b; /* 10% lighter */
-	--success-icon-color: --success-color;
-
-	--alert-container-bg: --background-color;
-	--alert-container-border-radius: --base-border-radius;
-	--alert-font-weight: 500; /* Or whatever you want as default */
-	--alert-line-height: 1.5;
-	--error-container: #e2611d;
-
-	--error: #fdeadf;
-	--on-error: #e2611d;
+	--error-container: var(--error-80);
+	--error-color: var(--text-color);
+	--error-border-color: var(--error-50)
+	--error-hover-bg: var(--error-40);
+	--error-icon-color: var(--text-color);
 
 	// app properties
 	--app-text-highlight: var(--primary);

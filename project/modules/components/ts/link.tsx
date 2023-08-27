@@ -5,15 +5,16 @@ export /*bundle*/
 function Link({ href, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>): JSX.Element {
 	const isExternal = props.target === '_blank';
 
-	const onClick = (event: React.MouseEvent<HTMLAnchorElement>): void => {
-		if (!isExternal) event.preventDefault();
+	const onClick = async (event: React.MouseEvent<HTMLAnchorElement>): void => {
+		if (isExternal) return;
+
+		event.preventDefault();
 		event.stopPropagation();
 
 		if (props.onClick && typeof props.onClick === 'function') {
-			props.onClick(event);
+			await props.onClick(event);
 		}
-
-		!isExternal && routing.pushState(href);
+		if (href) routing.pushState(href);
 	};
 
 	const properties = { ...props };

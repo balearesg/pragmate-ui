@@ -1,0 +1,27 @@
+.page__container {
+	max-width: 1140px;
+	margin: auto;
+}
+.palette__container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0rem;
+	padding: 1rem 0;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(13, 1fr);
+
+	.pragmate-tooltip {
+		&:nth-child(n + 8) {
+			color: #000;
+		}
+	}
+	.palette__color-container {
+		padding: 1rem;
+		font-size: 0.75rem;
+		aspect-ratio: 1/1;
+		display: grid;
+		padding: 0;
+		place-items: center;
+	}
+}
