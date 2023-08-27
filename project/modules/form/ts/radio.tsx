@@ -8,8 +8,7 @@ interface props extends InputHTMLAttributes<HTMLInputElement> {
 export /*bundle*/ function Radio(props: props): JSX.Element {
 	const input: MutableRefObject<HTMLInputElement> = useRef<HTMLInputElement>();
 
-	const onClick = (event: ChangeEvent<HTMLInputElement>): void => {
-		console.log(40);
+	const onClick = (event): void => {
 		event.stopPropagation();
 		input.current.checked = true;
 		if (!!props.onChange) props.onChange(event);
