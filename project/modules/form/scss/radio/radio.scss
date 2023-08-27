@@ -1,9 +1,9 @@
 @use 'sass:math';
 .pragmate-element-radio {
 	display: flex;
-	gap: 16px;
-	align-items: end;
-
+	gap: 0.5rem;
+	align-items: center;
+	cursor: pointer;
 	@keyframes stretch-animate {
 		0% {
 			transform: scale(1, 1);
