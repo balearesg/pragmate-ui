@@ -73,7 +73,9 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 			{...properties}
 		>
 			{icon && <Icon icon={icon} />}
-			<span className={`button-label ${loading ? 'loading' : ''}`}>{label || children}</span>
+			{label ||
+				(children && <div className={`button-label ${loading ? 'loading' : ''}`}>{label || children}</div>)}
+
 			{(loading || fetching) && <Spinner type={`on-${variant}`} active={true} />}
 		</button>
 	);
