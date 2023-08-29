@@ -1,8 +1,9 @@
 @mixin button-styles($button-variants) {
 	@each $type in $button-variants {
+		$color: var(--on-#{$type});
 		&.btn-#{$type} {
 			background-color: var(--#{$type});
-			color: var(--text-on-#{$type});
+			color: $color;
 
 			&:hover:not(:disabled) {
 				background-color: var(--#{$type}-30);
@@ -17,7 +18,7 @@
 				justify-content: center;
 				column-gap: 8px;
 				svg.pragmate-icon {
-					fill: var(--text-on-#{$type});
+					fill: $color;
 				}
 
 				&.icon--right {
@@ -30,7 +31,7 @@
 			}
 
 			&.has-icon svg {
-				fill: var(--text-on-#{$type});
+				fill: $color;
 			}
 
 			&.outline {
@@ -38,11 +39,11 @@
 				border: 1px solid var(--#{$type});
 				color: var(--#{$type});
 				svg.pragmate-icon {
-					fill: var(--text-on-#{$type});
+					fill: $color;
 				}
 				&:hover:not(:disabled) {
 					background-color: var(--#{$type});
-					color: var(--text-on-#{$type});
+					color: $color;
 					background-color: var(--#{$type}-30);
 				}
 

@@ -1,37 +1,28 @@
-import React, {
-  useRef,
-  MutableRefObject,
-  ChangeEvent,
-  InputHTMLAttributes,
-  HTMLAttributes,
-} from "react";
+import React, { useRef, MutableRefObject, ChangeEvent, InputHTMLAttributes, HTMLAttributes } from 'react';
 
 interface props extends InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
-  className?: HTMLAttributes<HTMLDivElement>["className"];
+	label?: string;
+	className?: HTMLAttributes<HTMLDivElement>['className'];
 }
 
 export /*bundle*/ function Radio(props: props): JSX.Element {
-  const input: MutableRefObject<HTMLInputElement> = useRef<HTMLInputElement>();
+	const input: MutableRefObject<HTMLInputElement> = useRef<HTMLInputElement>();
 
-  const onClick = (event: ChangeEvent<HTMLInputElement>): void => {
-    input.current.checked = true;
-    if (!!props.onChange) props.onChange(event);
-  };
+	const onClick = (event): void => {
+		event.stopPropagation();
+		input.current.checked = true;
+		if (!!props.onChange) props.onChange(event);
+	};
 
-  const properties: props = { ...props };
-  delete properties.onChange;
+	const properties: props = { ...props };
+	delete properties.onChange;
 
-  const cls: string = `pragmate-element-radio ${
-    properties.className ? properties.className : ""
-  }`;
+	const cls: string = `pragmate-element-radio ${properties.className ? properties.className : ''}`;
 
-  return (
-    <div className={cls}>
-      <input ref={input} {...properties} type="radio" onChange={onClick} />
-      {properties.label && (
-        <label htmlFor={properties.id}>{properties.label}</label>
-      )}
-    </div>
-  );
+	return (
+		<label className={cls} onClick={onClick}>
+			<input ref={input} {...properties} type='radio' onChange={onClick} />
+			{properties.label && <span>{properties.label}</span>}
+		</label>
+	);
 }

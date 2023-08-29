@@ -1,22 +1,7 @@
 import React from 'react';
 import { Icon, IconButton } from 'pragmate-ui/icons';
 import { Content } from './content';
-
-type IProps = {
-	show?: boolean;
-	className?: string;
-	type?: string;
-	message?: string;
-	title?: string;
-	closable?: boolean;
-	onClose: () => boolean;
-	children?: React.ReactNode;
-	icon: boolean | string;
-};
-
-type iconMap = {
-	[key: string]: string;
-};
+import { IProps, IiconMap } from './types';
 
 export /*bundle*/
 function Alert(props: IProps) {
@@ -32,10 +17,10 @@ function Alert(props: IProps) {
 		setShow(false);
 	};
 
-	let cls = `${className ? '${className} ' : ''}alert${type ? ` alert--${type}` : ''}`;
+	let cls = `${className ? `${className} ` : ''} alert${type ? ` alert--${type}` : ''}`;
 	cls = icon ? `${cls} alert--icon` : cls;
 
-	const icons: iconMap = {
+	const icons: IiconMap = {
 		error: 'error',
 		warning: 'circle-exclamation',
 		success: 'circle-check',

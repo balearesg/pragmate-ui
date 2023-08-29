@@ -1,0 +1,13 @@
+.form__color__container {
+	display: flex;
+	gap: 1rem 2rem;
+	flex-wrap: wrap;
+	.pragmate-element-input {
+		margin: 0;
+	}
+	label {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+}

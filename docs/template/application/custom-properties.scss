@@ -1,6 +1,8 @@
 @use 'dark';
 @use 'light';
 @use 'alerts';
+@import 'palette';
+@import 'neutral-palette';
 @import './pragmate/generate-palette';
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
@@ -11,19 +13,7 @@
 	--border-primary: 20px;
 	--border-secondary: 8px;
 
-	@include generate-palette('primary', #ff8056);
-	@include generate-palette('secondary', #2cb0fd);
-	@include generate-palette('tertiary', #006496);
-
-	@include generate-palette('success', #388e3c);
-	@include generate-palette('warning', #ffc107);
-	@include generate-palette('info', #2196f3);
-	@include generate-palette('danger', #660000);
-
-	--success: #388e3c;
-	--warning: #ffc107;
-	--info: #2196f3;
-	--danger: #660000;
+	@include neutral-palette();
 	@include alerts.properties();
 	@include light.properties();
 	@media (prefers-color-scheme: dark) {

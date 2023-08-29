@@ -1,36 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @mixin properties() {
-	--text-color: #f2ecff;
-	--altern-text-color: var(--background);
-	--secondary-text-color: var(--secondary);
-	--font-family: 'Poppins', sans-serif;
+	--text-color: #fff;
 
-	--primary: #ff8056;
+	--primary: var(--primary-80);
+	--primary-container: var(--primary-30);
 	--on-primary: #fff;
-	--primary-container: hsl(var(--primary), 36%, 16%);
-	--on-primary-container: hsl(var(--on-primary), 33%, 96%);
-
-	--secondary: #3d5af3;
+	--on-primary-container: var(--primary-90);
+	--inverse-primary: var(--primary-40);
+	--secondary: var(--secondary-80);
+	--secondary-container: var(--secondary-30);
 	--on-secondary: #fff;
-	--secondary-container: hsl(var(--secondary), 57%, 55%);
-	--on-secondary-container: hsl(var(--on-secondary), 24%, 35%);
+	--on-secondary-container: var(--secondary-90);
+	--tertiary: var(--tertiary-80);
+	--tertiary-container: var(--tertiary-30);
+	--on-tertiary: var(--tertiary-20);
+	--on-tertiary-container: var(--tertiary-90);
 
-	--tertiary: #5c6bc0;
-	--on-tertiary: #fff;
-	--secondary-container: hsl(var(--tertiary), 57%, 55%);
-	--on-ter--tertiary-container: hsl(var(--on-tertiary), 24%, 35%);
+	--surface: var(--neutral-6);
+	--surface-dim: var(--neutral-6);
+	--surface-bright: var(--neutral-25);
+	--surface-container-lowest: var(--neutral-4);
+	--surface-container-low: var(--neutral-10);
+	--surface-container: var(--neutral-12);
+	--surface-container-high: var(--neutral-20);
+	--surface-container-highest: var(--neutral-22);
+	--surface-variant: var(--neutral-variant-30);
 
-	--error: #444444;
-	--on-error: #bbbbbb;
-	--error-container: #222222;
-	--on-error-container: #dddddd;
+	--on-surface: var(--neutral-90);
+	--on-surface-variant: var(--neutral-variant-80);
+	--inverse-surface: var(--neutral-90);
+	--inverse-on-surface: var(--neutral-20);
 
-	--background: #0c1e2c;
-	--on-background: #fff;
-	--surface: #263238;
-
-	--outline: #888888;
-
-	--on-surface: #fff;
-	--surface-variant: #0c1e2c;
+	--background: var(--neutral-6);
+	--on-background: var(--neutral-90);
+	--error: var(--error-80);
+	--error-container: var(--error-30);
+	--on-error: var(--error-20);
+	--on-error-container: var(--error-90);
+	--outline: var(--neutral-variant-60);
+	--outline-variant: var(--neutral-variant-30);
+	--shadow: var(--neutral-0);
+	--surface-tint-color: var(--md.sys.color.primary);
+	--scrim: var(--neutral-0);
 }

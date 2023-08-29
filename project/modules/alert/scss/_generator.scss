@@ -10,6 +10,9 @@ $alert-types: 'success', 'error', 'warning', 'info';
 			.alert-icon {
 				fill: var(--pui-#{$type}-icon-color);
 			}
+			&.side-border {
+				border-left: 1rem solid var(--pui-#{$type}-border-color);
+			}
 		}
 	}
 }

@@ -1,7 +1,8 @@
 .code-container {
+	--code-bg: var(--surface-container-low);
 	code,
 	pre {
-		background: var(--code-bg);
+		background: var(--surface-container-low);
 		font-size: var(--code-font-size);
 	}
 

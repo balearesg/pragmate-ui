@@ -1,5 +1,5 @@
 {
-	"name": "tabs",
+	"name": "tabs/original",
 	"platforms": ["web", "ios", "android"],
 	"code": {
 		"name": "tabs",
@@ -12,4 +12,4 @@
 			"files": ["*"]
 		}
 	}
-}	
+}
