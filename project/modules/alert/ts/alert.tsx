@@ -17,7 +17,7 @@ function Alert(props: IProps) {
 		setShow(false);
 	};
 
-	let cls = `${className ? '${className} ' : ''}alert${type ? ` alert--${type}` : ''}`;
+	let cls = `${className ? `${className} ` : ''} alert${type ? ` alert--${type}` : ''}`;
 	cls = icon ? `${cls} alert--icon` : cls;
 
 	const icons: IiconMap = {

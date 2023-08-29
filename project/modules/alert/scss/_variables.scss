@@ -1,25 +1,26 @@
 :host {
+	--alert-border-radius: var(--border-radius-base);
 	/* Info Alert Colors */
-	--pui-on-info: var(--on-info, #fff);
-	--pui-info-icon-color: var(--info-icon-color, --on-info);
-	--pui-info-container: var(--info-container, hsl(210, 48%, 98%)); /* Example hsl value for Blue 50 */
-	--pui-info-border-color: var(--info-border-color, hsl(209, 99%, 32%)); /* 5% darker */
+	--pui-on-info: var(--info-70);
+	--pui-info-icon-color: var(--info-80);
+	--pui-info-container: var(--info-30);
+	--pui-info-border-color: var(--info);
 
 	/* Warning Alert Colors */
-	--pui-on-warning: var(--on-warning, #f57f17);
-	--pui-warning-icon-color: var(--warning-icon-color, --on-warning);
-	--pui-warning-container: var(--warning-container, hsl(35, 100%, 95%)); /* Example hsl value for Amber 50 */
-	--pui-warning-border-color: var(--warning-border-color, hsl(35, 100%, 90%));
+	--pui-on-warning: var(--warning-70);
+	--pui-warning-icon-color: var(--warning-80);
+	--pui-warning-container: var(--warning-30);
+	--pui-warning-border-color: var(--warning);
 
 	/* Success Alert Colors */
-	--pui-on-success: var(--on-success, #032805);
-	--pui-success-icon-color: var(--success-icon-color, --on-success);
-	--pui-success-container: var(--success-container, hsl(122, 40%, 95%)); /* Example hsl value for Green 50 */
-	--pui-success-border-color: var(--success-border-color, hsl(123, 93%, 33%));
+	--pui-on-success: var(--success-70);
+	--pui-success-icon-color: var(--success-80);
+	--pui-success-container: var(--success-30);
+	--pui-success-border-color: var(--success);
 
 	/* Error/Danger Alert Colors */
-	--pui-on-error: var(--on-error, #b71c1c);
-	--pui-error-icon-color: var(--error-icon-color, --on-error);
-	--pui-error-container: var(--error-container, hsl(0, 74%, 70%)); /* Example hsl value for Red 50 */
-	--pui-error-border-color: var(--error-border-color, hsl(0, 85%, 45%));
+	--pui-on-error: var(--error-100);
+	--pui-error-icon-color: var(--error-80);
+	--pui-error-container: var(--error-30);
+	--pui-error-border-color: var(--error);
 }
