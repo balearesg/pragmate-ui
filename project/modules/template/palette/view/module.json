@@ -5,7 +5,7 @@
 		"files": "*"
 	},
 	"widget": {
-		"route": "/pui/palette",
+		"route": "/pui/palette/view",
 		"is": "page",
 		"scss": {
 			"path": "/scss",

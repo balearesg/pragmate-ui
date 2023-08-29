@@ -1,5 +1,5 @@
 {
-	"name": "newtabs",
+	"name": "tabs",
 	"platforms": ["web", "android", "ios"],
 	"bundle": "code",
 	"scss": {

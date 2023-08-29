@@ -16,7 +16,7 @@ const calcPercentageToBlack = (rgb: RGB): number => {
 
 const getPalettePosition = (percentageToBlack: number): number => {
 	const step = Math.ceil(100 / 14);
-	console.log('calculo', 100 - percentageToBlack, step);
+
 	return Math.ceil((100 - percentageToBlack) / step);
 };
 
@@ -59,7 +59,7 @@ export const generatePalette = (color: ColorInput): any[] => {
 			newTone[1] = Math.round(newTone[1] * multiplier) > 255 ? 255 : Math.round(newTone[1] * multiplier);
 			newTone[2] = Math.round(newTone[2] * multiplier) > 255 ? 255 : Math.round(newTone[2] * multiplier);
 		}
-		console.log(0.2, newTone);
+
 		return rgbToHex(newTone as RGB);
 	});
 
@@ -133,5 +133,3 @@ const generateHSLPalette = (hsl: HSL): string[] => {
 const initialColor: RGB = [255, 165, 0];
 const initialHSL = rgbToHsl(initialColor);
 const palette = generateHSLPalette(initialHSL);
-
-console.log(palette);

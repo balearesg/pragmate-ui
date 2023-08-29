@@ -1,8 +1,13 @@
 @mixin neutral-palette() {
 	/* neutral */
-	--neutral: #000000;
-	--neutral-10: #191c1b;
-	--neutral-20: #2e312f;
+	--neutral-4: #0f0d13;
+	--neutral-6: #141218;
+	--neutral-10: #1c1b1f;
+	--neutral-12: #2b2930;
+	--neutral-17: #2b2930;
+	--neutral-20: #1c1b1f;
+	--neutral-22: #36343b;
+	--neutral-24: #3b383e;
 	--neutral-25: #393c3a;
 	--neutral-30: #444846;
 	--neutral-35: #505351;
@@ -11,8 +16,13 @@
 	--neutral-60: #8e918f;
 	--neutral-70: #a9aca9;
 	--neutral-80: #c4c7c4;
+	--neutral-87: #ded8e1;
 	--neutral-90: #e1e3e0;
+	--neutral-94: #f3edf7;
+	--neutral-92: #ece6f0;
+	--neutral-94: #f3edf7;
 	--neutral-95: #eff1ee;
+	--neutral-96: #f7f2fa;
 	--neutral-98: #f8faf7;
 	--neutral-99: #fbfdfa;
 	--neutral-100: #ffffff;

@@ -15,7 +15,7 @@ export class TemplateManager extends ReactiveModel<TemplateManager> {
 		const stylesheetHref = new URL('./styles.css', window.location.origin).href;
 
 		const cssPropsObject = getCSSCustomPropsObjectFromStylesheet(stylesheetHref);
-		console.log(10, stylesheetHref);
+
 		return cssPropsObject;
 	}
 }

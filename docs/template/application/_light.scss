@@ -16,16 +16,19 @@
 	--tertiary-container: var(--tertiary-90);
 	--on-tertiary: var(--tertiary-100);
 	--on-tertiary-container: var(--tertiary-10);
-	--surface: var(--neutral-90);
-	--surface-dim: var(--neutral-90);
-	--surface-bright: var(--neutral-90);
+
+	--surface: var(--neutral-98);
+	--surface-dim: var(--neutral-87);
+	--surface-bright: var(--neutral-98);
 	--surface-container-lowest: var(--neutral-100);
-	--surface-container-low: var(--neutral-90);
-	--surface-container: var(--neutral-90);
-	--surface-container-high: var(--neutral-90);
+	--surface-container-low: var(--neutral-96);
+	--surface-container: var(--neutral-94);
+	--surface-container-high: var(--neutral-92);
 	--surface-container-highest: var(--neutral-90);
+
 	--surface-variant: var(--neutral-variant-90);
 	--on-surface: var(--neutral-10);
+
 	--on-surface-variant: var(--neutral-variant-30);
 	--inverse-surface: var(--neutral-20);
 	--inverse-on-surface: var(--neutral-95);
@@ -38,6 +41,6 @@
 	--outline: var(--neutral-variant-50);
 	--outline-variant: var(--neutral-variant-80);
 	--shadow: var(--neutral-0);
-	--surface-tint-color: var(--md.sys.color.primary);
+	--surface-tint-color: var(--primary);
 	--scrim: var(--neutral-0);
 }
