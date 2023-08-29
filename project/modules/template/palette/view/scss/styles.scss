@@ -1,6 +1,17 @@
 .page__container {
 	max-width: 1140px;
 	margin: auto;
+
+	.contents {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&__buttons {
+			display: flex;
+			gap: .5rem;
+		}
+	}
 }
 .palette-container {
 	display: flex;

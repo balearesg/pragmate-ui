@@ -1,5 +1,5 @@
-$orientations : (column, row);
-$size : (small, medium, tall);
+$orientations : "column", "row";
+$size : "small", "medium", "tall";
 .pragmate-button-group {
 
      display: flex;
