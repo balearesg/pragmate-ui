@@ -35,10 +35,11 @@
             cursor: pointer;
 
             &:before {
-                content: '';
+                content: '/';
                 position: absolute;
                 height: 100%;
-                top: 0;
+                left: 0px;
+                top: -2;
             }
 
             &:after {
@@ -48,16 +49,12 @@
                 top: 7px;
                 right: -3px;
                 width: 8px;
-                border-right: 2px solid var(--tertiary);
-                -webkit-transform: skew(-10deg);
-                -ms-transform: skew(-10deg);
-                transform: skew(341deg);
             }
 
             &:hover,
             &:hover:after,
             &:hover:before {
-                color: var(--secondary);
+                color: var(--on-background);
                 height: 100%;
             }
 
