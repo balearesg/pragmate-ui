@@ -16,7 +16,7 @@
 			"files": ["*"]
 		},
 		"element": {
-			"name": "pu qi-template-palette-page"
+			"name": "pui-template-palette-page"
 		}
 	}
 }

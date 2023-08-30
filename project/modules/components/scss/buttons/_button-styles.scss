@@ -39,7 +39,7 @@
 				border: 1px solid var(--#{$type});
 				color: var(--#{$type});
 				svg.pragmate-icon {
-					fill: $color;
+					fill: var(--#{$type});
 				}
 				&:hover:not(:disabled) {
 					background-color: var(--#{$type});
