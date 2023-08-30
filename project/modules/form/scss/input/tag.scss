@@ -26,7 +26,7 @@
 
 	label {
 		position: absolute;
-		background-color: var(--background);
+		background-color: transparent;
 		padding: 8px 24px;
 		line-height: 24px;
 		border-radius: 70px;
@@ -48,7 +48,7 @@
 	input:not(:placeholder-shown) ~ label,
 	textarea:not(:placeholder-shown) ~ label {
 		padding: 0px 8px;
-		background-color: var(--background);
+		background-color: var(--surface);
 		top: -12px;
 		left: 16px;
 		bottom: auto;
