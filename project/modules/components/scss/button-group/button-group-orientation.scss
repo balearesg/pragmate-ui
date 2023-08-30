@@ -1,16 +1,11 @@
-/* @mixin button-group-orientation($orientations) {
+$orientations : row,
+column;
 
-        display: flex;
-        height: 100%;
-        width: max-content;
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-wrap: nowrap;
-        border: 1px solid var(--primary);
-        
-        &>.pragmate-button {
-            border-radius: 0;
-        }
+.pragmate-button-group {
     
+    @each $orientation in $orientations {
+        &.#{$orientation} {
+            flex-direction: $orientation;
+        }
+    }
 }
- */
