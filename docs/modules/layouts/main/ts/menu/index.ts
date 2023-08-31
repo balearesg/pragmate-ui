@@ -1,4 +1,4 @@
-import { FormItems } from './form';
+import {FormItems} from './form';
 
 const modalsChildren = [
 	['Alert', 'alert-modal'],
@@ -66,6 +66,7 @@ export const menuItems = [
 	['Verification Code', 'code-verification', []],
 	['Select', 'select', []],
 	['Alert', 'alert', []],
+	['Tooltips', 'tooltips', []],
 	['Drag And Drop', 'drag-and-drop', []],
 	['Link', 'link', []],
 ].sort((a, b) => {
