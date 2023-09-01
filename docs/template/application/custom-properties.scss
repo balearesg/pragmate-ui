@@ -6,12 +6,14 @@
 @import './pragmate/generate-palette';
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 :root {
 	--font-family: 'Roboto', sans-serif;
 	--secondary-font-family: 'Roboto', sans-serif;
 	--title-font: 'Inter', sans-serif;
 	--border-primary: 20px;
 	--border-secondary: 8px;
+	--border-radius-base: 1rem;
 
 	@include neutral-palette();
 	@include alerts.properties();

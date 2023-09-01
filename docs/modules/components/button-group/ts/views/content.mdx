@@ -17,13 +17,13 @@ Como componente de la biblioteca Pragmate UI, se integra fácilmente en React y 
 
 ### Import :
 
-<Code>{'import { ButtonGroup } from "pragmate-ui/components"'}</Code>
+<Code>{`import { ButtonGroup } from "pragmate-ui/components"`}</Code>
 
 <Code>{implementation}</Code>
 
 ### Result :
 
-<ButtonGroup orientation="row">
+<ButtonGroup orientation="row" size="tall">
   <Button variant="primary">Botón 1</Button>
   <Button variant="primary">Botón 2</Button>
   <Button variant="primary">Botón 3</Button>
@@ -35,12 +35,12 @@ Como componente de la biblioteca Pragmate UI, se integra fácilmente en React y 
 
 ### styles :
 
-El componente ButtonGroup agrega las clases `pragmate-button-group`, `row` y `column` para controlar la orientación.
+El componente ButtonGroup agrega las clases **pragmate-button-group**, **row** y **column** para controlar la orientación.
 
 El componente hereda el color del tema actual a través de CSS variables.
 
-Los estilos del borde se controlan con la propiedad `bordered`.
+Los estilos del borde se controlan con la propiedad **bordered**.
 
 ## Accesibilidad
 
-El grupo de botones debe estar contenido en una etiqueta `<fieldset>` con `<legend>` para describir el grupo, mejorando la accesibilidad.
+El grupo de botones debe estar contenido en una etiqueta **fieldset** con **legend** para describir el grupo, mejorando la accesibilidad.

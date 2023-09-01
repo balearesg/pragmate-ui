@@ -1,0 +1,35 @@
+import { Code } from "pragmate-ui/code";
+import { Button } from "pragmate-ui/components";
+import { implementationButton } from "./implementationButton";
+import { implementationIcon } from "./implementationIcon";
+import { IconButton } from "pragmate-ui/icons";
+
+# Tooltips
+
+Pragmate-UI ahora incluye soporte para tooltips en los componentes `Button` y `IconButton`.
+Los tooltips son pequeños popups que aparecen al hacer hover en un elemento para proveer información adicional.
+
+## Implementation :
+
+Para agregar un tooltip a un botón o icono, simplemente agregue el atributo `title`:
+
+<Code>{implementationButton}</Code>
+
+<Code>{implementationIcon}</Code>
+
+## Results :
+
+<Button title="Este es un tooltip">Botón con tooltip</Button>
+
+<IconButton icon="edit" title="Editar este documento" />
+
+## functioning :
+
+Los tooltips están diseñados para proveer información extra sin saturar la interfaz.
+Aparecen después de un delay al hacer hover y desaparecen cuando el cursor se mueve fuera del elemento.
+
+Esto previene que los tooltips se muestren accidentalmente al pasar el cursor por encima. Solo aparecerán si el usuario hace hover intencionalmente.
+
+## File Sass :
+
+Los estilos de los tooltips están definidos en un archivo scss **tooltips.scss** Puede sobreescribir estas clases para personalizar la apariencia y debe agregar este archivo en su carpeta template:

@@ -1,80 +1,110 @@
 import React, {
-	MouseEvent,
-	ButtonHTMLAttributes,
-	SVGAttributes,
-	ForwardRefExoticComponent,
-	RefAttributes,
-	forwardRef,
-	PropsWithChildren,
-	LegacyRef,
-} from 'react';
-import { routing } from '@beyond-js/kernel/routing';
-import { Icon } from './icon';
+  MouseEvent,
+  ButtonHTMLAttributes,
+  SVGAttributes,
+  ForwardRefExoticComponent,
+  RefAttributes,
+  forwardRef,
+  PropsWithChildren,
+  LegacyRef,
+} from "react";
+import tippy from "tippy.js";
+import { routing } from "@beyond-js/kernel/routing";
+import { Icon } from "./icon";
 interface props extends ButtonHTMLAttributes<HTMLButtonElement> {
-	icon?: string;
-	viewBox?: SVGAttributes<SVGSVGElement>['viewBox'];
-	id?: string;
-	title?: string;
-	tippy?: string | object;
-	navigate?: string;
-	variant?: string;
-	'data-tippy-content'?: string;
+  icon?: string;
+  viewBox?: SVGAttributes<SVGSVGElement>["viewBox"];
+  id?: string;
+  title?: string;
+  tippy?: string | object;
+  navigate?: string;
+  variant?: string;
+  "data-tippy-content"?: string;
 }
 
 interface iconAttributes {
-	icon: string | undefined;
-	viewBox?: string;
+  icon: string | undefined;
+  viewBox?: string;
 }
 
 export /*bundle*/
-const IconButton: ForwardRefExoticComponent<PropsWithChildren<props> & RefAttributes<HTMLButtonElement>> = forwardRef(
-	(props: PropsWithChildren<props>, ref: LegacyRef<HTMLButtonElement> | undefined): JSX.Element => {
-		const { icon, onClick, viewBox, disabled, name, value, id, title, children } = props;
+const IconButton: ForwardRefExoticComponent<
+  PropsWithChildren<props> & RefAttributes<HTMLButtonElement>
+> = forwardRef(
+  (
+    props: PropsWithChildren<props>,
+    ref: LegacyRef<HTMLButtonElement> | undefined
+  ): JSX.Element => {
+    const {
+      icon,
+      onClick,
+      viewBox,
+      disabled,
+      name,
+      value,
+      id,
+      title,
+      children,
+    } = props;
 
-		const onClickButton = async (event: MouseEvent<HTMLButtonElement>): Promise<void> => {
-			if (onClick && typeof onClick === 'function') {
-				onClick(event);
-				return;
-			}
+    const buttonRef = React.useRef(null);
 
-			if (props.navigate) {
-				routing.pushState(props.navigate);
-			}
-		};
+    React.useEffect(() => {
+      if (title) {
+        tippy(buttonRef.current, {
+          content: title,
+        });
+      }
+    }, [title]);
 
-		let { className, type, variant = 'default' } = props;
-		type = !!type ? type : 'button';
-		className = className ? ` pragmate-icon-button ${className}` : 'pragmate-icon-button';
-		className += variant ? ` btn-${variant}` : '';
+    const onClickButton = async (
+      event: MouseEvent<HTMLButtonElement>
+    ): Promise<void> => {
+      if (onClick && typeof onClick === "function") {
+        onClick(event);
+        return;
+      }
 
-		const iconAttributes: iconAttributes = { icon: icon };
-		if (viewBox) iconAttributes.viewBox = viewBox;
+      if (props.navigate) {
+        routing.pushState(props.navigate);
+      }
+    };
 
-		const attrs: props = Object.assign({}, props);
-		title ? (attrs['data-tippy-content'] = title) : null;
+    let { className, type, variant = "default" } = props;
+    type = !!type ? type : "button";
+    className = className
+      ? ` pragmate-icon-button ${className}`
+      : "pragmate-icon-button";
+    className += variant ? ` btn-${variant}` : "";
 
-		const attrsToDelete = ['icon', 'type', 'title', 'viewBox', 'className'];
+    const iconAttributes: iconAttributes = { icon: icon };
+    if (viewBox) iconAttributes.viewBox = viewBox;
 
-		attrsToDelete.forEach(attr => {
-			delete attrs[attr];
-		});
+    const attrs: props = Object.assign({}, props);
+    title ? (attrs["data-tippy-content"] = title) : null;
 
-		return (
-			<button
-				id={id}
-				type={type}
-				ref={ref}
-				name={name}
-				value={value}
-				disabled={disabled}
-				className={className}
-				onClick={onClickButton}
-				{...attrs}
-			>
-				<Icon {...iconAttributes} />
-				{children}
-				{/* {!disabled && <BeyondWaves/>} */}
-			</button>
-		);
-	}
+    const attrsToDelete = ["icon", "type", "title", "viewBox", "className"];
+
+    attrsToDelete.forEach((attr) => {
+      delete attrs[attr];
+    });
+
+    return (
+      <button
+        id={id}
+        type={type}
+        ref={buttonRef}
+        name={name}
+        value={value}
+        disabled={disabled}
+        className={className}
+        onClick={onClickButton}
+        {...attrs}
+      >
+        <Icon {...iconAttributes} />
+        {children}
+        {/* {!disabled && <BeyondWaves/>} */}
+      </button>
+    );
+  }
 );

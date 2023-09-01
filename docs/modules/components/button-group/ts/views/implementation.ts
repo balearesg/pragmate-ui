@@ -3,7 +3,7 @@ export const implementation = `import { ButtonGroup, Button } from 'pragmate-ui/
 function MyComponent() {
 
   return (
-    <ButtonGroup orientation="column">
+    <ButtonGroup orientation="column" size="tall">
       <Button>Button 1</Button>
       <Button>Button 2</Button>  
       <Button>Button 3</Button>
