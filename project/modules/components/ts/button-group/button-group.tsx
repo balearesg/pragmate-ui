@@ -4,7 +4,7 @@ import { ButtonGroupContext } from './context';
 
 export /* bundle */ function ButtonGroup(props: IProps): JSX.Element {
 	const { orientation = 'row', children } = props;
-	const [selected, setSelected] = React.useState<number>();
+	const [selected, setSelected] = React.useState<number>(props.selected);
 	let cls = `pui-button-group`;
 	cls += orientation ? ` pui-button-group ${orientation}` : '';
 

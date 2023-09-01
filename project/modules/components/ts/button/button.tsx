@@ -38,7 +38,6 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 	const useContext = typeof context?.setSelected === 'function';
 	const onClickButton = (event: React.MouseEvent<HTMLButtonElement>): void => {
 		if (useContext) {
-			console.log(10, context);
 			context.setSelected(index);
 		}
 		if (onClick && typeof onClick === 'function') {
