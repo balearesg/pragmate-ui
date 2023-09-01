@@ -6,6 +6,7 @@
 			color: $color;
 
 			&:hover:not(:disabled),
+			&.pui-btn--active,
 			&:focus {
 				background-color: var(--#{$type}-30);
 			}

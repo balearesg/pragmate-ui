@@ -1,13 +1,20 @@
 import * as React from 'react';
 import type { IProps } from './type';
+import { ButtonGroupContext } from './context';
 
 export /* bundle */ function ButtonGroup(props: IProps): JSX.Element {
 	const { orientation = 'row', children } = props;
-	let cls = `pragmate-button-group`;
-	cls += orientation ? ` pragmate-button-group ${orientation}` : '';
+	const [selected, setSelected] = React.useState<number>();
+	let cls = `pui-button-group`;
+	cls += orientation ? ` pui-button-group ${orientation}` : '';
+
+	const childrenWithProps = React.Children.map(children, (child, index) => {
+		return React.cloneElement(child, { index }); // Passing the index as a prop
+	});
+
 	return (
-		<div className="content-group">
-			<div className={cls}>{children}</div>
-		</div>
+		<ButtonGroupContext.Provider value={{ selected, setSelected }}>
+			<div className={cls}>{childrenWithProps}</div>
+		</ButtonGroupContext.Provider>
 	);
 }

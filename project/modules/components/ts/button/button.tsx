@@ -4,6 +4,7 @@ import { Spinner } from 'pragmate-ui/spinner';
 import { RippleEffect } from 'pragmate-ui/ripple';
 import tippy from 'tippy.js';
 import { IProps } from './interface';
+import { ButtonGroupContext } from '../button-group/context';
 
 const { forwardRef } = React;
 
@@ -17,12 +18,16 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 		children,
 		icon,
 		loading,
+		index,
 		fetching = false,
 		variant = 'primary',
 		bordered = false,
 		disabled = false,
+
 		...otherProps
 	} = props;
+
+	const context = React.useContext(ButtonGroupContext);
 
 	const refObject = React.useRef<HTMLButtonElement>(null);
 	const combinedRef = (instance: HTMLButtonElement) => {
@@ -30,8 +35,12 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 		if (typeof ref === 'function') ref(instance);
 		else if (ref) ref.current = instance;
 	};
-
+	const useContext = typeof context?.setSelected === 'function';
 	const onClickButton = (event: React.MouseEvent<HTMLButtonElement>): void => {
+		if (useContext) {
+			console.log(10, context);
+			context.setSelected(index);
+		}
 		if (onClick && typeof onClick === 'function') {
 			onClick(event);
 			return;
@@ -43,7 +52,6 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 		ripple.add(refObject.current);
 
 		if (title) {
-			console.log(11, title);
 			tippy(refObject.current);
 		}
 	}, [title]);
@@ -63,7 +71,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 	cls += className ? ` ${className}` : '';
 	cls += bordered ? ' outline' : '';
 	cls += icon ? ' has-icon' : '';
-
+	if (useContext && context.selected === index) cls += ' pui-btn--active';
 	return (
 		<button
 			ref={combinedRef}
