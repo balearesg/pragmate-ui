@@ -14,5 +14,6 @@ $alert-types: 'success', 'error', 'warning', 'info';
 				border-left: 1rem solid var(--pui-#{$type}-border-color);
 			}
 		}
+		
 	}
 }

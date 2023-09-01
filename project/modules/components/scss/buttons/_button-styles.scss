@@ -5,7 +5,8 @@
 			background-color: var(--#{$type});
 			color: $color;
 
-			&:hover:not(:disabled) {
+			&:hover:not(:disabled),
+			&:focus {
 				background-color: var(--#{$type}-30);
 			}
 
