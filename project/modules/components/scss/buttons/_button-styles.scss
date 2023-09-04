@@ -9,6 +9,7 @@
 			&.pui-btn--active,
 			&:focus {
 				background-color: var(--#{$type}-30);
+				color: var(--#{type}-90);
 			}
 
 			/**
