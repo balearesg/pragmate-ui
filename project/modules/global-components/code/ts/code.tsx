@@ -13,10 +13,8 @@ export /*bundle*/ function Code({ language = 'typescript', children, clipboard =
 	const cls = `code-container${clipboard ? ' has-clipboard' : ''}`;
 	return (
 		<div className={cls}>
-			<pre>
-				<code className={`regular__code language-${language}`} dangerouslySetInnerHTML={createMarkup()} />
-			</pre>
-			{clipboard && <Clipboard text={children} message="" />}
+			<pre className={`regular__code language-${language}`} dangerouslySetInnerHTML={createMarkup()} />
+			{clipboard && <Clipboard text={children} message='' />}
 		</div>
 	);
 }
