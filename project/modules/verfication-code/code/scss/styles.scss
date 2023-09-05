@@ -1,8 +1,11 @@
 .code-inputs {
   display: flex;
   justify-content: center;
-  background-color: #ccc;
+  /* background-color: #ccc; */
   border-radius: 0.5rem;
+
+  padding: 2rem 2rem 0;
+  background-color: var(--on-background);
 
   input {
     width: 100%;
@@ -18,6 +21,8 @@
     transition: all 0.2s ease-in-out;
     caret-color: rgb(0, 0, 7);
     text-align: center;
+    caret-color: var(--primary);
+    color: var(--surface);
 
     -moz-user-select: text;
     -ms-user-select: text;
@@ -32,6 +37,7 @@
 
     &:focus {
       border-color: rgb(61, 61, 61);
+      border-color: var(--primary);
     }
     @media screen and (max-width: 320px) {
       font-size: 35px;

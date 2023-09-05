@@ -1,12 +1,12 @@
 .drag-and-drop-container-user {
 	width: 145px;
 	height: 145px;
-	background-color: var(--secondary);
+	background-color: var(--on-background);
 	overflow: hidden;
 	border-radius: 50%;
 	position: relative;
 	&.border {
-		border: 3px solid var(--on-primary-container);
+		border: 3px solid var(--outline);
 	}
 	.file-drag-and-drop-user {
 		width: 100%;
@@ -24,7 +24,7 @@
 			fill: var(--on-primary);
 		}
 		span {
-			color: var(--text-color);
+			color: var(--background);
 			font-size: 14px;
 			display: inline-block;
 			text-align: center;
