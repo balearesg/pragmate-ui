@@ -19,21 +19,21 @@ export /* bundle */ function Navbar() {
 	const isScrolled = scrollPosition > 20;
 	return (
 		<nav className={`container__navbar ${isScrolled ? 'container__navbar-scrolled' : ''}`}>
-			<span className='width'>
-				<h2 className='navbar__h2'>
-					<Link href='/'>
-						Pragmate <strong className='navbar__strong-hover'>UI</strong>
+			<span className="width">
+				<h2 className="navbar__h2">
+					<Link href="/">
+						Pragmate <strong className="navbar__strong-hover">UI</strong>
 					</Link>
 				</h2>
-				<ul className='nav'>
+				<ul className="nav">
 					<li>
-						<Link href='/'>Home</Link>
+						<Link href="/">Home</Link>
 					</li>
 					<li>
-						<Link href='/components/introduction'>Docs</Link>
+						<Link href="/components/introduction">Docs</Link>
 					</li>
 					<li>
-						<a target='_blank' className='tag-a' href='https://github.com/balearesg/pragmate-ui'>
+						<a target="_blank" className="tag-a" href="https://github.com/balearesg/pragmate-ui">
 							Github
 						</a>
 						{/* <Link href="https://github.com/balearesg/pragmate-ui">Github</Link> */}

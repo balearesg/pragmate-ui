@@ -24,6 +24,11 @@
 	display: inline-block;
 	border: none;
 
+	&.btn--block {
+		display: block;
+		width: 100%;
+	}
+
 	.button-label {
 		&.loading {
 			opacity: 0;

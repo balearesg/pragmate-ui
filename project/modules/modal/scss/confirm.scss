@@ -8,14 +8,12 @@
       display: grid;
       justify-content: center;
     }
-    p, div {
+    
+    & :where(p, div) {
       color: var(--text-color);
     }
   }
-  .confirm-dialog-content p,
-  .confirm-dialog-content div,
-  .confirm-dialog-content h3,
-  .confirm-dialog-content h4 {
+  .confirm-dialog-content :where(p, div, h3, h4) {
     color: var(--text-color);
   }
   .actions {
