@@ -1,17 +1,12 @@
-.results-form {
-	display: flex;
-	align-items: center;
-	gap: 0.8rem;
-
-	.beyond-checkbox {
-		span,
-		.inp-cbx:checked + .cbx span:last-child {
-			color: var(--on-secondary);
-		}
-
-		.cbx {
-			display: flex;
-			gap: 0.5rem;
-		}
+.container-checkbox {
+	min-width: 100%;
+	min-height: 5rem;
+	border-radius: var(--border-radius-base);
+	border: 1px solid var(--outline);
+	.content {
+		margin: 1rem 2rem;
+		display: flex;
+		flex-flow: column wrap;
+		gap: 1rem;
 	}
 }

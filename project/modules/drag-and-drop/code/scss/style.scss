@@ -10,12 +10,12 @@
       align-items: center;
       flex-flow: column nowrap;
       font-size: 24px;
-      color: var(--gray-darker);
+      color: var(--on-surface);
       border-style: dashed;
       overflow: hidden;
       border-radius: 12px;
       margin: auto;
-      background-color: #dddddd;
+      background-color: var(--backrground);
       position: relative;
 
       input {

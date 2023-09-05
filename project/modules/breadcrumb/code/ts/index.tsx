@@ -4,7 +4,7 @@ import { routing } from '@beyond-js/kernel/routing';
 import { IProps } from './types';
 import { useBinder } from '@beyond-js/react-18-widgets/hooks';
 
-export /* bundle */ function BreadCrumb({ title, items, border, className, children }) {
+export /* bundle */ function BreadCrumb({ items, border, className, children }) {
 	let cls = `breadcrumb-page-header${className ? ` ${className}` : ''}`;
 	if (border) cls += ' border-header';
 
@@ -30,7 +30,6 @@ export /* bundle */ function BreadCrumb({ title, items, border, className, child
 
 	return (
 		<header className={cls}>
-			<h2>{title}</h2>
 			{breadcrumbOutput.length > 0 && <ul className='breadcrumb'>{breadcrumbOutput}</ul>}
 			<div>{children}</div>
 		</header>

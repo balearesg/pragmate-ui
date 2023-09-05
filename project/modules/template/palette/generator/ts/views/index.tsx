@@ -7,6 +7,7 @@ import { useBinder } from '@beyond-js/react-18-widgets/hooks';
 import { ColorControl } from './ColorControl';
 import { AllCustomProperties } from './AllCustomProperties';
 import type { StoreManager } from '../store';
+import { ColorPalette } from './ColorPalette';
 export /*bundle*/
 function View({ store }: { store: StoreManager }) {
 	const [colors, setColors] = React.useState(store.tones);
@@ -18,6 +19,8 @@ function View({ store }: { store: StoreManager }) {
 		event.preventDefault();
 		store.generatePalettes();
 	};
+
+	return <ColorPalette />;
 	return (
 		<div className='page__container'>
 			<h2>Template tones</h2>

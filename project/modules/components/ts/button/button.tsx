@@ -18,6 +18,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 		children,
 		icon,
 		loading,
+		block,
 		index,
 		fetching = false,
 		variant = 'primary',
@@ -70,6 +71,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 	cls += className ? ` ${className}` : '';
 	cls += bordered ? ' outline' : '';
 	cls += icon ? ' has-icon' : '';
+	cls += block ? ' btn--block' : '';
 	if (useContext && context.selected === index) cls += ' pui-btn--active';
 	return (
 		<button

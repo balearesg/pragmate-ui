@@ -1,7 +1,7 @@
-body.body-beyond-modal-opened {
+body.body-pragmate-modal-opened {
 	height: 100vh;
 	overflow-y: hidden;
-	padding-right: 15px; /* Avoid width reflow */
+	padding-right: 15px;
 }
 
 .pragmate-modal {
@@ -17,7 +17,6 @@ body.body-beyond-modal-opened {
 		z-index: 1000;
 		height: 100vh;
 		width: 100vw;
-		//   padding: 20px;
 	}
 
 	.modal-wrapper {
@@ -31,12 +30,10 @@ body.body-beyond-modal-opened {
 		@media screen and (max-height: 500px) {
 			height: auto;
 		}
-		//   @include zoomIn(1, 300ms);
 	}
 
 	.modal-content {
 		position: relative;
-
 		color: var(--text);
 		background: var(--background);
 		padding: 2rem 1.5rem;
