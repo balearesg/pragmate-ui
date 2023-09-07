@@ -27,7 +27,7 @@ export /*bundle */ function CollapsibleHeader({
 	}
 	return (
 		<header {...attrs}>
-			<div>{children}</div>
+			<div className='collapsible__header-content'>{children}</div>
 			<IconButton onClick={onClick} className={clsButton} icon={'left'} />
 		</header>
 	);

@@ -34,7 +34,7 @@ export /*bundle*/ function Tooltip({ children, content, placement = 'top', setti
 	}, []);
 
 	return (
-		<span ref={ref} className='pragmate-tooltip'>
+		<span ref={ref} className='pui-tooltip'>
 			{children}
 		</span>
 	);

@@ -34,8 +34,8 @@ body.body-pragmate-modal-opened {
 
 	.modal-content {
 		position: relative;
-		color: var(--text);
-		background: var(--background);
+		background: var(--surface);
+		border-radius: var(--border-radius-base);
 		padding: 2rem 1.5rem;
 	}
 }

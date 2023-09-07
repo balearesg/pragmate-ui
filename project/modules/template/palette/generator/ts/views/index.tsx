@@ -20,7 +20,7 @@ function View({ store }: { store: StoreManager }) {
 		store.generatePalettes();
 	};
 
-	return <ColorPalette />;
+	// return <ColorPalette />;
 	return (
 		<div className='page__container'>
 			<h2>Template tones</h2>
