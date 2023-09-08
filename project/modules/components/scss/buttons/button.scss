@@ -30,12 +30,15 @@
 	}
 
 	.button-label {
-		&.loading {
+		&.button-label--loading {
 			opacity: 0;
 		}
 	}
 	.pragmate-element-spinner {
 		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	&:disabled {
