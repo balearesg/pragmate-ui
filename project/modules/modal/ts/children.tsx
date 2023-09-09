@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { createContext, isValidElement, useContext, Context, cloneElement, ReactNode, SyntheticEvent } from 'react';
 import { IconButton } from 'pragmate-ui/icons';
-export const BeyondModalContext: Context<any> = createContext({});
-export const useBeyondModalContext = () => useContext(BeyondModalContext);
+export const ModalContext: Context<any> = createContext({});
+export const useModalContext = () => useContext(ModalContext);
 
 type props = {
 	children: ReactNode;
@@ -34,13 +34,13 @@ export const Children = ({ children, close, dismiss }: props): JSX.Element => {
 	});
 	output.push(childrenWithProps);
 	return (
-		<BeyondModalContext.Provider
+		<ModalContext.Provider
 			value={{
 				close,
 				dismiss,
 			}}
 		>
 			{output}
-		</BeyondModalContext.Provider>
+		</ModalContext.Provider>
 	);
 };

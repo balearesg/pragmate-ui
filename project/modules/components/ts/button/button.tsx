@@ -72,6 +72,8 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 	cls += bordered ? ' outline' : '';
 	cls += icon ? ' has-icon' : '';
 	cls += block ? ' btn--block' : '';
+	cls += loading || fetching ? ' btn--loading' : '';
+	const clsLoading = `button-label ${loading ? 'button-label--loading' : ''}`;
 	if (useContext && context.selected === index) cls += ' pui-btn--active';
 	return (
 		<button
@@ -82,8 +84,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 			{...properties}
 		>
 			{icon && <Icon icon={icon} />}
-			{label ||
-				(children && <div className={`button-label ${loading ? 'loading' : ''}`}>{label || children}</div>)}
+			{label || (children && <div className={clsLoading}>{label || children}</div>)}
 
 			{(loading || fetching) && <Spinner type={`on-${variant}`} active={true} />}
 		</button>
