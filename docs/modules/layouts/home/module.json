@@ -1,0 +1,17 @@
+{
+	"name": "layout/home",
+	"widget": {
+		"is": "layout",
+		"element": {
+			"name": "pui-home-layout"
+		},
+		"scss": {
+			"path": "scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "ts",
+			"files": ["*"]
+		}
+	}
+}

@@ -45,6 +45,18 @@ var a = [...temp1.children[1].children].reduce((acc, item) => {
 	return `${acc}--${label}: ${value};\n`;
 }, '');
 
+//get general variables of light or dark scheme. It requires find the selector  with the class "color-scheme tokens"
+
+[...temp2.children].forEach(item => {
+	[...item.children].forEach(subitem => {
+		const color = subitem.querySelector('.color-desc').innerText;
+		const label = subitem.querySelector('.color-label').innerText;
+		console.log(`--${label.toLowerCase().replaceAll(' ', '-')}: ${color};`);
+	});
+});
+
+//--------------------------
+
 // get light scheme theme
 variables = [...temp1.children[1].children].reduce((acc, item) => {
 	function separate(input) {

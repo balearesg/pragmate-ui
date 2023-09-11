@@ -1,29 +1,23 @@
 {
-  "name": "introduction",
-  "widget": {
-    "route": "/components/introduction",
-    "layout": "main-layout",
-    "is": "page",
-    "scss": {
-      "path": "/widget/scss",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "mdx": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "element": {
-      "name": "page-introduction"
-    }
-  }
+	"name": "introduction",
+	"widget": {
+		"route": "/components/introduction",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"scss": {
+			"path": "/widget/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "page-introduction"
+		}
+	}
 }

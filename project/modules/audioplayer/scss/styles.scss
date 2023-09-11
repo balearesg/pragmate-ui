@@ -1,0 +1,38 @@
+/********** Range Input Styles **********/
+/*Range Reset*/
+input[type='range'] {
+	-webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+	cursor: pointer;
+	width: 15rem;
+
+	&:focus {
+		outline: none;
+	}
+	&::-webkit-slider-runnable-track,
+	&::-moz-range-track {
+		background-color: var(--primary);
+		border-radius: 0.5rem;
+		height: 15rem;
+	}
+	/* slider thumb */
+	&::-webkit-slider-thumb,
+	&::-moz-range-thumb {
+		-webkit-appearance: none; /* Override default look */
+		appearance: none;
+
+		border-radius: 50%;
+		/*custom styles*/
+		opacity: 1;
+		background-color: var(--tertiary);
+		height: 0.5rem;
+		width: 0.5rem;
+	}
+	&:focus::-webkit-slider-thumb,
+	&:focus::-moz-range-thumb {
+		border: 1px solid var(--primary-30);
+		// outline: 3px solid var(--primary-30);
+		outline-offset: 0.125rem;
+	}
+}

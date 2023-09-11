@@ -1,29 +1,23 @@
 {
-  "name": "opinions",
-  "widget": {
-    "route": "/components/opinions",
-    "layout": "main-layout",
-    "is": "page",
-    "scss": {
-      "path": "/scss",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "mdx": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "element": {
-      "name": "component-oponions"
-    }
-  }
+	"name": "opinions",
+	"widget": {
+		"route": "/components/opinions",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "component-oponions"
+		}
+	}
 }
