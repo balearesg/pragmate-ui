@@ -3,7 +3,7 @@
 	"widget": {
 		"is": "layout",
 		"element": {
-			"name": "main-layout"
+			"name": "pui-docs-layout"
 		},
 		"scss": {
 			"path": "scss",

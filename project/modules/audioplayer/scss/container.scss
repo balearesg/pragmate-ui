@@ -1,0 +1,16 @@
+.player__container {
+	position: relative;
+	display: inline-flex;
+	border: var(--outline) 1px solid;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.audio__container {
+	min-height: 42px;
+	position: relative;
+	align-items: center;
+	flex-grow: 1;
+	height: 100%;
+	border: 1px solid yellow;
+}

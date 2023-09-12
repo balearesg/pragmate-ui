@@ -1,29 +1,23 @@
 {
-  "name": "menu",
-  "widget": {
-    "route": "/components/menu",
-    "layout": "main-layout",
-    "is": "page",
-    "scss": {
-      "path": "/scss",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "mdx": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "element": {
-      "name": "component-menu"
-    }
-  }
+	"name": "menu",
+	"widget": {
+		"route": "/components/menu",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "component-menu"
+		}
+	}
 }

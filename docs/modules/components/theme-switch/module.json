@@ -1,34 +1,24 @@
 {
-  "name": "theme-switch",
-  "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
-  "widget": {
-    "route": "/components/theme-switch",
-    "layout": "main-layout",
-    "is": "page",
-    "ts": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "scss": {
-      "path": "/scss",
-      "files": [
-        "*"
-      ]
-    },
-    "mdx": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "element": {
-      "name": "theme-switch-page"
-    }
-  }
+	"name": "theme-switch",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/theme-switch",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "theme-switch-page"
+		}
+	}
 }

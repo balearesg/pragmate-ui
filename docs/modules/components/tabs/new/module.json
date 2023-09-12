@@ -3,7 +3,7 @@
 	"platforms": ["web", "ios", "android"],
 	"widget": {
 		"route": "/components/tabs-new",
-		"layout": "main-layout",
+		"layout": "pui-docs-layout",
 		"is": "page",
 		"ts": {
 			"path": "/ts",

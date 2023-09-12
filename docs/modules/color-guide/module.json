@@ -3,7 +3,7 @@
 	"widget": {
 		"route": "/color-guide",
 		"is": "page",
-		"layout": "main-layout",
+		"layout": "pui-docs-layout",
 		"scss": {
 			"path": "/scss",
 			"files": ["*"]

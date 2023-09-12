@@ -1,34 +1,24 @@
 {
-  "name": "icons-icon",
-  "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
-  "widget": {
-    "route": "/components/icons-icon",
-    "layout": "main-layout",
-    "is": "page",
-    "ts": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "scss": {
-      "path": "/scss",
-      "files": [
-        "*"
-      ]
-    },
-    "mdx": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "element": {
-      "name": "icon-page"
-    }
-  }
+	"name": "icons-icon",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/icons-icon",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "icon-page"
+		}
+	}
 }

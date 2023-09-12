@@ -1,34 +1,24 @@
 {
-  "name": "icon-Button",
-  "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
-  "widget": {
-    "route": "/components/icon-button",
-    "layout": "main-layout",
-    "is": "page",
-    "ts": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "scss": {
-      "path": "/scss",
-      "files": [
-        "*"
-      ]
-    },
-    "mdx": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "element": {
-      "name": "icon-button-page"
-    }
-  }
+	"name": "icon-Button",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/icon-button",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "icon-button-page"
+		}
+	}
 }

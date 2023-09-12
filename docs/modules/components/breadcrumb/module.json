@@ -1,29 +1,23 @@
 {
-  "name": "breadcrumb",
-  "widget": {
-    "route": "/components/breadcrumb",
-    "layout": "main-layout",
-    "is": "page",
-    "scss": {
-      "path": "/scss",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "mdx": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "element": {
-      "name": "component-breadcrumb"
-    }
-  }
+	"name": "breadcrumb",
+	"widget": {
+		"route": "/components/breadcrumb",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "component-breadcrumb"
+		}
+	}
 }
