@@ -1,0 +1,37 @@
+.layout__container {
+	display: grid;
+	grid-template:
+		"navbar navbar" 70px
+		"aside main" 3fr
+		"aside main" 0fr
+		"footer footer" 70px/
+		25% 	3fr;
+	max-width: 1200px;
+	margin: 0 auto;
+	gap: 30px;
+
+	.container__navbar {
+		grid-area: navbar;
+	}
+
+	.view {
+		grid-area: main;
+		.view__span {
+			color: var(--primary);
+			font-weight: bold;
+		}
+	}
+
+	.container__aside {
+		position: sticky;
+		overflow: auto;
+		top: 80px;
+		grid-area: aside;
+		height: 85vh;
+		background: var(--background);
+	}
+
+	.container__footer {
+		grid-area: footer;
+	}
+}

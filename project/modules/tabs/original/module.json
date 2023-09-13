@@ -1,0 +1,15 @@
+{
+	"name": "tabs/original",
+	"platforms": ["web", "ios", "android"],
+	"code": {
+		"name": "tabs",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		}
+	}
+}

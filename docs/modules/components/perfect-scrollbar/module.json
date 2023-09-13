@@ -1,0 +1,24 @@
+{
+	"name": "scroll-container",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/scroll-container",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "scroll-container-page"
+		}
+	}
+}

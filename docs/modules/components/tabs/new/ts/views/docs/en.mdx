@@ -1,0 +1,69 @@
+import { Code } from 'pragmate-ui/code';
+import { example } from '../example';
+import { Example } from '../Example';
+
+### Import
+
+<Code>{`import { TabsContainer, Tabs, Panes } from 'pragmate-ui/tabs';`}</Code>
+
+### `TabsContainer`
+
+The "Tabs" component is a versatile and essential part of many user interfaces. It allows developers to create a tabbed
+navigation structure within a web application. This helps in organizing content into separate views, thereby enhancing
+the user experience by decluttering the interface and allowing users to navigate through different sections or
+categories effortlessly. It can be particularly useful in settings like dashboards, settings panels, or multi-step forms
+where grouping related content is essential.
+
+### Example:
+
+<Example />
+
+<Code>{example}</Code>
+
+### TabsContainer
+
+<Code>{`const TabsContainer: React.FC<ITabProps> = { active, onChange, children, panes };`}</Code>
+
+**Description:** A container component that manages tabs. It maintains the active tab state and provides the necessary
+context for child components.
+
+**Props:**
+
+-   `active` (optional): Index of the active tab.
+-   `onChange` (optional): Callback function triggered on tab change.
+-   `children`: React nodes to be rendered inside the container.
+-   `panes`: An array of pane objects containing tab names and content.
+
+### `Tabs`
+
+<Code>{`const Tabs = { children };`}</Code>
+
+**Description:** A component that renders a set of tab elements. Utilizes the context provided by `TabsContainer`.
+
+**Props:**
+
+-   `children`: React elements to be rendered as tabs.
+
+### `Tab`
+
+<Code>{`function Tab(props);`}</Code>
+
+**Description:** Represents an individual tab. It can be disabled, and it applies appropriate CSS classes based on its
+state.
+
+**Props:**
+
+-   `children`: Content of the tab.
+-   `index`: Index of the tab.
+-   `disabled` (optional): If set to true, the tab will be disabled.
+
+### `Panes`
+
+<Code>{`function Panes({ children });`}</Code>
+
+**Description:** Renders the content of the active tab pane. It relies on the active tab information provided by the
+`TabsContainer`.
+
+**Props:**
+
+-   `children`: React elements representing individual panes.

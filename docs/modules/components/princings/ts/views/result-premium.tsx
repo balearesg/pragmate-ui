@@ -1,0 +1,27 @@
+import * as React from "react";
+import { Pricing } from "pragmate-ui/pricing";
+
+export function ResultsPremium() {
+  const advantages = [
+    "2250 credits/month",
+    "Buy more credits as needed",
+    "Upscale resolution and remove watermarks",
+    "Gen-1 (Video to Video) up to 15 sec",
+    "Gen-2 (Text to Video) up to 4 sec",
+    "Unlimited video editor projects",
+    "500GB assets",
+    "Up to 10 editors",
+    "All video exports from Standard",
+  ];
+  return (
+    <section>
+      <Pricing
+        variant="premium"
+        title="premium"
+        price={78}
+        description="For large teams and companies looking to add all of Runway's features into their workflows."
+        advantages={advantages}
+      />
+    </section>
+  );
+}

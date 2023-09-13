@@ -1,0 +1,24 @@
+{
+	"name": "code-verification",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/code-verification",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "code-verification-page"
+		}
+	}
+}

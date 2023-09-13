@@ -1,5 +1,6 @@
 import * as React from "react";
 import { IconButton } from "pragmate-ui/icons";
+import { Toasts, toast } from "pragmate-ui/toast";
 
 export function Clipboard({ text, message }) {
   const ref = React.useRef(null);
@@ -26,6 +27,7 @@ export function Clipboard({ text, message }) {
   };
   const onClick = async (event) => {
     const target = event.currentTarget;
+    toast.info("copied");
     const text = target.dataset.text;
     if (!navigator.clipboard) {
       return polyfill(text);
@@ -50,6 +52,12 @@ export function Clipboard({ text, message }) {
       ref={ref}
       onClick={onClick}
     >
+      <Toasts
+        position={{
+          bottom: "2rem",
+          right: "2rem",
+        }}
+      />
       <IconButton icon="copy" />
       <span className="action-copied">Copied</span>
     </div>

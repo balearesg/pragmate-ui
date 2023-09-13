@@ -1,0 +1,14 @@
+{
+	"name": "components",
+	"code": {
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		}
+	},
+	"static": ["static"]
+}

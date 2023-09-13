@@ -1,7 +1,7 @@
 export /*bundle*/ class RippleEffect {
 	private elements: Element[];
 
-	constructor(elements: Element | Element[] | undefined) {
+	constructor(elements: Element | Element[] | undefined = undefined) {
 		if (elements) this.add(elements);
 	}
 

@@ -1,0 +1,24 @@
+{
+	"name": "tabs",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/tabs",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "tabs-page"
+		}
+	}
+}

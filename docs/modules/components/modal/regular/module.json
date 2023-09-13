@@ -1,0 +1,20 @@
+{
+	"name": "regular-modal",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/regular-modal",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "regular-modal-page"
+		}
+	}
+}

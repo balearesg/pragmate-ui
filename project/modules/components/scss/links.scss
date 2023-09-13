@@ -1,0 +1,11 @@
+a.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+	&:hover {
+		color: var(--primary);
+	}
+}

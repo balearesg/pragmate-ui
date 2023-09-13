@@ -1,0 +1,33 @@
+.view__list-icons {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+
+	.view__list-output {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 15px;
+
+		.icon__container {
+			display: flex;
+			height: 6rem;
+			gap: 20px;
+			flex-direction: column;
+			transition: all 0.6s ease-in-out;
+			min-width: 11rem;
+			max-width: 11rem;
+			align-items: center;
+			justify-content: center;
+			/* border-radius: 14px; */
+			/* clip-path: circle(40%); */
+			cursor: pointer;
+
+			&:hover {
+				transform: scale(1.2);
+				background-color: var(--primary);
+			}
+			
+		}
+
+	}
+}

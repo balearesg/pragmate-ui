@@ -1,0 +1,32 @@
+$colors: 'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'default';
+.pui-badge__container {
+	display: flex;
+	position: relative;
+
+	.pui-badge {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&.pui-badge--has-value {
+			padding: 0.3rem;
+		}
+		border-radius: 50%;
+		background-color: var(--primary);
+		font-size: 0.5rem;
+		// Definir la lista de valores
+
+		&.pui-badge--visible {
+			height: 0.7rem;
+			width: 0.7rem;
+		}
+		// Recorrer la lista y crear las clases
+		@each $color in $colors {
+			.pui-#{$color} {
+				background: var(--#{$color});
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"name": "confirm-modal",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/confirm-modal",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "confirm-modal-page"
+		}
+	}
+}

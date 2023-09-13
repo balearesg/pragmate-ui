@@ -1,0 +1,10 @@
+.timer__container {
+	display: flex;
+	gap: 0.2rem;
+	span.timer__numbers {
+		display: flex;
+		justify-content: center;
+		width: 1.5rem;
+		padding: 0 0.2rem;
+	}
+}

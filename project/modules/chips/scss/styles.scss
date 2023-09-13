@@ -1,0 +1,29 @@
+$types: ('default', 'primary', 'secondary', 'tertiary', 'success', 'info', 'warning', 'danger', 'light', 'dark');
+
+@mixin chips-styles($color) {
+	background: var(--#{$color});
+
+	color: var(--on-#{$color});
+}
+
+@each $type in $types {
+	.pui-chip {
+		padding: 0.2rem 0.5rem;
+		border-radius: 1rem;
+		font-size: 10px;
+		&.pui-chip--#{$type} {
+			@include chips-styles($type);
+		}
+	}
+}
+
+.pui-chips__container {
+	display: flex;
+	gap: 0.5rem;
+
+	.pui-chip {
+		&.is-clickable {
+			cursor: pointer;
+		}
+	}
+}

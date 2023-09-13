@@ -1,0 +1,24 @@
+{
+	"name": "radio",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/radio",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "beyond-radio"
+		}
+	}
+}

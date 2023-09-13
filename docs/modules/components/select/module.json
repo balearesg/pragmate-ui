@@ -1,0 +1,23 @@
+{
+	"name": "select",
+	"widget": {
+		"route": "/components/select",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "component-select"
+		}
+	}
+}

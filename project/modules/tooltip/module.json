@@ -1,0 +1,7 @@
+{
+	"name": "tooltip",
+	"ts": {
+		"path": "ts",
+		"files": ["*"]
+	}
+}

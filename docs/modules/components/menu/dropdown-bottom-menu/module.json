@@ -1,0 +1,23 @@
+{
+	"name": "dropdown-bottom-menu",
+	"widget": {
+		"route": "/components/dropdown-bottom-menu",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "components-dropdown-bottom-menu"
+		}
+	}
+}

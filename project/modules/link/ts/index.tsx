@@ -1,37 +1,27 @@
-import * as React from "react";
-import { routing } from "@beyond-js/kernel/routing";
+import * as React from 'react';
+import { routing } from '@beyond-js/kernel/routing';
 
 export /*bundle*/
-function Link(
-  props: React.AnchorHTMLAttributes<HTMLAnchorElement>
-): JSX.Element {
-  const onClick = (event: React.MouseEvent<HTMLAnchorElement>): void => {
-    event.preventDefault();
-    event.stopPropagation();
-    if (props.onClick && typeof props.onClick === "function") {
-      props.onClick(event);
-    }
-    routing.pushState(props.href);
-  };
-  const properties = { ...props };
-  ["href", "onClick"].forEach((prop) => delete properties[prop]);
+function Link({ href, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>): JSX.Element {
+	const isExternal = props.target === '_blank';
 
-  return (
-    <a onClick={onClick} {...properties}>
-      {props.children}
-    </a>
-  );
-}
+	const onClick = (event: React.MouseEvent<HTMLAnchorElement>): void => {
+		if (!isExternal) event.preventDefault();
+		event.stopPropagation();
 
-export /*bundle*/
-function Elink(
-  props: React.AnchorHTMLAttributes<HTMLAnchorElement>
-): JSX.Element {
-  const { href } = props;
-  delete props.href;
-  return (
-    <a href={href} target="_blank" {...props} data-algo="algo">
-      {props.children}
-    </a>
-  );
+		if (props.onClick && typeof props.onClick === 'function') {
+			props.onClick(event);
+		}
+
+		!isExternal && routing.pushState(href);
+	};
+
+	const properties = { ...props };
+	['href', 'onClick'].forEach(prop => delete properties[prop]);
+
+	return (
+		<a {...properties} href={href} onClick={onClick} target={props.target}>
+			{props.children}
+		</a>
+	);
 }

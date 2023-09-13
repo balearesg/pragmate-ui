@@ -1,0 +1,23 @@
+{
+	"name": "pricing",
+	"widget": {
+		"route": "/components/pricing",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "component-pricing"
+		}
+	}
+}

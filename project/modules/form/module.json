@@ -1,19 +1,14 @@
 {
 	"name": "form",
-	 "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
+	"platforms": ["web", "ios", "android"],
 	"code": {
-		"hmr": true,
 		"name": "form",
 		"ts": {
-			"path": "/code/ts",
+			"path": "/ts",
 			"files": ["*"]
 		},
-		"sass": {
-			"path": "/code/scss",
+		"scss": {
+			"path": "/scss",
 			"files": ["*"]
 		}
 	}

@@ -1,14 +1,22 @@
 {
 	"name": "theme-switcher",
-	"platforms": ["web", "ios", "android"],
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	],
 	"code": {
 		"sass": {
 			"path": "/code/sass",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"ts": {
 			"path": "/code/ts",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		}
 	}
 }

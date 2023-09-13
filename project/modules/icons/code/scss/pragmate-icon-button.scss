@@ -1,0 +1,25 @@
+.pragmate-icon-button {
+	height: 40px;
+	width: 40px;
+	border: none;
+	display: inline-grid;
+	position: relative;
+	outline: none !important;
+	align-items: center;
+	justify-content: center;
+
+	&:not(&:disabled) {
+		cursor: pointer;
+	}
+	&:disabled {
+		opacity: 0.6;
+	}
+
+	&.circle {
+		border-radius: 50%;
+		> .beyond-ripple {
+			border-radius: 50%;
+			align-self: center;
+		}
+	}
+}

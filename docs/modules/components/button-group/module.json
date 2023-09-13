@@ -1,0 +1,24 @@
+{
+	"name": "button-group",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/button-group",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "page-button-group"
+		}
+	}
+}

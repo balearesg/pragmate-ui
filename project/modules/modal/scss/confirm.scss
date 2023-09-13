@@ -1,0 +1,72 @@
+.pragmate-confirm-dialog {
+  &.pragmate-confirm-dialog-centered {
+    justify-content: center;
+    text-align: center;
+
+    .confirm-dialog-content,
+    .actions {
+      display: grid;
+      justify-content: center;
+    }
+    
+    & :where(p, div) {
+      color: var(--text-color);
+    }
+  }
+  .confirm-dialog-content :where(p, div, h3, h4) {
+    color: var(--text-color);
+  }
+  .actions {
+    border-top: 1px solid var(--gray-light);
+    padding: 15px 0 0;
+    margin-top: 15px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 8px;
+    justify-content: end;
+
+    .pragmate-button {
+      margin: 0;
+      min-width: 6rem;
+    }
+  }
+  &.modal-confirm {
+    transform: none;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 14px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+
+    display: flex;
+    flex-direction: row-reverse;
+    .modal-content {
+      padding: 8px 0px 0 0;
+      max-width: 400px;
+      p {
+        margin: 0;
+        font-size: 15px;
+      }
+      summary {
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+    .close-modal {
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+
+      width: -webkit-max-content;
+
+      width: -moz-max-content;
+
+      width: max-content;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+  }
+}

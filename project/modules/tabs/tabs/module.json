@@ -1,0 +1,13 @@
+{
+	"name": "tabs",
+	"platforms": ["web", "android", "ios"],
+	"bundle": "code",
+	"scss": {
+		"path": "scss",
+		"files": "*"
+	},
+	"ts": {
+		"path": "ts",
+		"files": "*"
+	}
+}

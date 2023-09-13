@@ -1,0 +1,62 @@
+.pragmate-element-input,
+.pragmate-element-textarea {
+	input,
+	textarea {
+		padding: 0.5rem;
+		border: none;
+		background-color: transparent;
+		width: 100%;
+		outline: none;
+		color: var(--text-color);
+		font-size: 16px;
+		line-height: 1.5rem;
+		background-clip: content-box;
+
+		&:-webkit-autofill,
+		&:-webkit-autofill:focus {
+			-webkit-transition: background-color 0.2s 0s;
+			transition: background-color 0.2s 0s;
+		}
+
+		&:focus {
+			color: var(--text-color);
+			transition: color 0.4s ease-in-out;
+		}
+	}
+
+	label {
+		position: absolute;
+		background-color: transparent;
+		padding: 8px 24px;
+		line-height: 24px;
+		border-radius: 70px;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		color: var(--gray-dark);
+		cursor: text;
+		transition: all 0.4s ease-in-out;
+		display: inline-block;
+		text-transform: lowercase;
+
+		&:first-letter {
+			text-transform: uppercase;
+		}
+	}
+
+	&:focus-within label,
+	input:not(:placeholder-shown) ~ label,
+	textarea:not(:placeholder-shown) ~ label {
+		padding: 0px 8px;
+		background-color: var(--surface);
+		top: -12px;
+		left: 16px;
+		bottom: auto;
+		transition: all 0.3s ease-in-out;
+		color: var(--color-gray-20);
+	}
+
+	&-error {
+		color: red;
+	}
+}

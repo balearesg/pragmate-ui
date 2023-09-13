@@ -1,0 +1,20 @@
+{
+	"name": "icon-list",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/icon-list",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "icon-list-page"
+		}
+	}
+}

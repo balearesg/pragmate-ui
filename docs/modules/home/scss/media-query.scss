@@ -1,0 +1,27 @@
+.wrapper {
+
+    @media (max-width: 750px) {
+    flex-direction: column;
+
+        .doc__content {
+        padding-left: 0;
+        }
+        .doc__nav {
+        ul {
+            border-bottom: 1px solid var(--surface);
+            padding-bottom: 0.5rem;
+            &.fixed {
+            position: relative;
+            top: 0;
+            }
+        }
+        li {
+            display: inline-block;
+            padding-right: 1rem;
+        }
+        .selected:after {
+            display: none;
+        }
+        }
+  }
+}

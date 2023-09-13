@@ -1,41 +1,46 @@
-@import './mixins/button-styles';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 @mixin properties() {
 	--text-color: #1a1a1a;
-	--font-family: 'Roboto', sans-serif;
 
-	--primary: #bbbbbb;
-	--on-primary: #444444;
-	--primary-container: #dddddd;
-	--on-primary-container: #222222;
+	//--primary: var(--primary);
+	--primary-container: var(--primary-90);
+	--on-primary: var(--primary-100);
+	--on-primary-container: var(--primary-10);
+	--inverse-primary: var(--primary-80);
+	--secondary: var(--secondary-40);
+	--secondary-container: var(--secondary-90);
+	--on-secondary: var(--secondary-100);
+	--on-secondary-container: var(--secondary-10);
+	--tertiary: var(--tertiary-40);
+	--tertiary-container: var(--tertiary-90);
+	--on-tertiary: var(--tertiary-100);
+	--on-tertiary-container: var(--tertiary-10);
 
-	--secondary: #999999;
-	--on-secondary: #666666;
-	--secondary-container: #bbbbbb;
-	--on-secondary-container: #444444;
+	--surface: var(--neutral-98);
+	--surface-dim: var(--neutral-87);
+	--surface-bright: var(--neutral-98);
+	--surface-container-lowest: var(--neutral-100);
+	--surface-container-low: var(--neutral-96);
+	--surface-container: var(--neutral-94);
+	--surface-container-high: var(--neutral-92);
+	--surface-container-highest: var(--neutral-90);
 
-	--tertiary: #777777;
-	--on-tertiary: #888888;
-	--tertiary-container: #999999;
-	--on-tertiary-container: #666666;
+	--surface-variant: var(--neutral-variant-90);
+	--on-surface: var(--neutral-10);
 
-	--error: #bbbbbb;
-	--on-error: #444444;
-	--error-container: #dddddd;
-	--on-error-container: #222222;
-
-	--background: #ffffff;
-	--on-background: #000000;
-
-	--surface: #dddddd;
-	--on-surface: #222222;
-	--outline: #777777;
-
-	--surface-variant: #bbbbbb;
-	--on-surface-variant: #444444;
-
-	--info-container: #2196f3;
-	--warning-container: #ffc107;
-	--success-container: #cf6679;
-	--background-color: #121212;
-	--success-container: #388e3c;
+	--on-surface-variant: var(--neutral-variant-30);
+	--inverse-surface: var(--neutral-20);
+	--inverse-on-surface: var(--neutral-95);
+	--background: var(--neutral-99);
+	--on-background: var(--neutral-10);
+	--error: var(--error-40);
+	--error-container: var(--error-90);
+	--on-error: var(--error-100);
+	--on-error-container: var(--error-10);
+	--outline: var(--neutral-variant-50);
+	--outline-variant: var(--neutral-variant-80);
+	--shadow: var(--neutral-0);
+	--surface-tint-color: var(--primary);
+	--scrim: var(--neutral-0);
 }

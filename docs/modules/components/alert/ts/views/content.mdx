@@ -1,0 +1,38 @@
+import { Code } from "pragmate-ui/code";
+import { Example } from "./example";
+import { implementation } from "./implementation";
+
+# Alert
+
+El componente **Alert** muestra un mensaje de alerta en tu aplicación. Es muy útil ya que los alerts se utilizan para mantener a los usuarios informados sobre cambios importantes o situaciones críticas en una aplicación web. Justo tenemos tres tipos de alert: Success, Error y Warning.
+
+## Import :
+
+<Code>{`import { Alert } from 'pragmate-ui/alert';`}</Code>
+
+### Component :
+
+<Code>{implementation}</Code>
+
+El Alerts recibe un atributo **type** y un **children** que le podemos pasar, de esta mantenera podemos manejar el contenido de manera dinamica
+
+### types :
+
+- Success
+
+- Error
+
+- Warning
+
+- Info
+
+### props optionals :
+
+A los alerts podemos pasarle opcionalmente las propieades :
+
+- Message : (string) manejo de mensajes directa.
+- closable : (boolean) por si queremos agregar un boton de quitar.
+- onClose : (function) function para actualizar si queremos desaparecer el alert.
+- icon : (boolean) opcion para agregar iconos correspondientes a cada alerts.
+
+<Example />

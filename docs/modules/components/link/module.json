@@ -1,0 +1,24 @@
+{
+	"name": "link",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/link",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "link-code-page"
+		}
+	}
+}

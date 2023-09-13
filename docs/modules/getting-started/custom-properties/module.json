@@ -1,0 +1,23 @@
+{
+	"name": "custom-properties",
+	"widget": {
+		"route": "/components/custom-properties",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"scss": {
+			"path": "/widget/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "page-properties"
+		}
+	}
+}

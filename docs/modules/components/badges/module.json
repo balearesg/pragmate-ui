@@ -1,0 +1,19 @@
+{
+	"name": "components/badges",
+	"widget": {
+		"route": "/components/badges",
+		"is": "page",
+		"layout": "pui-docs-layout",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "pui-badges-page"
+		}
+	}
+}

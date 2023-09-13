@@ -1,28 +1,22 @@
 @use 'dark';
 @use 'light';
+@use 'alerts';
+@import 'palette';
+@import 'neutral-palette';
+@import './pragmate/generate-palette';
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 :root {
-	--font-family: 'Roboto', sans-serif;
+	--font-family: 'Poppins', sans-serif;;
 	--secondary-font-family: 'Roboto', sans-serif;
-	--title-font: 'Roboto', serif;
-
-	--gray-base: #000000;
-	--gray-darker: #333333;
-	--gray-dark: #707070;
-	--gray: #d3d3d3;
-	--gray-variant: #ededed;
-	--gray-light: #dfe0e2;
-	--gray-lighter: #f7f7f7;
-
-	--success: #22bb33;
-	--warning: #f7c700;
-	--error: #fb8787;
-	--border-error: #ff0c0c;
-	--info: hsla(211, 88%, 53%, 1);
-
+	--title-font: 'Inter', sans-serif;
 	--border-primary: 20px;
 	--border-secondary: 8px;
+	--border-radius-base: 1rem;
 
+	@include neutral-palette();
+	@include alerts.properties();
 	@include light.properties();
 	@media (prefers-color-scheme: dark) {
 		@include dark.properties();

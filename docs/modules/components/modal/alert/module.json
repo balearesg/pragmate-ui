@@ -1,0 +1,20 @@
+{
+	"name": "alert-modal",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/alert-modal",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "alert-modal-page"
+		}
+	}
+}

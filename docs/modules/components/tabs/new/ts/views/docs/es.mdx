@@ -1,0 +1,73 @@
+import { Code } from 'pragmate-ui/code';
+
+## Tabs
+
+El componente "Tabs" es una parte versátil y esencial de muchas interfaces de usuario. Permite a los desarrolladores
+crear una estructura de navegación con pestañas dentro de una aplicación web. Esto ayuda a organizar el contenido en
+vistas separadas, mejorando así la experiencia del usuario al despejar la interfaz y permitir a los usuarios navegar por
+diferentes secciones o categorías sin esfuerzo. Puede ser particularmente útil en configuraciones como paneles de
+control, paneles de configuración o formularios con varios pasos donde es esencial agrupar el contenido relacionado.
+
+### Import :
+
+<Code>{`import { TabsContent, TabsContainer, Tabs } from "pragmate-ui/tabs";`}</Code>
+
+### `TabsContainer`
+
+```typescript
+const TabsContainer: React.FC<ITabProps> = { active, onChange, children, panes };
+```
+
+**Descripción:** Un componente contenedor que gestiona las pestañas. Mantiene el estado de la pestaña activa y
+proporciona el contexto necesario para los componentes hijos.
+
+**Props:**
+
+-   `active` (opcional): Índice de la pestaña activa.
+-   `onChange` (opcional): Función de retrollamada que se activa al cambiar de pestaña.
+-   `children`: Nodos de React que se renderizarán dentro del contenedor.
+-   `panes`: Un arreglo de objetos de paneles que contienen los nombres de las pestañas y su contenido.
+
+### `Tabs`
+
+```typescript
+const Tabs = { children };
+```
+
+**Descripción:** Un componente que renderiza un conjunto de elementos de pestaña. Utiliza el contexto proporcionado por
+`TabsContainer`.
+
+**Props:**
+
+-   `children`: Elementos de React que se renderizarán como pestañas.
+
+### `Tab`
+
+```typescript
+function Tab(props);
+```
+
+**Descripción:** Representa una pestaña individual. Puede ser desactivada, y aplica clases CSS adecuadas según su
+estado.
+
+**Props:**
+
+-   `children`: Contenido de la pestaña.
+-   `index`: Índice de la pestaña.
+-   `disabled` (opcional): Si se establece como verdadero, la pestaña será desactivada.
+
+### `Panes`
+
+```typescript
+function Panes({ children });
+```
+
+**Descripción:** Renderiza el contenido del panel de la pestaña activa. Se basa en la información de la pestaña activa
+proporcionada por `TabsContainer`.
+
+**Props:**
+
+-   `children`: Elementos de React que representan los paneles individuales.
+
+Estos componentes pueden ser utilizados fuera del módulo y son parte de la API pública del código dado. Asegúrate de
+incluir el `TabsContainer` como componente padre para gestionar adecuadamente el estado y el contexto de las pestañas.

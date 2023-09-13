@@ -22,12 +22,12 @@ export /*bundle*/ function Toasts({
 }: Partial<Props>): JSX.Element {
 	const [items, setItems] = React.useState<Array<IToast | undefined>>([]);
 
-	useBinder([toast], () => setItems(toast.current), 'current-toasts-changed');
+	useBinder([toast], () => setItems(toast.current), 'current.toast.changed');
 
 	const elements = items.map((item: IToast) => <Toast key={item.id} {...item} />);
 
 	return (
-		<div style={position} className={`essential__toasts ${className}`} {...props}>
+		<div style={position} className={`pui-toast__container`} {...props}>
 			{elements}
 		</div>
 	);

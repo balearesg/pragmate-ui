@@ -1,0 +1,19 @@
+.container__footer {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    z-index: 70;
+    border: none;
+    border-top: 1px solid var(--surface);
+    background-color: var(--background);
+    .footer__p {
+         transition: all 300ms ease-in-out;
+        &:hover {
+            color: var(--primary);
+            .footer__span-hover {
+                color: var(--tertiary);
+            }
+        }
+
+    }
+}

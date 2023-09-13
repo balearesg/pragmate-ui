@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import { TabsContent, BeyondTabs, Tabs } from "pragmate-ui/tabs";
+import { TabsContent, TabsContainer, Tabs } from "pragmate-ui/tabs";
 import { IconButton } from "pragmate-ui/icons";
 import { CopyableImplementation } from "./code";
 export /*bundle*/ function ImplementationResult({
@@ -8,7 +8,7 @@ export /*bundle*/ function ImplementationResult({
 }: PropsWithChildren<{ code: string }>): JSX.Element {
   const [tab, setTab] = React.useState<number>(0);
   return (
-    <BeyondTabs selected={tab}>
+    <TabsContainer selected={tab}>
       <Tabs selected={tab}>
         <IconButton
           data-tooltip="Result"
@@ -27,6 +27,6 @@ export /*bundle*/ function ImplementationResult({
         {children}
         <CopyableImplementation code={code} />
       </TabsContent>
-    </BeyondTabs>
+    </TabsContainer>
   );
 }

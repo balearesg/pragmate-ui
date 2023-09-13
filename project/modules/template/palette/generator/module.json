@@ -1,0 +1,22 @@
+{
+	"name": "template/generator",
+	"txt": {
+		"path": "txt",
+		"files": "*"
+	},
+	"widget": {
+		"route": "/pui/palette/generator",
+		"is": "page",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "pui-template-palette-page"
+		}
+	}
+}

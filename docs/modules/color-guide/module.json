@@ -1,0 +1,23 @@
+{
+	"name": "color-guide",
+	"widget": {
+		"route": "/color-guide",
+		"is": "page",
+		"layout": "pui-docs-layout",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "pui-colors-page"
+		}
+	}
+}

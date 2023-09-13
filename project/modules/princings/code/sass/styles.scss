@@ -1,0 +1,62 @@
+.container_princigs {
+    border: 1px solid var(--outline);
+    display: flex;
+    max-width: 650px;
+    width: 450px;
+    background-color: var(--background);
+    border-radius: 13px;
+    box-shadow: 0px 3px 8px #00000066;    
+
+    .container-component {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+
+        
+    .component__h3 {
+        margin: 0;
+        font-weight: 900;
+        font-size: 40px;
+    }
+        
+
+        .component__p {
+            margin: 0;
+        }
+
+        .view-price {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .price__h2 {
+                font-size: 50px;
+                margin: 10px 0px;
+            }
+
+            .pragmate-button {
+                padding: 5px 0px;
+                font-size: 20px;
+            }
+        }
+
+        .container-advantages {
+            transform: translateY(15px);
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 0;
+                margin: 20px 0px;
+                list-style: none;
+
+                li {
+                    border-bottom: 1px solid var(--primary);
+                    display: flex;
+                }
+            }
+        }
+    }
+}
