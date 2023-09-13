@@ -12,7 +12,7 @@ export /*bundle*/ function Chip(props) {
 	React.useEffect(() => {
 		if (properties.onClick) {
 			const ripple = new RippleEffect();
-			ripple.add(ref.current);
+			ripple.addRippleEffect(ref.current);
 		}
 		if (title) tippy(ref.current);
 	}, [properties.onClick, title]);
