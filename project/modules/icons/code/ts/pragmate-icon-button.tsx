@@ -38,7 +38,7 @@ const IconButton: ForwardRefExoticComponent<PropsWithChildren<props> & RefAttrib
 
 		React.useEffect(() => {
 			const ripple = new RippleEffect();
-			ripple.add(buttonRef.current);
+			ripple.addRippleEffect(buttonRef.current);
 
 			if (title) {
 				tippy(buttonRef.current, {

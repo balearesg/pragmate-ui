@@ -49,7 +49,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 
 	React.useEffect(() => {
 		const ripple = new RippleEffect();
-		ripple.add(refObject.current);
+		ripple.addRippleEffect(refObject.current);
 
 		if (title) {
 			tippy(refObject.current);

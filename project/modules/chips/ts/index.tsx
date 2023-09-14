@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Badge } from './badge';
+import { Chip } from './badge';
 export /*bundle*/ function Chips(props) {
 	const { items, children } = props;
 
@@ -9,7 +9,7 @@ export /*bundle*/ function Chips(props) {
 	const cls = `${props.type ? `pui-chip__container--${props.type}` : ''}`;
 	properties.className = `pui-chip__container${properties.className ? ` ${properties.className}` : ''} ${cls}`;
 
-	const output = items?.map((item, index) => <Badge type={props.type} key={index} item={item} />);
+	const output = items?.map((item, index) => <Chip type={props.type} key={index} item={item} />);
 
 	return (
 		<div {...properties}>
