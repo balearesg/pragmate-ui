@@ -6,7 +6,7 @@ function View() {
 	return (
 		<>
 			<h2>AudioPlayer</h2>
-			<AudioPlayer src='/assets/audio/Webscrapping.mp3' />
+			<AudioPlayer src='http://localhost:2000/recordings/Webscrapping.mp3' />
 		</>
 	);
 }
