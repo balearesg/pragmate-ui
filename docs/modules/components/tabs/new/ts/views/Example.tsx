@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Tabs, Tab, TabsContainer, Panes } from 'pragmate-ui/newtabs';
+import { Tabs, Tab, TabsContainer, Panes } from 'pragmate-ui/tabs';
 import { toast } from 'pragmate-ui/toast';
 
 export function Example() {

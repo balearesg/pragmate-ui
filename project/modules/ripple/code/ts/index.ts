@@ -13,6 +13,10 @@ export /*bundle*/ class RippleEffect {
 		});
 	}
 
+	public addRippleEffect(ref: any) {
+		this.add(ref);
+	}
+
 	private onClick = (event: MouseEvent) => {
 		const rect = (event.target as HTMLElement).getBoundingClientRect();
 		const x = event.clientX - rect.left;

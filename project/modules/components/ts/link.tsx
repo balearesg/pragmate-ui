@@ -5,7 +5,7 @@ export /*bundle*/
 function Link({ href, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>): JSX.Element {
 	const isExternal = props.target === '_blank';
 
-	const onClick = async (event: React.MouseEvent<HTMLAnchorElement>): void => {
+	const onClick = async (event: React.MouseEvent<HTMLAnchorElement>): Promise<void> => {
 		if (isExternal) return;
 
 		event.preventDefault();
