@@ -20,7 +20,13 @@ const Spinner: ForwardRefExoticComponent<properties & RefAttributes<unknown>> = 
 		let cls: string = className ? `${className} pragmate-element-spinner` : 'pragmate-element-spinner';
 		if (active) cls += ' is-active';
 
-		const circleSize = size === 'xs' ? 30 : size === 'md' ? 40 : size === 'lg' ? 50 : size === 'xl' ? 60 : 30;
+		const sizes = {
+			xs: 30,
+			md: 40,
+			lg: 50,
+			xl: 60,
+		};
+		const circleSize = sizes[size];
 
 		return (
 			<div className={cls} ref={ref}>
