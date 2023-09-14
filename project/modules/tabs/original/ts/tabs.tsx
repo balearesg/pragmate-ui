@@ -32,7 +32,7 @@ export /*bundle*/ function Tabs(props: PropsWithChildren<Iprops>): JSX.Element {
 	const { active, valueSelected } = state;
 
 	const output = children.map((tab, index) => {
-		const properties: properties = {
+		const properties: Iproperties = {
 			key: index,
 			selected: selected,
 			isActive: active,

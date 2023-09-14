@@ -1,4 +1,5 @@
 {
+	"platforms": ["web", "ios", "android"],
 	"name": "template/manager",
 	"bundle": "ts",
 	"files": "*"

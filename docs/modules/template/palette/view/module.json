@@ -1,11 +1,8 @@
 {
-	"name": "audioplayer",
-	"txt": {
-		"path": "txt",
-		"files": "*"
-	},
+	"name": "template/palette",
+	"platforms": ["web", "ios", "android"],
 	"widget": {
-		"route": "/components/audioplayer",
+		"route": "/pui/palette/view",
 		"is": "page",
 		"scss": {
 			"path": "/scss",
@@ -16,7 +13,7 @@
 			"files": ["*"]
 		},
 		"element": {
-			"name": "pui-audioplayer-page"
+			"name": "pui-template-palette-page"
 		}
 	}
 }

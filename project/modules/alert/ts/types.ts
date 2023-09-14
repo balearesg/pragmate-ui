@@ -1,14 +1,14 @@
-export type IProps = {
+export interface IProps {
 	show?: boolean;
 	className?: string;
 	type?: string;
 	message?: string;
 	title?: string;
 	closable?: boolean;
-	onClose: () => boolean;
+	onClose?: () => boolean;
 	children?: React.ReactNode;
-	icon: boolean | string;
-};
+	icon?: boolean | string;
+}
 
 export type IiconMap = {
 	[key: string]: string;

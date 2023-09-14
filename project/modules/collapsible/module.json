@@ -2,6 +2,7 @@
 	"name": "collapsible",
 	"description": "Collapsible component for pragmate-ui",
 	"bundle": "code",
+	"platforms": ["web", "ios", "android"],
 	"scss": {
 		"path": "/scss",
 		"files": ["*"]

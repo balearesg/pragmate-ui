@@ -1,3 +1,5 @@
+import { hexToRgb, rgbToHex } from './converters';
+
 export function lightenHexColor(hex: string, percentage: number): string {
 	const { r, g, b } = hexToRgb(hex);
 

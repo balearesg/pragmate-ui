@@ -1,10 +1,14 @@
 {
 	"name": "pricing",
+<<<<<<< HEAD
 	"platforms": [
 		"web",
 		"ios",
 		"android"
 	],
+=======
+	"platforms": ["web", "ios", "android"],
+>>>>>>> origin/dev
 	"widget": {
 		"route": "/components/pricing",
 		"layout": "pui-docs-layout",
