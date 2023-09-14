@@ -2,7 +2,6 @@ import React, {
 	MouseEvent,
 	ButtonHTMLAttributes,
 	SVGAttributes,
-	ForwardRefExoticComponent,
 	RefAttributes,
 	forwardRef,
 	PropsWithChildren,
@@ -30,7 +29,7 @@ interface iconAttributes {
 }
 
 export /*bundle*/
-const IconButton: ForwardRefExoticComponent<PropsWithChildren<props> & RefAttributes<HTMLButtonElement>> = forwardRef(
+const IconButton: React.FC<PropsWithChildren<props> & RefAttributes<HTMLButtonElement>> = forwardRef(
 	(props: PropsWithChildren<props>, ref: LegacyRef<HTMLButtonElement> | undefined): JSX.Element => {
 		const { icon, onClick, viewBox, disabled, name, value, id, title, children } = props;
 

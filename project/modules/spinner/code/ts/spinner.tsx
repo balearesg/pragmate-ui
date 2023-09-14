@@ -1,4 +1,4 @@
-import React, { ForwardRefExoticComponent, forwardRef, LegacyRef, RefAttributes } from 'react';
+import React, { forwardRef, LegacyRef, RefAttributes } from 'react';
 type properties = {
 	color?: string;
 	className?: string;
@@ -7,7 +7,7 @@ type properties = {
 	active?: boolean;
 };
 export /*bundle*/
-const Spinner: ForwardRefExoticComponent<properties & RefAttributes<unknown>> = forwardRef(
+const Spinner: React.FC<properties & RefAttributes<unknown>> = forwardRef(
 	(props: properties, ref: LegacyRef<HTMLDivElement>): JSX.Element => {
 		let { color, className, size, type, active } = props;
 
@@ -24,8 +24,8 @@ const Spinner: ForwardRefExoticComponent<properties & RefAttributes<unknown>> = 
 
 		return (
 			<div className={cls} ref={ref}>
-				<svg viewBox="0 0 100 100">
-					<circle cx="50" cy="50" r={circleSize} style={style} />
+				<svg viewBox='0 0 100 100'>
+					<circle cx='50' cy='50' r={circleSize} style={style} />
 				</svg>
 			</div>
 		);

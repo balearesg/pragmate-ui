@@ -1,11 +1,9 @@
 {
-	"name": "template/palette",
-	"txt": {
-		"path": "txt",
-		"files": "*"
-	},
+	"name": "template/generator",
+	"platforms": ["web", "ios", "android"],
+
 	"widget": {
-		"route": "/pui/palette/view",
+		"route": "/pui/palette/generator",
 		"is": "page",
 		"scss": {
 			"path": "/scss",

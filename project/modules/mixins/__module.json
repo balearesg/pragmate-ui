@@ -1,0 +1,13 @@
+{
+	"name": "mixins",
+	"platforms": ["web", "ios", "android"],
+	"code": {
+		"ts": {
+			"files": "*",
+			"path": "ts"
+		},
+		"scss": {
+			"files": "*"
+		}
+	}
+}

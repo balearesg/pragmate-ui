@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal } from './modal';
-import { Button } from 'pragmate-ui/form';
+import { Button } from 'pragmate-ui/components';
 export /*bundle*/
 function AlertModal(props) {
 	const [state, setState] = React.useState({ fetching: false });

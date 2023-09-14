@@ -1,5 +1,6 @@
 {
 	"name": "pricing",
+	"platforms": ["web", "ios", "android"],
 	"widget": {
 		"route": "/components/pricing",
 		"layout": "pui-docs-layout",
