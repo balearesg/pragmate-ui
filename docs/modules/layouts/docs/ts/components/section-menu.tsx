@@ -4,7 +4,7 @@ import { ItemMenu } from './items';
 
 export function SectionMenu({ children, items, tabIndex }) {
 	const output = items.map((component: IItem) => {
-		const [path] = component;
+		const [label, path] = component;
 		return <ItemMenu key={path} tabIndex={tabIndex++} component={component} />;
 	});
 

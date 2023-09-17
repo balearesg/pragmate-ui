@@ -26,7 +26,7 @@ export function ProgressBarVariants() {
 	};
 	const buttons = variants.map(item => {
 		return (
-			<Button variant={item} key={item} data-variant={item} onClick={handleVariantProgressBar}>
+			<Button variant="primary" key={item} data-variant={item} onClick={handleVariantProgressBar}>
 				{item}
 			</Button>
 		);

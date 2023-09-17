@@ -3,7 +3,7 @@ import { Code } from 'pragmate-ui/code';
 import { Result } from './result';
 import { ProgressBarVariants } from './variants';
 
-## Progress Bar
+# Progress Bar
 
 El `Progress Bar` es un componente visual que muestra la cantidad de progreso que se ha realizado en una tarea. Es útil
 para informar al usuario sobre el estado de una tarea en curso y para indicar cuánto tiempo se espera que dure la tarea.
@@ -14,13 +14,13 @@ para informar al usuario sobre el estado de una tarea en curso y para indicar cu
 
 ### Implementation :
 
-<Code>{`<ProgressBar currentValue={50} maxValue={100} variant="primary" label="Details" />`}</Code>
+<Code>{`<ProgressBar currentValue={50} maxValue={100} variant="primary" />`}</Code>
 
 ### Result :
 
 <Result />
 
-### Variants :
+### With Variants :
 
 <ProgressBarVariants />
 
@@ -31,4 +31,3 @@ El componente acepta las siguientes propiedades:
 -   `currentValue` (número): el valor actual de la barra de progreso.
 -   `maxValue` (número, opcional): el valor máximo de la barra de progreso. Por defecto es 100.
 -   `variant` (string, opcional): la variante de color de la barra de progreso. Por defecto es "primary".
--   `label` (string, opcional): una etiqueta para describir la barra de progreso.

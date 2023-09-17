@@ -1,6 +1,6 @@
 To create a README for your Badge component, you can follow these guidelines:
 
-## Badge Component
+# Badge Component
 
 The Badge component is a versatile component that allows you to display badges with different colors and values.
 
@@ -10,15 +10,15 @@ To use the Badge component in your project, follow these steps:
 
 1. Install the component's dependencies if you haven't already:
 
-   ```bash
-   npm install react
-   ```
+    ```bash
+    npm install react
+    ```
 
 2. Import the Badge component into your project:
 
-   ```javascript
-   import { Badge } from './Badge';
-   ```
+    ```javascript
+    import { Badge } from './Badge';
+    ```
 
 ### Usage
 
@@ -26,7 +26,7 @@ You can use the Badge component by including it in your JSX code and passing the
 
 ```javascript
 <Badge variant="primary" value={3}>
-  Notifications
+	Notifications
 </Badge>
 ```
 
@@ -34,9 +34,10 @@ You can use the Badge component by including it in your JSX code and passing the
 
 The Badge component accepts the following props:
 
-- `variant` (string, optional): Defines the color variant of the badge. Possible values are 'primary', 'secondary', 'success', 'danger', 'warning', 'info', or 'default'. If not provided, it defaults to 'default'.
-- `value` (number, required): The numeric value to be displayed inside the badge.
-- `children` (ReactNode, required): The content you want to display next to the badge.
+-   `variant` (string, optional): Defines the color variant of the badge. Possible values are 'primary', 'secondary',
+    'success', 'danger', 'warning', 'info', or 'default'. If not provided, it defaults to 'default'.
+-   `value` (number, required): The numeric value to be displayed inside the badge.
+-   `children` (ReactNode, required): The content you want to display next to the badge.
 
 ### Examples
 
@@ -58,24 +59,27 @@ Here are some examples of how to use the Badge component:
 
 ### Styling
 
-The Badge component is styled using SCSS, and you can customize its appearance by modifying the SCSS variables. The available color variables are:
+The Badge component is styled using SCSS, and you can customize its appearance by modifying the SCSS variables. The
+available color variables are:
 
-- `--primary`
-- `--secondary`
-- `--success`
-- `--danger`
-- `--warning`
-- `--info`
-- `--default`
+-   `--primary`
+-   `--secondary`
+-   `--success`
+-   `--danger`
+-   `--warning`
+-   `--info`
+-   `--default`
 
 You can override these variables to change the badge's colors to match your project's design.
 
 ### Patterns
 
-The Badge component follows the pattern of creating reusable components in React and using CSS variables for styling customization.
+The Badge component follows the pattern of creating reusable components in React and using CSS variables for styling
+customization.
 
 ### License
 
 This component is open-source and available under the MIT License.
 
-Feel free to customize and integrate the Badge component into your project as needed. If you have any questions or need further assistance, please don't hesitate to reach out.
+Feel free to customize and integrate the Badge component into your project as needed. If you have any questions or need
+further assistance, please don't hesitate to reach out.
