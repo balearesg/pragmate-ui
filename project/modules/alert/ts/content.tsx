@@ -14,6 +14,7 @@ export function Content({ type, message, children, title, icon }) {
 	if (message) {
 		output.push(<span key='message' dangerouslySetInnerHTML={{ __html: message }}></span>);
 	}
+	console.log(0.1, icon);
 	const Control = icon ? 'section' : React.Fragment;
 	return (
 		<Control>

@@ -11,8 +11,7 @@
 	font-family: var(--alert-font-family);
 	font-size: var(--alert-font-size);
 	line-height: var(--alert-line-height);
-	display: flex;
-	align-items: center;
+
 	gap: 1rem;
 	.alert--icon {
 		width: var(--alert-icon-size);
