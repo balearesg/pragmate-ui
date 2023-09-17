@@ -11,8 +11,8 @@ export function SectionMenu({ children, items, tabIndex }) {
 	return (
 		<section>
 			{children}
-			<nav className='aside__nav' role='navigation'>
-				<ul className='aside__ul'>{output}</ul>
+			<nav className="aside__nav" role="navigation">
+				<ul className="aside__ul">{output}</ul>
 			</nav>
 		</section>
 	);

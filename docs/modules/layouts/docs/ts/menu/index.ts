@@ -1,4 +1,4 @@
-import {FormItems} from './form';
+import { FormItems } from './form';
 
 const modalsChildren = [
 	['Alert', 'alert-modal'],
@@ -50,6 +50,7 @@ export const menuItems = [
 	],
 	['Theme-switch', 'theme-switch', []],
 	['Button', 'buttons', []],
+	['Progress Bar', 'progress-bar', []],
 	['Code', 'code', []],
 	['Pricing', 'pricing', []],
 	['Spinner', 'spinner', []],
