@@ -1,0 +1,34 @@
+{
+  "name": "progress-bar",
+  "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
+  "widget": {
+    "route": "/components/progress-bar",
+    "layout": "pui-docs-layout",
+    "is": "page",
+    "scss": {
+      "path": "/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "mdx": {
+      "path": "/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "element": {
+      "name": "page-progress-bar"
+    }
+  }
+}

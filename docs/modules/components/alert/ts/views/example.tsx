@@ -3,7 +3,6 @@ import { Alert } from 'pragmate-ui/alert';
 import { Button, ButtonGroup } from 'pragmate-ui/components';
 
 export function Example() {
-	// $alert-types: 'success', 'error', 'warning', 'info';
 	const [showlerts, setShowAlerts] = React.useState(false);
 	const [typeAlert, setTypeAlerts] = React.useState('succes');
 	const types = ['success', 'error', 'warning', 'info'];

@@ -1,11 +1,10 @@
-import { Code } from "pragmate-ui/code";
-import { implementation } from "./implementation";
+import { Code } from 'pragmate-ui/code';
+import { implementation } from './implementation';
 
-## Componente `Empty` de Pragmate-UI
+# `Empty`
 
-El componente <span className="view__span">Emty</span> representar un
-mensaje o elemento visual que indica a los usuarios que no se
-encontraron resultados relevantes o útiles.
+El componente <span className="view__span">Emty</span> representar un mensaje o elemento visual que indica a los
+usuarios que no se encontraron resultados relevantes o útiles.
 
 ### Import
 
@@ -19,14 +18,14 @@ encontraron resultados relevantes o útiles.
 
 El componente `Empty` acepta las siguientes propiedades:
 
-- `text` (opcional): Un string que define el texto que se mostrará en la sección vacía. Por defecto, muestra "No hay
-  registros".
-- `icon` (opcional): Un string que indica el nombre del ícono que se mostrará junto al texto. Utiliza los íconos
-  proporcionados por la librería de íconos de Pragmate-UI.
-- `additionalElement` (opcional): Un elemento React que se puede proporcionar para mostrar contenido adicional, como
-  botones o enlaces.
-- `children` (opcional): Contenido adicional que se puede proporcionar como componentes React.
-- `className` (opcional): Una clase CSS adicional que se agregará al contenedor del componente `Empty`.
+-   `text` (opcional): Un string que define el texto que se mostrará en la sección vacía. Por defecto, muestra "No hay
+    registros".
+-   `icon` (opcional): Un string que indica el nombre del ícono que se mostrará junto al texto. Utiliza los íconos
+    proporcionados por la librería de íconos de Pragmate-UI.
+-   `additionalElement` (opcional): Un elemento React que se puede proporcionar para mostrar contenido adicional, como
+    botones o enlaces.
+-   `children` (opcional): Contenido adicional que se puede proporcionar como componentes React.
+-   `className` (opcional): Una clase CSS adicional que se agregará al contenedor del componente `Empty`.
 
 ### Importante: Estilo Flex
 
@@ -35,7 +34,7 @@ de que el contenedor que contiene el componente tenga un estilo de flexbox. Aqu�
 hacer:
 
 <Code>
-  {`
+	{`
 <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
   <Empty text="No hay resultados" icon="warning" />
 </div>`}

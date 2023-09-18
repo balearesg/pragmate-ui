@@ -1,5 +1,5 @@
 export const gettingStartedItems = [
   ["Introduction", "introduction", []],
   ["Installation", "installation", []],
-  ["Custom properties", "custom-properties", []],
+  ["Color Guide", "color-guide", []],
 ];
