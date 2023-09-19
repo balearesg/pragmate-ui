@@ -1,27 +1,25 @@
-Of course, here's an example of how you could structure a `contributing.md` file in line with your standards:
+# 🚀 Contributing to Pragmate UI
 
----
-
-# Contributing to Pragmate UI
-
-Thank you for your interest in contributing to [Project Name]! Your contributions are valuable in improving our codebase and making it even more robust. Below are the guidelines for contributing effectively.
+Thank you for your interest in contributing to Pragmate-UI! Your contributions are valuable in improving our codebase
+and making it even more robust. Below are the guidelines for contributing effectively.
 
 ## General Guidelines
 
-- Use TypeScript and ESM (ECMAScript Modules) in any code you generate.
-- When importing React, use the following syntax: `import * as React from 'react'`.
-- For on-demand loading, we utilize the Pragmate library. Make sure to follow best practices when working with it.
+-   Use TypeScript and ESM (ECMAScript Modules) in any code you generate.
+-   When importing React, use the following syntax: `import * as React from 'react'`.
+-   For on-demand loading, we utilize the Pragmate library. Make sure to follow best practices when working with it.
 
 ## Code Structure
 
-- Create components and objects in separate files.
-- Organize your files following logical and scalable patterns.
-- Use descriptive names for files, folders, and components.
+-   Create components and objects in separate files.
+-   Organize your files following logical and scalable patterns.
+-   Use descriptive names for files, folders, and components.
 
 ## Coding and Style Standards
 
-- Follow the coding and style standards defined in the linter configuration file.
-- Utilize the following CSS variables for visual consistency: [--text-color, --altern-text-color, ...]. These variables should align with the overall project design.
+-   Follow the coding and style standards defined in the linter configuration file.
+-   Utilize the following CSS variables for visual consistency: [--text-color, --altern-text-color, ...]. These
+    variables should align with the overall project design.
 
 ## Contribution Process
 
@@ -36,10 +34,7 @@ Thank you for your interest in contributing to [Project Name]! Your contribution
 
 ## Community and Support
 
-If you have any questions or need guidance, feel free to reach out to us on our usual communication platforms. We appreciate your commitment and look forward to your contributions.
+If you have any questions or need guidance, feel free to reach out to us on our usual communication platforms. We
+appreciate your commitment and look forward to your contributions.
 
-Thank you for being a part of [Project Name]!
-
----
-
-Remember to tailor this example to your actual project's structure and your specific preferences. I hope this is helpful to you!
+Thank you for being a part of Pragmate-UI!
