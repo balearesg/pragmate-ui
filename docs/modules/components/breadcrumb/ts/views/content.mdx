@@ -1,33 +1,31 @@
-import { Code } from "pragmate-ui/code";
-import { implementation } from "./implementation";
-import { Results } from "./results";
-import { implementationlistItems } from "./implementationListItems";
+import { Code } from 'pragmate-ui/code';
+import { implementation } from './implementation';
+import { Results } from './results';
+import { implementationlistItems } from './implementationListItems';
 
 # Breadcrumb
 
-El componente Breadcrumb es un elemento de navegación
-que muestra la ruta actual del usuario en una jerarquía de páginas o
-secciones. Consiste en una serie de enlaces que indican la ubicación
-actual del usuario en el sitio web o la aplicación.
+El componente `Breadcrumb` facilita la navegación al mostrar la ubicación actual del usuario dentro de la jerarquía de
+tu aplicación o sitio web. Cada "miga de pan" es un enlace que apunta a una página o sección diferente, ofreciendo una
+manera intuitiva de navegar.
 
-### Import :
+## Instalación
+
+Para incluir el componente `Breadcrumb` en tu proyecto, puedes usar la siguiente declaración de importación:
 
 <Code>{`import { BreadCrumb } from "pragmate-ui/breadcrumb"`}</Code>
 
-### Implementation :
+## Uso :
 
 <Code>{implementation}</Code>
 
-### List Items:
+## Propiedades
 
-El breadcrumb recibe "items" que es un arreglo de
-arreglos, en los subarreglos pasamos dos strings, el primero sera la
-ruta de navegacion, esta la pasaremos con Backticks o comillas
-invertidas. El segundo string sera normal y sera el label que se
-mostrara para la navegacion
+-   items: ([string, string]) Es una tupla de arreglos que especifica las "migas de pan". Cada subarreglo contiene dos
+    elementos: - Ruta de Navegación: Una cadena de texto que indica la ruta del enlace. Utiliza "backticks" para incluir
+    la ruta. - Etiqueta: Una cadena de texto que se mostrará como etiqueta para el enlace.
 
 <Code>{implementationlistItems}</Code>
 
-### Result :
-
 <Results />
+```

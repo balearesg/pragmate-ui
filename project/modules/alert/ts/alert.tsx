@@ -8,9 +8,7 @@ function Alert(props: IProps) {
 	const { message, className, type, title, children, closable, onClose, icon } = props;
 	const [show, setShow] = React.useState(true);
 
-	if (!show || (!message && !children)) {
-		return null;
-	}
+	if (!show || (!message && !children)) return null;
 
 	const onCloseClick = async () => {
 		if (onClose) await onClose();
@@ -37,10 +35,10 @@ function Alert(props: IProps) {
 				</section>
 			)}
 
-			<Content message={message} type={type} title={title} icon={hasIcon}>
+			<Content message={message} title={title} icon={hasIcon}>
 				{children}
 			</Content>
-			{closable && <IconButton icon='close' onClick={onCloseClick} />}
+			{closable && <IconButton icon="close" onClick={onCloseClick} />}
 		</div>
 	);
 }
