@@ -37,7 +37,7 @@
 		cursor: text;
 		transition: all 0.4s ease-in-out;
 		display: inline-block;
-		text-transform: lowercase;
+		text-transform: capitalize;
 
 		&:first-letter {
 			text-transform: uppercase;

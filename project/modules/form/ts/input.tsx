@@ -85,7 +85,15 @@ function Input(props: props): JSX.Element {
 	].forEach(prop => {
 		delete properties[prop];
 	});
-
+	console.log(props.label, props.required, 2);
+	const spanRequired = props.required && <span className="pragmate-input__required-label">(*)</span>;
+	const controlInput =
+		props.password &&
+		(state.type === 'password' ? (
+			<IconButton onClick={changeType} data-type="text" className="eye" icon="eye" />
+		) : (
+			<IconButton onClick={changeType} className="eye" data-type="password" icon="eye-slash" />
+		));
 	return (
 		<div className={cls}>
 			<>
@@ -102,15 +110,14 @@ function Input(props: props): JSX.Element {
 				/>
 				{props.children}
 				{error}
-				{props.label && <label htmlFor={props.id ?? props.name}>{props.label}</label>}
+				{props.label && (
+					<label htmlFor={props.id ?? props.name}>
+						{props.label} {spanRequired}{' '}
+					</label>
+				)}
 				{props.loading && <Spinner color={props.colorSpinner ?? 'var(--primary)'} type="primary" active />}
-				{props.password &&
-					(state.type === 'password' ? (
-						<IconButton onClick={changeType} data-type="text" className="eye" icon="eye" />
-					) : (
-						<IconButton onClick={changeType} className="eye" data-type="password" icon="eye-slash" />
-					))}
-				{props.required && <span className="pragmate-input__required-label">(*)</span>}
+				{controlInput}
+				{!props.label || (props.required && <span className="pragmate-input__required-label">(*)</span>)}
 			</>
 		</div>
 	);

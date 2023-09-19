@@ -22,30 +22,37 @@
 
 		label {
 			padding: 8px 35px;
+			text-transform: capitalize;
 		}
+
 		input,
 		textarea {
 			padding: 0.5rem;
 		}
+
 		&:focus-within label,
-		input:not(:placeholder-shown) ~ label,
-		textarea:not(:placeholder-shown) ~ label {
+		input:not(:placeholder-shown)~label,
+		textarea:not(:placeholder-shown)~label {
 			padding: 0px 19px;
 		}
+
 		.pragmate-icon {
 			z-index: 10;
 			//position: absolute;
 		}
+
 		@media screen and (max-width: 450px) {
 			.pragmate-icon-button {
 				height: 30px;
 			}
 		}
 	}
+
 	.eye.pragmate-icon-button {
 		position: relative;
 		top: -0.1rem;
 		right: 0.5rem;
+
 		svg.pragmate-icon {
 			width: 20px;
 			height: 20px;
@@ -53,6 +60,7 @@
 			fill: var(--gray);
 		}
 	}
+
 	&.error {
 		border-color: var(--border-error);
 	}
