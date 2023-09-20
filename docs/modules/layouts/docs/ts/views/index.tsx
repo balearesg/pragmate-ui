@@ -13,13 +13,13 @@ declare global {
 
 export function Layout() {
 	return (
-		<div className='layout__container'>
+		<div className="layout__container">
 			<Navbar />
-			<aside className='container__aside'>
+			<aside className="container__aside">
 				<Sidebar />
 			</aside>
-			<beyond-layout-children class='main__container' />
-			<Footer />
+			<beyond-layout-children class="main__container" />
+			{/* <Footer /> */}
 		</div>
 	);
 }

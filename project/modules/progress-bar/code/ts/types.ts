@@ -1,7 +1,6 @@
 export interface IProps {
-	currentValue: number;
+	value: number;
 	maxValue?: number;
 	variant?: string;
-	label?: string;
 	type?: string;
 }

@@ -4,8 +4,7 @@ import { Content } from './content';
 import { IProps, IiconMap } from './types';
 
 export /*bundle*/
-function Alert(props: IProps) {
-	const { message, className, type, title, children, closable, onClose, icon } = props;
+function Alert({ message, className, type, title, children, closable, onClose, icon }: IProps) {
 	const [show, setShow] = React.useState(true);
 
 	if (!show || (!message && !children)) return null;

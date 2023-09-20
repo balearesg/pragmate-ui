@@ -1,22 +1,21 @@
 import { Code } from 'pragmate-ui/code';
+import { Empty } from 'pragmate-ui/empty';
 import { implementation } from './implementation';
 
-# `Empty`
+# Empty
 
-El componente <span className="view__span">Emty</span> representar un mensaje o elemento visual que indica a los
-usuarios que no se encontraron resultados relevantes o útiles.
+El componente `Empty` es utilizado para informar al usuario que no existen registros o datos relevantes que mostrar.
+Este componente es versátil y ofrece una serie de propiedades para personalizar su comportamiento y apariencia.
 
-### Import
+## Implementacion
 
 <Code>{`import { Empty } from "pragmate-ui"`}</Code>
 
-### Uso
+## Uso
 
 <Code>{`<Empty text="No records to display" icon="info" />`}</Code>
 
-### Props
-
-El componente `Empty` acepta las siguientes propiedades:
+## Propiedades
 
 -   `text` (opcional): Un string que define el texto que se mostrará en la sección vacía. Por defecto, muestra "No hay
     registros".
@@ -27,17 +26,8 @@ El componente `Empty` acepta las siguientes propiedades:
 -   `children` (opcional): Contenido adicional que se puede proporcionar como componentes React.
 -   `className` (opcional): Una clase CSS adicional que se agregará al contenedor del componente `Empty`.
 
-### Importante: Estilo Flex
+## Preview
 
-Para garantizar que el componente `Empty` ocupe todo el espacio vertical disponible y funcione correctamente, asegúrate
-de que el contenedor que contiene el componente tenga un estilo de flexbox. Aquí tienes un ejemplo de cómo se podría
-hacer:
-
-<Code>
-	{`
-<div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
-  <Empty text="No hay resultados" icon="warning" />
-</div>`}
-</Code>
-
-Esto permitirá que el componente `Empty` ocupe todo el espacio vertical disponible en el contenedor.
+<div style={{ background: 'var(--surface)' }}>
+	<Empty />
+</div>

@@ -5,7 +5,7 @@ export interface IProps {
 	message?: string;
 	title?: string;
 	closable?: boolean;
-	onClose?: () => boolean;
+	onClose?: () => boolean | Promise<boolean>;
 	children?: React.ReactNode;
 	icon?: boolean | string;
 }
