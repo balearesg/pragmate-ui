@@ -18,7 +18,6 @@ interface props extends InputHTMLAttributes<HTMLInputElement> {
 export /*bundle*/
 function Input(props: props): JSX.Element {
 	const input: MutableRefObject<HTMLInputElement> = useRef(null);
-
 	type state = {
 		value?: string | number | readonly string[];
 		errorMessage: string;
@@ -27,7 +26,6 @@ function Input(props: props): JSX.Element {
 		_hasError?: boolean;
 		type: InputHTMLAttributes<HTMLInputElement>['type'];
 	};
-
 	const [state, setState] = useState<state>({
 		value: props.value ?? '',
 		errorMessage: props.errorMessage ? props.errorMessage : 'Formato incorrecto',
@@ -44,7 +42,6 @@ function Input(props: props): JSX.Element {
 			value: event.target.value,
 		});
 	};
-
 	const getError: Function = (hasError: boolean): JSX.IntrinsicElements['span'] => {
 		if (!state._hasError && !hasError) return;
 
@@ -64,14 +61,12 @@ function Input(props: props): JSX.Element {
 		const target: EventTarget & HTMLButtonElement = event.currentTarget as HTMLButtonElement;
 		setState({ ...state, type: target.dataset.type });
 	};
-
 	const error: JSX.IntrinsicElements['span'] = getError(props.hasError);
 	let properties: props = { ...props };
 	let cls: string = props.className ? `${props.className} pragmate-element-input` : 'pragmate-element-input';
 	cls += props.icon || props.loading || props.password || props.required ? ' has-icon' : '';
 	cls += props.disabled ? ' disabled' : '';
 	cls += props.hasError ? ' error' : '';
-
 	[
 		'className',
 		'hasError',
@@ -85,7 +80,6 @@ function Input(props: props): JSX.Element {
 	].forEach(prop => {
 		delete properties[prop];
 	});
-	console.log(props.label, props.required, 2);
 	const spanRequired = props.required && <span className="pragmate-input__required-label">(*)</span>;
 	const controlInput =
 		props.password &&
