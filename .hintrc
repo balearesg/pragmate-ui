@@ -8,5 +8,8 @@
     "not and_ff <= 110",
     "not firefox <= 111",
     "not safari <= 16.3"
-  ]
+  ],
+  "hints": {
+    "no-inline-styles": "off"
+  }
 }

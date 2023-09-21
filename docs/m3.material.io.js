@@ -25,8 +25,9 @@ function setVariables(data, name) {
 	return data.reduce((acc, item) => {
 		color = item.title.split('-')[1].trim();
 		level = item.innerText;
-		return `${acc}--${name}-${level}: ${color};\n`;
 		console.log(color);
+		return `${acc}--${name}-${level}: ${color};\n`;
+		
 	}, '\n');
 }
 

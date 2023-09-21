@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { Ref } from 'react';
 import { Icon } from 'pragmate-ui/icons';
 import { Spinner } from 'pragmate-ui/spinner';
 import { RippleEffect } from 'pragmate-ui/ripple';
@@ -8,7 +8,7 @@ import { ButtonGroupContext } from '../button-group/context';
 
 const { forwardRef } = React;
 
-export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, ref) => {
+export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, ref: Ref<HTMLElement>) => {
 	const {
 		className,
 		onClick,
@@ -34,6 +34,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 	const combinedRef = (instance: HTMLButtonElement) => {
 		refObject.current = instance;
 		if (typeof ref === 'function') ref(instance);
+		//@ts-ignore
 		else if (ref) ref.current = instance;
 	};
 	const useContext = typeof context?.setSelected === 'function';
@@ -49,7 +50,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 
 	React.useEffect(() => {
 		const ripple = new RippleEffect();
-		ripple.add(refObject.current);
+		ripple.addRippleEffect(refObject.current);
 
 		if (title) {
 			tippy(refObject.current);

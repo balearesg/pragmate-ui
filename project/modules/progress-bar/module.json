@@ -1,0 +1,17 @@
+{
+  "name": "progress-bar",
+  "code": {
+    "scss": {
+      "path": "/code/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

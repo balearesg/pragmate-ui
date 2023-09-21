@@ -1,0 +1,19 @@
+{
+	"name": "template/palette",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/pui/palette/view",
+		"is": "page",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "pui-template-palette-page"
+		}
+	}
+}

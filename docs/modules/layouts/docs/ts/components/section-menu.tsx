@@ -4,15 +4,15 @@ import { ItemMenu } from './items';
 
 export function SectionMenu({ children, items, tabIndex }) {
 	const output = items.map((component: IItem) => {
-		const [path] = component;
+		const [label, path] = component;
 		return <ItemMenu key={path} tabIndex={tabIndex++} component={component} />;
 	});
 
 	return (
 		<section>
 			{children}
-			<nav className='aside__nav' role='navigation'>
-				<ul className='aside__ul'>{output}</ul>
+			<nav className="aside__nav" role="navigation">
+				<ul className="aside__ul">{output}</ul>
 			</nav>
 		</section>
 	);

@@ -1,4 +1,4 @@
-## Componente `Empty` de Pragmate-UI
+# `Empty`
 
 El componente `Empty` es parte de la librería Pragmate-UI y se utiliza para mostrar secciones vacías o de contenido
 faltante en una interfaz de usuario. Este componente es útil cuando deseas indicar al usuario que no hay registros
@@ -17,7 +17,7 @@ const MyComponent: React.FC = () => {
 	return (
 		<div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
 			{/* Other content */}
-			<Empty text='No hay resultados' icon='warning' />
+			<Empty text="No hay resultados" icon="warning" />
 			{/* More content */}
 		</div>
 	);
@@ -48,7 +48,7 @@ hacer:
 ```jsx
 <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
 	{/* ... */}
-	<Empty text='No hay resultados' icon='warning' />
+	<Empty text="No hay resultados" icon="warning" />
 	{/* ... */}
 </div>
 ```

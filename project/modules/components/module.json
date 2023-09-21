@@ -10,5 +10,6 @@
 			"files": ["*"]
 		}
 	},
+	"platforms": ["web", "ios", "android"],
 	"static": ["static"]
 }

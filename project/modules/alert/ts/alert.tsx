@@ -28,7 +28,7 @@ function Alert(props: IProps) {
 	};
 
 	const defaultIcon = icons[type ?? 'success'];
-	const hasIcon = !!defaultIcon;
+	const hasIcon = !!icon;
 	return (
 		<div className={cls} onClick={close}>
 			{icon && (
