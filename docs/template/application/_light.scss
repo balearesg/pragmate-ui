@@ -19,10 +19,10 @@
 
 	--surface: var(--neutral-98);
 	--surface-dim: var(--neutral-87);
-	--surface-bright: var(--neutral-98);
+	--surface-bright: var(--neutral-87);
 	--surface-container-lowest: var(--neutral-100);
 	--surface-container-low: var(--neutral-96);
-	--surface-container: var(--neutral-94);
+	--surface-container: var(--neutral-70);
 	--surface-container-high: var(--neutral-92);
 	--surface-container-highest: var(--neutral-90);
 
@@ -41,6 +41,7 @@
 	--outline: var(--neutral-variant-50);
 	--outline-variant: var(--neutral-variant-80);
 	--shadow: var(--neutral-0);
+	--box-shadow-pui: 0px 3px 8px var(--shadow);
 	--surface-tint-color: var(--primary);
 	--scrim: var(--neutral-0);
 }
