@@ -80,7 +80,7 @@ export /*bundle*/ const DragAndDrop = (props: PropsWithChildren<propsIndex>): JS
                 2000
             );
             dispatch({ case: "files", files: state.files.concat(newFiles) });
-            onUpload(newFiles)
+         //   onUpload(newFiles)
         };
         if (type === "photo") {
             const img = URL.createObjectURL(newFiles[0]);

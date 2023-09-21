@@ -33,9 +33,10 @@ export function Area(): JSX.Element {
         "success",
         2000
       );
-      onUpload(newFile);
+    
     }
   };
+
   return (
     <div className={cls}>
       <Image

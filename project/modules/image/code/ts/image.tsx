@@ -70,7 +70,7 @@ function Image(props: props): JSX.Element {
   };
 
   let cls: string = `beyond-element-image ${className ? ` ${className}` : ""}`;
-  if (1 === 1 || (!loaded && !htmlLoaded))
+  if ((!loaded && !htmlLoaded))
     cls += " beyond-element-image-preload";
   if (error) cls += " beyond-element-image-error";
   const Error: JSX.Element = (
