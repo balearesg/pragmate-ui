@@ -7,6 +7,7 @@ export type propsIndex = {
     clean?: boolean;
     userPhoto?: boolean;
     textUserPhoto?: string;
+    disabled?: boolean
 };
 
 type Message = {
@@ -45,5 +46,6 @@ export interface CValue {
     drop?: MutableRefObject<HTMLDivElement>,
     drag?: MutableRefObject<HTMLDivElement>,
     userPhoto?: boolean;
-    textUserPhoto?: string
+    textUserPhoto?: string;
+    disabled: boolean
 };

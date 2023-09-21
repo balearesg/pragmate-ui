@@ -3,7 +3,7 @@ import { Image } from "pragmate-ui/image";
 import { useDragAndDropContext } from "./context";
 
 export function Area(): JSX.Element {
-  const { files, count, formats, showMessage, state, dispatch, onUpload } =
+  const { files, count, formats, showMessage, state, dispatch, disabled } =
     useDragAndDropContext();
   const accept: string[] =
     formats && Array.isArray(formats) && formats.map((item) => `.${item}`);
@@ -27,13 +27,12 @@ export function Area(): JSX.Element {
     if (newFile) {
       dispatch({ case: "files", files: state.files.concat(newFile) });
       showMessage(
-        `Archivo${newFile.length > 1 ? "s" : ""} cargado${
-          newFile.length > 1 ? "s" : ""
+        `Archivo${newFile.length > 1 ? "s" : ""} cargado${newFile.length > 1 ? "s" : ""
         } para importar`,
         "success",
         2000
       );
-    
+
     }
   };
 
@@ -43,7 +42,7 @@ export function Area(): JSX.Element {
         src={`${globalThis.baseDir}assets/cloud-upload-regular-240.png`}
         alt=""
       />
-      {count && files.length < count && (
+      {count && files.length < count && !disabled && (
         <input {...attrs} type="file" onChange={onFileDrop} />
       )}
       <span>Arrastra y suelta tu archivo</span>

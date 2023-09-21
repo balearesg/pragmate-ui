@@ -10,7 +10,7 @@ export /*bundle*/ const DragAndDrop = (props: PropsWithChildren<propsIndex>): JS
 
     const [state, dispatch] = useReducer(reducer, initialState);
 
-    const { onUpload, count, formats, children, clean, userPhoto, textUserPhoto } = props;
+    const { onUpload, count, formats, children, clean, userPhoto, textUserPhoto, disabled } = props;
 
     const drag: MutableRefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
 
@@ -43,6 +43,7 @@ export /*bundle*/ const DragAndDrop = (props: PropsWithChildren<propsIndex>): JS
     const handleDrop = (event: DragEvent): void => {
         event.preventDefault();
         event.stopPropagation();
+        if(disabled) return
         dispatch({ case: "dragging", dragging: false });
         const newFiles: File[] = [...event.dataTransfer.files];
         const { dataset: { type } }: Partial<HTMLDivElement> = event.currentTarget;
@@ -118,7 +119,8 @@ export /*bundle*/ const DragAndDrop = (props: PropsWithChildren<propsIndex>): JS
         drop,
         drag,
         userPhoto,
-        textUserPhoto
+        textUserPhoto,
+        disabled
     };
     return (
         <DragAndDropContext.Provider value={value}>
