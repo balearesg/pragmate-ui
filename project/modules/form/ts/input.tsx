@@ -18,7 +18,6 @@ interface props extends InputHTMLAttributes<HTMLInputElement> {
 export /*bundle*/
 function Input(props: props): JSX.Element {
 	const input: MutableRefObject<HTMLInputElement> = useRef(null);
-
 	type state = {
 		value?: string | number | readonly string[];
 		errorMessage: string;
@@ -27,7 +26,6 @@ function Input(props: props): JSX.Element {
 		_hasError?: boolean;
 		type: InputHTMLAttributes<HTMLInputElement>['type'];
 	};
-
 	const [state, setState] = useState<state>({
 		value: props.value ?? '',
 		errorMessage: props.errorMessage ? props.errorMessage : 'Formato incorrecto',
@@ -44,7 +42,6 @@ function Input(props: props): JSX.Element {
 			value: event.target.value,
 		});
 	};
-
 	const getError: Function = (hasError: boolean): JSX.IntrinsicElements['span'] => {
 		if (!state._hasError && !hasError) return;
 
@@ -64,14 +61,12 @@ function Input(props: props): JSX.Element {
 		const target: EventTarget & HTMLButtonElement = event.currentTarget as HTMLButtonElement;
 		setState({ ...state, type: target.dataset.type });
 	};
-
 	const error: JSX.IntrinsicElements['span'] = getError(props.hasError);
 	let properties: props = { ...props };
 	let cls: string = props.className ? `${props.className} pragmate-element-input` : 'pragmate-element-input';
 	cls += props.icon || props.loading || props.password || props.required ? ' has-icon' : '';
 	cls += props.disabled ? ' disabled' : '';
 	cls += props.hasError ? ' error' : '';
-
 	[
 		'className',
 		'hasError',
@@ -85,7 +80,14 @@ function Input(props: props): JSX.Element {
 	].forEach(prop => {
 		delete properties[prop];
 	});
-
+	const spanRequired = props.required && <span className="pragmate-input__required-label">(*)</span>;
+	const controlInput =
+		props.password &&
+		(state.type === 'password' ? (
+			<IconButton onClick={changeType} data-type="text" className="eye" icon="eye" />
+		) : (
+			<IconButton onClick={changeType} className="eye" data-type="password" icon="eye-slash" />
+		));
 	return (
 		<div className={cls}>
 			<>
@@ -102,15 +104,14 @@ function Input(props: props): JSX.Element {
 				/>
 				{props.children}
 				{error}
-				{props.label && <label htmlFor={props.id ?? props.name}>{props.label}</label>}
+				{props.label && (
+					<label htmlFor={props.id ?? props.name}>
+						{props.label} {spanRequired}{' '}
+					</label>
+				)}
 				{props.loading && <Spinner color={props.colorSpinner ?? 'var(--primary)'} type="primary" active />}
-				{props.password &&
-					(state.type === 'password' ? (
-						<IconButton onClick={changeType} data-type="text" className="eye" icon="eye" />
-					) : (
-						<IconButton onClick={changeType} className="eye" data-type="password" icon="eye-slash" />
-					))}
-				{props.required && <span className="pragmate-input__required-label">(*)</span>}
+				{controlInput}
+				{!props.label || (props.required && <span className="pragmate-input__required-label">(*)</span>)}
 			</>
 		</div>
 	);
