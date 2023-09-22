@@ -11,8 +11,13 @@
 	font-family: var(--alert-font-family);
 	font-size: var(--alert-font-size);
 	line-height: var(--alert-line-height);
-
+	height: -webkit-max-content;
+	height: -moz-max-content;
+	height: max-content;
 	gap: 1rem;
+	p {
+		margin: 0;
+	}
 	.alert--icon {
 		width: var(--alert-icon-size);
 		height: var(--alert-icon-size);
