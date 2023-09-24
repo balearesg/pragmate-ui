@@ -1,7 +1,7 @@
 import * as Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 import { ReactiveModel } from '@beyond-js/reactive/model';
-
+import { SwiperProps } from '../types';
 const SwiperCasted: typeof Swiper.Swiper = Swiper.Swiper as unknown as typeof Swiper.default;
 export class Controller extends ReactiveModel<any> {
 	#swiper;
@@ -14,13 +14,15 @@ export class Controller extends ReactiveModel<any> {
 
 	setSwiper = (element, props, ref): void => {
 		this.#props = props;
-		const specs = Object.assign(
-			{
-				slidesPerView: props.slidesPerView ?? 1,
-				modules: [Navigation, Pagination],
-			},
-			props
-		);
+		let specs = {
+			slidesPerView: props.slidesPerView ?? 1,
+			modules: [Navigation, Pagination],
+			...props,
+		};
+		Object.keys(specs).forEach(key => {
+			if (['children'].includes(key)) delete specs[key];
+		});
+
 		if (!Swiper) {
 			console.warn('Swiper keeps without been loaded');
 			return;
@@ -40,7 +42,7 @@ export class Controller extends ReactiveModel<any> {
 				prevEl: ref.prev.current,
 			};
 		}
-
+		console.log(89, SwiperCasted, element, specs);
 		this.#swiper = new SwiperCasted(element, specs);
 
 		if (props.activeSlide) this.#swiper.slideTo(parseInt(props.activeSlide));
@@ -78,6 +80,7 @@ export class Controller extends ReactiveModel<any> {
 		if (this.#props.functionNext) this.#props.functionNext();
 		else this.#swiper?.slideNext(500, false);
 	};
+
 	next = (): void => {
 		if (!this.#swiper?.isEnd) {
 			this.#swiper?.slideNext(500, false);

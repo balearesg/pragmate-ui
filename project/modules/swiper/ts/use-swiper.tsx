@@ -2,7 +2,8 @@ import * as React from 'react';
 import { Controller } from './state/controller';
 import { useSwiperContext } from './context';
 
-export const useSwiperSlider = props => {
+import { ISwiperOptions } from './interfaces/swiper-props';
+export const useSwiperSlider = (props: ISwiperOptions) => {
 	/* const { props } = useSwiperContext(); */
 
 	const refs = {
@@ -11,32 +12,39 @@ export const useSwiperSlider = props => {
 		pagination: React.useRef(),
 		prev: React.useRef(),
 	};
-
+	console.log(0.1, refs);
 	const { slideTo } = props;
 	const { container, prev } = refs;
 
 	const [state, setState] = React.useState<any>({});
 
 	React.useEffect((): any => {
-		const controller: any = new Controller();
+		const controller: Controller = new Controller();
 		const onChange: () => void = (): void =>
-			setState({
+			console.log(99, {
 				...state,
 				ready: true,
 				swiper: controller.swiper,
 				controller,
 				lastIndex: controller.lastIndex,
 			});
-		controller.bind('change', onChange);
+		setState({
+			...state,
+			ready: true,
+			swiper: controller.swiper,
+			controller,
+			lastIndex: controller.lastIndex,
+		});
+		controller.on('change', onChange);
 		if (!controller.destroyed) controller.setSwiper(container.current, props, refs);
 		onChange();
-		return () => controller.unbind('change', onChange);
+		return () => controller.off('change', onChange);
 	}, []);
 
 	React.useEffect(() => {
 		if (!state.swiper || !slideTo) return;
 		state.swiper.slideTo(slideTo);
 	}, [slideTo]);
-
+	console.log(0.2);
 	return { refs, state, prev, container };
 };
