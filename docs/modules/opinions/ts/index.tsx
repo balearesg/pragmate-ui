@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SwiperSlider } from 'pragmate-ui/swiper-component';
+import { SwiperSlider } from 'pragmate-ui/swiper';
 import { CardOpinion } from './card';
 
 interface IOpinion {
@@ -29,13 +29,13 @@ export /* bundle */ function Opinions(props: IProps) {
 	});
 
 	return (
-		<section className="container__opinion">
+		<section className='container__opinion'>
 			<SwiperSlider
-				slidesPerView="auto"
+				slidesPerView='auto'
 				spaceBetween={0}
 				pagination={true}
 				navigation={true}
-				className="swiper-implementation"
+				className='swiper-implementation'
 			>
 				{items}
 			</SwiperSlider>
