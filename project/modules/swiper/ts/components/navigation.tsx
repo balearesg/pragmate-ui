@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Icon } from 'pragmate-ui/icons';
+import { IconButton } from 'pragmate-ui/icons';
 import { useSwiperContext } from '../context';
 export function SwiperNavigation() {
 	const {
@@ -10,12 +10,21 @@ export function SwiperNavigation() {
 	if (!navigation) return null;
 	return (
 		<>
-			<div ref={prev} className='swiper-button-prev'>
-				<Icon icon='left' />
-			</div>
-			<div ref={next} onClick={controller?.nextSlide} className='swiper-button-next'>
-				<Icon icon='right' />
-			</div>
+			<IconButton
+				ref={prev}
+				icon='left'
+				variant='primary'
+				className='swiper__navigation-btn swiper-button-prev'
+				onClick={controller?.prevSlide}
+			/>
+
+			<IconButton
+				icon='right'
+				ref={next}
+				variant='primary'
+				onClick={controller?.nextSlide}
+				className='swiper__navigation-btn  swiper-button-next'
+			/>
 		</>
 	);
 }

@@ -22,16 +22,16 @@ function SwiperSlider(props: ISwiperOptions): JSX.Element {
 		refs,
 	};
 
-	const cls: string = props.className ? `${props.className} pui-swiper-slider` : 'pui-swiper-slider';
+	const cls: string = `swiper-container swiper ${
+		props.className ? `${props.className} pui-swiper-slider` : 'pui-swiper-slider'
+	};`;
 	return (
 		<SwiperContext.Provider value={contextValue}>
-			<div className={cls}>
-				<div ref={refs.container} className='swiper-container'>
-					<div className='swiper-wrapper'>{<SlideItems items={children} />}</div>
-					<Pagination />
-					<SwiperFooter />
-					<SwiperNavigation />
-				</div>
+			<div ref={refs.container} className={cls}>
+				<SlideItems items={children} />
+				<Pagination />
+				<SwiperFooter />
+				<SwiperNavigation />
 			</div>
 		</SwiperContext.Provider>
 	);

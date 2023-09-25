@@ -77,8 +77,18 @@ export class Controller extends ReactiveModel<any> {
 			return;
 		}
 		if (!this.#onEnd) return;
-		if (this.#props.functionNext) this.#props.functionNext();
+		if (this.#props.onNext) this.#props.onNext();
 		else this.#swiper?.slideNext(500, false);
+	};
+
+	prevSlide = () => {
+		if (!this.#swiper?.isEnd) {
+			this.#swiper?.slideNext(500, false);
+			return;
+		}
+		if (!this.#onEnd) return;
+		if (this.#props.onPrev) this.#props.onPrev();
+		else this.#swiper?.slidePrev(500, false);
 	};
 
 	next = (): void => {
