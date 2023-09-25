@@ -5,8 +5,7 @@
 	display: inline-grid;
 	position: relative;
 	outline: none !important;
-	align-items: center;
-	justify-content: center;
+	place-items: center;
 
 	&:not(&:disabled) {
 		cursor: pointer;
