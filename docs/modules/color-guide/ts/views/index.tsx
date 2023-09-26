@@ -4,8 +4,7 @@ import MaterialDesign from './es/material-design.mdx';
 export /*bundle*/
 function View() {
 	return (
-		<div className='page__container'>
-			<h2>Color system</h2>
+		<div className="page__container">
 			<Docs />
 			<h2>Material Design</h2>
 			<MaterialDesign />
