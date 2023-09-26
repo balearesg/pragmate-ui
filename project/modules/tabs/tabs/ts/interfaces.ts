@@ -1,12 +1,12 @@
-export type TPane = {
+export interface ITPane {
 	tab: string;
 	content: React.ReactNode;
-};
+}
 
-export type ITabProps = {
-	panes: TPane[];
+export interface ITabProps {
+	panes: ITPane[];
 	children: React.ReactNode;
 	active?: number;
 	setURL?: boolean;
 	onChange?: (event, index) => void;
-};
+}
