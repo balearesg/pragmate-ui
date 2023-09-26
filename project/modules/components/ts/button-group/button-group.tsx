@@ -8,7 +8,9 @@ export /*bundle*/ function ButtonGroup({ orientation = 'row', children, ...props
 	cls += orientation ? ` pui-button-group ${orientation}` : '';
 
 	const childrenWithProps = React.Children.map(children, (child, index) => {
-		return React.cloneElement(child, { index }); // Passing the index as a prop
+		if (React.isValidElement(child)) {
+			return React.cloneElement(child, {}); // Passing the index as a prop
+		}
 	});
 
 	return (
