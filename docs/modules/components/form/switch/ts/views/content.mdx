@@ -1,10 +1,12 @@
 import { Results } from './results';
 import { implementation } from './implementation';
 import { Code } from 'pragmate-ui/code';
+import { VariantsSwitch } from './variants';
 
 # Switch
 
-El componente Switch Permite alternar entre dos estados, como encendido y apagado, activado y desactivado, etc.
+El componente Switch es un componente de entrada que representa un interruptor de palanca. Puedes utilizarlo para
+permitir a los usuarios cambiar entre dos estados, como activado/desactivado o verdadero/falso.
 
 ### Import :
 
@@ -12,12 +14,30 @@ El componente Switch Permite alternar entre dos estados, como encendido y apagad
 
 ### Component :
 
-<Code>{`<Switch className="checkbox" checked={isActive} onChange={handleChange} />`}</Code>
-
-### Implementation :
-
-<Code>{implementation}</Code>
+<Code>{`<Switch checked={isActive} onChange={handleChange} />`}</Code>
 
 ### Result :
 
 <Results />
+
+### Props :
+
+-   `checked:` Un booleano que indica si el interruptor está activado o desactivado.
+
+-   `onChange:` Una función que se llama cuando el usuario cambia el estado del interruptor.
+
+-   `variant:` Una cadena que especifica la variante del interruptor. Puedes utilizar esto para personalizar la
+    apariencia del interruptor.
+
+-   `disabled:` Un booleano que indica si el interruptor está deshabilitado o no.
+
+-   `size:` Una cadena que especifica el tamaño del interruptor. Puedes utilizar esto para personalizar el tamaño del
+    interruptor.
+
+-   `className:` Una cadena que especifica las clases CSS adicionales para el interruptor.
+
+-   `id:` Una cadena que especifica el ID único del interruptor.
+
+-   `title:` Una cadena que especifica el título del interruptor.
+
+-   `required:` Un booleano que indica si el interruptor es obligatorio o no.

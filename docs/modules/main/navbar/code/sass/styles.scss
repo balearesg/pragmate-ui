@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 .container__navbar {
     display: flex;
     position: sticky;
@@ -8,40 +9,42 @@
     background-color: var(--background);
     align-items: center;
     justify-content: center;
-    
-     .width {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+
+    .width {
         display: flex;
         width: 90rem;
         align-items: center;
         justify-content: space-between;
-        
+
         .navbar__h2 {
             transition: all 300ms;
             cursor: pointer;
-    
+
             &:hover {
                 a {
                     color: var(--primary);
                 }
             }
-    
+
             &:hover .navbar__strong-hover {
                 color: var(--tertiary);
             }
         }
-        
+
         .nav {
             display: flex;
             justify-content: center;
             text-align: center;
             font-weight: 600;
         }
-    
+
         .nav * {
             box-sizing: border-box;
             transition: all .35s ease;
         }
-    
+
         .nav li {
             display: inline-block;
             list-style: outside none none;
@@ -50,17 +53,17 @@
             cursor: pointer;
             font-size: 14px;
         }
-    
+
         .nav a {
             padding: .5em .8em;
             position: relative;
             text-decoration: none;
-    
+
             &:hover {
                 color: var(--primary);
             }
         }
-    
+
         .tag-a {
             color: var(--text-color);
             transition: all .35s ease;
