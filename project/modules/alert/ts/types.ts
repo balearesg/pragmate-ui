@@ -17,6 +17,6 @@ export /*bundle*/ enum ITypes {
 	Info = 'info',
 }
 
-export type IiconMap = {
+export interface IIconMap {
 	[key: string]: string;
-};
+}

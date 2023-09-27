@@ -1,7 +1,7 @@
 import React from 'react';
 import { Icon, IconButton } from 'pragmate-ui/icons';
 import { Content } from './content';
-import { IProps, IiconMap } from './types';
+import { IProps, IIconMap } from './types';
 
 export /*bundle*/
 function Alert({ message, className, type, title, children, closable, onClose, icon }: IProps) {
@@ -17,7 +17,7 @@ function Alert({ message, className, type, title, children, closable, onClose, i
 	let cls = `${className ? `${className} ` : ''} alert${type ? ` alert--${type}` : ''}`;
 	cls = icon ? `${cls} alert--icon` : cls;
 
-	const icons: IiconMap = {
+	const icons: IIconMap = {
 		error: 'error',
 		warning: 'circle-exclamation',
 		success: 'circle-check',

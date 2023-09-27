@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, MutableRefObject, PropsWithChildren, useReducer } from 'react';
 import { DragAndDropContext } from './context';
 import { initialState, reducer } from './reducer';
-import { CValue, propsIndex } from './types';
+import { CValue, IPropsIndex } from './types';
 import { View } from './view';
 
-export /*bundle*/ const DragAndDrop = (props: PropsWithChildren<propsIndex>): JSX.Element => {
+export /*bundle*/ const DragAndDrop = (props: PropsWithChildren<IPropsIndex>) => {
 	const drop: MutableRefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
 
 	const [state, dispatch] = useReducer(reducer, initialState);
