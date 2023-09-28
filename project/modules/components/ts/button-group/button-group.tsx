@@ -1,9 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import type { IProps } from './type';
 import { ButtonGroupContext } from './context';
 
-export /* bundle */ function ButtonGroup(props: IProps): JSX.Element {
-	const { orientation = 'row', children } = props;
+export /*bundle*/ function ButtonGroup({ orientation = 'row', children, ...props }: IProps): JSX.Element {
 	const [selected, setSelected] = React.useState<number>(props.selected);
 	let cls = `pui-button-group`;
 	cls += orientation ? ` pui-button-group ${orientation}` : '';

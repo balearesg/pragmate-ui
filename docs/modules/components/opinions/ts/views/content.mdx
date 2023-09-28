@@ -1,43 +1,30 @@
 import { Code } from 'pragmate-ui/code';
 import { Opinions } from 'pragmate-ui/opinions';
 import { opinionsList } from './opinions-list';
-import { implementation } from './implementation';
 import { implementationList } from './implementation-list';
 
-# opinions
+# Opinions
 
-El componente `Opinions` es un componente de React que se utiliza para mostrar una sección de testimonios o comentarios
-de usuarios. El componente utiliza el paquete pragmate-ui/swiper-component para implementar un carrusel que permite
-desplazarse entre los diferentes testimonios.
+El componente `Opinions` se utiliza para mostrar una sección de testimonios o comentarios de usuarios. Este componente
+incorpora un carrusel de imágenes, aprovechando el paquete `pragmate-ui/swiper-component`, lo que permite desplazarse
+entre varios testimonios fácilmente.
 
-Para usar el componente, debes importarlo en tu archivo y luego renderizarlo en tu componente principal. El componente
-recibe una prop llamada `opinion` , que es un arreglo de objetos que contiene las propiedades necesarias para generar
-varias instancias del componente.
+## Implementacion
+
+<Code>{`import { Opinions } from "pragmate-ui/opinions"`}</Code>
+
+<Code>{implementationList}</Code>
+
+<Code>{`<Opinions opinions={opinionsList} />`}</Code>
 
 Cada objeto del arreglo debe tener las siguientes propiedades :
 
 -   `name` : El nombre del usuario que dejó el testimonio.
-
 -   `src` : La URL de la imagen de perfil del usuario.
-
 -   `profession` (opcional): La profesión o cargo del usuario.
-
 -   `comment` : El comentario o testimonio del usuario.
-
 -   `alt` (opcional): El texto alternativo para la imagen de perfil.
 
-### Import :
-
-<Code>{`import { Opinions } from "pragmate-ui/opinions"`}</Code>
-
-### Implementation :
-
-<Code>{implementation}</Code>
-
-### Object array structure :
-
-<Code>{implementationList}</Code>
-
-### Result :
+## Preview
 
 <Opinions opinions={opinionsList} />

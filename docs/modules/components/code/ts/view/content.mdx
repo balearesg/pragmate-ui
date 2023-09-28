@@ -1,33 +1,24 @@
-import { Code } from "pragmate-ui/code";
-import { implementation } from "./implementation";
+import { Code } from 'pragmate-ui/code';
+import { implementation } from './implementation';
 
-## Code
+# Code
 
-El componente `Code` se utiliza para mostrar porciones de codigo de
-muestra que el usuario puede copiar, util si en nuestra web o aplicacion
-quisieramos hacer muestra de ejemplos de codigo o dispensar
-explicaciones o ayudas. Un claro ejemplo son las muestras de codigo que
-puedes ver en toda esta docs.
+El componente `Code` tiene como objetivo mostrar fragmentos de código que los usuarios pueden copiar y pegar. Este
+componente es útil para aplicaciones o sitios web que necesitan mostrar ejemplos de código, explicaciones técnicas o
+ayuda para el usuario. Puedes ver este componente en acción a lo largo de toda esta documentación.
 
-### Import :
+## Implementation :
 
 <Code>{`import { Code } from 'pragmate-ui/code';`}</Code>
 
-### Implementation :
+<Code>{`<Code>const bar = 1;</Code>`}</Code>
 
-Puede implementar su codigo ya sea agregando la expresion adentro de
-llaves o si desea agregarla como cualquier texto que quiere tener
-ahi mismo puede hacerlo agregando las comillas inversas adentro de
-las llaves
+Puede implementar su codigo ya sea agregando la expresion adentro de llaves o si desea agregarla como cualquier texto
+que quiere tener ahi mismo puede hacerlo agregando las comillas inversas adentro de las llaves
 
-#### Agregando una constante :
+## Agregando una constante :
 
 <Code>{implementation}</Code>
 
-#### Agregando una expresion :
-
-<Code>{`<Code>{ ' var bar = 1 ; ' }</Code>`}</Code>
-
-### Result :
-
-<Code>{` var bar = 1 ; `}</Code>
+<Code>{` const bar = 1 ; `}</Code>
+```

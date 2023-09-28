@@ -1,46 +1,40 @@
-import { Code } from "pragmate-ui/code";
-import { ButtonGroup } from "pragmate-ui/components";
-import { Button } from "pragmate-ui/components";
-import { TableDescription } from "./table-description";
-import { implementation } from "./implementation";
+import { Code } from 'pragmate-ui/code';
+import { ButtonGroup } from 'pragmate-ui/components';
+import { Button } from 'pragmate-ui/components';
+import { TableDescription } from './table-description';
+import { implementation } from './implementation';
 
 # ButtonGroup
 
-El componente **ButtonGroup** de Pragmate UI permite agrupar botones relacionados para facilitar al usuario la
-selección de opciones. Es ideal para representar un conjunto de acciones exclusivas,
-como opciones de radio buttons, o no-exclusivas como grupos de filtros.
+El componente `ButtonGroup` de Pragmate UI sirve para agrupar múltiples botones que comparten un objetivo común en la
+interfaz de usuario. Este componente es especialmente útil para crear conjuntos de acciones, ya sean exclusivas, como
+las opciones de radio buttons, o no exclusivas, como los filtros de búsqueda.
 
-ButtonGroup puede utilizarse en flujos de trabajo, aplicaciones CRUD, paneles de configuración,
-para filtrado y búsqueda avanzada, selección de opciones, acciones de formularios, y prácticamente
-cualquier experiencia de usuario que requiera agrupar botones relacionados con un propósito en común.
-Como componente de la biblioteca Pragmate UI, se integra fácilmente en React y puede adaptarse visualmente a cualquier diseño.
-
-### Import :
+## Implementación
 
 <Code>{`import { ButtonGroup } from "pragmate-ui/components"`}</Code>
 
 <Code>{implementation}</Code>
 
-### Result :
+## Preview
 
 <ButtonGroup orientation="row" size="tall">
-  <Button variant="primary">Botón 1</Button>
-  <Button variant="primary">Botón 2</Button>
-  <Button variant="primary">Botón 3</Button>
+	<Button variant="primary">Button 1</Button>
+	<Button variant="primary">Button 2</Button>
+	<Button variant="primary">Button 3</Button>
 </ButtonGroup>
 
-### Props :
+## Propiedades
 
-<TableDescription />
+A continuación se describen las propiedades disponibles para personalizar del componente:
 
-### styles :
+-   `size`: Define el tamaño de los botones en el grupo, su valor por defecto es `medium` y sus posibles valores son:
 
-El componente ButtonGroup agrega las clases **pragmate-button-group**, **row** y **column** para controlar la orientación.
+    -   `small`
+    -   `medium`
+    -   `tall`
 
-El componente hereda el color del tema actual a través de CSS variables.
-
-Los estilos del borde se controlan con la propiedad **bordered**.
-
-## Accesibilidad
-
-El grupo de botones debe estar contenido en una etiqueta **fieldset** con **legend** para describir el grupo, mejorando la accesibilidad.
+-   `orientation`: Establece la orientación de los botones, ya sea en fila o columna, por defecto este se mostrara como
+    una fila: `row`, sus posibles valores:
+    -   `row`,
+    -   `column`
