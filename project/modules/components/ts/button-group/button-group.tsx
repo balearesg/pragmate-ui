@@ -10,7 +10,7 @@ export /* bundle */ function ButtonGroup(props: IProps): JSX.Element {
 
 	const childrenWithProps = React.Children.map(children, (child, index) => {
 		if (React.isValidElement(child)) {
-			return React.cloneElement(child, {}); // Passing the index as a prop
+			return React.cloneElement(child, { index } as IProps); // Passing the index as a prop
 		}
 	});
 

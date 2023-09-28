@@ -19,11 +19,12 @@ export /*bundle*/ const Switch: React.FC<props & RefAttributes<HTMLInputElement>
 		const [state, setState] = useState({ checked: !!checked });
 		const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
 			setState({ checked: !checked });
+			console.log(100, event.target.checked, onChange);
 			onChange && onChange(event);
 		};
-		const handleClick = event => {
-			onClick && onClick(event);
-		};
+		// const handleClick = event => {
+		// 	onClick && onClick(event);
+		// };
 		let cls: string = `pragmate-element-switch ${className ? className : ''}`;
 		cls += disabled ? ' disabled' : '';
 		const properties = Object.assign({}, props);
@@ -32,8 +33,9 @@ export /*bundle*/ const Switch: React.FC<props & RefAttributes<HTMLInputElement>
 			delete properties[prop];
 		});
 
+		console.log(200, checked, state.checked);
 		return (
-			<div className={cls} onClick={handleClick} {...properties}>
+			<span className={cls} {...properties}>
 				<label className='switch'>
 					<input
 						ref={ref}
@@ -41,14 +43,14 @@ export /*bundle*/ const Switch: React.FC<props & RefAttributes<HTMLInputElement>
 						required={required}
 						name={name}
 						value={value}
-						checked={checked ?? state.checked}
+						checked={checked !== undefined ? checked : state.checked}
 						disabled={disabled}
 						onChange={handleChange}
 						placeholder={name}
 					/>
 					<span className='slider' />
 				</label>
-			</div>
+			</span>
 		);
 	}
 );

@@ -1,23 +1,15 @@
 import * as React from 'react';
-import {
-	LegacyRef,
-	InputHTMLAttributes,
-	ChangeEvent,
-	forwardRef,
-	RefAttributes,
-	useState,
-	HTMLAttributes,
-} from 'react';
+import { InputHTMLAttributes, forwardRef, RefAttributes, useState, HTMLAttributes } from 'react';
 
-interface props extends InputHTMLAttributes<HTMLInputElement> {
+interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 	className?: HTMLAttributes<HTMLInputElement>['className'];
 	label?: string;
 }
-export /*bundle*/ const Checkbox: React.FC<props & RefAttributes<HTMLInputElement>> = forwardRef(
-	(props: props, ref: LegacyRef<HTMLInputElement>): JSX.Element => {
+export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputElement>> = forwardRef(
+	(props: IProps, ref: React.Ref<HTMLInputElement>): JSX.Element => {
 		const { checked, name, disabled, className, onChange, label } = props;
 		const [state, setState] = useState({ checked: !!checked });
-		const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
+		const handleChange = (event: React.MouseEvent<HTMLInputElement>): void => {
 			setState({ checked: !checked });
 			onChange && onChange(event);
 		};
@@ -28,9 +20,10 @@ export /*bundle*/ const Checkbox: React.FC<props & RefAttributes<HTMLInputElemen
 		['className', 'checked', 'name', 'onChange'].forEach(prop => {
 			delete properties[prop];
 		});
+
 		return (
 			<>
-				<div className={cls}>
+				<div className={cls} onClick={handleChange}>
 					<input
 						style={{ display: 'none' }}
 						ref={ref}
@@ -39,7 +32,6 @@ export /*bundle*/ const Checkbox: React.FC<props & RefAttributes<HTMLInputElemen
 						id={name}
 						name={name}
 						checked={checked ?? state.checked}
-						onChange={handleChange}
 						{...properties}
 					/>
 					<label className='cbx' htmlFor={name}>

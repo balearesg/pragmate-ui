@@ -37,9 +37,9 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 		//@ts-ignore
 		else if (ref) ref.current = instance;
 	};
-	const useContext = typeof context?.setSelected === 'function';
+	const usingContext = typeof context?.setSelected === 'function';
 	const onClickButton = (event: React.MouseEvent<HTMLButtonElement>): void => {
-		if (useContext) {
+		if (usingContext) {
 			context.setSelected(index);
 		}
 		if (onClick && typeof onClick === 'function') {
@@ -75,7 +75,8 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 	cls += block ? ' btn--block' : '';
 	cls += loading || fetching ? ' btn--loading' : '';
 	const clsLoading = `button-label ${loading ? 'button-label--loading' : ''}`;
-	if (useContext && context.selected === index) cls += ' pui-btn--active';
+	if (usingContext && context.selected === index) cls += ' pui-btn--active';
+	if (usingContext) properties['data-index'] = index;
 	return (
 		<button
 			ref={combinedRef}
