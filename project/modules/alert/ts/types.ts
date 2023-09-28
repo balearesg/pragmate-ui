@@ -10,6 +10,6 @@ export interface IProps {
 	icon?: boolean | string;
 }
 
-export type IiconMap = {
+export interface IIconMap {
 	[key: string]: string;
-};
+}

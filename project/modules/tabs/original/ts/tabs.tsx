@@ -3,8 +3,8 @@ import { useState, PropsWithChildren } from 'react';
 import { useTabsContext } from './context';
 import { Tab } from './tab';
 import { routing } from '@beyond-js/kernel/routing';
-import { Iprops, Iproperties } from './types';
-export /*bundle*/ function Tabs(props: PropsWithChildren<Iprops>): JSX.Element {
+import { IProps, IProperties } from './types';
+export /*bundle*/ function Tabs(props: PropsWithChildren<IProps>): JSX.Element {
 	const [state, setState] = useState({
 		active: true,
 		valueSelected: 0,
@@ -32,7 +32,7 @@ export /*bundle*/ function Tabs(props: PropsWithChildren<Iprops>): JSX.Element {
 	const { active, valueSelected } = state;
 
 	const output = children.map((tab, index) => {
-		const properties: Iproperties = {
+		const properties: IProperties = {
 			key: index,
 			selected: selected,
 			isActive: active,
@@ -56,8 +56,8 @@ export /*bundle*/ function Tabs(props: PropsWithChildren<Iprops>): JSX.Element {
 	});
 
 	return (
-		<div className='pui-tabs-items'>
-			<div className='tabs-container'>{output}</div>
+		<div className="pui-tabs-items">
+			<div className="tabs-container">{output}</div>
 		</div>
 	);
 }
