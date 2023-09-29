@@ -50,14 +50,14 @@ function Modal(props: props) {
 
 	if (show) {
 		output.push(
-			<div key='modal-content-wrapper' className='modal-wrapper'>
+			<div key="modal-content-wrapper" className="modal-wrapper">
 				<div
-					className='modal-content'
+					className="modal-content"
 					onClick={event => {
 						event.stopPropagation();
 					}}
 				>
-					<Children {...props} close={close} key='children-content' />
+					<Children {...props} close={close} key="children-content" />
 				</div>
 			</div>
 		);
