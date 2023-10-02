@@ -29,7 +29,7 @@ export class Controller extends ReactiveModel<any> {
 		}
 		if (props.pagination || props.footer) {
 			specs.pagination = {
-				el: ref.pagination.current,
+				el: ref.pagination.current, // @todo: review it.
 				clickable: true,
 				type: props.typePagination ?? 'bullets',
 				dynamicBullets: props.dynamicBullets ?? false,
@@ -42,7 +42,7 @@ export class Controller extends ReactiveModel<any> {
 				prevEl: ref.prev.current,
 			};
 		}
-		console.log(89, SwiperCasted, element, specs);
+
 		this.#swiper = new SwiperCasted(element, specs);
 
 		if (props.activeSlide) this.#swiper.slideTo(parseInt(props.activeSlide));

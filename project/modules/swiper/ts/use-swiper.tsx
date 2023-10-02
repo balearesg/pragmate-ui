@@ -12,7 +12,7 @@ export const useSwiperSlider = (props: ISwiperOptions) => {
 		pagination: React.useRef(),
 		prev: React.useRef(),
 	};
-	console.log(0.1, refs);
+
 	const { slideTo } = props;
 	const { container, prev } = refs;
 

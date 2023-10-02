@@ -15,7 +15,7 @@ function SwiperSlider(props: ISwiperOptions): JSX.Element {
 	const { controller } = state;
 
 	const contextValue: ISwiperContext = {
-		footer: footer,
+		footer,
 		pagination,
 		controller,
 		navigation,
