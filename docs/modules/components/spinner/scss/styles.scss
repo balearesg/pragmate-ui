@@ -1,8 +1,9 @@
-
 .content {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+	padding: 0 0 0 1rem;
+
 	&__spinners {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -10,4 +11,4 @@
 			margin: 0;
 		}
 	}
-}		
+}

@@ -1,56 +1,43 @@
-import React, {
-	Ref,
-	InputHTMLAttributes,
-	ChangeEvent,
-	forwardRef,
-	RefAttributes,
-	useState,
-	SyntheticEvent,
-	HTMLAttributes,
-} from 'react';
-
+import React from 'react';
+import { InputHTMLAttributes } from 'react';
 interface props extends InputHTMLAttributes<HTMLInputElement> {
-	className?: HTMLAttributes<HTMLDivElement>['className'];
-	onClick?: (e: SyntheticEvent<HTMLDivElement, Event>) => void;
+	variant?: string;
+	title?: string;
 }
-export /*bundle*/ const Switch: React.FC<props & RefAttributes<HTMLInputElement>> = forwardRef(
-	(props: props, ref: Ref<HTMLInputElement>): JSX.Element => {
-		const { value, checked, required, name, disabled, className, onChange, onClick } = props;
-		const [state, setState] = useState({ checked: !!checked });
-		const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
-			setState({ checked: !checked });
-			console.log(100, event.target.checked, onChange);
-			onChange && onChange(event);
-		};
-		// const handleClick = event => {
-		// 	onClick && onClick(event);
-		// };
-		let cls: string = `pragmate-element-switch ${className ? className : ''}`;
-		cls += disabled ? ' disabled' : '';
-		const properties = Object.assign({}, props);
 
-		['className', 'disabled', 'checked', 'name', 'required', 'onChange', 'onClick', 'value'].forEach(prop => {
-			delete properties[prop];
-		});
+export /* bundle */ function Switch(props: props) {
+	const { checked, onChange, variant = 'primary', disabled, size = 'md', className, id, title, required } = props;
+	const [isChecked, setIsChecked] = React.useState(checked);
 
-		console.log(200, checked, state.checked);
-		return (
-			<span className={cls} {...properties}>
-				<label className='switch'>
-					<input
-						ref={ref}
-						type='checkbox'
-						required={required}
-						name={name}
-						value={value}
-						checked={checked !== undefined ? checked : state.checked}
-						disabled={disabled}
-						onChange={handleChange}
-						placeholder={name}
-					/>
-					<span className='slider' />
-				</label>
-			</span>
-		);
-	}
-);
+	const handleChange = event => {
+		setIsChecked(event.currentTarget.checked);
+		console.log(event);
+		onChange && onChange(event);
+	};
+
+	let classNameSwitch: string = `pui-element-switch ${className ? className : ''}`;
+	classNameSwitch += disabled ? ' disabled' : '';
+
+	let cls = isChecked ? `pui-element-switch__label active` : 'pui-element-switch__label';
+	cls += variant ? ` ${variant}` : '';
+	cls += size ? ` ${size}` : '';
+
+	let isId = !id ? `pui-element-switch` : id;
+	return (
+		<div className={classNameSwitch}>
+			<input
+				className='pui-element-switch__checkbox'
+				id={isId}
+				title={title}
+				required={required}
+				type='checkbox'
+				disabled={disabled}
+				checked={isChecked}
+				onChange={handleChange}
+			/>
+			<label className={cls} htmlFor={isId}>
+				<span className={`label__btn--slider`} />
+			</label>
+		</div>
+	);
+}

@@ -14,12 +14,12 @@ export const Children = ({ children, close, dismiss }: props): JSX.Element => {
 	if (dismiss !== false) {
 		output.push(
 			<IconButton
-				className='close-icon'
+				className="close-icon"
 				onClick={close}
-				data-dismiss='modal'
-				aria-label='Close'
-				key='dismiss-button'
-				icon='close'
+				data-dismiss="modal"
+				aria-label="Close"
+				key="dismiss-button"
+				icon="close"
 			/>
 		);
 	}

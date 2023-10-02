@@ -11,7 +11,7 @@ export function Result() {
 			} else {
 				setCurrentValue(currentValue + 1);
 			}
-		}, 1000);
+		}, 100);
 
 		return () => clearInterval(interval);
 	}, [currentValue]);

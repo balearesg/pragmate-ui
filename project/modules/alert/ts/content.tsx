@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Icon } from 'pragmate-ui/icons';
-export function Content({ type, message, children, title, icon }) {
+export function Content({ message, children, title, icon }) {
 	let output = [];
 
 	if (title) {

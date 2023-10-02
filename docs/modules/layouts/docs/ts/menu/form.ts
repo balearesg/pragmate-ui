@@ -7,4 +7,4 @@ const children = [
 	['Form', 'form'],
 ];
 
-export const FormItems = ['Form', 'form', children];
+export const FormItems = ['Form', 'Form', children];

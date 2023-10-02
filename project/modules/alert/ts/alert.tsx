@@ -1,16 +1,13 @@
 import React from 'react';
 import { Icon, IconButton } from 'pragmate-ui/icons';
 import { Content } from './content';
-import { IProps, IiconMap } from './types';
+import { IProps, IIconMap } from './types';
 
 export /*bundle*/
-function Alert(props: IProps) {
-	const { message, className, type, title, children, closable, onClose, icon } = props;
+function Alert({ message, className, type, title, children, closable, onClose, icon }: IProps) {
 	const [show, setShow] = React.useState(true);
 
-	if (!show || (!message && !children)) {
-		return null;
-	}
+	if (!show || (!message && !children)) return null;
 
 	const onCloseClick = async () => {
 		if (onClose) await onClose();
@@ -20,7 +17,7 @@ function Alert(props: IProps) {
 	let cls = `${className ? `${className} ` : ''} alert${type ? ` alert--${type}` : ''}`;
 	cls = icon ? `${cls} alert--icon` : cls;
 
-	const icons: IiconMap = {
+	const icons: IIconMap = {
 		error: 'error',
 		warning: 'circle-exclamation',
 		success: 'circle-check',
@@ -37,10 +34,10 @@ function Alert(props: IProps) {
 				</section>
 			)}
 
-			<Content message={message} type={type} title={title} icon={hasIcon}>
+			<Content message={message} title={title} icon={hasIcon}>
 				{children}
 			</Content>
-			{closable && <IconButton icon='close' onClick={onCloseClick} />}
+			{closable && <IconButton icon="close" onClick={onCloseClick} />}
 		</div>
 	);
 }

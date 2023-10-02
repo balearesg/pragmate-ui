@@ -1,11 +1,11 @@
-export type Iprops = {
+export interface IProps {
 	onClick?: any;
 	children?: any;
 	nolink?: any;
 	selected?: any;
-};
+}
 
-export interface Iproperties {
+export interface IProperties {
 	key?: number;
 	selected?: string;
 	isActive?: boolean;

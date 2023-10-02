@@ -1,23 +1,24 @@
 import * as React from 'react';
 import { Icon } from 'pragmate-ui/icons';
-type props = {
+interface IProps {
 	text?: string;
 	icon?: string;
 	additionalElement?: React.ReactNode;
 	children?: React.ReactNode;
 	className?: string;
-};
+}
 export /*bundle*/
-function Empty(props: props): JSX.Element {
-	const text: string = props.text ? props.text : 'No hay registros';
+function Empty(props: IProps): JSX.Element {
+	const text = props.text ? props.text : 'No hay registros';
 	const cls = `${props.className ?? ''} pui-empty-section`;
+
 	return (
 		<div className={cls}>
-			<div className='content'>
+			<div className="content">
 				{props.icon && <Icon icon={props.icon} />}
 				<h3>{text}</h3>
-				{props.additionalElement ? props.additionalElement : null}
-				{props.children ? props.children : null}
+				{props.additionalElement && props.additionalElement}
+				{props.children && props.children}
 			</div>
 		</div>
 	);

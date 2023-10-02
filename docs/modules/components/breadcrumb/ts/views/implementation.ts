@@ -1,1 +1,1 @@
-export const implementation = `<BreadCrumb title="Title" items={listItems} />`;
+export const implementation = `<BreadCrumb items={listItems} />`;

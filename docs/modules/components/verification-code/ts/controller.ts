@@ -1,22 +1,22 @@
-import { PageReactWidgetController } from "@beyond-js/react-18-widgets/page";
-import { View } from "./views";
-import type { IWidgetStore } from "@beyond-js/widgets/controller";
-import { Model } from "./model";
+import { PageReactWidgetController } from '@beyond-js/react-18-widgets/page';
+import { View } from './views';
+import type { IWidgetStore } from '@beyond-js/widgets/controller';
+import { Manager } from './manager';
 
 export /*bundle*/
 class Controller extends PageReactWidgetController {
-  get Widget() {
-    return View;
-  }
+	get Widget() {
+		return View;
+	}
 
-  #model;
+	#store;
 
-  createStore(): IWidgetStore {
-    this.#model = new Model();
-    return this.#model;
-  }
+	createStore(): IWidgetStore {
+		this.#store = new Manager();
+		return this.#store;
+	}
 
-  hide() {
-    this.#model.hide();
-  }
+	hide() {
+		this.#store.hide();
+	}
 }

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { SwiperSlider } from 'pragmate-ui/swiper';
+import { SwiperSlider } from 'pragmate-ui/swiper-component';
+import { v4 as uuid } from 'uuid';
 import { CardOpinion } from './card';
 
 interface IOpinion {
@@ -15,28 +16,13 @@ interface IProps {
 }
 
 export /* bundle */ function Opinions(props: IProps) {
-	const items = props.opinions.map((opinion, index) => {
-		return (
-			<CardOpinion
-				key={index}
-				name={opinion.name}
-				src={opinion.src}
-				comment={opinion.comment}
-				profession={opinion.profession}
-				alt={opinion.alt}
-			/>
-		);
+	const items = props.opinions.map(opinion => {
+		return <CardOpinion key={uuid()} {...opinion} />;
 	});
 
 	return (
 		<section className='container__opinion'>
-			<SwiperSlider
-				slidesPerView='auto'
-				spaceBetween={0}
-				pagination={true}
-				navigation={true}
-				className='swiper-implementation'
-			>
+			<SwiperSlider slidesPerView='auto' spaceBetween={0} pagination navigation className='swiper-implementation'>
 				{items}
 			</SwiperSlider>
 		</section>
