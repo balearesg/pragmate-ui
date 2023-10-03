@@ -49,7 +49,7 @@ export /*bundle*/ function Textarea(props: props): JSX.Element {
 			errorMessage = props.lengthMessage ? props.lengthMessage : state.lengthMessage + ` (max ${props.max})`;
 		}
 
-		return <span className='beyond-element-input-error'>{errorMessage}</span>;
+		return <span className="pragmate-element-input-error">{errorMessage}</span>;
 	};
 
 	const error: JSX.IntrinsicElements['span'] = getError(props.hasError);
@@ -76,7 +76,7 @@ export /*bundle*/ function Textarea(props: props): JSX.Element {
 				{props.children}
 				{error}
 				{props.label && <label htmlFor={props.id}>{props.label}</label>}
-				{props.required && <span className='beyond-input__required-label'>(*)</span>}
+				{props.required && <span className="pragmate-input__required-label">(*)</span>}
 			</>
 		</div>
 	);
