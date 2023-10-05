@@ -1,10 +1,7 @@
 {
-	"name": "template/generator",
+	"name": "pui/template/palette",
 	"platforms": ["web", "ios", "android"],
-
 	"widget": {
-		"route": "/pui/palette/generator",
-		"is": "page",
 		"scss": {
 			"path": "/scss",
 			"files": ["*"]
@@ -14,7 +11,7 @@
 			"files": ["*"]
 		},
 		"element": {
-			"name": "pui-template-palette-generator-page"
+			"name": "pui-template-view-widget"
 		}
 	}
 }

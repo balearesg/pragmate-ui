@@ -1,6 +1,6 @@
 {
 	"name": "pragmate-ui-docs",
-	"version": "0.0.1",
+	"version": "0.0.37",
 	"title": "Pragmate UI",
 	"description": "Official pragmate ui documentation with description of the components and uses of these",
 	"license": "ISC",
@@ -27,7 +27,7 @@
 				"environment": "development",
 				"platform": "web",
 				"ports": {
-					"bundles": 6530
+					"bundles": 6500
 				}
 			}
 		]

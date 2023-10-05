@@ -15,7 +15,7 @@ export class StoreManager implements IWidgetStore {
 	get properties() {
 		return this.#properties;
 	}
-	#tones = ['neutral', 'neutralVariant'];
+	#tones = ['neutral'];
 	get tones() {
 		return this.#tones;
 	}

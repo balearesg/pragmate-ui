@@ -1,9 +1,10 @@
 .pragmate-icon-button {
 	width: 40px;
+	height: 40px;
 	border: none;
 	display: inline-grid;
 	position: relative;
-	outline: none !important;
+	outline: none;
 	place-items: center;
 
 	&:not(&:disabled) {

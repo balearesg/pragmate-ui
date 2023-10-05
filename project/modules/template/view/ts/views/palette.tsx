@@ -17,7 +17,7 @@ export const Palette: React.FC<PaletteComponentProps> = ({ property, store }) =>
 			<div className={`palette-container palette-${property}`}>
 				{values.map((value, index) => {
 					const color = TplManager.root[`${property}${value}`];
-
+					if (value === '') return null;
 					return (
 						<Tooltip key={`${property}.${value}.${index}`} content={color}>
 							<div
