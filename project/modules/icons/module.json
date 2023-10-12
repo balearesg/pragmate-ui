@@ -4,11 +4,11 @@
 	"code": {
 		"name": "icon",
 		"ts": {
-			"path": "/code/ts",
+			"path": "/ts",
 			"files": ["*"]
 		},
-		"sass": {
-			"path": "/code/scss",
+		"scss": {
+			"path": "/scss",
 			"files": ["*"]
 		}
 	}

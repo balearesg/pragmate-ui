@@ -1,12 +1,12 @@
 {
 	"name": "ripple",
 	"code": {
-		"sass": {
-			"path": "/code/sass",
+		"scss": {
+			"path": "/scss",
 			"files": ["*"]
 		},
 		"ts": {
-			"path": "/code/ts",
+			"path": "/ts",
 			"files": ["*"]
 		}
 	}

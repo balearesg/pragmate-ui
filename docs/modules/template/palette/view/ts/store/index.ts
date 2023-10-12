@@ -1,5 +1,5 @@
 import type { IWidgetStore } from '@beyond-js/widgets/controller';
-import { TplManager, hslToHex } from 'pragmate-ui/template/manager';
+import { TplManager } from 'pragmate-ui/template/manager';
 import { generatePalette } from './calculator';
 globalThis.TplManager = TplManager;
 type TColorInput = string | [number, number, number]; // Puede ser un string hexadecimal o un array RGB

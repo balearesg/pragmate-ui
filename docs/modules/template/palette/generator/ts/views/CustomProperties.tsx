@@ -1,5 +1,4 @@
-import * as React from 'react';
-
+import React from 'react';
 import { Code } from 'pragmate-ui/code';
 
 export function CustomProperties({ properties }) {

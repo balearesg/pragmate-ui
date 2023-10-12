@@ -4,4 +4,5 @@ export interface IProps {
 	orientation?: 'row' | 'column';
 	children: React.ReactNode;
 	selected: number;
+	index?: number;
 }

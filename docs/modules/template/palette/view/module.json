@@ -1,5 +1,5 @@
 {
-	"name": "template/palette",
+	"name": "pui/template/palette",
 	"platforms": ["web", "ios", "android"],
 	"widget": {
 		"route": "/pui/palette/view",

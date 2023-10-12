@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 export const ColorPalette = () => {
 	const baseHue = 120; // Hue for the base color (e.g., green)

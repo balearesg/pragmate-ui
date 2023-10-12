@@ -1,50 +1,38 @@
-import * as React from "react";
-import { SwiperFooter } from "./swiper-footer";
-import { SwiperNavigation } from "./swiper-navigation";
-import { SlideItems } from "./slide";
-import { useSwiperSlider } from "./use-swiper";
-import { SwiperContext } from "./context";
-interface IProps {
-  children: Array<JSX.Element>;
-  footer?: boolean;
-  navigation?: boolean;
-  pagination?: boolean;
-  next?: boolean;
-  functionNext?: (e: React.SyntheticEvent) => void;
-  className?: string;
-  slideTo?: any;
-  slidesPerView?: string | number;
-  spaceBetween?: number;
-}
+import React from 'react';
+import { SwiperFooter } from './components/footer';
+import { SwiperNavigation } from './components/navigation';
+import { SlideItems } from './slide';
+import { useSwiperSlider } from './use-swiper';
+import { ISwiperContext, SwiperContext } from './context';
+import { ISwiperOptions } from './interfaces/swiper-props';
+import { Pagination } from './components/pagination';
 
 export /*bundle*/
-function SwiperSlider(props: IProps): JSX.Element {
-  const { refs, state, prev, container } = useSwiperSlider(props);
+function SwiperSlider(props: ISwiperOptions): JSX.Element {
+	const { pagination, footer, navigation, children } = props;
+	const { refs, state } = useSwiperSlider(props);
 
-  const contextValue = {};
+	const { controller } = state;
 
-  const footer: boolean = props.footer === true;
-  const { controller } = state;
-  const cls: string = props.className
-    ? `${props.className} pragmate-element-swiper-slider`
-    : "pragmate-element-swiper-slider";
-  return (
-    <SwiperContext.Provider value={contextValue}>
-      <div className={cls}>
-        <div ref={container} className="swiper-container">
-          <div className="swiper-wrapper">{<SlideItems props={props} />}</div>
-          {props.pagination && (
-            <div ref={refs?.pagination} className="swiper-pagination" />
-          )}
-          <SwiperFooter footer={footer} controller={controller} refs={refs} />
+	const contextValue: ISwiperContext = {
+		footer,
+		pagination,
+		controller,
+		navigation,
+		refs,
+	};
 
-          <SwiperNavigation
-            navigation={props.navigation}
-            controller={controller}
-            prev={prev}
-          />
-        </div>
-      </div>
-    </SwiperContext.Provider>
-  );
+	const cls: string = `swiper-container swiper ${
+		props.className ? `${props.className} pui-swiper-slider` : 'pui-swiper-slider'
+	};`;
+	return (
+		<SwiperContext.Provider value={contextValue}>
+			<div ref={refs.container} className={cls}>
+				<SlideItems items={children} />
+				<Pagination />
+				<SwiperFooter />
+				<SwiperNavigation />
+			</div>
+		</SwiperContext.Provider>
+	);
 }

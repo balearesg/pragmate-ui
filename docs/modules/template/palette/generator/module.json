@@ -14,7 +14,7 @@
 			"files": ["*"]
 		},
 		"element": {
-			"name": "pui-template-palette-page"
+			"name": "pui-template-palette-generator-page"
 		}
 	}
 }

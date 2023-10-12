@@ -2,6 +2,7 @@
 	--swiper-theme-color: var(--primary);
 	.swiper-container {
 		position: relative;
+		max-width: 100%;
 	}
 	.swiper-slide {
 		width: auto;

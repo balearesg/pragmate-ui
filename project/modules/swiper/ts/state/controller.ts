@@ -1,7 +1,7 @@
 import * as Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 import { ReactiveModel } from '@beyond-js/reactive/model';
-
+import { SwiperProps } from '../types';
 const SwiperCasted: typeof Swiper.Swiper = Swiper.Swiper as unknown as typeof Swiper.default;
 export class Controller extends ReactiveModel<any> {
 	#swiper;
@@ -14,20 +14,22 @@ export class Controller extends ReactiveModel<any> {
 
 	setSwiper = (element, props, ref): void => {
 		this.#props = props;
-		const specs = Object.assign(
-			{
-				slidesPerView: props.slidesPerView ?? 1,
-				modules: [Navigation, Pagination],
-			},
-			props
-		);
+		let specs = {
+			slidesPerView: props.slidesPerView ?? 1,
+			modules: [Navigation, Pagination],
+			...props,
+		};
+		Object.keys(specs).forEach(key => {
+			if (['children'].includes(key)) delete specs[key];
+		});
+
 		if (!Swiper) {
 			console.warn('Swiper keeps without been loaded');
 			return;
 		}
 		if (props.pagination || props.footer) {
 			specs.pagination = {
-				el: ref.pagination.current,
+				el: ref.pagination.current, // @todo: review it.
 				clickable: true,
 				type: props.typePagination ?? 'bullets',
 				dynamicBullets: props.dynamicBullets ?? false,
@@ -75,9 +77,20 @@ export class Controller extends ReactiveModel<any> {
 			return;
 		}
 		if (!this.#onEnd) return;
-		if (this.#props.functionNext) this.#props.functionNext();
+		if (this.#props.onNext) this.#props.onNext();
 		else this.#swiper?.slideNext(500, false);
 	};
+
+	prevSlide = () => {
+		if (!this.#swiper?.isEnd) {
+			this.#swiper?.slideNext(500, false);
+			return;
+		}
+		if (!this.#onEnd) return;
+		if (this.#props.onPrev) this.#props.onPrev();
+		else this.#swiper?.slidePrev(500, false);
+	};
+
 	next = (): void => {
 		if (!this.#swiper?.isEnd) {
 			this.#swiper?.slideNext(500, false);

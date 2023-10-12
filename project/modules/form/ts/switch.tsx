@@ -26,11 +26,11 @@ export /* bundle */ function Switch(props: props) {
 	return (
 		<div className={classNameSwitch}>
 			<input
-				className="pui-element-switch__checkbox"
+				className='pui-element-switch__checkbox'
 				id={isId}
 				title={title}
 				required={required}
-				type="checkbox"
+				type='checkbox'
 				disabled={disabled}
 				checked={isChecked}
 				onChange={handleChange}
