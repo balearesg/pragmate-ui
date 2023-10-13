@@ -1,0 +1,32 @@
+.pragmate-element-input.floating--label {
+    margin: 2rem 0rem 0.5rem 0rem;
+    label {
+        position: absolute;
+        background-color: transparent;
+        padding: 8px 24px;
+        line-height: 24px;
+        border-radius: 70px;
+        top: -35px;
+        left: -20px;
+        bottom: 0;
+        color: var(--gray-dark);
+        transition: none;
+        display: inline-block;
+        text-transform: lowercase;
+
+        &:first-letter {
+            text-transform: uppercase;
+        }
+
+    }
+    &:focus-within label,
+    input:not(:placeholder-shown)~label,
+    textarea:not(:placeholder-shown)~label {
+        padding: 0px 8px;
+        background-color: var(--surface);
+        top: -27.12px;
+        left: -4px;
+        bottom: auto;
+        transition: none;
+    }
+}

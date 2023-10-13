@@ -15,7 +15,6 @@ export /*bundle*/ function ThemeSwitcher(): JSX.Element {
 		container.setAttribute('data-beyond-mode', theme);
 		localStorage.setItem('theme', theme);
 		setIsDark(target.checked);
-		console.log(target.checked);
 	}
 
 	React.useEffect(() => {

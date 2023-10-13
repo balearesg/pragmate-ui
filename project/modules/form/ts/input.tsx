@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { InputHTMLAttributes, ChangeEvent, ReactNode, useRef, useState, SyntheticEvent, MutableRefObject } from 'react';
-import { Icon, IconButton } from 'pragmate-ui/icons';
-import { Spinner } from 'pragmate-ui/spinner';
+import {InputHTMLAttributes, ChangeEvent, ReactNode, useRef, useState, SyntheticEvent, MutableRefObject} from 'react';
+import {Icon, IconButton} from 'pragmate-ui/icons';
+import {Spinner} from 'pragmate-ui/spinner';
 interface props extends InputHTMLAttributes<HTMLInputElement> {
 	ref?: any;
 	errorMessage?: string;
@@ -13,6 +13,7 @@ interface props extends InputHTMLAttributes<HTMLInputElement> {
 	password?: boolean;
 	loading?: boolean;
 	colorSpinner?: string;
+	floating?: boolean;
 	max?: string;
 }
 export /*bundle*/
@@ -59,20 +60,22 @@ function Input(props: props): JSX.Element {
 	const changeType = (event: SyntheticEvent<HTMLButtonElement, Event>): void => {
 		event.stopPropagation();
 		const target: EventTarget & HTMLButtonElement = event.currentTarget as HTMLButtonElement;
-		setState({ ...state, type: target.dataset.type });
+		setState({...state, type: target.dataset.type});
 	};
 	const error: JSX.IntrinsicElements['span'] = getError(props.hasError);
-	let properties: props = { ...props };
+	let properties: props = {...props};
 	let cls: string = props.className ? `${props.className} pragmate-element-input` : 'pragmate-element-input';
 	cls += props.icon || props.loading || props.password || props.required ? ' has-icon' : '';
 	cls += props.disabled ? ' disabled' : '';
 	cls += props.hasError ? ' error' : '';
+	cls += props.floating ? ' floating--label' : '';
 	[
 		'className',
 		'hasError',
 		'errorMessage',
 		'children',
 		'icon',
+		'floating',
 		'label',
 		'password',
 		'loading',
@@ -111,7 +114,7 @@ function Input(props: props): JSX.Element {
 				)}
 				{props.loading && <Spinner color={props.colorSpinner ?? 'var(--primary)'} type="primary" active />}
 				{controlInput}
-				{!props.label || (props.required && <span className="pragmate-input__required-label">(*)</span>)}
+				{!props.label && props.required && <span className="pragmate-input__required-label">(*)</span>}
 			</>
 		</div>
 	);

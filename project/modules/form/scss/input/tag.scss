@@ -44,6 +44,10 @@
 		}
 	}
 
+	& .pragmate-input__required-label {
+		color: var(--error);
+	}
+
 	&:focus-within label,
 	input:not(:placeholder-shown) ~ label,
 	textarea:not(:placeholder-shown) ~ label {
@@ -55,7 +59,6 @@
 		transition: all 0.3s ease-in-out;
 		color: var(--color-gray-20);
 	}
-
 	&-error {
 		color: red;
 	}

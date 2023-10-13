@@ -53,7 +53,7 @@ export function Clipboard({ text, message }) {
 					right: '2rem',
 				}}
 			/>
-			<IconButton icon="copy" />
+			<IconButton title="copy" icon="copy" />
 			<span className="action-copied">Copied</span>
 		</div>
 	);
