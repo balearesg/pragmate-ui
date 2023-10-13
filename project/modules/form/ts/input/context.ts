@@ -12,15 +12,7 @@ interface IInputContextValue {
 		type: InputHTMLAttributes<HTMLInputElement>['type'];
 	};
 	props: IProps;
-	setState: React.Dispatch<
-		React.SetStateAction<{
-			value: string;
-			errorMessage: string;
-			lengthMessage: string;
-			emptyMessage: string;
-			type: string;
-		}>
-	>;
+	setState: any;
 	input: MutableRefObject<HTMLInputElement>;
 }
 

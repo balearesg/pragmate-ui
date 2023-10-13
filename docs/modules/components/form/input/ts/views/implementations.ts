@@ -31,6 +31,13 @@ export const implementationIcon = `
 />
 `;
 
+export const implementationFloating = `
+<Input 
+	type="text" 
+	label="Insert a text" 
+	floating 
+/>`;
+
 export const implementationDisabled = `
 <Input
 	type="text"

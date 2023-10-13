@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Input} from 'pragmate-ui/form';
 
-export function Results() {
+export function ResultsFloating() {
 	const [value, setValue] = React.useState('');
 
 	function handleChange(event) {
