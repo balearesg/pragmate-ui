@@ -54,6 +54,12 @@ export const implementationPassword = `
 />
 `;
 
+export const implementationButton = `
+<Input type="text" name="name" label="Insert a text" onChange={handleChange} value={value}>
+	<Button variant="primary">Search</Button>
+</Input>
+`;
+
 export const implementationLoading = `
 <Input
 	type="text"

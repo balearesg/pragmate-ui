@@ -50,8 +50,8 @@ function Input(props: IProps): JSX.Element {
 					placeholder={props.placeholder ?? ' '}
 					id={props.id ?? props.name}
 				/>
-				{props.children}
 				<PropsRendering />
+				{props.children}
 			</div>
 		</InputContext.Provider>
 	);

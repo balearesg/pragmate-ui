@@ -6,6 +6,7 @@ import {
 	implementationLoading,
 	implementationPassword,
 	implementationFloating,
+	implementationButton,
 } from './implementations';
 import {ResultsFloating} from './results-floating';
 import {ResultInputError} from './result-input-error';
@@ -13,6 +14,8 @@ import {ResultInputWithIcon} from './result-input-with-icon';
 import {ResultInputDisabled} from './result-input-disabled';
 import {ResultInputPassword} from './result-input-password';
 import {ResultInputLoading} from './result-input-loading';
+import {ResultsButton} from './result';
+
 import {Code} from 'pragmate-ui/code';
 
 # Input
@@ -34,9 +37,9 @@ deseamos o necesitamos como atributos un label definido,icono, un disable, contr
 
 ### Case input with floating :
 
-<ResultsFloating />
-
 <Code>{implementationFloating}</Code>
+
+<ResultsFloating />
 
 ### Case input with icon :
 
@@ -67,6 +70,12 @@ deseamos o necesitamos como atributos un label definido,icono, un disable, contr
 <Code>{implementationError}</Code>
 
 <ResultInputError />
+
+### Case input Button:
+
+<Code>{implementationButton}</Code>
+
+<ResultsButton />
 
 ### Props :
 
