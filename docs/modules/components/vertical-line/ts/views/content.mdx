@@ -1,0 +1,33 @@
+import {VerticalLine} from 'pragmate-ui/vertical-line';
+import {Code} from 'pragmate-ui/code';
+import {Result} from './result';
+
+# Vertical Line
+
+El componente `VerticalLine` es un componente de línea de tiempo vertical que muestra una serie de eventos en orden
+cronológico. Cada evento se muestra como un punto en la línea de tiempo y contiene información sobre el título, la
+fecha, la descripción y un icono opcional.
+
+## Import :
+
+<Code>{`import { VerticalLine } from 'pragmate-ui/vertical-line';`}</Code>
+
+## Preview :
+
+<Result />
+
+## Props :
+
+A continuación se describen las propiedades disponibles para personalizar del componente:
+
+-   `events`: Un array de objetos que representan los eventos que se mostrarán en la línea de tiempo. Cada objeto debe
+    tener las siguientes propiedades:
+
+    -   `date` : La fecha del evento en formato de cadena.
+    -   `description` :
+    -   `title` :
+    -   `icon`(opcional) : El nombre del icono que se mostrará junto al evento. El valor debe ser una cadena que
+        represente el nombre del icono en la librería de iconos Pragmate UI.
+
+-   `variant`(opcional) : La variante de color que se aplicará al icono del evento. El valor debe ser una cadena que
+    represente el nombre de una de las variantes de color disponibles en Pragmate UI.
