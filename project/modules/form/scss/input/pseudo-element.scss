@@ -1,5 +1,5 @@
 .pragmate-element-input,
-.pragmate-element-textarea {
+pui-element-textarea {
 	&:hover:not(&.disabled),
 	&:focus-within:not(&.disabled) {
 		border-color: var(--primary);

@@ -5,8 +5,10 @@ import {Spinner} from 'pragmate-ui/spinner';
 import {SyntheticEvent} from 'react';
 import {getError} from './get-error';
 
-export function PropsRendering() {
+export function RenderingProps() {
 	const {state, props, setState, input} = useInputContext();
+
+	const {password, required, label, id, icon, hasError, name, loading} = props;
 
 	const changeType = (event: SyntheticEvent<HTMLButtonElement, Event>): void => {
 		event.stopPropagation();
@@ -14,30 +16,29 @@ export function PropsRendering() {
 		setState({...state, type: target.dataset.type});
 	};
 
-	const spanRequired = props.required && <span className="pragmate-input__required-label">(*)</span>;
+	const iconButtonAttrs = {
+		className: 'eye',
+		onClick: changeType,
+		'data-type': state.type === 'password' ? 'text' : 'password',
+		icon: state.type === 'password' ? 'eye' : 'eye-slash',
+	};
 
-	const controlInput =
-		props.password &&
-		(state.type === 'password' ? (
-			<IconButton onClick={changeType} data-type="text" className="eye" icon="eye" />
-		) : (
-			<IconButton onClick={changeType} className="eye" data-type="password" icon="eye-slash" />
-		));
+	const controlInput = password && <IconButton {...iconButtonAttrs} />;
 
-	const isLabel = props.label && (
-		<label htmlFor={props.id ?? props.name}>
-			{props.label} {spanRequired}{' '}
+	const spanRequired = required && <span className="pragmate-input__required-label">(*)</span>;
+
+	const isLabel = label && (
+		<label htmlFor={id ?? name}>
+			{label} {spanRequired}{' '}
 		</label>
 	);
 
-	const isIcon = props.icon && <Icon icon={props.icon} />;
-	const isLoading = props.loading && <Spinner color={props.colorSpinner ?? 'var(--primary)'} type="primary" active />;
+	const isIcon = icon && <Icon icon={icon} />;
+	const isLoading = loading && <Spinner color={props.colorSpinner ?? 'var(--primary)'} type="primary" active />;
 
-	const isRequiredWidthLabel = !props.label && props.required && (
-		<span className="pragmate-input__required-label">(*)</span>
-	);
+	const isRequiredWidthLabel = !label && required && <span className="pragmate-input__required-label">(*)</span>;
 
-	const error: JSX.IntrinsicElements['span'] = getError(state, props.hasError, input);
+	const error: JSX.IntrinsicElements['span'] = getError(state, hasError, input);
 	return (
 		<>
 			{isIcon}
