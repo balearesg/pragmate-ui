@@ -7,6 +7,7 @@ import {
 	implementationPassword,
 	implementationFloating,
 	implementationButton,
+	implementationDate,
 } from './implementations';
 import {ResultsFloating} from './results-floating';
 import {ResultInputError} from './result-input-error';
@@ -14,6 +15,8 @@ import {ResultInputWithIcon} from './result-input-with-icon';
 import {ResultInputDisabled} from './result-input-disabled';
 import {ResultInputPassword} from './result-input-password';
 import {ResultInputLoading} from './result-input-loading';
+import {ResultDate} from './result-input-date';
+
 import {ResultsButton} from './result';
 
 import {Code} from 'pragmate-ui/code';
@@ -76,6 +79,17 @@ deseamos o necesitamos como atributos un label definido,icono, un disable, contr
 <Code>{implementationButton}</Code>
 
 <ResultsButton />
+
+### Input date :
+
+En `Pragmate-ui` podemos personalizar el icono de calendario que sale en el input y podemos agregar un icono de la lista
+de pragmate agregando el atributo icon y el nombre del icono, si no agregamos un icono por defecto saldra uno.
+
+#### preview :
+
+<Code>{implementationDate}</Code>
+
+<ResultDate />
 
 ### Props :
 
