@@ -14,5 +14,5 @@ export function getError(state, inputRef, props): JSX.IntrinsicElements['span'] 
 		messageError = lengthMessage ? lengthMessage : state.lengthMessage + ` (max ${props.max})`;
 	}
 
-	return <span className="pragmate-element-input-error">{errorMessage}</span>;
+	return <span className="pui-element-input-error">{errorMessage}</span>;
 }

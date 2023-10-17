@@ -4,6 +4,7 @@ import {Icon, IconButton} from 'pragmate-ui/icons';
 import {Spinner} from 'pragmate-ui/spinner';
 import {SyntheticEvent} from 'react';
 import {getError} from './get-error';
+import {Label} from './label';
 
 export function RenderingProps() {
 	const {state, props, setState, input} = useInputContext();
@@ -22,21 +23,15 @@ export function RenderingProps() {
 	};
 
 	const controlInput = password && <IconButton {...iconButtonAttrs} />;
-	const spanRequired = required && <span className="pragmate-input__required-label">(*)</span>;
-	const showLabel = label && (
-		<label htmlFor={id ?? name}>
-			{label} {spanRequired}{' '}
-		</label>
-	);
 	const showIcon = icon && <Icon icon={icon} />;
 	const showLoading = loading && <Spinner color={props.colorSpinner ?? 'var(--primary)'} type="primary" active />;
-	const showRequiredWidthLabel = !label && required && <span className="pragmate-input__required-label">(*)</span>;
+	const showRequiredWidthLabel = !label && required && <span className="pui-input__required-label">(*)</span>;
 	const error: JSX.IntrinsicElements['span'] = getError(state, hasError, input);
 
 	return (
 		<>
 			{showIcon}
-			{showLabel}
+			<Label />
 			{showLoading}
 			{controlInput}
 			{showRequiredWidthLabel}

@@ -15,7 +15,7 @@ export interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 	max?: string;
 }
 
-export type IPropsState = {
+export type PropsState = {
 	value?: string | number | readonly string[];
 	errorMessage: string;
 	lengthMessage: string;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {ChangeEvent, useRef, useState, MutableRefObject} from 'react';
 import {listClassName} from './class-list';
-import type {IProps, IPropsState} from './type';
+import type {IProps, PropsState} from './type';
 import {InputContext} from './context';
 import {RenderingProps} from './rendering-props';
 export /*bundle*/
@@ -25,7 +25,7 @@ function Input(props: IProps): JSX.Element {
 		placeholder,
 	} = props;
 
-	const [state, setState] = useState<IPropsState>({
+	const [state, setState] = useState<PropsState>({
 		value: value ?? '',
 		errorMessage: errorMessage ?? 'Formato incorrecto',
 		lengthMessage: 'Cantidad máxima: ',
@@ -43,7 +43,7 @@ function Input(props: IProps): JSX.Element {
 	};
 
 	let properties: IProps = {...props};
-	let cls: string = className ? `${className} pragmate-element-input` : 'pragmate-element-input';
+	let cls: string = className ? `${className} pui-element-input` : 'pui-element-input';
 	cls += icon || loading || password || required ? ' has-icon' : '';
 	cls += disabled ? ' disabled' : '';
 	cls += hasError ? ' error' : '';
@@ -54,6 +54,8 @@ function Input(props: IProps): JSX.Element {
 	});
 
 	const listValue = {state, props, setState, input};
+
+	const isValue = typeof value !== 'undefined' ? value : state.value;
 	return (
 		<InputContext.Provider value={listValue}>
 			<div className={cls}>
@@ -63,7 +65,7 @@ function Input(props: IProps): JSX.Element {
 					name={name}
 					onChange={handleChange}
 					type={state.type}
-					value={typeof value !== 'undefined' ? value : state.value}
+					value={isValue}
 					placeholder={placeholder ?? ' '}
 					id={id ?? name}
 				/>
