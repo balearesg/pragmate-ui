@@ -4,7 +4,7 @@ $vertical-variants: 'primary', 'secondary', 'tertiary', 'success', 'danger', 'wa
     .container-timeline {
             .timeline-event {
             @each $type in $vertical-variants {
-                &__content--icon .#{$type} {
+                .#{$type} {
                     background-color: var(--#{$type});
                 }
             }

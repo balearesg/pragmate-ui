@@ -5,7 +5,7 @@ import {events} from './list-events';
 export function Result() {
 	return (
 		<div className="content">
-			<VerticalLine events={events} variant="secondary" />
+			<VerticalLine events={events} variant="primary" />
 		</div>
 	);
 }
