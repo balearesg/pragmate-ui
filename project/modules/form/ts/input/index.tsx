@@ -3,7 +3,7 @@ import {ChangeEvent, useRef, useState, MutableRefObject} from 'react';
 import {listClassName} from './class-list';
 import type {IProps, IPropsState} from './type';
 import {InputContext} from './context';
-import {RenderingProps} from './props-rendering';
+import {RenderingProps} from './rendering-props';
 export /*bundle*/
 function Input(props: IProps): JSX.Element {
 	const input: MutableRefObject<HTMLInputElement> = useRef(null);

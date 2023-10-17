@@ -7,7 +7,6 @@ import {getError} from './get-error';
 
 export function RenderingProps() {
 	const {state, props, setState, input} = useInputContext();
-
 	const {password, required, label, id, icon, hasError, name, loading} = props;
 
 	const changeType = (event: SyntheticEvent<HTMLButtonElement, Event>): void => {
@@ -15,7 +14,6 @@ export function RenderingProps() {
 		const target: EventTarget & HTMLButtonElement = event.currentTarget as HTMLButtonElement;
 		setState({...state, type: target.dataset.type});
 	};
-
 	const iconButtonAttrs = {
 		className: 'eye',
 		onClick: changeType,
@@ -24,28 +22,24 @@ export function RenderingProps() {
 	};
 
 	const controlInput = password && <IconButton {...iconButtonAttrs} />;
-
 	const spanRequired = required && <span className="pragmate-input__required-label">(*)</span>;
-
-	const isLabel = label && (
+	const showLabel = label && (
 		<label htmlFor={id ?? name}>
 			{label} {spanRequired}{' '}
 		</label>
 	);
-
-	const isIcon = icon && <Icon icon={icon} />;
-	const isLoading = loading && <Spinner color={props.colorSpinner ?? 'var(--primary)'} type="primary" active />;
-
-	const isRequiredWidthLabel = !label && required && <span className="pragmate-input__required-label">(*)</span>;
-
+	const showIcon = icon && <Icon icon={icon} />;
+	const showLoading = loading && <Spinner color={props.colorSpinner ?? 'var(--primary)'} type="primary" active />;
+	const showRequiredWidthLabel = !label && required && <span className="pragmate-input__required-label">(*)</span>;
 	const error: JSX.IntrinsicElements['span'] = getError(state, hasError, input);
+
 	return (
 		<>
-			{isIcon}
-			{isLabel}
-			{isLoading}
+			{showIcon}
+			{showLabel}
+			{showLoading}
 			{controlInput}
-			{isRequiredWidthLabel}
+			{showRequiredWidthLabel}
 			{error}
 		</>
 	);
