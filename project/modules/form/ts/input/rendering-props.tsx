@@ -8,7 +8,7 @@ import {Label} from './label';
 
 export function RenderingProps() {
 	const {state, props, setState, input} = useInputContext();
-	const {password, required, label, id, icon, hasError, name, loading} = props;
+	const {password, required, label, icon, hasError, loading} = props;
 
 	const changeType = (event: SyntheticEvent<HTMLButtonElement, Event>): void => {
 		event.stopPropagation();
@@ -21,19 +21,24 @@ export function RenderingProps() {
 		'data-type': state.type === 'password' ? 'text' : 'password',
 		icon: state.type === 'password' ? 'eye' : 'eye-slash',
 	};
+	const handleClick = () => {
+		input.current.focus();
+	};
 
+	const defaultIcon = !icon ? 'user' : icon;
+	const showIcon =
+		state.type === 'date' ? <IconButton onClick={handleClick} icon={defaultIcon} /> : icon && <Icon icon={icon} />;
 	const controlInput = password && <IconButton {...iconButtonAttrs} />;
-	const showIcon = icon && <Icon icon={icon} />;
 	const showLoading = loading && <Spinner color={props.colorSpinner ?? 'var(--primary)'} type="primary" active />;
 	const showRequiredWidthLabel = !label && required && <span className="pui-input__required-label">(*)</span>;
 	const error: JSX.IntrinsicElements['span'] = getError(state, hasError, input);
 
 	return (
 		<>
-			{showIcon}
 			<Label />
 			{showLoading}
 			{controlInput}
+			{showIcon}
 			{showRequiredWidthLabel}
 			{error}
 		</>

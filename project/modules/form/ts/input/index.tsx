@@ -4,6 +4,7 @@ import {listClassName} from './class-list';
 import type {IProps, PropsState} from './type';
 import {InputContext} from './context';
 import {RenderingProps} from './rendering-props';
+
 export /*bundle*/
 function Input(props: IProps): JSX.Element {
 	const input: MutableRefObject<HTMLInputElement> = useRef(null);
@@ -54,7 +55,6 @@ function Input(props: IProps): JSX.Element {
 	});
 
 	const listValue = {state, props, setState, input};
-
 	const isValue = typeof value !== 'undefined' ? value : state.value;
 	return (
 		<InputContext.Provider value={listValue}>
