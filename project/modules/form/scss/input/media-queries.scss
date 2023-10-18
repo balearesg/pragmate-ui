@@ -1,14 +1,14 @@
-.pragmate-element-input,
-.pragmate-element-textarea {
+.pui-element-input,
+pui-element-textarea {
 	@media screen and (min-width: 768px) {
-		.pragmate-element-input-error {
+		.pui-element-input-error {
 			font-size: 13px;
 			bottom: -1.5rem;
 		}
 	}
 
 	@media screen and (min-width: 1024px) and (max-height: 1200px) {
-		.pragmate-element-input-error {
+		.pui-element-input-error {
 			font-size: 12px;
 		}
 	}
@@ -16,7 +16,7 @@
 	@media screen and (max-width: 360px) {
 		font-size: 11px;
 
-		.pragmate-input__required-label {
+		.pui-input__required-label {
 			font-size: 16px;
 		}
 

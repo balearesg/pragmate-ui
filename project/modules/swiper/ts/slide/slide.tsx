@@ -1,5 +1,5 @@
-import * as React from 'react';
+import React from 'react';
 
-export function Slide({ children }): JSX.Element {
-	return <div className='swiper-slide'>{children}</div>;
+export function Slide({children}): JSX.Element {
+	return <div className="swiper-slide">{children}</div>;
 }

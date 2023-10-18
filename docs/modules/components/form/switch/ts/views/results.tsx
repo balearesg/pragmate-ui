@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Switch } from 'pragmate-ui/form';
+import React from 'react';
+import {Switch} from 'pragmate-ui/form';
 
 export function Results() {
 	const [isActive, setIsActive] = React.useState(false);

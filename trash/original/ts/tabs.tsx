@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { useState, PropsWithChildren } from 'react';
-import { useTabsContext } from './context';
-import { Tab } from './tab';
-import { routing } from '@beyond-js/kernel/routing';
-import { IProps, IProperties } from './types';
+import React from 'react';
+import {useState, PropsWithChildren} from 'react';
+import {useTabsContext} from './context';
+import {Tab} from './tab';
+import {routing} from '@beyond-js/kernel/routing';
+import {IProps, IProperties} from './types';
 export /*bundle*/ function Tabs(props: PropsWithChildren<IProps>): JSX.Element {
 	const [state, setState] = useState({
 		active: true,
 		valueSelected: 0,
 	});
 
-	const { tabNavigate: tabNavigateGo, selected } = useTabsContext();
+	const {tabNavigate: tabNavigateGo, selected} = useTabsContext();
 
 	const tabNavigate = (event: React.MouseEvent<HTMLDivElement>, callback) => {
 		const target = event.currentTarget;
@@ -28,8 +28,8 @@ export /*bundle*/ function Tabs(props: PropsWithChildren<IProps>): JSX.Element {
 		if (path) routing.replaceState({}, undefined, path);
 	};
 
-	const { children, nolink } = props;
-	const { active, valueSelected } = state;
+	const {children, nolink} = props;
+	const {active, valueSelected} = state;
 
 	const output = children.map((tab, index) => {
 		const properties: IProperties = {

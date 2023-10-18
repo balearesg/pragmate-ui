@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Link, Button } from 'pragmate-ui/components';
+import React from 'react';
+import {Link, Button} from 'pragmate-ui/components';
 
 export /*bundle*/
 function View() {

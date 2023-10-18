@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Code } from 'pragmate-ui/code';
-import { implementationsButton } from '../implementation';
+import React from 'react';
+import {Code} from 'pragmate-ui/code';
+import {implementationsButton} from '../implementation';
 export /*bundle*/
 function View() {
 	return (

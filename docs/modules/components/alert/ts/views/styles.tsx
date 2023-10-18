@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 export function Styles() {
 	// $alert-types: 'success', 'error', 'warning', 'info';
 	const types = ['success', 'error', 'warning', 'info'];

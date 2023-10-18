@@ -1,5 +1,5 @@
 @import 'keyframes';
-$toast-content-color: /* var(--text-color) */ #fff;
+$toast-content-color: var(--text-color);
 
 .pui-toast__container {
 	max-height: 100vh;

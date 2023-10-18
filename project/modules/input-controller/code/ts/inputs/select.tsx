@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 
 export function Select(props) {
-	const { options, label, events, ...othersSelectProps } = props;
+	const {options, label, events, ...othersSelectProps} = props;
 	const optionsElements =
 		options.length > 0 &&
 		options.map((opt: string) => (

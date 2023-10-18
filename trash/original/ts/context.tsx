@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { createContext, Context, useState, useEffect, useContext, PropsWithChildren } from 'react';
+import React from 'react';
+import {createContext, Context, useState, useEffect, useContext, PropsWithChildren} from 'react';
 interface props {
 	orientation?: string;
 	selected?: string;
@@ -9,7 +9,7 @@ interface props {
 const TabsContext: Context<any> = createContext({});
 
 export /*bundle*/ function TabsContextProvider(props: PropsWithChildren<props>): JSX.Element {
-	const { children, orientation, className, selected } = props;
+	const {children, orientation, className, selected} = props;
 	const [active, setSelected] = useState<string>(selected);
 
 	useEffect((): void => {

@@ -31,6 +31,15 @@ export const implementationIcon = `
 />
 `;
 
+export const implementationDate = `<Input type="date" label="Insert a text..." value={value} icon="user" />`;
+
+export const implementationFloating = `
+<Input 
+	type="text" 
+	label="Insert a text" 
+	floating 
+/>`;
+
 export const implementationDisabled = `
 <Input
 	type="text"
@@ -45,6 +54,12 @@ export const implementationPassword = `
 	label="Insert a text..."
 	password
 />
+`;
+
+export const implementationButton = `
+<Input type="text" name="name" label="Insert a text" onChange={handleChange} value={value}>
+	<Button variant="primary">Search</Button>
+</Input>
 `;
 
 export const implementationLoading = `
