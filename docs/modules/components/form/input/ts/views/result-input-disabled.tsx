@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {Input} from 'pragmate-ui/form';
 
 export function ResultInputDisabled(): JSX.Element {

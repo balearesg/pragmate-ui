@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { BreadCrumb } from 'pragmate-ui/breadcrumb';
+import React from 'react';
+import {BreadCrumb} from 'pragmate-ui/breadcrumb';
 export function Results() {
 	const listItems = [
 		[`/components/breadcrumb`, 'Home'],

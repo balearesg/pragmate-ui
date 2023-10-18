@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Input } from './inputs/default';
-import { Select } from './inputs/select';
-import { TextArea } from './inputs/textarea';
-import { CheckAndRadios } from './inputs/check-and-radios';
+import React from 'react';
+import {Input} from './inputs/default';
+import {Select} from './inputs/select';
+import {TextArea} from './inputs/textarea';
+import {CheckAndRadios} from './inputs/check-and-radios';
 
 class InputComponents {
 	select: React.FC = Select;

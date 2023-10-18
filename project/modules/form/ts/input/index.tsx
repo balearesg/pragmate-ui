@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {ChangeEvent, useRef, useState, MutableRefObject} from 'react';
 import {listClassName} from './class-list';
 import type {IProps, PropsState} from './type';

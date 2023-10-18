@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { createContext, isValidElement, useContext, Context, cloneElement, ReactNode, SyntheticEvent } from 'react';
-import { IconButton } from 'pragmate-ui/icons';
+import React from 'react';
+import {createContext, isValidElement, useContext, Context, cloneElement, ReactNode, SyntheticEvent} from 'react';
+import {IconButton} from 'pragmate-ui/icons';
 export const ModalContext: Context<any> = createContext({});
 export const useModalContext = () => useContext(ModalContext);
 
@@ -9,7 +9,7 @@ type props = {
 	close?: (e: SyntheticEvent<HTMLElement, Event>) => void;
 	dismiss?: boolean;
 };
-export const Children = ({ children, close, dismiss }: props): JSX.Element => {
+export const Children = ({children, close, dismiss}: props): JSX.Element => {
 	const output = [];
 	if (dismiss !== false) {
 		output.push(

@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { RippleEffect } from 'pragmate-ui/ripple';
+import React from 'react';
+import {RippleEffect} from 'pragmate-ui/ripple';
 import tippy from 'tippy.js';
 
 export /*bundle*/ function Chip(props) {
-	const { item, type, children, className, title } = props;
-	const properties = { ...props };
+	const {item, type, children, className, title} = props;
+	const properties = {...props};
 	const ref = React.useRef<HTMLSpanElement>(null);
 
 	['children', 'type', 'className'].forEach(key => delete properties[key]);

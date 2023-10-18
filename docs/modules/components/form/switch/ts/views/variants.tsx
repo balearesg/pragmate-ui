@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Switch } from 'pragmate-ui/form';
+import React from 'react';
+import {Switch} from 'pragmate-ui/form';
 
 export function VariantsSwitch() {
 	const [switchStates, setSwitchStates] = React.useState({
@@ -14,7 +14,7 @@ export function VariantsSwitch() {
 	const switches = ['primary', 'secondary', 'tertiary', 'success', 'warning', 'danger', 'info'];
 
 	function handleChange(event) {
-		const { name } = event.target;
+		const {name} = event.target;
 		setSwitchStates(prevState => ({
 			...prevState,
 			[name]: !prevState[name],

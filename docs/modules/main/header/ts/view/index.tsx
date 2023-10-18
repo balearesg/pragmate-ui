@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { routing } from '@beyond-js/kernel/routing';
-import { Button } from 'pragmate-ui/components';
-import { Code } from 'pragmate-ui/code';
+import React from 'react';
+import {routing} from '@beyond-js/kernel/routing';
+import {Button} from 'pragmate-ui/components';
+import {Code} from 'pragmate-ui/code';
 
 export /* bundle */ function Header() {
 	function goDocs() {
@@ -9,8 +9,8 @@ export /* bundle */ function Header() {
 	}
 
 	return (
-		<header className='home__header'>
-			<div className='home__header-main-content'>
+		<header className="home__header">
+			<div className="home__header-main-content">
 				<h1>Reusable, Flexible, Essential</h1>
 				<p>
 					Save time for you and your team by using pre-built, modular, and essential{' '}
@@ -18,9 +18,9 @@ export /* bundle */ function Header() {
 				</p>
 			</div>
 
-			<div className='started'>
+			<div className="started">
 				<Code>{`npm i @pragmate/ui `}</Code>
-				<Button variant='secondary' bordered onClick={goDocs}>
+				<Button variant="secondary" bordered onClick={goDocs}>
 					Get Started
 				</Button>
 			</div>

@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { SwiperSlider } from 'pragmate-ui/swiper-component';
-import { v4 as uuid } from 'uuid';
-import { CardOpinion } from './card';
+import React from 'react';
+import {SwiperSlider} from 'pragmate-ui/swiper-component';
+import {v4 as uuid} from 'uuid';
+import {CardOpinion} from './card';
 
 interface IOpinion {
 	name: string;
@@ -21,8 +21,8 @@ export /* bundle */ function Opinions(props: IProps) {
 	});
 
 	return (
-		<section className='container__opinion'>
-			<SwiperSlider slidesPerView='auto' spaceBetween={0} pagination navigation className='swiper-implementation'>
+		<section className="container__opinion">
+			<SwiperSlider slidesPerView="auto" spaceBetween={0} pagination navigation className="swiper-implementation">
 				{items}
 			</SwiperSlider>
 		</section>

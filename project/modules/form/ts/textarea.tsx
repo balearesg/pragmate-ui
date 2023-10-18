@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {TextareaHTMLAttributes, ChangeEvent, ReactNode, HTMLAttributes, useRef, useState} from 'react';
 
 interface props extends TextareaHTMLAttributes<HTMLTextAreaElement> {

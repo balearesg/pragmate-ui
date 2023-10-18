@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { IconButton } from 'pragmate-ui/icons';
-import { Toasts, toast } from 'pragmate-ui/toast';
+import React from 'react';
+import {IconButton} from 'pragmate-ui/icons';
+import {Toasts, toast} from 'pragmate-ui/toast';
 
-export function Clipboard({ text, message }) {
+export function Clipboard({text, message}) {
 	const ref = React.useRef(null);
 	const polyfill = text => {
 		const textArea = document.createElement('textarea');

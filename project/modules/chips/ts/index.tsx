@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { Chip } from './badge';
+import React from 'react';
+import {Chip} from './badge';
 export /*bundle*/ function Chips(props) {
-	const { items, children } = props;
+	const {items, children} = props;
 
-	const properties = { ...props };
+	const properties = {...props};
 	['items', 'children', 'type'].forEach(key => delete properties[key]); // ['items', 'children', 'type'
 
 	const cls = `${props.type ? `pui-chip__container--${props.type}` : ''}`;
