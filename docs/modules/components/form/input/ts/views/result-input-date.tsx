@@ -1,7 +1,7 @@
 import React from 'react';
 import {Input} from 'pragmate-ui/form';
 
-export function ResultsFloating() {
+export function ResultDate(): JSX.Element {
 	const [value, setValue] = React.useState('');
 
 	function handleChange(event) {
@@ -16,7 +16,7 @@ export function ResultsFloating() {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<Input type="text" name="name" floating label="Insert a text" onChange={handleChange} value={value} />
+			<Input type="date" label="Insert a text..." onChange={handleChange} value={value} icon="user" />
 		</form>
 	);
 }

@@ -31,6 +31,8 @@ export const implementationIcon = `
 />
 `;
 
+export const implementationDate = `<Input type="date" label="Insert a text..." value={value} icon="user" />`;
+
 export const implementationFloating = `
 <Input 
 	type="text" 

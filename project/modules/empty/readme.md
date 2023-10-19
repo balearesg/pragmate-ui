@@ -10,12 +10,12 @@ se muestra dentro de la sección vacía.
 A continuación, se muestra cómo puedes utilizar el componente `Empty` en tu aplicación:
 
 ```jsx
-import * as React from 'react';
-import { Empty } from 'pragmate-ui';
+import React from 'react';
+import {Empty} from 'pragmate-ui';
 
 const MyComponent: React.FC = () => {
 	return (
-		<div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+		<div style={{display: 'flex', flexDirection: 'column', height: '100vh'}}>
 			{/* Other content */}
 			<Empty text="No hay resultados" icon="warning" />
 			{/* More content */}
@@ -46,7 +46,7 @@ de que el contenedor que contiene el componente tenga un estilo de flexbox. Aqu�
 hacer:
 
 ```jsx
-<div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+<div style={{display: 'flex', flexDirection: 'column', height: '100vh'}}>
 	{/* ... */}
 	<Empty text="No hay resultados" icon="warning" />
 	{/* ... */}

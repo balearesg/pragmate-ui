@@ -1,5 +1,5 @@
-.pragmate-element-input,
-.pragmate-element-textarea {
+.pui-element-input,
+pui-element-textarea {
 	input,
 	textarea {
 		padding: 0.5rem;
@@ -43,8 +43,7 @@
 			text-transform: uppercase;
 		}
 	}
-
-	& .pragmate-input__required-label {
+	& .pui-input__required-label {
 		color: var(--error);
 	}
 

@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Spinner } from 'pragmate-ui/spinner';
-import { InlineCode } from 'pragmate-ui/code';
+import React from 'react';
+import {Spinner} from 'pragmate-ui/spinner';
+import {InlineCode} from 'pragmate-ui/code';
 
 interface ITypeArrays {
 	bgs: string[];
@@ -8,7 +8,7 @@ interface ITypeArrays {
 	types: string[];
 }
 
-export function SpinnerListShow({ listName }: { listName: string | 'bgs' | 'sizes' | 'types' }): JSX.Element {
+export function SpinnerListShow({listName}: {listName: string | 'bgs' | 'sizes' | 'types'}): JSX.Element {
 	const typeArrays: ITypeArrays = {
 		bgs: ['on-primary', 'on-secondary'],
 		types: ['primary', 'secondary', 'tertiary'],

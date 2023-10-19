@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Code } from 'pragmate-ui/code';
+import React from 'react';
+import {Code} from 'pragmate-ui/code';
 import Content from './content.mdx';
 
 export /*bundle*/

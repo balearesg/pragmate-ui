@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Docs from './es/index.mdx';
 import MaterialDesign from './es/material-design.mdx';
 export /*bundle*/

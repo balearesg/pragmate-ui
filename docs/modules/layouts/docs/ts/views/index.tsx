@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Sidebar } from '../components/sidebar';
-import { Navbar } from 'pragmate-ui-docs/navbar';
-import { Footer } from 'pragmate-ui-docs/footer';
+import React from 'react';
+import {Sidebar} from '../components/sidebar';
+import {Navbar} from 'pragmate-ui-docs/navbar';
+import {Footer} from 'pragmate-ui-docs/footer';
 
 declare global {
 	namespace JSX {

@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { Icon } from 'pragmate-ui/icons';
+import React from 'react';
+import {Icon} from 'pragmate-ui/icons';
 
-export function MenuHeader({ icon, title }) {
+export function MenuHeader({icon, title}) {
 	return (
 		<header>
-			<h3 className='aside__h3-title'>
+			<h3 className="aside__h3-title">
 				<Icon icon={icon} /> {title}
 			</h3>
 		</header>

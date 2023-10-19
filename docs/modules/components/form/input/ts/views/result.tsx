@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {Input} from 'pragmate-ui/form';
 import {Button} from 'pragmate-ui/components';
 export function ResultsButton() {

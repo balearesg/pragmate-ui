@@ -1,29 +1,29 @@
-import * as React from 'react';
-import { IconButton } from 'pragmate-ui/icons';
-import { useSwiperContext } from '../context';
+import React from 'react';
+import {IconButton} from 'pragmate-ui/icons';
+import {useSwiperContext} from '../context';
 export function SwiperNavigation() {
 	const {
 		controller,
 		navigation,
-		refs: { prev, next },
+		refs: {prev, next},
 	} = useSwiperContext();
 	if (!navigation) return null;
 	return (
 		<>
 			<IconButton
 				ref={prev}
-				icon='left'
-				variant='primary'
-				className='swiper__navigation-btn swiper-button-prev'
+				icon="left"
+				variant="primary"
+				className="swiper__navigation-btn swiper-button-prev"
 				onClick={controller?.prevSlide}
 			/>
 
 			<IconButton
-				icon='right'
+				icon="right"
 				ref={next}
-				variant='primary'
+				variant="primary"
 				onClick={controller?.nextSlide}
-				className='swiper__navigation-btn  swiper-button-next'
+				className="swiper__navigation-btn  swiper-button-next"
 			/>
 		</>
 	);
