@@ -8,7 +8,7 @@ interface IProps {
 	className?: string;
 }
 export /*bundle*/
-function Empty(props: IProps): JSX.Element {
+function Empty(props: any) {
 	const text = props.text ? props.text : 'No hay registros';
 	const cls = `${props.className ?? ''} pui-empty-section`;
 
