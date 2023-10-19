@@ -4,7 +4,6 @@ import { TplManager } from 'pragmate-ui/template/manager';
 
 export function SurfacesPanel() {
 	const surfaces = Object.keys(TplManager.root).filter(name => name.includes('surface'));
-	console.log(0.1, surfaces);
 	return (
 		<div>
 			<h3>Surfaces</h3>

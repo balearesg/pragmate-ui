@@ -1,6 +1,6 @@
 {
 	"name": "pragmate-ui-docs",
-	"version": "0.0.1",
+	"version": "0.0.37",
 	"title": "Pragmate UI",
 	"description": "Official pragmate ui documentation with description of the components and uses of these",
 	"license": "ISC",
@@ -27,7 +27,7 @@
 				"environment": "development",
 				"platform": "web",
 				"ports": {
-					"bundles": 6530
+					"bundles": 6500
 				}
 			}
 		]
@@ -48,7 +48,7 @@
 		"prismjs": "^1.27.0",
 		"react-select": "^5.7.3",
 		"socket.io-client": "^4.5.4",
-		"swiper": "^8.4.5",
+		"swiper": "^10.3.0",
 		"tippy.js": "^6.3.7"
 	},
 	"devDependencies": {

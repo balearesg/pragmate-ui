@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { IItem } from './interfaces/IComponent';
-import { ItemMenu } from './items';
+import React from 'react';
+import {IItem} from './interfaces/IComponent';
+import {ItemMenu} from './items';
 
-export function SectionMenu({ children, items, tabIndex }) {
+export function SectionMenu({children, items, tabIndex}) {
 	const output = items.map((component: IItem) => {
 		const [label, path] = component;
 		return <ItemMenu key={path} tabIndex={tabIndex++} component={component} />;

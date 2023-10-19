@@ -1,0 +1,17 @@
+{
+	"name": "pui/template/palette",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "pui-template-view-widget"
+		}
+	}
+}

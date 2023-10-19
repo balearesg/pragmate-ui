@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palette } from './palette';
+
 import { Input } from 'pragmate-ui/form';
 import { Button } from 'pragmate-ui/components';
 import { Palettes } from './palettes';
@@ -7,7 +7,7 @@ import { useBinder } from '@beyond-js/react-18-widgets/hooks';
 import { ColorControl } from './ColorControl';
 import { AllCustomProperties } from './AllCustomProperties';
 import type { StoreManager } from '../store';
-import { ColorPalette } from './ColorPalette';
+
 export /*bundle*/
 function View({ store }: { store: StoreManager }) {
 	const [colors, setColors] = React.useState(store.tones);

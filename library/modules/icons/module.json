@@ -1,0 +1,15 @@
+{
+	"name": "icons",
+	"platforms": ["web", "ios", "android"],
+	"code": {
+		"name": "icon",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		}
+	}
+}

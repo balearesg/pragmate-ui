@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { TplManager } from 'pragmate-ui/template/manager';
 import { Tooltip } from 'pragmate-ui/tooltip';
 import type { StoreManager } from '../store';

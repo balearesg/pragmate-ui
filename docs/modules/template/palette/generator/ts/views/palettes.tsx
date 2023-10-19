@@ -1,6 +1,5 @@
-import * as React from 'react';
+import React from 'react';
 import { Palette } from './palette';
-import { CustomProperties } from './CustomProperties';
 
 export function Palettes({ store }) {
 	const colors = Object.keys(store.tones);

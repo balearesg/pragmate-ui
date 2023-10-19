@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { ProgressBar } from 'pragmate-ui/progress-bar';
+import React from 'react';
+import {ProgressBar} from 'pragmate-ui/progress-bar';
 
 export function Result() {
 	const [currentValue, setCurrentValue] = React.useState(0);
@@ -11,7 +11,7 @@ export function Result() {
 			} else {
 				setCurrentValue(currentValue + 1);
 			}
-		}, 1000);
+		}, 100);
 
 		return () => clearInterval(interval);
 	}, [currentValue]);

@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Spinner } from 'pragmate-ui/spinner';
-import { InlineCode } from 'pragmate-ui/code';
+import React from 'react';
+import {Spinner} from 'pragmate-ui/spinner';
+import {InlineCode} from 'pragmate-ui/code';
 
 interface ITypeArrays {
 	bgs: string[];
@@ -8,7 +8,7 @@ interface ITypeArrays {
 	types: string[];
 }
 
-export function SpinnerListShow({ listName }: { listName: string | 'bgs' | 'sizes' | 'types' }): JSX.Element {
+export function SpinnerListShow({listName}: {listName: string | 'bgs' | 'sizes' | 'types'}): JSX.Element {
 	const typeArrays: ITypeArrays = {
 		bgs: ['on-primary', 'on-secondary'],
 		types: ['primary', 'secondary', 'tertiary'],
@@ -29,22 +29,22 @@ export function SpinnerListShow({ listName }: { listName: string | 'bgs' | 'size
 
 	const listSizes = typeArrays.sizes.map((size: string, index) => {
 		return (
-			<div className="content__spinners" key={index}>
-				<strong>size = {`" ${size} "`}</strong>
+			<li className="content__spinners" key={index}>
+				<strong> {size}</strong>
 				<Spinner type="primary" size={getSize(size)} active />
-			</div>
+			</li>
 		);
 	});
 
 	const defaultList = typeArrays[listName].map((type, index) => {
 		return (
-			<div className="content__spinners" key={index}>
-				<strong>type = {`" ${type} "`}</strong>
+			<li className="content__spinners" key={index}>
+				<strong>{type}</strong>
 				<Spinner type={type} active />
-			</div>
+			</li>
 		);
 	});
 
 	const control = listName === 'sizes' ? listSizes : defaultList;
-	return <div className="content">{control}</div>;
+	return <ul className="content">{control}</ul>;
 }

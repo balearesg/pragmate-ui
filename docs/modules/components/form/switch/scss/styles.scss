@@ -1,0 +1,10 @@
+.content {
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+
+    &__switch {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

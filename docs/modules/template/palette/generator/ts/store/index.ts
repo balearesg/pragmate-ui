@@ -1,5 +1,4 @@
 import type { IWidgetStore } from '@beyond-js/widgets/controller';
-import { TplManager, hslToHex } from 'pragmate-ui/template/manager';
 import { generatePalette } from './calculator';
 import { ReactiveModel } from '@beyond-js/reactive/model';
 

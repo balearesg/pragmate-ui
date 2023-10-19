@@ -1,5 +1,5 @@
 export const implementation = `<Alert type={type}>
-    <h3 className="alert__title-span">{ children }</h3>
+    <h3 className="alert__title-span">Esto es una alerta comun de tipo: success</h3>
 </Alert>
 `;
 
@@ -8,7 +8,7 @@ export const implementationSuccess = `
     message="this is a success message"
     title="title success"
     mode="success"
-    show={true}   
+    show   
     isClose={true}
 />
 `;
@@ -18,7 +18,7 @@ export const implementationError = `
     message="this is a error message"
     title="title error"
     mode="error"
-    show={true}
+    show
     isClose={true}   
 />
 `;
@@ -28,7 +28,7 @@ export const implementationWaring = `
     message="this is a success warning"
     title="title warning"
     mode="warning"
-    show={true}   
+    show
     isClose={false}
 />
 `;
@@ -38,7 +38,7 @@ export const implementationInfo = `
     message="this is a info message"
     title="title info"
     mode="info"
-    show={true} 
+    show 
     isClose={true}  
 />
 `;

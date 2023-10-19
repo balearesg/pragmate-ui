@@ -9,6 +9,8 @@ version of your README.md:
 [![Build Status](https://travis-ci.org/baleraresg/pragmate-ui.svg?branch=master)](https://travis-ci.org/your-organization/pragmate-ui)
 [![License](https://img.shields.io/npm/l/pragmate-ui.svg)](./LICENSE)
 
+Current Version: 0.0.3
+
 ## Table of Contents
 
 -   [About](#about)

@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Link } from 'pragmate-ui/components';
-import { ThemeSwitcher } from 'pragmate-ui/theme-switcher';
+import React from 'react';
+import {Link} from 'pragmate-ui/components';
+import {ThemeSwitcher} from 'pragmate-ui/theme-switcher';
 
 export /* bundle */ function Navbar() {
 	const [scrollPosition, setScrollPosition] = React.useState(0);

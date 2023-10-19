@@ -1,38 +1,44 @@
-import { Code } from "pragmate-ui/code";
-import { Example } from "./example";
-import { implementation } from "./implementation";
+import { Code } from 'pragmate-ui/code';
+import { Example } from './example';
+import { implementation } from './implementation';
 
 # Alert
 
-El componente **Alert** muestra un mensaje de alerta en tu aplicación. Es muy útil ya que los alerts se utilizan para mantener a los usuarios informados sobre cambios importantes o situaciones críticas en una aplicación web. Justo tenemos tres tipos de alert: Success, Error y Warning.
+El componente `Alert` está diseñado para mostrar mensajes de alerta en tu aplicación. Es un elemento de interfaz de
+usuario crucial para informar a los usuarios acerca de eventos o cambios críticos. Este componente soporta cuatro tipos
+de alertas: `Success`, `Error`, `Warning` e `Info`.
 
-## Import :
+## Implementacion
+
+Para incluir el componente `Alert` en tu proyecto, puedes usar la siguiente declaración de importación:
 
 <Code>{`import { Alert } from 'pragmate-ui/alert';`}</Code>
 
-### Component :
+## Uso
+
+Para utilizar el componente Alert, debes pasar el atributo `type` para especificar el estilo de la alerta y children
+para mostrar el contenido. A continuación se muestra la implementación básica:
 
 <Code>{implementation}</Code>
 
-El Alerts recibe un atributo **type** y un **children** que le podemos pasar, de esta mantenera podemos manejar el contenido de manera dinamica
+# Propiedades
 
-### types :
+## Propiedades Obligatorias
 
-- Success
+-   `type`: Especifica el tipo de alerta. Puede ser uno de los siguientes valores:
 
-- Error
+        - `Success`
+        - `Error`
+        - `Warning`
+        - `Info`
 
-- Warning
+-   `children`: Contenido que se mostrará dentro de la alerta.
 
-- Info
+## Propiedades Opcionales
 
-### props optionals :
-
-A los alerts podemos pasarle opcionalmente las propieades :
-
-- Message : (string) manejo de mensajes directa.
-- closable : (boolean) por si queremos agregar un boton de quitar.
-- onClose : (function) function para actualizar si queremos desaparecer el alert.
-- icon : (boolean) opcion para agregar iconos correspondientes a cada alerts.
+-   `message`: (string) Permite el manejo de mensajes de forma directa.
+-   `closable`: (boolean) Determina si la alerta puede cerrarse con un botón.
+-   `onClose`: (función) Función que se ejecutará cuando la alerta se cierre.
+-   `icon`: (boolean) Opción para agregar íconos correspondientes a cada tipo de alerta.
 
 <Example />

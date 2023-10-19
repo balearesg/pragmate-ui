@@ -24,7 +24,7 @@ export const menuItems = [
 	FormItems,
 	[
 		'Modals',
-		'modals',
+		'Modals',
 		[
 			['Alert', 'alert-modal'],
 			['Confirm', 'confirm-modal'],
@@ -42,7 +42,7 @@ export const menuItems = [
 	],
 	[
 		'Menu',
-		'menu',
+		'Menu',
 		[
 			['Menu', 'menu'],
 			['DropdownBottomMenu', 'dropdown-bottom-menu'],
