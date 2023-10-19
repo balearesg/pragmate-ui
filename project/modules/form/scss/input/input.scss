@@ -1,5 +1,5 @@
-.pragmate-element-input,
-.pragmate-element-textarea {
+.pui-element-input,
+.pui-element-textarea {
 	width: 100%;
 	position: relative;
 	border: 1.5px solid var(--primary);
@@ -7,13 +7,19 @@
 	margin: 1rem 0;
 	transition: all 0.4s ease-in-out;
 	padding: 0 8px;
-
+	
+	input[type="date"]::-webkit-calendar-picker-indicator {
+		position: absolute;
+		right: .9rem;
+		background: none;
+		z-index: 40;
+	}
 	.pragmate-element-spinner {
 		width: 40px;
 		height: 40px;
 	}
 
-	.pragmate-element-input-error {
+	.pui-element-input-error {
 		position: absolute;
 		bottom: -1.2rem;
 		left: 0;
@@ -46,7 +52,6 @@
 
 		.pragmate-icon {
 			z-index: 10;
-			//position: absolute;
 		}
 
 		@media screen and (max-width: 450px) {
@@ -69,6 +74,11 @@
 		}
 	}
 
+	button.pragmate-icon-button {
+		position: absolute;
+		right: .5rem;
+		z-index: 17;
+	}
 	&.error {
 		border-color: var(--border-error);
 	}

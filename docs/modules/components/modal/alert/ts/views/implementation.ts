@@ -1,5 +1,5 @@
 export const implementation = `
-import * as React from 'react';
+import React from 'react';
 import { AlertModal } from 'pragmate-ui/modal';
 
 export function MyModal({show, setShow}) {

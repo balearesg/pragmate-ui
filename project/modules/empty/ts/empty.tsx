@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Icon } from 'pragmate-ui/icons';
+import React from 'react';
+import {Icon} from 'pragmate-ui/icons';
 interface IProps {
 	text?: string;
 	icon?: string;

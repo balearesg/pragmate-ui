@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { routing } from '@beyond-js/kernel/routing';
-import { useBinder } from '@beyond-js/react-18-widgets/hooks';
-import { IComponent, IItem } from '../interfaces/IComponent';
+import React from 'react';
+import {routing} from '@beyond-js/kernel/routing';
+import {useBinder} from '@beyond-js/react-18-widgets/hooks';
+import {IComponent, IItem} from '../interfaces/IComponent';
 
 interface Props {
 	component: IItem;
 	tabIndex: number;
 }
 
-export function SidebarItem({ component, tabIndex }: Props) {
+export function SidebarItem({component, tabIndex}: Props) {
 	const [currentRouting, setCurrentRouting] = React.useState(routing.uri.pathname);
 	const [name, path] = component;
 	const location = `/components/${path}`;

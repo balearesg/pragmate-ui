@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Image } from 'pragmate-ui/image';
+import React from 'react';
+import {Image} from 'pragmate-ui/image';
 export function CardOpinion(props) {
-	const { name, src, profession, comment, alt } = props;
+	const {name, src, profession, comment, alt} = props;
 
 	return (
 		<div className="container__card-opinions">

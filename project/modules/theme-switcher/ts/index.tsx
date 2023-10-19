@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Switch } from 'pragmate-ui/form';
-import { Icon } from 'pragmate-ui/icons';
+import React from 'react';
+import {Switch} from 'pragmate-ui/form';
+import {Icon} from 'pragmate-ui/icons';
 
 export /*bundle*/ function ThemeSwitcher(): JSX.Element {
 	const theme = globalThis?.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -9,13 +9,12 @@ export /*bundle*/ function ThemeSwitcher(): JSX.Element {
 	const userTheme: boolean = themeStorage ? themeStorage === 'dark' : defaultTheme === 'dark';
 	const [isDark, setIsDark] = React.useState<boolean>(userTheme);
 
-	function handleChange({ target }): void {
+	function handleChange({target}): void {
 		const container = document.querySelector('html');
 		const theme = isDark ? 'light' : 'dark';
 		container.setAttribute('data-beyond-mode', theme);
 		localStorage.setItem('theme', theme);
 		setIsDark(target.checked);
-		console.log(target.checked);
 	}
 
 	React.useEffect(() => {

@@ -1,27 +1,27 @@
-import * as React from 'react';
-import { Button } from 'pragmate-ui/components';
-import { Modal } from './modal';
+import React from 'react';
+import {Button} from 'pragmate-ui/components';
+import {Modal} from './modal';
 
 export /*bundle*/ const ConfirmModal = (properties): JSX.Element => {
 	type state = {
 		fetching?: boolean;
 	};
-	const [state, setState] = React.useState<state>({ fetching: false });
+	const [state, setState] = React.useState<state>({fetching: false});
 
 	const process = async (event): Promise<void> => {
 		event.stopPropagation();
-		setState({ fetching: true });
-		const { onConfirm, onClose } = properties;
+		setState({fetching: true});
+		const {onConfirm, onClose} = properties;
 		if (!onConfirm) {
 			console.warn('there is no confirm funciton defined');
-			setState({ fetching: false });
+			setState({fetching: false});
 			return;
 		}
 		await onConfirm();
-		setState({ fetching: false });
+		setState({fetching: false});
 	};
 
-	const { text, title, btn, onCancel, centered, onConfirm, btnConfirm, btnCancel } = properties;
+	const {text, title, btn, onCancel, centered, onConfirm, btnConfirm, btnCancel} = properties;
 
 	let cls: string = `pragmate-confirm-dialog${centered ? ' pragmate-confirm-dialog-centered' : ''}`;
 	if (properties.className) cls += ` ${properties.className}`;
@@ -47,25 +47,25 @@ export /*bundle*/ const ConfirmModal = (properties): JSX.Element => {
 		clsCancel = btnCancel.className ? btnCancel.className : clsCancel;
 	}
 
-	const disabled: { disabled?: boolean } = {};
+	const disabled: {disabled?: boolean} = {};
 	if (state.fetching) disabled.disabled = true;
 
 	return (
 		<Modal show className={cls} onClose={onCancel}>
-			<div className='confirm-dialog-content'>
+			<div className="confirm-dialog-content">
 				{title && <h3>{title}</h3>}
 				{text && <div>{text}</div>}
 				{properties.children}
 			</div>
 
-			<div className='actions'>
-				<Button label={cancelLabel} {...disabled} onClick={onCancel} variant='warning' bordered={true} />
+			<div className="actions">
+				<Button label={cancelLabel} {...disabled} onClick={onCancel} variant="warning" bordered={true} />
 				<Button
 					className={clsConfirm}
 					label={confirmLabel}
 					{...disabled}
 					onClick={process}
-					variant='success'
+					variant="success"
 					bordered
 				/>
 			</div>

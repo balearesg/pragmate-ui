@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Button } from 'pragmate-ui/components';
+import React from 'react';
+import {Button} from 'pragmate-ui/components';
 
 export function ContentVariants() {
 	const buttons = ['primary', 'secondary', 'tertiary', 'success', 'warning', 'danger', 'info', 'link'];

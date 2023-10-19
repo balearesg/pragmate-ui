@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { ScrollContainer } from 'pragmate-ui/perfect-scrollbar';
+import React from 'react';
+import {ScrollContainer} from 'pragmate-ui/perfect-scrollbar';
 
 export function Results() {
 	const text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quis veniam.';

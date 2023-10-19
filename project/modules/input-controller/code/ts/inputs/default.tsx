@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 
 export function Input(props) {
-	const { label, events, ...othersSelectProps } = props;
+	const {label, events, ...othersSelectProps} = props;
 	const id = othersSelectProps?.id ?? othersSelectProps.name;
 
 	return (
