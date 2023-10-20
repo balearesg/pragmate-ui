@@ -1,11 +1,11 @@
-import {Button} from 'pragmate-ui/components';
-import {Item} from './item';
-import {Code} from 'pragmate-ui/code';
-import {Link} from 'pragmate-ui/components';
-import {getTpl} from './get-tpl';
-import {ContentVariants} from './content-variants';
-import {ResultsBorder} from './button-border';
-import {implementationTooltips} from './tooltips-implementation';
+import { Button } from 'pragmate-ui/components';
+import { Item } from './item';
+import { Code } from 'pragmate-ui/code';
+import { Link } from 'pragmate-ui/components';
+import { getTpl } from './get-tpl';
+import { ContentVariants } from './content-variants';
+import { ResultsBorder } from './button-border';
+import { implementationTooltips } from './tooltips-implementation';
 
 # Buttons
 
@@ -22,7 +22,7 @@ específicas, como enviar formularios, confirmar selecciones o desencadenar even
 
 ### Implementations :
 
-<Code>{getTpl({variant: 'primary'})}</Code>
+<Code>{getTpl({ variant: 'primary' })}</Code>
 
 ### Variantes outline :
 
@@ -32,28 +32,28 @@ Se puede utilizar cada variante con borders pasando el atributo booleando `borde
 
 ### Implementations :
 
-<Code>{getTpl({variant: 'primary', bordered: true})}</Code>
+<Code>{getTpl({ variant: 'primary', bordered: true })}</Code>
 
 ### Iconos :
 
 Para agregar iconos al botón, agrega el atributo icon y el icono que desees utilizar. Puedes ver la lista de iconos
 disponibles en :
 
-<Link href="/components/icons-list">Icons</Link>
+<Link href='/components/icons-list'>Icons</Link>
 
 ### Implementation :
 
-<Code>{getTpl({variant: 'primary', icon: 'add'})}</Code>
+<Code>{getTpl({ variant: 'primary', icon: 'add' })}</Code>
 
 ### Result :
 
-<Button icon="add" variant="primary">
+<Button icon='add' variant='primary'>
 	Primary button
 </Button>
 
 Utiliza la clase ".icon--right" si deseas agregar el icono a la derecha
 
-<Button icon="add" variant="primary" className="icon--right">
+<Button icon='add' variant='primary' className='icon--right'>
 	Primary button
 </Button>
 
@@ -71,7 +71,7 @@ Podemos agregar funciones Tooltips a los **Buttons** agregando una propieadad _t
 
 <Code>{implementationTooltips}</Code>
 
-<Button title="button primary" variant="primary">
+<Button title='button primary' variant='primary'>
 	Primary button
 </Button>
 
@@ -88,6 +88,6 @@ componente.
 	Primary button
 </Button>`}</Code>
 
-<Button title="button block" variant="primary" block>
+<Button title='button block' variant='primary' block>
 	Primary button
 </Button>
