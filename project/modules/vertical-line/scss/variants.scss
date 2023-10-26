@@ -1,0 +1,14 @@
+$vertical-variants: 'primary', 'secondary', 'tertiary', 'success', 'danger', 'warning', 'info';
+
+.pui__vertical-line {
+    .container-timeline {
+            .timeline-event {
+            @each $type in $vertical-variants {
+                .#{$type} {
+                    background-color: var(--#{$type});
+                }
+            }
+
+        }
+    }
+}
