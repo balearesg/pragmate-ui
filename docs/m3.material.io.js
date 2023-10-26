@@ -2,9 +2,6 @@
  * webscrapping of  https://m3.material.io/styles/color/the-color-system/tokens
  */
 
-
-
-
 //get general variables of light or dark scheme. It requires find the selector  with the class "color-scheme tokens"
 
 [...temp2.children].forEach(item => {
@@ -15,22 +12,16 @@
 	});
 });
 
-
-
-
-
 // get tones of palette
 
 function setVariables(data, name) {
 	return data.reduce((acc, item) => {
 		color = item.title.split('-')[1].trim();
 		level = item.innerText;
-		console.log(color);
+
 		return `${acc}--${name}-${level}: ${color};\n`;
-		
 	}, '\n');
 }
-
 customProperties = setVariables([...temp1.children], 'primary');
 
 //temp1 = table colors

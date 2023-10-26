@@ -5,7 +5,7 @@ a.btn {
 }
 
 a {
-	&:hover {
+	&:not(&.unstyled):hover {
 		color: var(--primary);
 	}
 }
