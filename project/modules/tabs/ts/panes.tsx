@@ -1,10 +1,10 @@
 import React from 'react';
-import {useTabsContext} from './context';
+import { useTabsContext } from './context';
 
-export /*bundle*/ function Panes({children}) {
-	const {activeTab} = useTabsContext();
+export /*bundle*/ function Panes({ children, className }) {
+	const { activeTab } = useTabsContext();
 	const childrenArray = React.Children.toArray(children);
 	const Control = childrenArray[activeTab] as React.ReactElement;
-
-	return <section className="tab-content">{Control}</section>;
+	const cls = `tab-content ${className ? ` ${className}` : ''}`;
+	return <section className={cls}>{Control}</section>;
 }
