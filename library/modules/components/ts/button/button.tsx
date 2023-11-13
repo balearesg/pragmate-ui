@@ -68,7 +68,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 		});
 	}
 
-	let cls = `pragmate-button btn-${variant}`;
+	let cls = `pui-button btn-${variant}`;
 	cls += className ? ` ${className}` : '';
 	cls += bordered ? ' outline' : '';
 	cls += icon ? ' has-icon' : '';
