@@ -1,12 +1,8 @@
 {
 	"name": "copyable-implementation",
-	 "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
+	"platforms": ["web", "ios", "android"],
 	"code": {
-		"sass": {
+		"scss": {
 			"path": "/code/sass",
 			"files": ["*"]
 		},
