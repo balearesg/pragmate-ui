@@ -18,41 +18,12 @@
 			height: 100%;
 		}
 	}
-	&.pui-image-error {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		.content-error {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			z-index: 2;
-			.pragmate-icon-button {
-				width: 50px;
-				height: 50px;
-				z-index: 1000;
-				.pragmate-icon {
-					width: 35px;
-					height: 35px;
-					position: absolute;
-					top: 0;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					margin: auto;
-				}
-			}
-			span {
-				font-size: 12px;
-				display: block;
-				text-align: center;
-			}
-		}
-	}
-	&.cover-image img {
+
+	img {
 		width: 100%;
 		height: 100%;
+	}
+	&.cover-image img {
 		-o-object-fit: cover;
 		object-fit: cover;
 	}
