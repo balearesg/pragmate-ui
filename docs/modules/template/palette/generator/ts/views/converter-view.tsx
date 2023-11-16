@@ -1,7 +1,8 @@
 import React from 'react';
 import { hexToRgb1, rgbToHex, hexToHsl, hexToRgb, hslToHex } from 'pragmate-ui-docs/template/manager';
+import { ColorScaleGenerator, ScaleGenerator } from '../store/color-scheme';
 console.log(0.1, hexToRgb1, rgbToHex, hexToHsl, hexToRgb, hslToHex, rgbToHex);
-export function Box({ color, to }) {
+export function Box({ color, to }: { color: string; to?: 'hsl' | 'rgb' | 'rgb1' }) {
 	const types = {
 		hsl: () => {
 			const tone = hexToHsl(color);
@@ -16,7 +17,7 @@ export function Box({ color, to }) {
 			return `rgb(${tone.r}, ${tone.g}, ${tone.b})`;
 		},
 	};
-	console.log(10, to);
+
 	const toUse = ![undefined].includes(to) ? types[to](color) : color;
 	return (
 		<div
@@ -33,10 +34,11 @@ export function ConverterView() {
 	return (
 		<div className='page__container'>
 			<h1>Converter view</h1>
-			<Box color='#ff0000' to='hsl' />
-			<Box color='#ff0000' to='rgb' />
-			<Box color='#ff0000' to='rgb1' />
-			<Box color='#ff0000' />
+			<div className='palette__container'>
+				{ScaleGenerator.generate('#ff0000').map((color, index) => (
+					<Box key={index} color={color} />
+				))}
+			</div>
 		</div>
 	);
 }
