@@ -71,6 +71,7 @@ export const menuItems = [
 	['Tooltips', 'tooltips', []],
 	['Drag And Drop', 'drag-and-drop', []],
 	['Link', 'link', []],
+	['Context Menu', 'context-menu', []],
 ].sort((a, b) => {
 	if (a < b) return -1;
 	if (a > b) return 1;
