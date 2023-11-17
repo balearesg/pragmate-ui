@@ -1,5 +1,18 @@
+input,
+textarea {
+	background: transparent;
+	box-shadow: none;
+	border: 1px solid gray;
+	padding: 0;
+	outline: none;
+	margin: 0;
+	font-size: 1rem; // Adjust font size as needed
+	color: inherit; // Inherits the color from the parent element
+	line-height: inherit; // Inherits line height from the parent element
+}
+
 .pui-element-input,
-pui-element-textarea {
+.pui-element-textarea {
 	input[type='password']::-ms-reveal,
 	input[type='password']::-ms-clear,
 	input[type='password']::-webkit-contacts-auto-fill-button,

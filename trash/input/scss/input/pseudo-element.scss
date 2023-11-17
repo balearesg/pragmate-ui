@@ -2,13 +2,11 @@
 pui-element-textarea {
 	&:hover:not(&.disabled),
 	&:focus-within:not(&.disabled) {
-		border-color: var(--primary);
 		transition: border-color 0.4s ease-in-out;
 	}
 
 	&:hover:not(&.disabled) input,
 	&:hover:not(&.disabled) textarea {
-		color: var(--color-gray-80);
 		transition: color 0.4s ease-in-out;
 	}
 

@@ -1,0 +1,46 @@
+$label-color: var(--text-color);
+$input-border-color: #ccc;
+$input-border-color-focus: #007bff;
+$label-font-size: 18px;
+$label-font-size-small: 14px;
+$transition-speed: 0.2s;
+
+.floating-label-group {
+	position: relative;
+	margin-top: 20px;
+
+	.form-control {
+		font-size: $label-font-size;
+		border: 0;
+		border-bottom: 1px solid $input-border-color;
+		background: transparent;
+		padding: 8px 0;
+		width: 100%;
+		box-sizing: border-box;
+
+		&:focus {
+			outline: none;
+			border-bottom: 2px solid $input-border-color-focus;
+		}
+
+		&:valid {
+			border-bottom: 2px solid green;
+		}
+
+		&:focus ~ .floating-label,
+		&:not(:placeholder-shown) ~ .floating-label {
+			top: -20px;
+			font-size: $label-font-size-small;
+			color: $label-color;
+		}
+	}
+
+	.floating-label {
+		position: absolute;
+		pointer-events: none;
+		left: 0;
+		top: 10px;
+		transition: $transition-speed ease all;
+		font-size: $label-font-size;
+	}
+}

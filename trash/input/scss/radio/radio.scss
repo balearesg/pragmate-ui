@@ -1,0 +1,26 @@
+@use 'sass:math';
+.pragmate-element-radio {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	cursor: pointer;
+	@keyframes stretch-animate {
+		0% {
+			transform: scale(1, 1);
+		}
+		28% {
+			transform: scale(1.15, 0.85);
+		}
+		50% {
+			transform: scale(0.9, 1.1);
+		}
+		100% {
+			transform: scale(1, 1);
+		}
+	}
+
+	label {
+		display: block;
+		line-height: 1;
+	}
+}

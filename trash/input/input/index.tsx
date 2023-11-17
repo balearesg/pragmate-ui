@@ -1,9 +1,9 @@
 import React from 'react';
-import { ChangeEvent, useRef, useState, MutableRefObject } from 'react';
-import type { IProps, PropsState } from './type';
-import { InputContext } from './context';
-import { Label } from './components/label';
-import { internalProps } from './internal-props';
+import {ChangeEvent, useRef, useState, MutableRefObject} from 'react';
+import {listClassName} from './class-list';
+import type {IProps, PropsState} from './type';
+import {InputContext} from './context';
+import {RenderingProps} from './rendering-props';
 
 export /*bundle*/
 function Input(props: IProps): JSX.Element {
@@ -43,17 +43,18 @@ function Input(props: IProps): JSX.Element {
 		});
 	};
 
-	let properties: IProps = { ...props };
-
-	let cls = `pui-input${className ? ` ${className}` : ''}`;
+	let properties: IProps = {...props};
+	let cls: string = className ? `${className} pui-element-input` : 'pui-element-input';
 	cls += icon || loading || password || required ? ' has-icon' : '';
-	cls += disabled ? ' pui-input--disabled' : '';
-	cls += hasError ? ' pui-input--error' : '';
-	cls += floating ? ' pui-input--floating--label' : '';
+	cls += disabled ? ' disabled' : '';
+	cls += hasError ? ' error' : '';
+	cls += floating ? ' floating--label' : '';
 
-	internalProps.forEach(prop => delete properties[prop]);
-	//
-	const listValue = { state, props, setState, input };
+	listClassName.forEach(prop => {
+		delete properties[prop];
+	});
+
+	const listValue = {state, props, setState, input};
 	const isValue = typeof value !== 'undefined' ? value : state.value;
 	return (
 		<InputContext.Provider value={listValue}>
@@ -68,7 +69,8 @@ function Input(props: IProps): JSX.Element {
 					placeholder={placeholder ?? ' '}
 					id={id ?? name}
 				/>
-				<Label />
+				<RenderingProps />
+				{children}
 			</div>
 		</InputContext.Provider>
 	);

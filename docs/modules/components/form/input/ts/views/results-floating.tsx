@@ -1,22 +1,17 @@
 import React from 'react';
-import {Input} from 'pragmate-ui/form';
+import { Input } from 'pragmate-ui/form';
 
 export function ResultsFloating() {
-	const [value, setValue] = React.useState('');
-
-	function handleChange(event) {
-		const {value: inputValue} = event.target;
-		setValue(inputValue);
-	}
-
-	function handleSubmit(event) {
-		event.preventDefault();
-		// logic...
-	}
-
 	return (
-		<form onSubmit={handleSubmit}>
-			<Input type="text" name="name" floating label="Insert a text" onChange={handleChange} value={value} />
-		</form>
+		<>
+			<h3>label only</h3>
+			<Input type='text' name='name' label='Insert a text' />
+			<h3>Floating label</h3>
+			<Input type='text' name='name' floating label='Insert a text' />
+			<h3>Placeholder only</h3>
+			<Input type='text' name='name' placeholder='Insert a text' />
+			<h3>placeholder and label</h3>
+			<Input type='text' name='name' floating label='Insert a text' />
+		</>
 	);
 }
