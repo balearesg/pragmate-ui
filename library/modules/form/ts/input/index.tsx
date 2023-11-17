@@ -1,32 +1,16 @@
 import React from 'react';
-import { ChangeEvent, useRef, useState, MutableRefObject } from 'react';
-import type { IProps, PropsState } from './type';
+import { useState } from 'react';
+import type { ILabelProps, IProps, IPropsState } from './types';
 import { InputContext } from './context';
 import { Label } from './components/label';
-import { internalProps } from './internal-props';
+
+import { ControlSelector } from './control';
 
 export /*bundle*/
 function Input(props: IProps): JSX.Element {
-	const input: MutableRefObject<HTMLInputElement> = useRef(null);
+	const { value, errorMessage, variant, className, label, children, id, name, placeholder } = props;
 
-	const {
-		value,
-		errorMessage,
-		floating,
-		hasError,
-		disabled,
-		icon,
-		className,
-		password,
-		required,
-		loading,
-		children,
-		id,
-		name,
-		placeholder,
-	} = props;
-
-	const [state, setState] = useState<PropsState>({
+	const [state, setState] = useState<IPropsState>({
 		value: value ?? '',
 		errorMessage: errorMessage ?? 'Formato incorrecto',
 		lengthMessage: 'Cantidad máxima: ',
@@ -34,41 +18,26 @@ function Input(props: IProps): JSX.Element {
 		type: props.type ?? 'text',
 	});
 
-	const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
-		if (!!props.onChange && typeof props.onChange === 'function') props.onChange(event);
-		setState({
-			...state,
-			_hasError: false,
-			value: event.target.value,
-		});
-	};
-
-	let properties: IProps = { ...props };
-
 	let cls = `pui-input${className ? ` ${className}` : ''}`;
-	cls += icon || loading || password || required ? ' has-icon' : '';
-	cls += disabled ? ' pui-input--disabled' : '';
-	cls += hasError ? ' pui-input--error' : '';
-	cls += floating ? ' pui-input--floating--label' : '';
+	const variants = {
+		unstyled: 'pui-input--unstyled',
+		floating: 'pui-input--floating',
+	};
+	if (props.variant && variants[props.variant]) cls += ` ${variants[props.variant]}`;
 
-	internalProps.forEach(prop => delete properties[prop]);
 	//
-	const listValue = { state, props, setState, input };
-	const isValue = typeof value !== 'undefined' ? value : state.value;
+	const providerValuee = { state, props, setState };
+
+	const labelSpecs: ILabelProps = {};
+
+	if (variant === 'floating') labelSpecs.position = variant;
+
 	return (
-		<InputContext.Provider value={listValue}>
+		<InputContext.Provider value={providerValuee}>
 			<div className={cls}>
-				<input
-					ref={input}
-					{...properties}
-					name={name}
-					onChange={handleChange}
-					type={state.type}
-					value={isValue}
-					placeholder={placeholder ?? ' '}
-					id={id ?? name}
-				/>
-				<Label />
+				<ControlSelector />
+				{children}
+				{label && <Label {...labelSpecs}>{label}</Label>}
 			</div>
 		</InputContext.Provider>
 	);

@@ -1,3 +1,7 @@
+/**
+ * Internal props of the input component.
+ * This array is used to filter the props passed to the input component.
+ */
 export const internalProps = [
 	'className',
 	'hasError',
@@ -9,4 +13,5 @@ export const internalProps = [
 	'password',
 	'loading',
 	'colorSpinner',
+	'variant',
 ];

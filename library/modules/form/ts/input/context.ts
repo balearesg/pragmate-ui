@@ -1,6 +1,6 @@
 import React from 'react';
-import type {IProps} from './type';
-import {MutableRefObject, InputHTMLAttributes, ReactNode} from 'react';
+import type { IProps } from './types';
+import { MutableRefObject, InputHTMLAttributes, ReactNode } from 'react';
 
 interface IInputContextValue {
 	state: {
@@ -11,9 +11,10 @@ interface IInputContextValue {
 		_hasError?: boolean;
 		type: InputHTMLAttributes<HTMLInputElement>['type'];
 	};
+	id?: string;
+	name?: string;
 	props: IProps;
 	setState: any;
-	input: MutableRefObject<HTMLInputElement>;
 }
 
 export const InputContext = React.createContext({} as IInputContextValue);

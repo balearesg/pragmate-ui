@@ -1,21 +1,16 @@
-import {InputHTMLAttributes, ReactNode} from 'react';
+import { InputHTMLAttributes, ReactNode } from 'react';
 
 export interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 	ref?: any;
-	errorMessage?: string;
-	lengthMessage?: string;
-	hasError?: boolean;
+	variant?: string;
 	icon?: string;
+	errorMessage: string;
+
 	label?: any;
 	children?: ReactNode;
-	password?: boolean;
-	loading?: boolean;
-	colorSpinner?: string;
-	floating?: boolean;
-	max?: string;
 }
 
-export type PropsState = {
+export type IPropsState = {
 	value?: string | number | readonly string[];
 	errorMessage: string;
 	lengthMessage: string;
@@ -23,3 +18,7 @@ export type PropsState = {
 	_hasError?: boolean;
 	type: InputHTMLAttributes<HTMLInputElement>['type'];
 };
+export interface ILabelProps {
+	position?: 'right' | 'bottom' | 'bottom-right' | 'floating';
+	children?: React.ReactNode;
+}

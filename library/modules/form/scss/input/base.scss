@@ -1,0 +1,22 @@
+input,
+textarea {
+	padding: 0.5rem;
+}
+
+.pui-input {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	input {
+		order: 2;
+	}
+	label {
+		order: 1;
+		flex: 1;
+		&.pui-input__label--bottom,
+		&.pui-input__label--bottom-right {
+			order: 3;
+		}
+	}
+}

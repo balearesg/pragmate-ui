@@ -5,42 +5,45 @@ $label-font-size: 18px;
 $label-font-size-small: 14px;
 $transition-speed: 0.2s;
 
-.floating-label-group {
+.pui-input.pui-input--floating {
 	position: relative;
 	margin-top: 20px;
 
-	.form-control {
+	input {
 		font-size: $label-font-size;
-		border: 0;
-		border-bottom: 1px solid $input-border-color;
+
 		background: transparent;
-		padding: 8px 0;
+
 		width: 100%;
+		font-size: 1rem;
 		box-sizing: border-box;
 
 		&:focus {
 			outline: none;
-			border-bottom: 2px solid $input-border-color-focus;
 		}
 
-		&:valid {
-			border-bottom: 2px solid green;
-		}
+		// &:valid {
+		// 	// border-bottom: 2px solid green;
+		// }
 
-		&:focus ~ .floating-label,
-		&:not(:placeholder-shown) ~ .floating-label {
-			top: -20px;
-			font-size: $label-font-size-small;
+		&:focus ~ .pui-input__label.floating-label,
+		&:not(:placeholder-shown) ~ .pui-input__label.floating-label {
+			top: -1rem;
+			background: var(--surface);
+			padding: 0.2rem 0.5rem;
+			border-radius: var(--border-radius-base);
+			font-size: 10px;
+
 			color: $label-color;
 		}
 	}
 
-	.floating-label {
+	label.pui-input__label.floating-label {
 		position: absolute;
 		pointer-events: none;
-		left: 0;
-		top: 10px;
+		left: 1rem;
+		top: 0.5rem;
+
 		transition: $transition-speed ease all;
-		font-size: $label-font-size;
 	}
 }
