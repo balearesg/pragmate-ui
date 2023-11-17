@@ -2,25 +2,28 @@ import React, { useRef, ChangeEvent, MutableRefObject } from 'react';
 import { useInputContext } from './context';
 import { internalProps } from './internal-props';
 import { IProps } from './types';
-export function ControlSelector(props) {
+export function ControlSelector() {
 	const input: MutableRefObject<HTMLInputElement> = useRef(null);
 
 	const {
 		setState,
 		state,
-		props: { value, name, id, placeholder },
+		value,
+		setValue,
+		props: { name, id, placeholder },
+		props,
 	} = useInputContext();
 	let properties: IProps = { ...props };
-
-	const isValue = typeof value !== 'undefined' ? value : state.value;
 
 	internalProps.forEach(prop => delete properties[prop]);
 	const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
 		if (!!props.onChange && typeof props.onChange === 'function') props.onChange(event);
+		const currentValue = event.currentTarget.value;
+		setValue(currentValue);
 		setState({
 			...state,
 			_hasError: false,
-			value: event.target.value,
+			value: event.currentTarget.value,
 		});
 	};
 
@@ -30,8 +33,7 @@ export function ControlSelector(props) {
 			{...properties}
 			name={name}
 			onChange={handleChange}
-			type={state.type}
-			value={isValue}
+			value={value}
 			placeholder={placeholder ?? ' '}
 			id={id ?? name}
 		/>

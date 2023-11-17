@@ -5,13 +5,13 @@ export interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 	variant?: string;
 	icon?: string;
 	errorMessage: string;
-
+	value?: string;
 	label?: any;
 	children?: ReactNode;
 }
 
 export type IPropsState = {
-	value?: string | number | readonly string[];
+	value?: string;
 	errorMessage: string;
 	lengthMessage: string;
 	emptyMessage: string;

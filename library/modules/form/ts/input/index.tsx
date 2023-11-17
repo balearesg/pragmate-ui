@@ -8,10 +8,10 @@ import { ControlSelector } from './control';
 
 export /*bundle*/
 function Input(props: IProps): JSX.Element {
-	const { value, errorMessage, variant, className, label, children, id, name, placeholder } = props;
+	const { errorMessage, variant, className, label, children, type } = props;
 
+	const [value, setValue] = React.useState<string>(props.value ?? '');
 	const [state, setState] = useState<IPropsState>({
-		value: value ?? '',
 		errorMessage: errorMessage ?? 'Formato incorrecto',
 		lengthMessage: 'Cantidad máxima: ',
 		emptyMessage: 'Este campo es requerido',
@@ -25,15 +25,14 @@ function Input(props: IProps): JSX.Element {
 	};
 	if (props.variant && variants[props.variant]) cls += ` ${variants[props.variant]}`;
 
-	//
-	const providerValuee = { state, props, setState };
+	const providerValue = { state, props, setState, value, setValue };
 
 	const labelSpecs: ILabelProps = {};
 
 	if (variant === 'floating') labelSpecs.position = variant;
 
 	return (
-		<InputContext.Provider value={providerValuee}>
+		<InputContext.Provider value={providerValue}>
 			<div className={cls}>
 				<ControlSelector />
 				{children}

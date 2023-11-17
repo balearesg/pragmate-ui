@@ -12,9 +12,12 @@ interface IInputContextValue {
 		type: InputHTMLAttributes<HTMLInputElement>['type'];
 	};
 	id?: string;
+	value: string;
 	name?: string;
 	props: IProps;
+
 	setState: any;
+	setValue: (value) => void;
 }
 
 export const InputContext = React.createContext({} as IInputContextValue);
