@@ -8,7 +8,7 @@
 			"path": "/ts",
 			"files": ["*"]
 		},
-		"sass": {
+		"scss": {
 			"path": "/scss",
 			"files": ["*"]
 		}

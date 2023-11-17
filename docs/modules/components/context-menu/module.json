@@ -1,0 +1,19 @@
+{
+	"name": "components/context-menu",
+	"widget": {
+		"route": "/components/context-menu",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "pui-docs-context-menu-page"
+		}
+	}
+}

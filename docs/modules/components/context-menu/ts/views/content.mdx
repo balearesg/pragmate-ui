@@ -1,0 +1,66 @@
+import { Code } from 'pragmate-ui/code';
+import { Example } from './example';
+
+# ContextItem Component
+
+## Overview
+
+The `ContextItem` component is a versatile and customizable list item component designed for use in context menus,
+dropdowns, and other list-based user interfaces. It allows for the integration of both text (`label`) and optional icons
+(`icon`), along with an `onClick` event handler to execute specific functionality when the item is clicked.
+
+## Features
+
+-   **Customizable Icon and Label**: The component can display both an icon and a label. The icon is optional and can be
+    omitted if not required.
+-   **Click Event Handling**: Incorporates an `onClick` handler, allowing developers to define custom actions that are
+    triggered upon clicking the item.
+-   **TypeScript Support**: Fully typed with TypeScript, ensuring type safety and ease of integration into
+    TypeScript-based projects.
+
+<Example />
+
+## Usage
+
+Below is an example of how to use the `ContextItem` component in a React application:
+
+<Code>
+{`
+import React from 'react';
+import { ContextItem } from './path/to/ContextItem';
+
+export function ExampleMenu() {
+	const handleItemClick = () => {
+		console.log('Item clicked!');
+	};
+
+    return (
+    	<ul>
+    		<ContextItem
+    			onClick={handleItemClick}
+    			icon='icon-name' // replace with the actual icon name or path
+    			label='First Item'
+    		/>
+    		<ContextItem onClick={handleItemClick} label='Second Item' />
+    		{/* Add more items as needed */}
+    	</ul>
+    );
+
+}
+
+`}
+
+</Code>
+
+In this example, `ExampleMenu` is a component that renders a list with two `ContextItem` components. Each item has an
+`onClick` handler (`handleItemClick`) and can optionally include an icon.
+
+## Customization
+
+-   **Icons**: Replace `"icon-name"` with the actual icon identifier that your project uses. The icon can be omitted if
+    not needed.
+-   **Styling**: Apply custom styles or classes to the `ContextItem` to match your application's design.
+
+```
+
+```

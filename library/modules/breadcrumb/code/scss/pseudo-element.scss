@@ -1,40 +1,32 @@
-.breadcrumb-page-header {
-    .breadcrumb {
+.pui-breadcrumb__container {
+	.breadcrumb {
+		display: flex;
+		gap: 0.5rem;
+		a {
+			text-decoration: none;
+			position: relative;
+			align-items: center;
+			height: 100%;
+			margin: 0 1px;
+			display: flex;
+			gap: 0.5rem;
+			transition: all 0.2s;
+			cursor: pointer;
 
-        a {
-            text-decoration: none;
-            position: relative;
-            border: var(--text-color);
-            padding: 2px 20px;
-            height: 100%;
-            border-radius: 2px;
-            border-left: none;
-            margin: 0 1px;
-            transition: all .2s;
-            cursor: pointer;
-            
-            &:after {
-                content: '>';
-                position: absolute;
-                height: 100%;
-                top: 3.5px;
-                right: -3px;
-            }
+			&:hover,
+			&:hover:after,
+			&:hover:before {
+				height: 100%;
+				color: var(--on-surface);
 
-            /* &:last-child:after {
-                content: none;
-            } */
-            &:hover,
-            &:hover:after,
-            &:hover:before {
-                color: var(--on-surface);
-                height: 100%;
-            }
+				.pui-breadcrumb__separator {
+					color: var(--on-surface);
+				}
+			}
 
-            &:hover {
-                transition: all .2s;
-            }
-        }
-    }
-
+			&:hover {
+				transition: all 0.2s;
+			}
+		}
+	}
 }

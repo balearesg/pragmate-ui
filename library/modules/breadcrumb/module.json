@@ -2,7 +2,7 @@
 	"name": "breadcrumb",
 	"platforms": ["web", "ios", "android"],
 	"code": {
-		"sass": {
+		"scss": {
 			"path": "/code/scss",
 			"files": ["*"]
 		},
