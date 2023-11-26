@@ -1,7 +1,0 @@
-@import './button-styles';
-
-$button-variants: 'primary', 'secondary', 'tertiary', 'success', 'danger', 'warning', 'info';
-.pragmate-button,
-.btn {
-	@include button-styles($button-variants);
-}

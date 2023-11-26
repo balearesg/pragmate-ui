@@ -1,24 +1,16 @@
 {
-  "name": "drag-and-drop",
-  "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
-  "code": {
-    "name": "drag-and-drop",
-    "hmr": true,
-    "sass": {
-      "path": "/code/scss",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "/code/ts",
-      "files": [
-        "*"
-      ]
-    }
-  }
+	"name": "drag-and-drop",
+	"platforms": ["web", "ios", "android"],
+	"code": {
+		"name": "drag-and-drop",
+		"hmr": true,
+		"scss": {
+			"path": "/code/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/code/ts",
+			"files": ["*"]
+		}
+	}
 }

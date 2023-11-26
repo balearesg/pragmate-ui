@@ -1,5 +1,5 @@
 {
-	"name": "template/generator",
+	"name": "pui/template/generator",
 	"platforms": ["web", "ios", "android"],
 
 	"widget": {

@@ -1,0 +1,16 @@
+{
+	"name": "image",
+	"platforms": ["web", "ios", "android"],
+	"code": {
+		"hmr": true,
+		"name": "image",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"name": "context-menu",
+	"code": {
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "scss",
+			"files": ["*"]
+		}
+	}
+}

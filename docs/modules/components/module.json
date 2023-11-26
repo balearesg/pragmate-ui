@@ -1,17 +1,13 @@
 {
-  "name": "components",
-  "code": {
-    "sass": {
-      "path": "/code/sass",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "/code/ts",
-      "files": [
-        "*"
-      ]
-    }
-  }
+	"name": "components",
+	"code": {
+		"scss": {
+			"path": "/code/sass",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/code/ts",
+			"files": ["*"]
+		}
+	}
 }
