@@ -1,5 +1,5 @@
 .pui-element-input,
-pui-element-textarea {
+.pui-textarea {
 	&:hover:not(&.disabled),
 	&:focus-within:not(&.disabled) {
 		border-color: var(--primary);

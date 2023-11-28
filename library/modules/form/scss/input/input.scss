@@ -16,7 +16,7 @@
 	transition: all 0.4s ease-in-out;
 	padding: 0 8px;
 
-	input[type='date']::-webkit-calendar-picker-indicator {
+	input[type="date"]::-webkit-calendar-picker-indicator {
 		position: absolute;
 		right: 0.9rem;
 		background: none;
