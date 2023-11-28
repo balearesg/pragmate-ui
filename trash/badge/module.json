@@ -1,0 +1,23 @@
+{
+	"name": "badge",
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	],
+	"code": {
+		"name": "badge",
+		"scss": {
+			"path": "/scss",
+			"files": [
+				"*"
+			]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": [
+				"*"
+			]
+		}
+	}
+}

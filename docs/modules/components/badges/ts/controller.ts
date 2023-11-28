@@ -1,6 +1,6 @@
 import { PageReactWidgetController } from '@beyond-js/react-18-widgets/page';
 import { StoreManager } from './store';
-import { View } from './views';
+import { Page } from './views';
 
 export /*bundle*/
 class Controller extends PageReactWidgetController {
@@ -10,7 +10,7 @@ class Controller extends PageReactWidgetController {
 		return this.#store;
 	}
 	get Widget() {
-		return View;
+		return Page;
 	}
 
 	/**
