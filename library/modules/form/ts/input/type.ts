@@ -1,10 +1,9 @@
-import {InputHTMLAttributes, ReactNode} from 'react';
+import { InputHTMLAttributes, ReactNode } from 'react';
 
 export interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 	ref?: any;
-	errorMessage?: string;
+	error?: string;
 	lengthMessage?: string;
-	hasError?: boolean;
 	icon?: string;
 	label?: any;
 	children?: ReactNode;
@@ -15,11 +14,6 @@ export interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 	max?: string;
 }
 
-export type PropsState = {
-	value?: string | number | readonly string[];
-	errorMessage: string;
-	lengthMessage: string;
-	emptyMessage: string;
-	_hasError?: boolean;
-	type: InputHTMLAttributes<HTMLInputElement>['type'];
-};
+export interface IInputState {
+	type: string;
+}

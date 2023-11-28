@@ -1,19 +1,12 @@
 import React from 'react';
-import type {IProps} from './type';
-import {MutableRefObject, InputHTMLAttributes, ReactNode} from 'react';
+import type { IInputState, IProps } from './type';
+import { MutableRefObject } from 'react';
 
-interface IInputContextValue {
-	state: {
-		value?: string | number | readonly string[];
-		errorMessage: string;
-		lengthMessage: string;
-		emptyMessage: string;
-		_hasError?: boolean;
-		type: InputHTMLAttributes<HTMLInputElement>['type'];
-	};
+export interface IInputContextValue {
 	props: IProps;
-	setState: any;
-	input: MutableRefObject<HTMLInputElement>;
+	state: IInputState;
+	setState: React.Dispatch<React.SetStateAction<IInputState>>;
+	inputRef: MutableRefObject<HTMLInputElement>;
 }
 
 export const InputContext = React.createContext({} as IInputContextValue);
