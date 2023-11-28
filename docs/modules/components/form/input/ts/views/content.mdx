@@ -1,23 +1,6 @@
-import {
-	implementation,
-	implementationDisabled,
-	implementationError,
-	implementationIcon,
-	implementationLoading,
-	implementationPassword,
-	implementationFloating,
-	implementationButton,
-	implementationDate,
-} from './implementations';
-import {ResultsFloating} from './results-floating';
-import {ResultInputError} from './result-input-error';
-import {ResultInputWithIcon} from './result-input-with-icon';
-import {ResultInputDisabled} from './result-input-disabled';
-import {ResultInputPassword} from './result-input-password';
-import {ResultInputLoading} from './result-input-loading';
-import {ResultDate} from './result-input-date';
-import {ResultsButton} from './result';
-import {Code} from 'pragmate-ui/code';
+import { implementation } from './implementations';
+import { ResultsFloating } from './results-floating';
+import { Code } from 'pragmate-ui/code';
 
 # Input
 
@@ -36,75 +19,4 @@ deseamos o necesitamos como atributos un label definido,icono, un disable, contr
 
 <Code>{implementation}</Code>
 
-### Case input with floating :
-
-<Code>{implementationFloating}</Code>
-
 <ResultsFloating />
-
-### Case input with icon :
-
-<ResultInputWithIcon />
-
-<Code>{implementationIcon}</Code>
-
-### Case input disabled :
-
-<ResultInputDisabled />
-
-<Code>{implementationDisabled}</Code>
-
-### Case input password :
-
-<ResultInputPassword />
-
-<Code>{implementationPassword}</Code>
-
-### Case input loading :
-
-<ResultInputLoading />
-
-<Code>{implementationLoading}</Code>
-
-### Case input error:
-
-<Code>{implementationError}</Code>
-
-<ResultInputError />
-
-### Case input Button:
-
-<Code>{implementationButton}</Code>
-
-<ResultsButton />
-
-### Input date :
-
-En `Pragmate-ui` podemos personalizar el icono de calendario que sale en el input y podemos agregar un icono de la lista
-de pragmate agregando el atributo icon y el nombre del icono, si no agregamos un icono por defecto saldra uno.
-
-#### preview :
-
-<Code>{implementationDate}</Code>
-
-<ResultDate />
-
-### Props :
-
--   `value`: Representa el valor actual del campo de entrada. Si no se proporciona, se establece en una cadena vacía por
-    defecto.
--   `errorMessage`: Es el mensaje de error que se muestra cuando el formato del valor es incorrecto. Si no se
-    proporciona, se establece en "Formato incorrecto" por defecto.
--   `lengthMessage`: Es el mensaje que indica la cantidad máxima permitida para el valor. Por defecto, se establece en
-    "Cantidad máxima: ".
--   `emptyMessage`: Es el mensaje que se muestra cuando el campo de entrada está vacío y es requerido. Por defecto, se
-    establece en "Este campo es requerido".
--   `type`: Representa el tipo de entrada del campo. Si no se proporciona, se establece en "text" por defecto.
--   `className`: Es una clase CSS adicional que se agrega al contenedor principal del componente.
--   `icon`: Representa el nombre del icono que se muestra junto al campo de entrada.
--   `loading`: Indica si se debe mostrar un spinner de carga junto al campo de entrada.
--   `password`: Indica si el campo de entrada debe ocultar o mostrar el texto ingresado en forma de contraseña.
--   `required`: Indica si el campo de entrada es obligatorio.
--   `disabled`: Indica si el campo de entrada está deshabilitado para la interacción del usuario.
--   `hasError`: Indica si el campo de entrada tiene un error.
--   `floating`: Indica si la etiqueta flotante debe mostrarse encima del campo de entrada.
