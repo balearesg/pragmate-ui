@@ -31,7 +31,7 @@
 		position: absolute;
 		bottom: -1.2rem;
 		left: 0;
-		color: var(--border-error);
+		color: var(--error);
 		font-size: 12px;
 	}
 
@@ -89,6 +89,6 @@
 		z-index: 17;
 	}
 	&.error {
-		border-color: var(--border-error);
+		border-color: var(--error);
 	}
 }

@@ -59,6 +59,6 @@ pui-element-textarea {
 		color: var(--color-gray-20);
 	}
 	&-error {
-		color: red;
+		color: var(--error);
 	}
 }

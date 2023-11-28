@@ -16,4 +16,5 @@ export interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 
 export interface IInputState {
 	type: string;
+	value: string | number | readonly string[];
 }
