@@ -1,0 +1,17 @@
+{
+  "name": "vertical-line",
+  "code": {
+    "scss": {
+      "path": "/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

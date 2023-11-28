@@ -1,76 +1,42 @@
 import React from 'react';
-import {ChangeEvent, useRef, useState, MutableRefObject} from 'react';
-import {listClassName} from './class-list';
-import type {IProps, PropsState} from './type';
-import {InputContext} from './context';
-import {RenderingProps} from './rendering-props';
+import { ChangeEvent, useRef, useState, MutableRefObject } from 'react';
+import { listClassName } from './class-list';
+import type { IProps } from './type';
+import { IInputContextValue, InputContext } from './context';
+import { RenderingProps } from './rendering-props';
 
 export /*bundle*/
 function Input(props: IProps): JSX.Element {
-	const input: MutableRefObject<HTMLInputElement> = useRef(null);
-
-	const {
-		value,
-		errorMessage,
-		floating,
-		hasError,
-		disabled,
-		icon,
-		className,
-		password,
-		required,
-		loading,
-		children,
-		id,
-		name,
-		placeholder,
-	} = props;
-
-	const [state, setState] = useState<PropsState>({
-		value: value ?? '',
-		errorMessage: errorMessage ?? 'Formato incorrecto',
-		lengthMessage: 'Cantidad máxima: ',
-		emptyMessage: 'Este campo es requerido',
-		type: props.type ?? 'text',
-	});
+	const [state, setState] = React.useState({ type: props.type });
+	const inputRef: MutableRefObject<HTMLInputElement> = useRef(null);
 
 	const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
 		if (!!props.onChange && typeof props.onChange === 'function') props.onChange(event);
-		setState({
-			...state,
-			_hasError: false,
-			value: event.target.value,
-		});
 	};
 
-	let properties: IProps = {...props};
-	let cls: string = className ? `${className} pui-element-input` : 'pui-element-input';
-	cls += icon || loading || password || required ? ' has-icon' : '';
-	cls += disabled ? ' disabled' : '';
-	cls += hasError ? ' error' : '';
-	cls += floating ? ' floating--label' : '';
+	let properties: IProps = { ...props };
+	let cls: string = props.className ? `${props.className} pui-element-input` : 'pui-element-input';
+	cls += props.icon || props.loading || props.password || props.required ? ' has-icon' : '';
+	cls += props.disabled ? ' disabled' : '';
+	cls += props.error ? ' error' : '';
+	cls += props.floating ? ' floating--label' : '';
 
-	listClassName.forEach(prop => {
-		delete properties[prop];
-	});
+	listClassName.forEach(prop => delete properties[prop]);
 
-	const listValue = {state, props, setState, input};
-	const isValue = typeof value !== 'undefined' ? value : state.value;
+	const contextValue: IInputContextValue = { props, inputRef, state, setState };
 	return (
-		<InputContext.Provider value={listValue}>
+		<InputContext.Provider value={contextValue}>
 			<div className={cls}>
 				<input
-					ref={input}
+					ref={inputRef}
 					{...properties}
-					name={name}
+					name={props.name}
 					onChange={handleChange}
-					type={state.type}
-					value={isValue}
-					placeholder={placeholder ?? ' '}
-					id={id ?? name}
+					value={props.value || ''}
+					id={props.id || props.name}
 				/>
 				<RenderingProps />
-				{children}
+				{props.children}
 			</div>
 		</InputContext.Provider>
 	);

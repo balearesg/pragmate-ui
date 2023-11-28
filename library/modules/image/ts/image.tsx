@@ -1,34 +1,13 @@
 import React, { ImgHTMLAttributes, SyntheticEvent, ReactNode, useState, useEffect } from 'react';
 import { IconButton } from 'pragmate-ui/icons';
+import { IProps, IinitialState } from './interfaces';
 
-interface props extends ImgHTMLAttributes<HTMLImageElement> {
-	graphSrc?: string;
-	size?: string;
-	children?: ReactNode;
-	error?: string;
-	onError?: (e: SyntheticEvent<Element, Event>) => void;
-}
-/**
- * A React component that loads an image from a URL.
- * @param {props} props - props
- */
-interface initialState {
-	size: string;
-	error?: boolean;
-	loaded: boolean;
-	url?: string;
-	onload?: undefined;
-	src?: string;
-	htmlLoaded?: boolean;
-	loading?: string;
-	onerror?: undefined;
-}
 export /*bundle*/
-function Image(props: props): JSX.Element {
-	const initialState: initialState = { size: '200x200', loaded: false };
+function Image(props: IProps): JSX.Element {
+	const initialState: IinitialState = { size: '200x200', loaded: false };
 	const { className, onClick, children, src, alt, onError } = props;
-	const [image, setImage] = useState<HTMLImageElement | initialState>();
-	const [state, setState] = useState<initialState>(initialState);
+	const [image, setImage] = useState<HTMLImageElement | IinitialState>();
+	const [state, setState] = useState<IinitialState>(initialState);
 	const onLoad: () => void = (): void => setState({ ...state, error: false, htmlLoaded: true });
 	const loadImage = (url: string, size: string): void => {
 		let finalSrc: string = url;
@@ -70,11 +49,11 @@ function Image(props: props): JSX.Element {
 	const Loaded: JSX.Element = <img src={src} onLoad={onLoad} loading={props.loading ?? 'eager'} alt={alt} />;
 	output = error ? Error : Loaded;
 
-	const properties: props = { ...props, className: cls, onClick };
+	const properties: IProps = { ...props, className: cls, onClick };
 	['src', 'alt', 'onError', 'children', 'size', 'loading', 'error'].forEach(prop => delete properties[prop]);
 
 	return (
-		<figure data-src={src} {...properties}>
+		<figure {...properties}>
 			{output}
 			{children}
 		</figure>

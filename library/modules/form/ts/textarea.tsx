@@ -1,5 +1,5 @@
 import React from 'react';
-import {TextareaHTMLAttributes, ChangeEvent, ReactNode, HTMLAttributes, useRef, useState} from 'react';
+import { TextareaHTMLAttributes, ChangeEvent, ReactNode, HTMLAttributes, useRef, useState } from 'react';
 
 interface props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 	ref?: any;
@@ -49,12 +49,12 @@ export /*bundle*/ function Textarea(props: props): JSX.Element {
 			errorMessage = props.lengthMessage ? props.lengthMessage : state.lengthMessage + ` (max ${props.max})`;
 		}
 
-		return <span className="pui-element-input-error">{errorMessage}</span>;
+		return <span className='pui-element-input-error'>{errorMessage}</span>;
 	};
 
 	const error: JSX.IntrinsicElements['span'] = getError(props.hasError);
-	let properties: props = {...props};
-	let cls: string = props.className ? `${props.className} pragmate-element-textarea` : 'pragmate-element-textarea';
+	let properties: props = { ...props };
+	let cls: string = props.className ? `${props.className} pui-textarea` : 'pui-textarea';
 	cls += props.disabled ? ' disabled' : '';
 	cls += props.hasError ? ' error' : '';
 
@@ -76,7 +76,7 @@ export /*bundle*/ function Textarea(props: props): JSX.Element {
 				{props.children}
 				{error}
 				{props.label && <label htmlFor={props.id}>{props.label}</label>}
-				{props.required && <span className="pui-input__required-label">(*)</span>}
+				{props.required && <span className='pui-input__required-label'>(*)</span>}
 			</>
 		</div>
 	);

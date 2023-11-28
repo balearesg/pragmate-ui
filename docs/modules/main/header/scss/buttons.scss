@@ -1,0 +1,20 @@
+.home-header {
+	.pragmate-button.btn-secondary.outline {
+		display: flex;
+		font-size: 1rem;
+		font-weight: 600;
+		padding: 0.5rem 5.5rem;
+		color: var(--text-color);
+		background-image: linear-gradient(50deg, var(--on-primary-container) 50%, transparent 50%);
+		border-color: var(--tertiary);
+		background-position: 100%;
+		background-size: 250%;
+		transition: all 0.4s ease-in-out;
+
+		&:hover {
+			background-position: 0;
+			box-shadow: 0 5px 10px 0 var(--tertiary);
+			color: var(--altern-text-color);
+		}
+	}
+}

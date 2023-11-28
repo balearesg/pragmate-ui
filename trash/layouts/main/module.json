@@ -1,26 +1,18 @@
 {
-  "name": "layout/index",
-  "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
-  "widget": {
-    "is": "layout",
-    "element": {
-      "name": "index-layout"
-    },
-    "sass": {
-      "path": "sass",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "ts",
-      "files": [
-        "*"
-      ]
-    }
-  }
+	"name": "layout/index",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"is": "layout",
+		"element": {
+			"name": "index-layout"
+		},
+		"scss": {
+			"path": "sass",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "ts",
+			"files": ["*"]
+		}
+	}
 }

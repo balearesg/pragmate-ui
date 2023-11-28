@@ -1,10 +1,6 @@
 {
 	"name": "dropdown-sidebar-page",
-	 "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
+	"platforms": ["web", "ios", "android"],
 	"widget": {
 		"route": "/components/dropdown-sidebar",
 		"is": "page",
@@ -12,7 +8,7 @@
 			"path": "/widget/ts",
 			"files": ["*"]
 		},
-		"sass": {
+		"scss": {
 			"path": "/widget/sass",
 			"files": ["*"]
 		},

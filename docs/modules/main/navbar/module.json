@@ -1,17 +1,13 @@
 {
-  "name": "navbar",
-  "code": {
-    "sass": {
-      "path": "/code/sass",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "/code/ts",
-      "files": [
-        "*"
-      ]
-    }
-  }
+	"name": "navbar",
+	"code": {
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		}
+	}
 }

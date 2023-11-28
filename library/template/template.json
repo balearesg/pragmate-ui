@@ -12,16 +12,12 @@
 	"global": {
 		"processor": "sass",
 		"path": "global",
-		"files": [
-			"*"
-		]
+		"files": ["*"]
 	},
 	"processors": {
-		"sass": {
+		"scss": {
 			"path": "sass",
-			"files": [
-				"*"
-			]
+			"files": ["*"]
 		}
 	},
 	"overwrites": "overwrites/overwrites.json"

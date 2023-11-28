@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "menu",
   "platforms": [
     "web",
@@ -20,3 +21,18 @@
     }
   }
 }
+=======
+	"name": "menu",
+	"platforms": ["web", "ios", "android"],
+	"code": {
+		"scss": {
+			"path": "/code/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/code/ts",
+			"files": ["*"]
+		}
+	}
+}
+>>>>>>> dev

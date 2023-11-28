@@ -22,20 +22,6 @@
 			color: var(--on-primary);
 		}
 
-		.clipboard__container {
-			position: relative;
-			z-index: 9999;
-			place-items: center;
-			cursor: pointer;
-			opacity: 0.7;
-			svg.pragmate-icon {
-				height: 1.5rem;
-				width: 1.5rem;
-			}
-			&:hover {
-				opacity: 1;
-			}
-		}
 		.box__buttons {
 			display: flex;
 			gap: 8px;

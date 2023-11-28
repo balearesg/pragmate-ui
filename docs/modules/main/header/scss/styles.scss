@@ -1,3 +1,4 @@
+@use 'mixins';
 $tablet-breakpoint: 1440px;
 
 .home__header {
@@ -9,38 +10,11 @@ $tablet-breakpoint: 1440px;
 	gap: 1rem;
 
 	&-main-content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 1.2rem;
-
-		h1 {
-			text-align: center;
-			font-size: 5rem;
-			font-weight: bolder;
-			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-				'Helvetica Neue', sans-serif;
-			margin: 0;
-		}
-
-		p {
-			width: 80%;
-			font-weight: 600;
-			color: var(--secondary-text-color);
-			font-size: 1.4rem;
-			text-align: center;
-			transition: all 0.7s;
-			margin: 0;
-		}
+		@include mixins.center-flex();
 	}
 
 	.started {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 1.2rem;
+		@include mixins.center-flex();
 
 		.code-container {
 			width: 280px;
@@ -50,23 +24,4 @@ $tablet-breakpoint: 1440px;
 			}
 		}
 	}
-
-		.pragmate-button.btn-secondary.outline {
-			display: flex;
-			font-size: 1rem;
-			font-weight: 600;
-			padding: 0.5rem 5.5rem;
-			color: var(--text-color);
-			background-image: linear-gradient(50deg, var(--on-primary-container) 50%, transparent 50%);
-			border-color: var(--tertiary);
-			background-position: 100%;
-			background-size: 250%;
-			transition: all 0.4s ease-in-out;
-	
-			&:hover {
-				background-position: 0;
-				box-shadow: 0 5px 10px 0 var(--tertiary);
-				color: var(--altern-text-color);
-			}
-		}
 }

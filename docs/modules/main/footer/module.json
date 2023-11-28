@@ -1,17 +1,13 @@
 {
-  "name": "footer",
-  "code": {
-    "sass": {
-      "path": "/code/sass",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "/code/ts",
-      "files": [
-        "*"
-      ]
-    }
-  }
+	"name": "footer",
+	"code": {
+		"scss": {
+			"path": "/code/sass",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/code/ts",
+			"files": ["*"]
+		}
+	}
 }

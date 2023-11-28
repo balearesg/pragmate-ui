@@ -1,8 +1,11 @@
 import React from 'react';
-import {IconButton} from 'pragmate-ui/icons';
-import {Toasts, toast} from 'pragmate-ui/toast';
+<<<<<<< HEAD
+import { Toasts, toast } from 'pragmate-ui/toast';
 
-export function Clipboard({text, message}) {
+export function useClick(): [
+	React.RefObject<HTMLDivElement>,
+	(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
+] {
 	const ref = React.useRef(null);
 	const polyfill = text => {
 		const textArea = document.createElement('textarea');
@@ -44,17 +47,19 @@ export function Clipboard({text, message}) {
 			console.log('some error', e);
 		}
 	};
+	return [ref, onClick];
+=======
+import { IconButton } from 'pragmate-ui/icons';
+import { Toasts, toast } from 'pragmate-ui/toast';
+import { useClick } from './use-click';
 
+export function Clipboard({ text }) {
+	const [ref, onClick] = useClick();
 	return (
-		<div className="clipboard__container" data-text={text} ref={ref} onClick={onClick}>
-			<Toasts
-				position={{
-					bottom: '2rem',
-					right: '2rem',
-				}}
-			/>
-			<IconButton title="copy" icon="copy" />
-			<span className="action-copied">Copied</span>
+		<div className='clipboard__container' data-text={text} ref={ref} onClick={onClick}>
+			<IconButton title='copy' icon='copy' />
+			<span className='action-copied'>Copied</span>
 		</div>
 	);
+>>>>>>> dev
 }

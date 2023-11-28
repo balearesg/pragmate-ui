@@ -51,6 +51,7 @@ export const menuItems = [
 	['Theme switch', 'theme-switch', []],
 	['Button', 'buttons', []],
 	['Progress Bar', 'progress-bar', []],
+	['Vertical Line', 'vertical-line', []],
 	['Code', 'code', []],
 	['Pricing', 'pricing', []],
 	['Spinner', 'spinner', []],
@@ -70,8 +71,9 @@ export const menuItems = [
 	['Tooltips', 'tooltips', []],
 	['Drag And Drop', 'drag-and-drop', []],
 	['Link', 'link', []],
+	['Context Menu', 'context-menu', []],
 ].sort((a, b) => {
-	if (a[1] < b[1]) return -1;
-	if (a[1] > b[1]) return 1;
+	if (a < b) return -1;
+	if (a > b) return 1;
 	return 0;
 });

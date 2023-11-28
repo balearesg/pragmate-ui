@@ -1,0 +1,34 @@
+{
+  "name": "vertical-line",
+  "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
+  "widget": {
+    "route": "/components/vertical-line",
+    "layout": "pui-docs-layout",
+    "is": "page",
+    "scss": {
+      "path": "/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "mdx": {
+      "path": "/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "element": {
+      "name": "vertical-line"
+    }
+  }
+}
