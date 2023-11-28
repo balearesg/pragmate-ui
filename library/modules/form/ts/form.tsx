@@ -6,7 +6,7 @@ export /*bundle*/ function Form(props: PropsWithChildren<props>): JSX.Element {
 	const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
 		event.preventDefault();
 		event.stopPropagation();
-		props.onSubmit(event);
+		if (props.onSubmit && typeof props.onSubmit === 'function') props.onSubmit(event);
 	};
 
 	return (
