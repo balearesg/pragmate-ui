@@ -8,7 +8,6 @@ export const internalProps = [
 	'errorMessage',
 	'children',
 	'icon',
-	'floating',
 	'label',
 	'password',
 	'loading',
