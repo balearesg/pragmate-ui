@@ -1,35 +1,38 @@
+import { Badge } from 'pragmate-ui/badge';
+import { Chips } from 'pragmate-ui/chips';
+import { Icon } from 'pragmate-ui/icons';
 import { Code } from 'pragmate-ui/code';
 
-
-# Componente Badge
+# Badge
 
 El componente Badge es un componente versátil que te permite mostrar distintos tipos de insignias con colores y valores
 personalizables.
 
-### Instalación
+### Import :
 
-Para usar el componente Badge en tu proyecto, sigue estos pasos:
+<Code>{`import { Badge } from 'pragmate-ui/badge';`}</Code>
 
-1. Instala las dependencias necesarias si aún no lo has hecho:
+### Implementation :
 
-    ```bash
-    npm install react
-    ```
+<Code>{`<Badge variant="primary" value={32}> Notificaciones </Badge>`}</Code>
 
-2. Importa el componente Badge en tu proyecto:
+### Results :
 
-    ```javascript
-    import { Badge } from './Badge';
-    ```
+<Badge variant="primary" value={99}>
+  <Icon className="lg" icon="whatsapp" />
+</Badge>
 
-### Uso
+### Badge de Punto
 
-Puedes utilizar el componente Badge incluyéndolo en tu código JSX y pasando las propiedades necesarias:
+Si deseamos cambiar el disenio del Badge podemos usar la opcion de mostrar un puntero con la propiedad `dot`. Esto se puede usar como una notificación de que algo ha cambiado sin contar
 
-<Code>{`<Badge variant="primary" value={3}>Notificaciones</Badge>`}</Code>
+<Code>{`<Badge variant="primary" value={99} dot> <Icon className="lg" icon="bell" /> </Badge>`}</Code>
 
+<Badge variant="primary" value={99} dot>
+  <Icon className="lg" icon="bell" />
+</Badge>
 
-### Propiedades
+### Props :
 
 El componente Badge acepta las siguientes propiedades:
 
@@ -38,42 +41,5 @@ El componente Badge acepta las siguientes propiedades:
     'default' por defecto.
 -   `value` (número, obligatorio): El valor numérico que se mostrará dentro de la insignia.
 -   `children` (ReactNode, obligatorio): El contenido que deseas mostrar junto a la insignia.
+-   `dot` (booleano): Cambia el badge a un pequeño punto. Esto se puede usar como una notificación de que algo ha cambiado sin contar.
 
-### Ejemplos
-
-Aquí tienes algunos ejemplos de cómo utilizar el componente Badge:
-
-```javascript
-<Badge variant="primary" value={3}>
-  Notificaciones
-</Badge>
-
-<Badge variant="success" value={10}>
-  Mensajes
-</Badge>
-
-<Badge variant="danger" value={1}>
-  Error
-</Badge>
-```
-
-### Estilo
-
-El componente Badge utiliza SCSS para el estilo, y puedes personalizar su apariencia modificando las variables SCSS. Las
-variables de color disponibles son:
-
--   `--primary`
--   `--secondary`
--   `--success`
--   `--danger`
--   `--warning`
--   `--info`
--   `--default`
-
-Puedes sobrescribir estas variables para cambiar los colores de la insignia y adaptarlos al diseño de tu proyecto.
-
-### Ejemplos 
-
-{/* <Badge variant="primary" value={3}>
-  Notificaciones
-</Badge> */}

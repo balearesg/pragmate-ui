@@ -2,7 +2,6 @@ import React from 'react';
 import { Alert } from 'pragmate-ui/alert';
 import { Button, ButtonGroup } from 'pragmate-ui/components';
 import { v4 as uuid } from 'uuid';
-import { Badge } from 'pragmate-ui/badge';
 
 export function Example() {
 	const [typeAlert, setTypeAlerts] = React.useState('success');
