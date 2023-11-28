@@ -8,13 +8,14 @@
       display: grid;
       justify-content: center;
     }
-    
+
     & :where(p, div) {
       color: var(--text-color);
     }
   }
   .confirm-dialog-content :where(p, div, h3, h4) {
     color: var(--text-color);
+    margin: 0;
   }
   .actions {
     border-top: 1px solid var(--gray-light);

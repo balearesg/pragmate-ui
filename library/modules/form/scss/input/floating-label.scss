@@ -1,4 +1,5 @@
-.pui-element-input.floating--label {
+.pui-element-input.floating--label,
+.pui-textarea.floating--label {
     margin: 2rem 0rem 0.5rem 0rem;
     label {
         position: absolute;
@@ -17,11 +18,10 @@
         &:first-letter {
             text-transform: uppercase;
         }
-
     }
     &:focus-within label,
-    input:not(:placeholder-shown)~label,
-    textarea:not(:placeholder-shown)~label {
+    input:not(:placeholder-shown) ~ label,
+    textarea:not(:placeholder-shown) ~ label {
         padding: 0px 8px;
         background-color: var(--surface);
         top: -27.12px;
