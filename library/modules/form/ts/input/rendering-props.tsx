@@ -16,7 +16,7 @@ export function RenderingProps() {
 			{props.loading && <Spinner color="var(--text-color)" type="primary" active />}
 			<IconToDisplay />
 			{displayRequired && <span className="pui-input__required-label">(*)</span>}
-			{toDisplayError && <span className="pui-element-input-label">{toDisplayError}</span>}
+			<span className="pui-element-input-label">{toDisplayError}</span>
 		</>
 	);
 }

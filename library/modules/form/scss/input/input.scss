@@ -15,6 +15,7 @@
 	margin: 1rem 0;
 	transition: all 0.4s ease-in-out;
 	padding: 0 8px;
+	z-index: 1;
 
 	input[type='date']::-webkit-calendar-picker-indicator {
 		position: absolute;
@@ -29,10 +30,20 @@
 
 	.pui-element-input-label {
 		position: absolute;
-		bottom: -1.3rem;
+		bottom: 0;
 		left: 0;
 		color: var(--error);
 		font-size: 12px;
+		opacity: 0;
+		transition: all 0.2s ease-in-out;
+		z-index: 0;
+	}
+
+	&.error {
+		.pui-element-input-label {
+			bottom: -1.3rem;
+			opacity: 1;
+		}
 	}
 
 	&.has-icon {
