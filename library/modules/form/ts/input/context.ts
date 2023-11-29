@@ -5,10 +5,6 @@ import { MutableRefObject, InputHTMLAttributes, ReactNode } from 'react';
 interface IInputContextValue {
 	state: {
 		value?: string | number | readonly string[];
-		errorMessage: string;
-		lengthMessage: string;
-		emptyMessage: string;
-		_hasError?: boolean;
 		type: InputHTMLAttributes<HTMLInputElement>['type'];
 	};
 	id?: string;

@@ -6,8 +6,12 @@ textarea {
 .pui-input {
 	display: flex;
 	flex-direction: column;
+	position: relative;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	gap: 0.5rem;
+	margin-bottom: 1rem; // this margin lets the error label be positioned correctly
+
 	input {
 		order: 2;
 	}

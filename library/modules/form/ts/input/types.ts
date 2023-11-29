@@ -8,6 +8,7 @@ export interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 	value?: string;
 	label?: any;
 	children?: ReactNode;
+	hasError?: boolean;
 }
 
 export type IPropsState = {
@@ -21,4 +22,5 @@ export type IPropsState = {
 export interface ILabelProps {
 	position?: 'right' | 'bottom' | 'bottom-right' | 'floating';
 	children?: React.ReactNode;
+	required?: boolean;
 }

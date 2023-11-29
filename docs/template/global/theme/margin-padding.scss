@@ -1,0 +1,42 @@
+// Mixin para aplicar variantes de propiedad (top, right, bottom, left, x, y)
+@mixin applyPropertyVariants($property, $prefix, $size) {
+	// Tupla con las iniciales y los lados correspondientes
+	$sides: (
+		t: top,
+		r: right,
+		b: bottom,
+		l: left
+	);
+	// Generar clases con la inicial de cada lado
+	@each $abbr, $side in $sides {
+		.#{$prefix}#{$abbr}-#{$size} {
+			#{$property}-#{$side}: #{$size}px;
+		}
+	}
+	// Clases para los ejes 'x' y 'y'
+	.#{$prefix}x-#{$size} {
+		#{$property}-left: #{$size}px;
+		#{$property}-right: #{$size}px;
+	}
+	.#{$prefix}y-#{$size} {
+		#{$property}-top: #{$size}px;
+		#{$property}-bottom: #{$size}px;
+	}
+	// Clase para la propiedad general
+	.#{$prefix}#{$size} {
+		#{$property}: #{$size}px;
+	}
+}
+
+// Mixin para generar clases utilitarias
+@mixin generateUtilityClasses($sizes, $prefix, $property) {
+	@each $size in $sizes {
+		@include applyPropertyVariants($property, $prefix, $size);
+	}
+}
+
+// Ejemplo de uso
+$sizes: 15, 20, 25, 30, 35, 40, 45, 50, 10;
+
+@include generateUtilityClasses($sizes, 'm', 'margin'); // Para margen
+@include generateUtilityClasses($sizes, 'p', 'padding'); // Para padding

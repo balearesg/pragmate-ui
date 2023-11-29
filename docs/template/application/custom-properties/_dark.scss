@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @mixin properties() {
 	--text-color: #fff;
-
-	--primary: var(--primary-80);
+	--primary: var(--primary-40);
 	--primary-container: var(--primary-30);
 	--on-primary: #fff;
 	--on-primary-container: var(--primary-90);
 	--inverse-primary: var(--primary-40);
-	--secondary: var(--secondary-80);
+
 	--secondary-container: var(--secondary-30);
 	--on-secondary: #fff;
 	--on-secondary-container: var(--secondary-90);
@@ -16,22 +14,22 @@
 	--on-tertiary: var(--tertiary-20);
 	--on-tertiary-container: var(--tertiary-90);
 
-	--surface: var(--neutral-6);
-	--surface-dim: var(--neutral-6);
+	--surface: var(--secondary-10);
+	--surface-variant: var(--secondary-20);
+	--surface-dim: var(--neutral-12);
 	--surface-bright: var(--neutral-25);
 	--surface-container-lowest: var(--neutral-4);
 	--surface-container-low: var(--neutral-10);
 	--surface-container: var(--neutral-12);
 	--surface-container-high: var(--neutral-20);
 	--surface-container-highest: var(--neutral-22);
-	--surface-variant: var(--neutral-variant-30);
 
 	--on-surface: var(--neutral-90);
 	--on-surface-variant: var(--neutral-variant-80);
 	--inverse-surface: var(--neutral-90);
 	--inverse-on-surface: var(--neutral-20);
 
-	--background: var(--neutral-6);
+	--background: var(--secondary-0);
 	--on-background: var(--neutral-90);
 	--error: var(--error-80);
 	--error-container: var(--error-30);
@@ -40,7 +38,17 @@
 	--outline: var(--neutral-variant-60);
 	--outline-variant: var(--neutral-variant-30);
 	--shadow: var(--neutral-0);
-	--box-shadow-pui: 0px 3px 8px var(--shadow);
 	--surface-tint-color: var(--md.sys.color.primary);
 	--scrim: var(--neutral-0);
+
+	--app-text-highlight: rgba(17, 159, 224, 1);
+
+	--primary-container: var(--primary);
+	--primary-dark-container: var(--primary-30);
+	--primary-light-container: var(--primary-50);
+	--secondary-container: var(--secondary);
+	--secondary-dark-container: var(--secondary-60);
+	--secondary-light-container: var(--secondary-40);
+
+	--disabled-text: var(--neutral-70);
 }

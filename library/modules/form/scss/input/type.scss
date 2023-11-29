@@ -26,8 +26,13 @@
 	}
 }
 
-.pui-element-input,
-.pui-element-textarea {
+.pui-input,
+.pui-textarea {
+	input[type='date']::-webkit-inner-spin-button,
+	input[type='date']::-webkit-calendar-picker-indicator {
+		display: none;
+		-webkit-appearance: none;
+	}
 	input[type='password']::-ms-reveal,
 	input[type='password']::-ms-clear,
 	input[type='password']::-webkit-contacts-auto-fill-button,

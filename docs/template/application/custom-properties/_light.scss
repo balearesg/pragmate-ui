@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-
 @mixin properties() {
 	--text-color: #1a1a1a;
-
 	//--primary: var(--primary);
 	--primary-container: var(--primary-90);
 	--on-primary: var(--primary-100);
@@ -18,30 +15,40 @@
 	--on-tertiary-container: var(--tertiary-10);
 
 	--surface: var(--neutral-98);
-	--surface-dim: var(--neutral-87);
-	--surface-bright: var(--neutral-87);
+	--surface-dim: var(--neutral-80);
+	--surface-bright: var(--neutral-98);
 	--surface-container-lowest: var(--neutral-100);
-	--surface-container-low: var(--neutral-96);
-	--surface-container: var(--neutral-70);
+	--surface-container-low: var(--neutral-90);
+	--surface-container: var(--neutral-94);
 	--surface-container-high: var(--neutral-92);
 	--surface-container-highest: var(--neutral-90);
 
-	--surface-variant: var(--neutral-variant-90);
+	--surface-variant: var(--secondary-95);
 	--on-surface: var(--neutral-10);
 
 	--on-surface-variant: var(--neutral-variant-30);
 	--inverse-surface: var(--neutral-20);
 	--inverse-on-surface: var(--neutral-95);
-	--background: var(--neutral-99);
+	--background: var(--secondary-98); // var(--neutral-99);
 	--on-background: var(--neutral-10);
 	--error: var(--error-40);
 	--error-container: var(--error-90);
 	--on-error: var(--error-100);
 	--on-error-container: var(--error-10);
-	--outline: var(--neutral-variant-50);
+	--outline: var(--neutral-variant-70);
 	--outline-variant: var(--neutral-variant-80);
 	--shadow: var(--neutral-0);
-	--box-shadow-pui: 0px 3px 8px var(--shadow);
+
 	--surface-tint-color: var(--primary);
 	--scrim: var(--neutral-0);
+
+	--app-text-highlight: rgba(172, 18, 18, 0.8);
+	--primary-container: var(--primary);
+	--primary-dark-container: var(--primary-30);
+	--primary-light-container: var(--primary-60);
+	--secondary-container: var(--secondary);
+	--secondary-dark-container: var(--secondary-50);
+	--secondary-light-container: var(--secondary-80);
+
+	--disabled-text: var(--neutral-70);
 }

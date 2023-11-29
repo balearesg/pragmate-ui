@@ -1,0 +1,27 @@
+@use 'dark';
+@use 'light';
+@use 'alerts';
+@import 'palette/neutral';
+@import 'palette/dynamic';
+
+:root {
+	--secondary-font-family: 'Rubik', sans-serif;
+	--font-family: 'Rubik', sans-serif;
+	--border-radius-sm: 6px;
+	--border-radius-base: 10px;
+	--border-radius-lg: 25px;
+	@include neutral-palette();
+
+	@include alerts.properties();
+	@include light.properties();
+	&[data-beyond-mode='light'] {
+		@include light.properties();
+	}
+
+	&[data-beyond-mode='dark'] {
+		@include dark.properties();
+	}
+	&[data-accessibility-mode='dyslexia'] {
+		--font-family: 'OpenDyslexic';
+	}
+}

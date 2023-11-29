@@ -1,0 +1,36 @@
+.flex-container {
+	display: flex;
+
+	// Mapa de propiedades y valores para las variantes de flexbox
+	$flex-variants: (
+		'100': (
+			width: 100%
+		),
+		'space-between': (
+			justify-content: space-between
+		),
+		'column': (
+			flex-direction: column
+		),
+		'center': (
+			justify-content: center,
+			align-items: center,
+			gap: 0.5rem
+		),
+		'vertical-center': (
+			align-items: center
+		),
+		'end': (
+			justify-content: flex-end
+		)
+	);
+
+	// Bucle para generar clases automáticamente
+	@each $variant, $properties in $flex-variants {
+		&.flex-#{$variant} {
+			@each $property, $value in $properties {
+				#{$property}: $value;
+			}
+		}
+	}
+}

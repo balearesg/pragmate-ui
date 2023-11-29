@@ -1,0 +1,15 @@
+// Define the array of values
+$tones: ('primary', 'secondary', 'tertiary');
+
+// Loop through the array to generate classes
+@each $tone in $tones {
+	// Text color class
+	.#{$tone}-text {
+		color: var(--#{$tone});
+	}
+
+	// Background color class
+	.#{$tone}-bg {
+		background-color: var(--#{$tone}-container);
+	}
+}

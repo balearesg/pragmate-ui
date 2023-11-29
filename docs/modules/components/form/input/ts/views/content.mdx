@@ -1,22 +1,48 @@
 import { implementation } from './implementations';
-import { ResultsFloating } from './results-floating';
+
 import { Code } from 'pragmate-ui/code';
+import Errors from './docs/errors.mdx';
+import { DefaultExamples } from './examples/default';
+import { ErrorExamples } from './examples/errors';
+import { LabelExamples } from './examples/labels';
+// import { UIExample } from 'pragmate-ui-docs/utils';
 
 # Input
 
-El componente `Input` Nos permite agregar elementos input a nuestra aplicacion con la especialidad de poder agregar si
-deseamos o necesitamos como atributos un label definido,icono, un disable, contraseña con icono de ocultar y un spinner.
+The `Input` component is a versatile React component designed for creating input fields within forms. It supports
+multiple variants, types, and configurations, making it adaptable for various user interface designs.
 
-### Import:
+### Import
 
 <Code>{`import { Input } from 'pragmate-ui/form';`}</Code>
 
-### Component :
+Code:
 
 <Code>{`<Input type="text" name="name" label="Insert a text..." onChange={handleChange} value={value} />`}</Code>
 
-### Implementation :
+### Complete example
 
 <Code>{implementation}</Code>
 
-<ResultsFloating />
+<DefaultExamples />
+
+#### Properties:
+
+-   `type` (string): Specifies the type of input (e.g., 'text', 'date').
+-   `name` (string): Defines the name of the input element.
+-   `label` (string): Provides a text label for the input field. It's used differently based on the variant.
+-   `placeholder` (string): Specifies a short hint in the input field.
+-   `variant` (string): Determines the style variant of the input field ('unstyled', 'floating').
+
+<h2>General Styles</h2>
+<DefaultExamples />
+
+<h2>Labels positions</h2>
+
+<LabelExamples />
+
+<h3>Errors</h3>
+
+<Errors />
+
+<ErrorExamples />

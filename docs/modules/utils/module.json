@@ -1,0 +1,6 @@
+{
+	"name": "utils",
+	"bundle": "code",
+	"ts": "./ts",
+	"scss": "./scss"
+}
