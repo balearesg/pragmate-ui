@@ -1,16 +1,31 @@
 {
-	"name": "components/badges",
+	"name": "badges",
+	"platforms": [
+		"web",
+		"ios",
+		"android"
+	],
 	"widget": {
 		"route": "/components/badges",
 		"is": "page",
 		"layout": "pui-docs-layout",
 		"scss": {
 			"path": "/scss",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
 		},
 		"ts": {
 			"path": "/ts",
-			"files": ["*"]
+			"files": [
+				"*"
+			]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": [
+				"*"
+			]
 		},
 		"element": {
 			"name": "pui-badges-page"

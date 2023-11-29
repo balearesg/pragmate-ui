@@ -1,0 +1,45 @@
+import { Badge } from 'pragmate-ui/badge';
+import { Chips } from 'pragmate-ui/chips';
+import { Icon } from 'pragmate-ui/icons';
+import { Code } from 'pragmate-ui/code';
+
+# Badge
+
+El componente Badge es un componente versátil que te permite mostrar distintos tipos de insignias con colores y valores
+personalizables.
+
+### Import :
+
+<Code>{`import { Badge } from 'pragmate-ui/badge';`}</Code>
+
+### Implementation :
+
+<Code>{`<Badge variant="primary" value={32}> Notificaciones </Badge>`}</Code>
+
+### Results :
+
+<Badge variant="primary" value={99}>
+  <Icon className="lg" icon="whatsapp" />
+</Badge>
+
+### Badge de Punto
+
+Si deseamos cambiar el disenio del Badge podemos usar la opcion de mostrar un puntero con la propiedad `dot`. Esto se puede usar como una notificación de que algo ha cambiado sin contar
+
+<Code>{`<Badge variant="primary" value={99} dot> <Icon className="lg" icon="bell" /> </Badge>`}</Code>
+
+<Badge variant="primary" value={99} dot>
+  <Icon className="lg" icon="bell" />
+</Badge>
+
+### Props :
+
+El componente Badge acepta las siguientes propiedades:
+
+-   `variant` (cadena de texto, opcional): Define la variante de color de la insignia. Los valores posibles son
+    'primary', 'secondary', 'success', 'danger', 'warning', 'info' o 'default'. Si no se proporciona, se establece en
+    'default' por defecto.
+-   `value` (número, obligatorio): El valor numérico que se mostrará dentro de la insignia.
+-   `children` (ReactNode, obligatorio): El contenido que deseas mostrar junto a la insignia.
+-   `dot` (booleano): Cambia el badge a un pequeño punto. Esto se puede usar como una notificación de que algo ha cambiado sin contar.
+

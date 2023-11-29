@@ -1,0 +1,34 @@
+{
+  "name": "chip",
+  "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
+  "widget": {
+    "route": "/components/chip",
+    "is": "page",
+    "layout": "pui-docs-layout",
+    "scss": {
+      "path": "/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "mdx": {
+      "path": "/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "element": {
+      "name": "chip-page"
+    }
+  }
+}

@@ -16,7 +16,7 @@ class Controller extends PageReactWidgetController {
 	/**
 	 * this method is executed when the widget is showd
 	 */
-	load() {}
+	show() {}
 
 	/**
 	 * this method is executed when the widget is hidden
