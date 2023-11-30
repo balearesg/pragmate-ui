@@ -33,7 +33,7 @@ $colors: 'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'defaul
 			width: 0.7rem;
 		}
 
-		// Recorrer la lista y crear las clases
+		// Traverse the list and create the classes
 		@each $color in $colors {
 			&.pui-badge--#{$color} {
 				color: var(--on-#{$color});
