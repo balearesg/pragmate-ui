@@ -1,0 +1,57 @@
+import { Chips, Chip } from 'pragmate-ui/chips';
+import { Code } from 'pragmate-ui/code';
+
+# Chip
+
+El componente `"Chips"` es un contenedor que permite visualizar una serie de elementos tipo `"chip"` de manera organizada. Está diseñado para representar una lista de elementos de manera visualmente compacta y amigable. Es útil para mostrar múltiples etiquetas o elementos en una interfaz de usuario de forma ordenada y accesible.
+
+### Import :
+
+<Code>{`import { Chips, Chip } from 'pragmate-ui/chips';`}</Code>
+
+### Implementation :
+
+<Code>{`<Chip item='Basic' type='primary' />`}</Code>
+
+### Result :
+
+<Chip item='Basic' type='primary' />
+
+### Chip Icon :
+
+<Chip item='Primary Icon' icon='close-circle' type='primary' />
+
+Podemos permitir agregar iconos detallistas a los chips.
+
+<Code>{`<Chip item='Primary Icon' icon='circle-check' type='primary'`}</Code>
+
+
+### Chip Tooltip :
+
+<Chip item='Result Tootip' icon='result' type='info' title='Información adicional sobre el chip' />
+
+Tenemos la opcion de agregar Información complementaria e indicativa con la propieda `title`.
+
+<Code>{`<Chip item='Info Tootip' icon='circle-exclamation' type='info' title='Información adicional sobre el chip' />`}</Code>
+
+### Props :
+
+- item (string): Texto o elemento a mostrar dentro del chip.
+- type (string, opcional): Tipo o estilo del chip.
+- title (string, opcional): Texto informativo que se mostrará como tooltip.
+- className (string, opcional): Clases CSS adicionales para estilizar el chip.
+- onClick (función, opcional): Función a ejecutar al hacer clic en el chip.
+- children (ReactNode, opcional): Contenido adicional que se puede agregar dentro del chip.
+- icon (string, opcional): Icono que se puede agregar adentro del chip.
+
+### Chips Group
+
+<Chips>
+    <Chip item='Succcess' icon='circle-check' type='success' />
+    <Chip item='Info' icon='circle-exclamation' type='info' />
+    <Chip item='Warning' icon='triangle-exclamation' type='warning' />
+</Chips>
+
+con el componente `Chips` podemos agregar agrupar la cantidad que queramos de `Chip`.
+
+<Code>{`<Chips> nuestros componentes chip </Chips>`}</Code>

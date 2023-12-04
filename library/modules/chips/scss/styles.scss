@@ -1,29 +1,38 @@
-$types: ('default', 'primary', 'secondary', 'tertiary', 'success', 'info', 'warning', 'danger', 'light', 'dark');
+$types: 'default', 'primary', 'secondary', 'tertiary', 'success', 'info', 'warning', 'danger';
 
-@mixin chips-styles($color) {
-	background: var(--#{$color});
+.pui-chip {
+	padding: 0.438rem 1rem;
+	border-radius: 1rem;
+	font-size: 13px;
+	display: flex;
+	flex-direction: row;
+	width: fit-content;
+	gap: .6rem;
+	align-items: center;
 
-	color: var(--on-#{$color});
-}
-
-@each $type in $types {
-	.pui-chip {
-		padding: 0.2rem 0.5rem;
-		border-radius: 1rem;
-		font-size: 10px;
+	@each $type in $types {
 		&.pui-chip--#{$type} {
-			@include chips-styles($type);
+			background: var(--#{$type});
+			color: var(--on-#{$type});
 		}
 	}
 }
 
-.pui-chips__container {
-	display: flex;
-	gap: 0.5rem;
 
-	.pui-chip {
-		&.is-clickable {
-			cursor: pointer;
+.pui-chip__container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 0.25rem;
+	width: fit-content;
+	
+	.content-chip {
+		display: flex;
+		gap: .5rem;
+		.pui-chip {
+			&.is-clickable {
+				cursor: pointer;
+			}
 		}
 	}
 }
