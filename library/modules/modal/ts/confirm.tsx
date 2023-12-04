@@ -29,7 +29,7 @@ export /*bundle*/ const ConfirmModal = (properties): JSX.Element => {
 
 	const props = Object.assign({}, properties);
 
-	['text', 'title', 'className', 'centering', 'btnCancel', 'btnConfirm', 'onCancel'].forEach(
+	['text', 'title', 'className', 'centering', 'btnCancel', 'btnConfirm', 'onCancel', 'size', 'texts'].forEach(
 		prop => delete props[prop]
 	);
 
@@ -52,7 +52,7 @@ export /*bundle*/ const ConfirmModal = (properties): JSX.Element => {
 	if (state.fetching) disabled.disabled = true;
 
 	return (
-		<Modal show className={cls} onClose={onCancel}>
+		<Modal show className={cls} onClose={onCancel} size={properties?.size || 'md'}>
 			<div className="confirm-dialog-content">
 				{title && <h3 className={classNameExt?.title ? classNameExt?.title : 'dialog-title-text'}>{title}</h3>}
 				{text && (
@@ -63,7 +63,13 @@ export /*bundle*/ const ConfirmModal = (properties): JSX.Element => {
 				{properties.children}
 			</div>
 
-			<div className={classNameExt?.classNameActionDiv ? classNameExt?.classNameActionDiv : 'actions'}>
+			<div
+				className={
+					classNameExt?.classNameActionDiv
+						? classNameExt?.classNameActionDiv
+						: `actions ${centered ? ' centered' : ' '}`
+				}
+			>
 				<Button
 					label={cancelLabel}
 					{...disabled}

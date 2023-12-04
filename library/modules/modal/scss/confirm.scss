@@ -11,6 +11,7 @@
 			margin: 0;
 			color: var(--text-color);
 		}
+
 		.dialog-description-text {
 			font-size: var(--app-code-font-size);
 		}
@@ -21,8 +22,11 @@
 		display: grid;
 		grid-auto-flow: column;
 		grid-gap: 0.5rem;
-		justify-content: center;
+		justify-content: end;
 
+		&.centered {
+			justify-content: center;
+		}
 		.pui-button {
 			margin: 0;
 			min-width: 6rem;

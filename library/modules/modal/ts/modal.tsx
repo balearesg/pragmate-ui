@@ -2,20 +2,16 @@ import React from 'react';
 import { useState, useRef, MutableRefObject, SyntheticEvent, ReactNode } from 'react';
 import { Children } from './children';
 
-type props = {
+type Props = {
 	children: ReactNode;
 	className?: string;
 	onClose?: (e: SyntheticEvent<HTMLElement, Event>) => void;
 	show?: boolean;
+	size?: 'sm' | 'md' | 'lg' | 'xl';
 };
 export /*bundle*/
-function Modal(props: props) {
-	type state = {
-		container?: HTMLDivElement;
-		show: boolean;
-		closeClicked: boolean;
-	};
-	const [state, setState] = useState<state>({
+function Modal(props: Props) {
+	const [state, setState] = useState({
 		show: props?.show ?? false,
 		closeClicked: false,
 		container: null
@@ -44,15 +40,19 @@ function Modal(props: props) {
 
 	let cls: string = 'pui-modal ';
 	cls += props.className ? props.className : '';
+	cls += show ? ' show-modal' : '';
 
-	if (show) cls += ' show-modal';
+	if (props.size) {
+		cls += ` modal-${props.size}`;
+	}
+
 	const output = [];
 
 	if (show) {
 		output.push(
 			<div key="modal-content-wrapper" className="modal-wrapper">
 				<div
-					className="modal-content"
+					className={`modal-content ${!!props?.size ? `sizing-${props?.size}` : 'sizing-md'}`}
 					onClick={event => {
 						event.stopPropagation();
 					}}
