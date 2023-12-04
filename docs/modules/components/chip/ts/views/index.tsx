@@ -1,6 +1,4 @@
-import { Badge } from 'pragmate-ui/badge';
-import { Chips } from 'pragmate-ui/chips';
-import { Icon } from 'pragmate-ui/icons';
+import { Chips, Chip } from 'pragmate-ui/chips';
 import React from 'react';
 import Content from './content.mdx';
 import { Code } from 'pragmate-ui/code';

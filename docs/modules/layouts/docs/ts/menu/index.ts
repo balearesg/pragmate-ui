@@ -49,6 +49,8 @@ export const menuItems = [
 		],
 	],
 	['Theme switch', 'theme-switch', []],
+	['Badge', 'badges', []],
+	['Chip', 'chip', []],
 	['Button', 'buttons', []],
 	['Progress Bar', 'progress-bar', []],
 	['Vertical Line', 'vertical-line', []],

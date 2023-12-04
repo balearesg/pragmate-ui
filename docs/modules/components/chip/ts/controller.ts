@@ -13,13 +13,7 @@ class Controller extends PageReactWidgetController {
 		return Page;
 	}
 
-	/**
-	 * this method is executed when the widget is showd
-	 */
-	load() {}
+	show() {}
 
-	/**
-	 * this method is executed when the widget is hidden
-	 */
 	hide() {}
 }
