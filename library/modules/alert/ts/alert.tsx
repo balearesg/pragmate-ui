@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import { Icon, IconButton } from 'pragmate-ui/icons';
 import { Content } from './content';
 import { IProps, IIconMap } from './types';
 
 export /*bundle*/
-function Alert({ message, className, type, title, children, closable, onClose, icon }: IProps) {
+	function Alert({ message, className, type, title, children, closable, onClose, icon }: IProps) {
+	console.log("🚀 ~ file: alert.tsx:8 ~ Alert ~ message:", message)
+
 	const [show, setShow] = React.useState(true);
 
 	if (!show || (!message && !children)) return null;
 
-	const onCloseClick = async () => {
+	const onCloseClick = async (event: MouseEvent) => {
+		event.stopPropagation();
 		if (onClose) await onClose();
 		setShow(false);
 	};
@@ -27,7 +30,7 @@ function Alert({ message, className, type, title, children, closable, onClose, i
 	const defaultIcon = icons[type ?? 'success'];
 	const hasIcon = !!icon;
 	return (
-		<div className={cls} onClick={close}>
+		<div className={cls} onClick={onCloseClick}>
 			{icon && (
 				<section>
 					<Icon icon={defaultIcon} />
