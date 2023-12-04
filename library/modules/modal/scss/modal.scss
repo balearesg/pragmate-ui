@@ -4,14 +4,19 @@ body.body-pragmate-modal-opened {
 	padding-right: 15px;
 }
 
-.pragmate-modal {
+$modal-bg-color: rgba(0, 0, 0, 0.4);
+$modal-border-radius: var(--border-radius-base);
+$modal-show-animation: show 0.5s ease-in-out;
+
+.pui-modal {
 	display: none;
 	position: fixed;
 	inset: 0;
 	z-index: 1;
 	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: $modal-bg-color;
 	color: var(--text);
+
 	&.show-modal {
 		display: block;
 		z-index: 1000;
@@ -27,6 +32,7 @@ body.body-pragmate-modal-opened {
 		justify-content: center;
 		min-height: 80vh;
 		height: 100%;
+
 		@media screen and (max-height: 500px) {
 			height: auto;
 		}
@@ -35,10 +41,9 @@ body.body-pragmate-modal-opened {
 	.modal-content {
 		position: relative;
 		background: var(--surface);
-		animation: show 0.5s ease-in-out;
-		border-radius: var(--border-radius-base);
+		animation: $modal-show-animation;
+		border-radius: $modal-border-radius;
 		padding: 2rem 1.5rem;
-
 	}
 }
 

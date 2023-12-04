@@ -1,6 +1,6 @@
 import React from 'react';
-import {useState, useRef, MutableRefObject, SyntheticEvent, ReactNode} from 'react';
-import {Children} from './children';
+import { useState, useRef, MutableRefObject, SyntheticEvent, ReactNode } from 'react';
+import { Children } from './children';
 
 type props = {
 	children: ReactNode;
@@ -18,17 +18,17 @@ function Modal(props: props) {
 	const [state, setState] = useState<state>({
 		show: props?.show ?? false,
 		closeClicked: false,
-		container: null,
+		container: null
 	});
 	const modal: MutableRefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
 
 	const close = async (event: SyntheticEvent<HTMLElement, Event>): Promise<void> => {
 		if (event) event.stopPropagation();
-		const {onClose} = props;
+		const { onClose } = props;
 		const body: HTMLBodyElement = document.querySelector('body');
 		modal.current.classList.add('modal-hidden');
 		window.setTimeout(async (): Promise<void> => {
-			setState({...state, show: false, closeClicked: true});
+			setState({ ...state, show: false, closeClicked: true });
 			body.setAttribute('style', '');
 			body.classList.remove('body-custom-modal-opened');
 			onClose(event);
@@ -42,7 +42,7 @@ function Modal(props: props) {
 
 	const show: boolean = state.show;
 
-	let cls: string = 'pragmate-modal ';
+	let cls: string = 'pui-modal ';
 	cls += props.className ? props.className : '';
 
 	if (show) cls += ' show-modal';

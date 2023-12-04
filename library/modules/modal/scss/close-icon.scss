@@ -1,9 +1,9 @@
-.pragmate-modal {
+.pui-modal {
 	position: relative;
 	.close-icon {
 		position: absolute;
-		top: 20px;
-		right: 0;
+		top: 3px;
+		right: -4px;
 		border: none;
 		display: inline-block;
 		fill: var(--text-color);
