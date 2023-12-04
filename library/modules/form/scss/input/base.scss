@@ -1,0 +1,26 @@
+input,
+textarea {
+	padding: 0.5rem;
+}
+
+.pui-input {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 0.5rem;
+	margin-bottom: 1rem; // this margin lets the error label be positioned correctly
+
+	input {
+		order: 2;
+	}
+	label {
+		order: 1;
+		flex: 1;
+		&.pui-input__label--bottom,
+		&.pui-input__label--bottom-right {
+			order: 3;
+		}
+	}
+}

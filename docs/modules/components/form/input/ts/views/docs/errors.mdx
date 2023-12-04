@@ -1,0 +1,68 @@
+### Error Handling in `Input` Component
+
+#### Overview:
+
+The `Input` component from `pragmate-ui/form` package provides flexible error handling capabilities to indicate
+validation errors or other input-related issues. There are two main methods to implement error handling:
+
+1. **Using the `Error` Component for Detailed Control:**
+
+    - Import and embed the `Error` component within the `Input` component.
+    - Allows for customized error messages and styles.
+
+2. **Using `hasError` and `errorMessage` Properties:**
+    - Pass `hasError` and `errorMessage` as properties to the `Input` component.
+    - Simplifies the process by using predefined error handling behavior.
+
+#### 1. Using the `Error` Component:
+
+##### Importing:
+
+```javascript
+import { Error } from 'pragmate-ui/form';
+```
+
+##### Usage:
+
+Embed the `Error` component within the `Input` component to display custom error messages and apply specific styles.
+
+##### Example:
+
+```jsx
+<Input type='text' name='labels' label='Input with error'>
+	<Error show>Custom error message</Error>
+</Input>
+```
+
+##### Properties of `Error` Component:
+
+-   `show` (boolean): Determines whether to display the error message.
+-   `className` (string): Optional. Allows custom styling to be applied to the error message.
+
+##### Additional Notes:
+
+-   The `Error` component offers granular control over error display and styling.
+-   It can be used for custom error message placement and formatting.
+
+#### 2. Using `hasError` and `errorMessage` Properties:
+
+##### Usage:
+
+Pass `hasError` and `errorMessage` as properties to the `Input` component. This method uses a more integrated approach
+where the error handling logic is encapsulated within the `Input` component itself.
+
+##### Example:
+
+```jsx
+<Input type='text' name='labels' hasError={true} errorMessage='Custom error message' />
+```
+
+##### Properties:
+
+-   `hasError` (boolean): Indicates if the input field has an error.
+-   `errorMessage` (string): The message to display when `hasError` is `true`.
+
+##### Additional Notes:
+
+-   This method is suitable for simpler implementations where detailed control over error display is not required.
+-   It leverages the built-in error handling capabilities of the `Input` component.

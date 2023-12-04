@@ -1,0 +1,43 @@
+$label-color: var(--text-color);
+$input-border-color: #ccc;
+$input-border-color-focus: #007bff;
+$label-font-size: 18px;
+$label-font-size-small: 14px;
+$transition-speed: 0.2s;
+
+.pui-input.pui-input--floating {
+	position: relative;
+	margin-top: 20px;
+
+	input {
+		font-size: $label-font-size;
+		background: transparent;
+		width: 100%;
+		font-size: 1rem;
+		box-sizing: border-box;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:focus ~ .pui-input__label.floating-label,
+		&:not(:placeholder-shown) ~ .pui-input__label.floating-label {
+			top: -1rem;
+			background: var(--surface);
+			padding: 0.2rem 0.5rem;
+			border-radius: var(--border-radius-base);
+			font-size: 10px;
+
+			color: $label-color;
+		}
+	}
+
+	label.pui-input__label.floating-label {
+		position: absolute;
+		pointer-events: none;
+		left: 1rem;
+		top: 0.5rem;
+
+		transition: $transition-speed ease all;
+	}
+}

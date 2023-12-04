@@ -1,0 +1,31 @@
+.pui-element-input,
+pui-element-textarea {
+	&:hover:not(&.disabled),
+	&:focus-within:not(&.disabled) {
+		transition: border-color 0.4s ease-in-out;
+	}
+
+	&:hover:not(&.disabled) input,
+	&:hover:not(&.disabled) textarea {
+		transition: color 0.4s ease-in-out;
+	}
+
+	&.disabled,
+	&:disabled {
+		opacity: 0.5;
+		cursor: no-drop;
+
+		&:focus-within label,
+		input:not(:placeholder-shown) ~ label,
+		textarea:not(:placeholder-shown) ~ label,
+		label {
+			color: var(--gray);
+			cursor: no-drop;
+		}
+
+		input,
+		textarea {
+			cursor: no-drop;
+		}
+	}
+}

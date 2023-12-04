@@ -1,76 +1,58 @@
 import React from 'react';
-import {ChangeEvent, useRef, useState, MutableRefObject} from 'react';
-import {listClassName} from './class-list';
-import type {IProps, PropsState} from './type';
-import {InputContext} from './context';
-import {RenderingProps} from './rendering-props';
+import { useState } from 'react';
+import type { ILabelProps, IProps, IPropsState } from './types';
+import { InputContext } from './context';
+import { Label } from './components/label';
 
+import { ControlSelector } from './control';
+import { Error } from './components/error';
+
+interface IInputContainer {
+	className?: string;
+}
+/**
+ *
+ * @param props
+ *
+ * 1. pattern property + existing error.
+ * 2. Controlled Input where the implementer defines the error.
+ * 3. Automated Input with multiple validations and error management.
+ *
+ * @returns
+ */
 export /*bundle*/
 function Input(props: IProps): JSX.Element {
-	const input: MutableRefObject<HTMLInputElement> = useRef(null);
+	const { hasError, errorMessage, variant, className, label, children, type } = props;
 
-	const {
-		value,
-		errorMessage,
-		floating,
-		hasError,
-		disabled,
-		icon,
-		className,
-		password,
-		required,
-		loading,
-		children,
-		id,
-		name,
-		placeholder,
-	} = props;
+	const [value, setValue] = React.useState<string>(props.value ?? '');
+	const [state, setState] = useState({});
 
-	const [state, setState] = useState<PropsState>({
-		value: value ?? '',
-		errorMessage: errorMessage ?? 'Formato incorrecto',
-		lengthMessage: 'Cantidad máxima: ',
-		emptyMessage: 'Este campo es requerido',
-		type: props.type ?? 'text',
-	});
+	let cls = `pui-input${className ? ` ${className}` : ''}`;
+	if (props.type === 'date') cls += ' pui-input--date';
 
-	const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
-		if (!!props.onChange && typeof props.onChange === 'function') props.onChange(event);
-		setState({
-			...state,
-			_hasError: false,
-			value: event.target.value,
-		});
+	const variants = {
+		unstyled: 'pui-input--unstyled',
+		floating: 'pui-input--floating',
 	};
 
-	let properties: IProps = {...props};
-	let cls: string = className ? `${className} pui-element-input` : 'pui-element-input';
-	cls += icon || loading || password || required ? ' has-icon' : '';
-	cls += disabled ? ' disabled' : '';
-	cls += hasError ? ' error' : '';
-	cls += floating ? ' floating--label' : '';
+	if (props.variant && variants[props.variant]) cls += ` ${variants[props.variant]}`;
 
-	listClassName.forEach(prop => {
-		delete properties[prop];
-	});
+	const providerValue = { props, state, setState, value, setValue };
+	const labelSpecs: ILabelProps = { required: props.required };
+	const attrs: IInputContainer = {};
+	/**
+	 * todo: review it.
+	 */
+	if (variant === 'floating') labelSpecs.position = variant;
+	if (variant !== 'unstyled') attrs.className = cls;
 
-	const listValue = {state, props, setState, input};
-	const isValue = typeof value !== 'undefined' ? value : state.value;
 	return (
-		<InputContext.Provider value={listValue}>
+		<InputContext.Provider value={providerValue}>
 			<div className={cls}>
-				<input
-					ref={input}
-					{...properties}
-					name={name}
-					onChange={handleChange}
-					type={state.type}
-					value={isValue}
-					placeholder={placeholder ?? ' '}
-					id={id ?? name}
-				/>
-				<RenderingProps />
+				<ControlSelector />
 				{children}
+				{label && <Label {...labelSpecs}>{label}</Label>}
+				{errorMessage && <Error show={!!hasError} message={errorMessage} />}
 			</div>
 		</InputContext.Provider>
 	);

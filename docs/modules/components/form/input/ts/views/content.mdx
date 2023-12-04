@@ -1,110 +1,48 @@
-import {
-	implementation,
-	implementationDisabled,
-	implementationError,
-	implementationIcon,
-	implementationLoading,
-	implementationPassword,
-	implementationFloating,
-	implementationButton,
-	implementationDate,
-} from './implementations';
-import {ResultsFloating} from './results-floating';
-import {ResultInputError} from './result-input-error';
-import {ResultInputWithIcon} from './result-input-with-icon';
-import {ResultInputDisabled} from './result-input-disabled';
-import {ResultInputPassword} from './result-input-password';
-import {ResultInputLoading} from './result-input-loading';
-import {ResultDate} from './result-input-date';
-import {ResultsButton} from './result';
-import {Code} from 'pragmate-ui/code';
+import { implementation } from './implementations';
+
+import { Code } from 'pragmate-ui/code';
+import Errors from './docs/errors.mdx';
+import { DefaultExamples } from './examples/default';
+import { ErrorExamples } from './examples/errors';
+import { LabelExamples } from './examples/labels';
+// import { UIExample } from 'pragmate-ui-docs/utils';
 
 # Input
 
-El componente `Input` Nos permite agregar elementos input a nuestra aplicacion con la especialidad de poder agregar si
-deseamos o necesitamos como atributos un label definido,icono, un disable, contraseña con icono de ocultar y un spinner.
+The `Input` component is a versatile React component designed for creating input fields within forms. It supports
+multiple variants, types, and configurations, making it adaptable for various user interface designs.
 
-### Import:
+### Import
 
 <Code>{`import { Input } from 'pragmate-ui/form';`}</Code>
 
-### Component :
+Code:
 
 <Code>{`<Input type="text" name="name" label="Insert a text..." onChange={handleChange} value={value} />`}</Code>
 
-### Implementation :
+### Complete example
 
 <Code>{implementation}</Code>
 
-### Case input with floating :
+<DefaultExamples />
 
-<Code>{implementationFloating}</Code>
+#### Properties:
 
-<ResultsFloating />
+-   `type` (string): Specifies the type of input (e.g., 'text', 'date').
+-   `name` (string): Defines the name of the input element.
+-   `label` (string): Provides a text label for the input field. It's used differently based on the variant.
+-   `placeholder` (string): Specifies a short hint in the input field.
+-   `variant` (string): Determines the style variant of the input field ('unstyled', 'floating').
 
-### Case input with icon :
+<h2>General Styles</h2>
+<DefaultExamples />
 
-<ResultInputWithIcon />
+<h2>Labels positions</h2>
 
-<Code>{implementationIcon}</Code>
+<LabelExamples />
 
-### Case input disabled :
+<h3>Errors</h3>
 
-<ResultInputDisabled />
+<Errors />
 
-<Code>{implementationDisabled}</Code>
-
-### Case input password :
-
-<ResultInputPassword />
-
-<Code>{implementationPassword}</Code>
-
-### Case input loading :
-
-<ResultInputLoading />
-
-<Code>{implementationLoading}</Code>
-
-### Case input error:
-
-<Code>{implementationError}</Code>
-
-<ResultInputError />
-
-### Case input Button:
-
-<Code>{implementationButton}</Code>
-
-<ResultsButton />
-
-### Input date :
-
-En `Pragmate-ui` podemos personalizar el icono de calendario que sale en el input y podemos agregar un icono de la lista
-de pragmate agregando el atributo icon y el nombre del icono, si no agregamos un icono por defecto saldra uno.
-
-#### preview :
-
-<Code>{implementationDate}</Code>
-
-<ResultDate />
-
-### Props :
-
--   `value`: Representa el valor actual del campo de entrada. Si no se proporciona, se establece en una cadena vacía por
-    defecto.
--   `errorMessage`: Es el mensaje de error que se muestra cuando el formato del valor es incorrecto. Si no se
-    proporciona, se establece en "Formato incorrecto" por defecto.
--   `lengthMessage`: Es el mensaje que indica la cantidad máxima permitida para el valor. Por defecto, se establece en
-    "Cantidad máxima: ".
--   `emptyMessage`: Es el mensaje que se muestra cuando el campo de entrada está vacío y es requerido. Por defecto, se
-    establece en "Este campo es requerido".
--   `type`: Representa el tipo de entrada del campo. Si no se proporciona, se establece en "text" por defecto.
--   `className`: Es una clase CSS adicional que se agrega al contenedor principal del componente.
--   `icon`: Representa el nombre del icono que se muestra junto al campo de entrada.
--   `loading`: Indica si se debe mostrar un spinner de carga junto al campo de entrada.
--   `password`: Indica si el campo de entrada debe ocultar o mostrar el texto ingresado en forma de contraseña.
--   `required`: Indica si el campo de entrada es obligatorio.
--   `disabled`: Indica si el campo de entrada está deshabilitado para la interacción del usuario.
--   `hasError`: Indica si el campo de entrada tiene un error.
--   `floating`: Indica si la etiqueta flotante debe mostrarse encima del campo de entrada.
+<ErrorExamples />

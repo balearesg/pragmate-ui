@@ -1,0 +1,16 @@
+.pui-input {
+	&.error--right {
+		.pui-input-error-label {
+			right: 0;
+		}
+	}
+	.pui-input-error-label {
+		position: absolute;
+		bottom: -1.25rem;
+		font-size: 0.75rem;
+		color: var(--error-40);
+		&.right {
+			right: 0;
+		}
+	}
+}

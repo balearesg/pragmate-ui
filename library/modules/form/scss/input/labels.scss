@@ -1,0 +1,28 @@
+.pui-input .pui-input__label {
+	display: inline-flex;
+	justify-content: space-between;
+
+	&.is-required {
+		position: relative;
+		> span {
+			position: relative;
+			&:after {
+				position: absolute;
+				content: '*';
+				right: -0.8rem;
+				align-content: center;
+			}
+		}
+	}
+
+	&.pui-input__label--right,
+	&.pui-input__label--bottom-right {
+		justify-content: flex-end;
+	}
+	span {
+		&.pui-input__label--right {
+			display: flex;
+			align-self: end;
+		}
+	}
+}

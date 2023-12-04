@@ -1,0 +1,29 @@
+.ui-example {
+	border: 1px solid var(--outline);
+	padding: 2rem;
+	display: grid;
+	grid-gap: 1rem;
+	position: relative;
+	background: rgba(16, 14, 62, 0.4);
+	border-radius: var(--border-radius-base);
+	background: var(--background);
+	hr {
+		width: 100%;
+		background: var(--outline);
+	}
+	h5 {
+		margin: 0;
+	}
+	&:after {
+		content: '';
+		border-radius: 4px;
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+
+		height: 100%;
+		background-color: rgb(128, 3, 65, 0.8);
+		background-image: linear-gradient(45deg, rgb(128, 3, 65, 0.8) 0%, rgb(7, 150, 163, 0.8) 100%);
+		filter: blur(0.5rem);
+	}
+}
