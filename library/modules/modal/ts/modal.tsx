@@ -1,34 +1,30 @@
 import React from 'react';
-import {useState, useRef, MutableRefObject, SyntheticEvent, ReactNode} from 'react';
-import {Children} from './children';
+import { useState, useRef, MutableRefObject, SyntheticEvent, ReactNode } from 'react';
+import { Children } from './children';
 
-type props = {
+type Props = {
 	children: ReactNode;
 	className?: string;
 	onClose?: (e: SyntheticEvent<HTMLElement, Event>) => void;
 	show?: boolean;
+	size?: 'sm' | 'md' | 'lg' | 'xl';
 };
 export /*bundle*/
-function Modal(props: props) {
-	type state = {
-		container?: HTMLDivElement;
-		show: boolean;
-		closeClicked: boolean;
-	};
-	const [state, setState] = useState<state>({
+function Modal(props: Props) {
+	const [state, setState] = useState({
 		show: props?.show ?? false,
 		closeClicked: false,
-		container: null,
+		container: null
 	});
 	const modal: MutableRefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
 
 	const close = async (event: SyntheticEvent<HTMLElement, Event>): Promise<void> => {
 		if (event) event.stopPropagation();
-		const {onClose} = props;
+		const { onClose } = props;
 		const body: HTMLBodyElement = document.querySelector('body');
 		modal.current.classList.add('modal-hidden');
 		window.setTimeout(async (): Promise<void> => {
-			setState({...state, show: false, closeClicked: true});
+			setState({ ...state, show: false, closeClicked: true });
 			body.setAttribute('style', '');
 			body.classList.remove('body-custom-modal-opened');
 			onClose(event);
@@ -42,17 +38,21 @@ function Modal(props: props) {
 
 	const show: boolean = state.show;
 
-	let cls: string = 'pragmate-modal ';
+	let cls: string = 'pui-modal ';
 	cls += props.className ? props.className : '';
+	cls += show ? ' show-modal' : '';
 
-	if (show) cls += ' show-modal';
+	if (props.size) {
+		cls += ` modal-${props.size}`;
+	}
+
 	const output = [];
 
 	if (show) {
 		output.push(
 			<div key="modal-content-wrapper" className="modal-wrapper">
 				<div
-					className="modal-content"
+					className={`modal-content ${!!props?.size ? `sizing-${props?.size}` : 'sizing-md'}`}
 					onClick={event => {
 						event.stopPropagation();
 					}}

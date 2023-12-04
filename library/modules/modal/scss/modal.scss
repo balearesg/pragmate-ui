@@ -1,22 +1,27 @@
-body.body-pragmate-modal-opened {
+$modal-bg-color: rgba(0, 0, 0, 0.4);
+$modal-border-radius: var(--border-radius-base);
+$modal-show-animation: show 0.5s ease-in-out;
+
+body.body-pui-modal-opened {
 	height: 100vh;
 	overflow-y: hidden;
 	padding-right: 15px;
 }
 
-.pragmate-modal {
+.pui-modal {
 	display: none;
 	position: fixed;
 	inset: 0;
 	z-index: 1;
 	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: $modal-bg-color;
 	color: var(--text);
+
 	&.show-modal {
 		display: block;
 		z-index: 1000;
-		height: 100vh;
-		width: 100vw;
+		height: 100%;
+		width: 100%;
 	}
 
 	.modal-wrapper {
@@ -26,19 +31,56 @@ body.body-pragmate-modal-opened {
 		align-items: center;
 		justify-content: center;
 		min-height: 80vh;
-		height: 100%;
-		@media screen and (max-height: 500px) {
+		padding: 1rem;
+
+		@media screen and (max-height: 600px) {
 			height: auto;
 		}
 	}
 
 	.modal-content {
+		width: 100%;
 		position: relative;
 		background: var(--surface);
-		animation: show 0.5s ease-in-out;
-		border-radius: var(--border-radius-base);
+		animation: $modal-show-animation;
+		border-radius: $modal-border-radius;
 		padding: 2rem 1.5rem;
 
+		@media screen and (max-width: 768px) {
+			padding: 1rem;
+		}
+
+		&.sizing-sm {
+			max-width: 25%;
+
+			@media screen and (max-width: 768px) {
+				max-width: 85%;
+			}
+		}
+
+		&.sizing-md {
+			max-width: 50%;
+
+			@media screen and (max-width: 768px) {
+				max-width: 90%;
+			}
+		}
+
+		&.sizing-lg {
+			max-width: 75%;
+
+			@media screen and (max-width: 768px) {
+				max-width: 95%;
+			}
+		}
+
+		&.sizing-xl {
+			max-width: 90%;
+
+			@media screen and (max-width: 768px) {
+				max-width: 100%;
+			}
+		}
 	}
 }
 

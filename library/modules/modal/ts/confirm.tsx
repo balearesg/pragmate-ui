@@ -1,39 +1,40 @@
 import React from 'react';
-import {Button} from 'pragmate-ui/components';
-import {Modal} from './modal';
+import { Button } from 'pragmate-ui/components';
+import { Modal } from './modal';
 
 export /*bundle*/ const ConfirmModal = (properties): JSX.Element => {
 	type state = {
 		fetching?: boolean;
 	};
-	const [state, setState] = React.useState<state>({fetching: false});
+	const [state, setState] = React.useState<state>({ fetching: false });
 
 	const process = async (event): Promise<void> => {
 		event.stopPropagation();
-		setState({fetching: true});
-		const {onConfirm, onClose} = properties;
+		setState({ fetching: true });
+		const { onConfirm, onClose } = properties;
 		if (!onConfirm) {
 			console.warn('there is no confirm funciton defined');
-			setState({fetching: false});
+			setState({ fetching: false });
 			return;
 		}
 		await onConfirm();
-		setState({fetching: false});
+		setState({ fetching: false });
 	};
 
-	const {text, title, btn, onCancel, centered, onConfirm, btnConfirm, btnCancel} = properties;
+	const { text, title, btn, onCancel, centered, onConfirm, btnConfirm, btnCancel, className, classNameExt, texts } =
+		properties;
 
-	let cls: string = `pragmate-confirm-dialog${centered ? ' pragmate-confirm-dialog-centered' : ''}`;
-	if (properties.className) cls += ` ${properties.className}`;
+	let cls: string = `pui-confirm-dialog${centered ? ' centered' : ' non-centered'}`;
+	if (className) cls += ` ${className}`;
 
 	const props = Object.assign({}, properties);
 
-	['text', 'title', 'className', 'centering', 'btnCancel', 'btnConfirm', 'onCancel'].forEach(
+	['text', 'title', 'className', 'centering', 'btnCancel', 'btnConfirm', 'onCancel', 'size', 'texts'].forEach(
 		prop => delete props[prop]
 	);
 
-	let cancelLabel: string = 'Cancelar';
-	let confirmLabel: string = 'Confirmar';
+	let cancelLabel: string = texts?.cancel ? texts.cancel : 'Cancelar';
+	let confirmLabel: string = texts?.confirm ? texts.confirm : 'Confirmar';
 	let clsCancel: string = 'btn btn-default btn-cancel';
 	let clsConfirm: string = 'btn btn-primary btn-confirm';
 
@@ -47,25 +48,41 @@ export /*bundle*/ const ConfirmModal = (properties): JSX.Element => {
 		clsCancel = btnCancel.className ? btnCancel.className : clsCancel;
 	}
 
-	const disabled: {disabled?: boolean} = {};
+	const disabled: { disabled?: boolean } = {};
 	if (state.fetching) disabled.disabled = true;
 
 	return (
-		<Modal show className={cls} onClose={onCancel}>
+		<Modal show className={cls} onClose={onCancel} size={properties?.size || 'md'}>
 			<div className="confirm-dialog-content">
-				{title && <h3>{title}</h3>}
-				{text && <div>{text}</div>}
+				{title && <h3 className={classNameExt?.title ? classNameExt?.title : 'dialog-title-text'}>{title}</h3>}
+				{text && (
+					<p className={classNameExt?.description ? classNameExt?.description : 'dialog-description-text'}>
+						{text}
+					</p>
+				)}
 				{properties.children}
 			</div>
 
-			<div className="actions">
-				<Button label={cancelLabel} {...disabled} onClick={onCancel} variant="warning" bordered={true} />
+			<div
+				className={
+					classNameExt?.classNameActionDiv
+						? classNameExt?.classNameActionDiv
+						: `actions ${centered ? ' centered' : ' '}`
+				}
+			>
+				<Button
+					label={cancelLabel}
+					{...disabled}
+					onClick={onCancel}
+					variant={classNameExt?.classNameBtnCancel ? classNameExt.classNameBtnCancel : 'secondary'}
+					bordered={true}
+				/>
 				<Button
 					className={clsConfirm}
 					label={confirmLabel}
 					{...disabled}
 					onClick={process}
-					variant="success"
+					variant={classNameExt?.classNameBtnConf ? classNameExt.classNameBtnConf : 'primary'}
 					bordered
 				/>
 			</div>
