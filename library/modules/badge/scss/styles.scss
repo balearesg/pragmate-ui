@@ -9,7 +9,6 @@ $colors: 'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'defaul
 	justify-content: center;
 
 	.pui-badge {
-
 		position: absolute;
 		top: -2px;
 		right: 0px;
@@ -20,7 +19,7 @@ $colors: 'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'defaul
 		min-width: 1.248rem;
 
 		&.pui-badge--has-value {
-			padding: 0.3rem;
+			padding: 0.3rem 0.2rem;
 			font-size: 0.65rem;
 		}
 

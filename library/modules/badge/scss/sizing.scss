@@ -1,0 +1,29 @@
+.pui-badge__container {
+	.pui-badge {
+		&.pui-badge--has-value {
+			&.pui-badge--xs {
+				width: 1.2rem;
+				height: 1.2rem;
+			}
+
+			&.pui-badge--sm {
+				width: 1.4rem;
+				height: 1.4rem;
+			}
+
+			&.pui-badge--md {
+				width: 1.5rem;
+				height: 1.5rem;
+			}
+
+			&.pui-badge--lg {
+				width: 1.6rem;
+				height: 1.6rem;
+			}
+			&.pui-badge--xl {
+				width: 1.7rem;
+				height: 1.7rem;
+			}
+		}
+	}
+}

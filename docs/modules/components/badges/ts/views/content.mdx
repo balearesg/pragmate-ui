@@ -19,20 +19,41 @@ personalizables.
 ### Results :
 
 <Badge variant="primary" value={99}>
-  <Icon className="lg" icon="whatsapp" />
+	<Icon className="lg" icon="whatsapp" />
 </Badge>
 
 ### Badge de Punto
 
-Si deseamos cambiar el disenio del Badge podemos usar la opcion de mostrar un puntero con la propiedad `dot`. Esto se puede usar como una notificación de que algo ha cambiado sin contar
+Si deseamos cambiar el disenio del Badge podemos usar la opcion de mostrar un puntero con la propiedad `dot`. Esto se
+puede usar como una notificación de que algo ha cambiado sin contar
 
 <Code>{`<Badge variant="primary" value={99} dot> <Icon className="lg" icon="bell" /> </Badge>`}</Code>
 
 <Badge variant="primary" value={99} dot>
-  <Icon className="lg" icon="bell" />
+	<Icon className="lg" icon="bell" />
 </Badge>
 
-### Props :
+### Sizings:
+
+<div className="flex-container flex-column">
+	<Badge variant="primary" value="99+" sizing="xs">
+		<Icon className="lg" icon="bell" />
+	</Badge>
+	<Badge variant="primary" value="99+" sizing="sm">
+		<Icon className="lg" icon="bell" />
+	</Badge>
+	<Badge variant="primary" value="99+" sizing="md">
+		<Icon className="lg" icon="bell" />
+	</Badge>
+	<Badge variant="primary" value="99+" sizing="lg">
+		<Icon className="lg" icon="bell" />
+	</Badge>
+	<Badge variant="primary" value="99+" sizing="xl">
+		<Icon className="lg" icon="bell" />
+	</Badge>
+</div>
+
+### Props:
 
 El componente Badge acepta las siguientes propiedades:
 
@@ -41,5 +62,6 @@ El componente Badge acepta las siguientes propiedades:
     'default' por defecto.
 -   `value` (número, obligatorio): El valor numérico que se mostrará dentro de la insignia.
 -   `children` (ReactNode, obligatorio): El contenido que deseas mostrar junto a la insignia.
--   `dot` (booleano): Cambia el badge a un pequeño punto. Esto se puede usar como una notificación de que algo ha cambiado sin contar.
-
+-   `dot` (booleano): Cambia el badge a un pequeño punto. Esto se puede usar como una notificación de que algo ha
+    cambiado sin contar.
+-   `sizing` (xs | sm | md | lg xl): Define el tamaño del elemento (por defecto md)
