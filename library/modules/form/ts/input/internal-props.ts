@@ -11,6 +11,6 @@ export const internalProps = [
 	'label',
 	'password',
 	'loading',
-	'colorSpinner',
 	'variant',
+	'type'
 ];

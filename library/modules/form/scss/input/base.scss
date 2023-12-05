@@ -10,7 +10,7 @@ textarea {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	gap: 0.5rem;
-	margin-bottom: 1rem; // this margin lets the error label be positioned correctly
+	//	margin-bottom: 1rem; // this margin lets the error label be positioned correctly @julio Los componentes no deberia tener margin (El tag prinsipal)
 
 	input {
 		order: 2;

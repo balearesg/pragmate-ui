@@ -1,10 +1,10 @@
-import React, { useRef, ChangeEvent, MutableRefObject } from 'react';
+import React, { ChangeEvent, useEffect } from 'react';
 import { useInputContext } from './context';
 import { internalProps } from './internal-props';
-import { IProps } from './types';
-import { Icon } from 'pragmate-ui/icons';
-export function ControlSelector() {
-	const input: MutableRefObject<HTMLInputElement> = useRef(null);
+import { IProps } from './interfaces';
+import { IconContainer } from './components/icon-container';
+
+export function ControlSelector(): JSX.Element {
 
 	const {
 		setState,
@@ -13,9 +13,12 @@ export function ControlSelector() {
 		setValue,
 		props: { name, id, placeholder },
 		props,
+		input
 	} = useInputContext();
 	let properties: IProps = { ...props };
-
+	useEffect(() => {
+		setValue(props.value)
+	}, [props.value])
 	internalProps.forEach(prop => delete properties[prop]);
 	const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
 		if (!!props.onChange && typeof props.onChange === 'function') props.onChange(event);
@@ -24,16 +27,10 @@ export function ControlSelector() {
 		setState({
 			...state,
 			_hasError: false,
-			value: event.currentTarget.value,
+			value: currentValue,
 		});
 	};
-	const { type } = props;
-	const children = [];
-	if (type === 'date') {
-		children.push(
-			<Icon key='icon' icon='calendar' className='pui-input__icon' onClick={() => input.current.showPicker()} />
-		);
-	}
+
 	return (
 		<>
 			<input
@@ -44,8 +41,9 @@ export function ControlSelector() {
 				value={value}
 				placeholder={placeholder ?? ' '}
 				id={id ?? name}
+				type={state.type}
 			/>
-			{children}
+			<IconContainer />
 		</>
 	);
 }

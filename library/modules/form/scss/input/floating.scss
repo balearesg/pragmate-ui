@@ -7,7 +7,7 @@ $transition-speed: 0.2s;
 
 .pui-input.pui-input--floating {
 	position: relative;
-	margin-top: 20px;
+	//	margin-top: 20px;
 
 	input {
 		font-size: $label-font-size;
@@ -37,7 +37,9 @@ $transition-speed: 0.2s;
 		pointer-events: none;
 		left: 1rem;
 		top: 0.5rem;
-
 		transition: $transition-speed ease all;
+	}
+	&.left-icon label.pui-input__label.floating-label {
+		left: 2rem;
 	}
 }
