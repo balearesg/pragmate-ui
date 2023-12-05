@@ -1,30 +1,55 @@
-import React, { useRef, MutableRefObject, ChangeEvent, InputHTMLAttributes, HTMLAttributes } from 'react';
+import * as React from "react";
+import {
+	InputHTMLAttributes,
+	forwardRef,
+	RefAttributes,
+	useState,
+} from "react";
 
-interface props extends InputHTMLAttributes<HTMLInputElement> {
+interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 	label?: string;
-	className?: HTMLAttributes<HTMLDivElement>['className'];
 }
+export /*bundle*/ const Checkbox: React.FC<
+	IProps & RefAttributes<HTMLInputElement>
+> = forwardRef(
+	(props: IProps, ref: React.Ref<HTMLInputElement>): JSX.Element => {
+		const { checked, name, disabled, className, onChange, label } = props;
+		const [value, setValue] = useState<boolean>(!!checked);
+		const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+			event.stopPropagation();
+			setValue(!!checked);
+			onChange && onChange(event);
+		};
+		let cls: string = `pragmate-checkbox ${className ? className : ""}`;
+		cls += disabled ? " disabled" : "";
+		const properties: IProps = Object.assign({}, props);
 
-export /*bundle*/ function Radio(props: props): JSX.Element {
-	const input: MutableRefObject<HTMLInputElement> = useRef<HTMLInputElement>();
+		["className", "checked", "name", "onChange"].forEach((prop: string): void => {
+			delete properties[prop];
+		});
 
-	const onClick = (event): void => {
-		event.stopPropagation();
-
-		input.current.checked = true;
-
-		if (!!props.onChange) props.onChange(event);
-	};
-
-	const properties: props = { ...props };
-	delete properties.onChange;
-
-	const cls: string = `pui-input-radio ${properties.className ? properties.className : ''}`;
-
-	return (
-		<span className={cls} onClick={onClick}>
-			<input ref={input} {...properties} type='radio' onChange={onClick} />
-			<label className='pui-radio-label'>{properties.label}</label>
-		</span>
-	);
-}
+		return (
+			<div className={cls}>
+				<input
+					style={{ display: "none" }}
+					ref={ref}
+					type="checkbox"
+					className="inp-cbx"
+					id={name}
+					name={name}
+					checked={checked ?? value}
+					onChange={handleChange}
+					{...properties}
+				/>
+				<label className="cbx" htmlFor={name}>
+					<span>
+						<svg width="12px" height="9px" viewBox="0 0 12 9">
+							<polyline points="1 5 4 8 11 1"></polyline>
+						</svg>
+					</span>
+					<span>{label}</span>
+				</label>
+			</div>
+		);
+	}
+);

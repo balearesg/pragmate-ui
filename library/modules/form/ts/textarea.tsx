@@ -61,6 +61,8 @@ export /*bundle*/ function Textarea(props: props): JSX.Element {
 	['className', 'hasError', 'errorMessage', 'children', 'label'].forEach(prop => {
 		delete properties[prop];
 	});
+	let clsLabel = ""
+	if (props.required) cls += ' is-required';
 
 	return (
 		<div className={cls}>
@@ -70,13 +72,12 @@ export /*bundle*/ function Textarea(props: props): JSX.Element {
 					{...properties}
 					name={props.name}
 					onChange={handleChange}
-					value={typeof props.value !== 'undefined' ? props.value : state.value}
+					value={typeof props.value !== 'undefined' ? props.value ?? "" : state.value ?? ""}
 					placeholder={props.placeholder ?? ' '}
 				/>
 				{props.children}
 				{error}
-				{props.label && <label htmlFor={props.id}>{props.label}</label>}
-				{props.required && <span className='pui-input__required-label'>(*)</span>}
+				{props.label && <label className={clsLabel} htmlFor={props.id}>{props.label}</label>}
 			</>
 		</div>
 	);
