@@ -5,7 +5,6 @@ import { IProps, IIconMap } from './types';
 
 export /*bundle*/
 	function Alert({ message, className, type, title, children, closable, onClose, icon }: IProps) {
-	console.log("🚀 ~ file: alert.tsx:8 ~ Alert ~ message:", message)
 
 	const [show, setShow] = React.useState(true);
 

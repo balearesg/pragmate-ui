@@ -38,7 +38,7 @@ export function ControlSelector(): JSX.Element {
 				{...properties}
 				name={name}
 				onChange={handleChange}
-				value={value}
+				value={value ?? ""}
 				placeholder={placeholder ?? ' '}
 				id={id ?? name}
 				type={state.type}
