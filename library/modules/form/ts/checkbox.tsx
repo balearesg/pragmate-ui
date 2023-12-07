@@ -1,11 +1,4 @@
-import * as React from "react";
-import {
-	InputHTMLAttributes,
-	forwardRef,
-	RefAttributes,
-	useState,
-} from "react";
-
+import React, { InputHTMLAttributes, forwardRef, RefAttributes, useState } from "react";
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 	label?: string;
 }

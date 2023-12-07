@@ -1,5 +1,4 @@
 import React from "react";
-import { } from "pragmate-ui/icons";
 import { useInputContext } from "../context";
 import { IconButton } from "pragmate-ui/icons";
 

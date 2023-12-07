@@ -30,7 +30,11 @@ export function ControlSelector(): JSX.Element {
 			value: currentValue,
 		});
 	};
-
+	const attrs = {
+		id: id ?? name,
+		placeholder: placeholder ?? ' ',
+		value: value ?? ' '
+	};
 	return (
 		<>
 			<input
@@ -38,10 +42,8 @@ export function ControlSelector(): JSX.Element {
 				{...properties}
 				name={name}
 				onChange={handleChange}
-				value={value ?? ""}
-				placeholder={placeholder ?? ' '}
-				id={id ?? name}
 				type={state.type}
+				{...attrs}
 			/>
 			<IconContainer />
 		</>
