@@ -4,12 +4,12 @@
     }
     svg.pragmate-icon.input-icon {
         position: absolute;
-        right: 8px;
-        top: 34px;
+        right: 0.5rem;
+        top: 2.125rem;
         fill: var(--primary);
     }
     &.icon__floating svg.pragmate-icon.input-icon {
-        top: 8px;
+        top: 0.5rem;
     }
     &.left-icon {
         input {
@@ -17,7 +17,7 @@
         }
         svg.pragmate-icon.input-icon {
             right: auto;
-            left: 8px;
+            left: 0.5rem;
         }
     }
 }

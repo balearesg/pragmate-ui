@@ -3,7 +3,7 @@
 	.pui-textarea textarea {
 		background: transparent;
 		box-shadow: none;
-		border: 1px solid var(--outline);
+		border: 0.063rem solid var(--outline);
 		padding: 0.5rem 1rem;
 		outline: none;
 		width: 100%;
@@ -28,15 +28,15 @@
 
 .pui-input,
 .pui-textarea {
-	input[type="date"]::-webkit-inner-spin-button,
-	input[type="date"]::-webkit-calendar-picker-indicator {
+	input[type='date']::-webkit-inner-spin-button,
+	input[type='date']::-webkit-calendar-picker-indicator {
 		display: none;
 		-webkit-appearance: none;
 	}
-	input[type="password"]::-ms-reveal,
-	input[type="password"]::-ms-clear,
-	input[type="password"]::-webkit-contacts-auto-fill-button,
-	input[type="password"]::-webkit-credentials-auto-fill-button {
+	input[type='password']::-ms-reveal,
+	input[type='password']::-ms-clear,
+	input[type='password']::-webkit-contacts-auto-fill-button,
+	input[type='password']::-webkit-credentials-auto-fill-button {
 		display: none !important;
 	}
 
