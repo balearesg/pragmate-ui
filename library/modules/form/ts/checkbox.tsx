@@ -12,7 +12,7 @@ interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 export /*bundle*/ const Checkbox: React.FC<
 	IProps & RefAttributes<HTMLInputElement>
 > = forwardRef(
-	(props: IProps, ref: React.Ref<HTMLInputElement>): JSX.Element => {
+	function (props: IProps, ref: React.Ref<HTMLInputElement>): JSX.Element {
 		const { checked, name, disabled, className, onChange, label } = props;
 		const [value, setValue] = useState<boolean>(!!checked);
 		const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {

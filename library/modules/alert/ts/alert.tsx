@@ -10,7 +10,7 @@ export /*bundle*/
 
 	if (!show || (!message && !children)) return null;
 
-	const onCloseClick = async (event: MouseEvent) => {
+	const handleClick = async (event: MouseEvent) => {
 		event.stopPropagation();
 		if (onClose) await onClose();
 		setShow(false);
@@ -29,7 +29,7 @@ export /*bundle*/
 	const defaultIcon = icons[type ?? 'success'];
 	const hasIcon = !!icon;
 	return (
-		<div className={cls} onClick={onCloseClick}>
+		<div className={cls} onClick={handleClick}>
 			{icon && (
 				<section>
 					<Icon icon={defaultIcon} />
@@ -39,7 +39,7 @@ export /*bundle*/
 			<Content message={message} title={title} icon={hasIcon}>
 				{children}
 			</Content>
-			{closable && <IconButton icon="close" onClick={onCloseClick} />}
+			{closable && <IconButton icon="close" onClick={handleClick} />}
 		</div>
 	);
 }

@@ -12,7 +12,7 @@ export interface IProps extends InputHTMLAttributes<HTMLInputElement> {
     password?: boolean
 }
 
-export type IPropsState = {
+export interface IPropsState {
     value?: string;
     errorMessage: string;
     lengthMessage: string;
@@ -26,7 +26,7 @@ export interface ILabelProps {
     required?: boolean;
 };
 
-export type TState = {
+export interface TState {
     value?: string | number | readonly string[];
     type?: InputHTMLAttributes<HTMLInputElement>['type'];
 };

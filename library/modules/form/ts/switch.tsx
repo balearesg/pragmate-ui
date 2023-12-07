@@ -28,7 +28,7 @@ export /* bundle */ function Switch(props: IProps): JSX.Element {
 		delete properties[prop];
 	});
 
-	const id = !!props.id ? props.id : props.name ?? "pui-element-switch"
+	const id = props.id ?? props.name ?? "pui-element-switch";
 
 	return (
 		<div className={classNameSwitch}>

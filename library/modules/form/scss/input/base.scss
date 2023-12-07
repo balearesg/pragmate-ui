@@ -3,7 +3,8 @@ textarea {
 	padding: 0.5rem;
 }
 
-.pui-input {
+.pui-input,
+.pui-textarea {
 	display: flex;
 	flex-direction: column;
 	position: relative;
