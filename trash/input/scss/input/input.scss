@@ -6,7 +6,8 @@
 		background: var(--surface-dim);
 	}
 }
-.pui-element-input-dos {
+.pui-element-input-dos,
+.pui-textarea {
 	width: 100%;
 	position: relative;
 	box-sizing: border-box;
@@ -16,7 +17,7 @@
 	transition: all 0.4s ease-in-out;
 	padding: 0 8px;
 
-	input[type='date']::-webkit-calendar-picker-indicator {
+	input[type="date"]::-webkit-calendar-picker-indicator {
 		position: absolute;
 		right: 0.9rem;
 		background: none;

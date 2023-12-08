@@ -1,15 +1,11 @@
-import React from 'react';
+import React, { MutableRefObject, useRef } from 'react';
 import { useState } from 'react';
-import type { ILabelProps, IProps, IPropsState } from './types';
+import type { IInputContainer, IInputContextValue, ILabelProps, IProps, TState } from './interfaces';
 import { InputContext } from './context';
 import { Label } from './components/label';
-
 import { ControlSelector } from './control';
 import { Error } from './components/error';
 
-interface IInputContainer {
-	className?: string;
-}
 /**
  *
  * @param props
@@ -25,15 +21,16 @@ interface IInputContainer {
  * @returns
  */
 export /*bundle*/
-function Input(props: IProps): JSX.Element {
-	const { hasError, errorMessage, variant, className, label, children, type } = props;
-
+	function Input(props: IProps): JSX.Element {
+	const { hasError, errorMessage, variant, className, label, children, icon, type } = props;
 	const [value, setValue] = React.useState<string>(props.value ?? '');
-	const [state, setState] = useState({});
-
-	let cls = `pui-input${className ? ` ${className}` : ''}`;
+	const [state, setState] = useState<TState>({ type });
+	const input: MutableRefObject<HTMLInputElement> = useRef(null);
+	let cls: string = `pui-input${className ? ` ${className}` : ''}`;
 	if (props.type === 'date') cls += ' pui-input--date';
-
+	if (!!icon) cls += ' pui-input--icon';
+	if (!!icon && variant === "floating") cls += " icon__floating";
+	if (props.type === "password") cls += " pui-input--password"
 	const variants = {
 		unstyled: 'pui-input--unstyled',
 		floating: 'pui-input--floating',
@@ -41,7 +38,7 @@ function Input(props: IProps): JSX.Element {
 
 	if (props.variant && variants[props.variant]) cls += ` ${variants[props.variant]}`;
 
-	const providerValue = { props, state, setState, value, setValue };
+	const providerValue: IInputContextValue = { props, state, setState, value, setValue, input };
 	const labelSpecs: ILabelProps = { required: props.required };
 	const attrs: IInputContainer = {};
 	/**
@@ -58,6 +55,7 @@ function Input(props: IProps): JSX.Element {
 				{children}
 				{label && <Label {...labelSpecs}>{label}</Label>}
 				{errorMessage && <Error show={!!hasError} message={errorMessage} />}
+
 			</div>
 		</InputContext.Provider>
 	);

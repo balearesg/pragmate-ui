@@ -1,4 +1,5 @@
-.pui-input .pui-input__label {
+.pui-input .pui-input__label,
+.pui-textarea .pui-input__label {
 	display: inline-flex;
 	justify-content: space-between;
 
@@ -8,7 +9,7 @@
 			position: relative;
 			&:after {
 				position: absolute;
-				content: '*';
+				content: "*";
 				right: -0.8rem;
 				align-content: center;
 			}

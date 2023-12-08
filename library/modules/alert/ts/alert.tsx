@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import { Icon, IconButton } from 'pragmate-ui/icons';
 import { Content } from './content';
 import { IProps, IIconMap } from './types';
 
 export /*bundle*/
-function Alert({ message, className, type, title, children, closable, onClose, icon }: IProps) {
+	function Alert({ message, className, type, title, children, closable, onClose, icon }: IProps) {
+
 	const [show, setShow] = React.useState(true);
 
 	if (!show || (!message && !children)) return null;
 
-	const onCloseClick = async () => {
+	const handleClick = async (event: MouseEvent) => {
+		event.stopPropagation();
 		if (onClose) await onClose();
 		setShow(false);
 	};
@@ -27,7 +29,7 @@ function Alert({ message, className, type, title, children, closable, onClose, i
 	const defaultIcon = icons[type ?? 'success'];
 	const hasIcon = !!icon;
 	return (
-		<div className={cls} onClick={close}>
+		<div className={cls} onClick={handleClick}>
 			{icon && (
 				<section>
 					<Icon icon={defaultIcon} />
@@ -37,7 +39,7 @@ function Alert({ message, className, type, title, children, closable, onClose, i
 			<Content message={message} title={title} icon={hasIcon}>
 				{children}
 			</Content>
-			{closable && <IconButton icon="close" onClick={onCloseClick} />}
+			{closable && <IconButton icon="close" onClick={handleClick} />}
 		</div>
 	);
 }

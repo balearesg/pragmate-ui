@@ -1,10 +1,11 @@
 import React from 'react';
-import {RippleEffect} from 'pragmate-ui/ripple';
+import { RippleEffect } from 'pragmate-ui/ripple';
 import tippy from 'tippy.js';
+import { Icon } from 'pragmate-ui/icons';
 
 export /*bundle*/ function Chip(props) {
-	const {item, type, children, className, title} = props;
-	const properties = {...props};
+	const { item, type, className, title, children, icon } = props;
+	const properties = { ...props };
 	const ref = React.useRef<HTMLSpanElement>(null);
 
 	['children', 'type', 'className'].forEach(key => delete properties[key]);
@@ -24,11 +25,13 @@ export /*bundle*/ function Chip(props) {
 	if (properties.onClick) {
 		cls += ` is-clickable`;
 	}
+	const showIcon = icon && <Icon icon={icon} />;
 
 	return (
 		<span ref={ref} className={cls} {...properties}>
 			{item}
 			{children}
+			{showIcon}
 		</span>
 	);
 }

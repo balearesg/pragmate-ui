@@ -1,4 +1,5 @@
-.pui-element-input {
+.pui-element-input,
+.pui-textarea {
     &:has(.pragmate-button) {
         display: flex;
         flex-direction: row;

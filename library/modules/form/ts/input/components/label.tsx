@@ -1,6 +1,6 @@
 import React from 'react';
 import { useInputContext } from '../context';
-import { ILabelProps } from '../types';
+import { ILabelProps } from '../interfaces';
 
 export /*bundle */ function Label({ required, position, children }: ILabelProps = {}) {
 	const { name, id } = useInputContext();
