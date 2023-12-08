@@ -21,7 +21,7 @@ function View({ store }: { store: StoreManager }) {
 		store.generatePalettes();
 	};
 
-	return <ConverterView />;
+	// return <ConverterView />;
 	return (
 		<div className='page__container'>
 			<h2>Template tones</h2>
