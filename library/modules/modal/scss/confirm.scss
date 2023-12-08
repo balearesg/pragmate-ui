@@ -7,28 +7,28 @@ pragmate-ui
 		justify-content: center;
 		text-align: center;
 
-    .confirm-dialog-content,
-    .actions {
-      display: grid;
-      justify-content: center;
-    }
+		.confirm-dialog-content,
+		.actions {
+			display: grid;
+			justify-content: center;
+		}
 
-    & :where(p, div) {
-      color: var(--text-color);
-    }
-  }
-  .confirm-dialog-content :where(p, div, h3, h4) {
-    color: var(--text-color);
-    margin: 0;
-  }
-  .actions {
-    border-top: 1px solid var(--gray-light);
-    padding: 15px 0 0;
-    margin-top: 15px;
-    display: grid;
-    grid-auto-flow: column;
-    grid-gap: 8px;
-    justify-content: end;
+		& :where(p, div) {
+			color: var(--text-color);
+		}
+	}
+	.confirm-dialog-content :where(p, div, h3, h4) {
+		color: var(--text-color);
+		margin: 0;
+	}
+	.actions {
+		border-top: 1px solid var(--gray-light);
+		padding: 15px 0 0;
+		margin-top: 15px;
+		display: grid;
+		grid-auto-flow: column;
+		grid-gap: 8px;
+		justify-content: end;
 
 		.pragmate-button {
 			margin: 0;

@@ -5,7 +5,6 @@ import { IProps } from './interfaces';
 import { IconContainer } from './components/icon-container';
 
 export function ControlSelector(): JSX.Element {
-
 	const {
 		setState,
 		state,
@@ -13,17 +12,18 @@ export function ControlSelector(): JSX.Element {
 		setValue,
 		props: { name, id, placeholder },
 		props,
-		input
+		input,
 	} = useInputContext();
 	let properties: IProps = { ...props };
 	useEffect(() => {
-		setValue(props.value)
-	}, [props.value])
+		setValue(props.value);
+	}, [props.value]);
 	internalProps.forEach(prop => delete properties[prop]);
 	const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
 		if (!!props.onChange && typeof props.onChange === 'function') props.onChange(event);
 		const currentValue = event.currentTarget.value;
 		setValue(currentValue);
+
 		setState({
 			...state,
 			_hasError: false,
@@ -33,18 +33,11 @@ export function ControlSelector(): JSX.Element {
 	const attrs = {
 		id: id ?? name,
 		placeholder: placeholder ?? ' ',
-		value: value ?? ' '
+		value: value ?? ' ',
 	};
 	return (
 		<>
-			<input
-				ref={input}
-				{...properties}
-				name={name}
-				onChange={handleChange}
-				type={state.type}
-				{...attrs}
-			/>
+			<input ref={input} {...properties} name={name} onChange={handleChange} type={state.type} {...attrs} />
 			<IconContainer />
 		</>
 	);

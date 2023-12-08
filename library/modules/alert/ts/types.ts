@@ -20,3 +20,8 @@ export /*bundle*/ enum ITypes {
 export interface IIconMap {
 	[key: string]: string;
 }
+
+export type AlertAttributes = {
+	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
+	className: string;
+};
