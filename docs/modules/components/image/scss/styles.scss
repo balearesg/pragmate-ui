@@ -2,20 +2,9 @@
 	width: 100%;
 
 	display: grid;
-	.pui-image {
-		display: flex;
-		justify-content: center;
-		max-width: 600px;
-		margin: 0 auto;
-		max-height: 450px;
-		height: 100%;
-		width: 100%;
-		img {
-			width: 100%;
-		}
-		&.pui-image-error,
-		&.pui-image-preload {
-			background-color: var(--surface);
-		}
-	}
+	max-width: 600px;
+	margin: 0 auto;
+	max-height: 450px;
+	height: 100%;
+	width: 100%;
 }
