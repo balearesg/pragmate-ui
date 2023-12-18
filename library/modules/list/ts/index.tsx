@@ -13,7 +13,7 @@ export /*bundle */ function List<T>({
 	className,
 	index = 'id',
 	control,
-	container = 'ul',
+	container = 'ul'
 }: ListProps<T>): ReactElement {
 	const Container = container;
 	const Control = control;
@@ -23,9 +23,10 @@ export /*bundle */ function List<T>({
 	// });
 
 	const output: ReactNode[] = items.map((item, idx) => {
-		return React.createElement(Control as React.ElementType<{ data: T }>, {
+		return React.createElement(Control as React.ElementType<{ data: T; index: number }>, {
 			key: (item as any)[index] || idx,
-			data: item,
+			index: idx,
+			data: item
 		});
 	});
 
