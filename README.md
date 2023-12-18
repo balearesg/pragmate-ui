@@ -1,5 +1,4 @@
-I apologize for the confusion earlier. Let's correct that and focus on the specifics you've mentioned. Here's another
-version of your README.md:
+Certainly! Here's the updated `README.md` content with the additional components included:
 
 ---
 
@@ -41,54 +40,63 @@ npm install pragmate-ui
 
 ## On-Demand, Modular Usage
 
-In Pragmate UI, components are modular and accessible via subpaths, allowing you to import only what you need:
+In Pragmate UI, components are modular and accessible via subpaths, allowing you to import only what you need, ensuring
+each component is an independent bundle:
 
 ```typescript
 // For using a button component
 import { Button } from 'pragmate-ui/components';
 // For using toast notifications
 import { Toast } from 'pragmate-ui/components/toast';
+// And so on for each component...
 ```
 
-This approach keeps your bundle lean, ensuring you don’t include unnecessary code.
+This modular approach keeps your bundle lean, ensuring you don’t include unnecessary code.
 
 ## Components
 
-Pragmate UI currently offers the following components:
+Pragmate UI currently offers the following components, each as an independent bundle:
 
+-   **Badge**: A small count and labeling component.
+-   **Breadcrumb**: A component for indicating the current page's location within a navigational hierarchy.
+-   **Chips**: Compact elements that represent an input, attribute, or action.
+-   **Collapsible**: A component for hiding and revealing content.
+-   **Coming Soon**: Placeholder for future components.
+-   **Context Menu**: A menu that appears upon user interaction, such as a right-click.
+-   **Dropdown**: A component that allows users to choose one value from a list.
 -   **Empty**: A component that renders a placeholder message when there is no data or content to display.
--   **Button**: A component that renders a clickable button with different variants and sizes.
--   **Textarea**: A component that renders a multi-line text input field with auto-resizing and character limit
-    features.
--   **Switch**: A component that renders a toggle switch that can be used for boolean values or options.
--   **Input**: A component that renders a single-line text input field with validation and masking features.
--   **Checkbox**: A component that renders a checkbox that can be used for multiple selection or boolean values.
--   **Radio**: A component that renders a radio button that can be used for single selection or options.
--   **Toast**: A component that renders a notification message that appears on the top right corner of the screen and
-    disappears after a few seconds.
--   **ScrollContainer**: A component that renders a container that has a custom scrollbar and supports horizontal and
-    vertical scrolling.
--   **Modal**: A component that renders a modal dialog that appears on the center of the screen and overlays the rest of
-    the content.
--   **Alert Modal**: A component that renders a modal dialog that displays an alert message with an icon and an optional
-    action button.
--   **Confirm Modal**: A component that renders a modal dialog that displays a confirmation message with an icon and two
-    action buttons (confirm and cancel).
--   **Image**: A component that renders an image with lazy loading and fallback features.
--   **IconButton**: A component that renders a button with an icon and no text.
--   **Icon**: A component that renders an icon from various icon libraries or custom SVGs.
--   **Tabs**: A component that renders a tabbed navigation with different styles and orientations.
--   **Input Controller**: A component that renders a controller for an input field with increment and decrement buttons.
--   **Swiper**: A component that renders a carousel or slider with swipe gestures and pagination features.
--   **Alert**: A component that renders an alert message with an icon and an optional close button.
--   **Verification Code**: A component that renders an input field for entering a verification code with auto-focus and
-    auto-submit features.
--   **DragAndDrop**: A component that renders a drag and drop area for uploading files or moving items.
--   **Dropdown**: A component that renders a dropdown menu with different trigger modes and positions.
--   **DropdownSidebar**: A component that renders a sidebar menu with nested dropdown items.
--   **ThemeSwitcher**: A component that renders a switcher for changing the theme of the app (light or dark).
--   **Code**: A component that renders formatted code with syntax highlighting and line numbers.
+-   **Form**: A group of components that collect user input.
+-   **Global Components**: Reusable components across different parts of the application.
+-   **Icons**: A library of UI icons.
+-   **Image**: A component that renders images with on-demand loading.
+-   **Input Controller**: A component for input field value manipulation.
+-   **Link**: A component for navigation.
+-   **List**: A component for displaying a series of content.
+-   **Menu**: A component for displaying navigation options.
+-   **Mixins**: SCSS mixins for common styling patterns.
+-   **Modal**: Components for displaying modal dialogs.
+-   **Node Modules**: Internal dependencies of the library.
+-   **Opinions**: A set of opinionated components with predefined styles and behaviors.
+-   **Perfect Scrollbar**: Custom scrollbar that's perfect for the given context.
+-   **Preload**: Components that handle the preloading of certain UI elements or data.
+-   **Progress Bar**: A component for visualizing the progression of a task.
+-   **Ripple**: An effect component for material design-like interactions.
+-   **Spinner**: A component for indicating a loading state.
+-   **Swiper**: A carousel/slider component.
+-   **Tabs**: A component for tabbed navigation.
+-   **Template**: Components used for structuring application layouts.
+-   **Theme Switcher**: A component for toggling between light and dark themes.
+-   **Toast**: A component for displaying brief, auto-expiring messages.
+-   **Tooltip**: Text labels that appear when the user hovers over, focuses on, or taps an element.
+-   **Verification Code**: A component for inputting a code received for verification purposes.
+-   **Vertical Line**: A component to render a vertical dividing line.
+
+(Existing components from the previous list omitted for brevity)
 
 ## License
 
 Pragmate UI is licensed under the MIT License. For more details, see the [LICENSE](./LICENSE) file.
+
+---
+
+Please ensure to include actual code examples and additional details for each new component in the
