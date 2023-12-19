@@ -10,6 +10,9 @@
 	max-width: 300px;
 	min-height: 300px;
 	//  aspect-ratio: 1 / 1;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	user-select: none;
 
 	img {
@@ -58,6 +61,8 @@
 		display: inline-flex;
 		padding: 8px;
 		z-index: 2;
+		width: 30px;
+		height: 30px;
 		cursor: pointer;
 		&.swiper-button-prev {
 			left: 0.5rem;
@@ -67,6 +72,9 @@
 		}
 		svg.pragmate-icon {
 			fill: #fff;
+			position: absolute;
+			inset: 0;
+			margin: auto;
 		}
 	}
 }

@@ -1,0 +1,21 @@
+{
+	"name": "slider",
+	"platforms": [
+		"web",
+		"android",
+		"browser"
+	],
+	"bundle": "code",
+	"ts": {
+		"path": "ts",
+		"files": [
+			"*"
+		]
+	},
+	"scss": {
+		"path": "/scss",
+		"files": [
+			"*"
+		]
+	}
+}

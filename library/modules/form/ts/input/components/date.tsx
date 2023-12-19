@@ -3,8 +3,9 @@ import { Icon } from "pragmate-ui/icons";
 import { useInputContext } from "../context";
 
 export function Date(): JSX.Element {
-    const { input, props } = useInputContext();
+    const { input, props }: any = useInputContext();
     if (props.type !== "date") return null;
+
     return (
         <Icon
             key="icon"

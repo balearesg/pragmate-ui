@@ -1,0 +1,23 @@
+.swiper-container {
+    .swiper-slide,
+    .swiper-wrapper {
+        width: 60px;
+        margin-right: 16px;
+        height: 60px;
+    }
+    .swiper__navigation-btn {
+        &.swiper-button-prev,
+        &.swiper-button-next {
+            top: 25%;
+        }
+    }
+    &.slider-buttons {
+        .swiper-slide,
+        .swiper-wrapper {
+            min-width: 80px;
+            margin-right: 16px;
+            height: 40px;
+            max-width: 100px;
+        }
+    }
+}

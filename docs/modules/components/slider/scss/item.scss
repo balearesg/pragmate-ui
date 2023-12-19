@@ -1,0 +1,30 @@
+.content-item {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    row-gap: 16px;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    padding: 0 0 4px 0;
+    width: 50px;
+    &:hover {
+        span {
+            color: var(--primary);
+        }
+        svg.pragmate-icon {
+            fill: var(--primary);
+        }
+        &::after {
+            content: '';
+            height: 2px;
+            background-color: var(--primary);
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    &.content-item-button {
+        width: 100px;
+    }
+}
