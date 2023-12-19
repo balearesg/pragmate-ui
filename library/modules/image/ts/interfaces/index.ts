@@ -5,7 +5,7 @@ export interface IProps extends ImgHTMLAttributes<HTMLImageElement> {
 	children?: ReactNode;
 	onError?: (e: SyntheticEvent<Element, Event>) => void;
 	sources?: Array<ISrcSet>;
-	sizeLoadingError?: {
+	sizeLoading?: {
 		height: string,
 		width: string
 	};
@@ -29,4 +29,8 @@ export interface IContext extends IProps {
 	state?: IInitialState
 };
 
-export interface ISrcSet extends SourceHTMLAttributes<HTMLSourceElement> { }
+export interface ISrcSet {
+	maxWidth?: number,
+	minWidth?: number,
+	srcSet: string
+}

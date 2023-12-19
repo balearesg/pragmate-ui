@@ -8,7 +8,7 @@ import { useLoading } from './hooks/use-loading';
 
 export /*bundle*/
 	function Image(props: IProps): JSX.Element {
-	const { className, onClick, children, sizeLoadingError } = props;
+	const { className, onClick, children, sizeLoading } = props;
 	const [state, setState] = useLoading(props);
 	const { error, loaded, htmlLoaded } = state;
 	let cls: string = `pui-image ${className ? ` ${className}` : ''}`;
@@ -16,7 +16,7 @@ export /*bundle*/
 	if (error) cls += ' pui-image-error';
 	const Content = error ? Error : Img;
 	const properties: IProps = { ...props, className: cls, onClick };
-	['src', 'alt', 'onError', 'children', 'size', 'loading', 'error', 'sources'].forEach(
+	['src', 'alt', 'onError', 'children', 'size', 'loading', 'error', 'sources', 'sizeLoading'].forEach(
 		(prop) => delete properties[prop]
 	);
 	const value: IContext = {
@@ -27,13 +27,13 @@ export /*bundle*/
 	const styles: React.CSSProperties = {};
 	if (
 		(!loaded || !htmlLoaded || error) &&
-		!!sizeLoadingError &&
-		typeof sizeLoadingError === 'object' &&
-		sizeLoadingError.height &&
-		sizeLoadingError.width
+		!!sizeLoading &&
+		typeof sizeLoading === 'object' &&
+		sizeLoading.height &&
+		sizeLoading.width
 	) {
-		styles.height = sizeLoadingError.height;
-		styles.width = sizeLoadingError.width;
+		styles.height = sizeLoading.height;
+		styles.width = sizeLoading.width;
 	}
 	return (
 		<ImageContext.Provider value={value}>

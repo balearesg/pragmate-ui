@@ -6,7 +6,7 @@ export function Error() {
         <Image
             src="invalid image url"
             alt="image alt"
-            sizeLoadingError={{
+            sizeLoading={{
                 width: "600px",
                 height: "450px"
             }}

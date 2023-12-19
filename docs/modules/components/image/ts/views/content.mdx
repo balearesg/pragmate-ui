@@ -1,8 +1,9 @@
 import { Results } from './results';
-import { implementation, implementationSource, implementationError } from './implementation';
+import { implementation, implementationSource, implementationError, implementationSourceWidth } from './implementation';
 import { Code } from 'pragmate-ui/code';
 import { Error } from "./examples/error";
 import { Sources } from "./examples/source";
+import { SourcesWidth } from './examples/sources-with-width'
 
 # Image
 
@@ -53,3 +54,14 @@ Image puede recibir una propiedad sources el cual es un array con los distintos 
 #### Result :
 
 <Sources />
+
+Sources tambien puede recibir como propiedad `minWidth` y `maxWidth` de forma que al pasar 1 o ambos este armara `media` para source
+
+#### Implementation :
+
+<Code>{implementationSourceWidth}</Code>
+
+#### Result :
+
+<SourcesWidth />
+
