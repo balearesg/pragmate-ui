@@ -4,7 +4,7 @@ import { useInputContext } from '../context';
 import { Date } from './date';
 import { Icon } from './icon';
 
-export function IconContainer() {
+export function IconContainer(): JSX.Element {
     const { props } = useInputContext();
     const types = {
         password: Password,
@@ -20,5 +20,5 @@ export function IconContainer() {
         output.push(<Icon key="icon" />)
     };
 
-    return output
+    return <>{output}</>
 };

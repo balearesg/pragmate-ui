@@ -5,6 +5,7 @@ import { useInputContext } from "../context";
 export function Date(): JSX.Element {
     const { input, props } = useInputContext();
     if (props.type !== "date") return null;
+
     return (
         <Icon
             key="icon"

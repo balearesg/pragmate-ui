@@ -9,15 +9,11 @@ import { Error } from './components/error';
 /**
  *
  * @param props
- *	
-	
+ *
  * 1. pattern property + existing error.
  * 2. Controlled Input where the implementer defines the error.
  * 3. Automated Input with multiple validations and error management.
- *	hasError
-	errorMessage="afkawmneofnawoiefa"
- * 
- * <input type="text" pattern="/\d/"  />
+ *
  * @returns
  */
 export /*bundle*/
@@ -46,8 +42,7 @@ export /*bundle*/
 	 */
 	if (variant === 'floating') labelSpecs.position = variant;
 	if (variant !== 'unstyled') attrs.className = cls;
-	
-	
+
 	return (
 		<InputContext.Provider value={providerValue}>
 			<div className={cls}>
