@@ -1,5 +1,4 @@
 import React from 'react';
-import { useInputContext } from '../context';
 
 export /*bundle*/ function Error({
 	show,
@@ -12,7 +11,6 @@ export /*bundle*/ function Error({
 	className?: string;
 	children?: React.ReactNode;
 }) {
-	const { value } = useInputContext();
 
 	if (!show) return null;
 	const cls = `pui-input-error-label${className ? ` ${className}` : ''}`;

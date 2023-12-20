@@ -4,6 +4,8 @@ $input-border-color-focus: #007bff;
 $label-font-size: 1.125rem;
 $label-font-size-small: 0.875rem;
 $transition-speed: 0.2s;
+$placeholder-devices: '::-webkit-input-placeholder', '::-moz-placeholder', ':-ms-input-placeholder',
+	'::-ms-input-placeholder', '::placeholder';
 
 .pui-input.pui-input--floating {
 	position: relative;
@@ -14,20 +16,10 @@ $transition-speed: 0.2s;
 		width: 100%;
 		font-size: 1rem;
 		box-sizing: border-box;
-		&::-webkit-input-placeholder {
-			color: transparent;
-		}
-		&::-moz-placeholder {
-			color: transparent;
-		}
-		&:-ms-input-placeholder {
-			color: transparent;
-		}
-		&::-ms-input-placeholder {
-			color: transparent;
-		}
-		&::placeholder {
-			color: transparent;
+		@each $placeholder in $placeholder-devices {
+			&#{nth($placeholder, 1)} {
+				color: transparent;
+			}
 		}
 		&:focus {
 			outline: none;

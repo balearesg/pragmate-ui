@@ -4,7 +4,6 @@ import { IconButton } from "pragmate-ui/icons";
 
 export function Password(): JSX.Element {
     const {
-        props: { password },
         state,
         setState,
     } = useInputContext();
