@@ -2,39 +2,39 @@
 $button-variants: (
 	'primary': (
 		var(--primary),
-		var(--on-primary),
+		var(--on-primary)
 	),
 	'secondary': (
 		var(--secondary),
-		var(--on-secondary),
+		var(--on-secondary)
 	),
 	'tertiary': (
 		var(--tertiary),
-		var(--on-tertiary),
+		var(--on-tertiary)
 	),
 	'default': (
 		var(--default),
-		var(--on-background),
+		var(--on-background)
 	),
 	'success': (
 		var(--success-container),
-		var(--success),
+		var(--success)
 	),
 	'warning': (
 		var(--warning-container),
-		var(--warning),
+		var(--warning)
 	),
 	'error': (
 		var(--error-container),
-		var(--error),
+		var(--error)
 	),
 	'info': (
 		var(--info-container),
-		var(--info),
-	),
+		var(--info)
+	)
 );
 
-.pragmate-icon-button {
+.pui-icon-button {
 	@include button-styles($button-variants);
 	transition: all 0.2s ease-in-out;
 }

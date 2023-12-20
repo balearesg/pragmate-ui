@@ -1,5 +1,4 @@
 .view {
-
 	.component-implementation {
 		display: flex;
 		flex-direction: column;
@@ -7,14 +6,13 @@
 	}
 
 	.component-implementation-icon {
-
-		.pragmate-icon-button {
+		.pui-icon-button {
 			top: 13px;
 		}
 	}
 
 	.component-container__icon {
-		.pragmate-icon-button {
+		.pui-icon-button {
 			top: 0px;
 		}
 	}

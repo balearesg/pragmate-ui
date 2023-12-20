@@ -6,10 +6,10 @@
 			width: inherit;
 			.beyond-tab {
 				padding: 0;
-				button.pragmate-icon-button svg.pragmate-icon {
+				button.pui-icon-button svg.pui-icon {
 					fill: var(--on-primary);
 				}
-				&.tab-active button.pragmate-icon-button svg.pragmate-icon {
+				&.tab-active button.pui-icon-button svg.pui-icon {
 					fill: var(--primary);
 				}
 			}

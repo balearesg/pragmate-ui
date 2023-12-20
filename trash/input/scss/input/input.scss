@@ -17,7 +17,7 @@
 	transition: all 0.4s ease-in-out;
 	padding: 0 8px;
 
-	input[type="date"]::-webkit-calendar-picker-indicator {
+	input[type='date']::-webkit-calendar-picker-indicator {
 		position: absolute;
 		right: 0.9rem;
 		background: none;
@@ -60,23 +60,23 @@
 			padding: 0px 19px;
 		}
 
-		.pragmate-icon {
+		.pui-icon {
 			z-index: 10;
 		}
 
 		@media screen and (max-width: 450px) {
-			.pragmate-icon-button {
+			.pui-icon-button {
 				height: 30px;
 			}
 		}
 	}
 
-	.eye.pragmate-icon-button {
+	.eye.pui-icon-button {
 		position: relative;
 		top: -0.1rem;
 		right: 0.5rem;
 
-		svg.pragmate-icon {
+		svg.pui-icon {
 			width: 20px;
 			height: 20px;
 			color: var(--gray);
@@ -84,7 +84,7 @@
 		}
 	}
 
-	button.pragmate-icon-button {
+	button.pui-icon-button {
 		position: absolute;
 		right: 0.5rem;
 		z-index: 17;

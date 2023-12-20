@@ -7,7 +7,7 @@
     background-color: var(--tertiary);
     z-index: 30;
 
-    &__toggle.pragmate-icon-button {
+    &__toggle.pui-icon-button {
         position: absolute;
         right: 0;
         top: 0;
@@ -15,8 +15,8 @@
         border: none;
         outline: none;
         cursor: pointer;
-        svg.pragmate-icon {
-            fill: var(--secondary)
+        svg.pui-icon {
+            fill: var(--secondary);
         }
     }
 
@@ -70,7 +70,6 @@
         border: none;
         outline: none;
         cursor: pointer;
-       
     }
 
     &__list {
@@ -98,11 +97,10 @@
             font-weight: bold;
         }
 
-        svg.pragmate-icon {
+        svg.pui-icon {
             width: 24px;
             height: 24px;
             fill: var(--primary);
         }
     }
 }
-
