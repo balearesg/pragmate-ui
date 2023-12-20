@@ -1,6 +1,9 @@
 import { Results } from './results';
-import { implementation } from './implementation';
+import { implementation, implementationSource, implementationError, implementationSourceWidth } from './implementation';
 import { Code } from 'pragmate-ui/code';
+import { Error } from "./examples/error";
+import { Sources } from "./examples/source";
+import { SourcesWidth } from './examples/sources-with-width'
 
 # Image
 
@@ -17,6 +20,8 @@ Este componente detecta cuando la imagen se está cargando o cuando la imagen no
 establece una clase html diferente, para el caso de carga más allá de la precarga de la imagen del elemento y para el
 caso de error más allá del error de la imagen del elemento.
 
+Para el momento de la carga de la image tiene la clase html `pui-image-preload` y para el caso de error `pui-image-error`
+
 ### Implementation :
 
 <Code>{implementation}</Code>
@@ -24,3 +29,39 @@ caso de error más allá del error de la imagen del elemento.
 ### Result :
 
 <Results />
+
+### Caso de error:
+
+En caso de que la imagen no se consiga o falle la carga, puede recibir (opcional) `sizeLoadingError` con los tamaños `width` y `height` que sera el tamaño del contenedor a mostrar de igual forma
+de manera opcional puede recibir `onError` el cual es una funcion que se ejecutara al dar click en un boton refresh que se disponibiliza al pasar la propiedad;
+
+#### Implementation :
+
+<Code>{implementationError}</Code>
+
+#### Result :
+
+<Error />
+
+### Sources:
+
+Image puede recibir una propiedad sources el cual es un array con los distintos tamaños e imagenes que desea mostrar
+
+#### Implementation :
+
+<Code>{implementationSource}</Code>
+
+#### Result :
+
+<Sources />
+
+Sources tambien puede recibir como propiedad `minWidth` y `maxWidth` de forma que al pasar 1 o ambos este armara `media` para source
+
+#### Implementation :
+
+<Code>{implementationSourceWidth}</Code>
+
+#### Result :
+
+<SourcesWidth />
+
