@@ -1,23 +1,27 @@
 .pui-input .pui-input__label,
 .pui-textarea .pui-input__label {
-	display: inline-flex;
-	justify-content: space-between;
+	.label-content {
+		display: inline-flex;
+		justify-content: space-between;
+		width: 100%;
+	}
 
 	&.is-required {
 		position: relative;
 		> span {
 			position: relative;
+			width: auto;
 			&:after {
 				position: absolute;
-				content: "*";
+				content: '*';
 				right: -0.8rem;
 				align-content: center;
 			}
 		}
 	}
 
-	&.pui-input__label--right,
-	&.pui-input__label--bottom-right {
+	&.pui-input__label--right .label-content,
+	&.pui-input__label--bottom-right .label-content {
 		justify-content: flex-end;
 	}
 	span {

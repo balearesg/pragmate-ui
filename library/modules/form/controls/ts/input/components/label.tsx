@@ -17,7 +17,7 @@ export /*bundle */ function Label({ required, position, children }: ILabelProps 
 	return (
 		<>
 			<label htmlFor={id ?? name} className={cls}>
-				<span> {children}</span>
+				<span className='label-content'> {children}</span>
 			</label>
 		</>
 	);

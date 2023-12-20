@@ -14,21 +14,33 @@ $transition-speed: 0.2s;
 		width: 100%;
 		font-size: 1rem;
 		box-sizing: border-box;
-
+		&::-webkit-input-placeholder {
+			color: transparent;
+		}
+		&::-moz-placeholder {
+			color: transparent;
+		}
+		&:-ms-input-placeholder {
+			color: transparent;
+		}
+		&::-ms-input-placeholder {
+			color: transparent;
+		}
+		&::placeholder {
+			color: transparent;
+		}
 		&:focus {
 			outline: none;
 		}
-
-		&:focus ~ .pui-input__label.floating-label,
-		&:not(:placeholder-shown) ~ .pui-input__label.floating-label {
-			top: -0.8rem;
-			background: var(--surface);
-			padding: 0.2rem 0.5rem;
-			border-radius: var(--border-radius-base);
-			font-size: 0.625rem;
-
-			color: $label-color;
-		}
+	}
+	&:focus-within .pui-input__label.floating-label,
+	input:not(:placeholder-shown) ~ .pui-input__label.floating-label {
+		top: -0.8rem;
+		background: var(--surface);
+		padding: 0.2rem 0.5rem;
+		border-radius: var(--border-radius-base);
+		font-size: 0.625rem;
+		color: $label-color;
 	}
 
 	label.pui-input__label.floating-label {

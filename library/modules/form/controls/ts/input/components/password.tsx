@@ -24,6 +24,5 @@ export function Password(): JSX.Element {
         icon: state.type === "password" ? "eye" : "eye-slash",
     };
 
-    if (!password) return null;
     return <IconButton {...attrs} />;
 }

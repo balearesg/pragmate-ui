@@ -4,7 +4,7 @@ import { useInputContext } from '../context';
 import { Date } from './date';
 import { Icon } from './icon';
 
-export function IconContainer() {
+export function IconContainer(): any {
     const { props } = useInputContext();
     const types = {
         password: Password,
