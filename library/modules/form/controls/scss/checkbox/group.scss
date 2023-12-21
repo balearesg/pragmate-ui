@@ -1,0 +1,10 @@
+.pui-checkbox-group {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 1rem;
+
+	&.pui-checkbox-group--row {
+		flex-direction: row;
+	}
+}
