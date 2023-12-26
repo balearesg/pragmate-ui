@@ -1,7 +1,7 @@
 import React from 'react';
-import {Button} from 'pragmate-ui/components';
+import { Button } from 'pragmate-ui/components';
 
-export function ContentVariants() {
+export function BasicExample() {
 	const buttons = ['primary', 'secondary', 'tertiary', 'success', 'warning', 'danger', 'info', 'link'];
 
 	const output = buttons.map(item => (
@@ -10,5 +10,5 @@ export function ContentVariants() {
 		</Button>
 	));
 
-	return <div className="inline__list__container">{output}</div>;
+	return <div className='inline__list__container'>{output}</div>;
 }

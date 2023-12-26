@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'pragmate-ui/components';
 
-export function ResultsBorder(): JSX.Element {
+export function BorderedExample(): JSX.Element {
 	const buttons = ['primary', 'secondary', 'tertiary', 'success', 'warning', 'danger', 'info', 'link'];
 
 	const output = buttons.map(item => (
@@ -9,5 +9,5 @@ export function ResultsBorder(): JSX.Element {
 			variant="{item}"
 		</Button>
 	));
-	return <div className="content">{output}</div>;
+	return <div className='content'>{output}</div>;
 }
