@@ -7,49 +7,9 @@
 
 	form {
 		width: 100%;
-
-		.beyond-element-input {
-			width: 100%;
-
-			input {
-				width: 100%;
-				color: var(--on-primary);
-			}
-			label,
-			input {
-				color: var(--on-primary);
-			}
-			&:focus-within label,
-			input:not(:placeholder-shown) ~ label {
-				background-color: var(--surface);
-				color: var(--on-primary);
-			}
-			&.has-icon,
-			.eye.pui-icon-button {
-				svg.pui-icon {
-					color: var(--on-primary);
-					fill: var(--on-primary);
-				}
-			}
-			&:hover:not(&.disabled) input {
-				color: var(--on-primary);
-			}
-		}
 	}
 
 	.column {
 		text-align: center;
-	}
-}
-
-.component-container__input {
-	.pui-icon-button {
-		top: 12px;
-	}
-
-	.box__result {
-		.pui-icon-button {
-			top: 0px;
-		}
 	}
 }
