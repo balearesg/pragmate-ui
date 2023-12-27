@@ -5,7 +5,13 @@ import { Link } from 'pragmate-ui/components';
 import { getTpl } from './get-tpl';
 import { BasicExample } from './examples/basic';
 import { BorderedExample } from './examples/bordered';
+import { BlockExample } from './examples/block';
+import { ProcessingExample } from './examples/processing';
+import { SizesExample } from './examples/sizes';
+import { TooltipsExample } from './examples/tooltips';
+import { IconsExample } from './examples/icons';
 import { implementationTooltips } from './tooltips-implementation';
+import { UIExample, CodeExample } from 'pragmate-ui-docs/utils';
 
 # Buttons
 
@@ -24,56 +30,26 @@ específicas, como enviar formularios, confirmar selecciones o desencadenar even
 
 <Code>{getTpl({ variant: 'primary' })}</Code>
 
-### Variantes outline :
+### Bordered
+
+Para implementar las variantes bordeadas es necesario agregar el atributo `bordered` al componente.
 
 <BorderedExample />
 
-Se puede utilizar cada variante con borders pasando el atributo booleando `bordered={`{true}`}
+### Iconos
 
-### Implementations :
+Para agregar un icono al boton, puedes hacerlo pasando la propiedad `icon`, esta propiedad puede recibir una cadena de
+texto, la cúal debe corresponder con el nombre de los <Link href='/components/icons-list'>iconos existentes en la
+libreria</Link> o puede recibir un objeto de tipo `IPragmateIcon` Para agregar iconos al botón, agrega el atributo icon
+y el icono que desees utilizar.
 
-<Code>{getTpl({ variant: 'primary', bordered: true })}</Code>
-
-### Iconos :
-
-Para agregar iconos al botón, agrega el atributo icon y el icono que desees utilizar. Puedes ver la lista de iconos
-disponibles en :
-
-<Link href='/components/icons-list'>Icons</Link>
-
-### Implementation :
-
-<Code>{getTpl({ variant: 'primary', icon: 'add' })}</Code>
-
-### Result :
-
-<Button icon='add' variant='primary'>
-	Primary button
-</Button>
-
-Utiliza la clase ".icon--right" si deseas agregar el icono a la derecha
-
-<Button icon='add' variant='primary' className='icon--right'>
-	Primary button
-</Button>
-
-<Code>
-	{getTpl({
-		variant: 'primary',
-		icon: 'add',
-		className: 'icon--right',
-	})}
-</Code>
+<IconsExample />
 
 ### Tooltips :
 
 Podemos agregar funciones Tooltips a los **Buttons** agregando una propieadad _title_ y el titulo que queramos.
 
-<Code>{implementationTooltips}</Code>
-
-<Button title='button primary' variant='primary'>
-	Primary button
-</Button>
+<TooltipsExample />
 
 #### Important :
 
@@ -84,10 +60,12 @@ Para implementar el funcionamiento del tooltips es importante agregar un archivo
 Podemos implementar un Boton de tipo bloque que ocupe todo el ancho de su contenedor agregando el atributo block al
 componente.
 
-<Code>{`<Button title="button block" variant="primary" block>
-	Primary button
-</Button>`}</Code>
+<BlockExample />
 
-<Button title='button block' variant='primary' block>
-	Primary button
-</Button>
+### Processing :
+
+<ProcessingExample />
+
+### Sizes :
+
+<SizesExample />

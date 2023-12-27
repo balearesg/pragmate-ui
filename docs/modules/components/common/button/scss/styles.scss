@@ -1,36 +1,3 @@
 .view {
 	width: 100%;
-
-	.inline__list__container,
-	.inline__container {
-		display: flex;
-		gap: 0.5rem;
-		align-items: center;
-		flex-wrap: wrap;
-	}
-	.inline__container {
-		justify-content: center;
-		.code__container {
-			flex-grow: 1;
-		}
-	}
-
-	.component-implementation {
-		margin-top: 3em;
-		display: grid;
-		grid-template-columns: 280px minmax(5rem, 1fr);
-		grid-template-rows: 2rem;
-		grid-gap: 30px;
-
-		.column {
-			text-align: center;
-		}
-
-		.box {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 10px;
-		}
-	}
 }
