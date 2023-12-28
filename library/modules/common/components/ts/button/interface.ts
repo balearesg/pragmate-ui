@@ -1,4 +1,4 @@
-export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, DefaultSizing {
 	data?: Record<string, any>;
 	label?: React.ReactNode;
 	children?: React.ReactNode;
@@ -11,4 +11,8 @@ export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	block?: boolean;
 	index?: number;
 	title?: string;
+}
+
+interface DefaultSizing {
+	sizing?: 'sm' | 'md' | 'lg';
 }

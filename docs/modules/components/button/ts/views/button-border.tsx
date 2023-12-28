@@ -9,5 +9,5 @@ export function ResultsBorder(): JSX.Element {
 			variant="{item}"
 		</Button>
 	));
-	return <div className="content">{output}</div>;
+	return <div className='content'>{output}</div>;
 }

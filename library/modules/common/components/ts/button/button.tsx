@@ -24,7 +24,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 		variant = 'primary',
 		bordered = false,
 		disabled = false,
-
+		sizing,
 		...otherProps
 	} = props;
 
@@ -59,7 +59,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 
 	const properties: IProps = {
 		...otherProps,
-		type: props.type ? props.type : 'button',
+		type: props.type ? props.type : 'button'
 	};
 	if (title) properties['data-tippy-content'] = title;
 	if (data) {
@@ -71,6 +71,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 	let cls = `pui-button btn-${variant}`;
 	cls += className ? ` ${className}` : '';
 	cls += bordered ? ' outline' : '';
+	cls += sizing ? ` ${sizing}` : ' md';
 	cls += icon ? ' has-icon' : '';
 	cls += block ? ' btn--block' : '';
 	cls += loading || fetching ? ' btn--loading' : '';
