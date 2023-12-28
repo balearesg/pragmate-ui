@@ -1,11 +1,11 @@
 .pui-textarea textarea {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    width: 100%;
-    border-radius: var(--border-radius-base);
-    &:disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-    }
+	// border: none;
+	outline: none;
+	background-color: transparent;
+	width: 100%;
+	border-radius: var(--border-radius-base);
+	&:disabled {
+		opacity: 0.3;
+		cursor: not-allowed;
+	}
 }

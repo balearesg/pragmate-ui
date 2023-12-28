@@ -7,6 +7,7 @@ export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, D
 	fetching?: boolean;
 	variant?: string;
 	bordered?: boolean;
+	sizing: 'sm' | 'md' | 'lg' | 'xs';
 	disabled?: boolean;
 	block?: boolean;
 	index?: number;

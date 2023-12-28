@@ -1,0 +1,71 @@
+import { Button } from 'pragmate-ui/components';
+import { Item } from './item';
+import { Code } from 'pragmate-ui/code';
+import { Link } from 'pragmate-ui/components';
+import { getTpl } from './get-tpl';
+import { BasicExample } from './examples/basic';
+import { BorderedExample } from './examples/bordered';
+import { BlockExample } from './examples/block';
+import { ProcessingExample } from './examples/processing';
+import { SizesExample } from './examples/sizes';
+import { TooltipsExample } from './examples/tooltips';
+import { IconsExample } from './examples/icons';
+import { implementationTooltips } from './tooltips-implementation';
+import { UIExample, CodeExample } from 'pragmate-ui-docs/utils';
+
+# Buttons
+
+El componente de botón se utiliza para crear elementos interactivos que permiten a los usuarios realizar acciones
+específicas, como enviar formularios, confirmar selecciones o desencadenar eventos en la interfaz.
+
+### Import :
+
+<Code>{`import { Button } from 'pragmate-ui/components';`}</Code>
+
+### Variantes :
+
+<BasicExample />
+
+### Implementations :
+
+<Code>{getTpl({ variant: 'primary' })}</Code>
+
+### Bordered
+
+Para implementar las variantes bordeadas es necesario agregar el atributo `bordered` al componente.
+
+<BorderedExample />
+
+### Iconos
+
+Para agregar un icono al boton, puedes hacerlo pasando la propiedad `icon`, esta propiedad puede recibir una cadena de
+texto, la cúal debe corresponder con el nombre de los <Link href='/components/icons-list'>iconos existentes en la
+libreria</Link> o puede recibir un objeto de tipo `IPragmateIcon` Para agregar iconos al botón, agrega el atributo icon
+y el icono que desees utilizar.
+
+<IconsExample />
+
+### Tooltips :
+
+Podemos agregar funciones Tooltips a los **Buttons** agregando una propieadad _title_ y el titulo que queramos.
+
+<TooltipsExample />
+
+#### Important :
+
+Para implementar el funcionamiento del tooltips es importante agregar un archivo sass en el template.
+
+### Button Block :
+
+Podemos implementar un Boton de tipo bloque que ocupe todo el ancho de su contenedor agregando el atributo block al
+componente.
+
+<BlockExample />
+
+### Processing :
+
+<ProcessingExample />
+
+### Sizes :
+
+<SizesExample />
