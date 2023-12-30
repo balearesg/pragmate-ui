@@ -14,7 +14,7 @@ export /*bundle*/ function Code({ language = 'typescript', children, clipboard =
 	return (
 		<div className={cls}>
 			<pre className={`regular__code language-${language}`} dangerouslySetInnerHTML={createMarkup()} />
-			{clipboard && <Clipboard text={children} message='' />}
+			{clipboard && <Clipboard text={children} />}
 		</div>
 	);
 }

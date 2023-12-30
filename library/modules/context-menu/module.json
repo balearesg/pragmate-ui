@@ -1,5 +1,6 @@
 {
 	"name": "context-menu",
+	"platforms": ["web", "ios", "android"],
 	"code": {
 		"ts": {
 			"path": "/ts",
