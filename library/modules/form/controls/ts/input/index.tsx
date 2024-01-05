@@ -17,7 +17,7 @@ import { Error } from './components/error';
  * @returns
  */
 export /*bundle*/
-	function Input(props: IProps): JSX.Element {
+function Input(props: IProps): JSX.Element {
 	const { hasError, errorMessage, variant, className, label, children, icon, type } = props;
 	const [value, setValue] = React.useState<string>(props.value ?? '');
 	const [state, setState] = useState<TState>({ type });
@@ -25,8 +25,8 @@ export /*bundle*/
 	let cls: string = `pui-input${className ? ` ${className}` : ''}`;
 	if (props.type === 'date') cls += ' pui-input--date';
 	if (!!icon) cls += ' pui-input--icon';
-	if (!!icon && variant === "floating") cls += " icon__floating";
-	if (props.type === "password") cls += " pui-input--password"
+	if (!!icon && variant === 'floating') cls += ' icon__floating';
+	if (props.type === 'password') cls += ' pui-input--password';
 	const variants = {
 		unstyled: 'pui-input--unstyled',
 		floating: 'pui-input--floating',
@@ -50,7 +50,6 @@ export /*bundle*/
 				{children}
 				{label && <Label {...labelSpecs}>{label}</Label>}
 				{errorMessage && <Error show={!!hasError} message={errorMessage} />}
-
 			</div>
 		</InputContext.Provider>
 	);
