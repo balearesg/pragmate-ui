@@ -16,9 +16,7 @@ export /*bundle */ function CollapsibleHeader({
 	const { setOpen, onToggle, open } = useCollapsibleContext();
 
 	const onClick = async () => {
-		console.log(20, key);
 		if (onToggle) await onToggle(!open);
-
 		setOpen(!open);
 	};
 	const cls = `collapsible__header ${className ? ` ${className}` : ''} ${open ? 'open' : ''}`;
