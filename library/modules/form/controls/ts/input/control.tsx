@@ -33,7 +33,7 @@ export function ControlSelector(): JSX.Element {
 	const attrs = {
 		id: id ?? name,
 		placeholder: placeholder ?? ' ',
-		value: value ?? ' '
+		value: value ?? ''
 	};
 	return (
 		<>
