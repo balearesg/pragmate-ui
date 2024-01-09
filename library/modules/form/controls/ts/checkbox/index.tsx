@@ -6,15 +6,14 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 	props: IProps,
 	ref: React.Ref<HTMLInputElement>
 ): JSX.Element {
-	const { checked, name, disabled, className, onChange, label } = props;
+	const { checked, disabled, className, onChange, label } = props;
 	const [value, setValue] = useState<boolean>(!!checked);
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
 		event.stopPropagation();
-
-		setValue(!!checked);
+		setValue(!checked);
 		onChange && onChange(event);
 	};
-	let cls: string = `pui-checkbox ${className ? className : ''}`;
+	let cls: string = `pragmate-checkbox ${className ? className : ''}`;
 	cls += disabled ? ' disabled' : '';
 	const properties: IProps = Object.assign({}, props);
 
@@ -22,11 +21,28 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 		delete properties[prop];
 	});
 
+	const name = props.name ?? "pragmate-checkbox--name";
+	const id = props.id ?? name;
 	return (
-		<label className='pui-checkbox'>
-			<input type='checkbox' title='checkbox' onChange={handleChange} />
-			<span className='checkmark' />
-			{label}
-		</label>
+		<div className={cls}>
+			<input
+				ref={ref}
+				type='checkbox'
+				className='pui-checkbox--input'
+				id={id}
+				name={name}
+				checked={value}
+				onChange={handleChange}
+				{...properties}
+			/>
+			<label className='pui-checkbox--label' htmlFor={id}>
+				<span>
+					<svg viewBox='0 0 12 9'>
+						<polyline points='1 5 4 8 11 1'></polyline>
+					</svg>
+				</span>
+				<span>{label}</span>
+			</label>
+		</div>
 	);
 });
