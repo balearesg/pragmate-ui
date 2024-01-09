@@ -22,10 +22,10 @@ export /*bundle*/ function Textarea(props: IProps): JSX.Element {
 	let cls: string = props.className ? `${props.className} pui-textarea` : 'pui-textarea';
 	cls += props.disabled ? ' disabled' : '';
 	cls += props.hasError ? ' error' : '';
-	['className', 'hasError', 'errorMessage', 'children', 'label'].forEach(prop => delete properties[prop]);
+	['className', 'hasError', 'counter', 'errorMessage', 'children', 'label'].forEach(prop => delete properties[prop]);
 	let clsLabel = '';
 	if (props.required) cls += ' is-required';
-
+	console.log(42, props);
 	return (
 		<div className={cls}>
 			<textarea
@@ -43,7 +43,7 @@ export /*bundle*/ function Textarea(props: IProps): JSX.Element {
 					{props.label}
 				</label>
 			)}
-			<TextareaCounter length={input?.current?.value.length} maxlength={props.maxlength} counter={counter} />
+			<TextareaCounter length={input?.current?.value.length} maxlength={props.maxLength} counter={counter} />
 		</div>
 	);
 }

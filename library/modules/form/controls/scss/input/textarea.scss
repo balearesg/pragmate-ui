@@ -5,6 +5,7 @@
 		outline: none;
 		background-color: transparent;
 		width: 100%;
+		resize: vertical;
 		border-radius: var(--border-radius-base);
 		&:disabled {
 			opacity: 0.3;
