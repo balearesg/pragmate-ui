@@ -15,6 +15,7 @@ function Empty(props: IProps): JSX.Element {
 		<div className={cls}>
 			<div className='content'>
 				{props.icon && <Icon icon={props.icon} />}
+				{props.text && <h3>{props.text}</h3>}
 				{props.children && props.children}
 			</div>
 		</div>
