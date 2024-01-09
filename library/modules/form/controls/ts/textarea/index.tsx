@@ -25,7 +25,7 @@ export /*bundle*/ function Textarea(props: IProps): JSX.Element {
 	['className', 'hasError', 'counter', 'errorMessage', 'children', 'label'].forEach(prop => delete properties[prop]);
 	let clsLabel = '';
 	if (props.required) cls += ' is-required';
-	console.log(42, props);
+
 	return (
 		<div className={cls}>
 			<textarea
