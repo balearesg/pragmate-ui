@@ -13,7 +13,7 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 		setValue(!checked);
 		onChange && onChange(event);
 	};
-	let cls: string = `pragmate-checkbox ${className ? className : ''}`;
+	let cls: string = `pui-checkbox ${className ? className : ''}`;
 	cls += disabled ? ' disabled' : '';
 	const properties: IProps = Object.assign({}, props);
 
@@ -21,7 +21,7 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 		delete properties[prop];
 	});
 
-	const name = props.name ?? "pragmate-checkbox--name";
+	const name = props.name ?? "pui-checkbox--name";
 	const id = props.id ?? name;
 	return (
 		<div className={cls}>

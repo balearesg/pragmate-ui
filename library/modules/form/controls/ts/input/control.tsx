@@ -32,7 +32,7 @@ export function ControlSelector(): JSX.Element {
 	};
 	const attrs = {
 		id: id ?? name,
-		placeholder: placeholder ?? ' ',
+		placeholder: placeholder ?? '',
 		value: value ?? ''
 	};
 	return (
