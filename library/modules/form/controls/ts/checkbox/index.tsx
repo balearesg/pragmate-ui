@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes, forwardRef, RefAttributes, useState } from 'react';
+import React, { InputHTMLAttributes, forwardRef, RefAttributes, useState, useEffect } from 'react';
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 	label?: string;
 }
@@ -8,6 +8,10 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 ): JSX.Element {
 	const { checked, disabled, className, onChange, label } = props;
 	const [value, setValue] = useState<boolean>(!!checked);
+
+	useEffect(() => {
+		setValue(!!checked)
+	}, [checked])
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
 		event.stopPropagation();
 		setValue(!checked);
