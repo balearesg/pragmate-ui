@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes, forwardRef, RefAttributes, useState } from 'react';
+import React from 'react';
 import { Checkbox } from './index';
 
 export /*bundle*/ function CheckboxGroup(props) {

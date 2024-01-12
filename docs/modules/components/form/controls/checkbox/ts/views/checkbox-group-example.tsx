@@ -11,6 +11,12 @@ export function CheckboxGroupExample() {
 		{ label: 'Example 3', name: 'check3' },
 	];
 
+	const optionsColumns = [
+		{ label: 'Example 1', name: 'check4' },
+		{ label: 'Example 2', name: 'check5' },
+		{ label: 'Example 3', name: 'check6' },
+	];
+
 	return (
 		<div>
 			<h4>Default</h4>
@@ -20,7 +26,7 @@ export function CheckboxGroupExample() {
 
 			<h4>Column</h4>
 			<form className='container-checkbox'>
-				<CheckboxGroup options={options} direction='column' />
+				<CheckboxGroup options={optionsColumns} direction='column' />
 			</form>
 		</div>
 	);

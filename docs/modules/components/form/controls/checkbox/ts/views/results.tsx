@@ -18,11 +18,11 @@ export function Results() {
 	return (
 		<form className='container-checkbox'>
 			<div className='content'>
-				<Checkbox onChange={handleChange} checked={selectedValue} name='check' label='Example 1' />
+				<Checkbox onChange={handleChange} checked={selectedValue} name='check-example' label='Example 1' />
 				<Checkbox
 					onChange={handleChangeCheckbox}
 					checked={selectedValueCheckbox}
-					name='check2'
+					name='check-example2'
 					label='example 2'
 				/>
 			</div>
