@@ -1,4 +1,6 @@
+
 import React, { InputHTMLAttributes, forwardRef, RefAttributes, useState, useEffect, MouseEvent } from 'react';
+
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 	label?: string;
 }
@@ -8,6 +10,10 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 ): JSX.Element {
 	const { checked, disabled, className, onChange, label } = props;
 	const [value, setValue] = useState<boolean>(!!checked);
+
+	useEffect(() => {
+		setValue(!!checked)
+	}, [checked])
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
 		event.stopPropagation();
 		setValue(!checked);
@@ -23,6 +29,7 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 
 	const name = props.name ?? "pui-checkbox--name";
 	const id = props.id ?? name;
+
 	const handleClick = (event: MouseEvent) => event.stopPropagation();
 	const picked = checked === true || checked === false ? checked : value
 	return (
