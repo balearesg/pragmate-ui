@@ -1,4 +1,6 @@
-import React, { InputHTMLAttributes, forwardRef, RefAttributes, useState, useEffect } from 'react';
+
+import React, { InputHTMLAttributes, forwardRef, RefAttributes, useState, useEffect, MouseEvent } from 'react';
+
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 	label?: string;
 }
@@ -27,15 +29,18 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 
 	const name = props.name ?? "pui-checkbox--name";
 	const id = props.id ?? name;
+
+	const handleClick = (event: MouseEvent) => event.stopPropagation();
+	const picked = checked === true || checked === false ? checked : value
 	return (
-		<div className={cls}>
+		<div className={cls} onClick={handleClick}>
 			<input
 				ref={ref}
 				type='checkbox'
 				className='pui-checkbox--input'
 				id={id}
 				name={name}
-				checked={value}
+				checked={picked}
 				onChange={handleChange}
 				{...properties}
 			/>
