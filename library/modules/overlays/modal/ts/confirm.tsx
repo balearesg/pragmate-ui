@@ -21,6 +21,7 @@ export /*bundle*/ const ConfirmModal = (properties): JSX.Element => {
 		setState({ fetching: false });
 	};
 
+	
 	const { text, title, btn, onCancel, centered, onConfirm, btnConfirm, btnCancel } = properties;
 
 	let cls: string = `pui-confirm-dialog${centered ? ' pui-confirm-dialog-centered' : ''}`;
