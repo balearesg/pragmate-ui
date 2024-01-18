@@ -7,7 +7,7 @@ export /* bundle  */ const TabsContainer: React.FC<ITabProps> = ({ active, onCha
 	const [activeTab, setActiveTab] = React.useState(activeIndex);
 	const value = { panes, activeTab, setActiveTab, onChange };
 
-	const cls = `tab-container${className ? ` ${className}` : ''}`;
+	const cls = `pui-tabs-container${className ? ` ${className}` : ''}`;
 	return (
 		<TabsContext.Provider value={value}>
 			<section className={cls}>{children}</section>
