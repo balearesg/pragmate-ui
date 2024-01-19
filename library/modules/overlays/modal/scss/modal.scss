@@ -33,6 +33,7 @@ body.body-pui-modal-opened {
 	}
 
 	.modal-content {
+		overflow: hidden;
 		position: relative;
 		background: var(--surface);
 		animation: show 0.5s ease-in-out;
