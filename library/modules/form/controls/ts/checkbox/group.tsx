@@ -13,7 +13,6 @@ export /*bundle*/ function CheckboxGroup(props) {
 		column: 'column',
 		row: 'row',
 	};
-
 	const direction = props.direction ?? `row`;
 	const cls = `pui-checkbox-group pui-checkbox-group--${directions[direction]}`; // `pui-checkbox-group $;
 	return <div className={cls}>{output}</div>;

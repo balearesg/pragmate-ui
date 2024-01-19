@@ -1,4 +1,3 @@
-
 import React, { InputHTMLAttributes, forwardRef, RefAttributes, useState, useEffect, MouseEvent } from 'react';
 
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -12,8 +11,8 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 	const [value, setValue] = useState<boolean>(!!checked);
 
 	useEffect(() => {
-		setValue(!!checked)
-	}, [checked])
+		setValue(!!checked);
+	}, [checked]);
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
 		event.stopPropagation();
 		setValue(!checked);
@@ -27,11 +26,12 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 		delete properties[prop];
 	});
 
-	const name = props.name ?? "pui-checkbox--name";
-	const id = props.id ?? name;
+	const ramdon = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+	const name = props.name ?? 'pui-checkbox--name';
+	const id = props.id ?? `${name}-${performance.now()}.${ramdon}`;
 
 	const handleClick = (event: MouseEvent) => event.stopPropagation();
-	const picked = checked === true || checked === false ? checked : value
+	const picked = checked === true || checked === false ? checked : value;
 	return (
 		<div className={cls} onClick={handleClick}>
 			<input
