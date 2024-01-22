@@ -1,0 +1,15 @@
+.component-container {
+	margin-top: 3em;
+	display: grid;
+	grid-template-columns: 400px minmax(5rem, 1fr);
+	grid-template-rows: 2rem;
+	grid-gap: 30px;
+
+	form {
+		width: 100%;
+	}
+
+	.column {
+		text-align: center;
+	}
+}

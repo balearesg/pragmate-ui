@@ -21,8 +21,9 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 		block,
 		index,
 		fetching = false,
-		variant = 'primary',
+		variant = 'default',
 		bordered = false,
+		sizing = 'md',
 		disabled = false,
 
 		...otherProps
@@ -30,6 +31,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 
 	const context = React.useContext(ButtonGroupContext);
 
+	const [processing, setProcessing] = React.useState(fetching || loading);
 	const refObject = React.useRef<HTMLButtonElement>(null);
 	const combinedRef = (instance: HTMLButtonElement) => {
 		refObject.current = instance;
@@ -38,12 +40,15 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 		else if (ref) ref.current = instance;
 	};
 	const usingContext = typeof context?.setSelected === 'function';
-	const onClickButton = (event: React.MouseEvent<HTMLButtonElement>): void => {
+	const onClickButton = async (event: React.MouseEvent<HTMLButtonElement>): Promise<void> => {
 		if (usingContext) {
 			context.setSelected(index);
 		}
 		if (onClick && typeof onClick === 'function') {
-			onClick(event);
+			setProcessing(true);
+			//@ts-ignore
+			await onClick(event);
+			setProcessing(false);
 			return;
 		}
 	};
@@ -73,22 +78,25 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 	cls += bordered ? ' outline' : '';
 	cls += icon ? ' has-icon' : '';
 	cls += block ? ' btn--block' : '';
-	cls += loading || fetching ? ' btn--loading' : '';
-	const clsLoading = `button-label ${loading ? 'button-label--loading' : ''}`;
+	cls += sizing ? ` btn--${sizing}` : '';
+	cls += loading || fetching || processing ? ' btn--loading' : '';
+	const clsLoading = `button-label ${loading || processing ? 'button-label--loading' : ''}`;
+
 	if (usingContext && context.selected === index) cls += ' pui-btn--active';
 	if (usingContext) properties['data-index'] = index;
+
 	return (
 		<button
 			ref={combinedRef}
 			className={cls}
 			onClick={onClickButton}
-			disabled={loading || disabled}
+			disabled={loading || disabled || processing}
 			{...properties}
 		>
 			{icon && <Icon icon={icon} />}
 			{label || (children && <div className={clsLoading}>{label || children}</div>)}
 
-			{(loading || fetching) && <Spinner type={`on-${variant}`} active={true} />}
+			{(loading || fetching || processing) && <Spinner type={`on-${variant}`} active={true} />}
 		</button>
 	);
 });

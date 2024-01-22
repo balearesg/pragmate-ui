@@ -1,5 +1,5 @@
-.pragmate-checkbox {
-	.cbx {
+.pui-checkbox {
+	.pui-checkbox--label {
 		display: flex;
 		gap: 0.5rem;
 		-webkit-user-select: none;
@@ -30,7 +30,7 @@
 					top: 3px;
 					left: 2px;
 					fill: none;
-					stroke: #fff;
+					stroke: var(--on-primary);
 					stroke-width: 2;
 					stroke-linecap: round;
 					stroke-linejoin: round;
@@ -39,7 +39,8 @@
 					transition: all 0.3s ease;
 					transition-delay: 0.1s;
 					transform: translate3d(0, 0, 0);
-					width: 10px;
+					width: 12px;
+					height: 9px;
 				}
 
 				&:before {
@@ -62,7 +63,6 @@
 					left: 0;
 					height: 1px;
 					width: 100%;
-					// background-color: var(--gray-darker);
 					transform-origin: 0 0;
 					transform: scaleX(0);
 				}
@@ -72,8 +72,10 @@
 			border-color: var(--primary);
 		}
 	}
-
-	.inp-cbx:checked + .cbx span {
+	.pui-checkbox--input {
+		display: none;
+	}
+	.pui-checkbox--input:checked + .pui-checkbox--label span {
 		&:first-child {
 			border-color: var(--primary);
 			background: var(--primary);

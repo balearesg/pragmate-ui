@@ -1,15 +1,15 @@
-.tab-container {
+.pui-tabs-container {
 	display: flex;
 	flex-direction: column;
 	overflow-x: hidden;
 	position: relative;
-}
 
-.tab-menu {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
+	.pui-tab-menu {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
 }
 
 .tabs {

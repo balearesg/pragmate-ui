@@ -1,6 +1,6 @@
 @import './button-styles';
 
-$button-variants: 'primary', 'secondary', 'tertiary', 'success', 'danger', 'warning', 'info';
+$button-variants: 'primary', 'secondary', 'tertiary', 'success', 'error', 'warning', 'info';
 .pui-button,
 .btn {
 	@include button-styles($button-variants);

@@ -21,15 +21,33 @@
 		font-size: 1rem; // Adjust font size as needed
 		color: inherit; // Inherits the color from the parent element
 		line-height: inherit; // Inherits line height from the parent element
+
 		transition: border-color ease-in-out 0.3s;
 		&:disabled {
 			opacity: 0.3;
 			cursor: not-allowed;
 		}
+		&:--webkit-autofill,
+		&::--webkit-autofill,
+		&::autofill,
+		&:autofill {
+			background-color: transparent !important;
+		}
+
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus,
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus {
+			background: transparent;
+			-webkit-box-shadow: none;
+			transition: background-color 5000s ease-in-out 0s;
+		}
 	}
-	input[data-autocompleted],
+	&[data-autocompleted],
 	textarea[data-autocompleted] {
-		background-color: transparent !important;
+		background-color: transparent;
 	}
 	label {
 		order: 1;
