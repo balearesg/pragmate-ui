@@ -5,7 +5,6 @@ import { IProps } from './interfaces';
 import { IconContainer } from './components/icon-container';
 
 export function ControlSelector(): JSX.Element {
-
 	const {
 		setState,
 		state,
@@ -13,13 +12,15 @@ export function ControlSelector(): JSX.Element {
 		setValue,
 		props: { name, id, placeholder },
 		props,
-		input
+		input,
 	} = useInputContext();
 	let properties: IProps = { ...props };
 	useEffect(() => {
-		setValue(props.value)
-	}, [props.value])
+		setValue(props.value);
+	}, [props.value]);
+
 	internalProps.forEach(prop => delete properties[prop]);
+
 	const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
 		if (!!props.onChange && typeof props.onChange === 'function') props.onChange(event);
 		const currentValue = event.currentTarget.value;
@@ -33,11 +34,18 @@ export function ControlSelector(): JSX.Element {
 	const attrs = {
 		id: id ?? name,
 		placeholder: placeholder ?? '',
-		value: value ?? ''
+		value: value ?? '',
 	};
 	return (
 		<>
 			<input
+				onInvalid={(event: React.InvalidEvent<HTMLInputElement>) => {
+					const { target } = event;
+					if (target.validity.valueMissing) {
+						target.setCustomValidity('Please enter your name');
+					}
+					console.log('is invalid', name, event);
+				}}
 				ref={input}
 				{...properties}
 				name={name}

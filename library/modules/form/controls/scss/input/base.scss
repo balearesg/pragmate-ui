@@ -1,5 +1,7 @@
+.pui-checkbox-group,
 .pui-input,
-.pui-textarea {
+.pui-textarea,
+.pui-input-select {
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -8,8 +10,10 @@
 	gap: 0.5rem;
 
 	input,
+	select,
 	textarea {
 		order: 2;
+		box-sizing: border-box;
 		background: transparent;
 		box-shadow: none;
 		border: 0.063rem solid var(--outline);
@@ -49,6 +53,7 @@
 	textarea[data-autocompleted] {
 		background-color: transparent;
 	}
+
 	label {
 		order: 1;
 		flex: 1;
@@ -58,6 +63,7 @@
 		}
 	}
 	&:not(.pui-input--unstyled) {
+		select:focus,
 		input:focus,
 		textarea:focus {
 			border-color: var(--primary);
