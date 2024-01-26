@@ -1,10 +1,9 @@
 {
-	"name": "react-select",
+	"name": "select",
 	"widget": {
 		"route": "/components/react-select",
 		"layout": "pui-docs-layout",
 		"is": "page",
-
 		"ts": {
 			"path": "/ts",
 			"files": ["*"]
@@ -14,7 +13,7 @@
 			"files": ["*"]
 		},
 		"element": {
-			"name": "component-react-select"
+			"name": "component-select"
 		}
 	}
 }
