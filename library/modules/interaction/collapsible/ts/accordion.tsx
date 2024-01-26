@@ -32,11 +32,11 @@ export /*bundle */ function Header({ disabled, children, index }) {
 }
 
 export /*bundle */ function Item({ disabled, children, title, index }) {
-	const { setOpened, opened, onChange } = useAccordionContext();
+	const { opened } = useAccordionContext();
 
 	let cls = `accordion-item${index === opened ? ` accordion-item--opened` : ``}`;
 	if (disabled) cls += ` accordion-item--disabled`;
-	console.log(20, disabled);
+
 	return (
 		<article className={cls}>
 			{title && (
@@ -49,11 +49,12 @@ export /*bundle */ function Item({ disabled, children, title, index }) {
 	);
 }
 
-export /*bundle */ function Container({ children }) {
-	const [opened, setOpened] = React.useState(0);
+export /*bundle */ function Container({ children, active = 0 }) {
+	const [opened, setOpened] = React.useState(active);
 	const onChange = event => {};
 
 	const value = { onChange, opened, setOpened };
+	React.useEffect(() => setOpened(active), [active]);
 	const output = React.Children.map(children, (child, index) => {
 		return React.cloneElement(child, { index });
 	});

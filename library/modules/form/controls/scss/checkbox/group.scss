@@ -1,10 +1,14 @@
 .pui-checkbox-group {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	gap: 1rem;
+	.pui-group__items-container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
 
 	&.pui-checkbox-group--row {
-		flex-direction: row;
+		.pui-group__items-container {
+			flex-direction: row;
+		}
 	}
 }
