@@ -1,23 +1,22 @@
 export class StyleObserver {
 	private observer: MutationObserver;
 
-	constructor({ callback }) {
+	constructor({ callback }: { callback: Function }) {
 		this.observer = new MutationObserver(mutations => {
-			mutations.forEach(mutation => {
-				if (mutation.type === 'childList') {
-					callback(mutation.addedNodes);
-				}
+			mutations.forEach((mutation: MutationRecord) => {
+				if (mutation.type !== 'childList') return
+				callback(mutation.addedNodes);
 			});
 		});
 	}
 
-	startObserving() {
+	startObserving(targetNode: HTMLElement): void {
+		if (!targetNode) return;
 		const config = { childList: true };
-		const targetNode = document.head;
 		this.observer.observe(targetNode, config);
 	}
 
-	stopObserving() {
+	stopObserving(): void {
 		this.observer.disconnect();
 	}
 }

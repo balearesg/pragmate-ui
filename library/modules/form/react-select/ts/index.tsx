@@ -3,7 +3,7 @@ import Select from 'react-select';
 import { StyleObserver } from './observer';
 
 export /*bundle*/
-function ReactSelect(props) {
+	function ReactSelect(props) {
 	const properties = { ...props };
 	delete properties.widget;
 
@@ -20,14 +20,15 @@ function ReactSelect(props) {
 			});
 		};
 
-		const styleObserver = new StyleObserver({
+		const styleObserver: StyleObserver = new StyleObserver({
 			callback: insert,
 		});
-		styleObserver.startObserving();
+		const targetNode: HTMLHeadElement = document.head;
+		styleObserver.startObserving(targetNode);
 		insert(headStyles);
 
 		return () => styleObserver.stopObserving();
 	}, []);
 
-	return <Select {...properties} />;
+	return <Select {...properties} className='container-select' />;
 }
