@@ -1,2 +1,3 @@
 -   Added sizing attribute in buttons
 -   Buttons can now manage processing state with onClick functions passed.
+-   Accordion component added

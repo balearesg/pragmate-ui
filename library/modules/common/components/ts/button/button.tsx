@@ -28,7 +28,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 
 		...otherProps
 	} = props;
-
+	
 	const context = React.useContext(ButtonGroupContext);
 
 	const [processing, setProcessing] = React.useState(fetching || loading);
