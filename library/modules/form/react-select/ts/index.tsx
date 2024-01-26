@@ -5,9 +5,13 @@ import { StyleObserver } from './observer';
 export /*bundle*/
 function ReactSelect(props) {
 	const properties = { ...props };
-	delete properties.widget;
+	const ref = React.useRef(null);
 
 	React.useEffect(() => {
+		const host = ref.current.getRootNode()?.host;
+		if (!host) {
+			console.warn('is not inside a web component');
+		}
 		const headStyles = document.head.querySelectorAll('style[data-emotion]');
 
 		const insert = (nodes: HTMLElement[] | NodeList) => {
@@ -15,7 +19,7 @@ function ReactSelect(props) {
 				if (node instanceof HTMLStyleElement) {
 					// Handle the new style element
 					const clonedStyle = node.cloneNode(true) as HTMLElement;
-					props.widget.shadowRoot.appendChild(clonedStyle);
+					host.shadowRoot.appendChild(clonedStyle);
 				}
 			});
 		};
@@ -29,5 +33,9 @@ function ReactSelect(props) {
 		return () => styleObserver.stopObserving();
 	}, []);
 
-	return <Select {...properties} />;
+	return (
+		<div className='pui-select' ref={ref}>
+			<Select {...properties} />
+		</div>
+	);
 }
