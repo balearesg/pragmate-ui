@@ -1,5 +1,5 @@
 {
-	"name": "select",
+	"name": "react-select",
 	"widget": {
 		"route": "/components/react-select",
 		"layout": "pui-docs-layout",
@@ -13,7 +13,7 @@
 			"files": ["*"]
 		},
 		"element": {
-			"name": "component-select"
+			"name": "react-component-select"
 		}
 	}
 }
