@@ -14,7 +14,9 @@ const styles = css`
 `;
 export function SelectComponent() {
 	const [selectedOption, setSelectedOption] = React.useState(null);
-
+	React.useEffect(() => {
+		console.log('10', 'si');
+	}, []);
 	return (
 		<div className={styles}>
 			<Select

@@ -21,7 +21,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 		block,
 		index,
 		fetching = false,
-		variant = 'default',
+		variant = 'primary',
 		bordered = false,
 		sizing = 'md',
 		disabled = false,
