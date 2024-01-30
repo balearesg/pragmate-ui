@@ -1,4 +1,4 @@
-import React, { SVGAttributes } from 'react';
+import React, { SVGAttributes, Ref } from 'react';
 import { PRAGMATE_ICONS } from './icons';
 interface icon {
 	icon?: string;
@@ -7,6 +7,8 @@ interface icon {
 interface props extends SVGAttributes<SVGSVGElement> {
 	title?: string;
 	icon?: any;
+	ref?: Ref<HTMLButtonElement>
+	className?: string;
 }
 export /*bundle*/
 	const Icon = (props: props): JSX.Element => {
