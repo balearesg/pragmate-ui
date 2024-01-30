@@ -32,8 +32,8 @@ export function ControlSelector(): JSX.Element {
 	};
 	const attrs = {
 		id: id ?? name,
-		placeholder: placeholder ?? ' ',
-		value: value ?? ' '
+		placeholder: placeholder ?? '',
+		value: value ?? ''
 	};
 	return (
 		<>

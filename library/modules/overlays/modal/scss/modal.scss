@@ -1,10 +1,10 @@
-body.body-pragmate-modal-opened {
+body.body-pui-modal-opened {
 	height: 100vh;
 	overflow-y: hidden;
 	padding-right: 15px;
 }
 
-.pragmate-modal {
+.pui-modal {
 	display: none;
 	position: fixed;
 	inset: 0;
@@ -38,7 +38,6 @@ body.body-pragmate-modal-opened {
 		animation: show 0.5s ease-in-out;
 		border-radius: var(--border-radius-base);
 		padding: 2rem 1.5rem;
-
 	}
 }
 

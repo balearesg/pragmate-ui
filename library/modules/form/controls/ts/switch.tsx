@@ -7,7 +7,13 @@ interface IProps extends InputHTMLAttributes<HTMLInputElement> {
 
 export /* bundle */ function Switch(props: IProps): JSX.Element {
 	const { checked, onChange, variant = 'primary', disabled, size = 'md', className, } = props;
+
 	const [isChecked, setIsChecked] = React.useState<boolean>(checked);
+
+	React.useEffect(() => {
+		if (isChecked === checked) return;
+		setIsChecked(checked)
+	}, [checked])
 
 	const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
 		event.stopPropagation()

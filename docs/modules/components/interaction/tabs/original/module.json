@@ -2,7 +2,7 @@
 	"name": "tabs",
 	"platforms": ["web", "ios", "android"],
 	"widget": {
-		"route": "/components/tabs",
+		"route": "/components/tabs1",
 		"layout": "pui-docs-layout",
 		"is": "page",
 		"ts": {
