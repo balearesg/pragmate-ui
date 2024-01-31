@@ -11,11 +11,12 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 	const [value, setValue] = useState<boolean>(!!checked);
 
 	useEffect(() => {
+		if (checked === value) return
 		setValue(!!checked);
 	}, [checked]);
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
 		event.stopPropagation();
-		setValue(!checked);
+		setValue(!value);
 		onChange && onChange(event);
 	};
 	let cls: string = `pui-checkbox ${className ? className : ''}`;
@@ -31,7 +32,6 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 	const id = props.id ?? `${name}-${performance.now()}.${ramdon}`;
 
 	const handleClick = (event: MouseEvent) => event.stopPropagation();
-	const picked = checked === true || checked === false ? checked : value;
 	return (
 		<div className={cls} onClick={handleClick}>
 			<input
@@ -40,7 +40,7 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 				className='pui-checkbox--input'
 				id={id}
 				name={name}
-				checked={picked}
+				checked={value}
 				onChange={handleChange}
 				{...properties}
 			/>
