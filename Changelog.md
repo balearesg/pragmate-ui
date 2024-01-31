@@ -4,9 +4,9 @@
 
 ### Updated
 
-### Version 0.0.5
-
 -   **CheckBox Component**: Fixed behavior using CheckBoxGroup Component.
+
+### Version 0.0.5
 
 #### Added
 
