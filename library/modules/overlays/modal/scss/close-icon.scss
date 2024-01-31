@@ -1,17 +1,21 @@
 .pui-modal {
 	position: relative;
-	.close-icon {
+	.pui-icon-button.close-icon {
 		position: absolute;
-		top: 20px;
-		right: 0;
+		top: 0.5rem;
+
+		right: 0.5rem;
 		border: none;
-		display: inline-block;
+
 		fill: var(--text-color);
 		opacity: 0.7;
 		transition: all 100ms ease-in;
-		display: flex;
+		padding: 0 !important;
+		height: 1.5rem;
+		width: 1.5rem;
 		outline: none;
 		cursor: pointer;
+		border-radius: 50%;
 
 		&:focus {
 			transition: all 100ms ease-in;
