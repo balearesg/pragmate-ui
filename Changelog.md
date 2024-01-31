@@ -1,6 +1,12 @@
 ## Changelog
 
-### Version 0.0.4
+### Version 0.0.6
+
+### Updated
+
+### Version 0.0.5
+
+-   **CheckBox Component**: Fixed behavior using CheckBoxGroup Component.
 
 #### Added
 
