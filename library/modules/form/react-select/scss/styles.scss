@@ -8,7 +8,7 @@
 	.pui-react-select__control {
 		background-color: var(--background);
 		color: var(--text);
-
+		max-height: 30px;
 		// Styles for when the select is focused
 		&--is-focused {
 			border-color: var(--border);
@@ -20,8 +20,7 @@
 	.pui-react-select__menu {
 		background-color: var(--surface);
 		color: var(--text);
-		max-height: 100px;
-		position: absolute;
+		max-height: 50px;
 	}
 
 	// Styles for individual options in the dropdown

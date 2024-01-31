@@ -51,7 +51,7 @@ function View({ widget }) {
 				<Code>{`import { ReactSelect } from 'pragmate-ui/form/react-select'`}</Code>
 			</div>
 			<div className='component-implementation'>
-			<div className='component-info'>
+				<div className='component-info'>
 					<h3>Implementation: </h3>
 					<Code>{implementation}</Code>
 				</div>
@@ -60,10 +60,6 @@ function View({ widget }) {
 					<h3>Result:</h3>
 					<ReactSelect widget={widget} options={options} />
 				</div>
-			</div>
-			<div className='component-result-top'>
-				<h3>Result:</h3>
-				<ReactSelect widget={widget} options={options2} />
 			</div>
 		</div>
 	);
