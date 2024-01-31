@@ -5,7 +5,7 @@ globalThis.TplManager = TplManager;
 type TColorInput = string | [number, number, number]; // Puede ser un string hexadecimal o un array RGB
 type TRGB = [number, number, number];
 
-export class StoreManager implements IWidgetStore {
+export class StoreManager {
 	#values: TColorInput | TRGB[];
 	get values() {
 		return this.#values;

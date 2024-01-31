@@ -1,7 +1,6 @@
 {
 	"name": "pui/template/generator",
 	"platforms": ["web", "ios", "android"],
-
 	"widget": {
 		"route": "/pui/palette/generator",
 		"is": "page",

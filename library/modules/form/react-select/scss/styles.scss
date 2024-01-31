@@ -20,6 +20,8 @@
 	.pui-react-select__menu {
 		background-color: var(--surface);
 		color: var(--text);
+		max-height: 100px;
+		position: absolute;
 	}
 
 	// Styles for individual options in the dropdown

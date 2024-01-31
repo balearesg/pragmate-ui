@@ -1,5 +1,5 @@
 {
 	"name": "template/styles",
-	"bundle": "sass",
+	"bundle": "scss",
 	"files": ["*"]
 }

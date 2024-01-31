@@ -4,6 +4,7 @@
 		"target": "es2018",
 		"experimentalDecorators": true,
 		"jsx": "react",
-		"moduleResolution": "Node"
+		"moduleResolution": "Node",
+		"skipLibCheck": true
 	}
 }

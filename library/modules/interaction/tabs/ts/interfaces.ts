@@ -8,5 +8,6 @@ export interface ITabProps {
 	children: React.ReactNode;
 	active?: number;
 	setURL?: boolean;
+	className?: string;
 	onChange?: (event, index) => void;
 }

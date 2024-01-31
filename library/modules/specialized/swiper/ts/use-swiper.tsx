@@ -1,20 +1,20 @@
 import React from 'react';
-import {Controller} from './state/controller';
-import {useSwiperContext} from './context';
+import { Controller } from './state/controller';
+import { useSwiperContext } from './context';
 
-import {ISwiperOptions} from './interfaces/swiper-props';
+import { ISwiperOptions } from './interfaces/swiper-props';
 export const useSwiperSlider = (props: ISwiperOptions) => {
 	/* const { props } = useSwiperContext(); */
 
 	const refs = {
-		next: React.useRef(),
+		next: React.useRef<HTMLButtonElement>(),
 		container: React.useRef(),
 		pagination: React.useRef(),
-		prev: React.useRef(),
+		prev: React.useRef<HTMLButtonElement>(),
 	};
 
-	const {slideTo} = props;
-	const {container, prev} = refs;
+	const { slideTo } = props;
+	const { container, prev } = refs;
 
 	const [state, setState] = React.useState<any>({});
 
@@ -46,5 +46,5 @@ export const useSwiperSlider = (props: ISwiperOptions) => {
 		state.swiper.slideTo(slideTo);
 	}, [slideTo]);
 	console.log(0.2);
-	return {refs, state, prev, container};
+	return { refs, state, prev, container };
 };

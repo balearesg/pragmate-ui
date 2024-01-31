@@ -1,22 +1,14 @@
 {
-  "name": "code",
-  "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
-  "code": {
-    "scss": {
-      "path": "scss",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "ts",
-      "files": [
-        "*"
-      ]
-    }
-  }
+	"name": "code",
+	"platforms": ["web", "ios", "android"],
+	"code": {
+		"scss": {
+			"path": "scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "ts",
+			"files": ["*"]
+		}
+	}
 }

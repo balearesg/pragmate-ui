@@ -5,6 +5,7 @@ import { View } from './views';
 export /*bundle*/
 class Controller extends ReactWidgetController {
 	#store: StoreManager;
+	//@ts-ignore
 	createStore() {
 		this.#store = new StoreManager();
 		return this.#store;

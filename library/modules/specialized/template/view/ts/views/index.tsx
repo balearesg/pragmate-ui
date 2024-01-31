@@ -24,7 +24,7 @@ function View({ store }) {
 			<h2>Template tones</h2>
 
 			<div className='contents'>
-				<ButtonGroup>
+				<ButtonGroup selected={0}>
 					<Button onClick={onClick} variant='primary' data-view='palettes'>
 						Palettes
 					</Button>

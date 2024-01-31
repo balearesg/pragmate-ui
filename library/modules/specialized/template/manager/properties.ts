@@ -81,7 +81,7 @@ export const getCSSCustomPropIndexFromStylesheet = (stylesheetHref: string, them
 		const targetSelector = `:root[data-beyond-mode="${theme}"]`;
 
 		for (const rule of Array.from(styleSheet.cssRules)) {
-			if (isStyleRule(rule) && rule.selectorText === targetSelector) {
+			if (rule instanceof CSSStyleRule && rule.selectorText === targetSelector) {
 				// console.log(121, rule);
 				const styleRule = rule as CSSStyleRule;
 				const propValue = styleRule.style.getPropertyValue(propName).trim();
@@ -127,7 +127,7 @@ export const getCSSCustomPropsObjectFromStylesheet = (
 		const camelCasedPropName = toCamelCase(propName.slice(2));
 		obj[camelCasedPropName] = value;
 	});
-
+	//@ts-ignore
 	return obj;
 };
 

@@ -10,7 +10,6 @@ interface ICollapsibleProps {
 export /*bundle */ function CollapsibleHeader({
 	children,
 	className,
-	key,
 	toggleTitle = true,
 }: ICollapsibleProps): JSX.Element {
 	const { setOpen, onToggle, open } = useCollapsibleContext();

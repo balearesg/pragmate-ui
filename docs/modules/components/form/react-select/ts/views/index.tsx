@@ -3,10 +3,23 @@ import { Code } from 'pragmate-ui/code';
 import { implementation } from './implementation';
 import { SelectComponent } from './select';
 import { ReactSelect } from 'pragmate-ui/form/react-select';
+import { Modal } from 'pragmate-ui/modal';
 const options = [
 	{ value: 'chocolate', label: 'Chocolate' },
 	{ value: 'strawberry', label: 'Strawberry' },
 	{ value: 'vanilla', label: 'Vanilla' },
+];
+
+const options2 = [
+	{ value: 'chocolate', label: 'Chocolate' },
+	{ value: 'strawberry', label: 'Strawberry' },
+	{ value: 'vanilla', label: 'Vanilla' },
+	{ value: 'chocolate2', label: 'Chocolate2' },
+	{ value: 'strawberry2', label: 'Strawberry2' },
+	{ value: 'vanilla2', label: 'Vanilla2' },
+	{ value: 'chocolate3', label: 'Chocolate3' },
+	{ value: 'strawberry3', label: 'Strawberry3' },
+	{ value: 'vanilla3', label: 'Vanilla3' },
 ];
 export /*bundle*/
 function View({ widget }) {
@@ -38,7 +51,7 @@ function View({ widget }) {
 				<Code>{`import { ReactSelect } from 'pragmate-ui/form/react-select'`}</Code>
 			</div>
 			<div className='component-implementation'>
-				<div className='component-info'>
+			<div className='component-info'>
 					<h3>Implementation: </h3>
 					<Code>{implementation}</Code>
 				</div>
@@ -47,6 +60,10 @@ function View({ widget }) {
 					<h3>Result:</h3>
 					<ReactSelect widget={widget} options={options} />
 				</div>
+			</div>
+			<div className='component-result-top'>
+				<h3>Result:</h3>
+				<ReactSelect widget={widget} options={options2} />
 			</div>
 		</div>
 	);

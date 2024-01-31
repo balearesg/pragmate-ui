@@ -1,24 +1,15 @@
 {
-  "name": "spinner",
-  "platforms": [
-    "web",
-    "ios",
-    "android"
-  ],
-  "code": {
-    "hmr": true,
-    "name": "spinner",
-    "ts": {
-      "path": "/code/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "sass":{
-      "path": "/code/scss",
-      "files": [
-        "*"
-      ]
-    }
-  }
+	"name": "spinner",
+	"platforms": ["web", "ios", "android"],
+	"code": {
+		"name": "spinner",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		}
+	}
 }

@@ -7,10 +7,10 @@ export interface ISwiperContext {
 	navigation?: boolean;
 	controller?: Controller;
 	refs: {
-		next: React.RefObject<HTMLDivElement>;
+		next: React.RefObject<HTMLButtonElement>;
 		container: React.RefObject<HTMLDivElement>;
 		pagination: React.RefObject<HTMLDivElement>;
-		prev: React.RefObject<HTMLDivElement>;
+		prev: React.RefObject<HTMLButtonElement>;
 	};
 }
 export const SwiperContext = React.createContext({} as ISwiperContext);

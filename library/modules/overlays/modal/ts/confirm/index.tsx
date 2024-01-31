@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Button } from 'pragmate-ui/components';
 import { Modal } from '../modal';
 import { useActionProperties } from './use-action-properties';

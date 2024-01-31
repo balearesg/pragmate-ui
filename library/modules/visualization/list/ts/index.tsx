@@ -8,6 +8,7 @@ type ListProps<T> = {
 	control: React.ElementType<{ data: T }>;
 	childrenPosition?: 'top' | 'bottom';
 	container?: keyof JSX.IntrinsicElements;
+	children?: ReactNode;
 };
 
 export /*bundle */ function List<T>({

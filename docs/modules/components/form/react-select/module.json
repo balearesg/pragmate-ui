@@ -12,6 +12,10 @@
 			"path": "/ts",
 			"files": ["*"]
 		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
 		"element": {
 			"name": "react-component-select"
 		}
