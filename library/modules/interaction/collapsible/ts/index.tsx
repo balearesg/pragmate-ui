@@ -19,7 +19,7 @@ export /*bundle */ function CollapsibleContainer({
 	const [opened, setOpen] = React.useState(open);
 	const value = { open: opened, setOpen, onToggle };
 	const cls = `collapsible__container ${className ? ` ${className}` : ''} `;
-	console.log(23, opened);
+
 	return (
 		<CollapsibleContext.Provider value={value}>
 			<article className={cls}>{children}</article>

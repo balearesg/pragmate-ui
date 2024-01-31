@@ -6,14 +6,17 @@ type ListProps<T> = {
 	index?: string;
 	specs;
 	control: React.ElementType<{ data: T }>;
+	childrenPosition?: 'top' | 'bottom';
 	container?: keyof JSX.IntrinsicElements;
 };
 
 export /*bundle */ function List<T>({
 	items,
 	className,
+	children,
 	index = 'id',
 	specs,
+	childrenPosition = 'top',
 	control,
 	container = 'ul',
 }: ListProps<T>): ReactElement {
@@ -36,7 +39,13 @@ export /*bundle */ function List<T>({
 				}
 			);
 		});
-		return <Container className={className}>{output}</Container>;
+		return (
+			<Container className={className}>
+				{childrenPosition === 'top' && children ? children : null}
+				{output}
+				{childrenPosition === 'bottom' && children ? children : null}
+			</Container>
+		);
 	} catch (e) {
 		console.error(`invalid items in list0`, items);
 	}

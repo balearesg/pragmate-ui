@@ -21,7 +21,6 @@ export /*bundle*/ const ConfirmModal = (properties): JSX.Element => {
 		setState({ fetching: false });
 	};
 
-	
 	const { text, title, btn, onCancel, centered, onConfirm, btnConfirm, btnCancel } = properties;
 
 	let cls: string = `pui-confirm-dialog${centered ? ' pui-confirm-dialog-centered' : ''}`;
@@ -35,21 +34,21 @@ export /*bundle*/ const ConfirmModal = (properties): JSX.Element => {
 
 	let cancelLabel: string = 'Cancelar';
 	let confirmLabel: string = 'Confirmar';
-	let clsCancel: string = 'btn btn-default btn-cancel';
-	let clsConfirm: string = 'btn btn-primary btn-confirm';
+	let clsCancel: string = 'btn btn-primary outline';
+	let clsConfirm: string = 'btn btn-primary outline';
 	let variantConfirm: string = 'success';
-	let variantCancel: string = "warning"
+	let variantCancel: string = 'warning';
 
 	if (btnConfirm && typeof btnConfirm === 'object') {
 		confirmLabel = btnConfirm.label ? btnConfirm.label : confirmLabel;
 		clsConfirm = btnConfirm.className ? btnConfirm.className : clsConfirm;
-		variantConfirm = btnConfirm.variant ?? variantConfirm
+		variantConfirm = btnConfirm.variant ?? variantConfirm;
 	}
 
 	if (btnCancel && typeof btnCancel === 'object') {
 		cancelLabel = btnCancel.label ? btnCancel.label : cancelLabel;
 		clsCancel = btnCancel.className ? btnCancel.className : clsCancel;
-		variantCancel = btnCancel.variant ?? variantCancel
+		variantCancel = btnCancel.variant ?? variantCancel;
 	}
 
 	const disabled: { disabled?: boolean } = {};
@@ -57,13 +56,13 @@ export /*bundle*/ const ConfirmModal = (properties): JSX.Element => {
 
 	return (
 		<Modal show className={cls} onClose={onCancel}>
-			<div className="confirm-dialog-content">
+			<div className='confirm-dialog-content'>
 				{title && <h3>{title}</h3>}
 				{text && <div>{text}</div>}
 				{properties.children}
 			</div>
 
-			<div className="actions">
+			<div className='actions'>
 				<Button label={cancelLabel} {...disabled} onClick={onCancel} variant={variantCancel} />
 				<Button
 					className={clsConfirm}

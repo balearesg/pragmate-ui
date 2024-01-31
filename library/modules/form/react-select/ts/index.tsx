@@ -3,7 +3,7 @@ import Select from 'react-select';
 import { StyleObserver } from './observer';
 
 export /*bundle*/
-	function ReactSelect(props) {
+function ReactSelect(props) {
 	const properties = { ...props };
 	const ref = React.useRef(null);
 
@@ -36,7 +36,7 @@ export /*bundle*/
 
 	return (
 		<div className='pui-select' ref={ref}>
-			<Select {...properties} />
+			<Select classNamePrefix='pui-react-select' {...properties} />
 		</div>
 	);
 }

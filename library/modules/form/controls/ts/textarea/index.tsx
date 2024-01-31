@@ -1,15 +1,27 @@
 import React from 'react';
 import { ChangeEvent, useRef, useState } from 'react';
-import { IProps, ISate, TValue } from './types';
+import { IProps, IState, TValue } from './types';
 import { TextareaError } from './error';
 import { TextareaCounter } from './counter';
 
 export /*bundle*/ function Textarea(props: IProps): JSX.Element {
 	const input = props.ref ?? useRef();
 	const { counter, errorMessage, value = '' } = props;
-	const [state, setState] = useState<ISate>({ value, errorMessage });
+	const [state, setState] = useState<IState>({ value, errorMessage });
 
+	const checkSize = () => {
+		const { scrollHeight, offsetHeight } = input.current;
+
+		if (scrollHeight > offsetHeight) {
+			input.current.style.height = `${scrollHeight}px`;
+		}
+	};
+	/**
+	 * If the textarea is created with a value, the height needs to be checked
+	 */
+	React.useEffect(checkSize, []);
 	const handleChange = (event: ChangeEvent<HTMLTextAreaElement>): void => {
+		checkSize();
 		if (!!props.onChange && typeof props.onChange === 'function') props.onChange(event);
 		setState({
 			...state,
