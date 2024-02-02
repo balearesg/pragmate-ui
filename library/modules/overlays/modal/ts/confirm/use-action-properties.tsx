@@ -56,9 +56,8 @@ export function useActionProperties(properties, setState) {
 	};
 
 	const actions = {
-		confirm: typeof btnConfirm === 'object' ? { ...defaultConfirm, ...btnCancel } : defaultConfirm,
+		confirm: typeof btnConfirm === 'object' ? { ...defaultConfirm, ...btnConfirm } : defaultConfirm,
 		cancel: typeof btnCancel === 'object' ? { ...defaultCancel, ...btnCancel } : defaultCancel,
 	};
-
 	return [actions.confirm, actions.cancel];
 }

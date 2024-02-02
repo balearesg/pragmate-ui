@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { useState, useRef, MutableRefObject, SyntheticEvent, ReactNode } from 'react';
 import { Children } from './children';
 
@@ -24,14 +24,16 @@ export /*bundle*/
 
 	const close = async (event: SyntheticEvent<HTMLElement, Event>): Promise<void> => {
 		if (event) event.stopPropagation();
-		const { onClose } = props;
+
 		const body: HTMLBodyElement = document.querySelector('body');
 		modal.current.classList.add('modal-hidden');
 		window.setTimeout(async (): Promise<void> => {
 			setState({ ...state, show: false, closeClicked: true });
 			body.setAttribute('style', '');
 			body.classList.remove('body-custom-modal-opened');
-			onClose(event);
+			const { onClose } = props;
+			if (!onClose || typeof onClose !== "function") return;
+			onClose(event)
 		}, 300);
 	};
 
