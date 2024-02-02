@@ -36,7 +36,9 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
-
+	span {
+		position: absolute;
+	}
 	&:disabled {
 		opacity: 0.7;
 		cursor: not-allowed;
