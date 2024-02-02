@@ -12,7 +12,7 @@
 		flex-direction: column;
 		row-gap: 8px; // @todo add custom-property for default gaps
 		& :where(h3, div) {
-			color: var(--text);
+			color: var(--on-surface);
 		}
 	}
 
