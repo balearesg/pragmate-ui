@@ -16,9 +16,10 @@ export interface IConfirmModalActions {
 }
 
 export interface IConfirmModalProps {
+	show?: boolean;
 	title?: string;
 	text?: string;
-	actions: IConfirmModalActions;
+	actions?: IConfirmModalActions;
 	centered?: boolean;
 	className?: string;
 	/**
@@ -30,7 +31,8 @@ export interface IConfirmModalProps {
 	 */
 	btnCancel?: Record<string, any>;
 	children?: React.ReactNode;
-	onCancel: () => void;
-	onConfirm: () => void;
+	onCancel?: () => void;
+	onConfirm?: () => void;
+	onClose?: () => void;
 	// ... any other props needed for ConfirmModal
 }
