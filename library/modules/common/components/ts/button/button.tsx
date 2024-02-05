@@ -3,12 +3,12 @@ import { Icon } from 'pragmate-ui/icons';
 import { Spinner } from 'pragmate-ui/spinner';
 import { RippleEffect } from 'pragmate-ui/ripple';
 import tippy from 'tippy.js';
-import { IProps } from './interface';
+import { IButtonProps } from './interface';
 import { ButtonGroupContext } from '../button-group/context';
 
 const { forwardRef } = React;
 
-export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, ref: Ref<HTMLElement>) => {
+export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>((props, ref: Ref<HTMLElement>) => {
 	const {
 		className,
 		onClick,
@@ -28,7 +28,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 
 		...otherProps
 	} = props;
-	
+
 	const context = React.useContext(ButtonGroupContext);
 
 	const [processing, setProcessing] = React.useState(fetching || loading);
@@ -62,7 +62,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 		}
 	}, [title]);
 
-	const properties: IProps = {
+	const properties: IButtonProps = {
 		...otherProps,
 		type: props.type ? props.type : 'button',
 	};
