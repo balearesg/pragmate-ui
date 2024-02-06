@@ -7,7 +7,7 @@ type props = {
 	className?: string;
 	onClose?: (e: SyntheticEvent<HTMLElement, Event>) => void;
 	show?: boolean;
-	closeClicked?: false,
+	closeClicked?: boolean,
 };
 export /*bundle*/
 	function Modal(props: props) {
