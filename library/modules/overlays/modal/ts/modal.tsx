@@ -7,6 +7,7 @@ type props = {
 	className?: string;
 	onClose?: (e: SyntheticEvent<HTMLElement, Event>) => void;
 	show?: boolean;
+	closeClicked?: false,
 };
 export /*bundle*/
 	function Modal(props: props) {
@@ -17,7 +18,7 @@ export /*bundle*/
 	};
 	const [state, setState] = useState<state>({
 		show: props?.show ?? false,
-		closeClicked: false,
+		closeClicked: props.closeClicked ?? true,
 		container: null,
 	});
 	const modal: MutableRefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
@@ -39,6 +40,7 @@ export /*bundle*/
 
 	const onClickBackdrop = (event: SyntheticEvent<HTMLElement, Event>): void => {
 		event.stopPropagation();
+		if (!state.closeClicked) return;
 		close(event);
 	};
 
