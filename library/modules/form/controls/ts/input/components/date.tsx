@@ -6,13 +6,13 @@ interface HTMLInputWithPicker extends HTMLInputElement {
 }
 
 export function Date(): JSX.Element {
-	const { input, props } = useInputContext();
+	const { input, props, icon } = useInputContext();
 	if (props.type !== 'date') return null;
-
+	const iconValue = icon ? icon : 'calendar';
 	return (
 		<Icon
 			key='icon'
-			icon='calendar'
+			icon={iconValue}
 			className='pui-input__icon'
 			onClick={() => (input.current as any).showPicker()}
 		/>
