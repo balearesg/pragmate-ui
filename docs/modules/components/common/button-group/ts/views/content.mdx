@@ -1,8 +1,7 @@
 import { Code } from 'pragmate-ui/code';
 import { ButtonGroup } from 'pragmate-ui/components';
 import { Button } from 'pragmate-ui/components';
-import { TableDescription } from './table-description';
-import { implementation } from './implementation';
+import { implementation, implementationDisabled } from './implementation';
 
 # ButtonGroup
 
@@ -38,3 +37,28 @@ A continuación se describen las propiedades disponibles para personalizar del c
     una fila: `row`, sus posibles valores:
     -   `row`,
     -   `column`
+
+## Disabled
+
+**Propiedad: disabledButtonIndexes**
+
+- Descripción: Esta propiedad permite especificar los índices de los botones dentro del componente `ButtonGroup` que se deben deshabilitar.
+- Tipo: Array de números.
+- Valor predeterminado: `[]` (un array vacío, lo que significa que no se deshabilitarán botones por defecto).
+
+**Uso:**
+1. Importa el componente `ButtonGroup` en tu archivo donde deseas utilizarlo.
+2. Añade el componente `ButtonGroup` en tu JSX y pasa la propiedad `disabledButtonIndexes` con un array de los índices de los botones que deseas deshabilitar.
+3. Cada índice especificado en `disabledButtonIndexes` corresponderá a un botón hijo del `ButtonGroup`.
+4. Los botones cuyos índices coincidan con los índices especificados en `disabledButtonIndexes` estarán deshabilitados.
+
+<Code>{implementationDisabled}</Code>
+
+<ButtonGroup orientation="row" disabledIndexes={[1, 3, 5]} size="tall">
+	<Button variant="primary">Button 1</Button>
+	<Button variant="primary">Button 2</Button>
+	<Button variant="primary">Button 3</Button>
+	<Button variant="primary">Button 4</Button>
+	<Button variant="primary">Button 5</Button>
+	<Button variant="primary">Button 6</Button>
+</ButtonGroup>

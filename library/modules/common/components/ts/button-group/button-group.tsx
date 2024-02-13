@@ -2,7 +2,7 @@ import React from 'react';
 import type { IProps } from './type';
 import { ButtonGroupContext } from './context';
 
-export /*bundle*/ function ButtonGroup({ orientation = 'row', children, disabledIndexes, ...props }: IProps): JSX.Element {
+export /*bundle*/ function ButtonGroup({ orientation = 'row', children, disabledIndexes = [0], ...props }: IProps): JSX.Element {
     const [selected, setSelected] = React.useState<number>(props.selected);
     let cls = `pui-button-group`;
     cls += orientation ? ` pui-button-group ${orientation}` : '';
