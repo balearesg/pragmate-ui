@@ -5,5 +5,6 @@ export interface IProps {
 	children: React.ReactNode;
 	selected: number;
 	disabled?: boolean;
+	disabledIndexes?: number[];
 	index?: number;
 }
