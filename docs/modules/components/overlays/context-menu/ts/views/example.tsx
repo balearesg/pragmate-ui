@@ -4,7 +4,6 @@ import { Button } from 'pragmate-ui/components';
 export function Example() {
 	const handleItemClick = event => {
 		event.stopPropagation();
-		console.log('Item clicked!');
 	};
 
 	return (

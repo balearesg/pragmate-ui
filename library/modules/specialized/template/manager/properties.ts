@@ -82,7 +82,6 @@ export const getCSSCustomPropIndexFromStylesheet = (stylesheetHref: string, them
 
 		for (const rule of Array.from(styleSheet.cssRules)) {
 			if (rule instanceof CSSStyleRule && rule.selectorText === targetSelector) {
-				// console.log(121, rule);
 				const styleRule = rule as CSSStyleRule;
 				const propValue = styleRule.style.getPropertyValue(propName).trim();
 				return propValue;
@@ -108,7 +107,7 @@ export const getCSSCustomPropIndexFromStylesheet = (stylesheetHref: string, them
 				})
 				// Discard any props that don't start with "--". Custom props are required to.
 				.filter(([propName]) => propName.startsWith('--'));
-			// console.log(100, props);
+
 			return propValArr.concat(props);
 		}, []);
 
@@ -117,7 +116,7 @@ export const getCSSCustomPropIndexFromStylesheet = (stylesheetHref: string, them
 
 export const getCSSCustomPropsObjectFromStylesheet = (
 	stylesheetHref: string,
-	theme: string
+	theme: string,
 ): { [key: string]: string; theme: string } => {
 	const index = getCSSCustomPropIndexFromStylesheet(stylesheetHref, theme);
 	const obj: { [key: string]: string } = {};

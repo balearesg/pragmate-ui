@@ -34,9 +34,11 @@ function ReactSelect(props) {
 		return () => styleObserver.stopObserving();
 	}, []);
 
+	let value = props.options.find(item => item.value === props.value);
+
 	return (
 		<div className='pui-select' ref={ref}>
-			<Select classNamePrefix='pui-react-select' {...properties} />
+			<Select classNamePrefix='pui-react-select' {...properties} value={value} />
 		</div>
 	);
 }
