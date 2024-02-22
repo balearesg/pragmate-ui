@@ -10,6 +10,8 @@ export function IconContainer(): JSX.Element {
         password: Password,
         date: Date,
         default: null,
+        month: Date,
+        week: Date
     };
     const output = [];
     if (!!types[props.type]) {
