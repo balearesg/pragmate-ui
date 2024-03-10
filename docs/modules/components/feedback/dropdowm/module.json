@@ -1,0 +1,24 @@
+{
+	"name": "dropdowm",
+	"platforms": ["web", "ios", "android"],
+	"widget": {
+		"route": "/components/dropdowm",
+		"layout": "pui-docs-layout",
+		"is": "page",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "page-dropdowm"
+		}
+	}
+}

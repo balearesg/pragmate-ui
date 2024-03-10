@@ -1,0 +1,78 @@
+.pui-dropdowm {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 72px;
+    max-width: min-content;
+
+    & > button.pui-dropdowm__button {
+        position: relative;
+        display: grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        background: transparent;
+    }
+
+    & > button.pui-dropdowm__button::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        scale: 0.25;
+        opacity: 0;
+        background: rgb(255, 255, 255 );
+        transition: 0.2s;
+    }
+
+    .pui-dropdowm__children {
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: absolute;
+        top: 64px;
+        right: 30px;
+        left: 0px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: max-content;
+        translate: 0 16px;
+        width: 270px;
+        max-height: 286px;
+        padding: 1rem .5rem;
+        background: var(--surface-variant);
+        border: 8px;
+        opacity: 0;
+        gap: 1rem;
+        visibility: hidden;
+        transition: 0.3s;
+        appearance: none;
+        border-radius: var(--border-radius-base);
+
+        &::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: rgb(255, 255, 255 );
+            border-radius: 10px;
+            border: 4px solid transparent;
+            background-clip: padding-box;
+        }
+    }  
+    
+    &:hover > button.pui-dropdowm__button::before {
+        scale: 1;
+        opacity: 1;
+    }
+
+    &:hover > .pui-dropdowm__children {
+        opacity: 1;
+        visibility: visible;
+        translate: 0;
+    }
+
+}

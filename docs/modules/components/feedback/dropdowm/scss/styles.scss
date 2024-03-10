@@ -1,0 +1,15 @@
+.pui-dropdowm__children > .content-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    padding: .5rem;
+    border-radius: var(--border-radius-base);
+    max-width: 64px;
+
+    &:hover {
+        background-color: var(--surface-dim);
+        opacity: .6;
+    }
+}

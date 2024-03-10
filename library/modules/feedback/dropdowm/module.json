@@ -1,0 +1,15 @@
+{
+	"name": "dropdowm",
+	"platforms": ["web", "ios", "android"],
+	"code": {
+		"name": "dropdowm",
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		}
+	}
+}

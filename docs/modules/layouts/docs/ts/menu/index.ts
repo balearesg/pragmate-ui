@@ -56,6 +56,7 @@ export const menuItems = [
 	['Vertical Line', 'vertical-line', []],
 	['Code', 'code', []],
 	['Pricing', 'pricing', []],
+	['Dropdowm', 'dropdowm', []],
 	['Spinner', 'spinner', []],
 	['BreadCrumb', 'breadcrumb', []],
 	['Opinions', 'opinions', []],
