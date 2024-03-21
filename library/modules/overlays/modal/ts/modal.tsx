@@ -9,7 +9,7 @@ type props = {
 	show?: boolean;
 };
 export /*bundle*/
-	function Modal(props: props) {
+function Modal(props: props) {
 	type state = {
 		container?: HTMLDivElement;
 		show: boolean;
@@ -32,8 +32,9 @@ export /*bundle*/
 			body.setAttribute('style', '');
 			body.classList.remove('body-custom-modal-opened');
 			const { onClose } = props;
-			if (!onClose || typeof onClose !== "function") return;
-			onClose(event)
+
+			if (!onClose || typeof onClose !== 'function') return;
+			onClose(event);
 		}, 300);
 	};
 
@@ -52,16 +53,16 @@ export /*bundle*/
 
 	if (show) {
 		output.push(
-			<div key="modal-content-wrapper" className="modal-wrapper">
+			<div key='modal-content-wrapper' className='modal-wrapper'>
 				<div
-					className="modal-content"
+					className='modal-content'
 					onClick={event => {
 						event.stopPropagation();
 					}}
 				>
-					<Children {...props} close={close} key="children-content" />
+					<Children {...props} close={close} key='children-content' />
 				</div>
-			</div>
+			</div>,
 		);
 	}
 
