@@ -2,6 +2,7 @@ import React, { ChangeEvent, KeyboardEvent, useState, useRef, MutableRefObject, 
 import Input from './input';
 interface IProps {
 	length?: number;
+	upper: boolean;
 	onCodeFull?: (e: string) => void;
 	className?: string;
 	onlyNumber?: boolean;
@@ -17,19 +18,27 @@ const defaultOnCodeFull: (code) => void = () => null;
  * user enters the last character, the component calls the onCodeFull prop with the code as a string.
  * @param {props}  - props
  */
-export /*bundle*/ function InputCode({ length, onCodeFull, className, onlyNumber, reset }: IProps): JSX.Element {
+export /*bundle*/ function InputCode({
+	length,
+	upper = false,
+	onCodeFull,
+	className,
+	onlyNumber,
+	reset,
+}: IProps): JSX.Element {
 	type code = Array<string>;
 	const [code, setCode] = useState<code>([]);
 	const refs: MutableRefObject<HTMLInputElement[]> = useRef<HTMLInputElement[]>(Array(length));
 	const onClean = (event: KeyboardEvent<HTMLInputElement>): void => {
-		window.setTimeout(() => {
+		globalThis.setTimeout(() => {
 			if (event.which === 8 || event.key?.toLowerCase() === 'backspace') {
 				if (code.length) setCode(code.slice(0, code.length - 1));
 				return;
 			}
 		}, 0);
 	};
-
+	const setFocus = (): void => refs.current[code.length]?.focus();
+	const cls: string = className ? `${className} code-inputs` : 'code-inputs';
 	const preventDefault = (event: ChangeEvent<HTMLInputElement>): void => {
 		const target: EventTarget & HTMLInputElement = event.currentTarget as HTMLInputElement;
 		if (target.value.length > 1) {
@@ -42,13 +51,25 @@ export /*bundle*/ function InputCode({ length, onCodeFull, className, onlyNumber
 			event.preventDefault();
 			return;
 		}
-		setCode((currentCode: code): Array<string> => [...currentCode, target.value]);
+		const value = upper ? target.value.toUpperCase() : target.value;
+
+		setCode((currentCode: code): Array<string> => [...currentCode, value]);
 	};
 
-	const setFocus = (): void => refs.current[code.length]?.focus();
-	const cls: string = className ? `${className} code-inputs` : 'code-inputs';
+	useEffect(() => {
+		const onCopy = (event: ClipboardEvent): void => {
+			const pastedData = event.clipboardData.getData('text');
+			console.log(105, pastedData.split(''));
+			setCode(pastedData.split(''));
+		};
+		refs.current[0].addEventListener('paste', onCopy);
+		return () => {
+			refs.current[0].removeEventListener('paste', onCopy);
+		};
+	}, []);
 	useEffect(() => {
 		if (refs.current[code.length]) refs.current[code.length].focus();
+
 		onCodeFull(code.join(''));
 	}, [code, length]);
 
@@ -67,7 +88,7 @@ export /*bundle*/ function InputCode({ length, onCodeFull, className, onlyNumber
 				onKeyDown={onClean}
 				onFocus={setFocus}
 			/>
-		)
+		),
 	);
 
 	return <div className={cls}>{output}</div>;

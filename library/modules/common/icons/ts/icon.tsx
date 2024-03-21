@@ -30,7 +30,7 @@ const Icon = (props: IProps): JSX.Element => {
 		{
 			viewBox: props.viewBox ? props.viewBox : viewBox,
 			className: !className ? 'pui-icon' : `pui-icon ${className}`,
-		}
+		},
 	);
 
 	props.title ? (properties['data-tippy-content'] = props.title) : null;

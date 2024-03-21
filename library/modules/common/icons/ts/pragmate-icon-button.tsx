@@ -32,7 +32,7 @@ export /*bundle*/
 const IconButton: React.FC<PropsWithChildren<props> & RefAttributes<HTMLButtonElement>> = forwardRef(
 	(props: PropsWithChildren<props>, ref: LegacyRef<HTMLButtonElement> | undefined): JSX.Element => {
 		const { icon, onClick, viewBox, disabled, name, value, id, title, children } = props;
-
+		let { className, type, variant = 'default' } = props;
 		const buttonRef = React.useRef(null);
 
 		React.useEffect(() => {
@@ -57,7 +57,6 @@ const IconButton: React.FC<PropsWithChildren<props> & RefAttributes<HTMLButtonEl
 			}
 		};
 
-		let { className, type, variant = 'default' } = props;
 		type = !!type ? type : 'button';
 		className = className ? ` pui-icon-button ${className}` : 'pui-icon-button';
 		className += variant ? ` btn-${variant}` : '';
@@ -67,12 +66,8 @@ const IconButton: React.FC<PropsWithChildren<props> & RefAttributes<HTMLButtonEl
 
 		const attrs: props = Object.assign({}, props);
 		title ? (attrs['data-tippy-content'] = title) : null;
-
 		const attrsToDelete = ['icon', 'type', 'title', 'viewBox', 'className', 'bordered'];
-
-		attrsToDelete.forEach(attr => {
-			delete attrs[attr];
-		});
+		attrsToDelete.forEach(attr => delete attrs[attr]);
 
 		return (
 			<button
