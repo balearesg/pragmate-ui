@@ -48,7 +48,7 @@ export /*bundle*/ function Toast({ type, message, duration, id }: Props): JSX.El
 	return (
 		<article ref={toastRef} className={`toast ${type}`}>
 			<Icon icon={icons[type]} className='icon' />
-			<p className='message'>{message}</p>
+			<span className='message'>{message}</span>
 		</article>
 	);
 }

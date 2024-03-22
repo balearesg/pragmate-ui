@@ -22,7 +22,6 @@ $toast-content-color: var(--text-color);
 		transition: all 0.3s ease-in-out;
 
 		p.message {
-			color: $toast-content-color;
 			line-height: 1;
 			font-size: 16px;
 			font-weight: 400;
@@ -31,8 +30,6 @@ $toast-content-color: var(--text-color);
 		svg.pui-icon {
 			width: 25px;
 			height: 25px;
-			stroke: $toast-content-color;
-			fill: $toast-content-color;
 		}
 
 		&.enter {
