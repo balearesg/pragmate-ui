@@ -62,9 +62,9 @@ export /*bundle*/ function InputCode({
 			console.log(105, pastedData.split(''));
 			setCode(pastedData.split(''));
 		};
-		refs.current[0].addEventListener('paste', onCopy);
+		refs.current[0]?.addEventListener('paste', onCopy);
 		return () => {
-			refs.current[0].removeEventListener('paste', onCopy);
+			refs.current[0]?.removeEventListener('paste', onCopy);
 		};
 	}, []);
 	useEffect(() => {
