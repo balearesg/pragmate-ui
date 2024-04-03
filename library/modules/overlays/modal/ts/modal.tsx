@@ -7,9 +7,10 @@ type props = {
 	className?: string;
 	onClose?: (e: SyntheticEvent<HTMLElement, Event>) => void;
 	show?: boolean;
+	closeClicked?: boolean,
 };
 export /*bundle*/
-function Modal(props: props) {
+	function Modal(props: props) {
 	type state = {
 		container?: HTMLDivElement;
 		show: boolean;
@@ -17,7 +18,7 @@ function Modal(props: props) {
 	};
 	const [state, setState] = useState<state>({
 		show: props?.show ?? false,
-		closeClicked: false,
+		closeClicked: props.closeClicked ?? true,
 		container: null,
 	});
 	const modal: MutableRefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
@@ -32,14 +33,14 @@ function Modal(props: props) {
 			body.setAttribute('style', '');
 			body.classList.remove('body-custom-modal-opened');
 			const { onClose } = props;
-
-			if (!onClose || typeof onClose !== 'function') return;
-			onClose(event);
+			if (!onClose || typeof onClose !== "function") return;
+			onClose(event)
 		}, 300);
 	};
 
 	const onClickBackdrop = (event: SyntheticEvent<HTMLElement, Event>): void => {
 		event.stopPropagation();
+		if (!state.closeClicked) return;
 		close(event);
 	};
 

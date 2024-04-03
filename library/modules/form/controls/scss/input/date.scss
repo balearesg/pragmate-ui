@@ -1,3 +1,4 @@
+$inputs-date: 'date', 'week', 'month', 'time', 'datetime-local';
 .pui-input {
 	.pui-input__icon {
 		position: absolute;
@@ -12,9 +13,11 @@
 			fill: var(--primary);
 		}
 	}
-	input[type='date']::-webkit-inner-spin-button,
-	input[type='date']::-webkit-calendar-picker-indicator {
-		display: none;
-		-webkit-appearance: none;
+	@each $input-type in $inputs-date {
+		input[type='#{$input-type}']::-webkit-inner-spin-button,
+		input[type='#{$input-type}']::-webkit-calendar-picker-indicator {
+			display: none;
+			-webkit-appearance: none;
+		}
 	}
 }

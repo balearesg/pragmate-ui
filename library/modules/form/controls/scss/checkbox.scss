@@ -1,4 +1,12 @@
 .pui-checkbox {
+	&.disabled {
+		.pui-checkbox--label {
+			opacity: 0.5;
+			cursor: default;
+			pointer-events: none;
+		}
+	}
+
 	.pui-checkbox--label {
 		display: flex;
 		gap: 0.5rem;
@@ -30,7 +38,6 @@
 					top: 3px;
 					left: 2px;
 					fill: none;
-					stroke: var(--on-primary);
 					stroke-width: 2;
 					stroke-linecap: round;
 					stroke-linejoin: round;
@@ -83,6 +90,7 @@
 			animation: check 0.6s ease;
 			svg {
 				stroke-dashoffset: 0;
+				stroke: var(--on-primary);
 			}
 			&:before {
 				transform: scale(2.2);
@@ -91,7 +99,7 @@
 			}
 		}
 		&:last-child {
-			color: var(--tertiary);
+			color: var(--on-surface);
 			transition: all 0.3s ease;
 		}
 		&:after {

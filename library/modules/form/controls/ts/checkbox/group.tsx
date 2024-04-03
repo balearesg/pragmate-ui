@@ -3,10 +3,9 @@ import { Checkbox } from './index';
 
 export /*bundle*/ function CheckboxGroup(props) {
 	const { options } = props;
-
 	const output = options.map((option, index) => {
-		const random = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
-		const key = `${performance.now()}-${random}`;
+
+		const key = `${option.name}-${index}`
 		const { label, ...rest } = option;
 		return <Checkbox key={key} label={label} {...rest} />;
 	});

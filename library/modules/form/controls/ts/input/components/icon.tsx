@@ -4,7 +4,8 @@ import { useInputContext } from "../context";
 export function Icon(): JSX.Element {
     const {
         props: { icon },
+        isDate
     } = useInputContext();
-    if (!icon) return null;
+    if (!icon || isDate) return null;
     return <PUIIcon icon={icon} className="input-icon" />
 }
