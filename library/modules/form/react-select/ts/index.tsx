@@ -35,8 +35,8 @@ function ReactSelect(props) {
 	}, []);
 
 	return (
-		<div className='pui-select' ref={ref}>
-			<Select classNamePrefix='pui-react-select' {...properties} />
+		<div className="pui-select" ref={ref}>
+			<Select classNamePrefix="pui-react-select" {...properties} />
 		</div>
 	);
 }

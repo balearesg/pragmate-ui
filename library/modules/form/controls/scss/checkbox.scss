@@ -1,4 +1,12 @@
 .pui-checkbox {
+	&.disabled {
+		.pui-checkbox--label {
+			opacity: 0.5;
+			cursor: default;
+			pointer-events: none;
+		}
+	}
+
 	.pui-checkbox--label {
 		display: flex;
 		gap: 0.5rem;
