@@ -4,7 +4,12 @@
 	--border: var(--surface);
 }
 .pui-select {
+	.pui-react-select__placeholder,
+	.pui-react-select__single-value {
+		color: var(--text-color);
+	}
 	// Adjusting the main container
+
 	.pui-react-select__control {
 		background-color: var(--background);
 		color: var(--text);
@@ -18,9 +23,8 @@
 
 	// Styles for the dropdown menu
 	.pui-react-select__menu {
-		background-color: var(--surface);
+		background-color: var(--surface) !important;
 		color: var(--text);
-		max-height: 50px;
 	}
 
 	// Styles for individual options in the dropdown

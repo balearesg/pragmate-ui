@@ -16,16 +16,8 @@
 			 * Icon styles
 			 */
 			&.has-icon {
-				display: flex !important;
-				align-items: center;
-				justify-content: center;
-				column-gap: 8px;
 				svg.pui-icon {
 					fill: $color;
-				}
-
-				&.icon--right {
-					flex-direction: row-reverse;
 				}
 			}
 			&:disabled {

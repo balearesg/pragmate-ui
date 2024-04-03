@@ -3,8 +3,9 @@ import Select from 'react-select';
 import { StyleObserver } from './observer';
 
 export /*bundle*/
-function ReactSelect(props) {
-	const properties = { ...props };
+	function ReactSelect(props) {
+	let properties = { ...props };
+	delete properties.onChange;
 	const ref = React.useRef(null);
 
 	React.useEffect(() => {
@@ -34,9 +35,25 @@ function ReactSelect(props) {
 		return () => styleObserver.stopObserving();
 	}, []);
 
+	let value = props.options.find(item => item.value === props.value);
+	const onChange = ({ label, value }) => {
+		if (!props.onChange) return;
+		props.onChange({
+			target: {
+				value,
+				name: props.name,
+			},
+			currentTarget: {
+				value,
+				name: props.name,
+			},
+		});
+	};
+
 	return (
-		<div className="pui-select" ref={ref}>
-			<Select classNamePrefix="pui-react-select" {...properties} />
+		<div className='pui-select' ref={ref}>
+			{props.label && <label>{props.label}</label>}
+			<Select classNamePrefix='pui-react-select' onChange={onChange} {...properties} value={value} />
 		</div>
 	);
 }

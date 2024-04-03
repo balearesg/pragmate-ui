@@ -7,17 +7,21 @@ $types: 'default', 'primary', 'secondary', 'tertiary', 'success', 'info', 'warni
 	display: flex;
 	flex-direction: row;
 	width: fit-content;
-	gap: .6rem;
+	gap: 0.6rem;
 	align-items: center;
 
 	@each $type in $types {
 		&.pui-chip--#{$type} {
 			background: var(--#{$type});
 			color: var(--on-#{$type});
+			.pui-icon {
+				fill: var(--on-#{$type});
+				height: 0.75rem;
+				width: 0.75rem;
+			}
 		}
 	}
 }
-
 
 .pui-chip__container {
 	display: flex;
@@ -25,10 +29,10 @@ $types: 'default', 'primary', 'secondary', 'tertiary', 'success', 'info', 'warni
 	gap: 0.5rem;
 	padding: 0.25rem;
 	width: fit-content;
-	
+
 	.content-chip {
 		display: flex;
-		gap: .5rem;
+		gap: 0.5rem;
 		.pui-chip {
 			&.is-clickable {
 				cursor: pointer;

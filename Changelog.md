@@ -2,9 +2,15 @@
 
 ### Version 0.0.6
 
+-   Fix alerts types
+
 ### Updated
 
 -   **CheckBox Component**: Fixed behavior using CheckBoxGroup Component.
+-   **AlertModal**: Fixed bug when the backdrop is clicked. the component now pass the `onClose` parameter to modal
+    component correctly.
+-   **Button**: Defined standar size and fill properties for icons components.
+-   **Chip**: Defined standar size and fill properties for icons components.
 
 ### Version 0.0.5
 

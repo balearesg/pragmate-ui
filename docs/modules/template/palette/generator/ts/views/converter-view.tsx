@@ -1,7 +1,7 @@
 import React from 'react';
 import { hexToRgb1, rgbToHex, hexToHsl, hexToRgb, hslToHex } from 'pragmate-ui-docs/template/manager';
 import { ColorScaleGenerator, ScaleGenerator } from '../store/color-scheme';
-console.log(0.1, hexToRgb1, rgbToHex, hexToHsl, hexToRgb, hslToHex, rgbToHex);
+
 export function Box({ color, to }: { color: string; to?: 'hsl' | 'rgb' | 'rgb1' }) {
 	const types = {
 		hsl: () => {
