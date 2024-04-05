@@ -1,15 +1,15 @@
 import React from 'react';
 
 import { TplManager } from 'pragmate-ui/template/manager';
-console.log(0.1, TplManager);
+
 export function SurfacesPanel() {
 	// const surfaces = Object.keys(TplManager.root).filter(name => name.includes('surface'));
 	const lightSurfaces: string[] = Array.from(TplManager.light.style).filter((ele: string): boolean =>
-		ele.startsWith('--surface')
+		ele.startsWith('--surface'),
 	) as string[];
 
 	const darkSurfaces: string[] = Array.from(TplManager.dark.style).filter((ele: string): boolean =>
-		ele.startsWith('--surface')
+		ele.startsWith('--surface'),
 	) as string[];
 	return (
 		<div>

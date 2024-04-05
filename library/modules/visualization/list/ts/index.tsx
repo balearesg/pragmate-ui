@@ -24,12 +24,9 @@ export /*bundle */ function List<T>({
 	const Container = container;
 	const Control = control;
 
-	// const output: ReactNode[] = items.map((data, idx) => {
-	// 	return <Control key={(data as any)[index as string] || idx} data={data} />;
-	// });
 	try {
 		const output: ReactNode[] = items.map((item, idx) => {
-			return React.createElement(
+			const element = React.createElement(
 				Control as React.ElementType<{ data: T; index: number; item: T; specs: Record<string, any> }>,
 				{
 					key: (item as any)[index] || idx,
@@ -37,8 +34,10 @@ export /*bundle */ function List<T>({
 					data: item,
 					item,
 					specs,
-				}
+				},
 			);
+			// if (container === 'ul') return <li key={idx}>{element}</li>;
+			return element;
 		});
 		return (
 			<Container className={className}>

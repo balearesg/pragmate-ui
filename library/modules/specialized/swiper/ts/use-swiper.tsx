@@ -45,6 +45,6 @@ export const useSwiperSlider = (props: ISwiperOptions) => {
 		if (!state.swiper || !slideTo) return;
 		state.swiper.slideTo(slideTo);
 	}, [slideTo]);
-	console.log(0.2);
+
 	return { refs, state, prev, container };
 };

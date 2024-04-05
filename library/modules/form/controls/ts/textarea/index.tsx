@@ -19,9 +19,8 @@ export /*bundle*/ function Textarea(props: IProps): JSX.Element {
 	/**
 	 * If the textarea is created with a value, the height needs to be checked
 	 */
-	React.useEffect(checkSize, []);
+	React.useEffect(checkSize, [value]);
 	const handleChange = (event: ChangeEvent<HTMLTextAreaElement>): void => {
-		checkSize();
 		if (!!props.onChange && typeof props.onChange === 'function') props.onChange(event);
 		setState({
 			...state,

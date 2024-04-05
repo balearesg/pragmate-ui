@@ -27,7 +27,7 @@ function AlertModal(props) {
 	if (state.fetching) disabled.disabled = true;
 
 	return (
-		<Modal show className={cls}>
+		<Modal show className={cls} onClose={props.onClose}>
 			<div className='alert-dialog-content'>
 				{title && <h3 dangerouslySetInnerHTML={{ __html: title }} />}
 				{text && <div dangerouslySetInnerHTML={{ __html: text }} />}

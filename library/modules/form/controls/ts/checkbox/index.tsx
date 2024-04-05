@@ -9,9 +9,8 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 ): JSX.Element {
 	const { checked, disabled, className, onChange, label } = props;
 	const [value, setValue] = useState<boolean>(!!checked);
-
 	useEffect(() => {
-		if (checked === value) return
+
 		setValue(!!checked);
 	}, [checked]);
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {

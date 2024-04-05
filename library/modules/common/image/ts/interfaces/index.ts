@@ -6,8 +6,8 @@ export interface IProps extends ImgHTMLAttributes<HTMLImageElement> {
 	onError?: (e: SyntheticEvent<Element, Event>) => void;
 	sources?: Array<ISrcSet>;
 	sizeLoading?: {
-		height: string,
-		width: string
+		height: string;
+		width: string;
 	};
 }
 
@@ -20,17 +20,18 @@ export interface IInitialState {
 	src?: string;
 	htmlLoaded?: boolean;
 	onerror?: undefined;
-};
+}
 
-export type ISetState = React.Dispatch<React.SetStateAction<IInitialState>>
+export type ISetState = React.Dispatch<React.SetStateAction<IInitialState>>;
 
 export interface IContext extends IProps {
-	setState?: ISetState,
-	state?: IInitialState
-};
+	setState?: ISetState;
+	src;
+	state?: IInitialState;
+}
 
 export interface ISrcSet {
-	maxWidth?: number,
-	minWidth?: number,
-	srcSet: string
+	maxWidth?: number;
+	minWidth?: number;
+	srcSet: string;
 }

@@ -9,12 +9,18 @@ export function Date(): JSX.Element {
 	const { input, props, icon } = useInputContext();
 	if (props.type !== 'date') return null;
 	const iconValue = icon ? icon : 'calendar';
+
+	const showPicker = () => {
+		if (props.disabled) return;
+		(input.current as any).showPicker()
+	}
+	
 	return (
 		<Icon
 			key='icon'
 			icon={iconValue}
 			className='pui-input__icon'
-			onClick={() => (input.current as any).showPicker()}
+			onClick={showPicker}
 		/>
 	);
 }

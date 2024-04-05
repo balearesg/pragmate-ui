@@ -5,7 +5,7 @@
 	cursor: pointer;
 	background: var(--surface);
 	transition: all 0.2s ease;
-	white-space: nowrap;
+
 	text-transform: capitalize;
 	position: relative;
 
@@ -21,7 +21,6 @@
 		width: 0;
 		height: 5px;
 		background-color: var(--primary);
-		transition: width 0.2s ease;
 	}
 
 	&.active {

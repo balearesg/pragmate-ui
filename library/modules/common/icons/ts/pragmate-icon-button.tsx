@@ -29,67 +29,67 @@ interface iconAttributes {
 }
 
 export /*bundle*/
-	const IconButton: React.FC<PropsWithChildren<props> & RefAttributes<HTMLButtonElement>> = forwardRef(
-		(props: PropsWithChildren<props>, ref: LegacyRef<HTMLButtonElement> | undefined): JSX.Element => {
-			const { icon, onClick, viewBox, disabled, name, value, id, title, children } = props;
+const IconButton: React.FC<PropsWithChildren<props> & RefAttributes<HTMLButtonElement>> = forwardRef(
+	(props: PropsWithChildren<props>, ref: LegacyRef<HTMLButtonElement> | undefined): JSX.Element => {
+		const { icon, onClick, viewBox, disabled, name, value, id, title, children } = props;
 
-			const buttonRef = React.useRef(null);
+		const buttonRef = React.useRef(null);
 
-			React.useEffect(() => {
-				const ripple = new RippleEffect();
-				ripple.addRippleEffect(buttonRef.current);
+		React.useEffect(() => {
+			const ripple = new RippleEffect();
+			ripple.addRippleEffect(buttonRef.current);
 
-				if (title) {
-					tippy(buttonRef.current, {
-						content: title,
-					});
-				}
-			}, [title]);
+			if (title) {
+				tippy(buttonRef.current, {
+					content: title,
+				});
+			}
+		}, [title]);
 
-			const onClickButton = async (event: MouseEvent<HTMLButtonElement>): Promise<void> => {
-				if (onClick && typeof onClick === 'function') {
-					onClick(event);
-					return;
-				}
+		const onClickButton = async (event: MouseEvent<HTMLButtonElement>): Promise<void> => {
+			if (onClick && typeof onClick === 'function') {
+				onClick(event);
+				return;
+			}
 
-				if (props.navigate) {
-					routing.pushState(props.navigate);
-				}
-			};
+			if (props.navigate) {
+				routing.pushState(props.navigate);
+			}
+		};
 
-			let { className, type, variant = 'default' } = props;
-			type = !!type ? type : 'button';
-			className = className ? ` pui-icon-button ${className}` : 'pui-icon-button';
-			className += variant ? ` btn-${variant}` : '';
+		let { className, type, variant = 'default' } = props;
+		type = !!type ? type : 'button';
+		className = className ? ` pui-icon-button ${className}` : 'pui-icon-button';
+		className += variant ? ` btn-${variant}` : '';
 
-			const iconAttributes: iconAttributes = { icon: icon };
-			if (viewBox) iconAttributes.viewBox = viewBox;
+		const iconAttributes: iconAttributes = { icon: icon };
+		if (viewBox) iconAttributes.viewBox = viewBox;
 
-			const attrs: props = Object.assign({}, props);
-			title ? (attrs['data-tippy-content'] = title) : null;
+		const attrs: props = Object.assign({}, props);
+		title ? (attrs['data-tippy-content'] = title) : null;
 
-			const attrsToDelete = ['icon', 'type', 'title', 'viewBox', 'className'];
+		const attrsToDelete = ['icon', 'type', 'title', 'viewBox', 'className', 'bordered'];
 
-			attrsToDelete.forEach(attr => {
-				delete attrs[attr];
-			});
+		attrsToDelete.forEach(attr => {
+			delete attrs[attr];
+		});
 
-			return (
-				<button
-					id={id}
-					type={type}
-					ref={buttonRef}
-					name={name}
-					value={value}
-					disabled={disabled}
-					className={className}
-					onClick={onClickButton}
-					{...attrs}
-				>
-					<Icon {...iconAttributes} />
-					{children}
-					{/* {!disabled && <BeyondWaves/>} */}
-				</button>
-			);
-		}
-	);
+		return (
+			<button
+				id={id}
+				type={type}
+				ref={buttonRef}
+				name={name}
+				value={value}
+				disabled={disabled}
+				className={className}
+				onClick={onClickButton}
+				{...attrs}
+			>
+				<Icon {...iconAttributes} />
+				{children}
+				{/* {!disabled && <BeyondWaves/>} */}
+			</button>
+		);
+	},
+);

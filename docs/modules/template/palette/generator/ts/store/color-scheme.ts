@@ -124,7 +124,7 @@ export class ScaleGenerator extends ReactiveModel<ScaleGenerator> {
 
 		for (let i = 0; i <= scaleSteps; i++) {
 			const lightness = (i / scaleSteps) * 100; // De 0 a 100%
-			console.log(12, i, lightness, hsl.h, hsl.s, lightness);
+
 			const colorHex = this.hslToHex(hsl.h, hsl.s, lightness);
 			scale.push(colorHex);
 		}
@@ -135,7 +135,7 @@ export class ScaleGenerator extends ReactiveModel<ScaleGenerator> {
 	static generate(color) {
 		const colorScaleGenerator = new ScaleGenerator();
 		const colorScale = colorScaleGenerator.generateColorScale(color);
-		console.log(22, colorScale);
+
 		return colorScale;
 	}
 }

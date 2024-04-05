@@ -17,13 +17,15 @@ import { Error } from './components/error';
  * @returns
  */
 export /*bundle*/
-function Input(props: IProps): JSX.Element {
+	function Input(props: IProps): JSX.Element {
 	const { hasError, errorMessage, variant, className, label, children, icon, type } = props;
 	const [value, setValue] = React.useState<string>(props.value ?? '');
 	const [state, setState] = useState<TState>({ type });
 	const input: MutableRefObject<HTMLInputElement> = useRef(null);
 	let cls: string = `pui-input${className ? ` ${className}` : ''}`;
-	if (props.type === 'date') cls += ' pui-input--date';
+	const dates = ["date", 'week', 'month', 'time', 'datetime-local'];
+	const isDate = dates.includes(props.type)
+	if (isDate) cls += ' pui-input--date';
 	if (!!icon) cls += ' pui-input--icon';
 	if (!!icon && variant === 'floating') cls += ' icon__floating';
 	if (props.type === 'password') cls += ' pui-input--password';
@@ -34,7 +36,7 @@ function Input(props: IProps): JSX.Element {
 
 	if (props.variant && variants[props.variant]) cls += ` ${variants[props.variant]}`;
 
-	const providerValue: IInputContextValue = { props, state, setState, value, setValue, input, icon };
+	const providerValue: IInputContextValue = { props, state, setState, value, setValue, input, icon, isDate };
 	const labelSpecs: ILabelProps = { required: props.required };
 	const attrs: IInputContainer = {};
 	/**

@@ -12,7 +12,6 @@ export function ColorControl({ store, label, name, value }: IProps) {
 	const [currentValue, setCurrentValue] = React.useState(value);
 
 	const onSelectColor = event => {
-		console.log(10, event.target.value);
 		store.setColor(name, event.target.value);
 		setCurrentValue(event.target.value);
 	};

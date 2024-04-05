@@ -40,7 +40,8 @@ export interface IInputContextValue {
     icon?: string
     setState?: any;
     setValue?: (value) => void;
-    input?: MutableRefObject<HTMLInputElement>
+    input?: MutableRefObject<HTMLInputElement>,
+    isDate?: boolean,
 };
 
 export interface IInputContainer {
