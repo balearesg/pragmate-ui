@@ -7,12 +7,14 @@ $inputs-date: 'date', 'week', 'month', 'time', 'datetime-local';
 		bottom: 0.5rem;
 		transition: fill 300ms ease-in;
 	}
-	&:hover,
-	&:focus-within {
-		.pui-input__icon {
-			fill: var(--primary);
+	
+	.pui-input__icon  {
+		transition: opacity 300ms ease-in-out;
+		&:hover {
+			opacity: .7;
 		}
 	}
+	
 	@each $input-type in $inputs-date {
 		input[type='#{$input-type}']::-webkit-inner-spin-button,
 		input[type='#{$input-type}']::-webkit-calendar-picker-indicator {

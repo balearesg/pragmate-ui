@@ -37,6 +37,7 @@ export interface IInputContextValue {
     value?: string;
     name?: string;
     props?: IProps;
+    icon?: string
     setState?: any;
     setValue?: (value) => void;
     input?: MutableRefObject<HTMLInputElement>,
