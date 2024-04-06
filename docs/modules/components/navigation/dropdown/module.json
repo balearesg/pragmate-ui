@@ -1,0 +1,22 @@
+{
+	"name": "components/navigation/dropdown",
+	"txt": {
+		"path": "txt",
+		"files": "*"
+	},
+	"widget": {
+		"route": "/components/dropdown",
+		"is": "page",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "pui-dropdown-page"
+		}
+	}
+}

@@ -3,7 +3,7 @@ import Select from 'react-select';
 import { StyleObserver } from './observer';
 
 export /*bundle*/
-	function ReactSelect(props) {
+function ReactSelect(props) {
 	let properties = { ...props };
 	delete properties.onChange;
 	const ref = React.useRef(null);
