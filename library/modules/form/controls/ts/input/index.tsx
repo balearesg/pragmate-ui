@@ -36,7 +36,7 @@ export /*bundle*/
 
 	if (props.variant && variants[props.variant]) cls += ` ${variants[props.variant]}`;
 
-	const providerValue: IInputContextValue = { props, state, setState, value, setValue, input, isDate };
+	const providerValue: IInputContextValue = { props, state, setState, value, setValue, input, icon, isDate };
 	const labelSpecs: ILabelProps = { required: props.required };
 	const attrs: IInputContainer = {};
 	/**
