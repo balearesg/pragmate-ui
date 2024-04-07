@@ -16,15 +16,16 @@ import { Error } from './components/error';
  *
  * @returns
  */
+
 export /*bundle*/
-	function Input(props: IProps): JSX.Element {
+function Input(props: IProps): JSX.Element {
 	const { hasError, errorMessage, variant, className, label, children, icon, type } = props;
 	const [value, setValue] = React.useState<string>(props.value ?? '');
 	const [state, setState] = useState<TState>({ type });
 	const input: MutableRefObject<HTMLInputElement> = useRef(null);
 	let cls: string = `pui-input${className ? ` ${className}` : ''}`;
-	const dates = ["date", 'week', 'month', 'time', 'datetime-local'];
-	const isDate = dates.includes(props.type)
+	const dates = ['date', 'week', 'month', 'time', 'datetime-local'];
+	const isDate = dates.includes(props.type);
 	if (isDate) cls += ' pui-input--date';
 	if (!!icon) cls += ' pui-input--icon';
 	if (!!icon && variant === 'floating') cls += ' icon__floating';
