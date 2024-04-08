@@ -60,6 +60,7 @@
 		"@beyond-js/react-18-widgets": "^1.0.3",
 		"@beyond-js/reactive": "^1.1.3",
 		"@beyond-js/widgets": "^0.1.3",
+		"framer-motion": "^11.0.25",
 		"perfect-scrollbar": "^1.5.5",
 		"prism-react-renderer": "^1.3.5",
 		"prismjs": "^1.27.0",

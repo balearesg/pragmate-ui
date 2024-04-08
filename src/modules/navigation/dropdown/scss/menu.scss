@@ -1,0 +1,13 @@
+.pui-dropdown-container {
+	.pui-dropdown-menu {
+		position: absolute;
+		display: none;
+
+		cursor: pointer;
+		&.pui-dropdown-menu--opened {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+	}
+}

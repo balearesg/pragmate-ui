@@ -1,5 +1,15 @@
 export interface IDropdownProviderProps {
-	isToggle?: boolean;
-	onToggle: () => void;
-	isClose: boolean;
+	toggleMenu: boolean;
+	setToggleMenu: (toggleMenu: boolean) => void;
+}
+
+export /*bundle*/ interface IDropdownProps {
+	className?: string;
+}
+
+export /*bundle */ interface IDropdownItemProps {
+	className?: string;
+	onClick?: Function;
+	tag?: string;
+	id?: string;
 }

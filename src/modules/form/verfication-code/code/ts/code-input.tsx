@@ -67,7 +67,7 @@ export /*bundle*/ function InputCode({ length, onCodeFull, className, onlyNumber
 				onKeyDown={onClean}
 				onFocus={setFocus}
 			/>
-		)
+		),
 	);
 
 	return <div className={cls}>{output}</div>;
