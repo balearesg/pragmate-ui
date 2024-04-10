@@ -1,5 +1,30 @@
 ## Changelog
 
+### Changelog for Pragmate UI
+
+#### Version 0.1.1
+
+**Released:** 4/10/2024
+
+**Enhancements:**
+
+-   Added support for `datetime-local` input types, allowing for integrated date and time selection within forms.
+
+#### Version 0.1.0
+
+**Released:** 4/09/2024
+
+**Enhancements:**
+
+-   Standardized the wrapper for React Select to align with the API used by other form selectors. The modified wrapper
+    now returns an event object with `target` and `currentTarget` properties, which are consistent across all events.
+-   Introduced a new dropdown component, enhancing the UI component suite with additional selection options for users.
+
+**Fixes:**
+
+-   General improvements to type definitions across the library, increasing stability and developer experience by
+    ensuring more reliable type checks.
+
 ### Version 0.0.6
 
 -   Fix alerts types
