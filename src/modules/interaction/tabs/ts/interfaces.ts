@@ -5,7 +5,7 @@ export interface ITPane {
 
 export interface ITabProps {
 	panes: ITPane[];
-	children: React.ReactNode;
+	children?: React.ReactNode;
 	active?: number;
 	setURL?: boolean;
 	className?: string;

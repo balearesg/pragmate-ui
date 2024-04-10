@@ -1,4 +1,4 @@
-export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	data?: Record<string, any>;
 	label?: React.ReactNode;
 	children?: React.ReactNode;
