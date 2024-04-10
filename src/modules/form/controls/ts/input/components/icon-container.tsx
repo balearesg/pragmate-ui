@@ -11,7 +11,8 @@ export function IconContainer(): JSX.Element {
         date: Date,
         default: null,
         month: Date,
-        week: Date
+        week: Date,
+        'datetime-local': Date
     };
     const output = [];
     if (!!types[props.type]) {
@@ -19,7 +20,7 @@ export function IconContainer(): JSX.Element {
         output.push(<Control key="control" />)
     };
 
-    if(props.type !== 'date' && !!props.icon) {
+    if(!!props.icon) {
         output.push(<Icon key="icon" />)
     }
     return <>{output}</>

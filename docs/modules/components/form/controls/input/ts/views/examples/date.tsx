@@ -18,6 +18,7 @@ export function Dates() {
                 <Input variant='floating' type='date' value="" />
                 <Input variant='floating' type='date' label='Type Date' icon="user" value="" />
                 <Input variant='floating' type='date' {...iconCalendar} value="" />
+                <Input variant='floating' type='datetime-local' icon="box" value="" />
 			</UIExample>
 		</>
 	);

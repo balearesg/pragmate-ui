@@ -6,8 +6,9 @@ interface HTMLInputWithPicker extends HTMLInputElement {
 }
 
 export function Date(): JSX.Element {
-	const { input, props, icon } = useInputContext();
-	if (props.type !== 'date') return null;
+	const { input, props, icon, isDate } = useInputContext();
+
+	if (!isDate) return null;
 	const iconValue = icon ? icon : 'calendar';
 
 	const showPicker = () => {
