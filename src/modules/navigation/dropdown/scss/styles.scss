@@ -1,0 +1,12 @@
+.pui-dropdown-container {
+	position: relative;
+	display: inline-block;
+	.pui-dropdown-menu {
+		position: absolute;
+		display: none;
+
+		&.show {
+			display: block;
+		}
+	}
+}
