@@ -1,26 +1,19 @@
 import React, { ReactElement, ReactNode } from 'react';
+import { Reorder } from 'framer-motion';
+import { DraggableList } from './draggable';
 
-type ListProps<T> = {
-	items: T[];
-	className?: string;
-	index?: string;
-	specs;
-	control: React.ElementType<{ data: T }>;
-	childrenPosition?: 'top' | 'bottom';
-	container?: keyof JSX.IntrinsicElements;
-	children?: ReactNode;
-};
-
-export /*bundle */ function List<T>({
-	items,
-	className,
-	children,
-	index = 'id',
-	specs,
-	childrenPosition = 'top',
-	control,
-	container = 'ul',
-}: ListProps<T>): ReactElement {
+export /*bundle */ function List<T>({ items, ...props }: ListProps<T>): ReactElement {
+	const {
+		className,
+		children,
+		index = 'id',
+		specs,
+		dragabble,
+		childrenPosition = 'top',
+		control,
+		as = 'ul',
+		container = 'ul',
+	} = props;
 	const Container = container;
 	const Control = control;
 
@@ -36,9 +29,11 @@ export /*bundle */ function List<T>({
 					specs,
 				},
 			);
-			// if (container === 'ul') return <li key={idx}>{element}</li>;
+
 			return element;
 		});
+
+		if (dragabble) return <DraggableList items={output} {...props} />;
 		return (
 			<Container className={className}>
 				{childrenPosition === 'top' && children ? children : null}

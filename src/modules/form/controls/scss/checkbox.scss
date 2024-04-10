@@ -9,6 +9,7 @@
 
 	.pui-checkbox--label {
 		display: flex;
+		align-items: center;
 		gap: 0.5rem;
 		-webkit-user-select: none;
 		-moz-user-select: none;
@@ -21,7 +22,6 @@
 			vertical-align: middle;
 			transform: translate3d(0, 0, 0);
 			color: var(--on-background);
-			font-weight: 500;
 
 			&:first-child {
 				position: relative;

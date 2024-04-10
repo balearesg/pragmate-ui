@@ -8,10 +8,5 @@
 		.inp-cbx:checked + .cbx span:last-child {
 			color: var(--on-secondary);
 		}
-
-		.cbx {
-			display: flex;
-			gap: 0.5rem;
-		}
 	}
 }
