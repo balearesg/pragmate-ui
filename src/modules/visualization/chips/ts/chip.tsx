@@ -2,13 +2,14 @@ import React from 'react';
 import { RippleEffect } from 'pragmate-ui/ripple';
 import tippy from 'tippy.js';
 import { Icon } from 'pragmate-ui/icons';
+import { IChipProps } from './types';
 
-export /*bundle*/ function Chip(props) {
-	const { item, type, className, title, children, icon } = props;
+export /*bundle*/ function Chip(props: IChipProps) {
+	const { type, className, title, children, icon } = props;
 	const properties = { ...props };
 	const ref = React.useRef<HTMLSpanElement>(null);
 
-	['children', 'type', 'className'].forEach(key => delete properties[key]);
+	['children', 'type', 'className', 'variant'].forEach(key => delete properties[key]);
 
 	React.useEffect(() => {
 		if (properties.onClick) {
@@ -19,19 +20,17 @@ export /*bundle*/ function Chip(props) {
 	}, [properties.onClick, title]);
 
 	if (title) properties['data-tippy-content'] = title;
-
-	let cls = `pui-chip${type ? ` pui-chip--${type}` : ''}${className ? ` ${className}` : ''}`;
+	const variant = props.variant || props.type || 'default';
+	let cls = `pui-chip pui-chip--${variant}`;
 
 	if (properties.onClick) {
 		cls += ` is-clickable`;
 	}
-	const showIcon = icon && <Icon icon={icon} />;
 
 	return (
 		<span ref={ref} className={cls} {...properties}>
-			{item}
 			{children}
-			{showIcon}
+			{icon && <Icon icon={icon} />}
 		</span>
 	);
 }

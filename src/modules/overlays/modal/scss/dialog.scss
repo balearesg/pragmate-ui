@@ -16,7 +16,8 @@
 		}
 	}
 
-	.actions {
+	.actions,
+	.pui-modal-actions {
 		border-top: 1px solid var(--separator);
 		margin-top: 15px;
 		display: grid;

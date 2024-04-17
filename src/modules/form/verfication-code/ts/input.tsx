@@ -21,7 +21,7 @@ export default React.forwardRef(function Input(props: IProps, ref: React.LegacyR
 			maxLength={1}
 			data-index={props.index}
 			type='text'
-			inputMode='numeric'
+			// inputMode='numeric'
 			className={className}
 			ref={ref}
 		/>

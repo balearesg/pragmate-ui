@@ -1,24 +1,13 @@
 import * as React from 'react';
 import { useState, useRef, MutableRefObject, SyntheticEvent, ReactNode } from 'react';
 import { Children } from './children';
+import { IModalProps, IModalState } from './types/modal-props';
 
-type props = {
-	children: ReactNode;
-	className?: string;
-	onClose?: (e: SyntheticEvent<HTMLElement, Event>) => void;
-	show?: boolean;
-	closeClicked?: boolean,
-};
 export /*bundle*/
-	function Modal(props: props) {
-	type state = {
-		container?: HTMLDivElement;
-		show: boolean;
-		closeClicked: boolean;
-	};
-	const [state, setState] = useState<state>({
+function Modal(props: IModalProps) {
+	const [state, setState] = useState<IModalState>({
 		show: props?.show ?? false,
-		closeClicked: props.closeClicked ?? true,
+		closeClicked: (props.closeClicked || props.closeBackdrop) ?? true,
 		container: null,
 	});
 	const modal: MutableRefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
@@ -28,14 +17,14 @@ export /*bundle*/
 
 		const body: HTMLBodyElement = document.querySelector('body');
 		modal.current.classList.add('modal-hidden');
-		window.setTimeout(async (): Promise<void> => {
+		globalThis.setTimeout(async (): Promise<void> => {
 			setState({ ...state, show: false, closeClicked: true });
 			body.setAttribute('style', '');
 			body.classList.remove('body-custom-modal-opened');
 			const { onClose } = props;
-			if (!onClose || typeof onClose !== "function") return;
-			onClose(event)
-		}, 300);
+			if (!onClose || typeof onClose !== 'function') return;
+			onClose(event);
+		}, 200);
 	};
 
 	const onClickBackdrop = (event: SyntheticEvent<HTMLElement, Event>): void => {

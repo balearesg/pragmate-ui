@@ -1,41 +1,39 @@
-import React from 'react';
+import * as React from 'react';
 import { Modal } from './modal';
-import { Button } from 'pragmate-ui/components';
-export /*bundle*/
-function AlertModal(props) {
-	const [state, setState] = React.useState({ fetching: false });
+import { Button, HtmlWrapper } from 'pragmate-ui/components';
+import { IAlertModalProps } from './types/alert';
 
-	const close = event => {
+export /*bundle*/
+function AlertModal(props: IAlertModalProps) {
+	const [state, setState] = React.useState({ fetching: false });
+	const { text, title, centered, button = {} } = props;
+	const close = async () => {
 		setState({ fetching: true });
-		if (props.onConfirm) props.onConfirm();
+		if (props.onConfirm) await props.onConfirm();
 		setState({ fetching: false });
 		if (props.onClose) props.onClose();
 	};
-	const { text, title, btn, centered } = props;
-	let btnLabel: string = typeof btn === 'string' ? btn : 'Confirmar';
+	const btnAttrs = {
+		className: `btn btn-primary${props.className ? ` ${props.className}` : ''}`,
+		disabled: state.fetching,
+		label: props.buttonLabel || 'Confirm',
+		onClick: close,
+		...button,
+	};
 
-	let cls: string = `pui-alert-dialog${centered ? ' pui-alert-dialog-centered' : ''}`;
+	let cls = `pui-alert-dialog${centered ? ' pui-alert-dialog-centered' : ''}`;
 	if (props.className) cls += ` ${props.className}`;
-	let clsCancel: string = 'btn btn-default btn-cancel';
-
-	if (btn && typeof btn === 'object') {
-		btnLabel = btn.label ?? btn;
-		clsCancel = btn.className ?? clsCancel;
-	}
-
-	const disabled: { disabled?: boolean } = {};
-	if (state.fetching) disabled.disabled = true;
 
 	return (
 		<Modal show className={cls} onClose={props.onClose}>
 			<div className='alert-dialog-content'>
-				{title && <h3 dangerouslySetInnerHTML={{ __html: title }} />}
-				{text && <div dangerouslySetInnerHTML={{ __html: text }} />}
+				{title && <HtmlWrapper>{title}</HtmlWrapper>}
+				{text && <HtmlWrapper>{text}</HtmlWrapper>}
 				{props.children ? props.children : null}
 			</div>
 
-			<div className='actions'>
-				<Button className={clsCancel} label={btnLabel} onClick={close} {...disabled} />
+			<div className='pui-modal-actions'>
+				<Button {...btnAttrs} />
 			</div>
 		</Modal>
 	);

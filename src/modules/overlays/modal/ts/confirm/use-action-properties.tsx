@@ -25,6 +25,7 @@ export function useActionProperties(properties, setState) {
 			setState({ fetching: true });
 			await callback();
 			setState({ fetching: false });
+			
 		};
 	};
 
