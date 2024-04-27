@@ -1,23 +1,22 @@
 import React from 'react';
-import {routing} from '@beyond-js/kernel/routing';
+import { routing } from '@beyond-js/kernel/routing';
 
 export /*bundle*/
-function Link({href, ...props}: React.AnchorHTMLAttributes<HTMLAnchorElement>): JSX.Element {
+function Link({ href, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>): JSX.Element {
 	const isExternal = props.target === '_blank';
 
-	const onClick = async (event: React.MouseEvent<HTMLAnchorElement>): Promise<void> => {
-		if (isExternal) return;
-
-		event.preventDefault();
+	const onClick = (event: React.MouseEvent<HTMLAnchorElement>): void => {
+		if (!isExternal) event.preventDefault();
 		event.stopPropagation();
 
 		if (props.onClick && typeof props.onClick === 'function') {
-			await props.onClick(event);
+			props.onClick(event);
 		}
-		if (href) routing.pushState(href);
+
+		!isExternal && routing.pushState(href);
 	};
 
-	const properties = {...props};
+	const properties = { ...props };
 	['href', 'onClick'].forEach(prop => delete properties[prop]);
 
 	return (

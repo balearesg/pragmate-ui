@@ -7,7 +7,8 @@ export interface PuiIcon {
 export interface IIconProps extends SVGAttributes<SVGSVGElement> {
 	title?: string;
 	icon?: string | PuiIcon;
-	name: string;
+	name?: string;
+	src?: string;
 	ref?: Ref<SVGSVGElement>;
 	className?: string;
 }

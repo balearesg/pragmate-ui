@@ -1,9 +1,9 @@
 import React from 'react';
 import { Code } from 'pragmate-ui/code';
 import { implementation } from './implementation';
-import { SelectComponent } from './select';
+
 import { ReactSelect } from 'pragmate-ui/form/react-select';
-import { Modal } from 'pragmate-ui/modal';
+
 const options = [
 	{ value: 'chocolate', label: 'Chocolate' },
 	{ value: 'strawberry', label: 'Strawberry' },
@@ -25,6 +25,10 @@ export /*bundle*/
 function View({ widget }) {
 	return (
 		<div className='view'>
+			<div className='component-result'>
+				<h3>Result:</h3>
+				<ReactSelect widget={widget} options={options} />
+			</div>
 			<h1 className='view__h1'>Wrapper de implementación para el React Select</h1>
 
 			<p>

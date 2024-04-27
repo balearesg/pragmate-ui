@@ -34,7 +34,7 @@ export /*bundle*/ const ConfirmModal = (properties: IConfirmModalProps): JSX.Ele
 				{properties.children}
 			</div>
 
-			<div className='actions'>
+			<div className='pui-actions'>
 				<Button {...cancelProps} {...disabled} />
 				<Button {...disabled} {...confirmProps} />
 			</div>

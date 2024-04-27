@@ -3,6 +3,29 @@
 @import './message';
 @import './generator';
 
+// Definición de tonos estándar para fallback
+:host-context(html) {
+	--pui-base-success: #155724; // Verde oscuro para texto
+	--pui-base-error: #721c24; // Rojo oscuro para texto
+	--pui-base-warning: #856404; // Amarillo oscuro para texto
+	--pui-base-info: #0c5460; // Azul oscuro para texto
+
+	--pui-base-success-container: #d4edda; // Verde claro para fondo
+	--pui-base-error-container: #f8d7da; // Rojo claro para fondo
+	--pui-base-warning-container: #fff3cd; // Amarillo claro para fondo
+	--pui-base-info-container: #d1ecf1; // Azul claro para fondo
+
+	--pui-base-success-border-color: #c3e6cb; // Verde para borde
+	--pui-base-error-border-color: #f5c6cb; // Rojo para borde
+	--pui-base-warning-border-color: #ffeeba; // Amarillo para borde
+	--pui-base-info-border-color: #bee5eb; // Azul para borde
+
+	--pui-base-success-icon-color: #155724; // Verde oscuro para icono
+	--pui-base-error-icon-color: #721c24; // Rojo oscuro para icono
+	--pui-base-warning-icon-color: #856404; // Amarillo oscuro para icono
+	--pui-base-info-icon-color: #0c5460; // Azul oscuro para icono
+}
+
 .alert {
 	padding: 0.5rem 1em;
 	border-width: 1px;

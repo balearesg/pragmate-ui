@@ -2,19 +2,17 @@
 pragmate-ui
 .pui-modal
 */
-.pui-confirm-dialog {
-	.pui-confirm-dialog-content &.pui-confirm-dialog-centered {
+.pui-modal.pui-confirm-dialog {
+	&.pui-confirm-dialog-centered {
 		justify-content: center;
 		text-align: center;
-
-		.confirm-dialog-content,
+		color: var(--on-surface);
+		.pui-actions,
 		.actions {
-			display: grid;
+			padding-top: 1rem;
+			display: flex;
+			gap: 0.5rem;
 			justify-content: center;
-		}
-
-		& :where(p, div) {
-			color: var(--on-surface);
 		}
 	}
 	.pui-confirm-dialog-content:where(p, div, h3, h4) {
@@ -28,7 +26,9 @@ pragmate-ui
 			margin: 0.5rem 0 0;
 		}
 	}
+	.pui-actions,
 	.actions {
+		padding-top: 1rem;
 		margin-top: 15px;
 		display: grid;
 		grid-auto-flow: column;

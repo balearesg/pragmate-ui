@@ -1,19 +1,16 @@
-$alert-types: 'success', 'error', 'warning', 'info';
-
 @mixin generate-alerts {
-	@each $type in $alert-types {
+	@each $type in ('success', 'error', 'warning', 'info') {
 		&.alert--#{$type} {
-			color: var(--pui-on-#{$type});
-			border-color: var(--pui-#{$type}-border-color);
-			background: var(--pui-#{$type}-container);
+			color: var(--pui-on-#{$type}, var(--pui-base-#{$type}));
+			border-color: var(--pui-#{$type}-border-color, var(--pui-base-#{$type}-border-color));
+			background: var(--pui-#{$type}-container, var(--pui-base-#{$type}-container));
 
 			.alert-icon {
-				fill: var(--pui-#{$type}-icon-color);
+				fill: var(--pui-#{$type}-icon-color, var(--pui-base-#{$type}-icon-color));
 			}
 			&.side-border {
-				border-left: 1rem solid var(--pui-#{$type}-border-color);
+				border-left: 1rem solid var(--pui-#{$type}-border-color, var(--pui-base-#{$type}-border-color));
 			}
 		}
-		
 	}
 }

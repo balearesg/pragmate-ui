@@ -1,59 +1,30 @@
 import React from 'react';
 import Select from 'react-select';
-import { StyleObserver } from './observer';
+import { useStyles } from './use-styles';
+import isMobile from 'is-mobile';
+import { MobileSelect } from './mobile-select';
 
 export /*bundle*/
 function ReactSelect(props) {
 	let properties = { ...props };
+	let { name } = props;
+	const { ref } = useStyles();
 	delete properties.onChange;
-	const ref = React.useRef(null);
-
-	React.useEffect(() => {
-		const host = ref.current.getRootNode()?.host;
-		if (!host) {
-			console.warn('is not inside a web component');
-		}
-		const headStyles = document.head.querySelectorAll('style[data-emotion]');
-
-		const insert = (nodes: HTMLElement[] | NodeList) => {
-			nodes.forEach(node => {
-				if (node instanceof HTMLStyleElement) {
-					// Handle the new style element
-					const clonedStyle = node.cloneNode(true) as HTMLElement;
-					host.shadowRoot.appendChild(clonedStyle);
-				}
-			});
-		};
-
-		const styleObserver: StyleObserver = new StyleObserver({
-			callback: insert,
-		});
-		const targetNode: HTMLHeadElement = document.head;
-		styleObserver.startObserving(targetNode);
-		insert(headStyles);
-
-		return () => styleObserver.stopObserving();
-	}, []);
-
 	let value = props.options.find(item => item.value === props.value);
+
 	const onChange = ({ label, value }) => {
 		if (!props.onChange) return;
-		props.onChange({
-			target: {
-				value,
-				name: props.name,
-			},
-			currentTarget: {
-				value,
-				name: props.name,
-			},
-		});
+		const target = { value, name };
+		props.onChange({ target, currentTarget: { ...target } });
 	};
 
+	if (isMobile()) return <MobileSelect {...props} />;
+
+	const attrs = { onChange, ...properties, value };
 	return (
 		<div className='pui-select' ref={ref}>
 			{props.label && <label>{props.label}</label>}
-			<Select classNamePrefix='pui-react-select' onChange={onChange} {...properties} value={value} />
+			<Select classNamePrefix='pui-react-select' {...attrs} />
 		</div>
 	);
 }

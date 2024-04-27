@@ -1,5 +1,5 @@
 import React from 'react';
-import { CollapsibleHeader } from './header';
+
 import { CollapsibleContext } from './context';
 
 interface IContainerProps {

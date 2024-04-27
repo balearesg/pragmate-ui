@@ -1,2 +1,6 @@
 -   HhtmlWrapper included.
 -   AlertModal: Container of actions now has a class "pui-modal\_\_actions" by default.
+-   ReactSelect adjusted logic to handle mobile selects and replace it by a common select.
+-   Fix types in breadcrumb
+-   icons: in icon defintion, the value where the svg content is saved now is "path" not "icon", to be more semantic.
+-   icons : icons now supports src attributes, to be loaded as images.
