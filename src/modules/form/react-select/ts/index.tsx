@@ -1,69 +1,30 @@
 import React from 'react';
 import Select from 'react-select';
-import { StyleObserver } from './observer';
+import { useStyles } from './use-styles';
 
 export /*bundle*/
 function ReactSelect(props) {
 	let properties = { ...props };
 	delete properties.onChange;
-	const ref = React.useRef(null);
-
-	React.useEffect(() => {
-		const host = ref.current.getRootNode()?.host;
-		if (!host) {
-			console.warn('is not inside a web component');
-		}
-		const headStyles = document.head.querySelectorAll('style[data-emotion]');
-
-		const insert = (nodes: HTMLElement[] | NodeList) => {
-			nodes.forEach(node => {
-				if (node instanceof HTMLStyleElement) {
-					// Handle the new style element
-					const clonedStyle = node.cloneNode(true) as HTMLElement;
-					host.shadowRoot.appendChild(clonedStyle);
-				}
-			});
-		};
-
-		const styleObserver: StyleObserver = new StyleObserver({
-			callback: insert,
-		});
-		const targetNode: HTMLHeadElement = document.head;
-		styleObserver.startObserving(targetNode);
-		insert(headStyles);
-
-		return () => styleObserver.stopObserving();
-	}, []);
+	const { ref } = useStyles();
 
 	const singleValue = !properties.isMulti && props.options.find(item => item.value === props.value);
 	let value = properties.isMulti ? props.value : singleValue;
 	const onChange = params => {
 		if (!props.onChange) return;
 		const isMultiValues = properties?.isMulti;
-		if (!isMultiValues) {
-			props.onChange({
-				target: {
-					value,
-					name: props.name,
-				},
-				currentTarget: {
-					value,
-					name: props.name,
-				},
-			});
-			return;
-		}
+		const values = isMultiValues && params.map(selectedItem => selectedItem.value);
+		const value = isMultiValues ? values : params.value;
+		const { name } = props;
 
-		const values = params.map(selectedItem => selectedItem.value);
+		const target = {
+			value,
+			name,
+		};
+
 		props.onChange({
-			target: {
-				value: values,
-				name: props.name,
-			},
-			currentTarget: {
-				value: values,
-				name: props.name,
-			},
+			target,
+			currentTarget: target,
 		});
 	};
 
