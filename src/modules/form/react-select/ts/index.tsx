@@ -36,24 +36,40 @@ function ReactSelect(props) {
 	}, []);
 
 	let value = props.options.find(item => item.value === props.value);
-	const onChange = ({ label, value }) => {
+	const onChange = params => {
 		if (!props.onChange) return;
+		const isMultiValues = properties?.isMulti;
+		if (!isMultiValues) {
+			props.onChange({
+				target: {
+					value,
+					name: props.name,
+				},
+				currentTarget: {
+					value,
+					name: props.name,
+				},
+			});
+			return;
+		}
+
+		const values = params.map(selectedItem => selectedItem.value);
 		props.onChange({
 			target: {
-				value,
+				value: values,
 				name: props.name,
 			},
 			currentTarget: {
-				value,
+				value: values,
 				name: props.name,
 			},
 		});
 	};
 
 	return (
-		<div className='pui-select' ref={ref}>
+		<div className="pui-select" ref={ref}>
 			{props.label && <label>{props.label}</label>}
-			<Select classNamePrefix='pui-react-select' onChange={onChange} {...properties} value={value} />
+			<Select classNamePrefix="pui-react-select" onChange={onChange} {...properties} value={value} />
 		</div>
 	);
 }
