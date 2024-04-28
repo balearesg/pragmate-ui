@@ -35,7 +35,8 @@ function ReactSelect(props) {
 		return () => styleObserver.stopObserving();
 	}, []);
 
-	let value = props.options.find(item => item.value === props.value);
+	const singleValue = !properties.isMulti && props.options.find(item => item.value === props.value);
+	let value = properties.isMulti ? props.value : singleValue;
 	const onChange = params => {
 		if (!props.onChange) return;
 		const isMultiValues = properties?.isMulti;
