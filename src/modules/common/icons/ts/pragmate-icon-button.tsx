@@ -84,12 +84,11 @@ const IconButton: React.FC<PropsWithChildren<props> & RefAttributes<HTMLButtonEl
 				disabled={disabled}
 				className={className}
 				onClick={onClickButton}
-				{...attrs}
-			>
+				{...attrs}>
 				<Icon {...iconAttributes} />
 				{children}
 				{/* {!disabled && <BeyondWaves/>} */}
 			</button>
 		);
-	},
+	}
 );
