@@ -63,6 +63,7 @@ export const menuItems = [
 	['Image', 'image', []],
 	['Scroll', 'scroll-container', []],
 	['ButtonGroup', 'button-group'],
+	['Collapsible', 'collapsible'],
 	['Tabs', 'tabs', []],
 	['New Tabs', 'tabs-new', []],
 	['Toast', 'toast', []],

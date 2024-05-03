@@ -16,9 +16,11 @@ function Image(props: IProps): JSX.Element {
 	if (error) cls += ' pui-image-error';
 	const Content = error ? Error : Img;
 	const properties: IProps = { ...props, className: cls, onClick };
+
 	['src', 'alt', 'onError', 'children', 'size', 'loading', 'error', 'sources', 'sizeLoading'].forEach(
 		prop => delete properties[prop],
 	);
+
 	const value: IContext = {
 		...props,
 		state,

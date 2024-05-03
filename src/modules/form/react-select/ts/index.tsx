@@ -18,9 +18,10 @@ function ReactSelect(props) {
 		props.onChange({ target, currentTarget: { ...target } });
 	};
 
-	if (isMobile()) return <MobileSelect {...props} />;
+	if (isMobile({ tablet: true })) return <MobileSelect {...props} />;
 
 	const attrs = { onChange, ...properties, value };
+
 	return (
 		<div className='pui-select' ref={ref}>
 			{props.label && <label>{props.label}</label>}

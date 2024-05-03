@@ -4,14 +4,18 @@ import { useScroll } from './use-scroll';
 import { Tab } from './tab';
 import { ITabProps } from './interfaces';
 
-export /*bundle*/ const Tabs = ({ children, className }) => {
+interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
+	children: React.ReactNode;
+}
+
+export /*bundle*/ const Tabs = ({ children, className }: TabsProps) => {
 	const { activeTab } = useTabsContext();
 	const ref = React.useRef<HTMLDivElement>(null);
 	useScroll(ref, activeTab);
 
-	const output = children.map((item, index) => {
-		const props = { ...item.props, index, key: index };
+	const output = React.Children.map(children, (item, index) => {
 		if (React.isValidElement(item) && (item.type as React.FC) === Tab) {
+			const props = { ...item.props, index, key: index };
 			const tabChild = item as React.ReactElement<ITabProps>;
 			return React.cloneElement(tabChild, props);
 		}
