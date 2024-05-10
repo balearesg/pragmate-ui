@@ -2,26 +2,23 @@ import React from 'react';
 import { useTabsContext } from './context';
 import { useScroll } from './use-scroll';
 import { Tab } from './tab';
-import { ITabProps } from './interfaces';
+import { IProps, ITabProps, TabsProps } from './definitions';
 
-interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
-	children: React.ReactNode;
-}
-
-export /*bundle*/ const Tabs = ({ children, className }: TabsProps) => {
+export /*bundle*/ const Tabs = ({ children, className }: IProps) => {
 	const { activeTab } = useTabsContext();
 	const ref = React.useRef<HTMLDivElement>(null);
+	const cls = `pui-tabs-menu${className ? ` ${className}` : ''}`;
+	const clone = (item, index) => {
+		if (!React.isValidElement(item) || (item.type as React.FC) !== Tab) return item;
+
+		const props = { ...(item.props as TabsProps), index, key: index };
+		const tabChild = item as React.ReactElement<ITabProps>;
+		return React.cloneElement(tabChild, props);
+	};
+
+	const output = React.Children.map(children, clone);
 	useScroll(ref, activeTab);
 
-	const output = React.Children.map(children, (item, index) => {
-		if (React.isValidElement(item) && (item.type as React.FC) === Tab) {
-			const props = { ...item.props, index, key: index };
-			const tabChild = item as React.ReactElement<ITabProps>;
-			return React.cloneElement(tabChild, props);
-		}
-		return item;
-	});
-	const cls = `pui-tabs-menu${className ? ` ${className}` : ''}`;
 	return (
 		<header className={cls}>
 			<div className='tabs' ref={ref}>

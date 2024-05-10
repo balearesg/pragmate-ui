@@ -5,6 +5,7 @@ type properties = {
 	type: string;
 	size?: 'xs' | 'md' | 'lg' | 'xl';
 	active?: boolean;
+	pepito?: boolean;
 };
 export /*bundle*/
 const Spinner: React.FC<properties & RefAttributes<unknown>> = forwardRef(
@@ -30,10 +31,10 @@ const Spinner: React.FC<properties & RefAttributes<unknown>> = forwardRef(
 
 		return (
 			<div className={cls} ref={ref}>
-				<svg viewBox="0 0 100 100">
-					<circle cx="50" cy="50" r={circleSize} style={style} />
+				<svg viewBox='0 0 100 100'>
+					<circle cx='50' cy='50' r={circleSize} style={style} />
 				</svg>
 			</div>
 		);
-	}
+	},
 );

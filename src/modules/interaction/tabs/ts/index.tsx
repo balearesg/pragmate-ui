@@ -1,8 +1,8 @@
 import React from 'react';
 import { TabsContext } from './context';
-import { ITabProps } from './interfaces';
+import { ITabsContainerProps } from './definitions';
 
-export /* bundle  */ const TabsContainer: React.FC<ITabProps> = ({ active, onChange, className, children, panes }) => {
+export /* bundle  */ function TabsContainer({ active, onChange, className, children, panes }: ITabsContainerProps) {
 	const activeIndex = active || 0;
 	const [activeTab, setActiveTab] = React.useState(activeIndex);
 	const value = { panes, activeTab, setActiveTab, onChange };
@@ -13,4 +13,4 @@ export /* bundle  */ const TabsContainer: React.FC<ITabProps> = ({ active, onCha
 			<section className={cls}>{children}</section>
 		</TabsContext.Provider>
 	);
-};
+}

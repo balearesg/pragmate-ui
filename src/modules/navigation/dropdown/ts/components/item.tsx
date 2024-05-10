@@ -17,8 +17,10 @@ export /*bundle*/ function DropdownItem(props: React.PropsWithChildren<IDropdown
 	toDelete.forEach(key => delete properties[key]);
 
 	return (
-		<Control className={cls} onClick={handleClick} {...properties}>
-			{children}
-		</Control>
+		<li>
+			<Control className={cls} onClick={handleClick} {...properties}>
+				{children}
+			</Control>
+		</li>
 	);
 }

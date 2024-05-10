@@ -1,0 +1,11 @@
+{
+  "name": "hooks",
+  "code": {
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

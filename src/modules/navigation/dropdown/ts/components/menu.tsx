@@ -9,5 +9,9 @@ export /*bundle*/ function DropdownMenu(props: React.PropsWithChildren<IDropdown
 	if (!toggleMenu) return null;
 	let cls = `pui-dropdown-menu  pui-dropdown-menu--opened`;
 
-	return <AnimatedDiv className={cls}>{props.children}</AnimatedDiv>;
+	return (
+		<AnimatedDiv className={cls}>
+			<ul className='pui-dropdown-menu__list'>{props.children}</ul>
+		</AnimatedDiv>
+	);
 }

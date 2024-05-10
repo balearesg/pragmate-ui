@@ -9,5 +9,11 @@
 			flex-direction: column;
 			width: 100%;
 		}
+
+		.pui-dropdown-menu__list {
+			position: relative;
+			list-style: none;
+			padding: 0;
+		}
 	}
 }

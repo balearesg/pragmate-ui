@@ -10,7 +10,9 @@ export /*bundle*/ function DropdownContainer({
 	const { toggleMenu, setToggleMenu } = useDropdownContext();
 
 	const { ref } = useClickContainer({ toggleMenu, setToggleMenu });
-	const cls: string = `pui-dropdown-container${className ? ` ${className}` : ''}`;
+	const cls = `pui-dropdown-container${className ? ` ${className}` : ''}${
+		toggleMenu ? ' pui-dropdown-container--opened' : ''
+	}`;
 
 	return (
 		<div ref={ref} className={cls}>

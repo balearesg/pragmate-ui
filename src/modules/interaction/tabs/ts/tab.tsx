@@ -1,7 +1,8 @@
 import React from 'react';
 import { useTabsContext } from './context';
+import { IProps, ITabProps } from './definitions';
 
-export /*bundle */ function Tab(props) {
+export /*bundle */ function Tab(props: ITabProps) {
 	const { children, index, disabled, className } = props;
 	const { activeTab, setActiveTab, onChange } = useTabsContext();
 	let cls = `tab ${index === activeTab ? 'active' : ''} ${disabled ? ' is-disabled' : ''}`;

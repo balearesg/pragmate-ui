@@ -1,7 +1,7 @@
 import React from 'react';
 import { IIconProps } from './types';
 
-export function IconImg({ src, className, viewBox, ...props }) {
+export function IconImg({ src, className, viewBox, ...props }: IIconProps) {
 	const properties: IIconProps = Object.assign(
 		{ ...props },
 		{

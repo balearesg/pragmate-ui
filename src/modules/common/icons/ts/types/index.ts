@@ -9,6 +9,18 @@ export interface IIconProps extends SVGAttributes<SVGSVGElement> {
 	icon?: string | PuiIcon;
 	name?: string;
 	src?: string;
-	ref?: Ref<SVGSVGElement>;
+	ref?: Ref<any>;
 	className?: string;
+	viewBox?: string;
+}
+
+export interface IIconButtonProps extends IIconProps {
+	disabled?: boolean;
+	onClick?: (event) => void;
+	value?: string;
+	id?: string;
+	children?: React.ReactNode;
+	navigate?: string;
+	variant?: string;
+	type?: 'button' | 'submit' | 'reset';
 }
