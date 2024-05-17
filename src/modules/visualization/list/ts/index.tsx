@@ -1,14 +1,16 @@
 import React, { ReactElement, ReactNode } from 'react';
 import { DraggableList } from './draggable';
-import { ListProps } from './types';
+import { IListProps } from './types';
+import { ItemList } from './item';
+import { DraggableItem } from './item/dragable';
 
-export /*bundle */ function List<T>({ items, ...props }: ListProps<T>): ReactElement {
+export /*bundle */ function List<T>({ items, ...props }: IListProps<T>): ReactElement {
 	const {
 		className,
 		children,
 		index = 'id',
 		specs,
-		dragabble,
+		draggable,
 		childrenPosition = 'top',
 		control,
 		as = 'ul',
@@ -16,24 +18,16 @@ export /*bundle */ function List<T>({ items, ...props }: ListProps<T>): ReactEle
 		container = 'ul',
 	} = props;
 	const Container = as || container;
-	const Control = control;
+
 	const onTop = childrenPosition === 'top';
-	const output: ReactNode[] = items.map((item, idx) => {
-		const element = React.createElement(
-			Control as React.ElementType<{ data: T; index: number; item: T; specs: Record<string, any> }>,
-			{
-				key: (item as any)[index] || idx,
-				index: idx,
-				data: item, //compatibility
-				item,
-				specs,
-			},
-		);
+	const ItemControl = draggable ? DraggableItem : ItemList;
 
-		return element;
-	});
+	if (draggable) return <DraggableList items={items} {...props} />;
+	
+	const output: ReactNode[] = items.map((item, idx) => (
+		<ItemControl index={index} key={idx} specs={specs} control={control} item={item} idx={idx} />
+	));
 
-	if (dragabble) return <DraggableList items={output} {...props} />;
 	const top = onTop && children ? children : null;
 	const bottom = !onTop && children ? children : null;
 	return (

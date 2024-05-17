@@ -1,27 +1,28 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Reorder } from 'framer-motion';
+import { ItemList } from './item';
+import { DraggableItem } from './item/dragable';
+import { IListProps } from './types';
 /**
  *
  */
-export function DraggableList(props) {
+export function DraggableList<T>({ specs, control, index, ...props }: IListProps<T>) {
 	const [items, setItems] = React.useState(props.items);
 
 	const onReorder = items => {
-		console.log(30, items);
 		setItems(items);
+
 		if (props.onReorder) props.onReorder(items);
 	};
+	const output: ReactNode[] = items.map((item, idx) => (
+		<Reorder.Item value={item} key={`${item as string}`}>
+			{item as ReactNode}
+		</Reorder.Item>
+	));
 
-	const attrs = { as: props.as };
 	return (
-		<Reorder.Group {...attrs} values={items} onReorder={onReorder}>
-			{items.map((item, idx) => {
-				return (
-					<Reorder.Item key={idx} value={item}>
-						{item}
-					</Reorder.Item>
-				);
-			})}
+		<Reorder.Group values={items} onReorder={onReorder}>
+			{output}
 		</Reorder.Group>
 	);
 }

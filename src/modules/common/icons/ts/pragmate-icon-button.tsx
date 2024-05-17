@@ -4,6 +4,7 @@ import { routing } from '@beyond-js/kernel/routing';
 import { Icon } from './icon';
 import { RippleEffect } from 'pragmate-ui/ripple';
 import { IIconButtonProps, IIconProps } from './types';
+import { getAttributes } from './icons/html-attributes';
 
 export /*bundle*/ const IconButton = forwardRef<HTMLButtonElement, IIconButtonProps>((props: IIconButtonProps, ref) => {
 	const { icon, onClick, viewBox, disabled, name, value, id, title, children } = props;
@@ -55,6 +56,7 @@ export /*bundle*/ const IconButton = forwardRef<HTMLButtonElement, IIconButtonPr
 
 	title ? (attrs['data-tippy-content'] = title) : null;
 
+	const buttonAttrs = getAttributes(attrs);
 	return (
 		<button
 			id={id}
@@ -65,7 +67,7 @@ export /*bundle*/ const IconButton = forwardRef<HTMLButtonElement, IIconButtonPr
 			disabled={disabled}
 			className={className}
 			onClick={onClickButton}
-			{...attrs}
+			{...buttonAttrs}
 		>
 			<Icon {...iconAttributes} />
 			{children}

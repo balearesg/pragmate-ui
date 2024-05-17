@@ -1,14 +1,12 @@
 import React, { SVGAttributes, Ref } from 'react';
 import { PRAGMATE_ICONS } from './icons';
-import { IIconProps, PuiIcon } from './types';
-import { IconImg } from './image';
+import { IIconProps, IImageIconProps, PuiIcon } from './types';
 
 export /*bundle*/
 const Icon = (props: IIconProps): JSX.Element => {
 	let { src, icon, className, name } = props;
 	const iconsList: PuiIcon = PRAGMATE_ICONS;
 
-	if (src) return <IconImg src={src} {...props} />;
 	if (!icon) return <div key='preload' />;
 
 	let viewBox: string = '0 0 24 24';

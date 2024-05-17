@@ -1,0 +1,25 @@
+import { Code } from 'pragmate-ui/code';
+import { implementation } from './implementation';
+import { Example } from './example';
+import { DynamicListExample } from './dynamic';
+import { DraggableList } from './draggable';
+import { List } from 'pragmate-ui/list';
+import { Input } from 'pragmate-ui/form';
+
+# List
+
+## Implementation :
+
+<Code>{`import { List } from 'pragmate-ui/list';`}</Code>
+
+If you have an array of string items and you want to render it:
+
+<Code>{`<List items={items}/>`}</Code>
+
+If you need to render a list of items with a custom component:
+
+<Code>{`<List items={items} control={YourComponent}/>`}</Code>
+
+{/* <Example /> */}
+
+<DraggableList />

@@ -1,4 +1,4 @@
-import React, { SVGAttributes, Ref } from 'react';
+import React, { SVGAttributes, Ref, ImgHTMLAttributes } from 'react';
 
 export interface PuiIcon {
 	icon?: string;
@@ -23,4 +23,9 @@ export interface IIconButtonProps extends IIconProps {
 	navigate?: string;
 	variant?: string;
 	type?: 'button' | 'submit' | 'reset';
+}
+
+export interface IImageIconProps extends ImgHTMLAttributes<HTMLImageElement> {
+	icon?: string | PuiIcon; // Only include common or image-specific props
+	name?: string;
 }
