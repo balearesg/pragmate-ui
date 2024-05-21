@@ -19,12 +19,17 @@ export /*bundle */ function Provider({
 	const getDefaultValue = () => '';
 	if (!value?.length) value = [getDefaultValue()];
 
-	const [items, setItems] = React.useState(value);
+	const [items, setItems] = React.useState([...value]);
 	const [isDraggable, setIsDraggable] = React.useState(draggable);
 	const refs = useRef([]);
+	React.useEffect(() => {
+		setItems(value);
+	}, [value.length]);
+
 	const providerData = {
 		addItem: () => {
 			const newValue = [...items, getDefaultValue()];
+			console.log(2, newValue);
 			setItems(newValue);
 		},
 		draggable: isDraggable,
@@ -32,9 +37,7 @@ export /*bundle */ function Provider({
 		toggleDraggable: () => setIsDraggable(!isDraggable),
 		removeItem: index => {
 			const newItems = items.filter((_, i) => i !== index);
-
 			setItems(newItems);
-			console.log(22, newItems);
 			const target = { name, value: newItems };
 			onChange?.({ target, currentTarget: target });
 		},
