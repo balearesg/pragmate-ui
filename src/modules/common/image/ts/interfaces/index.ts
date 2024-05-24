@@ -26,6 +26,7 @@ export type ISetState = React.Dispatch<React.SetStateAction<IInitialState>>;
 
 export interface IContext extends IProps {
 	setState?: ISetState;
+	status: 'loading' | 'ready' | 'error';
 	src;
 	state?: IInitialState;
 }
