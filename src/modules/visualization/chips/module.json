@@ -1,5 +1,6 @@
 {
 	"name": "chips",
+	"platforms": ["web", "ios", "android"],
 	"bundle": "code",
 	"scss": {
 		"path": "/scss",

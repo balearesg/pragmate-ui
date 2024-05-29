@@ -15,8 +15,8 @@ body.body-pui-modal-opened {
 	&.show-modal {
 		display: block;
 		z-index: 1000;
-		height: 100vh;
-		width: 100vw;
+		height: 100svh;
+		width: 100svw;
 	}
 
 	.modal-wrapper {
@@ -35,7 +35,7 @@ body.body-pui-modal-opened {
 	.modal-content {
 		position: relative;
 		background: var(--surface);
-		animation: show 0.5s ease-in-out;
+		animation: show 0.2s ease-in;
 		border-radius: var(--border-radius-base);
 		padding: 2rem 1.5rem;
 	}
@@ -44,7 +44,7 @@ body.body-pui-modal-opened {
 @keyframes show {
 	0% {
 		opacity: 0;
-		transform: scale(0.2);
+		transform: scale(0.7);
 	}
 
 	100% {

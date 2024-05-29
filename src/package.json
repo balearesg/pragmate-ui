@@ -48,7 +48,7 @@
 				}
 			},
 			{
-				"name": "web",
+				"name": "web.tsc",
 				"environment": "development",
 				"ts": {
 					"compiler": "tsc"

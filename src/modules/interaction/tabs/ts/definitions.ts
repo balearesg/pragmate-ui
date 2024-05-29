@@ -21,4 +21,5 @@ export interface ITabsContainerProps extends IProps {
 	onChange?: (event, index) => void;
 	className?: string;
 	setURL?: boolean; // todo
+	panes: ITPane[];
 }
