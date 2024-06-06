@@ -23,7 +23,14 @@ export /*bundle */ function List<T>({ items, ...props }: IListProps<T>): ReactEl
 	const ItemControl = draggable ? DraggableItem : ItemList;
 
 	if (draggable) return <DraggableList items={items} {...props} />;
-	
+
+	if (!Array.isArray(items)) {
+		console.warn(
+			'Invalid "items" prop: Expected an array. Please review the component usage and ensure the "items" prop is correctly passed as an array.',
+		);
+		return null;
+	}
+
 	const output: ReactNode[] = items.map((item, idx) => (
 		<ItemControl index={index} key={idx} specs={specs} control={control} item={item} idx={idx} />
 	));

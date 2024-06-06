@@ -34,6 +34,7 @@ export interface DynamicListProps {
 	name: string;
 	defaultValue?: any;
 	draggable?: boolean;
+	specs?: Record<string, any>;
 	Item: React.ComponentType<any>; // Type check for React component
 }
 

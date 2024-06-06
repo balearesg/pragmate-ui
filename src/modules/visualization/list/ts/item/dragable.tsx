@@ -11,7 +11,7 @@ interface IHTMLItemProps {
 export function DraggableItem<T>({ as, ...props }: IItemListProps<T>) {
 	const { item, idx } = props;
 	const attrs = { as };
-	console.log(20, item);
+
 	return (
 		<Reorder.Item value={item} key={idx} {...attrs}>
 			<ItemList {...props} item={item} idx={idx} as='span' />

@@ -11,7 +11,9 @@ const Icon = (props: IIconProps): JSX.Element => {
 
 	let viewBox: string = '0 0 24 24';
 	name = name ? name : typeof icon === 'string' ? icon : icon.icon;
+
 	if (iconsList.hasOwnProperty(name)) icon = iconsList[name];
+
 	if (typeof icon === 'object') {
 		viewBox = icon.viewBox ? icon.viewBox : viewBox;
 		icon = icon.icon;

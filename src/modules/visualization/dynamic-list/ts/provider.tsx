@@ -9,11 +9,12 @@ export /*bundle */ function Provider({
 	children,
 	value,
 	Item,
+	specs,
 	className,
 	defaultValue = '',
 }: DynamicListProps) {
 	if (value && !Array.isArray(value)) {
-		console.warn('Warning: value prop must be an array or undefined.');
+		console.warn('Warning: value prop must be an array or undefined. Received', value);
 	}
 
 	const getDefaultValue = () => '';
@@ -29,17 +30,20 @@ export /*bundle */ function Provider({
 	const providerData = {
 		addItem: () => {
 			const newValue = [...items, getDefaultValue()];
-			console.log(2, newValue);
+
 			setItems(newValue);
 		},
 		draggable: isDraggable,
 		refs,
+		specs: specs ?? {},
 		toggleDraggable: () => setIsDraggable(!isDraggable),
 		removeItem: index => {
 			const newItems = items.filter((_, i) => i !== index);
 			setItems(newItems);
 			const target = { name, value: newItems };
 			onChange?.({ target, currentTarget: target });
+
+			return newItems;
 		},
 		name,
 		setItems,

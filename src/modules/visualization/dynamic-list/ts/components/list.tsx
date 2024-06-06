@@ -7,7 +7,7 @@ import { IPuiProps } from '../types';
 import { Reorder } from 'framer-motion';
 
 export /*bundle*/ function List({ className }: IPuiProps) {
-	const { draggable, name, values, setValues } = useDynamicListContext();
+	const { name, values, setValues } = useDynamicListContext();
 	const attrs: HTMLAttributes<HTMLElement> = { className: `pui-dynamic-list ${className}` };
 
 	const handleChange = (index, value) => {
