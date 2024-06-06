@@ -49,12 +49,11 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>((pr
 				setProcessing(true);
 				//@ts-ignore
 				await onClick(event);
-				console.log(500);
+
 				setProcessing(false);
 				return;
 			}
 		} finally {
-			console.log(600);
 			setProcessing(false);
 		}
 	};
