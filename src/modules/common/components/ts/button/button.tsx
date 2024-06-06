@@ -41,15 +41,21 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>((pr
 	};
 	const usingContext = typeof context?.setSelected === 'function';
 	const onClickButton = async (event: React.MouseEvent<HTMLButtonElement>): Promise<void> => {
-		if (usingContext) {
-			context.setSelected(index);
-		}
-		if (onClick && typeof onClick === 'function') {
-			setProcessing(true);
-			//@ts-ignore
-			await onClick(event);
+		try {
+			if (usingContext) {
+				context.setSelected(index);
+			}
+			if (onClick && typeof onClick === 'function') {
+				setProcessing(true);
+				//@ts-ignore
+				await onClick(event);
+				console.log(500);
+				setProcessing(false);
+				return;
+			}
+		} finally {
+			console.log(600);
 			setProcessing(false);
-			return;
 		}
 	};
 
@@ -79,8 +85,8 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>((pr
 	cls += icon ? ' has-icon' : '';
 	cls += block ? ' btn--block' : '';
 	cls += sizing ? ` btn--${sizing}` : '';
-	cls += loading || fetching || processing ? ' btn--loading' : '';
-	const clsLoading = `button-label ${loading || processing ? 'button-label--loading' : ''}`;
+	cls += loading || fetching ? ' btn--loading' : '';
+	const clsLoading = `button-label ${loading || fetching ? 'button-label--loading' : ''}`;
 
 	if (usingContext && context.selected === index) cls += ' pui-btn--active';
 	if (usingContext) properties['data-index'] = index;
@@ -96,7 +102,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>((pr
 			{icon && <Icon icon={icon} />}
 			{label || (children && <div className={clsLoading}>{label || children}</div>)}
 
-			{(loading || fetching || processing) && <Spinner type={`on-${variant}`} active={true} />}
+			{(loading || fetching) && <Spinner type={`on-${variant}`} active={true} />}
 		</button>
 	);
 });
