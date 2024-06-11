@@ -1,6 +1,5 @@
 import React from 'react';
 import { Controller } from './state/controller';
-import { useSwiperContext } from './context';
 
 import { ISwiperOptions } from './interfaces/swiper-props';
 export const useSwiperSlider = (props: ISwiperOptions) => {
@@ -21,20 +20,13 @@ export const useSwiperSlider = (props: ISwiperOptions) => {
 	React.useEffect((): any => {
 		const controller: Controller = new Controller();
 		const onChange: () => void = (): void =>
-			console.log(99, {
+			setState({
 				...state,
 				ready: true,
 				swiper: controller.swiper,
 				controller,
 				lastIndex: controller.lastIndex,
 			});
-		setState({
-			...state,
-			ready: true,
-			swiper: controller.swiper,
-			controller,
-			lastIndex: controller.lastIndex,
-		});
 		controller.on('change', onChange);
 		if (!controller.destroyed) controller.setSwiper(container.current, props, refs);
 		onChange();

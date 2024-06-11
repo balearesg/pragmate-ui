@@ -95,7 +95,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>((pr
 			ref={combinedRef}
 			className={cls}
 			onClick={onClickButton}
-			disabled={loading || disabled || processing}
+			disabled={loading || fetching || disabled}
 			{...properties}
 		>
 			{icon && <Icon icon={icon} />}
