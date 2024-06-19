@@ -1,5 +1,6 @@
 import React from 'react';
-import type { IProps } from './types';
+import type { IProps } from './definitions';
+
 export /* bundle */ function ProgressBar(props: IProps) {
 	const { value, maxValue = 100, variant = 'primary' } = props;
 

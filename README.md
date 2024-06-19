@@ -57,7 +57,10 @@ This modular approach keeps your bundle lean, ensuring you don’t include unnec
 
 Pragmate UI currently offers the following components, each as an independent bundle:
 
+-   **Alert**: The alert component displays a message with an optional icon, title, and close button.
 -   **Badge**: A small count and labeling component.
+-   **ButtonGroup**: The ButtonGroup component in React creates a group of buttons with a specified orientation.
+-   **HtmlWrapper**: Render dynamic HTML content.
 -   **Breadcrumb**: A component for indicating the current page's location within a navigational hierarchy.
 -   **Chips**: Compact elements that represent an input, attribute, or action.
 -   **Collapsible**: A component for hiding and revealing content.

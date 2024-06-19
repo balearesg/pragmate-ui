@@ -1,4 +1,4 @@
-import React, { Ref } from 'react';
+import React from 'react';
 import { RippleEffect } from 'pragmate-ui/ripple';
 import tippy from 'tippy.js';
 

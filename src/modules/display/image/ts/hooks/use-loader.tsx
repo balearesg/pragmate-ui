@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 export /*bundle*/ function useLoader(src) {
 	const [status, setStatus] = React.useState<'loading' | 'ready' | 'error'>('loading');

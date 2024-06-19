@@ -1,12 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useRef, useEffect } from 'react';
 import { useContextMenuContext } from './context';
-
-interface ContextMenuProps {
-	className?: string;
-	unmount: (value: boolean) => void;
-	children: React.ReactNode;
-}
+import type { ContextMenuProps } from './definitions';
 
 export /*bundle*/ function ContextMenu({ className, unmount, children }: ContextMenuProps) {
 	const container = document.createElement('span');

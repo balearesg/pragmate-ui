@@ -1,5 +1,5 @@
 import React from 'react';
-import {Icon} from 'pragmate-ui/icons';
+
 export function Content({message, children, title, icon}) {
 	let output = [];
 

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { useState, useRef, MutableRefObject, SyntheticEvent, ReactNode } from 'react';
+import { useState, useRef, MutableRefObject, SyntheticEvent } from 'react';
 import { Children } from './children';
 import { IModalProps, IModalState } from './types/modal-props';
-import { AnimatePresence, motion } from 'framer-motion';
+
 export /*bundle*/
 function Modal(props: IModalProps) {
 	const [state, setState] = useState<IModalState>({

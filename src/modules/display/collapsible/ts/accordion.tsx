@@ -1,7 +1,4 @@
 import React from 'react';
-import { CollapsibleContainer } from './';
-import { CollapsibleHeader } from './header';
-import { CollapsibleContent } from './content';
 import { IconButton } from 'pragmate-ui/icons';
 interface IAccordionContext {
 	onChange?: (event: any) => void;

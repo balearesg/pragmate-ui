@@ -1,8 +1,6 @@
 import React, { Ref } from 'react';
 import { Icon } from 'pragmate-ui/icons';
 import { Spinner } from 'pragmate-ui/spinner';
-import { RippleEffect } from 'pragmate-ui/ripple';
-import tippy from 'tippy.js';
 import { IButtonProps } from './interface';
 import { ButtonGroupContext } from '../button-group/context';
 import { useRipple } from '../use-ripple';
