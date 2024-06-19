@@ -12,5 +12,13 @@ export const internalProps = [
 	'password',
 	'loading',
 	'variant',
-	'type'
+	'type',
 ];
+
+function generateAttributes(attrs, toRemove = []) {
+	const propsToRemove = [...internalProps, ...toRemove];
+	const properties = { ...attrs };
+	propsToRemove.forEach(prop => delete properties[prop]);
+
+	return properties;
+}

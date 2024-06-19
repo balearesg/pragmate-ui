@@ -5,103 +5,90 @@ import { RippleEffect } from 'pragmate-ui/ripple';
 import tippy from 'tippy.js';
 import { IButtonProps } from './interface';
 import { ButtonGroupContext } from '../button-group/context';
+import { useRipple } from '../use-ripple';
 
 const { forwardRef } = React;
 
-export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>((props, ref: Ref<HTMLElement>) => {
-	const {
-		className,
-		onClick,
-		data,
-		label,
-		title,
-		children,
-		icon,
-		loading,
-		block,
-		index,
-		fetching = false,
-		variant = 'default',
-		bordered = false,
-		sizing = 'md',
-		disabled = false,
+export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>(
+	(props, reference: Ref<HTMLButtonElement>) => {
+		const {
+			className,
+			onClick,
+			data,
+			label,
+			title,
+			children,
+			icon,
+			loading,
+			block,
+			index,
+			fetching = false,
+			variant = 'default',
+			bordered = false,
+			sizing = 'md',
+			disabled = false,
 
-		...otherProps
-	} = props;
+			...otherProps
+		} = props;
 
-	const context = React.useContext(ButtonGroupContext);
+		const context = React.useContext(ButtonGroupContext);
+		const [, setProcessing] = React.useState(fetching || loading);
+		const ref = useRipple(title, reference);
+		const usingContext = typeof context?.setSelected === 'function';
+		const onClickButton = async (event: React.MouseEvent<HTMLButtonElement>): Promise<void> => {
+			try {
+				if (usingContext) {
+					context.setSelected(index);
+				}
+				if (onClick && typeof onClick === 'function') {
+					setProcessing(true);
+					//@ts-ignore
+					await onClick(event);
 
-	const [processing, setProcessing] = React.useState(fetching || loading);
-	const refObject = React.useRef<HTMLButtonElement>(null);
-	const combinedRef = (instance: HTMLButtonElement) => {
-		refObject.current = instance;
-		if (typeof ref === 'function') ref(instance);
-		//@ts-ignore
-		else if (ref) ref.current = instance;
-	};
-	const usingContext = typeof context?.setSelected === 'function';
-	const onClickButton = async (event: React.MouseEvent<HTMLButtonElement>): Promise<void> => {
-		try {
-			if (usingContext) {
-				context.setSelected(index);
-			}
-			if (onClick && typeof onClick === 'function') {
-				setProcessing(true);
-				//@ts-ignore
-				await onClick(event);
-
+					setProcessing(false);
+					return;
+				}
+			} finally {
 				setProcessing(false);
-				return;
 			}
-		} finally {
-			setProcessing(false);
+		};
+
+		const properties: IButtonProps = {
+			...otherProps,
+			type: props.type ? props.type : 'button',
+		};
+		if (title) properties['data-tippy-content'] = title;
+		if (data) {
+			Object.keys(data).forEach((entry: string) => {
+				properties[`data-${entry}`] = data[entry];
+			});
 		}
-	};
 
-	React.useEffect(() => {
-		const ripple = new RippleEffect();
-		ripple.addRippleEffect(refObject.current);
+		let cls = `pui-button btn-${variant}`;
+		cls += className ? ` ${className}` : '';
+		cls += bordered ? ' outline' : '';
+		cls += icon ? ' has-icon' : '';
+		cls += block ? ' btn--block' : '';
+		cls += sizing ? ` btn--${sizing}` : '';
+		cls += loading || fetching ? ' btn--loading' : '';
+		const clsLoading = `button-label ${loading || fetching ? 'button-label--loading' : ''}`;
 
-		if (title) {
-			tippy(refObject.current);
-		}
-	}, [title]);
+		if (usingContext && context.selected === index) cls += ' pui-btn--active';
+		if (usingContext) properties['data-index'] = index;
 
-	const properties: IButtonProps = {
-		...otherProps,
-		type: props.type ? props.type : 'button',
-	};
-	if (title) properties['data-tippy-content'] = title;
-	if (data) {
-		Object.keys(data).forEach((entry: string) => {
-			properties[`data-${entry}`] = data[entry];
-		});
-	}
+		return (
+			<button
+				ref={ref}
+				className={cls}
+				onClick={onClickButton}
+				disabled={loading || fetching || disabled}
+				{...properties}
+			>
+				{icon && <Icon icon={icon} />}
+				{label || (children && <div className={clsLoading}>{label || children}</div>)}
 
-	let cls = `pui-button btn-${variant}`;
-	cls += className ? ` ${className}` : '';
-	cls += bordered ? ' outline' : '';
-	cls += icon ? ' has-icon' : '';
-	cls += block ? ' btn--block' : '';
-	cls += sizing ? ` btn--${sizing}` : '';
-	cls += loading || fetching ? ' btn--loading' : '';
-	const clsLoading = `button-label ${loading || fetching ? 'button-label--loading' : ''}`;
-
-	if (usingContext && context.selected === index) cls += ' pui-btn--active';
-	if (usingContext) properties['data-index'] = index;
-
-	return (
-		<button
-			ref={combinedRef}
-			className={cls}
-			onClick={onClickButton}
-			disabled={loading || fetching || disabled}
-			{...properties}
-		>
-			{icon && <Icon icon={icon} />}
-			{label || (children && <div className={clsLoading}>{label || children}</div>)}
-
-			{(loading || fetching) && <Spinner type={`on-${variant}`} active={true} />}
-		</button>
-	);
-});
+				{(loading || fetching) && <Spinner type={`on-${variant}`} active={true} />}
+			</button>
+		);
+	},
+);
