@@ -1,8 +1,8 @@
 import React from 'react';
-import {ButtonGroup} from 'pragmate-ui/components';
-import {ProgressBar} from 'pragmate-ui/progress-bar';
-import {Button} from 'pragmate-ui/components';
-import {v4 as uuid} from 'uuid';
+import { ButtonGroup } from 'pragmate-ui/components';
+import { ProgressBar } from 'pragmate-ui/progress-bar';
+import { Button } from 'pragmate-ui/components';
+import { v4 as uuid } from 'uuid';
 
 export function ProgressBarVariants() {
 	const variants = ['Primary', 'Secondary', 'Tertiary', 'Success', 'Danger', 'Warning', 'Info'];
@@ -22,20 +22,20 @@ export function ProgressBarVariants() {
 	}, [currentValue]);
 
 	const handleVariantProgressBar = event => {
-		const {dataset} = event.currentTarget;
+		const { dataset } = event.currentTarget;
 		setVariantProgressBar(dataset.variant);
 	};
 	const buttons = variants.map(item => {
 		return (
-			<Button variant="primary" key={uuid()} data-variant={item.toLowerCase()} onClick={handleVariantProgressBar}>
+			<Button variant='primary' key={uuid()} data-variant={item.toLowerCase()} onClick={handleVariantProgressBar}>
 				{item}
 			</Button>
 		);
 	});
 	return (
-		<div className="content-variants">
-			<ButtonGroup direction="row">{buttons}</ButtonGroup>
-			<ProgressBar currentValue={currentValue} maxValue={100} variant={variantProgressBar} />
+		<div className='content-variants'>
+			<ButtonGroup orientation='row'>{buttons}</ButtonGroup>
+			<ProgressBar value={currentValue} maxValue={100} variant={variantProgressBar} />
 		</div>
 	);
 }

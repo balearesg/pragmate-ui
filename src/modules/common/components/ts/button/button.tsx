@@ -8,7 +8,7 @@ import { useRipple } from '../use-ripple';
 const { forwardRef } = React;
 
 export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>(
-	(props, reference: Ref<HTMLButtonElement>) => {
+	(props, reference: React.RefObject<HTMLButtonElement>) => {
 		const {
 			className,
 			onClick,

@@ -13,6 +13,12 @@ export const internalProps = [
 	'loading',
 	'variant',
 	'type',
+
+	'size',
+	'loading',
+	'error',
+	'sources',
+	'onError',
 ];
 
 function generateAttributes(attrs, toRemove = []) {
