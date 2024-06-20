@@ -60,19 +60,26 @@ Pragmate UI currently offers the following components, each as an independent bu
 -   **Alert**: The alert component displays a message with an optional icon, title, and close button.
 -   **Badge**: A small count and labeling component.
 -   **ButtonGroup**: The ButtonGroup component in React creates a group of buttons with a specified orientation.
--   **HtmlWrapper**: Render dynamic HTML content.
 -   **Breadcrumb**: A component for indicating the current page's location within a navigational hierarchy.
+-   **Checkbox**: The Checkbox component is a customizable checkbox input with label support.
+-   **CheckboxGroup**: The CheckboxGroup component is a container for a group of checkboxes.
 -   **Chips**: Compact elements that represent an input, attribute, or action.
+-   **Code**: Code is a component used to display code snippets with syntax highlighting using Prism.js. It optionally includes a clipboard feature for copying code.
 -   **Collapsible**: A component for hiding and revealing content.
 -   **Coming Soon**: Placeholder for future components.
 -   **Context Menu**: A menu that appears upon user interaction, such as a right-click.
+-   **DynamicList**: The DynamicList component manages a dynamic list of elements with functionalities to add, remove, and update items, including drag-and-drop capabilities if enabled.
 -   **Dropdown**: A component that allows users to choose one value from a list.
+-   **DropdownButtonMenu**: The DropdownBottomMenu component renders a dropdown menu that appears at the bottom of the screen based on the show prop.
 -   **Empty**: A component that renders a placeholder message when there is no data or content to display.
+-   **HtmlWrapper**: Render dynamic HTML content.
 -   **Form**: A group of components that collect user input.
 -   **Global Components**: Reusable components across different parts of the application.
 -   **Icons**: A library of UI icons.
+-   **IconButton**: The IconButton component is a button with an optional icon, supporting features like tooltips.
 -   **Image**: A component that renders images with on-demand loading.
 -   **Input Controller**: A component for input field value manipulation.
+-   **Input**: The Input component is a versatile input field with support for error handling, various types, and custom styles.
 -   **Link**: A component for navigation.
 -   **List**: A component for displaying a series of content.
 -   **Menu**: A component for displaying navigation options.
@@ -83,16 +90,22 @@ Pragmate UI currently offers the following components, each as an independent bu
 -   **Perfect Scrollbar**: Custom scrollbar that's perfect for the given context.
 -   **Preload**: Components that handle the preloading of certain UI elements or data.
 -   **Progress Bar**: A component for visualizing the progression of a task.
+-   **Radio**: The Radio component is a customizable radio button with a label.
+-   **ReactSelect**: The ReactSelect component is a wrapper around the react-select library's Select component.
 -   **Ripple**: An effect component for material design-like interactions.
 -   **Spinner**: A component for indicating a loading state.
+-   **Select**: The Select component is a customizable dropdown menu.
+-   **Switch**: The Switch component is a customizable toggle switch.
 -   **Swiper**: A carousel/slider component.
 -   **Tabs**: A component for tabbed navigation.
 -   **Template**: Components used for structuring application layouts.
+-   **Textarea**: The Textarea component is an enhanced textarea element with additional features like dynamic height adjustment, error handling, and character counting.
 -   **Theme Switcher**: A component for toggling between light and dark themes.
 -   **Toast**: A component for displaying brief, auto-expiring messages.
 -   **Tooltip**: Text labels that appear when the user hovers over, focuses on, or taps an element.
 -   **Verification Code**: A component for inputting a code received for verification purposes.
 -   **Vertical Line**: A component to render a vertical dividing line.
+
 
 (Existing components from the previous list omitted for brevity)
 

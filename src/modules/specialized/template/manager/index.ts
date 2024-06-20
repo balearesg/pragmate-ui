@@ -1,5 +1,5 @@
 import { ReactiveModel } from '@beyond-js/reactive/model';
-import { getCSSCustomPropIndex, getCSSCustomPropsObject, getCSSCustomPropsObjectFromStylesheet } from './properties';
+import { getCSSCustomPropsObjectFromStylesheet } from './properties';
 export class TemplateManager extends ReactiveModel<TemplateManager> {
 	#root;
 	get root() {

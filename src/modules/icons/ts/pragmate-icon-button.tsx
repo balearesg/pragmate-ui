@@ -1,4 +1,4 @@
-import React, { MouseEvent, forwardRef, LegacyRef } from 'react';
+import React, { MouseEvent, forwardRef } from 'react';
 import tippy from 'tippy.js';
 import { routing } from '@beyond-js/kernel/routing';
 import { Icon } from './icon';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { DropdownContext, useDropdownContext } from '../context';
+import { useDropdownContext } from '../context';
 import { useClickContainer } from '../hooks/use-click-container';
 import { IDropdownProps } from '../types';
 

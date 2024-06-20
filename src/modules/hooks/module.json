@@ -3,7 +3,7 @@
 	"platforms": ["web", "ios", "android"],
 	"code": {
 		"ts": {
-			"path": "/code/ts",
+			"path": "/ts",
 			"files": ["*"]
 		}
 	}

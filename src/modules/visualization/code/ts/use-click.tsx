@@ -1,5 +1,5 @@
 import React from 'react';
-import { Toasts, toast } from 'pragmate-ui/toast';
+import {toast } from 'pragmate-ui/toast';
 
 export function useClick(): [
 	React.RefObject<HTMLDivElement>,

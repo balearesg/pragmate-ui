@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { SideMenuContent } from "./content";
 import { IconButton } from "pragmate-ui/icons";
 import { MenuContext } from "./context";

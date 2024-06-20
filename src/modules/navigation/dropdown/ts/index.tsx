@@ -1,6 +1,5 @@
 import React from 'react';
 import { DropdownContext } from './context';
-
 import { IDropdownProps } from './types';
 import { DropdownContainer } from './components/container';
 

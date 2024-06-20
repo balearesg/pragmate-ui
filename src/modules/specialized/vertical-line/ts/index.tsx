@@ -1,6 +1,6 @@
 import React from 'react';
-import type {IEvent} from './type';
 import {Icon} from 'pragmate-ui/icons';
+
 export /* bundle */ function VerticalLine({events, variant = 'primary'}): JSX.Element {
 	let cls = variant ? `timeline-event__content--icon ${variant}` : 'timeline-event__content--icon';
 

@@ -1,4 +1,4 @@
-import React, { useRef, MutableRefObject, ChangeEvent, InputHTMLAttributes, HTMLAttributes } from 'react';
+import React, { useRef, MutableRefObject, InputHTMLAttributes, HTMLAttributes } from 'react';
 
 interface props extends InputHTMLAttributes<HTMLInputElement> {
 	label?: string;

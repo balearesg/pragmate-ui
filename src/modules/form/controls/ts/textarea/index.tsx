@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChangeEvent, useRef, useState } from 'react';
-import { IProps, IState, TValue } from './types';
+import { IProps, IState } from './types';
 import { TextareaError } from './error';
 import { TextareaCounter } from './counter';
 

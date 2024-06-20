@@ -1,10 +1,10 @@
-import React, { SVGAttributes, Ref } from 'react';
+import React from 'react';
 import { PRAGMATE_ICONS } from './icons';
-import { IIconProps, IImageIconProps, PuiIcon } from './types';
+import { IIconProps, PuiIcon } from './types';
 
 export /*bundle*/
 const Icon = (props: IIconProps): JSX.Element => {
-	let { src, icon, className, name } = props;
+	let {icon, className, name } = props;
 	const iconsList: PuiIcon = PRAGMATE_ICONS;
 
 	if (!icon) return <div key='preload' />;

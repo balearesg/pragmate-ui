@@ -11,7 +11,6 @@ export /*bundle */ function Provider({
 	Item,
 	specs,
 	className,
-	defaultValue = '',
 }: DynamicListProps) {
 	if (value && !Array.isArray(value)) {
 		console.warn('Warning: value prop must be an array or undefined. Received', value);
@@ -30,7 +29,6 @@ export /*bundle */ function Provider({
 	const providerData = {
 		addItem: () => {
 			const newValue = [...items, getDefaultValue()];
-
 			setItems(newValue);
 		},
 		draggable: isDraggable,
@@ -66,7 +64,6 @@ export /*bundle */ function Provider({
 		Item,
 	};
 
-	// const Container = draggable ? DraggableList : React.Fragment;
 	return (
 		<DynamicListContext.Provider value={providerData}>
 			<div className={className}>{children}</div>

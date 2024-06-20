@@ -1,10 +1,7 @@
 import React, { HTMLAttributes } from 'react';
 import { useDynamicListContext } from '../context';
-
-import { DraggableList } from './dragabble-list';
 import { DynamicItem } from './item';
 import { IPuiProps } from '../types';
-import { Reorder } from 'framer-motion';
 
 export /*bundle*/ function List({ className }: IPuiProps) {
 	const { name, values, setValues } = useDynamicListContext();
