@@ -23,7 +23,7 @@ export function Results() {
 			</form>
 			<h3>Counter</h3>
 			<Code>{counterExample}</Code>
-			<Textarea value={value} maxlength='60' placeholder='Insert text...' onChange={handleChange} counter />
+			<Textarea value={value} maxLength={60} placeholder='Insert text...' onChange={handleChange} counter />
 		</>
 	);
 }

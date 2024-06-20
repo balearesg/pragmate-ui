@@ -6,7 +6,7 @@ interface IProps {
 	className?: string;
 	onlyNumber?: boolean;
 	reset: any;
-	value: string;
+	value?: string;
 }
 const defaultOnCodeFull: (code) => void = () => null;
 

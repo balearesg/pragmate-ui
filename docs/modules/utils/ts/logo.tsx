@@ -1,6 +1,7 @@
 import React from 'react';
+
 export /*bundle*/ function AppLogo() {
-	const style = {};
+
 	return (
 		<svg
 			style={{

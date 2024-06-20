@@ -1,5 +1,4 @@
 import React from 'react';
-import { Code } from 'pragmate-ui/code';
 
 export interface IProps {
 	children: React.ReactNode;
