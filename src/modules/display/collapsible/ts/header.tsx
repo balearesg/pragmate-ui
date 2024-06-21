@@ -1,17 +1,13 @@
 import React from 'react';
 import { useCollapsibleContext } from './context';
 import { IconButton } from 'pragmate-ui/icons';
+import type { ICollapsibleHeader } from './definitions';
 
-interface ICollapsibleProps {
-	children: React.ReactNode;
-	className?: string;
-	toggleTitle?: boolean;
-}
 export /*bundle */ function CollapsibleHeader({
 	children,
 	className,
 	toggleTitle = true,
-}: ICollapsibleProps): JSX.Element {
+}: ICollapsibleHeader): JSX.Element {
 	const { setOpen, onToggle, open } = useCollapsibleContext();
 
 	const onClick = async () => {

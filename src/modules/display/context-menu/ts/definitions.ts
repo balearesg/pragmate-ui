@@ -1,6 +1,6 @@
 export interface ContextMenuProps {
 	className?: string;
-	unmount: (value: boolean) => void;
+	unmount?: (value: boolean) => void;
 	children: React.ReactNode;
 }
 

@@ -1,5 +1,4 @@
 export const example = `
-
 const onChange = (event, index) => {
     toast.info(\`Tab \${index + 1} selected\`);
 };

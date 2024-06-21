@@ -1,6 +1,7 @@
 import React from "react";
 import { Image } from "pragmate-ui/image";
 import { MenuList } from "./list";
+import type { IPropsDropdowm } from "./definitions";
 
 export /*bundle*/ function DropdownBottomMenu({
   handleClick,
@@ -9,7 +10,7 @@ export /*bundle*/ function DropdownBottomMenu({
   children,
   isImage,
   title,
-}): JSX.Element {
+}: IPropsDropdowm ): JSX.Element {
   const cls: string = show
     ? "pull-down-menu"
     : "pull-down-menu pull-down-menu__hide";

@@ -1,8 +1,6 @@
 import React from 'react';
 import { List } from 'pragmate-ui/list';
-
 import * as Dynamic from 'pragmate-ui/dynamic-list';
-
 import { DynamicItemExample } from './item';
 import { Header } from './header';
 
@@ -20,8 +18,9 @@ const cities: string[] = [
 ];
 
 export function DynamicListExample() {
-	const [items, setItems] = React.useState(cities);
+
 	const onChange = data => {};
+	
 	return (
 		<Dynamic.Provider onChange={onChange} name='test' draggable Item={DynamicItemExample}>
 			<Header />

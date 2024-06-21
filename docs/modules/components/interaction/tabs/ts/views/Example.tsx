@@ -8,7 +8,7 @@ export function Example() {
 	};
 
 	return (
-		<TabsContainer onChange={onChange} active={0}>
+		<TabsContainer onChange={onChange} active={true}>
 			<Tabs>
 				<Tab>Tab 1</Tab>
 				<Tab>Tab 2</Tab>

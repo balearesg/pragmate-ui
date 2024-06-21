@@ -1,6 +1,6 @@
 {
   "name": "vertical-line",
-  "platforms": ["android", "ios", "web"]
+  "platforms": ["android", "ios", "web"],
   "code": {
     "scss": {
       "path": "/scss",

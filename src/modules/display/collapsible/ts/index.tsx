@@ -1,12 +1,6 @@
 import React from 'react';
 import { CollapsibleContext } from './context';
-
-interface IContainerProps {
-	children: React.ReactNode;
-	className?: string;
-	open?: boolean;
-	onToggle?: (open: boolean) => void;
-}
+import type { IContainerProps } from './definitions';
 
 export /*bundle */ function CollapsibleContainer({
 	children,

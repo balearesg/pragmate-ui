@@ -1,10 +1,7 @@
 import React from 'react';
 import { IconButton } from 'pragmate-ui/icons';
-interface IAccordionContext {
-	onChange?: (event: any) => void;
-	opened?: number;
-	setOpened?: (opened: number) => void;
-}
+import type { IAccordionContext, IAccordionItem } from './definitions';
+
 export const AccordionContext = React.createContext({} as IAccordionContext);
 export const useAccordionContext = () => React.useContext(AccordionContext);
 
@@ -28,7 +25,7 @@ export /*bundle */ function Header({ disabled, children, index }) {
 	);
 }
 
-export /*bundle */ function Item({ disabled, children, title, index }) {
+export /*bundle */ function Item({ disabled, children, title, index }: IAccordionItem) {
 	const { opened } = useAccordionContext();
 
 	let cls = `accordion-item${index === opened ? ` accordion-item--opened` : ``}`;

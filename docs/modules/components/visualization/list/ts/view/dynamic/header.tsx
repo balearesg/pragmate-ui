@@ -3,5 +3,5 @@ import { Header as DynamicHeader, useDynamicListContext } from 'pragmate-ui/dyna
 export function Header() {
 	const { values } = useDynamicListContext();
 
-	return <DynamicHeader></DynamicHeader>;
+	return <DynamicHeader><div></div></DynamicHeader>;
 }

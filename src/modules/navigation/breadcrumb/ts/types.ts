@@ -1,16 +1,16 @@
 import React from 'react';
 
 export interface IProps extends React.AllHTMLAttributes<HTMLDivElement> {
-	items: [string, string];
+	items: [string, string][];
 	border?: string;
-	separator: string;
+	separator?: string;
 }
 
 export interface IItem {
-	link: string;
-	label: string | number;
-	currentRouting: string;
-	separator: string;
-	total: number;
-	index: number;
+	link?: string;
+	label?: string | number;
+	currentRouting?: string;
+	separator?: string;
+	total?: number;
+	index?: number;
 }

@@ -1,5 +1,5 @@
+import { Checkbox } from 'pragmate-ui/form';
 import React from 'react';
-import { Checkbox, CheckboxGroup } from 'pragmate-ui/form';
 
 export function Results() {
 	const [selectedValue, setSelectedValue] = React.useState(false);

@@ -13,8 +13,8 @@ export interface IAlertModalProps {
 	/**
 	 * @deprecated
 	 */
-	btn: ButtonProps;
-	buttonLabel: string;
+	btn?: ButtonProps;
+	buttonLabel?: string;
 	button?: ButtonProps;
 	centered?: boolean;
 	children?: React.ReactNode;

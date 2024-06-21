@@ -6,6 +6,8 @@ export interface ISwiperOptions {
 	className?: string;
 	next?: boolean;
 	pagination?: boolean;
+	slidesPerView: string | number;
+	spaceBetween?: number;
 	navigation: boolean;
-	children?: React.FC[];
+	children?: JSX.Element[];
 }
