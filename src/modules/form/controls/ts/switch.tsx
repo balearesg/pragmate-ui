@@ -1,11 +1,7 @@
-import React from 'react';
-import { InputHTMLAttributes, ChangeEvent } from 'react';
-interface IProps extends InputHTMLAttributes<HTMLInputElement> {
-	variant?: string;
-	title?: string;
-}
+import { IPUIProps } from 'pragmate-ui/base';
+import React, { ChangeEvent } from 'react';
 
-export /* bundle */ function Switch(props: IProps): JSX.Element {
+export /* bundle */ function Switch(props: IPUIProps): JSX.Element {
 	const { checked, onChange, variant = 'primary', disabled, size = 'md', className, } = props;
 
 	const [isChecked, setIsChecked] = React.useState<boolean>(checked);
@@ -28,7 +24,7 @@ export /* bundle */ function Switch(props: IProps): JSX.Element {
 	cls += variant ? ` ${variant}` : '';
 	cls += size ? ` ${size}` : '';
 
-	const properties: IProps = { ...props };
+	const properties: IPUIProps = { ...props };
 
 	['className', 'checked', 'onChange', 'variant', 'size', "id",].forEach(prop => {
 		delete properties[prop];

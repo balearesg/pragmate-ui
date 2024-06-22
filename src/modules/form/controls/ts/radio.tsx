@@ -1,21 +1,16 @@
-import React, { useRef, MutableRefObject, InputHTMLAttributes, HTMLAttributes } from 'react';
+import { IPUIProps } from 'pragmate-ui/base';
+import React, { MutableRefObject, useRef } from 'react';
 
-interface props extends InputHTMLAttributes<HTMLInputElement> {
-	label?: string;
-	className?: HTMLAttributes<HTMLDivElement>['className'];
-}
-
-export /*bundle*/ function Radio(props: props): JSX.Element {
+export /*bundle*/ function Radio(props: IPUIProps<HTMLInputElement>): JSX.Element {
 	const input: MutableRefObject<HTMLInputElement> = useRef<HTMLInputElement>();
 
-	
 	const onClick = (event): void => {
 		event.stopPropagation();
 		input.current.checked = true;
 		if (!!props.onChange) props.onChange(event);
 	};
 
-	const properties: props = { ...props };
+	const properties: IPUIProps<HTMLInputElement> = { ...props };
 	delete properties.onChange;
 
 	const cls: string = `pragmate-element-radio ${properties.className ? properties.className : ''}`;

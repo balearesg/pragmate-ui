@@ -1,7 +1,7 @@
-import React, { FormHTMLAttributes, FormEvent, PropsWithChildren } from 'react';
+import { IPUIProps } from 'pragmate-ui/base';
+import React, { FormEvent } from 'react';
 
-type props = FormHTMLAttributes<HTMLFormElement>;
-export /*bundle*/ function Form(props: PropsWithChildren<props>): JSX.Element {
+export /*bundle*/ function Form(props: IPUIProps): JSX.Element {
 	const { onSubmit, ...restProps } = props;
 	const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
 		event.preventDefault();

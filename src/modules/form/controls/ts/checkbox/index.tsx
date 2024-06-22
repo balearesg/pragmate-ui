@@ -1,10 +1,8 @@
-import React, { InputHTMLAttributes, forwardRef, RefAttributes, useState, useEffect, MouseEvent } from 'react';
+import { IPUIProps } from 'pragmate-ui/base';
+import React, { MouseEvent, RefAttributes, forwardRef, useEffect, useState } from 'react';
 
-interface IProps extends InputHTMLAttributes<HTMLInputElement> {
-	label?: string;
-}
-export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputElement>> = forwardRef(function (
-	props: IProps,
+export /*bundle*/ const Checkbox: React.FC<IPUIProps & RefAttributes<HTMLInputElement>> = forwardRef(function (
+	props: IPUIProps,
 	ref: React.Ref<HTMLInputElement>
 ): JSX.Element {
 	const { checked, disabled, className, onChange, label } = props;
@@ -20,7 +18,7 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 	};
 	let cls: string = `pui-checkbox ${className ? className : ''}`;
 	cls += disabled ? ' disabled' : '';
-	const properties: IProps = Object.assign({}, props);
+	const properties: IPUIProps = Object.assign({}, props);
 
 	['className', 'checked', 'name', 'onChange'].forEach((prop: string): void => {
 		delete properties[prop];
