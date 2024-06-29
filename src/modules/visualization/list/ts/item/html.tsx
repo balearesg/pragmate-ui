@@ -1,5 +1,4 @@
 import React from 'react';
-import { IItemListProps } from '../definitions';
 import { getAttributes } from '../html-attributes';
 
 interface IHTMLItemProps {

@@ -1,0 +1,35 @@
+import { Preload } from 'pragmate-ui/preload';
+import { Code } from 'pragmate-ui/code';
+
+# Preload
+
+The `Preload` component is a simple, customizable placeholder element designed for use in loading states. It allows you to specify the width, height, color, and border radius, as well as control the visibility of the animation.
+
+### Import
+
+<Code>{`import { Preload } from 'pragmate-ui/preload;`}</Code>
+
+### Implementation
+
+<Code>{`<Preload width="200px" height="20px" color="#ccc" stopAnimation={false} radio="5px" /> `}</Code>
+
+### Result
+
+<Preload 
+  width="200px" 
+  height="20px" 
+  color="#ccc" 
+  stopAnimation={false} 
+  radio="5px" 
+/>
+
+
+### Props 
+
+- `width` (`string`): The width of the placeholder. Default is `'100%'`.
+- `height` (`string`): The height of the placeholder. Default is `'14px'`.
+- `color` (`string`): The background color of the placeholder. Default is `''`.
+- `stopAnimation` (`boolean`): Whether to stop the animation. Default is `false`.
+- `radio` (`string`): The border-radius of the placeholder. Default is `''`.
+
+

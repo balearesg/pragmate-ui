@@ -1,6 +1,5 @@
 import React from 'react';
 import { IItemListProps } from '../definitions';
-import { getAttributes } from '../html-attributes';
 import { HTMLItem } from './html';
 
 export function ItemList<T>({ specs, index, item, control, idx, as = 'li' }: IItemListProps<T>) {

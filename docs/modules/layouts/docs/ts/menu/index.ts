@@ -54,8 +54,8 @@ export const menuItems = [
 	['Progress Bar', 'progress-bar', []],
 	['Vertical Line', 'vertical-line', []],
 	['Code', 'code', []],
-	['Pricing', 'pricing', []],
 	['Spinner', 'spinner', []],
+	['Preload', 'preload', []],
 	['BreadCrumb', 'breadcrumb', []],
 	['Image', 'image', []],
 	['Scroll', 'scroll-container', []],
@@ -69,6 +69,7 @@ export const menuItems = [
 	['Alert', 'alert', []],
 	['Tooltips', 'tooltips', []],
 	['Link', 'link', []],
+	['Lists', 'lists', []],
 	['Context Menu', 'context-menu', []],
 ].sort((a, b) => {
 	if (a < b) return -1;

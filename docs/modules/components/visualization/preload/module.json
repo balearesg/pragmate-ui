@@ -1,0 +1,34 @@
+{
+  "name": "preload",
+  "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
+  "widget": {
+    "route": "/components/preload",
+    "is": "page",
+    "layout": "pui-docs-layout",
+    "scss": {
+      "path": "/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "mdx": {
+      "path": "/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "element": {
+      "name": "preload-page"
+    }
+  }
+}
