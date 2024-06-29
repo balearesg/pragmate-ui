@@ -2,35 +2,37 @@ import React from 'react';
 import { RippleEffect } from 'pragmate-ui/ripple';
 import tippy from 'tippy.js';
 import { Icon } from 'pragmate-ui/icons';
-import { IChipProps } from './types';
+import { IChipProps } from './definitions';
 
-export /*bundle*/ function Chip(props: IChipProps) {
-	const { type, className, title, children, icon } = props;
-	const properties = { ...props };
-	const ref = React.useRef<HTMLSpanElement>(null);
+type ChipProps = IChipProps & React.HTMLAttributes<HTMLSpanElement>;
 
-	['children', 'type', 'className', 'variant'].forEach(key => delete properties[key]);
+export /*bundle*/ function Chip(props: ChipProps) {
+    const { type, title, children, icon } = props;
+    const properties = { ...props };
+    const ref = React.useRef<HTMLSpanElement>(null);
 
-	React.useEffect(() => {
-		if (properties.onClick) {
-			const ripple = new RippleEffect();
-			ripple.addRippleEffect(ref.current);
-		}
-		if (title) tippy(ref.current);
-	}, [properties.onClick, title]);
+    ['children', 'type', 'className', 'variant'].forEach(key => delete properties[key]);
 
-	if (title) properties['data-tippy-content'] = title;
-	const variant = props.variant || props.type || 'default';
-	let cls = `pui-chip pui-chip--${variant}`;
+    React.useEffect(() => {
+        if (properties.onClick) {
+            const ripple = new RippleEffect();
+            ripple.addRippleEffect(ref.current);
+        }
+        if (title) tippy(ref.current);
+    }, [properties.onClick, title]);
 
-	if (properties.onClick) {
-		cls += ` is-clickable`;
-	}
+    if (title) properties['data-tippy-content'] = title;
+    const variant = props.variant || props.type || 'default';
+    let cls = `pui-chip pui-chip--${variant}`;
 
-	return (
-		<span ref={ref} className={cls} {...properties}>
-			{children}
-			{icon && <Icon icon={icon} />}
-		</span>
-	);
+    if (properties.onClick) {
+        cls += ` is-clickable`;
+    }
+
+    return (
+        <span ref={ref} className={cls} {...properties}>
+            {children}
+            {icon && <Icon icon={icon} />}
+        </span>
+    );
 }

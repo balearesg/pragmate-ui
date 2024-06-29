@@ -1,13 +1,14 @@
 import React, { forwardRef, LegacyRef, RefAttributes } from 'react';
-type properties = {
+import { IPUIProps } from 'pragmate-ui/base';
+
+export interface IProps extends Omit<IPUIProps<IProps>, 'size'> {
 	color?: string;
-	className?: string;
 	type?: string;
 	size?: 'xs' | 'md' | 'lg' | 'xl';
 	active: boolean;
 };
 
-const Component = (props: properties, ref: LegacyRef<HTMLDivElement>): JSX.Element => {
+const Component = (props: IProps, ref: LegacyRef<HTMLDivElement>): JSX.Element => {
 	let { color, className, size, type, active } = props;
 	size = size ? size : 'xs';
 	const types = ['on-primary', 'on-secondary', 'on-surface', 'on-error', 'primary', 'secondary', 'tertiary'];
@@ -28,4 +29,4 @@ const Component = (props: properties, ref: LegacyRef<HTMLDivElement>): JSX.Eleme
 	);
 };
 export /*bundle*/
-const Spinner: React.FC<properties & RefAttributes<unknown>> = forwardRef(Component);
+const Spinner: React.FC<IProps & RefAttributes<unknown>> = forwardRef(Component);

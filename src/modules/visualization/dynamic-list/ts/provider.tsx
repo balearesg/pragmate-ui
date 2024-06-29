@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { DynamicListProps } from './types';
+import { DynamicListProps } from './definitions';
 import { DynamicListContext } from './context';
 
 export /*bundle */ function Provider({

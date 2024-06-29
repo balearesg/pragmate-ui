@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode } from 'react';
 import { DraggableList } from './draggable';
-import { IListProps } from './types';
+import { IListProps } from './definitions';
 import { ItemList } from './item';
 import { DraggableItem } from './item/dragable';
 

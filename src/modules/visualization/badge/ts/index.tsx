@@ -1,6 +1,13 @@
 import React from 'react';
+import { IPUIProps } from 'pragmate-ui/base';
 
-export /*bundle*/ function Badge({ children, value, visible = false, variant = 'default', dot }) {
+interface IProps extends Omit<IPUIProps<IProps>, 'type'> {
+	visible?: boolean;
+	dot?: boolean;
+	value: string;
+}
+
+export /*bundle*/ function Badge({ children, value, visible = false, variant = 'default', dot }: IProps) {
 	const classes = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'default'];
 	let cls = `pui-badge${classes.includes(variant) ? ` pui-badge--${variant}` : ''}`;
 	if (visible) cls += ' pui-badge--visible';

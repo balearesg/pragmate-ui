@@ -1,14 +1,14 @@
 import React from 'react';
 import { Icon } from 'pragmate-ui/icons';
-interface IProps {
+import { IPUIProps } from 'pragmate-ui/base';
+
+interface IPropsEmpty extends Omit<IPUIProps<IPropsEmpty>, 'variant'> {
 	text?: string;
 	icon?: string;
 	additionalElement?: React.ReactNode;
-	children?: React.ReactNode;
-	className?: string;
 }
 export /*bundle*/
-function Empty(props: IProps): JSX.Element {
+function Empty(props: IPropsEmpty): JSX.Element {
 	const cls = `${props.className ?? ''} pui-empty-section`;
 
 	return (

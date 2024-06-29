@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Reorder } from 'framer-motion';
-import { IListProps } from './types';
+import { IListProps } from './definitions';
 
 export function DraggableList<T>({ specs, control, index, ...props }: IListProps<T>) {
 	const [items, setItems] = React.useState(props.items);

@@ -1,8 +1,8 @@
-export interface IButtonGroupProps {
-	variant?: string;
+import { IPUIProps } from 'pragmate-ui/base';
+
+export interface IButtonGroupProps extends Omit<IPUIProps<IButtonGroupProps>, 'size'>{
 	size?: 'small' | 'medium' | 'tall';
 	orientation?: 'row' | 'column';
-	children?: React.ReactNode;
 	selected?: number;
 	disabled?: boolean;
 	index?: number;

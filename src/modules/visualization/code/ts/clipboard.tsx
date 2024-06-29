@@ -1,6 +1,5 @@
-import React from 'react';
 import { IconButton } from 'pragmate-ui/icons';
-import { Toasts, toast } from 'pragmate-ui/toast';
+import React from 'react';
 import { useClick } from './use-click';
 
 export function Clipboard({ text }) {

@@ -1,4 +1,4 @@
-import React, { Ref } from 'react';
+import React from 'react';
 import { Icon } from 'pragmate-ui/icons';
 import { Spinner } from 'pragmate-ui/spinner';
 import { IButtonProps } from './interface';

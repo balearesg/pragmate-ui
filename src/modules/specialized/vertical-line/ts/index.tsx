@@ -1,7 +1,8 @@
 import React from 'react';
 import {Icon} from 'pragmate-ui/icons';
+import { IProps } from './definitions';
 
-export /* bundle */ function VerticalLine({events, variant = 'primary'}): JSX.Element {
+export /* bundle */ function VerticalLine({events, variant = 'primary'}: IProps): JSX.Element {
 	let cls = variant ? `timeline-event__content--icon ${variant}` : 'timeline-event__content--icon';
 
 	const output = events.map((event, index) => (
