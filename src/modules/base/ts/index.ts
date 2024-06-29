@@ -1,4 +1,4 @@
-export /* bundle */ interface IPUIProps<T = unknown> extends React.InputHTMLAttributes<T> {
+export /* bundle */ interface IPUIProps<T = unknown> extends React.HTMLAttributes<T> {
 	className?: string;
 	/**
 	* @deprecated 

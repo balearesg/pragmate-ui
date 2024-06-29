@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { useContextMenuContext } from './context';
-import type { ContextMenuProps } from './definitions';
+import type { IContextMenuProps } from './definitions';
 
-export /*bundle*/ function ContextMenu({ className, unmount, children }: ContextMenuProps) {
+export /*bundle*/ function ContextMenu({ className, unmount, children }: IContextMenuProps) {
 	const container = document.createElement('span');
 	const ref = useRef<HTMLDivElement>(null);
 

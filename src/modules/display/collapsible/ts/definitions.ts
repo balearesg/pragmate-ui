@@ -11,11 +11,6 @@ export interface IAccordionContext {
 	setOpened?: (opened: number) => void;
 }
 
-export interface ICollapsibleProps {
-	children: React.ReactNode;
-	className?: string;
-}
-
 export interface ICollapsibleHeader {
 	children: React.ReactNode;
 	className?: string;

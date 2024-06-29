@@ -1,8 +1,6 @@
-import { HTMLAttributes, ReactNode, } from "react";
+import { IPUIProps } from 'pragmate-ui/base';
 
-export type TProps = {
+export interface TProps extends Omit<IPUIProps<TProps>, 'variant'> {
     onScrollY?: any;
     onScrollX?: any;
-    className?: HTMLAttributes<HTMLDivElement>["className"];
-    children: ReactNode;
   };

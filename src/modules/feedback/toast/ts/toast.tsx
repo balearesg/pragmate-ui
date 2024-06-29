@@ -1,7 +1,7 @@
 import React from 'react';
 import { IToast, ToastTypes, toast } from './model';
 import { Icon } from 'pragmate-ui/icons';
-interface Props {
+interface IProps {
 	key: string;
 	type: ToastTypes;
 	message: string;
@@ -12,7 +12,7 @@ interface Props {
 const DEFAULT_DURATION = 3000;
 const ANIMATION_MARGIN = 300;
 
-export /*bundle*/ function Toast({ type, message, duration, id }: Props): JSX.Element {
+export /*bundle*/ function Toast({ type, message, duration, id }: IProps): JSX.Element {
 	const toastRef = React.useRef<HTMLDivElement>(null);
 
 	React.useEffect(() => {

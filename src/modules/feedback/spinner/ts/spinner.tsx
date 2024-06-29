@@ -5,7 +5,6 @@ type properties = {
 	type: string;
 	size?: 'xs' | 'md' | 'lg' | 'xl';
 	active?: boolean;
-	pepito?: boolean;
 };
 export /*bundle*/
 const Spinner: React.FC<properties & RefAttributes<unknown>> = forwardRef(

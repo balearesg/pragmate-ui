@@ -1,7 +1,8 @@
-export interface ContextMenuProps {
-	className?: string;
+import { IPUIProps } from 'pragmate-ui/base';
+
+//TODO: check if in the future the ContextMenu component it need prop variant
+export interface IContextMenuProps extends Omit<IPUIProps<IContextMenuProps>, 'variant'> {
 	unmount?: (value: boolean) => void;
-	children: React.ReactNode;
 }
 
 export interface IContextMenu {

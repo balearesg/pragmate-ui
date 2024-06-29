@@ -1,4 +1,6 @@
-export interface IProps {
+import { IPUIProps } from 'pragmate-ui/base';
+
+export interface IProps extends Omit<IPUIProps<IProps>, 'icon'> {
 	show?: boolean;
 	className?: string;
 	type?: string;

@@ -1,8 +1,7 @@
-import { SyntheticEvent, ReactNode } from 'react';
+import { IPUIProps } from 'pragmate-ui/base';
+import { SyntheticEvent } from 'react';
 
-export /*bundle*/ interface IModalProps {
-	children: ReactNode;
-	className?: string;
+export /*bundle*/ interface IModalProps extends Omit<IPUIProps<IModalProps>, 'variant'> {
 	onClose?: (e: SyntheticEvent<HTMLElement, Event>) => void;
 	show?: boolean;
 	closeClicked?: boolean;
