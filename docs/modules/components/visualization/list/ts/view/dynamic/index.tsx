@@ -1,8 +1,7 @@
-import React from 'react';
-import { List } from 'pragmate-ui/list';
 import * as Dynamic from 'pragmate-ui/dynamic-list';
-import { DynamicItemExample } from './item';
+import React from 'react';
 import { Header } from './header';
+import { DynamicItemExample } from './item';
 
 const cities: string[] = [
 	'New York',

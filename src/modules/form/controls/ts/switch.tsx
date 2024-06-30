@@ -1,18 +1,17 @@
-import { IPUIProps } from 'pragmate-ui/base';
-import React, { ChangeEvent } from 'react';
+import React from 'react';
 import { IFormCheckableProps } from './types';
 
 export /* bundle */ function Switch(props: IFormCheckableProps): JSX.Element {
 	const { checked, onChange, variant = 'primary', disabled, sizing = 'md', className } = props;
 
-	const [isChecked, setIsChecked] = React.useState<boolean>(checked);
+	const [isChecked, setIsChecked] = React.useState<boolean>(!!checked);
 
 	React.useEffect(() => {
 		if (isChecked === checked) return;
 		setIsChecked(checked);
 	}, [checked]);
 
-	const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
+	const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
 		event.stopPropagation();
 		setIsChecked(event.currentTarget.checked);
 		onChange && onChange(event);

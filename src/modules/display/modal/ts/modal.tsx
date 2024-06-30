@@ -3,8 +3,7 @@ import { useState, useRef, MutableRefObject, SyntheticEvent } from 'react';
 import { Children } from './children';
 import { IModalProps, IModalState } from './types/modal-props';
 
-export /*bundle*/
-function Modal(props: IModalProps) {
+export /*bundle*/ function Modal(props: IModalProps) {
 	const [state, setState] = useState<IModalState>({
 		show: props?.show ?? false,
 		closeClicked: (props.closeClicked || props.closeBackdrop) ?? true,
@@ -50,7 +49,9 @@ function Modal(props: IModalProps) {
 						event.stopPropagation();
 					}}
 				>
-					<Children {...props} close={close} key='children-content' />
+					<Children {...props} close={close} key='children-content'>
+						{props.children}
+					</Children>
 				</div>
 			</div>,
 		);

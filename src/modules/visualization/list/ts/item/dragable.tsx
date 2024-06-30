@@ -1,7 +1,6 @@
+import { Reorder } from 'framer-motion';
 import React from 'react';
 import { IItemListProps } from '../definitions';
-import { getAttributes } from '../html-attributes';
-import { Reorder } from 'framer-motion';
 import { ItemList } from './';
 interface IHTMLItemProps {
 	as?: keyof React.ReactHTML;

@@ -1,6 +1,5 @@
-import React from 'react';
-import * as Dynamic from 'pragmate-ui/dynamic-list';
 import { Input } from 'pragmate-ui/form';
+import React from 'react';
 
 export function DynamicItemExample({ item, index, value, setValue, identifier }) {
 	const [currentValue, setCurrentValue] = React.useState('');

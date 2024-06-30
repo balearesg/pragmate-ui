@@ -1,6 +1,14 @@
 import React from 'react';
 
-export /*bundle */ function Preload(props) {
+export interface IPropsPreload {
+	width?: string;
+	height?: string;
+	color?: string;
+	stopAnimation?: boolean;
+	radio?: string;
+}
+
+export /*bundle */ function Preload(props : IPropsPreload) {
 	const { width, height, color, stopAnimation, radio } = props;
 
 	return (
