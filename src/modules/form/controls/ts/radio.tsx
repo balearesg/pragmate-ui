@@ -1,24 +1,30 @@
 import { IPUIProps } from 'pragmate-ui/base';
-import React, { MutableRefObject, useRef } from 'react';
+import React, { MutableRefObject, useRef, InputHTMLAttributes } from 'react';
 
-export /*bundle*/ function Radio(props: IPUIProps<HTMLInputElement>): JSX.Element {
-	const input: MutableRefObject<HTMLInputElement> = useRef<HTMLInputElement>();
+interface IPropsRadio extends InputHTMLAttributes<HTMLInputElement> {
+    label?: string;
+}
 
-	const onClick = (event): void => {
-		event.stopPropagation();
-		input.current.checked = true;
-		if (!!props.onChange) props.onChange(event);
-	};
+type CombinedProps = IPropsRadio & IPUIProps<HTMLInputElement>;
 
-	const properties: IPUIProps<HTMLInputElement> = { ...props };
-	delete properties.onChange;
+export /*bundle*/ function Radio(props: CombinedProps): JSX.Element {
+    const input: MutableRefObject<HTMLInputElement> = useRef<HTMLInputElement>(null);
 
-	const cls: string = `pragmate-element-radio ${properties.className ? properties.className : ''}`;
+    const onClick = (event): void => {
+        event.stopPropagation();
+        input.current.checked = true;
+        if (!!props.onChange) props.onChange(event);
+    };
 
-	return (
-		<label className={cls} onClick={onClick}>
-			<input ref={input} {...properties} type='radio' onChange={onClick} />
-			{properties.label && <span>{properties.label}</span>}
-		</label>
-	);
+    const properties: CombinedProps = { ...props };
+    delete properties.onChange;
+
+    const cls: string = `pragmate-element-radio ${properties.className ? properties.className : ''}`;
+
+    return (
+        <label className={cls} onClick={onClick}>
+            <input ref={input} {...properties} type='radio' onChange={onClick} />
+            {properties.label && <span>{properties.label}</span>}
+        </label>
+    );
 }
