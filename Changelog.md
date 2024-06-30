@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.0.0-beta.1] - 2024-06-30
+
+### Added
+
+-   **HtmlWrapper** included.
+-   **Dynamic List component**: This component lets you manage a list and add new items to it.
+-   **Framer Motion dependency**: Added to enhance animation capabilities.
+-   **Base Interface**: Introduced a base interface with common properties for all components. This change simplifies
+    the code and avoids handling multiple interfaces with the same purpose.
+
+### Changed
+
+-   **AlertModal**: The container of actions now has a class `pui-modal__actions` by default.
+-   **ReactSelect**: Adjusted logic to handle mobile selects and replace it with a common select.
+-   **Icons**:
+    -   The value where the SVG content is saved is now `path` instead of `icon` to be more semantic.
+    -   Icons now support `src` attributes, allowing them to be loaded as images.
+
+### Fixed
+
+-   **Breadcrumb**: Fixed types.
+-   **Types**: General type errors corrected.
+
 #### Version 0.1.1
 
 **Released:** 4/10/2024

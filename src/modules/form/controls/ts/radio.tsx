@@ -1,5 +1,6 @@
 import { IPUIProps } from 'pragmate-ui/base';
 import React, { MutableRefObject, useRef } from 'react';
+import { IFormProps } from './types';
 
 export /*bundle*/ function Radio(props: IPUIProps<HTMLInputElement>): JSX.Element {
 	const input: MutableRefObject<HTMLInputElement> = useRef<HTMLInputElement>();
@@ -10,7 +11,7 @@ export /*bundle*/ function Radio(props: IPUIProps<HTMLInputElement>): JSX.Elemen
 		if (!!props.onChange) props.onChange(event);
 	};
 
-	const properties: IPUIProps<HTMLInputElement> = { ...props };
+	const properties: IFormProps = { ...props };
 	delete properties.onChange;
 
 	const cls: string = `pragmate-element-radio ${properties.className ? properties.className : ''}`;

@@ -1,18 +1,19 @@
 import { IPUIProps } from 'pragmate-ui/base';
 import React, { ChangeEvent } from 'react';
+import { IFormCheckableProps } from './types';
 
-export /* bundle */ function Switch(props: IPUIProps): JSX.Element {
-	const { checked, onChange, variant = 'primary', disabled, size = 'md', className, } = props;
+export /* bundle */ function Switch(props: IFormCheckableProps): JSX.Element {
+	const { checked, onChange, variant = 'primary', disabled, sizing = 'md', className } = props;
 
 	const [isChecked, setIsChecked] = React.useState<boolean>(checked);
 
 	React.useEffect(() => {
 		if (isChecked === checked) return;
-		setIsChecked(checked)
-	}, [checked])
+		setIsChecked(checked);
+	}, [checked]);
 
 	const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
-		event.stopPropagation()
+		event.stopPropagation();
 		setIsChecked(event.currentTarget.checked);
 		onChange && onChange(event);
 	};
@@ -22,15 +23,15 @@ export /* bundle */ function Switch(props: IPUIProps): JSX.Element {
 
 	let cls: string = isChecked ? `pui-element-switch__label active` : 'pui-element-switch__label';
 	cls += variant ? ` ${variant}` : '';
-	cls += size ? ` ${size}` : '';
+	cls += sizing ? ` ${sizing}` : '';
 
 	const properties: IPUIProps = { ...props };
 
-	['className', 'checked', 'onChange', 'variant', 'size', "id",].forEach(prop => {
+	['className', 'checked', 'onChange', 'variant', 'sizing', 'id'].forEach(prop => {
 		delete properties[prop];
 	});
 
-	const id = props.id ?? props.name ?? "pui-element-switch";
+	const id = props.id ?? props.name ?? 'pui-element-switch';
 
 	return (
 		<div className={classNameSwitch}>

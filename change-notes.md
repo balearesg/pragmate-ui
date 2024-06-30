@@ -4,3 +4,7 @@
 -   Fix types in breadcrumb
 -   icons: in icon defintion, the value where the svg content is saved now is "path" not "icon", to be more semantic.
 -   icons : icons now supports src attributes, to be loaded as images.
+- Add base Interface with the base properties for all components, this change simplify the code and avoid handleling multiple interfaces with the same porpose.
+- Fix types errors.
+- Added Dynamic List component. This component let manage a list and add new items on it.
+- Added framer motion dependency.

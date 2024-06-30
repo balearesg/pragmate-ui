@@ -5,7 +5,7 @@ export const ModalContext: Context<any> = createContext({});
 export const useModalContext = () => useContext(ModalContext);
 
 type props = {
-	children: ReactNode;
+	children?: ReactNode;
 	close?: (e: SyntheticEvent<HTMLElement, Event>) => void;
 	dismiss?: boolean;
 };
