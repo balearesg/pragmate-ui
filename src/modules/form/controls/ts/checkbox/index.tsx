@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { IPUIProps } from 'pragmate-ui/base';
 import React, { MouseEvent, RefAttributes, forwardRef, useEffect, useState } from 'react';
 import { IFormCheckableProps } from '../types';
@@ -6,16 +5,6 @@ import { IFormCheckableProps } from '../types';
 export /*bundle*/ const Checkbox: React.FC<IPUIProps & RefAttributes<HTMLInputElement>> = forwardRef(function (
 	props: IFormCheckableProps,
 	ref: React.Ref<HTMLInputElement>,
-=======
-import React, { InputHTMLAttributes, forwardRef, RefAttributes, useState, useEffect, MouseEvent } from 'react';
-
-interface IProps extends InputHTMLAttributes<HTMLInputElement> {
-	label?: string;
-}
-export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputElement>> = forwardRef(function (
-	props: IProps,
-	ref: React.Ref<HTMLInputElement>
->>>>>>> e2db5c9b9493c304e12ce9e826eab9b79973b19b
 ): JSX.Element {
 	const { checked, disabled, className, onChange, label } = props;
 	const [value, setValue] = useState<boolean>(!!checked);
@@ -29,11 +18,7 @@ export /*bundle*/ const Checkbox: React.FC<IProps & RefAttributes<HTMLInputEleme
 	};
 	let cls: string = `pui-checkbox ${className ? className : ''}`;
 	cls += disabled ? ' disabled' : '';
-<<<<<<< HEAD
 	const properties: IFormCheckableProps = Object.assign({}, props);
-=======
-	const properties: IProps = Object.assign({}, props);
->>>>>>> e2db5c9b9493c304e12ce9e826eab9b79973b19b
 
 	['className', 'checked', 'name', 'onChange'].forEach((prop: string): void => {
 		delete properties[prop];

@@ -1,0 +1,24 @@
+.my-dynamic-list {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .pui-dynamic-list__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .pui-dynamic-list__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .item__actions {
+    display: flex;
+    align-items: center;
+  }
+  

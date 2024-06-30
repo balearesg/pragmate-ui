@@ -1,0 +1,30 @@
+import { ReactSelect  } from 'pragmate-ui/form/react-select';
+import { Code } from 'pragmate-ui/code';
+import { implementation } from './implementation';
+import { Result } from './result';
+
+# ReactSelect 
+
+- The `ReactSelect` component is a wrapper around the `react-select` library, providing additional functionality and styles. It automatically detects if the user is on a mobile device and switches to a mobile-optimized select component.
+
+### import
+
+<Code>{`import { ReactSelect  } from 'pragmate-ui/form/react-select';`}</Code>
+
+### Implementation
+
+<Code>{implementation}</Code>
+
+### Result
+
+<Result />
+
+### Props
+
+- `name` (string): The name attribute for the select input.
+- `label` (string): The label text to display above the select input.
+- `value` (string | number): The currently selected value.
+- `options` (array): An array of options for the select input. Each option should be an object with `value` and `label` properties.
+- `onChange` (function): Callback function triggered when the selected value changes. Receives an event object.
+- `isDisabled` (boolean, optional): If true, the select input is disabled.
+- `disabled` (boolean, optional): If true, the select input is disabled.

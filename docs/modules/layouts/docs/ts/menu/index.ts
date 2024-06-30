@@ -67,8 +67,10 @@ export const menuItems = [
 	['Verification Code', 'code-verification', []],
 	['Select', 'select', []],
 	['Alert', 'alert', []],
+	['ReactSelect', 'react-select', []],
 	['Tooltips', 'tooltips', []],
 	['Link', 'link', []],
+	['DynamicList', 'dynamic-list', []],
 	['Lists', 'lists', []],
 	['Context Menu', 'context-menu', []],
 ].sort((a, b) => {
