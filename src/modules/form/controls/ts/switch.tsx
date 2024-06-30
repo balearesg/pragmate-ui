@@ -25,7 +25,7 @@ export /* bundle */ function Switch(props: IFormCheckableProps): JSX.Element {
 	cls += variant ? ` ${variant}` : '';
 	cls += sizing ? ` ${sizing}` : '';
 
-	const properties: IPUIProps = { ...props };
+	const properties: IFormCheckableProps = { ...props };
 
 	['className', 'checked', 'onChange', 'variant', 'sizing', 'id'].forEach(prop => {
 		delete properties[prop];
