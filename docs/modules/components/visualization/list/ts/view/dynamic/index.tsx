@@ -17,9 +17,8 @@ const cities: string[] = [
 ];
 
 export function DynamicListExample() {
-
 	const onChange = data => {};
-	
+
 	return (
 		<Dynamic.Provider onChange={onChange} name='test' draggable Item={DynamicItemExample}>
 			<Header />
