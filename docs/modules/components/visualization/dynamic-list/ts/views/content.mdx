@@ -1,0 +1,30 @@
+import { Provider as DynamicListProvider, List, AddDynamicItem, Header } from 'pragmate-ui/dynamic-list';
+import { Code } from 'pragmate-ui/code';
+import { implementationSimple } from './implementation';
+import { ResultDynamicList } from './result';
+
+# DynamicList
+- The `DynamicList` component provides a flexible and interactive way to manage a list of dynamic items. It supports adding, removing, and reordering items, with optional drag-and-drop functionality.
+
+### Import
+
+<Code>{`import { Provider, List, AddDynamicItem, Header  } from 'pragmate-ui/dynamic-list';`}</Code>
+
+### Implementation
+
+<Code>{implementationSimple}</Code>
+
+### Result
+
+<ResultDynamicList />
+
+### Props
+
+- **name**: `string` - The name of the dynamic list.
+- **onChange**: `(event: { target: { name: string, value: any[] }, currentTarget: { name: string, value: any[] } }) => void` - Callback function called when the list changes.
+- **draggable**: `boolean` - Enables or disables drag-and-drop functionality.
+- **children**: `React.ReactNode` - Child elements to be rendered inside the dynamic list.
+- **value**: `any[]` - Initial value of the list. Must be an array or undefined.
+- **Item**: `React.ComponentType` - Custom component to render each item in the list.
+- **specs**: `object` - Additional specifications or configurations for the list.
+- **className**: `string` - Additional class names for the list container.

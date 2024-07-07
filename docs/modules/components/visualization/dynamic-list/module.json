@@ -1,12 +1,12 @@
 {
-  "name": "react-select",
+  "name": "dynamic-list",
   "platforms": [
     "web",
     "ios",
     "android"
   ],
   "widget": {
-    "route": "/components/react-select",
+    "route": "/components/dynamic-list",
     "is": "page",
     "layout": "pui-docs-layout",
     "scss": {
@@ -28,7 +28,7 @@
       ]
     },
     "element": {
-      "name": "react-select-page"
+      "name": "dynamic-list-page"
     }
   }
 }

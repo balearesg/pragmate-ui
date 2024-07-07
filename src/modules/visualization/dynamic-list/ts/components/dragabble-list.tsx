@@ -2,7 +2,7 @@ import React from 'react';
 import { Reorder } from 'framer-motion';
 import { useDynamicListContext } from '../context';
 
-export function DraggableList({ children, className = '' }) {
+export /* bundle */ function DraggableList({ children, className = '' }) {
 	const { values, setValues } = useDynamicListContext();
 
 	return (

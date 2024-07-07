@@ -1,19 +1,11 @@
 export const implementation = `
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' }
-]
-export default function App() {
-  const [selectedOption, setSelectedOption] = React.useState(null);
-
-  return (
-    <div className="App">
-      <ReactSelect
-        widget={widget}
-        options={options}
-      />
-    </div>
-  );
-}
-`;
+<ReactSelect
+  name="example"
+  label="Select an option"
+  value="option1"
+  options={[
+    { value: 'option1', label: 'Option 1' },
+    { value: 'option2', label: 'Option 2' },
+  ]}
+  onChange={(event) => console.log(event.target.value)}
+/>`;
