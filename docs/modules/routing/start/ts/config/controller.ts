@@ -1,11 +1,9 @@
-
-import { ScrollUp } from '../handlers/scroll-up';
-import { PipeLine } from "./pipeline";
+import { PipeLine } from './pipeline';
 
 export class Router {
 	#isDefault;
 	get isDefault(): boolean {
-		return this.#pathname === "/";
+		return this.#pathname === '/';
 	}
 
 	#pathname;
