@@ -17,7 +17,7 @@ export function IconContainer(): JSX.Element {
 	const output = [];
 	if (!!types[props.type]) {
 		const Control = types[props.type];
-		output.push(<Control key="control" name={props.type} />);
+		output.push(<Control key="control" />);
 	}
 
 	if (!!props.icon) {
