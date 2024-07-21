@@ -25,10 +25,9 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 		bordered = false,
 		sizing = 'md',
 		disabled = false,
-
 		...otherProps
 	} = props;
-	
+
 	const context = React.useContext(ButtonGroupContext);
 
 	const [processing, setProcessing] = React.useState(fetching || loading);
@@ -72,7 +71,6 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IProps>((props, r
 			properties[`data-${entry}`] = data[entry];
 		});
 	}
-
 	let cls = `pui-button btn-${variant}`;
 	cls += className ? ` ${className}` : '';
 	cls += bordered ? ' outline' : '';
