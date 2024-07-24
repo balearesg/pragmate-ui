@@ -1,5 +1,17 @@
 # Changelog
 
+## Changelog for pragmate-ui 0.1.2
+
+### Accessibility Improvements
+
+-   **Input Buttons**: Fixed missing `name` property by passing `ariaLabel` and `title` properties to `IconButton`.
+-   **Labels**: Resolved issue where labels weren't assigned `input id` or `name` in `htmlFor` property.
+-   **Button Sizing**: Increased horizontal size of buttons containing input icons to meet accessibility standards.
+-   **React-select Component**: Correctly assigns `htmlFor` property to labels.
+-   **Textarea Labels**: Now consider `name` property for proper label assignment.
+
+Special thanks to @veD-tnayrB for their contributions to these improvements.
+
 #### Version 0.1.1
 
 **Released:** 4/10/2024
