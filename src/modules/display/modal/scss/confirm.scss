@@ -6,7 +6,7 @@ pragmate-ui
 	&.pui-confirm-dialog-centered {
 		justify-content: center;
 		text-align: center;
-		color: var(--on-surface);
+		// color: var(--on-surface);
 		.pui-actions,
 		.actions {
 			padding-top: 1rem;
@@ -15,9 +15,9 @@ pragmate-ui
 			justify-content: center;
 		}
 	}
-	.pui-confirm-dialog-content:where(p, div, h3, h4) {
-		color: var(--on-surface);
-	}
+	// .pui-confirm-dialog-content:where(p, div, h3, h4) {
+	// 	// color: var(--on-surface);
+	// }
 	.pui-confirm-dialog-content {
 		h3 {
 			margin: 0;

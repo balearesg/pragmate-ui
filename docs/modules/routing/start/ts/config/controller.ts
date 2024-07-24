@@ -18,7 +18,7 @@ export class Router {
 
 	#pipeline: PipeLine;
 	constructor() {
-		this.#pipeline = new PipeLine([ScrollUp]);
+		this.#pipeline = new PipeLine([]);
 	}
 
 	load = async (pathname): Promise<{ pathname: any }> => {

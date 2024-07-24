@@ -6,10 +6,10 @@ type ButtonProps = {
 	onClick: () => void;
 };
 
-export interface IAlertModalProps extends Omit<IPUIProps<IAlertModalProps>, 'variant'>{
+export interface IAlertModalProps extends Omit<IPUIProps<IAlertModalProps>, 'variant'> {
 	text?: string;
-	onConfirm: () => void | Promise<void>;
-	onClose: () => void;
+	onConfirm?: () => void | Promise<void>;
+	onClose?: () => void;
 	/**
 	 * @deprecated
 	 */
