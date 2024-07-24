@@ -21,6 +21,7 @@ interface props extends ButtonHTMLAttributes<HTMLButtonElement> {
 	navigate?: string;
 	variant?: string;
 	'data-tippy-content'?: string;
+	ariaLabel?: string;
 }
 
 interface iconAttributes {
@@ -31,7 +32,7 @@ interface iconAttributes {
 export /*bundle*/
 const IconButton: React.FC<PropsWithChildren<props> & RefAttributes<HTMLButtonElement>> = forwardRef(
 	(props: PropsWithChildren<props>, ref: LegacyRef<HTMLButtonElement> | undefined): JSX.Element => {
-		const { icon, onClick, viewBox, disabled, name, value, id, title, children } = props;
+		const { icon, onClick, viewBox, disabled, name, value, id, title, children, ariaLabel } = props;
 
 		const buttonRef = React.useRef(null);
 
@@ -70,7 +71,7 @@ const IconButton: React.FC<PropsWithChildren<props> & RefAttributes<HTMLButtonEl
 
 		const attrsToDelete = ['icon', 'type', 'title', 'viewBox', 'className', 'bordered'];
 
-		attrsToDelete.forEach(attr => {
+		attrsToDelete.forEach((attr) => {
 			delete attrs[attr];
 		});
 
@@ -84,11 +85,13 @@ const IconButton: React.FC<PropsWithChildren<props> & RefAttributes<HTMLButtonEl
 				disabled={disabled}
 				className={className}
 				onClick={onClickButton}
-				{...attrs}>
+				aria-label={ariaLabel}
+				{...attrs}
+			>
 				<Icon {...iconAttributes} />
 				{children}
 				{/* {!disabled && <BeyondWaves/>} */}
 			</button>
 		);
-	}
+	},
 );

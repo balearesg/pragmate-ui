@@ -33,7 +33,9 @@ export /*bundle*/ function Textarea(props: IProps): JSX.Element {
 	let cls: string = props.className ? `${props.className} pui-textarea` : 'pui-textarea';
 	cls += props.disabled ? ' disabled' : '';
 	cls += props.hasError ? ' error' : '';
-	['className', 'hasError', 'counter', 'errorMessage', 'children', 'label'].forEach(prop => delete properties[prop]);
+	['className', 'hasError', 'counter', 'errorMessage', 'children', 'label'].forEach(
+		(prop) => delete properties[prop],
+	);
 	let clsLabel = '';
 	if (props.required) cls += ' is-required';
 
@@ -50,7 +52,7 @@ export /*bundle*/ function Textarea(props: IProps): JSX.Element {
 			{props.children}
 			<TextareaError state={state} hasError={props.hasError} value={value} errorMessage={props.errorMessage} />
 			{props.label && (
-				<label className={clsLabel} htmlFor={props.id}>
+				<label className={clsLabel} htmlFor={props.name || props.id}>
 					{props.label}
 				</label>
 			)}

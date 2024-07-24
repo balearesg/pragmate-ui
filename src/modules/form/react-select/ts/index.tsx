@@ -8,12 +8,12 @@ function ReactSelect(props) {
 	delete properties.onChange;
 	const { ref } = useStyles();
 
-	const singleValue = !properties.isMulti && props.options.find(item => item.value === props.value);
+	const singleValue = !properties.isMulti && props.options.find((item) => item.value === props.value);
 	let value = properties.isMulti ? props.value : singleValue;
-	const onChange = params => {
+	const onChange = (params) => {
 		if (!props.onChange) return;
 		const isMultiValues = properties?.isMulti;
-		const values = isMultiValues && params.map(selectedItem => selectedItem.value);
+		const values = isMultiValues && params.map((selectedItem) => selectedItem.value);
 		const value = isMultiValues ? values : params.value;
 		const { name } = props;
 
@@ -30,7 +30,7 @@ function ReactSelect(props) {
 
 	return (
 		<div className="pui-select" ref={ref}>
-			{props.label && <label>{props.label}</label>}
+			{props.label && <label htmlFor={props.name || props.id}>{props.label}</label>}
 			<Select classNamePrefix="pui-react-select" onChange={onChange} {...properties} value={value} />
 		</div>
 	);
