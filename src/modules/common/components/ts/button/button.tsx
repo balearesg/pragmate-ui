@@ -25,7 +25,6 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>((pr
 		bordered = false,
 		sizing = 'md',
 		disabled = false,
-
 		...otherProps
 	} = props;
 
@@ -72,7 +71,6 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>((pr
 			properties[`data-${entry}`] = data[entry];
 		});
 	}
-
 	let cls = `pui-button btn-${variant}`;
 	cls += className ? ` ${className}` : '';
 	cls += bordered ? ' outline' : '';

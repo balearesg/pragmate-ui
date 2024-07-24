@@ -37,7 +37,18 @@ function Input(props: IProps): JSX.Element {
 
 	if (props.variant && variants[props.variant]) cls += ` ${variants[props.variant]}`;
 
-	const providerValue: IInputContextValue = { props, state, setState, value, setValue, input, icon, isDate };
+	const providerValue: IInputContextValue = {
+		props,
+		state,
+		setState,
+		value,
+		setValue,
+		input,
+		icon,
+		isDate,
+		id: props.id,
+		name: props.name,
+	};
 	const labelSpecs: ILabelProps = { required: props.required };
 	const attrs: IInputContainer = {};
 	/**
