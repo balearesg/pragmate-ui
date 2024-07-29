@@ -1,7 +1,7 @@
 import React from 'react';
 import { Controller } from './state/controller';
-
 import { ISwiperOptions } from './interfaces/swiper-props';
+
 export const useSwiperSlider = (props: ISwiperOptions) => {
 	/* const { props } = useSwiperContext(); */
 

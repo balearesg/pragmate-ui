@@ -1,6 +1,6 @@
 import React from 'react';
 
-type HtmlRenderProps = {
+interface HtmlRenderProps<T extends HTMLElement = HTMLElement> extends React.HTMLAttributes<T> {
 	children: string;
 	/**
 	 * @deprecated
@@ -8,7 +8,8 @@ type HtmlRenderProps = {
 	tag?: keyof JSX.IntrinsicElements;
 	as?: keyof JSX.IntrinsicElements;
 	params: Record<string, string>;
-};
+}
+
 export /*bundle*/ function HtmlWrapper({
 	className,
 	children,
