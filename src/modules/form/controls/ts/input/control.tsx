@@ -3,6 +3,7 @@ import { useInputContext } from './context';
 import { internalProps } from './internal-props';
 import { IProps } from './interfaces';
 import { IconContainer } from './components/icon-container';
+import { BaseComponent } from 'pragmate-ui/base';
 
 export function ControlSelector(): JSX.Element {
 	const {

@@ -5,6 +5,7 @@ import { InputContext } from './context';
 import { Label } from './components/label';
 import { ControlSelector } from './control';
 import { Error } from './components/error';
+import { BaseComponent } from 'pragmate-ui/base';
 
 /**
  *
