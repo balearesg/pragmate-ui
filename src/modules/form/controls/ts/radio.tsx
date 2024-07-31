@@ -1,5 +1,5 @@
 import { IPUIProps } from 'pragmate-ui/base';
-import React, { MutableRefObject, useRef } from 'react';
+import React, { MutableRefObject, useRef, InputHTMLAttributes } from 'react';
 import { IFormProps } from './types';
 
 interface IPropsRadio extends InputHTMLAttributes<HTMLInputElement> {

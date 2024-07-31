@@ -13,7 +13,6 @@ export const internalProps = [
 	'loading',
 	'variant',
 	'type',
-
 	'size',
 	'loading',
 	'error',

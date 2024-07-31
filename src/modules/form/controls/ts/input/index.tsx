@@ -1,11 +1,9 @@
-import React, { MutableRefObject, useRef } from 'react';
-import { useState } from 'react';
-import type { IInputContainer, IInputContextValue, ILabelProps, IProps, TState } from './interfaces';
-import { InputContext } from './context';
-import { Label } from './components/label';
-import { ControlSelector } from './control';
+import React, { MutableRefObject, useRef, useState } from 'react';
 import { Error } from './components/error';
-import { BaseComponent } from 'pragmate-ui/base';
+import { Label } from './components/label';
+import { InputContext } from './context';
+import { ControlSelector } from './control';
+import type { IInputContainer, IInputContextValue, ILabelProps, IProps, TState } from './interfaces';
 
 /**
  *

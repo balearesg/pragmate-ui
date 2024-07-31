@@ -1,9 +1,8 @@
 import React, { ChangeEvent, useEffect } from 'react';
-import { useInputContext } from './context';
-import { internalProps } from './internal-props';
-import { IProps } from './interfaces';
 import { IconContainer } from './components/icon-container';
-import { BaseComponent } from 'pragmate-ui/base';
+import { useInputContext } from './context';
+import { IProps } from './interfaces';
+import { internalProps } from './internal-props';
 
 export function ControlSelector(): JSX.Element {
 	const {

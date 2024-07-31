@@ -10,7 +10,7 @@ type HTMLMotionProps<T> = Omit<HTMLAttributes<T>, ConflictingProps> &
 		onAnimationIteration?: AnimationEventHandler<T>;
 	};
 
-export interface IPUIProps<T = unknown> extends HTMLMotionProps<T> {
+export /* bundle */ interface IPUIProps<T = unknown> extends HTMLMotionProps<T> {
 	/**
 	 * @deprecated
 	 */
@@ -21,3 +21,7 @@ export interface IPUIProps<T = unknown> extends HTMLMotionProps<T> {
 }
 
 export type Variant = 'primary' | 'secondary' | 'tertiary' | 'success' | 'info' | 'error' | 'warning' | 'default';
+
+export interface IPUIForm {
+
+}
