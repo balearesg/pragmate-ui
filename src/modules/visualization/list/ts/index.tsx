@@ -1,18 +1,16 @@
-import React, { ReactElement, ReactNode } from 'react';
+import React, { ReactElement, ReactNode, Children, cloneElement, isValidElement } from 'react';
 import { DraggableList } from './draggable';
 import { IListProps } from './definitions';
 import { ItemList } from './item';
 import { DraggableItem } from './item/dragable';
 
-export /*bundle */ function List<T>({ items, ...props }: IListProps<T>): ReactElement {
+export /*bundle*/ function List<T>({ items, children, control, empty, ...props }: IListProps<T>): ReactElement {
 	const {
 		className,
-		children,
 		index = 'id',
 		specs,
 		draggable,
 		childrenPosition = 'top',
-		control,
 		as = 'ul',
 		// @deprecated
 		container = 'ul',
@@ -31,16 +29,36 @@ export /*bundle */ function List<T>({ items, ...props }: IListProps<T>): ReactEl
 		return null;
 	}
 
-	const output: ReactNode[] = items.map((item, idx) => (
-		<ItemControl index={index} key={idx} specs={specs} control={control} item={item} idx={idx} />
-	));
+	if (control) {
+		// console.warn(
+		// 	'The "control" prop is deprecated and will be removed in future versions. Please use children to define the item components.',
+		// );
+	}
+
+	if (items.length === 0 && empty) {
+		const Control = empty;
+		return <Control />;
+	}
+
+	const renderItems = control
+		? items.map((item, idx) => (
+				<ItemControl index={index} key={idx} specs={specs} control={control} item={item} idx={idx} />
+		  ))
+		: items.map((item, idx) =>
+				Children.map(children, child =>
+					isValidElement(child)
+						? cloneElement(child as React.ReactElement<any>, { key: idx, index, specs, item, idx })
+						: child,
+				),
+		  );
 
 	const top = onTop && children ? children : null;
 	const bottom = !onTop && children ? children : null;
+
 	return (
 		<Container className={className}>
 			{top}
-			{output}
+			{renderItems}
 			{bottom}
 		</Container>
 	);

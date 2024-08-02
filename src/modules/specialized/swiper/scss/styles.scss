@@ -32,10 +32,6 @@
 		opacity: 1;
 	}
 
-	.swiper-pagination-bullet-active {
-		background-color: var(--primary);
-	}
-
 	.swiper-pagination-progressbar-fill {
 		border-radius: 1rem;
 	}
@@ -43,7 +39,6 @@
 .swiper__navigation-btn {
 	&.swiper-button-prev,
 	&.swiper-button-next {
-		background-color: var(--primary);
 		border-radius: 50%;
 		position: absolute;
 		top: 50%;
@@ -56,9 +51,6 @@
 		}
 		&.swiper-button-next {
 			right: 0.5rem;
-		}
-		svg.pui-icon {
-			fill: #fff;
 		}
 	}
 }

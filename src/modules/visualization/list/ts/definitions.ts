@@ -10,6 +10,7 @@ export interface IListProps<T> extends Omit<IPUIProps<IListProps<T>>, 'variant'>
 	container?: keyof JSX.IntrinsicElements;
 	as?: keyof ReactHTML;
 	draggable?: boolean;
+	empty?: React.ComponentType;
 	onReorder?: (items: T[]) => void;
 }
 
