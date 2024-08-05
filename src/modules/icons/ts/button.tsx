@@ -10,10 +10,13 @@ export /*bundle*/ const IconButton = forwardRef<HTMLButtonElement, IIconButtonPr
 	const { icon, onClick, viewBox, disabled, name, value, id, title, children } = props;
 
 	const buttonRef: IIconButtonProps['ref'] = React.useRef(null);
-
+	const rippleRef = React.useRef(null);
 	React.useEffect(() => {
 		const ripple = new RippleEffect();
-		ripple.addRippleEffect(buttonRef.current);
+
+		const icon = buttonRef.current?.querySelector('svg');
+		ripple.addRippleEffect(rippleRef.current);
+		// ripple.addRippleEffect(icon);
 
 		if (title) {
 			tippy(buttonRef.current, {
@@ -57,6 +60,14 @@ export /*bundle*/ const IconButton = forwardRef<HTMLButtonElement, IIconButtonPr
 	title ? (attrs['data-tippy-content'] = title) : null;
 
 	const buttonAttrs = getAttributes(attrs);
+
+	const handleIconClick = (event: MouseEvent<SVGSVGElement>): void => {
+		event.stopPropagation();
+		if (buttonRef.current) {
+			buttonRef.current.click();
+		}
+	};
+
 	return (
 		<button
 			id={id}
@@ -69,9 +80,9 @@ export /*bundle*/ const IconButton = forwardRef<HTMLButtonElement, IIconButtonPr
 			onClick={onClickButton}
 			{...buttonAttrs}
 		>
-			<Icon {...iconAttributes} />
+			<span ref={rippleRef} className='pui-icon-button-mask'></span>
+			<Icon {...iconAttributes} onClick={handleIconClick} />
 			{children}
-			{/* {!disabled && <BeyondWaves/>} */}
 		</button>
 	);
 });

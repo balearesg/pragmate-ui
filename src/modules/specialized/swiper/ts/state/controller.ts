@@ -84,7 +84,7 @@ export class Controller extends ReactiveModel<any> {
 
 	prevSlide = () => {
 		if (!this.#swiper?.isEnd) {
-			this.#swiper?.slideNext(500, false);
+			this.#swiper?.slidePrev(500, false);
 			return;
 		}
 		if (!this.#onEnd) return;

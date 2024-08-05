@@ -45,6 +45,9 @@
 		display: inline-flex;
 		padding: 8px;
 		z-index: 2;
+		&:after {
+			content: '' !important;
+		}
 		cursor: pointer;
 		&.swiper-button-prev {
 			left: 0.5rem;
