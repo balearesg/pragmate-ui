@@ -15,7 +15,7 @@ export class Controller extends ReactiveModel<any> {
 	setSwiper = (element, props, ref): void => {
 		this.#props = props;
 		let specs = {
-			slidesPerView: props.slidesPerView ?? 3,
+			// slidesPerView: props.slidesPerView ?? 3,
 			spaceBetween: props.spaceBetween ?? 10,
 			modules: [Navigation, Pagination],
 			...props,
@@ -87,7 +87,7 @@ export class Controller extends ReactiveModel<any> {
 			this.#swiper?.slidePrev(500, false);
 			return;
 		}
-		if (!this.#onEnd) return;
+
 		if (this.#props.onPrev) this.#props.onPrev();
 		else this.#swiper?.slidePrev(500, false);
 	};

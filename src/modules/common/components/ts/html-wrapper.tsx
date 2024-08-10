@@ -21,7 +21,7 @@ export /*bundle*/ function HtmlWrapper({
 	const keys = Object.keys(params);
 	keys.forEach(key => {
 		const value = params[key];
-		children = children.replace(`{${key}}`, value);
+		children = children.replace(new RegExp(`\\{${key}\\}`, 'g'), value);
 	});
 	return <Control className={className} dangerouslySetInnerHTML={{ __html: children }} />;
 }
