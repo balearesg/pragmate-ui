@@ -1,25 +1,36 @@
 import { ReactHTML } from 'react';
 import { IPUIProps } from 'pragmate-ui/base';
-
-export interface IListProps<T> extends Omit<IPUIProps<IListProps<T>>, 'variant'> {
-	items: T[];
-	index?: string; // Key name to use for element keys
-	specs?: Record<string, any>;
-	control?: string | React.ElementType<{ data: T; index: number; item: T; specs: Record<string, any> }>;
-	childrenPosition?: 'top' | 'bottom';
-	container?: keyof JSX.IntrinsicElements;
-	as?: keyof ReactHTML;
-	draggable?: boolean;
-	empty?: React.ComponentType;
-	onReorder?: (items: T[]) => void;
-}
-
-export interface IItemListProps<T> {
-	specs: Record<string, any>;
+/**
+ * Interfaz para las propiedades del componente `ItemList`.
+ *
+ * @template T - El tipo de los elementos en la lista.
+ * @template U - Tipo de las propiedades adicionales opcionales (por defecto un objeto genérico).
+ */
+export interface IItemListProps<T, U = Record<string, any>> extends IPUIProps {
+	/** Clave del índice para el elemento en la lista. */
 	index: string;
-	as?: keyof ReactHTML;
+
+	/** Elemento individual de la lista. */
 	item: T;
-	data?: T; //compatibility
+
+	/** Índice del elemento en la lista. */
 	idx: number;
-	control?: string | React.ElementType<{ data: T; index: number; item: T; specs: Record<string, any> }>;
+
+	/** Tipo del contenedor HTML para el elemento (por defecto 'li'). */
+	as?: keyof React.ReactHTML;
+
+	/** Componente o etiqueta HTML que renderiza el elemento. */
+	control?:
+		| string
+		| React.ElementType<
+				{
+					item: T;
+					index: number;
+					data: T;
+					children?: React.ReactNode;
+				} & U
+		  >;
+
+	/** Propiedades adicionales opcionales. */
+	specs?: U;
 }
