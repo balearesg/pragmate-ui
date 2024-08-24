@@ -1,7 +1,6 @@
 import React from 'react';
 import { useInputContext } from '../context';
 import { ILabelProps } from '../interfaces';
-import { BaseComponent } from 'pragmate-ui/base';
 export /*bundle */ function Label({ required, position, children }: ILabelProps = {}) {
 	const { name, id } = useInputContext();
 
@@ -16,9 +15,9 @@ export /*bundle */ function Label({ required, position, children }: ILabelProps 
 	if (required) cls += ' is-required';
 	return (
 		<>
-			<BaseComponent as='label' htmlFor={id ?? name} className={cls}>
+			<label htmlFor={id ?? name} className={cls}>
 				<span className='label-content'> {children}</span>
-			</BaseComponent>
+			</label>
 		</>
 	);
 }

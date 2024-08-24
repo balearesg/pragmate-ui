@@ -1,9 +1,11 @@
-export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export type PuiIcon = string | { viewBox: string; icon: string; name?: string };
+export /*bundle*/ interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	data?: Record<string, any>;
 	label?: React.ReactNode;
 	children?: React.ReactNode;
-	icon?: string;
+	icon?: PuiIcon;
 	loading?: boolean;
+	type?: 'button' | 'submit' | 'reset';
 	fetching?: boolean;
 	variant?: string;
 	bordered?: boolean;

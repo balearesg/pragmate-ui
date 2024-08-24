@@ -9,6 +9,7 @@ export interface IProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 	value?: string;
 	counter?: boolean;
 	children?: ReactNode;
+	floating?: boolean;
 }
 
 export type TValue = string | number | readonly string[];

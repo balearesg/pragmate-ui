@@ -20,6 +20,7 @@ export interface IPropsState {
     _hasError?: boolean;
     type: InputHTMLAttributes<HTMLInputElement>['type'];
 };
+
 export interface ILabelProps {
     position?: 'right' | 'bottom' | 'bottom-right' | 'floating';
     children?: React.ReactNode;
