@@ -1,8 +1,13 @@
 import React, { ReactNode } from 'react';
 import { Reorder } from 'framer-motion';
-import { IListProps } from './definitions';
+import { IDraggableListProps, IListItem } from './types';
 
-export function DraggableList<T>({ specs, control, index, ...props }: IListProps<T>) {
+export function DraggableList<T extends IListItem<any, any>>({
+	specs,
+	control,
+	index,
+	...props
+}: Partial<IDraggableListProps<T>>) {
 	const [items, setItems] = React.useState(props.items);
 
 	const onReorder = (items: T[]) => {

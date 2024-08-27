@@ -33,7 +33,16 @@ export /*bundle*/ function Textarea(props: IProps): JSX.Element {
 	let cls: string = props.className ? `${props.className} pui-textarea` : 'pui-textarea';
 	cls += props.disabled ? ' disabled' : '';
 	cls += props.hasError ? ' error' : '';
-	['className', 'hasError', 'counter', 'errorMessage', 'children', 'label'].forEach(prop => delete properties[prop]);
+	['className', 'hasError', 'counter', 'errorMessage', 'children', 'label', 'floating'].forEach(
+		prop => delete properties[prop],
+	);
+	const variants = {
+		unstyled: 'pui-textarea--unstyled',
+		floating: 'pui-textarea--floating',
+	};
+
+	if (props.variant && variants[props.variant]) cls += ` ${variants[props.variant]}`;
+
 	let clsLabel = '';
 	if (props.required) cls += ' is-required';
 

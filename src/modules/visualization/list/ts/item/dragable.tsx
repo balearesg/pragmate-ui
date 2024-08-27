@@ -1,13 +1,13 @@
 import { Reorder } from 'framer-motion';
 import React from 'react';
-import { IItemListProps } from '../definitions';
+import { IListItem } from '../types';
 import { ItemList } from './';
 interface IHTMLItemProps {
 	as?: keyof React.ReactHTML;
 	children?: React.ReactNode;
 }
 
-export function DraggableItem<T>({ as, ...props }: IItemListProps<T>) {
+export function DraggableItem<T>({ as, ...props }: IListItem<T>) {
 	const { item, idx } = props;
 	const attrs = { as };
 

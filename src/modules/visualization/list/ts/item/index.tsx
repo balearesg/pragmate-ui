@@ -1,5 +1,5 @@
 import React from 'react';
-import { IItemListProps } from '../definitions';
+import { IListItem } from '../types';
 import { HTMLItem } from './html';
 /**
  * Componente que renderiza un elemento de la lista.
@@ -17,7 +17,7 @@ export function ItemList<T, U = Record<string, any>>({
 	as = 'li',
 	control,
 	specs = {} as U,
-}: IItemListProps<T, U>) {
+}: IListItem<T, U>) {
 	const Control = typeof control === 'string' ? HTMLItem : control;
 
 	const elementProps = {

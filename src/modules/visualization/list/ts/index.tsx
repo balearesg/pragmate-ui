@@ -1,10 +1,16 @@
 import React, { ReactElement, ReactNode, Children, cloneElement, isValidElement } from 'react';
 import { DraggableList } from './draggable';
-import { IListProps } from './definitions';
+import { IListItem, IListProps } from './types';
 import { ItemList } from './item';
 import { DraggableItem } from './item/dragable';
 
-export /*bundle*/ function List<T>({ items, children, control, empty, ...props }: IListProps<T>): ReactElement {
+export /*bundle*/ function List<T extends IListItem<any, any>>({
+	items,
+	children,
+	control,
+	empty,
+	...props
+}: Partial<IListProps<T>>): ReactElement {
 	const {
 		className,
 		index = 'id',

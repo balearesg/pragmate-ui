@@ -7,7 +7,7 @@ interface HtmlRenderProps<T extends HTMLElement = HTMLElement> extends React.HTM
 	 */
 	tag?: keyof JSX.IntrinsicElements;
 	as?: keyof JSX.IntrinsicElements;
-	params: Record<string, string>;
+	params?: Record<string, string>;
 }
 
 export /*bundle*/ function HtmlWrapper({
