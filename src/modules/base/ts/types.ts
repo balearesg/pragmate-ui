@@ -17,8 +17,16 @@ export /*bundle*/ interface IPUIProps<T = unknown> extends HTMLMotionProps<T> {
 	type?: string;
 	title?: string;
 	children?: React.ReactNode;
-	variant?: Variant;
+	variant?: PuiVariant;
 	className?: string;
 }
 
-export type Variant = 'primary' | 'secondary' | 'tertiary' | 'success' | 'info' | 'error' | 'warning' | 'default';
+export /*bundle*/ type PuiVariant =
+	| 'primary'
+	| 'secondary'
+	| 'tertiary'
+	| 'success'
+	| 'info'
+	| 'error'
+	| 'warning'
+	| 'default';
