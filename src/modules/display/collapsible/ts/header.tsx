@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCollapsibleContext } from './context';
 import { IconButton } from 'pragmate-ui/icons';
-import type { ICollapsibleHeader } from './definitions';
+import type { ICollapsibleHeader } from './types';
 
 export /*bundle */ function CollapsibleHeader({
 	children,

@@ -3,7 +3,7 @@ import { SidebarItem } from './item';
 import { Icon } from 'pragmate-ui/icons';
 import { useBinder } from '@beyond-js/react-18-widgets/hooks';
 import { routing } from '@beyond-js/kernel/routing';
-import { IComponent, IItem } from '../interfaces/IComponent';
+import { IItem } from '../interfaces/IComponent';
 
 export function SidebarDropdown({ component, tabIndex }) {
 	const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);

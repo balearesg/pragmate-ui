@@ -1,6 +1,6 @@
 import React from 'react';
 import { CollapsibleContext } from './context';
-import type { IContainerProps } from './definitions';
+import type { IContainerProps } from './types';
 
 export /*bundle */ function CollapsibleContainer({
 	children,

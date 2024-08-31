@@ -1,8 +1,8 @@
-export interface IAccordionItem {
-    disabled?: boolean, 
-    children?: any, 
-    title?: string, 
-    index?: any
+import { IPUIProps } from 'pragmate-ui/base';
+export interface IAccordionItem extends IPUIProps {
+	disabled?: boolean;
+	title?: string;
+	index?: number;
 }
 
 export interface IAccordionContext {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconButton } from 'pragmate-ui/icons';
-import type { IAccordionContext, IAccordionItem } from './definitions';
+import type { IAccordionContext, IAccordionItem } from './types';
 
 export const AccordionContext = React.createContext({} as IAccordionContext);
 export const useAccordionContext = () => React.useContext(AccordionContext);
@@ -14,12 +14,12 @@ export /*bundle */ function Header({ disabled, children, index }) {
 	};
 	const attrs: { onClick?: (event: any) => void } = {};
 	if (!disabled) attrs.onClick = onClick;
-
+	const icon = opened ? 'expandMore' : 'chevronRight';
 	return (
 		<header {...attrs} className='accordion-item__header'>
 			{children}
 			<div className='accordion-item__header-icon'>
-				<IconButton icon='chevronRight' className='circle' />
+				<IconButton icon={icon} className='circle' />
 			</div>
 		</header>
 	);
@@ -49,8 +49,11 @@ export /*bundle */ function Container({ children, active = 0 }) {
 
 	const value = { onChange, opened, setOpened };
 	React.useEffect(() => setOpened(active), [active]);
-	const output = React.Children.map(children, (child, index) => {
-		return React.cloneElement(child, { index });
+
+	const output = [];
+	React.Children.map(children, (child, index) => {
+		if (!child) return null;
+		output.push(React.cloneElement(child, { index, key: `item$.${index}` }));
 	});
 
 	return (
