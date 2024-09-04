@@ -2,10 +2,6 @@
 	"name": "list",
 	"platforms": ["web", "ios", "android"],
 	"code": {
-		"scss": {
-			"path": "/scss",
-			"files": ["*"]
-		},
 		"ts": {
 			"path": "/ts",
 			"files": ["*"]
