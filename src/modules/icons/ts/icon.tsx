@@ -4,7 +4,7 @@ import { IIconProps, PuiIcon } from './types';
 
 export /*bundle*/
 const Icon = (props: IIconProps): JSX.Element => {
-	let {icon, className, name } = props;
+	let { icon, className, name } = props;
 	const iconsList: PuiIcon = PRAGMATE_ICONS;
 
 	if (!icon) return <div key='preload' />;

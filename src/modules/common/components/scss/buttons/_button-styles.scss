@@ -1,6 +1,7 @@
 @mixin button-styles($button-variants) {
 	@each $type in $button-variants {
 		$color: var(--on-#{$type});
+
 		&.btn-#{$type} {
 			background-color: var(--#{$type});
 			color: $color;
@@ -16,8 +17,10 @@
 			 * Icon styles
 			 */
 			&.has-icon {
-				svg.pui-icon {
-					fill: $color;
+				& {
+					svg.pui-icon {
+						fill: $color;
+					}
 				}
 			}
 			&:disabled {

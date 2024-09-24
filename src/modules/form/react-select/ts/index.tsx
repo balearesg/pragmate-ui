@@ -1,7 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
 import { useStyles } from './use-styles';
-import isMobile from 'is-mobile';
 import { MobileSelect } from './mobile-select';
 
 export /*bundle*/
@@ -18,7 +17,8 @@ function ReactSelect(props) {
 		props.onChange({ target, currentTarget: { ...target } });
 	};
 
-	if (isMobile({ tablet: true })) return <MobileSelect {...props} />;
+	return <MobileSelect {...props} />;
+	// if (isMobile({ tablet: true })) return <MobileSelect {...props} />;
 
 	const attrs = { onChange, ...properties, value };
 

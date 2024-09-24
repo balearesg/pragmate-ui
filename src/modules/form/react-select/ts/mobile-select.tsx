@@ -24,7 +24,7 @@ export function MobileSelect({ options, ...props }: ISelect) {
 	return (
 		<div className='pui-mobile-select__container'>
 			<select title='select' {...attrs} className='pui-mobile-select'>
-				<option value=''>{props.placeholder}</option>
+				{props.placeholder && <option value=''>{props.placeholder}</option>}
 				{output}
 			</select>
 		</div>
