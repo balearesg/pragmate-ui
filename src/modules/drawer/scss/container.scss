@@ -1,0 +1,10 @@
+.pui-drawer-container {
+	background: rgba(0, 0, 0, 0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	transition: background 300ms ease-in;
+}

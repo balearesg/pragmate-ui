@@ -2,16 +2,7 @@ import { IPUIProps } from 'pragmate-ui/base';
 import type { Reorder } from 'framer-motion';
 /** Interface for the control type that can be reused across components. */
 interface IItemControl<T, U = Record<string, any>> {
-	control?:
-		| string
-		| React.ElementType<
-				{
-					item: IListItem<T, U>;
-					index: number;
-					data: IListItem<T, U>;
-					children?: React.ReactNode;
-				} & U
-		  >;
+	control?: React.FunctionComponent<T>;
 }
 
 /**
@@ -71,6 +62,6 @@ export interface IDraggableListProps<T extends IListItem<any, any>, U = Record<s
 	draggable?: boolean;
 	childrenPosition?: 'top' | 'bottom';
 	as?: keyof React.ReactHTML;
-	control?: React.ElementType;
+	control?: React.FunctionComponent<T>;
 	empty?: React.ElementType;
 }

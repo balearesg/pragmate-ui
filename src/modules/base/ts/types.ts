@@ -21,6 +21,8 @@ export /*bundle*/ interface IPUIProps<T = unknown> extends HTMLMotionProps<T> {
 	className?: string;
 }
 
+
+
 export /*bundle*/ type PuiVariant =
 	| 'primary'
 	| 'secondary'

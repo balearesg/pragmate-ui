@@ -2,7 +2,7 @@ import React from 'react';
 import { RippleEffect } from 'pragmate-ui/ripple';
 import tippy from 'tippy.js';
 import { Icon } from 'pragmate-ui/icons';
-import { IChipProps } from './definitions';
+import { IChipProps } from './types';
 
 type ChipProps = IChipProps & React.HTMLAttributes<HTMLSpanElement>;
 
