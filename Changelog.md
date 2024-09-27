@@ -4,6 +4,8 @@
 
 ### Added
 
+-   **Drawer Component**: A new component for creating drawers.
+
 -   **HtmlWrapper** included.
 -   **Dynamic List component**: This component lets you manage a list and add new items to it.
 -   **Framer Motion dependency**: Added to enhance animation capabilities.
@@ -12,6 +14,8 @@
 
 ### Changed
 
+-   **Link Component**: The `onClick` prop now accepts a function that can return `false` to prevent the default
+    behavior.
 -   **AlertModal**: The container of actions now has a class `pui-modal__actions` by default.
 -   **ReactSelect**: Adjusted logic to handle mobile selects and replace it with a common select.
 -   **Icons**:
