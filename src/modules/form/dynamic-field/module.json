@@ -1,0 +1,11 @@
+{
+  "name": "/form/dynamic-field",
+  "code": {
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}
