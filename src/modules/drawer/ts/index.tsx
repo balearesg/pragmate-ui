@@ -2,6 +2,7 @@ import * as React from 'react';
 import { IPUIProps } from 'pragmate-ui/base'; // Usar la interfaz base
 import { motion } from 'framer-motion';
 import { IconButton } from 'pragmate-ui/icons';
+import { DrawerContext } from './context';
 interface DrawerProps extends IPUIProps {
 	position?: 'left' | 'right' | 'top' | 'bottom';
 	open: boolean;
@@ -21,32 +22,35 @@ export /*bundle*/ function Drawer({ className, position = 'left', open, onClose,
 	if (open) drawerClass += ` pui-drawer-open-${position}`;
 	if (!open) return;
 	const cls = `pui-drawer-container${className ? ` ${className}` : ''}`;
+	const onClickContent = (e: React.MouseEvent<HTMLDivElement>) => {
+		e.stopPropagation();
+	};
 	return (
-		<motion.div className={cls}>
-			<motion.div
-				initial={{
-					x: '+100vh',
-					opacity: 0,
-				}}
-				animate={{
-					x: 0,
-					opacity: 1,
-				}}
-				exit={{
-					x: '100vh',
-					opacity: 0,
-				}}
-				transition={{
-					duration: 0.3,
-					ease: 'linear',
-				}}
-				className={drawerClass}
-			>
-				<div className='pui-drawer-content'>
-					<IconButton className='circle pui-drawer-close' icon='close' onClick={onClose}></IconButton>
-					{children}
-				</div>
+		<DrawerContext.Provider value={{ open, onClose }}>
+			<motion.div className={cls} onClick={onClose}>
+				<motion.div
+					onClick={onClickContent}
+					initial={{
+						x: '+100vh',
+						opacity: 0,
+					}}
+					animate={{
+						x: 0,
+						opacity: 1,
+					}}
+					exit={{
+						x: '100vh',
+						opacity: 0,
+					}}
+					transition={{
+						duration: 0.3,
+						ease: 'linear',
+					}}
+					className={drawerClass}
+				>
+					<div className='pui-drawer-content'>{children}</div>
+				</motion.div>
 			</motion.div>
-		</motion.div>
+		</DrawerContext.Provider>
 	);
 }

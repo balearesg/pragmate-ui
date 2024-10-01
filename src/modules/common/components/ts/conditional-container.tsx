@@ -16,6 +16,7 @@ export /*bundle*/ function ConditionalContainer({
 	const evaluatedValue = typeof condition === 'function' ? condition() : condition;
 
 	let Component;
+
 	if (ternary && typeof evaluatedValue === 'boolean') {
 		Component = evaluatedValue ? options.true : options.false;
 	} else {

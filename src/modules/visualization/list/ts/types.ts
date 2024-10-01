@@ -1,8 +1,8 @@
 import { IPUIProps } from 'pragmate-ui/base';
 import type { Reorder } from 'framer-motion';
 /** Interface for the control type that can be reused across components. */
-interface IItemControl<T, U = Record<string, any>> {
-	control?: React.FunctionComponent<T>;
+interface IItemControl {
+	control?: React.FunctionComponent;
 }
 
 /**
@@ -11,7 +11,7 @@ interface IItemControl<T, U = Record<string, any>> {
  * @template T - The type of the items in the list.
  * @template U - Type for additional optional properties (default is a generic object).
  */
-export interface IListItem<T, U = Record<string, any>> extends IPUIProps, IItemControl<T, U> {
+export interface IListItem<T, U = Record<string, any>> extends IPUIProps, IItemControl {
 	/** Index key for the item in the list. */
 	index: string;
 
@@ -28,14 +28,14 @@ export interface IListItem<T, U = Record<string, any>> extends IPUIProps, IItemC
 	specs?: U;
 }
 
-export interface IListProps<T extends IListItem<any, any>, U = Record<string, any>>
+export interface IListProps<T extends IListItem<any, any> = IListItem<any, any>, U = Record<string, any>>
 	extends IPUIProps,
-		IItemControl<T, U> {
+		IItemControl {
 	/** Index key for the list. */
 	index: string;
 
 	/** Array of items in the list. */
-	items: T[];
+	items: any[];
 
 	/** Additional parameters to be passed to each item. */
 	specs?: U;
