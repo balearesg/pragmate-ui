@@ -1,11 +1,10 @@
 {
-  "name": "/form/dynamic-field",
-  "code": {
-    "ts": {
-      "path": "/code/ts",
-      "files": [
-        "*"
-      ]
-    }
-  }
+	"name": "form/dynamic-field",
+	"platforms": ["web", "ios", "android"],
+	"code": {
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		}
+	}
 }

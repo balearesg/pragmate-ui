@@ -19,7 +19,7 @@ export /*bundle */ function CollapsibleHeader({
 		if (await onToggle(!open)) setOpen(!open);
 	};
 	const cls = `collapsible__header ${className ? ` ${className}` : ''} ${open ? 'open' : ''}`;
-	const clsButton = `collapsible__button ${open ? ' collapsible__button--opened' : ''}`;
+	const clsButton = `collapsible__button circle ${open ? ' collapsible__button--opened' : ''}`;
 	const attrs: { className: string; onClick?: () => void } = { className: cls };
 	if (toggleTitle) {
 		attrs.onClick = onClick;
