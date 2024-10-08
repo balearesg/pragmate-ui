@@ -1,6 +1,6 @@
+import { IconButton } from 'pragmate-ui/icons';
 import React from 'react';
 import { useInputContext } from '../context';
-import { IconButton } from 'pragmate-ui/icons';
 
 export function Password(): JSX.Element {
 	const { state, setState } = useInputContext();
@@ -20,7 +20,7 @@ export function Password(): JSX.Element {
 		icon: state.type === 'password' ? 'eye' : 'eye-slash',
 		id: 'displayPassword',
 		title,
-		ariaLabel: title,
+		'aria-label': title,
 	};
 
 	return <IconButton {...attrs} />;
