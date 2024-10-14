@@ -4,6 +4,7 @@ import { IProps } from './definitions';
 
 export /*bundle*/ function Panes({ children, className }: IProps) {
 	const { activeTab } = useTabsContext();
+
 	const childrenArray = React.Children.toArray(children);
 	const Control = childrenArray[activeTab] as React.ReactElement;
 	const cls = `tab-content ${className ? ` ${className}` : ''}`;

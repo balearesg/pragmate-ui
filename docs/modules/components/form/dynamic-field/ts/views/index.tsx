@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { DynamicFieldContainer, AddButton, RemoveButton, DynamicField } from 'pragmate-ui/form/dynamic-field';
+import { RemoveButton, DynamicField } from 'pragmate-ui/form/dynamic-field';
 import { Input } from 'pragmate-ui/form';
 import { Button } from 'pragmate-ui/components';
 

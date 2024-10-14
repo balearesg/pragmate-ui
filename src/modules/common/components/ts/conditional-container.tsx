@@ -3,7 +3,7 @@ import React from 'react';
 interface IConditionalContainerProps {
 	condition: string | boolean | (() => string | boolean);
 	options: Record<string, React.ReactElement>;
-	placeholder?: React.ComponentType; // Componente por defecto opcional
+	placeholder?: React.ReactElement; // Componente por defecto opcional
 	ternary?: boolean; // Nueva propiedad para soportar ternarios
 }
 

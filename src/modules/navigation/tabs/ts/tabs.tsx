@@ -7,7 +7,7 @@ import { IProps, ITabProps, TabsProps } from './definitions';
 export /*bundle*/ const Tabs = ({ children, className }: IProps) => {
 	const { activeTab } = useTabsContext();
 	const ref = React.useRef<HTMLDivElement>(null);
-	const cls = `pui-tabs-menu${className ? ` ${className}` : ''}`;
+	const cls = `pui-tabs-menu tabs${className ? ` ${className}` : ''}`;
 	const clone = (item, index) => {
 		if (!React.isValidElement(item) || (item.type as React.FC) !== Tab) return item;
 
@@ -20,10 +20,8 @@ export /*bundle*/ const Tabs = ({ children, className }: IProps) => {
 	useScroll(ref, activeTab);
 
 	return (
-		<header className={cls}>
-			<div className='tabs' ref={ref}>
-				{output}
-			</div>
+		<header className={cls} ref={ref}>
+			{output}
 		</header>
 	);
 };
