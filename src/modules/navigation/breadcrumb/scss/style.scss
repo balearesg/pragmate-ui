@@ -6,15 +6,6 @@
 	cursor: pointer;
 
 	.pui-breadcrumb {
-		display: flex;
-		padding: 0;
-		gap: 0.5rem;
-		li {
-			margin: 0;
-			flex: 0 0 auto;
-			display: inline-block;
-		}
-
 		.breadcrumb__item--current {
 			cursor: default;
 			color: var(--secondary);

@@ -1,7 +1,7 @@
 .pui-breadcrumb__container {
 	.pui-breadcrumb {
 		display: flex;
-		gap: 0.5rem;
+		gap: 0.15rem;
 		a {
 			text-decoration: none;
 			position: relative;
@@ -9,7 +9,7 @@
 			height: 100%;
 			margin: 0 1px;
 			display: flex;
-			gap: 0.5rem;
+			gap: 0.15rem;
 			transition: all 0.2s;
 			cursor: pointer;
 
