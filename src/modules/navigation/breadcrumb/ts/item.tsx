@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'pragmate-ui/components';
 import { IItem } from './types';
 
-export function Item({ link, label, onClick, currentRouting, index, total, separator = '>' }: IItem) {
-	const isChecked = link === currentRouting ? 'breadcrumb__item--current' : 'breadcrumb__item';
+export function Item({ link, label, onClick, last, currentRouting, index, total, separator = '>' }: IItem) {
+	const isChecked = link === currentRouting || last ? 'breadcrumb__item--current' : 'breadcrumb__item';
 	const isFunction = typeof link === 'function';
 	const attrs = {} as Partial<React.AllHTMLAttributes<HTMLAnchorElement>>;
 	if (isFunction) {
-		attrs.onClick = onClick;
+		attrs.onClick = link;
 	} else {
 		attrs.href = link;
 	}

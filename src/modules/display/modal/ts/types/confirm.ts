@@ -22,13 +22,7 @@ export interface IConfirmModalProps {
 	actions?: IConfirmModalActions;
 	centered?: boolean;
 	className?: string;
-	/**
-	 * @deprecated
-	 */
 	btnConfirm?: Record<string, any>;
-	/*
-	 * @deprecated
-	 */
 	btnCancel?: Record<string, any>;
 	children?: React.ReactNode;
 	onCancel?: () => void;

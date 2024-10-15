@@ -3,10 +3,12 @@
 	align-items: center;
 	display: flex;
 	padding: 0;
+	cursor: pointer;
 
-	.breadcrumb {
+	.pui-breadcrumb {
 		display: flex;
 		padding: 0;
+		gap: 0.5rem;
 		li {
 			margin: 0;
 			flex: 0 0 auto;
@@ -14,6 +16,7 @@
 		}
 
 		.breadcrumb__item--current {
+			cursor: default;
 			color: var(--secondary);
 		}
 	}

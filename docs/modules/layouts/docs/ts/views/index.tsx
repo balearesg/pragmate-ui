@@ -1,7 +1,6 @@
 import React from 'react';
-import {Sidebar} from '../components/sidebar';
-import {Navbar} from 'pragmate-ui-docs/navbar';
-import {Footer} from 'pragmate-ui-docs/footer';
+import { Sidebar } from '../components/sidebar';
+import { Navbar } from 'pragmate-ui-docs/navbar';
 
 declare global {
 	namespace JSX {
@@ -13,12 +12,12 @@ declare global {
 
 export function Layout() {
 	return (
-		<div className="layout__container">
+		<div className='layout__container'>
 			<Navbar />
-			<aside className="container__aside">
+			<aside className='container__aside'>
 				<Sidebar />
 			</aside>
-			<beyond-layout-children class="main__container" />
+			<beyond-layout-children class='main__container' />
 			{/* <Footer /> */}
 		</div>
 	);

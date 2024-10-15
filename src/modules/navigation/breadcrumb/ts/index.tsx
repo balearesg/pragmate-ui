@@ -7,7 +7,6 @@ import { Item } from './item';
 
 export /* bundle */ function BreadCrumb({ items, separator = '/', className, children, ...props }: IProps) {
 	const [currentRouting, setCurrentRouting] = React.useState(routing.uri.pathname);
-
 	useBinder([routing], () => setCurrentRouting(routing.uri.pathname));
 	const total = items.length;
 	const breadcrumbOutput = items.map(([label, link, onClick], index) => (
@@ -19,6 +18,7 @@ export /* bundle */ function BreadCrumb({ items, separator = '/', className, chi
 			separator={separator}
 			link={link}
 			label={label}
+			last={total === index + 1}
 			currentRouting={currentRouting}
 		/>
 	));

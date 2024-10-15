@@ -11,6 +11,10 @@ export /*bundle*/ function Modal(props: IModalProps) {
 	});
 	const modal: MutableRefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
 
+	React.useEffect(() => {
+		setState({ ...state, show: props.show });
+	}, [props.show]);
+
 	const close = async (event: SyntheticEvent<HTMLElement, Event>): Promise<void> => {
 		if (event) event.stopPropagation();
 

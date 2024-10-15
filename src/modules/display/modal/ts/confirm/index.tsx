@@ -9,7 +9,7 @@ export /*bundle*/ const ConfirmModal = (properties: IConfirmModalProps): JSX.Ele
 		fetching?: boolean;
 	};
 	const [state, setState] = React.useState<state>({ fetching: false });
-	const { text, title, onCancel, centered, onClose } = properties;
+	const { text, title, onCancel, centered, onClose, show } = properties;
 	let cls: string = `pui-confirm-dialog${centered ? ' pui-confirm-dialog-centered' : ''}`;
 	if (properties.className) cls += ` ${properties.className}`;
 
@@ -27,7 +27,7 @@ export /*bundle*/ const ConfirmModal = (properties: IConfirmModalProps): JSX.Ele
 	const handleClose = onClose ?? onCancel;
 
 	return (
-		<Modal show className={cls} onClose={handleClose}>
+		<Modal show={show} className={cls} onClose={handleClose}>
 			<div className='pui-confirm-dialog-content'>
 				{title && <h3>{title}</h3>}
 				{text && <div className='pui-confirm-dialog-content__text'>{text}</div>}

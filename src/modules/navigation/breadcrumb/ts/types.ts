@@ -16,4 +16,5 @@ export interface IItem {
 	separator?: string;
 	total?: number;
 	index?: number;
+	last?: boolean;
 }
