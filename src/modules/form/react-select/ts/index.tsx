@@ -12,8 +12,7 @@ import { MobileSelect } from './mobile-select';
 export /*bundle*/
 function ReactSelect(props) {
 	let properties = { ...props };
-	let { name } = props;
-	const { ref } = useStyles();
+
 	delete properties.onChange;
 
 	return <MobileSelect {...props} />;

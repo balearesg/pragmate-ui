@@ -16,6 +16,7 @@ export function MobileSelect({ options, ...props }: ISelect) {
 			{label}
 		</option>
 	));
+
 	const attrs = { ...props };
 
 	if (props.isDisabled) attrs.disabled = true;

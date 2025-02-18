@@ -43,6 +43,9 @@
 					background-color: var(--#{$type});
 					color: $color;
 					background-color: var(--#{$type}-30);
+					svg.pui-icon {
+						fill: var(--on-#{$type});
+					}
 				}
 
 				&:disabled {
