@@ -10,69 +10,6 @@ export /*bundle*/ function Textarea(props: IProps): JSX.Element {
 	const { counter, errorMessage, autoresize = true, value = '' } = props;
 	const [state, setState] = useState<IState>({ value, errorMessage });
 
-	type linesCalculated = {
-		maxCharsPerLine: number;
-		lines: number;
-	};
-	// function calculateLines(textarea: HTMLTextAreaElement): { maxCharsPerLine: number; lines: number } {
-	// 	if (!textarea) {
-	// 		throw new Error('Input element not found.');
-	// 	}
-
-	// 	const computedStyle = globalThis.getComputedStyle(textarea);
-	// 	const elementWidth = textarea.clientWidth;
-	// 	const fontSize = computedStyle.fontSize;
-	// 	const fontFamily = computedStyle.fontFamily;
-	// 	const canvas = document.createElement('canvas');
-	// 	const context = canvas.getContext('2d');
-
-	// 	if (!context) {
-	// 		throw new Error('Unable to get canvas rendering context.');
-	// 	}
-
-	// 	context.font = `${fontSize} ${fontFamily}`;
-	// 	const averageCharWidth = context.measureText('M').width;
-	// 	const maxCharsPerLine = Math.floor(elementWidth / averageCharWidth);
-
-	// 	// Contar líneas por saltos de línea explícitos
-	// 	const linesArray = textarea.value.split('\n');
-
-	// 	// Contar la cantidad total de líneas (incluyendo vacías)
-	// 	let calculatedLines = linesArray.length;
-
-	// 	// Ajustar líneas considerando el ajuste por ancho de línea
-	// 	linesArray.forEach(line => {
-	// 		calculatedLines += Math.max(0, Math.ceil(line.length / maxCharsPerLine) - 1);
-	// 	});
-
-	// 	// Asegurar un mínimo de 2 líneas
-	// 	calculatedLines = Math.max(2, calculatedLines);
-
-	// 	// Ajustar el tamaño del textarea dinámicamente
-	// 	textarea.rows = calculatedLines;
-
-	// 	return { maxCharsPerLine, lines: calculatedLines };
-	// }
-
-	// const checkSize = () => {
-	// 	if (!autoresize) return;
-	// 	const textarea = input.current;
-
-	// 	const { offsetHeight } = textarea;
-	// 	const { lines } = calculateLines(textarea);
-	// 	const lineHeight = parseFloat(globalThis.getComputedStyle(textarea).lineHeight);
-	// 	const height = lineHeight * (lines + 1); // Example: Minimum 2 lines height
-
-	// 	textarea.style.height = (height === 1 ? height + 1 : height) + 'px';
-	// 	previousHeight = offsetHeight;
-	// };
-	// function cleanExtraNewlines(text) {
-	// 	return text.replace(/\n+$/, '\n');
-	// }
-	// /**
-	//  * If the textarea is created with a value, the height needs to be checked
-	//  */
-	// React.useEffect(checkSize, [value]);
 	React.useEffect(() => {
 		const textarea = input.current;
 		textarea.style.height = 'auto';
