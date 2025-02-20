@@ -3,6 +3,7 @@ import { DraggableList } from './draggable';
 import { IListItem, IListProps } from './types';
 import { ItemList } from './item';
 import { DraggableItem } from './item/dragable';
+import { HTMLMotionProps, motion } from 'framer-motion';
 
 export /*bundle*/ function List<T extends IListItem<any, any>>({
 	items,
@@ -21,7 +22,7 @@ export /*bundle*/ function List<T extends IListItem<any, any>>({
 		// @deprecated
 		container = 'ul',
 	} = props;
-	const Container = as || container;
+	const Container = motion[as];
 
 	const onTop = childrenPosition === 'top';
 	const ItemControl = draggable ? DraggableItem : ItemList;
@@ -62,7 +63,7 @@ export /*bundle*/ function List<T extends IListItem<any, any>>({
 	const bottom = !onTop && children ? children : null;
 
 	return (
-		<Container className={className}>
+		<Container {...(props as HTMLMotionProps<'ul'>)} className={className}>
 			{top}
 			{renderItems}
 			{bottom}

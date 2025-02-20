@@ -21,7 +21,7 @@ export /* bundle  */ function TabsContainer({
 	}
 
 	const activeIndex = tabs.includes(current) ? tabs.indexOf(current) : active;
-	console.log('estamos en', current, activeIndex, tabs, trackUrl);
+
 	const [activeTab, setActiveTab] = React.useState(activeIndex);
 	const [currentTabName, setCurrentTabName] = React.useState(current);
 	// Update active tab if `current` prop changes
