@@ -11,7 +11,7 @@ export /*bundle*/
 function Image(props: IProps = {}): JSX.Element {
 	const { className, onClick, children, sizeLoading } = props;
 
-	const { status } = useLoader(props.src);
+	const { status } = useLoader(props.src, props.onError);
 
 	let cls: string = `pui-image ${className ? ` ${className}` : ''}`;
 

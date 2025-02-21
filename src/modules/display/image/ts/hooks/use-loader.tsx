@@ -1,6 +1,6 @@
 import React from 'react';
 
-export /*bundle*/ function useLoader(src) {
+export /*bundle*/ function useLoader(src, onErrorCallback) {
 	const [status, setStatus] = React.useState<'loading' | 'ready' | 'error'>('loading');
 
 	React.useEffect(() => {
@@ -15,6 +15,7 @@ export /*bundle*/ function useLoader(src) {
 		};
 		const onError = e => {
 			setStatus('error');
+			if (onErrorCallback) onErrorCallback(e);
 		};
 
 		img.addEventListener('load', onLoad);
