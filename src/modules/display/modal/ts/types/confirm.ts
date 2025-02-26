@@ -26,7 +26,7 @@ export interface IConfirmModalProps {
 	btnCancel?: Record<string, any>;
 	children?: React.ReactNode;
 	onCancel?: () => void;
-	onConfirm?: () => void;
+	onConfirm?: (event: any) => void | Promise<void>;
 	onClose?: () => void;
 	// ... any other props needed for ConfirmModal
 }

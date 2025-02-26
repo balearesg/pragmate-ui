@@ -6,7 +6,6 @@ export /*bundle*/ function Panes({ children, className, items }: IProps) {
 	const { activeTab } = useTabsContext();
 
 	if (items) {
-		console.log('renderizando items');
 		const Control = items[activeTab];
 		return (
 			<section className={`tab-content ${className ? ` ${className}` : ''}`}>

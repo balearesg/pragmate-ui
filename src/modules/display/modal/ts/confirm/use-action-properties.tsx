@@ -23,9 +23,8 @@ export function useActionProperties(properties, setState) {
 		return async (event): Promise<void> => {
 			event.stopPropagation();
 			setState({ fetching: true });
-			await callback();
+			await callback(event);
 			setState({ fetching: false });
-			
 		};
 	};
 
