@@ -2,6 +2,7 @@ import React from 'react';
 import { useCollapsibleContext } from './context';
 import { IconButton } from 'pragmate-ui/icons';
 import type { ICollapsibleHeader } from './types';
+import clsx from 'clsx';
 
 export /*bundle */ function CollapsibleHeader({
 	children,
@@ -18,16 +19,23 @@ export /*bundle */ function CollapsibleHeader({
 
 		if (await onToggle(!open)) setOpen(!open);
 	};
-	const cls = `collapsible__header ${className ? ` ${className}` : ''} ${open ? 'open' : ''}`;
-	const clsButton = `collapsible__button circle ${open ? ' collapsible__button--opened' : ''}`;
-	const attrs: { className: string; onClick?: () => void } = { className: cls };
-	if (toggleTitle) {
-		attrs.onClick = onClick;
-	}
+
+	const cls = clsx('collapsible__header', className, { open });
+	const clsButton = clsx('collapsible__button', 'collapsible__button--circle', {
+		'collapsible__button--opened': open,
+	});
+
 	return (
-		<header {...attrs}>
+		<header className={cls} onClick={onClick} aria-expanded={open}>
 			<div className="collapsible__header-content">{children}</div>
-			{toggleable && <IconButton onClick={onClick} className={clsButton} icon={'left'} />}
+			{toggleable && (
+				<IconButton
+					className={clsButton}
+					icon="left"
+					aria-label={open ? 'Collapse section' : 'Expand section'}
+					aria-expanded={open}
+				/>
+			)}
 		</header>
 	);
 }

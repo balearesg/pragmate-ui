@@ -12,7 +12,7 @@ export /*bundle*/ function useLoader(src, onErrorCallback) {
 		const img = new globalThis.Image();
 		const onLoad = () => {
 			setStatus('ready');
-		};
+		};	
 		const onError = e => {
 			setStatus('error');
 			if (onErrorCallback) onErrorCallback(e);

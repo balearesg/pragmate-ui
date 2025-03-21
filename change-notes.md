@@ -8,3 +8,8 @@
 - Fix types errors.
 - Added Dynamic List component. This component let manage a list and add new items on it.
 - Added framer motion dependency.
+
+
+Dependencies: 
+clsx
+reactive-model
