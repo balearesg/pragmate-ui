@@ -2,8 +2,8 @@
 	@each $type in ('success', 'error', 'warning', 'info') {
 		&.alert--#{$type} {
 			color: var(--pui-on-#{$type}, var(--pui-base-#{$type}));
-			border-color: var(--pui-#{$type}-border-color, var(--pui-base-#{$type}-border-color));
-			background: var(--pui-#{$type}-container, var(--pui-base-#{$type}-container));
+			border-color: var(--#{$type}-border-color, var(--pui-base-#{$type}-border-color));
+			background: var(--#{$type}-container, var(--pui-base-#{$type}-container));
 
 			.alert-icon {
 				fill: var(--pui-#{$type}-icon-color, var(--pui-base-#{$type}-icon-color));
