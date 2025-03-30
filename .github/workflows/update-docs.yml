@@ -1,0 +1,41 @@
+name: Update Docs
+
+on:
+    push:
+        branches:
+            - deploy/web # Branch triggering the publish
+
+jobs:
+    build-and-publish:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '18' # Node.js version
+                  registry-url: 'https://registry.npmjs.org'
+
+            - name: Install BeyondJS globally
+              run: npm install -g beyond@latest
+
+            - name: Install project dependencies
+              working-directory: src
+              run: npm install
+
+            - name: Build package
+              run: beyond build --pkg=pragmate-ui --distribution=web --logs
+
+            # Step to deploy to Netlify
+            - name: Deploy to Netlify
+              uses: nwtgck/actions-netlify@v3
+              with:
+                  publish-dir: 'src/.beyond/builds/web/code'
+                  production-branch: deploy/web
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  deploy-message: 'Automated deploy from GitHub Actions'
+                  netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                  netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}

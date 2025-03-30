@@ -4,6 +4,7 @@ import { IconButton } from 'pragmate-ui/icons';
 
 export function Error() {
 	const { src, onError } = useImageContext();
+
 	const onClickError = (event: SyntheticEvent<Element, Event>): void => {
 		event.stopPropagation();
 		if (onError && typeof onError === 'function') onError(event);

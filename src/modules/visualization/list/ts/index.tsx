@@ -3,6 +3,7 @@ import { DraggableList } from './draggable';
 import { IListItem, IListProps } from './types';
 import { ItemList } from './item';
 import { DraggableItem } from './item/dragable';
+import { HTMLMotionProps, motion } from 'framer-motion';
 
 export /*bundle*/ function List<T extends IListItem<any, any>>({
 	items,
@@ -21,7 +22,7 @@ export /*bundle*/ function List<T extends IListItem<any, any>>({
 		// @deprecated
 		container = 'ul',
 	} = props;
-	const Container = as || container;
+	const Container = motion[as];
 
 	const onTop = childrenPosition === 'top';
 	const ItemControl = draggable ? DraggableItem : ItemList;
@@ -30,7 +31,7 @@ export /*bundle*/ function List<T extends IListItem<any, any>>({
 
 	if (!Array.isArray(items)) {
 		console.warn(
-			'Invalid "items" prop: Expected an array. Please review the component usage and ensure the "items" prop is correctly passed as an array.',
+			'Invalid "items" prop: Expected an array. Please review the component usage and ensure the "items" prop is correctly passed as an array.'
 		);
 		return null;
 	}
@@ -47,22 +48,22 @@ export /*bundle*/ function List<T extends IListItem<any, any>>({
 	}
 
 	const renderItems = control
-		? items.map((item, idx) => (
-				<ItemControl index={index} key={idx} specs={specs} control={control} item={item} idx={idx} />
-		  ))
+		? items.map((item, idx) => {
+				return <ItemControl index={index} key={idx} specs={specs} control={control} item={item} idx={idx} />;
+		  })
 		: items.map((item, idx) =>
 				Children.map(children, child =>
 					isValidElement(child)
 						? cloneElement(child as React.ReactElement<any>, { key: idx, index, specs, item, idx })
-						: child,
-				),
+						: child
+				)
 		  );
 
 	const top = onTop && children ? children : null;
 	const bottom = !onTop && children ? children : null;
 
 	return (
-		<Container className={className}>
+		<Container {...(props as HTMLMotionProps<'ul'>)} className={className}>
 			{top}
 			{renderItems}
 			{bottom}

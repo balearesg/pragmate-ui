@@ -4,28 +4,27 @@ import { IProps, IState } from './types';
 import { TextareaError } from './error';
 import { TextareaCounter } from './counter';
 
+let previousHeight = 0;
 export /*bundle*/ function Textarea(props: IProps): JSX.Element {
 	const input = props.ref ?? useRef();
-	const { counter, errorMessage, value = '' } = props;
+	const { counter, errorMessage, autoresize = true, value = '' } = props;
 	const [state, setState] = useState<IState>({ value, errorMessage });
 
-	const checkSize = () => {
-		const { scrollHeight, offsetHeight } = input.current;
-
-		if (scrollHeight > offsetHeight) {
-			input.current.style.height = `${scrollHeight}px`;
-		}
-	};
-	/**
-	 * If the textarea is created with a value, the height needs to be checked
-	 */
-	React.useEffect(checkSize, [value]);
+	React.useEffect(() => {
+		const textarea = input.current;
+		textarea.style.height = 'auto';
+		// Set new height based on scrollHeight
+		textarea.style.height = `${textarea.scrollHeight}px`;
+	}, [value]);
 	const handleChange = (event: ChangeEvent<HTMLTextAreaElement>): void => {
 		if (!!props.onChange && typeof props.onChange === 'function') props.onChange(event);
+
+		// const value = cleanExtraNewlines(event.target.value);
+		const value = event.target.value;
 		setState({
 			...state,
 			_hasError: false,
-			value: event.target.value,
+			value,
 		});
 	};
 
@@ -34,7 +33,7 @@ export /*bundle*/ function Textarea(props: IProps): JSX.Element {
 	cls += props.disabled ? ' disabled' : '';
 	cls += props.hasError ? ' error' : '';
 	['className', 'hasError', 'counter', 'errorMessage', 'children', 'label', 'floating'].forEach(
-		prop => delete properties[prop],
+		prop => delete properties[prop]
 	);
 	const variants = {
 		unstyled: 'pui-textarea--unstyled',

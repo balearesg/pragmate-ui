@@ -1,13 +1,23 @@
 import React from 'react';
 import { PRAGMATE_ICONS } from './icons';
 import { IIconProps, PuiIcon } from './types';
-
+import tippy from 'tippy.js';
 export /*bundle*/
 const Icon = (props: IIconProps): JSX.Element => {
-	let { icon, className, name } = props;
+	let { icon, className, name, title } = props;
 	const iconsList: PuiIcon = PRAGMATE_ICONS;
+	const ref = React.useRef(null);
 
-	if (!icon) return <div key='preload' />;
+	React.useEffect(() => {
+		// if (title === 'content-theory') console.log(4, title, ref.current);
+		if (title) {
+			tippy(ref.current, {
+				content: title,
+			});
+		}
+	}, [title]);
+
+	if (!icon) return <div key="preload" />;
 
 	let viewBox: string = '0 0 24 24';
 	name = name ? name : typeof icon === 'string' ? icon : icon.icon;
@@ -24,7 +34,7 @@ const Icon = (props: IIconProps): JSX.Element => {
 		{
 			viewBox: props.viewBox ? props.viewBox : viewBox,
 			className: !className ? 'pui-icon' : `pui-icon ${className}`,
-		},
+		}
 	);
 
 	props.title ? (properties['data-tippy-content'] = props.title) : null;
@@ -33,7 +43,7 @@ const Icon = (props: IIconProps): JSX.Element => {
 	props['data-item'] ? (properties['data-item'] = props['data-item']) : null;
 
 	return (
-		<svg {...properties}>
+		<svg {...properties} data-icon-name={name} ref={ref}>
 			<g dangerouslySetInnerHTML={{ __html: icon }} />
 		</svg>
 	);

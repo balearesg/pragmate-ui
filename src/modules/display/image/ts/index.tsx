@@ -1,23 +1,22 @@
 import React from 'react';
-import { IContext, IProps } from './interfaces';
 import { ImageContext } from './context';
 import { Error } from './error';
-import { Img } from './img';
-import { Sources } from './sources';
-import { useLoading } from './hooks/use-loading';
 import { useLoader } from './hooks/use-loader';
+import { Img } from './img';
+import { IContext, IProps } from './interfaces';
+import { Sources } from './sources';
+import { motion } from 'framer-motion';
 
 export /*bundle*/
 function Image(props: IProps = {}): JSX.Element {
 	const { className, onClick, children, sizeLoading } = props;
-	const [state, setState] = useLoading(props);
-	const { error, loaded, htmlLoaded } = state;
-	const { status } = useLoader(props.src);
+
+	const { status } = useLoader(props.src, props.onError);
 
 	let cls: string = `pui-image ${className ? ` ${className}` : ''}`;
 
-	if (!loaded && !htmlLoaded) cls += ' pui-image-preload';
-	if (error) cls += ' pui-image-error';
+	if (status === 'loading') cls += ' pui-image-preload';
+	if (status === 'error') cls += ' pui-image-error';
 	const properties: IProps = { ...props, className: cls, onClick };
 	['src', 'alt', 'onError', 'children', 'size', 'loading', 'error', 'sources', 'sizeLoading'].forEach(
 		prop => delete properties[prop]
@@ -25,14 +24,12 @@ function Image(props: IProps = {}): JSX.Element {
 
 	const value: IContext = {
 		...props,
-		state,
 		src: props.src,
 		status,
-		setState,
 	};
 	const styles: React.CSSProperties = {};
 	if (
-		(!loaded || !htmlLoaded || error) &&
+		status !== 'ready' &&
 		!!sizeLoading &&
 		typeof sizeLoading === 'object' &&
 		sizeLoading.height &&
@@ -42,14 +39,14 @@ function Image(props: IProps = {}): JSX.Element {
 		styles.width = sizeLoading.width;
 	}
 
-	const Content = error ? Error : Img;
+	const Content = status === 'error' ? Error : Img;
 	return (
 		<ImageContext.Provider value={value}>
-			<picture {...properties} style={styles} data-src={props.src}>
+			<motion.picture {...properties} style={styles} data-src={props.src}>
 				<Sources />
 				<Content {...properties} />
 				{children}
-			</picture>
+			</motion.picture>
 		</ImageContext.Provider>
 	);
 }

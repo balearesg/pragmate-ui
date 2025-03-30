@@ -50,7 +50,7 @@ export interface IListProps<T extends IListItem<any, any> = IListItem<any, any>,
 	as: keyof React.ReactHTML;
 
 	/** Deprecated: Use 'as' instead for the container. */
-	container: React.ElementType;
+	container: React.ReactHTML;
 	empty: React.ElementType;
 }
 

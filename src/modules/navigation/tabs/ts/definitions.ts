@@ -19,8 +19,11 @@ export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export interface ITabsContainerProps extends IProps {
 	active?: number;
+	current: string;
+	tabs: string[];
 	onChange?: (event, index?) => void;
 	className?: string;
 	setURL?: boolean; // todo
 	panes?: ITPane[];
+	trackUrl: boolean;
 }

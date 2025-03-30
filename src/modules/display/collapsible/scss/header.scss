@@ -2,9 +2,9 @@
 	.collapsible__header {
 		display: grid;
 		grid-template-columns: 1fr auto;
-		
+
 		flex-flow: wrap;
-		align-items: center;
+		align-items: start;
 		justify-content: space-between;
 		width: 100%;
 		cursor: pointer;
