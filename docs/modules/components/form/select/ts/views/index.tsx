@@ -1,7 +1,7 @@
 import React from 'react';
-import {Code} from 'pragmate-ui/code';
-import {implementation} from './implementation';
-import {SelectComponent} from './select';
+import { Code } from 'pragmate-ui/code';
+import { implementation } from './implementation';
+import { SelectComponent } from './select';
 
 export /*bundle*/
 function View() {

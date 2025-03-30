@@ -1,1 +1,5 @@
-["/docs/package.json", "/src/package.json"]
+[
+  "/lab/package.json",
+  "/docs/package.json",
+  "/src/package.json"
+]

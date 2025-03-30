@@ -1,8 +1,7 @@
+import { routing } from '@beyond-js/kernel/routing';
 import React from 'react';
 import { TabsContext } from './context';
-import { ITabProps, ITabsContainerProps } from './definitions';
-import { Tab } from './tab';
-import { routing } from '@beyond-js/kernel/routing';
+import { ITabsContainerProps } from './definitions';
 export /* bundle  */ function TabsContainer({
 	active = 0,
 	onChange,

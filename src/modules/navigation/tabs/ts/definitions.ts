@@ -1,6 +1,9 @@
+import React from 'react';
+
 export interface IProps {
 	children?: React.ReactNode;
 	className?: string;
+	items: React.ComponentType[];
 }
 
 export interface ITabProps extends IProps {

@@ -1,0 +1,22 @@
+{
+	"name": "pui-three-home",
+	"txt": {
+		"path": "txt",
+		"files": "*"
+	},
+	"widget": {
+		"route": "/three-home",
+		"is": "page",
+		"scss": {
+			"path": "/scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "three-home"
+		}
+	}
+}

@@ -1,6 +1,6 @@
 {
-	"name": "drawer",
-	"platforms": ["android", "web", "ios"],
+	"name": "perfect-scrollbar",
+	"platforms": ["web", "ios", "android"],
 	"code": {
 		"scss": {
 			"path": "/scss",

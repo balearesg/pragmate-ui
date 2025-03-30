@@ -1,8 +1,7 @@
 import React from 'react';
-import { useBinder } from '@beyond-js/react-18-widgets/hooks';
+import type { IProps } from './definitions';
 import { IToast, toast } from './model';
 import { Toast } from './toast';
-import type { IProps } from './definitions';
 
 type ExtendedIToast = IToast & { className?: string; position?: { [key: string]: string } };
 
@@ -13,15 +12,16 @@ export /*bundle*/ function Toasts({
 }: Partial<IProps>): JSX.Element {
 	const [items, setItems] = React.useState<Array<ExtendedIToast | undefined>>([]);
 
-	useBinder([toast], () => setItems(toast.current), 'current.toast.changed');
+	React.useEffect(() => {
+		const listener = () => setItems(toast.current);
+		toast.on('current.toast.changed', listener);
+		() => {
+			toast.off('current.toast.changed', listener);
+		};
+	}, []);
 
 	const elements = items.map((item: ExtendedIToast) => (
-		<Toast
-			key={item.id}
-			{...item}
-			className={className}
-			position={position}
-		/>
+		<Toast key={item.id} {...item} className={className} position={position} />
 	));
 
 	return (
