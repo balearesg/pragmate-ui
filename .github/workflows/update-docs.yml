@@ -23,17 +23,17 @@ jobs:
               run: npm install -g beyond@latest
 
             - name: Install project dependencies
-              working-directory: src
+              working-directory: docs
               run: npm install
 
             - name: Build package
-              run: beyond build --pkg=pragmate-ui --distribution=web --logs
+              run: beyond build --pkg=pragmate-ui-docs --distribution=web --logs
 
             # Step to deploy to Netlify
             - name: Deploy to Netlify
               uses: nwtgck/actions-netlify@v3
               with:
-                  publish-dir: 'src/.beyond/builds/web/code'
+                  publish-dir: 'docs/.beyond/builds/web/code'
                   production-branch: deploy/web
                   github-token: ${{ secrets.GITHUB_TOKEN }}
                   deploy-message: 'Automated deploy from GitHub Actions'
