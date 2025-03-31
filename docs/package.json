@@ -49,16 +49,19 @@
 		]
 	},
 	"dependencies": {
-		"@beyond-js/kernel": "~0.1.12",
-		"@beyond-js/react-18-widgets": "~1.1.4",
+		"@beyond-js/events": "^0.0.7",
+		"@beyond-js/kernel": "^0.1.12",
 		"@beyond-js/reactive": "^2.0.0",
-		"@emotion/css": "^11.11.2",
 		"clsx": "^2.1.1",
-		"framer-motion": "^10.16.4",
+		"framer-motion": "^11.0.25",
+		"is-mobile": "^4.0.0",
+		"perfect-scrollbar": "^1.5.5",
 		"prismjs": "^1.27.0",
 		"swiper": "^10.3.0",
-		"tinycolor2": "^1.6.0",
-		"tippy.js": "^6.3.7"
+		"tippy.js": "^6.3.7",
+		"@beyond-js/react-18-widgets": "~1.1.4",
+		"@emotion/css": "^11.11.2",
+		"tinycolor2": "^1.6.0"
 	},
 	"devDependencies": {
 		"@beyond-js/local": "~0.1.3",
