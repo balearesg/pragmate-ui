@@ -12,11 +12,6 @@
 			"es"
 		]
 	},
-	"libraries": {
-		"imports": [
-			"pragmate-ui"
-		]
-	},
 	"modules": {
 		"path": "modules"
 	},
@@ -52,6 +47,7 @@
 		"@beyond-js/events": "^0.0.7",
 		"@beyond-js/kernel": "^0.1.12",
 		"@beyond-js/reactive": "^2.0.0",
+		"pragmate-ui": "1.0.0-beta.7",
 		"clsx": "^2.1.1",
 		"framer-motion": "^11.0.25",
 		"is-mobile": "^4.0.0",
