@@ -1,9 +1,9 @@
-name: Publish webapp
+name: Update Docs
 
 on:
     push:
         branches:
-            - deploy/web # Change this to the branch you want to trigger the publish
+            - deploy/web # Branch triggering the publish
 
 jobs:
     build-and-publish:
@@ -16,22 +16,26 @@ jobs:
             - name: Set up Node.js
               uses: actions/setup-node@v4
               with:
-                  node-version: '18' # Specify the Node.js version you need
+                  node-version: '18' # Node.js version
                   registry-url: 'https://registry.npmjs.org'
 
             - name: Install BeyondJS globally
               run: npm install -g beyond@latest
 
-            - name: Install dependencies
-              working-directory: src
+            - name: Install project dependencies
+              working-directory: docs
               run: npm install
 
             - name: Build package
               run: beyond build --pkg=pragmate-ui-docs --distribution=web --logs
 
+            # Step to deploy to Netlify
             - name: Deploy to Netlify
-              env:
-                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }} # Add your Netlify token in GitHub secrets
-              run: |
-                  npm install -g netlify-cli # Ensure Netlify CLI is installed
-                  netlify deploy --prod --dir=./.beyond/.deploy/web --auth=$NETLIFY_AUTH_TOKEN --site=9f68faf7-2c8c-4c04-8258-fbb000813766
+              uses: nwtgck/actions-netlify@v3
+              with:
+                  publish-dir: 'docs/.beyond/builds/web/code'
+                  production-branch: deploy/web
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  deploy-message: 'Automated deploy from GitHub Actions'
+                  netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                  netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
