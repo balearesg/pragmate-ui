@@ -27,6 +27,7 @@ jobs:
               run: npm install
 
             - name: Build package
+              working-directory: ./
               run: beyond build --pkg=pragmate-ui-docs --distribution=web --logs
 
             - name: Deploy to Netlify
