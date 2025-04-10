@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ScrollContainer } from 'pragmate-ui/perfect-scrollbar';
+
 import { SectionMenu } from './section-menu';
 import { gettingStartedItems } from '../bg.getting-started';
 import { MenuHeader } from './header';
@@ -9,15 +9,15 @@ export function Sidebar() {
 	let tabIndex = 1;
 
 	return (
-		<ScrollContainer>
-			<aside className='doc__nav'>
+		<div>
+			<aside className="doc__nav">
 				<SectionMenu items={gettingStartedItems} tabIndex={tabIndex}>
-					<MenuHeader icon='setting' title='Getting Started:' />
+					<MenuHeader icon="setting" title="Getting Started:" />
 				</SectionMenu>
 				<SectionMenu items={menuItems} tabIndex={tabIndex}>
-					<MenuHeader icon='categories' title='Components:' />
+					<MenuHeader icon="categories" title="Components:" />
 				</SectionMenu>
 			</aside>
-		</ScrollContainer>
+		</div>
 	);
 }

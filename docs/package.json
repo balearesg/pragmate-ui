@@ -51,7 +51,7 @@
 	"dependencies": {
 		"@beyond-js/kernel": "~0.1.12",
 		"@beyond-js/react-18-widgets": "~1.1.4",
-		"@beyond-js/reactive": "^2.0.0",
+		"@beyond-js/reactive": "^2.0.4",
 		"@emotion/css": "^11.11.2",
 		"clsx": "^2.1.1",
 		"framer-motion": "^10.16.4",
