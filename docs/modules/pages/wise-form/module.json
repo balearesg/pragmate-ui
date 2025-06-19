@@ -1,0 +1,23 @@
+{
+  "name": "wise-form",
+  "widget": {
+    "route": "/wise-form",
+    "is": "page",
+    "layout": "pui-docs-layout",
+    "scss": {
+      "path": "/scss",
+      "files": ["*"]
+    },
+    "ts": {
+      "path": "/ts",
+      "files": ["*"]
+    },
+    "mdx": {
+      "path": "/ts",
+      "files": ["*"]
+    },
+    "element": {
+      "name": "pui-wise-form-page"
+    }
+  }
+}
