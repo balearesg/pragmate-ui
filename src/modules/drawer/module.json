@@ -1,5 +1,6 @@
 {
 	"name": "drawer",
+	"platforms": ["web", "ios", "android"],
 	"code": {
 		"scss": {
 			"path": "/scss",

@@ -6,6 +6,7 @@
 		"allowSyntheticDefaultImports": true,
 		"moduleResolution": "Node",
 		"jsx": "react",
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"types": []
 	}
 }

@@ -1,6 +1,7 @@
 export interface IProps {
 	children?: React.ReactNode;
 	className?: string;
+	items?: any;
 }
 
 export interface ITabProps extends IProps {

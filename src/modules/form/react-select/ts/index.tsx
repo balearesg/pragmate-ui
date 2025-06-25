@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { useStyles } from './use-styles';
 import { MobileSelect } from './mobile-select';
 
 /**

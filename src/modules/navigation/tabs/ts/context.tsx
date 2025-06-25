@@ -4,7 +4,7 @@ export interface ITabsContext {
 	panes: any;
 	activeTab: any;
 	setActiveTab: any;
-	trackUrl: string;
+	trackUrl: boolean;
 	onChange?: (event, index) => void;
 	current?: string;
 	currentTabName: string;
