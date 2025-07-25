@@ -5,7 +5,7 @@ import { ReactiveModel } from '@beyond-js/reactive/model';
 const SwiperCasted: typeof Swiper.Swiper = Swiper.Swiper as unknown as typeof Swiper.default;
 export class Controller extends ReactiveModel<any> {
 	#swiper;
-	declare lastIndex: any;
+	declare lastIndex: number;
 	get swiper(): any {
 		return this.#swiper;
 	}

@@ -32,6 +32,7 @@ export /* bundle  */ function TabsContainer({
 		onChange,
 		trackUrl,
 		current: currentTabName,
+		currentTabName,
 		setCurrentTabName,
 		names: tabs,
 	};

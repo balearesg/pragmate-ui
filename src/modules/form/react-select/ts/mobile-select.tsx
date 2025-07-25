@@ -1,32 +1,42 @@
-import React from 'react';
+import * as React from 'react';
 
 export interface ISelect {
-	title: string;
+	/** Texto que servirá de etiqueta accesible  */
+	label: string;
 	value: string | number;
-	onChange: (Event) => void;
-	placeholder: string;
+	onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+	placeholder?: string;
 	options: { value: string | number; label: string }[];
 	isDisabled?: boolean;
 	disabled?: boolean;
+	/** Permite sobreescribir el id si lo necesitas */
+	id?: string;
 }
 
-export function MobileSelect({ options, ...props }: ISelect) {
-	const output = options.map(({ value, label }, index) => (
-		<option title={label} key={`${value}-${index}`} value={value}>
-			{label}
-		</option>
-	));
-
-	const attrs = { ...props };
-
-	if (props.isDisabled) attrs.disabled = true;
-	['isDisabled', 'defaultOption', 'key'].forEach(item => delete attrs[item]);
+export function MobileSelect({ label, options, placeholder, id, isDisabled, disabled, ...rest }: ISelect) {
+	const selectId = id ?? React.useId(); // genera id único
 
 	return (
 		<div className="pui-mobile-select__container">
-			<select title="select" {...attrs} className="pui-mobile-select">
-				{props.placeholder && <option value="">{props.placeholder}</option>}
-				{output}
+			{/* Visiblemente oculto, pero disponible para lectores de pantalla */}
+			<label htmlFor={selectId} className="sr-only">
+				{label}
+			</label>
+
+			<select
+				id={selectId}
+				aria-label={label} // fallback por si alguien quita el <label>
+				disabled={isDisabled || disabled}
+				{...rest}
+				className="pui-mobile-select"
+			>
+				{placeholder && <option value="">{placeholder}</option>}
+
+				{options.map(({ value, label }) => (
+					<option key={value.toString()} value={value}>
+						{label}
+					</option>
+				))}
 			</select>
 		</div>
 	);

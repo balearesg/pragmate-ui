@@ -3,7 +3,7 @@ import React from 'react';
 export interface IProps {
 	children?: React.ReactNode;
 	className?: string;
-	items: React.ComponentType[];
+	items?: any;
 }
 
 export interface ITabProps extends IProps {
