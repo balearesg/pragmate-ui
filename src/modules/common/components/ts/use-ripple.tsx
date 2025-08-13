@@ -5,8 +5,6 @@ export function useRipple(title: string, ref?: React.RefObject<HTMLButtonElement
 	ref = ref ?? React.useRef<HTMLButtonElement>(null);
 
 	React.useEffect(() => {
-		console.log('useRipple effect running, title:', title, 'ref:', ref.current);
-
 		const ripple = new RippleEffect();
 		ripple.addRippleEffect(ref.current);
 	}, [title]);
