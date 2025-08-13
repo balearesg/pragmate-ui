@@ -1,0 +1,22 @@
+/*bundle*/
+.floating-ui-tooltip {
+	position: absolute;
+	background: #222;
+	color: white;
+	font-weight: bold;
+	padding: 8px 12px;
+	border-radius: 6px;
+	font-size: 14px;
+	z-index: 9999;
+	pointer-events: none;
+	white-space: nowrap;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	max-width: 200px;
+	text-align: center;
+}
+
+.floating-ui-arrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+}

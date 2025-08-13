@@ -1,29 +1,27 @@
 import React, { MouseEvent, forwardRef } from 'react';
-import tippy from 'tippy.js';
 import { routing } from '@beyond-js/kernel/routing';
 import { Icon } from './icon';
 import { RippleEffect } from 'pragmate-ui/ripple';
 import { IIconButtonProps, IIconProps } from './types';
 import { getAttributes } from './icons/html-attributes';
+import { useIconTooltip } from './use-tooltip';
 
 export /*bundle*/ const IconButton = forwardRef<HTMLButtonElement, IIconButtonProps>((props: IIconButtonProps, ref) => {
 	const { icon, onClick, viewBox, disabled, name, value, id, title, children, href, target } = props;
 
 	const buttonRef: IIconButtonProps['ref'] = React.useRef(null);
 	const rippleRef = React.useRef(null);
+
+	// Usar el hook de tooltip
+	const { tooltipJSX } = useIconTooltip(title, buttonRef);
+
 	React.useEffect(() => {
 		const ripple = new RippleEffect();
 
 		const icon = buttonRef.current?.querySelector('svg');
 		ripple.addRippleEffect(rippleRef.current);
 		// ripple.addRippleEffect(icon);
-
-		if (title) {
-			tippy(buttonRef.current, {
-				content: title,
-			});
-		}
-	}, [title]);
+	}, []);
 
 	const onClickButton = async (event: MouseEvent<HTMLButtonElement>): Promise<void> => {
 		event.preventDefault();
@@ -64,7 +62,7 @@ export /*bundle*/ const IconButton = forwardRef<HTMLButtonElement, IIconButtonPr
 
 	if (viewBox) iconAttributes.viewBox = viewBox;
 
-	title ? (attrs['data-tippy-content'] = title) : null;
+	// Title is handled by tooltip hook, no need for data attributes
 
 	const buttonAttrs = getAttributes(attrs);
 
@@ -76,20 +74,23 @@ export /*bundle*/ const IconButton = forwardRef<HTMLButtonElement, IIconButtonPr
 	};
 
 	return (
-		<button
-			id={id}
-			type={type}
-			ref={buttonRef}
-			name={name}
-			value={value}
-			disabled={disabled}
-			className={className}
-			onClick={onClickButton}
-			{...buttonAttrs}
-		>
-			<span ref={rippleRef} className="pui-icon-button-mask"></span>
-			<Icon {...iconAttributes} onClick={handleIconClick} />
-			{children}
-		</button>
+		<div style={{ position: 'relative', display: 'inline-block' }}>
+			<button
+				id={id}
+				type={type}
+				ref={buttonRef}
+				name={name}
+				value={value}
+				disabled={disabled}
+				className={className}
+				onClick={onClickButton}
+				{...buttonAttrs}
+			>
+				<span ref={rippleRef} className="pui-icon-button-mask"></span>
+				<Icon {...iconAttributes} onClick={handleIconClick} />
+				{children}
+			</button>
+			{tooltipJSX}
+		</div>
 	);
 });

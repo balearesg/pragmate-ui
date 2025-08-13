@@ -1,21 +1,16 @@
 import React from 'react';
 import { PRAGMATE_ICONS } from './icons';
 import { IIconProps, PuiIcon } from './types';
-import tippy from 'tippy.js';
+import { useIconTooltip } from './use-tooltip';
+
 export /*bundle*/
 const Icon = (props: IIconProps): JSX.Element => {
 	let { icon, className, name, title } = props;
 	const iconsList: PuiIcon = PRAGMATE_ICONS;
-	const ref = React.useRef(null);
+	const ref = React.useRef<SVGSVGElement>(null);
 
-	React.useEffect(() => {
-		// if (title === 'content-theory') console.log(4, title, ref.current);
-		if (title) {
-			tippy(ref.current, {
-				content: title,
-			});
-		}
-	}, [title]);
+	// Usar el hook de tooltip
+	const { tooltipJSX } = useIconTooltip(title, ref);
 
 	if (!icon) return <div key="preload" />;
 
@@ -37,14 +32,18 @@ const Icon = (props: IIconProps): JSX.Element => {
 		}
 	);
 
-	props.title ? (properties['data-tippy-content'] = props.title) : null;
+	// Remove title property as it's handled by tooltip hook
+	delete properties.title;
 	delete properties.icon;
 
 	props['data-item'] ? (properties['data-item'] = props['data-item']) : null;
 
 	return (
-		<svg {...properties} data-icon-name={name} ref={ref}>
-			<g dangerouslySetInnerHTML={{ __html: icon }} />
-		</svg>
+		<div style={{ position: 'relative', display: 'inline-block' }}>
+			<svg {...properties} data-icon-name={name} ref={ref}>
+				<g dangerouslySetInnerHTML={{ __html: icon }} />
+			</svg>
+			{tooltipJSX}
+		</div>
 	);
 };

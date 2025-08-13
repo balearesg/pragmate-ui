@@ -3,78 +3,89 @@ import { Icon } from 'pragmate-ui/icons';
 import { Spinner } from 'pragmate-ui/spinner';
 import { IButtonProps } from './interface';
 import { ButtonGroupContext } from '../button-group/context';
-import { useRipple } from '../use-ripple';
+import { useRipple, useTooltip } from '../use-ripple';
 
 const { forwardRef } = React;
 
-export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>(
-	(props, reference: React.RefObject<HTMLButtonElement>) => {
-		const {
-			className,
-			onClick,
-			data,
-			label,
-			title,
-			children,
-			icon,
-			loading,
-			block,
-			index,
-			fetching = false,
-			variant = 'default',
-			bordered = false,
-			sizing = 'md',
-			disabled = false,
+export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>((props, reference) => {
+	const {
+		className,
+		onClick,
+		data,
+		label,
+		title,
+		children,
+		icon,
+		loading,
+		block,
+		index,
+		fetching = false,
+		variant = 'default',
+		bordered = false,
+		sizing = 'md',
+		disabled = false,
 
-			...otherProps
-		} = props;
+		...otherProps
+	} = props;
 
-		const context = React.useContext(ButtonGroupContext);
-		const [, setProcessing] = React.useState(fetching || loading);
-		const ref = useRipple(title, reference);
-		const usingContext = typeof context?.setSelected === 'function';
-		const onClickButton = async (event: React.MouseEvent<HTMLButtonElement>): Promise<void> => {
-			try {
-				if (usingContext) {
-					context.setSelected(index);
-				}
-				if (onClick && typeof onClick === 'function') {
-					setProcessing(true);
-					//@ts-ignore
-					await onClick(event);
+	const context = React.useContext(ButtonGroupContext);
+	const [, setProcessing] = React.useState(fetching || loading);
 
-					setProcessing(false);
-					return;
-				}
-			} finally {
-				setProcessing(false);
+	// Crear una ref local
+	const localRef = React.useRef<HTMLButtonElement>(null);
+
+	// Usar useRipple solo para el efecto de ripple
+	const ref = useRipple('', localRef);
+
+	// Usar useTooltip para el tooltip
+	const { tooltipJSX } = useTooltip(title, localRef);
+
+	// Conectar la ref externa si existe
+	React.useImperativeHandle(reference, () => localRef.current!, []);
+
+	const usingContext = typeof context?.setSelected === 'function';
+	const onClickButton = async (event: React.MouseEvent<HTMLButtonElement>): Promise<void> => {
+		try {
+			if (usingContext) {
+				context.setSelected(index);
 			}
-		};
+			if (onClick && typeof onClick === 'function') {
+				setProcessing(true);
+				//@ts-ignore
+				await onClick(event);
 
-		const properties: IButtonProps = {
-			...otherProps,
-			type: props.type ? props.type : 'button',
-		};
-		if (title) properties['data-tippy-content'] = title;
-		if (data) {
-			Object.keys(data).forEach((entry: string) => {
-				properties[`data-${entry}`] = data[entry];
-			});
+				setProcessing(false);
+				return;
+			}
+		} finally {
+			setProcessing(false);
 		}
+	};
 
-		let cls = `pui-button btn-${variant}`;
-		cls += className ? ` ${className}` : '';
-		cls += bordered ? ' outline' : '';
-		cls += icon ? ' has-icon' : '';
-		cls += block ? ' btn--block' : '';
-		cls += sizing ? ` btn--${sizing}` : '';
-		cls += loading || fetching ? ' btn--loading' : '';
-		const clsLoading = `button-label ${loading || fetching ? 'button-label--loading' : ''}`;
+	const properties: IButtonProps = {
+		...otherProps,
+		type: props.type ? props.type : 'button',
+	};
+	if (data) {
+		Object.keys(data).forEach((entry: string) => {
+			properties[`data-${entry}`] = data[entry];
+		});
+	}
 
-		if (usingContext && context.selected === index) cls += ' pui-btn--active';
-		if (usingContext) properties['data-index'] = index;
+	let cls = `pui-button btn-${variant}`;
+	cls += className ? ` ${className}` : '';
+	cls += bordered ? ' outline' : '';
+	cls += icon ? ' has-icon' : '';
+	cls += block ? ' btn--block' : '';
+	cls += sizing ? ` btn--${sizing}` : '';
+	cls += loading || fetching ? ' btn--loading' : '';
+	const clsLoading = `button-label ${loading || fetching ? 'button-label--loading' : ''}`;
 
-		return (
+	if (usingContext && context.selected === index) cls += ' pui-btn--active';
+	if (usingContext) properties['data-index'] = index;
+
+	return (
+		<div style={{ position: 'relative', display: 'inline-block' }}>
 			<button
 				ref={ref}
 				className={cls}
@@ -87,6 +98,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>(
 
 				{(loading || fetching) && <Spinner type={`on-${variant}`} active={true} />}
 			</button>
-		);
-	},
-);
+			{tooltipJSX}
+		</div>
+	);
+});

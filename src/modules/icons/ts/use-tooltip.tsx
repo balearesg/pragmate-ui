@@ -1,21 +1,6 @@
 import React from 'react';
-import { RippleEffect } from 'pragmate-ui/ripple';
 
-export function useRipple(title: string, ref?: React.RefObject<HTMLButtonElement>): React.RefObject<HTMLButtonElement> {
-	ref = ref ?? React.useRef<HTMLButtonElement>(null);
-
-	React.useEffect(() => {
-		console.log('useRipple effect running, title:', title, 'ref:', ref.current);
-
-		const ripple = new RippleEffect();
-		ripple.addRippleEffect(ref.current);
-	}, [title]);
-
-	return ref;
-}
-
-// Hook separado para el tooltip que retorna el JSX del tooltip
-export function useTooltip(title: string, ref?: React.RefObject<HTMLElement>) {
+export function useIconTooltip(title: string, ref?: React.RefObject<HTMLElement | SVGSVGElement>) {
 	const [isVisible, setIsVisible] = React.useState(false);
 	const [placement, setPlacement] = React.useState('top');
 

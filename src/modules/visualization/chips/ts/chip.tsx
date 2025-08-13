@@ -1,6 +1,5 @@
 import React from 'react';
 import { RippleEffect } from 'pragmate-ui/ripple';
-import tippy from 'tippy.js';
 import { Icon } from 'pragmate-ui/icons';
 import { IChipProps } from './types';
 
@@ -10,6 +9,7 @@ export /*bundle*/ function Chip(props: ChipProps) {
     const { type, title, children, icon } = props;
     const properties = { ...props };
     const ref = React.useRef<HTMLSpanElement>(null);
+    const [showTooltip, setShowTooltip] = React.useState(false);
 
     ['children', 'type', 'className', 'variant'].forEach(key => delete properties[key]);
 
@@ -18,10 +18,16 @@ export /*bundle*/ function Chip(props: ChipProps) {
             const ripple = new RippleEffect();
             ripple.addRippleEffect(ref.current);
         }
-        if (title) tippy(ref.current);
-    }, [properties.onClick, title]);
+    }, [properties.onClick]);
 
-    if (title) properties['data-tippy-content'] = title;
+    const handleMouseEnter = () => {
+        if (title) setShowTooltip(true);
+    };
+
+    const handleMouseLeave = () => {
+        if (title) setShowTooltip(false);
+    };
+
     const variant = props.variant || props.type || 'default';
     let cls = `pui-chip pui-chip--${variant}`;
 
@@ -30,9 +36,31 @@ export /*bundle*/ function Chip(props: ChipProps) {
     }
 
     return (
-        <span ref={ref} className={cls} {...properties}>
-            {children}
-            {icon && <Icon icon={icon} />}
-        </span>
+        <div style={{ position: 'relative', display: 'inline-block' }}>
+            <span 
+                ref={ref} 
+                className={cls} 
+                {...properties}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            >
+                {children}
+                {icon && <Icon icon={icon} />}
+            </span>
+            {showTooltip && title && (
+                <div 
+                    className="floating-ui-tooltip"
+                    style={{
+                        position: 'absolute',
+                        top: '-40px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        zIndex: 9999
+                    }}
+                >
+                    {title}
+                </div>
+            )}
+        </div>
     );
 }

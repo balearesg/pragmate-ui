@@ -1,0 +1,159 @@
+/**
+ * File: ts\input\context.ts
+ */
+import * as React from 'react';
+import { IInputContextValue } from './interfaces';
+
+export const InputContext: React.Context<IInputContextValue> = React.createContext({});
+export const useInputContext = (): IInputContextValue => React.useContext(InputContext);
+
+/**
+ * File: ts\input\interfaces\index.ts
+ */
+import { InputHTMLAttributes, MutableRefObject, ReactNode } from 'react';
+
+export interface IProps extends InputHTMLAttributes<HTMLInputElement> {
+    ref?: any;
+    variant?: string;
+    icon?: string;
+    errorMessage?: string;
+    value?: string;
+    label?: any;
+    children?: ReactNode;
+    hasError?: boolean;
+    password?: boolean
+}
+
+export interface IPropsState {
+    value?: string;
+    errorMessage: string;
+    lengthMessage: string;
+    emptyMessage: string;
+    _hasError?: boolean;
+    type: InputHTMLAttributes<HTMLInputElement>['type'];
+};
+
+export interface ILabelProps {
+    position?: 'right' | 'bottom' | 'bottom-right' | 'floating';
+    children?: React.ReactNode;
+    required?: boolean;
+};
+
+export interface TState {
+    value?: string | number | readonly string[];
+    type?: InputHTMLAttributes<HTMLInputElement>['type'];
+};
+
+export interface IInputContextValue {
+    state?: TState;
+    id?: string;
+    value?: string;
+    name?: string;
+    props?: IProps;
+    icon?: string
+    setState?: any;
+    setValue?: (value) => void;
+    input?: MutableRefObject<HTMLInputElement>,
+    isDate?: boolean,
+};
+
+export interface IInputContainer {
+    className?: string;
+}
+
+/**
+ * File: ts\input\internal-props.ts
+ */
+/**
+ * Internal props of the input component.
+ * This array is used to filter the props passed to the input component.
+ */
+export const internalProps = [
+	'className',
+	'hasError',
+	'errorMessage',
+	'children',
+	'icon',
+	'label',
+	'password',
+	'loading',
+	'variant',
+	'type',
+
+	'size',
+	'loading',
+	'error',
+	'sources',
+	'onError',
+];
+
+function generateAttributes(attrs, toRemove = []) {
+	const propsToRemove = [...internalProps, ...toRemove];
+	const properties = { ...attrs };
+	propsToRemove.forEach(prop => delete properties[prop]);
+
+	return properties;
+}
+
+/**
+ * File: ts\model\manager.ts
+ */
+export class SelectorManager {
+	static #instance;
+
+	#selector;
+	get selector() {
+		return this.#selector;
+	}
+	constructor(selector) {}
+
+	validate() {}
+	static get(selector) {
+		if (!this.#instance) {
+			this.#instance = new SelectorManager(selector);
+		}
+		return this.#instance;
+	}
+}
+
+/**
+ * File: ts\textarea\types.ts
+ */
+import { TextareaHTMLAttributes, ReactNode } from 'react';
+export interface IProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+	ref?: any;
+	errorMessage?: string;
+	max?: string;
+	lengthMessage?: string;
+	hasError?: boolean;
+	label?: string;
+	autoresize?: boolean;
+	value?: string;
+	counter?: boolean;
+	children?: ReactNode;
+	variant?: string;
+	floating?: boolean;
+}
+
+export type TValue = string | number | readonly string[];
+export interface IState {
+	value?: TValue;
+	errorMessage: string;
+	_hasError?: boolean;
+}
+
+/**
+ * File: ts\types\index.ts
+ */
+import { IPUIProps } from 'pragmate-ui/base';
+export interface IFormProps extends IPUIProps<HTMLInputElement> {
+	disabled?: boolean;
+	label?: string;
+	name?: string;
+	sizing?: 'small' | 'medium' | 'large'; // Validate if size or sizing
+}
+
+export interface IFormCheckableProps extends IFormProps {
+	checked?: boolean;
+}
+

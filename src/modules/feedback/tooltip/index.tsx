@@ -1,14 +1,16 @@
 import React from 'react';
-import tippy from 'tippy.js';
-import {ITippySettings} from './ITippySettings';
+
 interface IProps {
 	children: React.ReactNode;
-	content: ITippySettings['content'];
-	placement?: ITippySettings['placement'];
-	settings?: ITippySettings;
+	content: string | React.ReactNode;
+	placement?: string;
+	settings?: any;
 }
+
 export /*bundle*/ function Tooltip({children, content, placement = 'top', settings = {}}: IProps) {
-	const ref = React.useRef(null);
+	const ref = React.useRef<HTMLSpanElement>(null);
+	const [showTooltip, setShowTooltip] = React.useState(false);
+	
 	const placements: string[] = [
 		'top',
 		'top-start',
@@ -28,14 +30,52 @@ export /*bundle*/ function Tooltip({children, content, placement = 'top', settin
 	];
 
 	if (!placements.includes(placement)) placement = 'top';
-	const specs: ITippySettings = {placement, content};
-	React.useEffect(() => {
-		tippy(ref.current, specs);
-	}, []);
+
+	const handleMouseEnter = () => {
+		setShowTooltip(true);
+	};
+
+	const handleMouseLeave = () => {
+		setShowTooltip(false);
+	};
+
+	const getTooltipPosition = () => {
+		switch (placement) {
+			case 'top':
+				return { top: '-40px', left: '50%', transform: 'translateX(-50%)' };
+			case 'bottom':
+				return { bottom: '-40px', left: '50%', transform: 'translateX(-50%)' };
+			case 'left':
+				return { left: '-120px', top: '50%', transform: 'translateY(-50%)' };
+			case 'right':
+				return { right: '-120px', top: '50%', transform: 'translateY(-50%)' };
+			default:
+				return { top: '-40px', left: '50%', transform: 'translateX(-50%)' };
+		}
+	};
 
 	return (
-		<span ref={ref} className="pui-tooltip">
-			{children}
-		</span>
+		<div style={{ position: 'relative', display: 'inline-block' }}>
+			<span 
+				ref={ref} 
+				className="pui-tooltip"
+				onMouseEnter={handleMouseEnter}
+				onMouseLeave={handleMouseLeave}
+			>
+				{children}
+			</span>
+			{showTooltip && content && (
+				<div 
+					className="floating-ui-tooltip"
+					style={{
+						position: 'absolute',
+						zIndex: 9999,
+						...getTooltipPosition()
+					}}
+				>
+					{content}
+				</div>
+			)}
+		</div>
 	);
 }

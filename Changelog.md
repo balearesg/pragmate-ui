@@ -1,6 +1,23 @@
 # Changelog
 
-## [1.0.0-beta.1] - 2024-06-30
+## [1.0.3] - 2025-08-12
+
+### Added
+
+-   **@floating-ui/dom**: Added as dependency for new tooltip implementation
+-   **clsx**: Added as dependency for conditional class names
+
+### Changed
+
+-   **Tooltip Implementation**: Adjusted Icons and Button components to use new tooltip library implementation, making
+    tooltip functionality 100% compatible with island architecture without requiring CSS in global HTML scope
+
+### Removed
+
+-   **tippy.js**: Removed library dependency
+-   **is-mobile**: Removed library dependency
+
+## [1.0.2] - 2024-06-30
 
 ### Added
 
