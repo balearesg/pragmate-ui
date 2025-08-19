@@ -3,7 +3,7 @@ import { Icon } from 'pragmate-ui/icons';
 import { Spinner } from 'pragmate-ui/spinner';
 import { IButtonProps } from './interface';
 import { ButtonGroupContext } from '../button-group/context';
-import { useRipple, useTooltip } from '../use-ripple';
+import { useRipple } from '../use-ripple';
 
 const { forwardRef } = React;
 
@@ -36,9 +36,6 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>((pr
 
 	// Usar useRipple solo para el efecto de ripple
 	const ref = useRipple('', localRef);
-
-	// Usar useTooltip para el tooltip
-	const { tooltipJSX } = useTooltip(title, localRef);
 
 	// Conectar la ref externa si existe
 	React.useImperativeHandle(reference, () => localRef.current!, []);
