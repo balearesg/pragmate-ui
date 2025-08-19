@@ -85,20 +85,17 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>((pr
 	if (usingContext) properties['data-index'] = index;
 
 	return (
-		<div style={{ position: 'relative', display: 'inline-block' }}>
-			<button
-				ref={ref}
-				className={cls}
-				onClick={onClickButton}
-				disabled={loading || fetching || disabled}
-				{...properties}
-			>
-				{icon && <Icon icon={icon} />}
-				{label || (children && <div className={clsLoading}>{label || children}</div>)}
+		<button
+			ref={ref}
+			className={cls}
+			onClick={onClickButton}
+			disabled={loading || fetching || disabled}
+			{...properties}
+		>
+			{icon && <Icon icon={icon} />}
+			{label || (children && <div className={clsLoading}>{label || children}</div>)}
 
-				{(loading || fetching) && <Spinner type={`on-${variant}`} active={true} />}
-			</button>
-			{tooltipJSX}
-		</div>
+			{(loading || fetching) && <Spinner type={`on-${variant}`} active={true} />}
+		</button>
 	);
 });

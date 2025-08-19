@@ -1,6 +1,6 @@
 {
 	"name": "pragmate-ui",
-	"version": "1.0.3",
+	"version": "1.0.7",
 	"description": "An advanced, on-demand React UI library optimized for BeyondJS. Pragmate UI provides modular, responsive, and accessible components with a focus on efficient bundle sizes and a streamlined development process.",
 	"keywords": [
 		"react",
@@ -75,6 +75,7 @@
 		"framer-motion": "^11.0.25",
 		"perfect-scrollbar": "^1.5.5",
 		"prismjs": "^1.27.0",
+		"tippy.js": "^6.3.7",
 		"swiper": "^10.3.0"
 	},
 	"devDependencies": {
