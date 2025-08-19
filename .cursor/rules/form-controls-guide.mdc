@@ -1,0 +1,286 @@
+# Pragmate UI Form Controls Guide
+
+## Overview
+
+This guide explains how to use all the form control components available in Pragmate UI for building forms. All
+components follow the beyond.js architecture and use the `/*bundle*/` magic comment.
+
+## Core Form Component
+
+### Form Container
+
+[form.tsx](mdc:src/modules/form/controls/ts/form.tsx) - The main form wrapper that handles form submission and prevents
+default browser behavior.
+
+**Usage:**
+
+```tsx
+<Form onSubmit={handleSubmit}>{/* form controls go here */}</Form>
+```
+
+**Features:**
+
+-   Automatically prevents default form submission
+-   Stops event propagation
+-   Accepts all standard HTML form attributes
+-   Provides `onSubmit` callback for custom handling
+
+## Input Controls
+
+### Input Component
+
+[input/index.tsx](mdc:src/modules/form/controls/ts/input/index.tsx) - Versatile input component with multiple variants
+and validation support.
+
+**Variants:**
+
+-   `unstyled` - Basic input without styling
+-   `floating` - Material Design floating label style
+-   Default - Standard styled input
+
+**Features:**
+
+-   Multiple input types (text, password, date, time, etc.)
+-   Icon support with floating variant
+-   Built-in error handling and display
+-   Controlled and uncontrolled modes
+-   Date input special handling
+-   Pattern validation support
+
+**Usage Examples:**
+
+```tsx
+// Basic input
+<Input
+  type="text"
+  label="Username"
+  required
+  placeholder="Enter username"
+/>
+
+// Floating label with icon
+<Input
+  type="email"
+  variant="floating"
+  label="Email"
+  icon="email"
+/>
+
+// With validation
+<Input
+  type="password"
+  label="Password"
+  hasError={true}
+  errorMessage="Password is required"
+/>
+
+// Date input
+<Input
+  type="date"
+  label="Birth Date"
+/>
+```
+
+### Textarea Component
+
+[textarea/index.tsx](mdc:src/modules/form/controls/ts/textarea/index.tsx) - Multi-line text input with auto-resize and
+counter support.
+
+**Features:**
+
+-   Auto-resize functionality (can be disabled)
+-   Character counter
+-   Error handling
+-   Multiple variants (unstyled, floating)
+-   Required field indication
+
+**Usage:**
+
+```tsx
+<Textarea label="Description" placeholder="Enter description" counter={true} maxLength={500} variant="floating" />
+```
+
+### Select Component
+
+[select/index.tsx](mdc:src/modules/form/controls/ts/select/index.tsx) - Dropdown selection component.
+
+**Features:**
+
+-   Options array support
+-   Custom option rendering
+-   Label support
+-   Unique ID generation
+
+**Usage:**
+
+```tsx
+<Select
+	label="Country"
+	options={[
+		{ value: 'us', label: 'United States' },
+		{ value: 'ca', label: 'Canada' },
+	]}
+/>
+```
+
+## Checkable Controls
+
+### Checkbox Component
+
+[checkbox/index.tsx](mdc:src/modules/form/controls/ts/checkbox/index.tsx) - Checkbox input with custom styling.
+
+**Features:**
+
+-   Custom SVG checkmark
+-   Label support
+-   Disabled state
+-   Click event handling
+
+**Usage:**
+
+```tsx
+<Checkbox label="Accept terms" checked={accepted} onChange={handleChange} />
+```
+
+### Radio Component
+
+[radio.tsx](mdc:src/modules/form/controls/ts/radio.tsx) - Radio button input.
+
+**Features:**
+
+-   Custom styling
+-   Label support
+-   Click event handling
+-   Group support (use same name attribute)
+
+**Usage:**
+
+```tsx
+<Radio
+  name="gender"
+  value="male"
+  label="Male"
+  onChange={handleChange}
+/>
+<Radio
+  name="gender"
+  value="female"
+  label="Female"
+  onChange={handleChange}
+/>
+```
+
+### Switch Component
+
+[switch.tsx](mdc:src/modules/form/controls/ts/switch.tsx) - Toggle switch component.
+
+**Features:**
+
+-   Multiple variants (primary, secondary, etc.)
+-   Size options (xs, sm, md, lg, xl)
+-   Custom styling
+-   Controlled state
+
+**Usage:**
+
+```tsx
+<Switch checked={enabled} onChange={handleToggle} variant="primary" sizing="md" />
+```
+
+## Form Building Patterns
+
+### Basic Form Structure
+
+```tsx
+<Form onSubmit={handleSubmit}>
+	<Input type="text" label="Full Name" required variant="floating" />
+
+	<Input type="email" label="Email" required variant="floating" />
+
+	<Textarea label="Message" placeholder="Your message here" counter={true} />
+
+	<Select label="Category" options={categories} />
+
+	<div className="checkbox-group">
+		<Checkbox label="Subscribe to newsletter" checked={subscribed} onChange={handleSubscribe} />
+	</div>
+
+	<Button type="submit" variant="primary">
+		Submit
+	</Button>
+</Form>
+```
+
+### Validation Patterns
+
+```tsx
+// Client-side validation
+<Input
+  type="email"
+  label="Email"
+  hasError={!isValidEmail}
+  errorMessage={emailError}
+  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+/>
+
+// Controlled validation
+<Input
+  type="password"
+  label="Password"
+  hasError={passwordError}
+  errorMessage={passwordErrorMessage}
+  value={password}
+  onChange={handlePasswordChange}
+/>
+```
+
+### Form State Management
+
+```tsx
+const [formData, setFormData] = useState({
+	name: '',
+	email: '',
+	message: '',
+	category: '',
+	subscribed: false,
+});
+
+const handleInputChange = (field, value) => {
+	setFormData(prev => ({
+		...prev,
+		[field]: value,
+	}));
+};
+
+const handleSubmit = event => {
+	event.preventDefault();
+	// Process form data
+	console.log(formData);
+};
+```
+
+## Best Practices
+
+1. **Use appropriate variants** for your design system
+2. **Implement proper validation** with error states
+3. **Group related controls** logically
+4. **Use consistent labeling** across all form controls
+5. **Handle form submission** properly with the Form component
+6. **Provide clear error messages** for validation failures
+7. **Use controlled components** when you need form state management
+8. **Implement accessibility features** like proper labels and ARIA attributes
+
+## Component Dependencies
+
+All form controls extend from the base Pragmate UI interfaces:
+
+-   [types/index.ts](mdc:src/modules/form/controls/ts/types/index.ts) - Common form interfaces
+-   `IPUIProps` from `pragmate-ui/base` - Base component properties
+-   Context providers for complex input components
+
+## Styling
+
+Form controls use SCSS modules located in [scss/](mdc:src/modules/form/controls/scss/) directory. Each component has its
+own stylesheet for customization. description: globs: alwaysApply: false
+
+---

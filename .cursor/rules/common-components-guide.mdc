@@ -1,0 +1,378 @@
+# Pragmate UI Common Components Guide
+
+## Overview
+
+This guide explains how to use all the common components available in Pragmate UI. These components provide fundamental
+UI elements that can be used throughout your application. All components follow the beyond.js architecture and use the
+`/*bundle*/` magic comment.
+
+## Button Components
+
+### Button Component
+
+[button/button.tsx](mdc:src/modules/common/components/ts/button/button.tsx) - Versatile button component with multiple
+variants and states.
+
+**Variants:**
+
+-   `default` - Standard button styling
+-   `primary` - Primary action button
+-   `secondary` - Secondary action button
+-   `tertiary` - Tertiary action button
+
+**Sizing Options:**
+
+-   `xs` - Extra small
+-   `sm` - Small
+-   `md` - Medium (default)
+-   `lg` - Large
+-   `xl` - Extra large
+
+**Features:**
+
+-   Icon support (left side)
+-   Loading states with spinner
+-   Ripple effect on click
+-   Tooltip support
+-   Block layout option
+-   Bordered variant
+-   Disabled state
+-   Button group integration
+
+**Usage Examples:**
+
+```tsx
+// Basic button
+<Button onClick={handleClick}>
+  Click me
+</Button>
+
+// Primary button with icon
+<Button
+  variant="primary"
+  icon="arrow-right"
+  onClick={handleSubmit}
+>
+  Submit
+</Button>
+
+// Loading button
+<Button
+  loading={true}
+  variant="primary"
+  onClick={handleAsyncAction}
+>
+  Processing...
+</Button>
+
+// Block button
+<Button
+  block={true}
+  variant="secondary"
+  onClick={handleAction}
+>
+  Full Width Button
+</Button>
+
+// Bordered button
+<Button
+  bordered={true}
+  variant="primary"
+  sizing="lg"
+>
+  Large Bordered Button
+</Button>
+
+// With tooltip
+<Button
+  title="This button does something special"
+  onClick={handleSpecialAction}
+>
+  Special Action
+</Button>
+```
+
+### Button Group Component
+
+[button-group/](mdc:src/modules/common/components/ts/button-group/) - Container for grouping related buttons.
+
+**Features:**
+
+-   Selection state management
+-   Active button highlighting
+-   Context-based button coordination
+
+**Usage:**
+
+```tsx
+<ButtonGroup>
+	<Button index={0} onClick={handleOption1}>
+		Option 1
+	</Button>
+	<Button index={1} onClick={handleOption2}>
+		Option 2
+	</Button>
+	<Button index={2} onClick={handleOption3}>
+		Option 3
+	</Button>
+</ButtonGroup>
+```
+
+## Interactive Components
+
+### Spinner Component
+
+[spinner.tsx](mdc:src/modules/common/components/ts/spinner.tsx) - Loading indicator with multiple variants.
+
+**Size Options:**
+
+-   `xs` - Extra small
+-   `md` - Medium
+-   `lg` - Large
+-   `xl` - Extra large
+
+**Type Options:**
+
+-   `on-primary` - For use on primary backgrounds
+-   `on-secondary` - For use on secondary backgrounds
+-   `on-surface` - For use on surface backgrounds
+-   `on-error` - For use on error backgrounds
+-   `primary` - Primary color spinner
+-   `secondary` - Secondary color spinner
+-   `tertiary` - Tertiary color spinner
+
+**Features:**
+
+-   Custom color support
+-   Active/inactive states
+-   SVG-based animation
+-   Multiple size variants
+
+**Usage Examples:**
+
+```tsx
+// Basic spinner
+<Spinner active={true} />
+
+// Large primary spinner
+<Spinner
+  active={true}
+  size="lg"
+  type="primary"
+/>
+
+// Custom colored spinner
+<Spinner
+  active={true}
+  color="#ff6b6b"
+  size="xl"
+/>
+
+// Context-aware spinner
+<Spinner
+  active={isLoading}
+  type="on-primary"
+/>
+```
+
+### Link Component
+
+[link.tsx](mdc:src/modules/common/components/ts/link.tsx) - Navigation link component.
+
+**Features:**
+
+-   Internal and external link support
+-   Target attribute handling
+-   Rel attribute for security
+-   Custom styling support
+
+**Usage:**
+
+```tsx
+// Internal link
+<Link href="/dashboard">
+  Go to Dashboard
+</Link>
+
+// External link with security
+<Link href="https://example.com" external>
+  Visit Example
+</Link>
+
+// Custom styled link
+<Link
+  href="/profile"
+  className="custom-link"
+>
+  Profile
+</Link>
+```
+
+## Container Components
+
+### Responsive Container
+
+[responsive-container.tsx](mdc:src/modules/common/components/ts/responsive-container.tsx) - Responsive wrapper
+component.
+
+**Features:**
+
+-   Responsive breakpoint handling
+-   Conditional rendering based on screen size
+-   Custom breakpoint definitions
+
+**Usage:**
+
+```tsx
+<ResponsiveContainer breakpoint="md" mobile={<MobileView />} desktop={<DesktopView />} />
+```
+
+### Conditional Container
+
+[conditional-container.tsx](mdc:src/modules/common/components/ts/conditional-container.tsx) - Conditional rendering
+wrapper.
+
+**Features:**
+
+-   Boolean-based conditional rendering
+-   Fallback content support
+-   Clean conditional logic
+
+**Usage:**
+
+```tsx
+<ConditionalContainer condition={isLoggedIn} true={<UserDashboard />} false={<LoginPrompt />} />
+```
+
+### HTML Wrapper
+
+[html-wrapper.tsx](mdc:src/modules/common/components/ts/html-wrapper.tsx) - HTML element wrapper with custom attributes.
+
+**Features:**
+
+-   Dynamic HTML tag rendering
+-   Custom attribute injection
+-   Flexible element creation
+
+**Usage:**
+
+```tsx
+<HtmlWrapper tag="section" className="content-section" data-testid="main-content">
+	<h1>Section Title</h1>
+	<p>Section content...</p>
+</HtmlWrapper>
+```
+
+## Utility Hooks
+
+### useRipple Hook
+
+[use-ripple.tsx](mdc:src/modules/common/components/ts/use-ripple.tsx) - Ripple effect hook for interactive elements.
+
+**Features:**
+
+-   Click ripple animation
+-   Customizable ripple behavior
+-   Ref management
+-   Touch event support
+
+**Usage:**
+
+```tsx
+const MyButton = () => {
+	const buttonRef = useRef(null);
+	const rippleRef = useRipple('', buttonRef);
+
+	return (
+		<button ref={rippleRef} onClick={handleClick}>
+			Click for ripple effect
+		</button>
+	);
+};
+```
+
+### useTooltip Hook
+
+[use-ripple.tsx](mdc:src/modules/common/components/ts/use-ripple.tsx) - Tooltip functionality hook.
+
+**Features:**
+
+-   Hover tooltip display
+-   Position management
+-   Content customization
+-   Accessibility support
+
+**Usage:**
+
+```tsx
+const MyComponent = () => {
+	const elementRef = useRef(null);
+	const { tooltipJSX } = useTooltip('Helpful information', elementRef);
+
+	return (
+		<div>
+			<span ref={elementRef}>Hover me</span>
+			{tooltipJSX}
+		</div>
+	);
+};
+```
+
+## Component Composition Patterns
+
+### Button with Loading State
+
+```tsx
+const SubmitButton = ({ onSubmit, isSubmitting }) => (
+	<Button variant="primary" loading={isSubmitting} onClick={onSubmit} disabled={isSubmitting}>
+		{isSubmitting ? 'Submitting...' : 'Submit'}
+	</Button>
+);
+```
+
+### Interactive Card with Ripple
+
+```tsx
+const InteractiveCard = ({ children, onClick }) => {
+	const cardRef = useRef(null);
+	const rippleRef = useRipple('', cardRef);
+
+	return (
+		<div ref={rippleRef} className="card interactive" onClick={onClick}>
+			{children}
+		</div>
+	);
+};
+```
+
+### Responsive Navigation
+
+```tsx
+const Navigation = () => <ResponsiveContainer breakpoint="lg" mobile={<MobileNav />} desktop={<DesktopNav />} />;
+```
+
+## Best Practices
+
+1. **Use appropriate button variants** for different action types
+2. **Implement loading states** for async operations
+3. **Provide meaningful tooltips** for complex interactions
+4. **Use responsive containers** for mobile-first design
+5. **Implement proper accessibility** with ARIA labels
+6. **Handle conditional rendering** cleanly with ConditionalContainer
+7. **Use ripple effects** sparingly for enhanced UX
+8. **Group related buttons** logically with ButtonGroup
+
+## Component Dependencies
+
+All common components extend from the base Pragmate UI interfaces:
+
+-   `IPUIProps` from `pragmate-ui/base` - Base component properties
+-   [button/interface.ts](mdc:src/modules/common/components/ts/button/interface.ts) - Button-specific interfaces
+-   Context providers for complex components
+
+## Styling
+
+Common components use SCSS modules located in [scss/](mdc:src/modules/common/components/scss/) directory. Each component
+has its own stylesheet for customization and theming. description: globs: alwaysApply: false
+
+---

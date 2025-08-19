@@ -1,0 +1,125 @@
+# Pragmate UI Component Architecture Overview
+
+## Project Structure
+
+Pragmate UI is built using the beyond.js architecture with a modular component system. The main components are organized
+into two key areas:
+
+### Form Controls Module
+
+[src/modules/form/controls/](mdc:src/modules/form/controls/) - Complete form building system
+
+-   **Core Components**: Form wrapper, Input, Textarea, Select
+-   **Checkable Controls**: Checkbox, Radio, Switch
+-   **Validation**: Built-in error handling and pattern validation
+-   **Variants**: Multiple styling options (unstyled, floating, etc.)
+
+### Common Components Module
+
+[src/modules/common/components/](mdc:src/modules/common/components/) - Fundamental UI elements
+
+-   **Interactive Elements**: Button, Link, Spinner
+-   **Container Components**: ResponsiveContainer, ConditionalContainer
+-   **Utility Hooks**: useRipple, useTooltip
+-   **Layout Helpers**: ButtonGroup, HTML Wrapper
+
+## Key Architectural Principles
+
+### 1. Beyond.js Integration
+
+-   All components use the `/*bundle*/` magic comment for proper bundling
+-   Bare specifier imports (e.g., `pragmate-ui/base`)
+-   Module-based architecture with clear dependencies
+
+### 2. Component Composition
+
+Form controls and common components work together seamlessly:
+
+```tsx
+// Example: Complete form with common components
+<Form onSubmit={handleSubmit}>
+	<Input type="text" label="Username" variant="floating" />
+
+	<Button type="submit" variant="primary" loading={isSubmitting}>
+		Submit
+	</Button>
+</Form>
+```
+
+### 3. Consistent Interface Patterns
+
+-   All components extend `IPUIProps` from the base module
+-   Standardized prop interfaces for consistency
+-   TypeScript support throughout the component system
+
+## Component Relationships
+
+### Form Controls → Common Components
+
+-   **Form** uses **Button** for submission
+-   **Input** can integrate with **Spinner** for loading states
+-   **Select** can use **Button** for custom dropdown triggers
+
+### Common Components → Form Controls
+
+-   **Button** can trigger form validation
+-   **ResponsiveContainer** can wrap entire forms
+-   **ConditionalContainer** can show/hide form sections
+
+## Development Workflow
+
+### 1. Form Building
+
+1. Start with the **Form** component as the container
+2. Add **Input**, **Textarea**, **Select** controls as needed
+3. Use **Checkbox**, **Radio**, **Switch** for user choices
+4. Include **Button** components for actions
+
+### 2. Component Enhancement
+
+1. Use **useRipple** for interactive feedback
+2. Implement **useTooltip** for user guidance
+3. Add **Spinner** for loading states
+4. Apply responsive design with **ResponsiveContainer**
+
+### 3. State Management
+
+1. Use controlled components for form data
+2. Implement validation with error states
+3. Handle loading states with spinners
+4. Manage conditional rendering with **ConditionalContainer**
+
+## Best Practices Summary
+
+### Form Controls
+
+-   Use appropriate input variants for your design system
+-   Implement proper validation with error states
+-   Group related controls logically
+-   Handle form submission properly
+
+### Common Components
+
+-   Choose appropriate button variants for action types
+-   Implement loading states for async operations
+-   Use responsive containers for mobile-first design
+-   Apply ripple effects sparingly for enhanced UX
+
+### Integration
+
+-   Maintain consistent styling across form and common components
+-   Use common components to enhance form functionality
+-   Implement proper accessibility throughout
+-   Follow the beyond.js architecture patterns
+
+## File References
+
+-   **Form Controls**: [src/modules/form/controls/](mdc:src/modules/form/controls/)
+-   **Common Components**: [src/modules/common/components/](mdc:src/modules/common/components/)
+-   **Base Module**: [src/modules/base/](mdc:src/modules/base/)
+-   **Module Configuration**: [beyond.json](mdc:beyond.json)
+
+This architecture provides a robust foundation for building complex forms and user interfaces while maintaining
+consistency and reusability across your application. description: globs: alwaysApply: false
+
+---
