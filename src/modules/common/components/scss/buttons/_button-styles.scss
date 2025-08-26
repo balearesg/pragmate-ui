@@ -9,8 +9,8 @@
 			&:hover:not(:disabled),
 			&.pui-btn--active,
 			&:focus {
-				background-color: var(--#{$type}-30);
-				color: var(--#{$type}-90);
+				background-color: var(--#{$type}-hover);
+				color: var(--#{$type}-on-hover);
 			}
 
 			/**
@@ -42,7 +42,7 @@
 				&:hover:not(:disabled) {
 					background-color: var(--#{$type});
 					color: $color;
-					background-color: var(--#{$type}-30);
+					background-color: var(--#{$type}-hover);
 					svg.pui-icon {
 						fill: var(--on-#{$type});
 					}

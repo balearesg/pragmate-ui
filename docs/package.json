@@ -55,7 +55,7 @@
 		"@beyond-js/reactive": "^2.1.0",
 		"@emotion/css": "^11.11.2",
 		"@floating-ui/dom": "^1.7.3",
-		"@popperjs/core": "^2.11.8",
+		"@popperjs/core": "^2.11.8",	
 		"clsx": "^2.1.1",
 		"framer-motion": "^10.16.4",
 		"perfect-scrollbar": "^1.5.5",
@@ -66,7 +66,11 @@
 		"react-stately": "^3.40.0",
 		"swiper": "^10.3.0",
 		"tinycolor2": "^1.6.0",
-
+		"tippy.js": "^6.3.7"
+	},
+	"overrides": {
+		"react": "18.2.0",
+		"react-dom": "18.2.0"
 	},
 	"devDependencies": {
 		"@beyond-js/local": "~0.1.3",

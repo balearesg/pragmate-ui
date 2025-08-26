@@ -10,14 +10,14 @@ info;
 
 	@each $type in $variants-switch {
 		&__label.#{$type} {
-			border: 1px solid var(--#{$type}-40);
+			border: 1px solid var(--#{$type}-400);
 			.label__btn--slider {
-				background-color: var(--#{$type}-40);
+				background-color: var(--#{$type}-400);
 			}
 		}
 		&__label.active.#{$type} {
 			border-color: var(--#{$type});
-			background: var(--#{$type}-30);
+			background: var(--#{$type}-300);
 
 			.label__btn--slider {
 				background: var(--#{$type});

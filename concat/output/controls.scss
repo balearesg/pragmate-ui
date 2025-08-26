@@ -305,7 +305,7 @@ $inputs-date: 'date', 'week', 'month', 'time', 'datetime-local';
 		position: absolute;
 		bottom: -1.25rem;
 		font-size: 0.75rem;
-		color: var(--error-40);
+		color: var(--error-400);
 		&.right {
 			right: 0;
 		}
@@ -683,14 +683,14 @@ info;
 
 	@each $type in $variants-switch {
 		&__label.#{$type} {
-			border: 1px solid var(--#{$type}-40);
+			border: 1px solid var(--#{$type}-400);
 			.label__btn--slider {
-				background-color: var(--#{$type}-40);
+				background-color: var(--#{$type}-400);
 			}
 		}
 		&__label.active.#{$type} {
 			border-color: var(--#{$type});
-			background: var(--#{$type}-30);
+			background: var(--#{$type}-300);
 
 			.label__btn--slider {
 				background: var(--#{$type});
@@ -783,7 +783,7 @@ $placeholder-devices: '::-webkit-input-', '::-moz-', ':-ms-input-', '::-ms-input
 			color: var(--warning);
 		}
 		&.pui-textarea-counter--danger {
-			color: var(--error-50);
+			color: var(--error-500);
 		}
 	}
 }
