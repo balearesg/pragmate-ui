@@ -65,8 +65,7 @@
 		"react-popper": "^2.3.0",
 		"react-stately": "^3.40.0",
 		"swiper": "^10.3.0",
-		"tinycolor2": "^1.6.0",
-
+		"tinycolor2": "^1.6.0"
 	},
 	"devDependencies": {
 		"@beyond-js/local": "~0.1.3",

@@ -1,5 +1,5 @@
+import { Icon } from 'pragmate-ui/icons';
 import React from 'react';
-import { IconButton } from 'pragmate-ui/icons';
 import type { IAccordionContext, IAccordionItem } from './types';
 
 export const AccordionContext = React.createContext({} as IAccordionContext);
@@ -20,7 +20,7 @@ export /*bundle */ function Header({ disabled, children, index }) {
 		<header {...attrs} className="accordion-item__header">
 			{children}
 			<div className="accordion-item__header-icon">
-				<IconButton icon={icon} className="accordion-item__icon-button circle" />
+				<Icon icon={icon} className="accordion-item__icon-button circle" />
 			</div>
 		</header>
 	);

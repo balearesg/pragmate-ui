@@ -1,6 +1,6 @@
 import React from 'react';
 import { useCollapsibleContext } from './context';
-import { IconButton } from 'pragmate-ui/icons';
+import { Icon, IconButton } from 'pragmate-ui/icons';
 import type { ICollapsibleHeader } from './types';
 import clsx from 'clsx';
 
@@ -29,7 +29,7 @@ export /*bundle */ function CollapsibleHeader({
 		<header className={cls} onClick={onClick} aria-expanded={open}>
 			<div className="collapsible__header-content">{children}</div>
 			{toggleable && (
-				<IconButton
+				<Icon
 					className={clsButton}
 					icon="left"
 					aria-label={open ? 'Collapse section' : 'Expand section'}
