@@ -1,0 +1,72 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.color-swatch {
+	position: relative;
+
+	&__container {
+		position: relative;
+	}
+
+	&__preview {
+		width: 100%;
+		height: 4rem;
+		border-radius: var(--border-radius-lg);
+		border: 1px solid var(--color-gray-200);
+		cursor: pointer;
+		transition: transform var(--transition-fast);
+
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+
+	&__info {
+		margin-top: var(--spacing-2);
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-1);
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__name {
+		@include text-sm;
+		font-weight: var(--font-weight-medium);
+		color: var(--color-gray-900);
+	}
+
+	&__copy-button {
+		@include button-ghost;
+		width: 1.5rem;
+		height: 1.5rem;
+		padding: 0;
+		opacity: 0;
+		transition: opacity var(--transition-fast);
+
+		.color-swatch__container:hover & {
+			opacity: 1;
+		}
+	}
+
+	&__values {
+		display: flex;
+		flex-direction: column;
+		gap: 0.125rem;
+	}
+
+	&__value {
+		@include text-xs;
+		color: var(--color-gray-600);
+		cursor: pointer;
+		transition: color var(--transition-fast);
+
+		&:hover {
+			color: var(--color-gray-900);
+		}
+	}
+}

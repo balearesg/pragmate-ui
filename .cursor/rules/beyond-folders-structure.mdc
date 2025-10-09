@@ -1,0 +1,25 @@
+---
+alwaysApply: false
+---
+# Beyond.js Folder Structure Guide
+
+## Core Principles
+
+This rule defines the architectural organization principles for beyond.js projects, focusing on **separation of
+concerns** and **layer-based architecture** rather than specific module names.
+
+## Project Structure
+
+### @modules/
+
+Contains application-specific modules and pages. This is where you place your main application logic, pages, and
+business modules.
+
+### src/
+
+Contains the Pragmate UI library components and utilities. This is the main library code that provides reusable UI
+components.
+
+### docs/
+
+Contains the documentation package for the project. This includes documentation, examples, and demo pages.

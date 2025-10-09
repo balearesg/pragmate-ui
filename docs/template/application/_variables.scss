@@ -1,0 +1,145 @@
+// CSS Custom Properties for Documentation Theme
+:root {
+	// Colors
+	--color-primary: #3b82f6;
+	--color-primary-light: #dbeafe;
+	--color-primary-dark: #1e40af;
+
+	--color-secondary: #6b7280;
+	--color-secondary-light: #f3f4f6;
+	--color-secondary-dark: #374151;
+
+	--color-success: #10b981;
+	--color-warning: #f59e0b;
+	--color-error: #ef4444;
+	--color-info: #3b82f6;
+
+	--color-background: #ffffff;
+	--color-surface: #f8fafc;
+	--color-text: #1e293b;
+	--color-text-secondary: #64748b;
+	--color-border: #e2e8f0;
+	--color-hover: #f1f5f9;
+
+	// Dark theme colors
+	--color-background-dark: #0f172a;
+	--color-surface-dark: #1e293b;
+	--color-text-dark: #f1f5f9;
+	--color-text-secondary-dark: #94a3b8;
+	--color-border-dark: #334155;
+	--color-hover-dark: #334155;
+
+	// Spacing
+	--spacing-xs: 0.25rem;
+	--spacing-sm: 0.5rem;
+	--spacing-md: 1rem;
+	--spacing-lg: 1.5rem;
+	--spacing-xl: 2rem;
+	--spacing-2xl: 3rem;
+
+	// Border radius
+	--border-radius-sm: 0.25rem;
+	--border-radius-md: 0.5rem;
+	--border-radius-lg: 0.75rem;
+	--border-radius-xl: 1rem;
+
+	// Shadows
+	--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	--shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+	// Typography
+	--font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	--font-family-mono: 'Fira Code', 'Monaco', 'Consolas', monospace;
+
+	--font-size-xs: 0.75rem;
+	--font-size-sm: 0.875rem;
+	--font-size-base: 1rem;
+	--font-size-lg: 1.125rem;
+	--font-size-xl: 1.25rem;
+	--font-size-2xl: 1.5rem;
+	--font-size-3xl: 1.875rem;
+	--font-size-4xl: 2.25rem;
+
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+
+	--line-height-tight: 1.25;
+	--line-height-normal: 1.5;
+	--line-height-relaxed: 1.75;
+
+	// Transitions
+	--transition-fast: 0.15s ease;
+	--transition-normal: 0.2s ease;
+	--transition-slow: 0.3s ease;
+
+	// Z-index
+	--z-dropdown: 1000;
+	--z-sticky: 1020;
+	--z-fixed: 1030;
+	--z-modal-backdrop: 1040;
+	--z-modal: 1050;
+	--z-popover: 1060;
+	--z-tooltip: 1070;
+}
+
+// Dark theme
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: var(--color-background-dark);
+		--color-surface: var(--color-surface-dark);
+		--color-text: var(--color-text-dark);
+		--color-text-secondary: var(--color-text-secondary-dark);
+		--color-border: var(--color-border-dark);
+		--color-hover: var(--color-hover-dark);
+	}
+}
+
+// Base styles
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-family-sans);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-normal);
+	color: var(--color-text);
+	background-color: var(--color-background);
+	margin: 0;
+	padding: 0;
+}
+
+// Scrollbar styles
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-border);
+	border-radius: var(--border-radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-text-secondary);
+}
+
+// Focus styles
+:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 2px;
+}
+
+// Selection styles
+::selection {
+	background-color: var(--color-primary-light);
+	color: var(--color-primary-dark);
+}

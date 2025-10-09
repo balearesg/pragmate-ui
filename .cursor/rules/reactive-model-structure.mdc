@@ -1,0 +1,193 @@
+---
+description: Scaffold providers in entity-specific folders with strict content rules using @beyond-js/http-suite Api
+globs:
+    - 'src/providers/**/*.ts'
+    - 'providers/**/*.ts'
+    - 'sdk/modules/entities/**/*.ts'
+alwaysApply: true
+---
+
+# Entity Structure Rule (strict and constrained)
+
+## 🧭 Folder & Filename Layout
+
+-   Entity files must live in a folder named after the entity in **kebab-case**, e.g. `articles/`
+-   Inside, use these filenames **unless developer specifies otherwise**:
+    -   `item.ts` for item-level entity
+    -   `collection.ts` for collection-level entity
+    -   `provider.ts` for API communication
+
+## ⚙️ Item Entity File Content Constraints
+
+-   **Only include**:
+    -   `extends Item<T, Provider>` from `@beyond-js/reactive/entities/item`
+    -   `constructor` with super call and properties array
+    -   `schema` getter with Zod validation if applicable
+-   **MUST NOT include**:
+    -   Additional methods, getters, or properties
+    -   Custom logic or business rules
+    -   State management beyond what Item provides
+
+## 📦 Collection Entity File Content
+
+-   **Only include**:
+    -   `extends Collection<Item, Provider>` from `@beyond-js/reactive/entities/collection`
+    -   `constructor` with super call and entity configuration
+-   **MUST NOT include**:
+    -   Additional methods or properties
+    -   Custom filtering or sorting logic
+    -   Business logic beyond what Collection provides
+
+## 🔌 Provider File Content
+
+-   **Only include**:
+    -   `Api` instance from `@beyond-js/http-suite/api`
+    -   `constructor` with model parameter
+    -   Required HTTP methods: `list()`, `load()`, `create()`, `edit()`, `delete()`
+-   **MUST NOT include**:
+    -   Additional utility methods
+    -   Business logic or validation
+    -   Error handling beyond basic HTTP status checks
+
+### **ReactiveModel Usage**
+
+-   **Only include**:
+    -   `extends ReactiveModel<T>` from `@beyond-js/reactive/model`
+    -   `declare` statements for all reactive properties
+    -   `constructor` with optional `specs` object
+    -   `properties` array in specs for reactive properties
+    -   `set()` method calls with object parameter
+-   **MUST NOT include**:
+    -   Custom state management beyond ReactiveModel
+    -   Additional business logic or validation
+
+## 🚫 STRICT Code Generation Constraints
+
+-   **NO CODE INFERENCE**: Only create exactly what is requested - no additional methods, getters, index files, or
+    helper functions
+-   **MINIMAL IMPLEMENTATION**: Avoid adding convenience methods, utility functions, or any code that wasn't directly
+    requested
+-   **EXACT REQUIREMENTS**: If asked for a class with specific methods, only implement those methods - do not add
+    getters, setters, or other accessors
+-   **File Structure**: Only create files that are explicitly requested - no index files, barrel exports, or additional
+    organizational files
+-   **NEVER ADD**: Custom logic, business rules, state management, or any functionality beyond the basic entity
+    structure
+
+## 🔧 Method Usage Conventions
+
+### **ReactiveModel.set() Method**
+
+-   **Correct Usage**: `this.set({ property: value })` - objeto con propiedades como keys
+-   **Incorrect Usage**: `this.set('property', value)` - no recibe dos parámetros
+-   **Properties Array**: `properties: ['prop1', 'prop2']` - array de strings, no objetos
+-   **Multiple Properties**: `this.set({ prop1: value1, prop2: value2 })` - objeto con múltiples propiedades
+
+### **Constructor Specs Object**
+
+-   **BaseStoreManager**: `super(module.specifier, { properties: ['prop1', 'prop2'] })`
+-   **ReactiveModel**: `super({ properties: ['prop1', 'prop2'] })`
+-   **Properties Format**: Siempre array de strings, nunca objetos con name/value
+
+### **Property Declaration with `declare`**
+
+-   **Always Required**: Use `declare` for all reactive properties defined in `properties` array
+-   **Type Safety**: `declare` provides TypeScript type checking without runtime implementation
+-   **Reactive Properties**: Only properties in `properties` array are reactive and can use `set()`
+-   **Example**:
+
+    ```typescript
+    export class StoreManager extends BaseStoreManager<IStore> {
+    	declare property1: string; // ✅ Required for reactive property
+    	declare property2: number; // ✅ Required for reactive property
+
+    	constructor() {
+    		super(module.specifier, {
+    			properties: ['property1', 'property2'], // Must match declare statements
+    		});
+    	}
+    }
+    ```
+
+## 🔎 Recognition Triggers
+
+-   If a reactive `Item<T, Provider>` needs HTTP-backed persistence → scaffold `item.ts` and `provider.ts`
+-   If a `Collection<Item, Provider>` requires HTTP list operations → scaffold `collection.ts`
+-   **NEVER** scaffold additional files or functionality unless explicitly requested
+
+## ⚠️ IMPORTANT: Property Synchronization
+
+-   **`declare` statements MUST match `properties` array**: Every property in `properties` must have a corresponding
+    `declare`
+-   **Type consistency**: The type in `declare` must match the expected type for the property
+-   **Reactive behavior**: Only declared properties in `properties` array will be reactive and respond to `set()` calls
+-   **Missing declare**: Properties without `declare` will cause TypeScript errors when using `set()`
+
+## 📋 Template Structure
+
+### Item.ts
+
+```typescript
+import { Item } from '@beyond-js/reactive/entities/item';
+import { Provider } from './provider';
+
+export class EntityName extends Item<DataType, Provider> {
+	constructor(args?: any) {
+		super({
+			...args,
+			entity: 'EntityName',
+			provider: Provider,
+			properties: ['id', 'name'], // Only requested properties
+		});
+	}
+}
+```
+
+### Collection.ts
+
+```typescript
+import { Collection } from '@beyond-js/reactive/entities/collection';
+import { Item } from './item';
+import { Provider } from './provider';
+
+export class EntityNames extends Collection<Item, Provider> {
+	constructor(args?: any) {
+		super({
+			entity: 'EntityName',
+			provider: Provider,
+			item: Item,
+			type: 'entitynames',
+			...args,
+		});
+	}
+}
+```
+
+### Provider.ts
+
+```typescript
+import { Api } from '@beyond-js/http-suite/api';
+
+export class EntityNameProvider {
+	#api: Api;
+	#model: any;
+
+	constructor(model) {
+		this.#model = model;
+		this.#api = new Api(baseUrl);
+	}
+
+	async list(specs?: any): Promise<DataType[]> {
+		// Only basic HTTP call implementation
+	}
+
+	async load(id: string): Promise<DataType> {
+		// Only basic HTTP call implementation
+	}
+}
+```
+
+## ⚠️ CRITICAL REMINDER
+
+**NEVER generate additional code, methods, properties, or functionality beyond what is explicitly requested. The goal is
+minimal, focused implementation that follows the existing project patterns exactly.**

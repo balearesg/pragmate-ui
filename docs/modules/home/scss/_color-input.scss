@@ -1,0 +1,44 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.color-input {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-2);
+	}
+
+	&__label {
+		@include text-sm;
+		font-weight: var(--font-weight-medium);
+		color: var(--color-gray-700);
+		display: block;
+	}
+
+	&__inputs {
+		display: flex;
+		gap: var(--spacing-2);
+		align-items: center;
+	}
+
+	&__color-picker {
+		width: 4rem;
+		height: 2.5rem;
+		padding: var(--spacing-1);
+		border: 1px solid var(--color-gray-300);
+		border-radius: var(--border-radius);
+		cursor: pointer;
+		background: none;
+
+		&:focus {
+			outline: none;
+			border-color: var(--color-primary);
+			box-shadow: 0 0 0 3px rgba(var(--color-primary), 0.1);
+		}
+	}
+
+	&__text-input {
+		@include input-base;
+		flex: 1;
+	}
+}

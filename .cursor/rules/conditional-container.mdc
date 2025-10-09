@@ -1,0 +1,141 @@
+---
+description: Guide for using the ConditionalContainer component from pragmate-ui/components for conditional rendering
+alwaysApply: false
+---
+
+# ConditionalContainer Component Usage Guide
+
+## Overview
+The `ConditionalContainer` component is a utility component from `pragmate-ui/components` that provides flexible conditional rendering capabilities. It's designed to simplify complex conditional logic in React components by providing a declarative way to render different components based on conditions.
+
+## Import
+```typescript
+import { ConditionalContainer } from 'pragmate-ui/components';
+```
+
+## Interface
+```typescript
+interface IConditionalContainerProps {
+	condition: string | boolean | (() => string | boolean);
+	options: Record<string, React.ReactElement>;
+	placeholder?: React.ReactElement; // Optional default component
+	ternary?: boolean; // New property for ternary support
+}
+```
+
+## Usage Patterns
+
+### 1. String-based Conditional Rendering
+Use when you have multiple possible string values that should render different components:
+
+```typescript
+<ConditionalContainer
+	condition={userRole}
+	options={{
+		admin: <AdminDashboard />,
+		teacher: <TeacherDashboard />,
+		student: <StudentDashboard />,
+		guest: <GuestView />
+	}}
+	placeholder={<DefaultView />}
+/>
+```
+
+### 2. Boolean Ternary Rendering
+Use the `ternary` prop for simple true/false conditions:
+
+```typescript
+<ConditionalContainer
+	condition={isAuthenticated}
+	ternary={true}
+	options={{
+		true: <AuthenticatedContent />,
+		false: <LoginPrompt />
+	}}
+/>
+```
+
+### 3. Function-based Conditions
+Use when the condition requires computation or depends on multiple factors:
+
+```typescript
+<ConditionalContainer
+	condition={() => {
+		if (user.isAdmin) return 'admin';
+		if (user.hasPermission('edit')) return 'editor';
+		return 'viewer';
+	}}
+	options={{
+		admin: <AdminPanel />,
+		editor: <EditorPanel />,
+		viewer: <ViewerPanel />
+	}}
+/>
+```
+
+## When to Use ConditionalContainer
+
+### ✅ Use when:
+- You have multiple conditional branches (3+ conditions)
+- The conditional logic is complex and would make JSX hard to read
+- You want to keep conditional rendering logic separate from component logic
+- You need to reuse the same conditional pattern across multiple components
+- You want to provide fallback/placeholder components
+
+### ❌ Avoid when:
+- You have simple single conditions (use regular ternary operators)
+- The condition only has 2 possible outcomes and is simple
+- Performance is critical (the component adds a small overhead)
+
+## Best Practices
+
+1. **Use descriptive keys** in the options object for better readability
+2. **Always provide a placeholder** for unexpected condition values
+3. **Use the ternary prop** for simple boolean conditions
+4. **Keep condition functions pure** and avoid side effects
+5. **Consider memoization** for expensive condition computations
+
+## Examples
+
+### Loading States
+```typescript
+<ConditionalContainer
+	condition={loadingState}
+	options={{
+		loading: <Spinner />,
+		error: <ErrorMessage error={error} />,
+		success: <DataDisplay data={data} />
+	}}
+	placeholder={<DefaultState />}
+/>
+```
+
+### User Permissions
+```typescript
+<ConditionalContainer
+	condition={() => getUserPermissionLevel()}
+	options={{
+		read: <ReadOnlyView />,
+		write: <EditableView />,
+		admin: <AdminView />
+	}}
+	placeholder={<AccessDenied />}
+/>
+```
+
+### Feature Flags
+```typescript
+<ConditionalContainer
+	condition={featureFlag}
+	ternary={true}
+	options={{
+		true: <NewFeature />,
+		false: <LegacyFeature />
+	}}
+/>
+```
+
+## Performance Considerations
+- The component evaluates the condition on every render
+- For expensive computations, consider memoizing the condition function
+- The options object should be stable (avoid creating new objects on every render)

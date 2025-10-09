@@ -1,0 +1,85 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'color-input';
+@use 'color-swatch';
+@use 'color-section';
+@use 'color-config';
+@use 'css-drawer';
+
+// Base styles for the color system page
+.color-system-page {
+	min-height: 100vh;
+	background: var(--color-gray-50);
+	padding: var(--spacing-4);
+
+	&__container {
+		max-width: 80rem;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-8);
+	}
+
+	&__header {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-4);
+	}
+
+	&__title {
+		@include text-4xl;
+		font-weight: var(--font-weight-bold);
+		color: var(--color-gray-900);
+		margin: 0;
+	}
+
+	&__description {
+		@include text-xl;
+		color: var(--color-gray-600);
+		margin: 0;
+		max-width: 32rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__generated-section {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-8);
+	}
+
+	&__section-header {
+		@include flex-between;
+	}
+
+	&__section-title {
+		@include text-2xl;
+		font-weight: var(--font-weight-bold);
+		color: var(--color-gray-900);
+		margin: 0;
+	}
+
+	&__section-description {
+		@include text-sm;
+		color: var(--color-gray-600);
+		margin: 0;
+	}
+
+	&__badge {
+		display: inline-flex;
+		align-items: center;
+		padding: var(--spacing-1) var(--spacing-2);
+		border-radius: var(--border-radius-full);
+		@include text-sm;
+		font-weight: var(--font-weight-medium);
+		background: var(--color-gray-100);
+		color: var(--color-gray-800);
+	}
+
+	&__sections {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-6);
+	}
+}

@@ -1,0 +1,50 @@
+---
+description: Scaffold provider classes following documented interfaces and enforcing use of @beyond-js/http-suite Api
+globs:
+  - "src/providers/**/*.ts"
+  - "providers/**/*.ts"
+alwaysApply: true
+---
+
+# Provider Rule (concise)
+
+This rule tells Cursor AI to detect when an **Item** or **Collection** provider class is needed and to generate a provider based strictly on the documented APIs and interfaces—using the `Api` class from `@beyond-js/http‑suite`.
+
+## ✅ Recognition
+
+- **Item Provider** needed when an `Item<T>` model requires load/publish/delete behavior.
+- **Collection Provider** needed when a `Collection<Item>` needs list/publish/remove behavior.
+
+## 🚀 Implementation Requirements
+
+- Must import the `Api` class from `@beyond-js/http‑suite/api`.  
+- Must instantiate `Api` with base URL.
+- If authentication is needed, call `.bearer(token)` before requests.
+- Make HTTP calls using `api.get()`, `.post()`, `.put()`, `.delete()`, or `.stream()` as appropriate.  
+- Handle responses by unpacking `{ status, data }` and throwing an error if `status` is falsy.
+- Return only the validated `data` (or `true` for delete/remove success), not the full raw response.
+
+## 📘 Based Only on Documented Interfaces
+
+### IEntityProvider methods:
+- `load?(specs?: any): Promise<IItemData>`
+- `publish?(data: any): Promise<IItemData>`
+- `delete?(specs?: any): Promise<boolean>`
+
+### ICollectionProvider methods:
+- `list(specs?: any): Promise<IItemData[]>`
+- `publish?(data: any): Promise<IItemData>`
+- `remove?(specs?: any): Promise<boolean>`
+
+## 🔧 Example Recognition Trigger
+
+If user says:  
+> “Create a provider to load, save, and delete a user via REST API using Api and bearer token”
+
+Cursor AI should:
+- Scaffold a `UserProvider` implementing `IEntityProvider`
+- Instantiate `Api` with base URL
+- Use `.post` or `.get` as appropriate
+- Call `.bearer(specs.token)` if needed
+- Validate `{status, data}` and throw on failure
+- Return only `.data` for load/publish, and boolean for delete

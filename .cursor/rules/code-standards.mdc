@@ -1,0 +1,228 @@
+---
+alwaysApply: true
+description: Code standards for modular, tool-agnostic JavaScript/TypeScript with universal design
+globs: **/*.ts,**/*.tsx,**/*.js,**/*.jsx
+---
+
+# Code Standards
+
+### Modules in BeyondJS
+
+BeyondJS introduces the concept of a **module**, which is a collection of files grouped together by a `module.json`
+file. Since BeyondJS runs on a DevServer, each module is packaged and consumed as a **single file**.
+
+When importing a module, it must always be consumed using the same **bare specifier**, which combines the package name
+and the module name (subpath). For example:
+
+```
+pragmate-ui/components
+```
+
+Here:
+
+-   `pragmate-ui` → the package name
+-   `components` → the module name (or subpath)
+
+BeyondJS also defines standard TypeScript/JavaScript files as **internal modules**. These internal modules can only use
+relative imports **within the same module**. They cannot be imported outside of their module unless explicitly exposed
+with the special comment:
+
+```ts
+/*bundle*/
+```
+
+Once exposed, they can then be imported using the bare specifier as explained above.
+
+## Module Import Rules
+
+**CRITICAL**: All files with `/*bundle*/` within a module (defined by module.json) are imported using the same
+bare-specifier, regardless of their location within the module folder.
+
+**Rule**: One module = One bare-specifier for all its `/*bundle*/` exports. Never use relative imports for cross-module
+dependencies.
+
+## Core Principles
+
+-   Don't create additional code or infered content, only what is gived as instruction.
+-   **No style imports in TypeScript/JavaScript files** - build system handles this automatically
+-   **No @import in SCSS files** - use `@use` instead, without file extensions
+-   **Modular, tool-agnostic JavaScript/TypeScript** with universal design
+-   **Plain named imports**; no default exports
+-   **CamelCase** for variables, methods, and properties; interfaces prefixed with `I`
+-   **Logic extraction**: All logic must be extracted from JSX returns (in React code) and kept outside return
+    statements
+-   **File naming**: Use hyphens (e.g., `folder-name/file-name`)
+-   **Styling**: Use Sass/CSS custom properties by default
+-   **Naming conventions**: Avoid duplicate wording in object/class naming (e.g., class `Handler` must not have methods
+    named `handle*`)
+-   **Dependencies**: Only include library dependencies when explicitly requested or required
+
+## Code Generation Guidelines
+
+-   **Do not generate code** unless explicitly asked or necessary
+-   **Respond with conceptual explanations** unless code is explicitly requested
+-   **When code is requested**: Use concise, semantically clear TypeScript
+
+## TypeScript Standards
+
+-   Use strong typing; avoid `any`
+-   Prefer explicit return types for functions
+-   Use interfaces for object shapes (prefixed with `I`)
+-   Utilize type guards and proper type narrowing
+
+## React Component Structure
+
+```typescript
+// ✅ Correct structure - Use regular functions, not arrow functions
+function ComponentName(props: IComponentProps): JSX.Element {
+	// All logic here, outside return
+	const handleClick = (): void => {
+		// Logic
+	};
+
+	const computedValue = useMemo(() => {
+		// Computations
+	}, [dependencies]);
+
+	return <div>{/* Clean JSX only */}</div>;
+}
+
+// ❌ Never import styles in React components
+// import './component.scss';  // Wrong!
+// import './styles.css';      // Wrong!
+```
+
+## Import/Export Standards
+
+```typescript
+// ✅ Correct - named imports/exports
+import { ComponentName, IComponentProps } from './component-name';
+export { ComponentName, IComponentProps };
+
+// ❌ Avoid - default exports
+import ComponentName from './component-name';
+export default ComponentName;
+```
+
+## Style Import Standards
+
+### **TypeScript/JavaScript Files**
+
+```typescript
+// ❌ Never import CSS/SCSS files in TS/JS
+import './styles.scss'; // Wrong
+import './component.css'; // Wrong
+import './styles'; // Wrong
+
+// ✅ Styles are handled by the build system
+// No style imports needed
+```
+
+### **SCSS Files**
+
+```scss
+// ❌ Avoid @import (deprecated)
+@import 'variables'; // Wrong
+@import 'mixins.scss'; // Wrong
+
+// ✅ Use @use (modern approach)
+@use 'variables'; // Correct
+@use 'mixins'; // Correct
+@use 'theme/colors'; // Correct
+
+// ✅ No file extensions with @use
+@use 'variables'; // Correct
+@use 'variables.scss'; // Wrong
+```
+
+## Module Export Guidelines
+
+-   **No index files**: Do not create `index.ts` files for internal module organization
+-   **Use magic comment for external consumption**: If a component or object needs to be consumed from other modules,
+    add the magic comment `/*bundle*/` to the export
+-   **Direct imports**: Import directly from the specific file within the module
+
+## Style Management
+
+-   **Build system handles styles**: CSS/SCSS files are automatically processed by the build system
+-   **No manual imports**: Never manually import style files in TypeScript/JavaScript
+-   **SCSS organization**: Use `@use` for sharing variables, mixins, and functions between SCSS files
+-   **File extensions**: Omit file extensions when using `@use` in SCSS files
+
+```typescript
+// ✅ Correct - Direct import with magic comment for external use
+export /*bundle*/ function MyComponent(): JSX.Element {
+	// Component implementation
+}
+
+// ✅ Correct - Direct import within same module
+import { MyComponent } from './my-component';
+
+// ❌ Avoid - Creating index files for internal organization
+// Don't create: ./index.ts
+```
+
+## File and Folder Naming
+
+-   Use kebab-case for files and folders: `user-profile.tsx`, `api-client/`
+-   Component files: `component-name.tsx`
+-   Utility files: `utility-name.ts`
+-   Type files: `types.ts` or `component-name.types.ts`
+
+## Style File Naming
+
+-   Component styles: `component-name.scss` (match component name)
+-   Page styles: `page-name.scss` (match page name)
+-   Global styles: `global.scss`, `variables.scss`, `mixins.scss`
+-   **Never include file extensions in @use statements**
+
+## Styling Standards
+
+-   Use Sass with CSS custom properties
+-   Avoid inline styles
+-   Use semantic class names
+-   Leverage CSS custom properties for theming
+-   **No CSS/Sass imports in TypeScript/JavaScript files**
+-   **No CSS/Sass imports in SCSS files** - use `@use` instead
+-   **No file extensions** when using `@use` in SCSS files
+
+## Naming Conventions
+
+```typescript
+// ✅ Correct naming
+interface IUserProfile {
+	firstName: string;
+	lastName: string;
+}
+
+class UserService {
+	getUserData(): IUserProfile {
+		// Implementation
+	}
+}
+
+// ❌ Avoid duplicate wording
+class Handler {
+	// ❌ Don't use "handle" in method names
+	handleRequest(): void {}
+
+	// ✅ Use descriptive action names
+	processRequest(): void {}
+}
+
+// ❌ Avoid redundant naming in module context
+// If a module is named "components", don't repeat "components" in internal files
+// ❌ components-sidebar.tsx, components-content.tsx
+// ✅ sidebar.tsx, content.tsx
+
+// ❌ Avoid redundant naming in class context
+// If a class is named "UserManager", don't repeat "User" in method names
+// ❌ userManager.getUserData(), userManager.createUser()
+// ✅ userManager.getData(), userManager.create()
+```
+
+**Important Notes:**
+
+-   The `model` parameter is **required** in the constructor - an exception will be thrown if not provided
+-   The model instance is created in the `load()` method, not in the constructor
+-   The `load()` method accepts an optional `id` parameter that will be set on the model before loading

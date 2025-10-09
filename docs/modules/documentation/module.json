@@ -1,9 +1,11 @@
 {
-	"name": "layout/main",
+	"name": "documentation",
 	"widget": {
-		"is": "layout",
+		"is": "page",
+		"route": "/docs",
+		"layout": "main-docs-layout",
 		"element": {
-			"name": "main-docs-layout"
+			"name": "documentation-page"
 		},
 		"scss": {
 			"path": "scss",

@@ -1,0 +1,71 @@
+// Mixins for common patterns
+@mixin button-reset {
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	font: inherit;
+	color: inherit;
+	text-decoration: none;
+}
+
+@mixin focus-ring {
+	&:focus-visible {
+		outline: 2px solid var(--color-primary);
+		outline-offset: 2px;
+	}
+}
+
+@mixin hover-lift {
+	transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-lg);
+	}
+}
+
+@mixin card {
+	background-color: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--border-radius-md);
+	padding: var(--spacing-lg);
+	box-shadow: var(--shadow-sm);
+}
+
+@mixin text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin grid-responsive($min-width: 250px) {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+	gap: var(--spacing-lg);
+}
+
+@mixin mobile {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: 769px) and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: 1025px) {
+		@content;
+	}
+}

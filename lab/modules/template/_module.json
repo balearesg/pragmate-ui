@@ -1,9 +1,0 @@
-{
-	"name": "template",
-	"code": {
-		"scss": {
-			"path": "/scss",
-			"files": ["*"]
-		}
-	}
-}

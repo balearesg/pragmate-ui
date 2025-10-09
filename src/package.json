@@ -75,8 +75,8 @@
 		"framer-motion": "^11.0.25",
 		"perfect-scrollbar": "^1.5.5",
 		"prismjs": "^1.27.0",
-		"tippy.js": "^6.3.7",
-		"swiper": "^10.3.0"
+		"swiper": "^10.3.0",
+		"tippy.js": "^6.3.7"
 	},
 	"devDependencies": {
 		"@types/react": "^18.0.26",

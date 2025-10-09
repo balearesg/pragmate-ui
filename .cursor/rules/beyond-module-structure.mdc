@@ -1,0 +1,205 @@
+---
+alwaysApply: false
+---
+
+# Beyond.js Module Structure Guide
+
+## Module Types and Structure
+
+### Page/Layout Modules
+
+Page and layout modules must include a `widget` bundle in their `module.json` and follow this structure:
+
+**Required files:**
+
+-   `module.json` - Module configuration with widget bundle
+-   `tsconfig.json` - TypeScript configuration
+-   `ts/store.ts` - Store that extends BaseStoreManager
+-   `ts/controller.ts` - Page controller connecting store and view
+-   `ts/views/index.tsx` - View component
+-   `scss/styles.scss` - Styles (if scss processor is included)
+-   `txt/texts.json` - Text resources (if txt bundle is included)
+
+**Example module.json for page/layout:**
+
+```json
+{
+	"name": "module-name",
+	"widget": {
+		"is": "page",
+		"route": "/route-path",
+		"layout": "platform-layout",
+		"element": {
+			"name": "element-name"
+		},
+		"scss": {
+			"path": "scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "ts",
+			"files": ["*"]
+		}
+	},
+	"txt": {
+		"path": "txt",
+		"files": ["*"]
+	}
+}
+```
+
+**Example tsconfig.json:**
+
+```json
+{
+	"compilerOptions": {
+		"module": "es2020",
+		"target": "es2018",
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"moduleResolution": "Node",
+		"jsx": "react"
+	}
+}
+```
+
+### Code/TS Modules
+
+Code modules (type "code" or "ts") are simpler and don't include a widget bundle:
+
+**Required files:**
+
+-   `module.json` - Module configuration without widget bundle
+-   `tsconfig.json` - TypeScript configuration
+-   `ts/index.ts` - Empty index file (unless additional content is specified)
+
+**Example module.json for code/ts:**
+
+```json
+{
+	"name": "module-name",
+	"bundle": "code",
+	"ts": {
+		"path": "ts",
+		"files": ["*"]
+	}
+}
+```
+
+## Standard File Content
+
+### Store (ts/store.ts)
+
+import { IWidgetStore } from '@beyond-js/widgets/controller';
+
+export /_bundle_/ class StoreManager implements IWidgetStore { isStore = true; constructor() { super(module.specifier, {
+properties: [], }); } }
+
+````
+
+### Controller (ts/controller.ts)
+
+**For Page Modules:**
+
+```typescript
+import { PageReactWidgetController } from '@beyond-js/react-18-widgets/page';
+import { StoreManager } from './store';
+import { View } from './views';
+
+export /*bundle*/
+class Controller extends PageReactWidgetController {
+	#store: StoreManager;
+
+	createStore() {
+		this.#store = new StoreManager();
+		return this.#store;
+	}
+
+	get Widget() {
+		return View;
+	}
+
+	show() {}
+	hide() {}
+}
+````
+
+**For Layout and Widget Modules:**
+
+```typescript
+import { ReactWidgetController } from '@beyond-js/react-18-widgets/base';
+import { StoreManager } from './store';
+import { View } from './views';
+
+export /*bundle*/
+class Controller extends ReactWidgetController {
+	constructor(args) {
+		super(args);
+	}
+
+	get Store() {
+		return StoreManager;
+	}
+
+	get Widget() {
+		return View;
+	}
+}
+```
+
+### View (ts/views/index.tsx)
+
+```typescript
+import React from 'react';
+
+export /*bundle*/
+function View(): JSX.Element {
+	return (
+		<div>
+			<h1>Module Name</h1>
+		</div>
+	);
+}
+```
+
+### Index (ts/index.ts) - For code modules
+
+```typescript
+// Empty file unless additional content is specified
+```
+
+## Navigation and Routing
+
+### Using Beyond.js Routing
+
+For navigation between modules, use the routing object from `@beyond-js/kernel/routing`:
+
+```typescript
+import { routing } from '@beyond-js/kernel/routing';
+
+// Navigate to a new route
+routing.pushState('/projects/management');
+
+// Replace current route
+routing.replaceState('/projects/management');
+
+// Navigate back
+routing.back();
+```
+
+**Important:** Never use `window.location.href` or `window.history.pushState()` directly. Always use the Beyond.js
+routing object for proper navigation within the application.
+
+## Key Rules
+
+1. **All modules must have:** `module.json`, `tsconfig.json`, and files according to their type and processors
+2. **Page/Layout modules:** Include widget bundle with route, layout, and element configuration
+3. **Code/TS modules:** Include only the bundle type without widget configuration
+4. **Processors:** Define scss, ts, txt processors in module.json as needed
+5. **Store inheritance:** Always extend from `@aimpact/platform/stores/base`
+6. **File structure:** Follow the exact paths and naming conventions shown above
+7. **Navigation:** Use `@beyond-js/kernel/routing` for all navigation between modules
+8. **Minimal content:** Start with empty/basic implementations unless additional functionality is specified description:
+   globs: alwaysApply: false
+
+---
