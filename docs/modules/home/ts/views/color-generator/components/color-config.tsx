@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ColorInput } from './color-input';
-import { useModuleContext } from '../../context';
+import { useModuleContext } from '../../../context';
 
 export function ColorConfig(): JSX.Element {
 	const { store } = useModuleContext();

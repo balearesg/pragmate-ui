@@ -1,30 +1,43 @@
 import * as React from 'react';
-import { ModuleProvider, useModuleContext } from '../context';
-import { ColorConfig } from './components/color-config';
-import { ColorSections } from './components/color-sections';
+import { ModuleProvider } from '../context';
+import { ColorGenerator } from './color-generator';
+import { DynamicListExample } from './dynamic-list';
+import { MenuItem } from './menu-item';
+
+const Controls = {
+	colorGenerator: ColorGenerator,
+	dynamicList: DynamicListExample,
+};
 
 export /*bundle*/
 function View({ store }): JSX.Element {
-	React.useEffect(() => {
-		store.generateColorSystem();
-	}, []);
+	const [current, setCurrent] = React.useState<keyof typeof Controls>('colorGenerator');
+
+	const CurrentComponent = Controls[current];
+	const controlKeys = Object.keys(Controls) as Array<keyof typeof Controls>;
+
+	const handleMenuSelect = (key: string) => {
+		setCurrent(key as keyof typeof Controls);
+	};
+
+	const menuItems = controlKeys.map(key => (
+		<MenuItem key={key} name={key} isActive={current === key} onSelect={handleMenuSelect} />
+	));
 
 	return (
 		<ModuleProvider store={store}>
-			<div className="color-system-page">
-				<div className="color-system-page__container">
-					<div className="color-system-page__header">
-						<h1 className="color-system-page__title">System Color Generator</h1>
-						<p className="color-system-page__description">
-							Genera un sistema completo con tonos 25–950 a partir de tus colores primario, secundario,
-							terciario y neutral.
-						</p>
+			<div className="home-page">
+				<aside>
+					<div className="menu">
+						<header>
+							<h5>Menu</h5>
+						</header>
+						<ul>{menuItems}</ul>
 					</div>
-
-					<ColorConfig />
-
-					<ColorSections />
-				</div>
+				</aside>
+				<main>
+					<CurrentComponent />
+				</main>
 			</div>
 		</ModuleProvider>
 	);

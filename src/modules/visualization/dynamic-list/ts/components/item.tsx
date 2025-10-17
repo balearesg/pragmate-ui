@@ -5,15 +5,14 @@ import { IconButton } from 'pragmate-ui/icons';
 export /*bundle */ function DynamicItem(props) {
 	const { children, index, identifier } = props;
 	const { removeItem, draggable, Item, registerRef } = useDynamicListContext();
-
 	const onRemove = () => removeItem(identifier.id);
 	const attrs = { className: 'pui-dynamic-list__item', ...(draggable ? { value: props.identifier } : {}) };
 
 	const body = (
 		<Item {...props}>
-			<div className='item__content'>{children}</div>
-			<section className='item__actions'>
-				<IconButton icon='delete' onClick={onRemove} />
+			<div className="item__content">{children}</div>
+			<section className="item__actions">
+				<IconButton icon="delete" onClick={onRemove} />
 			</section>
 		</Item>
 	);

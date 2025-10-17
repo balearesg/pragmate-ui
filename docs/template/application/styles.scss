@@ -2,6 +2,8 @@
 @use 'variables';
 @use 'mixins';
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 html,
 body {
 	min-height: 100%;
@@ -9,9 +11,13 @@ body {
 	height: 100%;
 	margin: 0;
 	font-size: 1rem;
-	color: var(--text-color);
-	font-family: var(--font-family);
-	background: var(--background);
+	font-family: var(--font-family-sans);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-normal);
+	color: var(--color-text);
+	background-color: var(--color-background);
+	margin: 0;
+	padding: 0;
 }
 
 *,
@@ -19,4 +25,35 @@ body {
 *:before {
 	font-family: var(--font-family);
 	box-sizing: border-box;
+}
+
+// Scrollbar styles
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-border);
+	border-radius: var(--border-radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-text-secondary);
+}
+
+// Focus styles
+:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 2px;
+}
+
+// Selection styles
+::selection {
+	background-color: var(--color-primary-light);
+	color: var(--color-primary-dark);
 }

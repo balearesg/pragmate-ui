@@ -1,3 +1,55 @@
 @use 'variables' as *;
 // Main SCSS entry point for the color system module
 @use 'main';
+@use 'dynamic-list-example';
+
+.home-page {
+	display: grid;
+	grid-template-columns: 250px 1fr;
+	width: 100%;
+}
+aside {
+	padding: 2rem;
+	.menu {
+		position: sticky;
+		top: 0;
+		h5 {
+			margin: 0;
+			margin-bottom: 1rem;
+		}
+		ul {
+			list-style: none;
+			margin: 0;
+			transition: all 0.2s ease-in-out;
+			padding: 0;
+			margin-left: -0.25rem;
+
+			li {
+				transition: all 0.2s ease-in-out;
+				border: 1px solid transparent;
+				padding: 0.25rem;
+				border-radius: 4px;
+
+				a {
+					text-decoration: none;
+					color: var(--text-color);
+					display: block;
+				}
+
+				&:hover {
+					border-color: var(--text-color);
+				}
+
+				&.active {
+					border-color: var(--primary-color);
+					background: rgba(var(--primary-color-rgb, 0, 0, 0), 0.1);
+
+					a {
+						color: var(--primary-color);
+						font-weight: 500;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IColorShade } from '../../lib/color-types';
+import { IColorShade } from '../../../lib/color-types';
 
 interface ICSSDrawerProps {
 	open: boolean;

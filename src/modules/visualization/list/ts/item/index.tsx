@@ -17,6 +17,7 @@ export function ItemList<T, U = Record<string, any>>({
 	as = 'li',
 	control,
 	specs = {} as U,
+	...additionalProps
 }: IListItem<T, U>) {
 	const Control = typeof control === 'string' ? HTMLItem : control;
 
@@ -26,6 +27,7 @@ export function ItemList<T, U = Record<string, any>>({
 		item,
 		data: item,
 		...specs,
+		...additionalProps,
 		as: typeof control === 'string' ? control : undefined,
 	};
 

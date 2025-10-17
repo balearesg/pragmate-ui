@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ColorSection } from './color-section';
 import { CSSDrawer } from './css-drawer';
-import { useModuleContext } from '../../context';
+import { useModuleContext } from '../../../context';
 import { useStore } from '@beyond-js/react-18-widgets/hooks';
 export function ColorSections(): JSX.Element {
 	const { store } = useModuleContext();

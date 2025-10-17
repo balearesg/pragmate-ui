@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IColorShade } from '../../lib/color-types';
+import { IColorShade } from '../../../lib/color-types';
 import { ColorSwatch } from './color-swatch';
 
 interface IColorSectionProps {
@@ -30,7 +30,7 @@ export function ColorSection({ title, colors, description, onCopy, onOpenCSSDraw
 			<div className="color-section__content">
 				<div className="color-section__grid">
 					{colors.map((color, index) => (
-						<ColorSwatch key={index} color={color} onCopy={onCopy} />
+						<ColorSwatch key={index} color={color} onCopy={onCopy} colors={colors} />
 					))}
 				</div>
 			</div>

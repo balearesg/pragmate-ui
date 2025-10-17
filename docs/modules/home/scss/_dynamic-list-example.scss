@@ -1,0 +1,87 @@
+.dynamic-list-example {
+	padding: 2rem;
+	max-width: 800px;
+
+	h1 {
+		margin-bottom: 0.5rem;
+		color: var(--text-color);
+	}
+
+	p {
+		margin-bottom: 2rem;
+		color: var(--text-secondary);
+	}
+
+	.tasks-list {
+		margin: 1rem 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.task-item {
+		display: flex;
+		align-items: center;
+		padding: 1rem;
+		background: var(--surface-color);
+		border-radius: 4px;
+	}
+
+	.dynamic-actions {
+		margin-top: 1rem;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.pui-dynamic-list__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1rem;
+		padding: 1rem;
+		background: var(--surface-color);
+		border-radius: 4px;
+
+		h3 {
+			margin: 0;
+		}
+	}
+
+	.pui-dynamic-list__item {
+		position: relative;
+
+		.item__actions {
+			position: absolute;
+			right: 1rem;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	.pui-input {
+		border: 1px solid;
+		padding: 0.5rem;
+		width: 100%;
+	}
+	.output {
+		margin-top: 2rem;
+		padding: 1rem;
+		background: var(--surface-color);
+		border-radius: 4px;
+
+		h3 {
+			margin-top: 0;
+			margin-bottom: 1rem;
+		}
+
+		pre {
+			margin: 0;
+			padding: 1rem;
+			background: var(--background-color);
+			border-radius: 4px;
+			overflow-x: auto;
+			font-size: 0.875rem;
+			color: var(--text-color);
+		}
+	}
+}

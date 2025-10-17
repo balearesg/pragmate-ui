@@ -12,16 +12,7 @@ export /*bundle*/ function List<T extends IListItem<any, any>>({
 	empty,
 	...props
 }: Partial<IListProps<T>>): ReactElement {
-	const {
-		className,
-		index = 'id',
-		specs,
-		draggable,
-		childrenPosition = 'top',
-		as = 'ul',
-		// @deprecated
-		container = 'ul',
-	} = props;
+	const { className, index = 'id', specs, draggable, childrenPosition = 'top', as = 'ul', ...itemProps } = props;
 	const Container = motion[as];
 
 	const onTop = childrenPosition === 'top';
@@ -49,12 +40,29 @@ export /*bundle*/ function List<T extends IListItem<any, any>>({
 
 	const renderItems = control
 		? items.map((item, idx) => {
-				return <ItemControl index={index} key={idx} specs={specs} control={control} item={item} idx={idx} />;
+				return (
+					<ItemControl
+						index={index}
+						key={idx}
+						specs={specs}
+						control={control}
+						item={item}
+						idx={idx}
+						{...itemProps}
+					/>
+				);
 		  })
 		: items.map((item, idx) =>
 				Children.map(children, child =>
 					isValidElement(child)
-						? cloneElement(child as React.ReactElement<any>, { key: idx, index, specs, item, idx })
+						? cloneElement(child as React.ReactElement<any>, {
+								key: idx,
+								index,
+								specs,
+								item,
+								idx,
+								...itemProps,
+						  })
 						: child
 				)
 		  );
