@@ -80,7 +80,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>((pr
 
 	if (usingContext && context.selected === index) cls += ' pui-btn--active';
 	if (usingContext) properties['data-index'] = index;
-
+	const spinnerVariant = bordered ? variant : `on-${variant}`;
 	return (
 		<button
 			ref={ref}
@@ -92,7 +92,7 @@ export /*bundle*/ const Button = forwardRef<HTMLButtonElement, IButtonProps>((pr
 			{icon && <Icon icon={icon} />}
 			{label || (children && <div className={clsLoading}>{label || children}</div>)}
 
-			{(loading || fetching) && <Spinner type={`on-${variant}`} active={true} />}
+			{(loading || fetching) && <Spinner type={spinnerVariant} active={true} />}
 		</button>
 	);
 });

@@ -2,11 +2,13 @@ import * as React from 'react';
 import { ModuleProvider } from '../context';
 import { ColorGenerator } from './color-generator';
 import { DynamicListExample } from './dynamic-list';
+import { DropdownExample } from './dropdown-example';
 import { MenuItem } from './menu-item';
 
 const Controls = {
 	colorGenerator: ColorGenerator,
 	dynamicList: DynamicListExample,
+	dropdown: DropdownExample,
 };
 
 export /*bundle*/

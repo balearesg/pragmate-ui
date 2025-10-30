@@ -2,6 +2,7 @@
 // Main SCSS entry point for the color system module
 @use 'main';
 @use 'dynamic-list-example';
+@use 'dropdown-example';
 
 .home-page {
 	display: grid;
