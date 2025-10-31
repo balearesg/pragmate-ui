@@ -1,0 +1,65 @@
+.drawer-example {
+	header {
+		margin-bottom: 2rem;
+
+		h2 {
+			margin: 0 0 0.5rem 0;
+		}
+
+		p {
+			margin: 0;
+			opacity: 0.8;
+		}
+	}
+
+	.drawer-controls {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+}
+
+.pui-drawer.custom-drawer {
+	width: 60%;
+	background: var(--surface);
+	overflow: auto;
+	display: flex;
+
+	.pui-drawer-content {
+		padding-inline: 0rem;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		padding: 0rem;
+
+		h3 {
+			padding: 2rem 2rem 0 2rem;
+			margin: 0 0 1rem 0;
+		}
+
+		p {
+			padding: 0 2rem;
+			margin: 0 0 1rem 0;
+		}
+	}
+
+	.pui-drawer-close-button {
+		align-self: flex-end;
+		justify-content: flex-end;
+		float: right;
+		right: 2rem;
+
+		svg {
+			height: 10px;
+			width: 10px;
+		}
+	}
+
+	@media (max-width: 800px) {
+		width: 90%;
+	}
+
+	@media (max-width: 600px) {
+		width: 100%;
+	}
+}

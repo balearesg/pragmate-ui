@@ -48,9 +48,11 @@ export /*bundle*/ function Drawer({ className, position = 'left', open, onClose,
 					}}
 					className={drawerClass}
 				>
-					<div className='pui-drawer-content'>{children}</div>
+					<div className="pui-drawer-content">{children}</div>
 				</motion.div>
 			</motion.div>
 		</DrawerContext.Provider>
 	);
 }
+
+export /*bundle*/ const Container = Drawer;
